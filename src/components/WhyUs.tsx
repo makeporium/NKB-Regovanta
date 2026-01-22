@@ -4,41 +4,41 @@ const WhyUs = () => {
   const benefits = [
     {
       icon: Globe,
-      title: "India-First Expertise",
-      description: "Deep expertise in CDSCO, State Drug Controllers and Indian medical device regulations.",
+      title: "Global Regulatory Expertise",
+      description: "Proven expertise in US FDA (21 CFR), EU MDR (2017/745), and India CDSCO regulations.",
     },
     {
       icon: Zap,
       title: "Practical Solutions",
-      description: "Risk-based regulatory solutions tailored to your specific business needs.",
+      description: "Risk-based regulatory solutions tailored to your specific business and product needs.",
     },
     {
       icon: Clock,
       title: "Faster Approvals",
-      description: "Streamlined processes to accelerate your time to Indian market.",
+      description: "Streamlined processes to accelerate your time to global markets with reduced regulatory risk.",
     },
     {
       icon: Shield,
-      title: "Reduced Risk",
-      description: "Comprehensive compliance support that minimizes regulatory risk.",
+      title: "Reduced Compliance Risk",
+      description: "Comprehensive support that minimizes regulatory hurdles and compliance failures.",
     },
     {
       icon: Headphones,
       title: "Lifecycle Support",
-      description: "End-to-end support from concept to post-market compliance.",
+      description: "End-to-end support from concept to post-market surveillance and vigilance reporting.",
     },
     {
       icon: Award,
-      title: "Industry Focus",
-      description: "Specialized in medical devices, IVDs, and digital health products.",
+      title: "Industry Specialization",
+      description: "Specialized in medical devices, IVDs, SaMD, digital health, and AI-based devices.",
     },
   ];
 
   const industries = [
     "Medical Devices",
-    "In-Vitro Diagnostics",
-    "Software as Medical Device",
-    "Digital Health & AI",
+    "In-Vitro Diagnostics (IVD)",
+    "Software as Medical Device (SaMD)",
+    "Digital Health & AI Devices",
     "Implants & High-Risk Devices",
   ];
 
@@ -57,7 +57,7 @@ const WhyUs = () => {
             Your Success is <span className="text-gradient">Our Priority</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Partner with India's leading regulatory experts for medical devices and IVDs.
+            Partner with global regulatory experts for medical devices and IVDs across US, EU, and India.
           </p>
         </div>
 

@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const quickLinks = [
+    { icon: Building2, label: "US FDA Services" },
+    { icon: Globe, label: "EU MDR Services" },
     { icon: Globe, label: "India CDSCO Services" },
     { icon: UserCheck, label: "Indian Authorised Agent (IAA)" },
-    { icon: FlaskConical, label: "Clinical Trials India" },
-    { icon: Building2, label: "US FDA Services" },
   ];
 
   const serviceCards = [
@@ -62,12 +62,12 @@ const Hero = () => {
             {/* Left Content - 7 columns */}
             <div className="lg:col-span-7 text-foreground">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-4 md:mb-6 animate-fade-up">
-                India's Leading Medical Device & IVD
+                Global Medical Device & IVD
                 <span className="text-gradient"> Regulatory Experts</span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                End-to-End Regulatory Solutions for Medical Devices & In-Vitro Diagnostics — CDSCO Licensing, Import/Manufacturing Approvals & US FDA Support
+                End-to-End Regulatory Solutions for Medical Devices & In-Vitro Diagnostics — US FDA, EU MDR, India CDSCO Licensing & Global Market Access
               </p>
 
               {/* Quick Link Buttons - 2 cols on mobile */}
@@ -116,7 +116,7 @@ const Hero = () => {
                 {serviceCards.map((card, index) => (
                   <div
                     key={`${card.title}-${card.category}-${index}`}
-                    className="bg-card/80 border border-border/60 rounded-2xl p-4 hover:shadow-elevated transition-all hover:-translate-y-1 cursor-pointer group hover:border-primary/50"
+                    className="bg-card/90 border border-border/60 rounded-2xl p-4 shadow-card hover:shadow-elevated transition-all hover:-translate-y-1 cursor-pointer group hover:border-primary/50"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-center justify-between mb-2">
@@ -166,7 +166,7 @@ const Hero = () => {
                 </a>
               ))}
               <div className="h-4 w-px bg-white/30" />
-              {["CDSCO", "US FDA", "BIS", "WPC"].map((item) => (
+              {["US FDA", "EU MDR", "CDSCO", "BIS"].map((item) => (
                 <a
                   key={item}
                   href="#services"
@@ -188,7 +188,7 @@ const Hero = () => {
             {serviceCards.map((card, index) => (
               <div
                 key={`mobile-${card.title}-${card.category}-${index}`}
-                className="glass-card p-3 sm:p-4 transition-all group"
+                className="glass-card p-3 sm:p-4 shadow-card hover:shadow-elevated transition-all group border border-border/60"
               >
                 <span className="text-[9px] sm:text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">{card.category}</span>
                 <div className="flex flex-col items-center text-center mt-2">
