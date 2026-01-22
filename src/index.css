@@ -188,16 +188,17 @@
 
   .service-card {
     @apply rounded-xl p-6 transition-all duration-300 border;
-    background: hsl(var(--card) / 0.6);
+    background: hsl(var(--card) / 0.85);
     backdrop-filter: blur(12px);
-    border-color: hsl(var(--border) / 0.5);
+    border-color: hsl(var(--border) / 0.6);
+    box-shadow: var(--shadow-card);
   }
 
   .service-card:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-elevated);
-    border-color: hsl(var(--primary) / 0.4);
-    background: hsl(var(--card) / 0.8);
+    @apply -translate-y-2;
+    box-shadow: var(--shadow-elevated), 0 0 30px -5px hsl(var(--primary) / 0.15);
+    border-color: hsl(var(--primary) / 0.5);
+    background: hsl(var(--card) / 0.95);
   }
 
   .glass-card {

@@ -17,25 +17,25 @@ const Services = () => {
       icon: Stethoscope,
       title: "MEDICAL DEVICE",
       form: "Form MD 14, MD 15",
-      description: "Import License for Medical Devices in India under CDSCO",
+      description: "CDSCO Import License for Medical Devices with FSC evaluation & overseas documentation",
     },
     {
       icon: Microscope,
       title: "IN-VITRO DIAGNOSTIC",
       form: "Form MD 14, MD 15",
-      description: "Import License For In-Vitro Diagnostic Kits in India",
+      description: "Import License for IVD Kits in India with complete regulatory support",
     },
     {
       icon: Shield,
       title: "BIS CERTIFICATION",
       form: "Form V",
-      description: "BIS Certification for Foreign Manufacturers",
+      description: "BIS Certification for Foreign Manufacturers including ISI Mark",
     },
     {
       icon: Package,
-      title: "INDIAN AUTHORISED AGENT",
+      title: "AUTHORISED AGENT",
       form: "IAA Services",
-      description: "Complete IAA representation for foreign manufacturers",
+      description: "Complete Indian Authorised Agent representation & Power of Attorney support",
     },
   ];
 
@@ -44,46 +44,46 @@ const Services = () => {
       icon: Stethoscope,
       title: "MEDICAL DEVICE",
       form: "Form MD 3, MD 5",
-      description: "Manufacturing License for Medical Devices in India",
+      description: "SLA (Class A/B) & CDSCO (Class C/D) Manufacturing License support",
     },
     {
       icon: Microscope,
       title: "IN-VITRO DIAGNOSTIC",
       form: "Form MD 3, MD 5",
-      description: "Manufacturing License for IVD Kits in India",
+      description: "Manufacturing License for IVD Kits with QMS implementation",
     },
     {
       icon: FlaskConical,
       title: "CLINICAL TRIALS",
-      form: "CT-06",
-      description: "Clinical Trial Approval and Conduct in India",
+      form: "Form MD-22",
+      description: "Clinical Investigation approval, Ethics Committee & trial site coordination",
     },
     {
       icon: FileCheck,
       title: "QUALITY SYSTEMS",
       form: "ISO 13485",
-      description: "QMS Implementation & Certification",
+      description: "QMS Implementation, internal audits & certification support",
     },
   ];
 
   const globalServices = [
     {
-      flag: "🇮🇳",
-      title: "India CDSCO",
-      description: "Central & State licensing authority",
-      items: ["Manufacturing License", "Import License", "Clinical Investigation", "Materiovigilance"],
-    },
-    {
       flag: "🇺🇸",
       title: "US FDA",
-      description: "510(k), PMA, De Novo submissions",
-      items: ["Device Classification", "Premarket Submissions", "QSR Compliance", "Post-Market MDR"],
+      description: "21 CFR Compliance & FDA Approvals",
+      items: ["510(k), De Novo & PMA", "FDA QSR (21 CFR 820)", "Establishment Registration", "Post-Market MDR & Recalls"],
     },
     {
       flag: "🇪🇺",
       title: "EU MDR",
-      description: "CE Marking & Notified Body support",
-      items: ["Technical Documentation", "Clinical Evaluation", "EUDAMED Registration", "PMS/PSUR"],
+      description: "CE Marking & MDR 2017/745 Compliance",
+      items: ["Technical File & GSPR", "Clinical Evaluation (CER)", "ISO 13485 Implementation", "PMS, PSUR & Vigilance"],
+    },
+    {
+      flag: "🇮🇳",
+      title: "India CDSCO",
+      description: "MDR 2017 & State Authority Compliance",
+      items: ["Manufacturing License (MD-5/7)", "Import License (MD-14/15)", "DMF & SMF Preparation", "Materiovigilance (MvPI)"],
     },
   ];
 
@@ -106,7 +106,8 @@ const Services = () => {
             Medical Device & IVD <span className="text-gradient">Regulatory Solutions</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Complete CDSCO licensing, import/manufacturing approvals & global regulatory support for medical devices and IVDs.
+            End-to-end regulatory consulting for medical device manufacturers and importers seeking approvals in US, EU, and India. 
+            Our experts support compliance with FDA regulations, EU MDR (2017/745), and India CDSCO Medical Device Rules, 2017.
           </p>
         </div>
 
@@ -176,7 +177,7 @@ const Services = () => {
               Global Regulatory Excellence
             </div>
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-              India-Focused with Global Reach
+              Global Regulatory Excellence with International Focus
             </h3>
           </div>
 
@@ -184,12 +185,12 @@ const Services = () => {
             {globalServices.map((service, index) => (
               <div
                 key={service.title}
-                className={`glass-card p-6 md:p-8 hover:shadow-elevated transition-all group relative overflow-hidden ${index === 0 ? 'ring-2 ring-primary' : ''}`}
+                className={`glass-card p-6 md:p-8 shadow-card hover:shadow-elevated transition-all group relative overflow-hidden ${index === 2 ? 'ring-2 ring-primary' : ''}`}
               >
                 {/* Featured Badge for India */}
-                {index === 0 && (
+                {index === 2 && (
                   <div className="absolute top-4 right-4 px-3 py-1 btn-gradient text-xs font-bold rounded-full">
-                    Primary Focus
+                    India Focus
                   </div>
                 )}
                 

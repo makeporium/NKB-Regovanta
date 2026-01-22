@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   const highlights = [
-    "360-degree regulatory and compliance services",
-    "Deep expertise in development & testing",
-    "Manufacturing and commercialization",
-    "Post-marketing surveillance expertise",
-    "Cost-effective compliance solutions",
-    "Strategic regulatory advantage",
+    "Global regulatory expertise (US FDA, EU MDR, India CDSCO)",
+    "Strong CDSCO & State authority experience",
+    "Hands-on manufacturing & import licensing",
+    "Seamless global regulatory alignment",
+    "End-to-end lifecycle support",
+    "Faster approvals & reduced compliance risk",
   ];
 
   const stats = [
     { icon: Globe, value: "500+", label: "Projects Completed" },
-    { icon: Users, value: "50+", label: "Countries Served" },
+    { icon: Users, value: "25+", label: "Countries Served" },
     { icon: Shield, value: "15+", label: "Years Experience" },
     { icon: Award, value: "98%", label: "Success Rate" },
   ];
@@ -28,11 +28,11 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
-            About RegulaMed
+            About Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Our Regulatory and Compliance<br className="hidden md:block" /> 
-            <span className="text-gradient">Services in India</span>
+            Global Regulatory Services for<br className="hidden md:block" /> 
+            <span className="text-gradient">Medical Device Compliance</span>
           </h2>
         </div>
 
@@ -41,10 +41,10 @@ const About = () => {
           {/* Left Content */}
           <div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              RegulaMed specializes in providing comprehensive 360-degree regulatory and compliance services in India. Navigating the complex journey from concept inception to product approval can be daunting, especially in the face of stringent regulations.
+              We are a specialized regulatory services agency focused on medical device compliance for global markets. We support startups, SMEs, and multinational manufacturers in navigating complex regulatory requirements in the United States, European Union, and India.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              We offer a cost-effective solution to streamline this process. With deep expertise in the intricacies of development, testing, approval, manufacturing, commercialization, and post-marketing surveillance, we provide you with a strategic advantage.
+              Our mission is to simplify medical device regulations and help manufacturers deliver safe, effective, and compliant products to patients worldwide. With deep expertise in FDA, EU MDR, and CDSCO regulations, we provide you with a strategic advantage.
             </p>
             
             {/* Highlights Grid */}
@@ -77,9 +77,9 @@ const About = () => {
               </div>
               
               <div className="relative">
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Trust Us to Simplify Your Regulatory Path</h3>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Your Trusted Global Partner</h3>
                 <p className="text-muted-foreground mb-8">
-                  We bring decades of combined experience in navigating regulatory landscapes across India, US, and EU markets.
+                  We bring decades of combined experience in navigating regulatory landscapes across US FDA, EU MDR, and India CDSCO markets.
                 </p>
 
                 {/* Mini Stats */}
