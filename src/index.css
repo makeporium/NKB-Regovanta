@@ -6,104 +6,104 @@
 
 @layer base {
   :root {
-    /* Dark SaaS Theme - Modern tech aesthetic with purple-blue gradients */
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
+    /* FDA Group Inspired - Professional Teal/Blue with Gold accents */
+    --background: 195 60% 18%;
+    --foreground: 0 0% 100%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 195 55% 22%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 195 55% 20%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Vibrant Purple-Blue primary */
-    --primary: 250 89% 70%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep Teal primary - matches FDA Group brand */
+    --primary: 42 85% 55%;
+    --primary-foreground: 195 60% 15%;
 
-    /* Dark slate secondary */
-    --secondary: 217 33% 12%;
-    --secondary-foreground: 210 40% 98%;
+    /* Darker teal secondary */
+    --secondary: 195 50% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 15%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 195 40% 28%;
+    --muted-foreground: 195 20% 70%;
 
-    /* Sky Blue accent for CTAs and highlights */
-    --accent: 217 91% 65%;
-    --accent-foreground: 222 47% 5%;
+    /* Gold/Orange accent for CTAs - high contrast */
+    --accent: 42 85% 55%;
+    --accent-foreground: 195 60% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 250 89% 70%;
+    --border: 195 40% 30%;
+    --input: 195 40% 30%;
+    --ring: 42 85% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Hero section - Deep dark background */
-    --hero-bg: 222 47% 4%;
-    --hero-text: 210 40% 98%;
+    /* Hero section - Deep teal background */
+    --hero-bg: 195 60% 18%;
+    --hero-text: 0 0% 100%;
     
-    /* Custom tokens - Dark SaaS theme */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 4%) 0%, hsl(230 40% 8%) 50%, hsl(222 47% 6%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(222 47% 10%) 0%, hsl(222 47% 7%) 100%);
-    --gradient-section-light: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 4%) 100%);
-    --gradient-section-dark: linear-gradient(180deg, hsl(222 47% 4%) 0%, hsl(230 40% 6%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(280 80% 70%) 0%, hsl(217 91% 70%) 50%, hsl(200 95% 65%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(280 80% 65%) 0%, hsl(217 91% 65%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(250 89% 70% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(250 89% 70% / 0.15);
-    --shadow-elevated: 0 20px 50px -15px hsl(250 89% 70% / 0.2);
-    --shadow-accent: 0 4px 25px -4px hsl(217 91% 65% / 0.4);
-    --shadow-glow: 0 0 40px -10px hsl(250 89% 70% / 0.3);
+    /* Custom tokens - FDA Group inspired theme */
+    --gradient-hero: linear-gradient(135deg, hsl(195 60% 20%) 0%, hsl(195 55% 22%) 50%, hsl(195 60% 18%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(195 50% 25%) 0%, hsl(195 55% 20%) 100%);
+    --gradient-section-light: linear-gradient(180deg, hsl(195 55% 22%) 0%, hsl(195 60% 18%) 100%);
+    --gradient-section-dark: linear-gradient(180deg, hsl(195 60% 18%) 0%, hsl(195 65% 15%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(42 85% 55%) 0%, hsl(42 90% 60%) 50%, hsl(45 95% 65%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(42 85% 50%) 0%, hsl(42 90% 60%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(195 60% 10% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(195 60% 10% / 0.4);
+    --shadow-elevated: 0 20px 50px -15px hsl(195 60% 10% / 0.5);
+    --shadow-accent: 0 4px 25px -4px hsl(42 85% 55% / 0.4);
+    --shadow-glow: 0 0 40px -10px hsl(42 85% 55% / 0.3);
 
-    --sidebar-background: 222 47% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 250 89% 70%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 217 33% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 18%;
-    --sidebar-ring: 250 89% 70%;
+    --sidebar-background: 195 60% 18%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 195 60% 15%;
+    --sidebar-accent: 195 50% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 195 40% 30%;
+    --sidebar-ring: 42 85% 55%;
   }
 
   .dark {
-    --background: 222 47% 4%;
-    --foreground: 210 40% 98%;
+    --background: 195 65% 15%;
+    --foreground: 0 0% 100%;
 
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 195 60% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222 47% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 195 60% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 250 89% 70%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 42 85% 55%;
+    --primary-foreground: 195 60% 15%;
 
-    --secondary: 217 33% 10%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 195 55% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 12%;
-    --muted-foreground: 215 20% 50%;
+    --muted: 195 45% 25%;
+    --muted-foreground: 195 20% 65%;
 
-    --accent: 217 91% 65%;
-    --accent-foreground: 222 47% 5%;
+    --accent: 42 85% 55%;
+    --accent-foreground: 195 60% 15%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 15%;
-    --input: 217 33% 15%;
-    --ring: 250 89% 70%;
+    --border: 195 40% 25%;
+    --input: 195 40% 25%;
+    --ring: 42 85% 55%;
 
-    --sidebar-background: 222 47% 4%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 250 89% 70%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 217 33% 10%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 12%;
-    --sidebar-ring: 250 89% 70%;
+    --sidebar-background: 195 65% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 195 60% 15%;
+    --sidebar-accent: 195 55% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 195 40% 25%;
+    --sidebar-ring: 42 85% 55%;
   }
 }
 
@@ -173,7 +173,7 @@
   }
 
   .category-bar {
-    background: linear-gradient(90deg, hsl(280 80% 60%) 0%, hsl(250 89% 65%) 50%, hsl(217 91% 65%) 100%);
+    background: linear-gradient(90deg, hsl(42 85% 50%) 0%, hsl(42 90% 55%) 50%, hsl(45 85% 60%) 100%);
   }
 
   .section-divider {
@@ -289,10 +289,10 @@
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 20px -5px hsl(250 89% 70% / 0.3);
+      box-shadow: 0 0 20px -5px hsl(42 85% 55% / 0.3);
     }
     to {
-      box-shadow: 0 0 30px -5px hsl(250 89% 70% / 0.5);
+      box-shadow: 0 0 30px -5px hsl(42 85% 55% / 0.5);
     }
   }
 }
