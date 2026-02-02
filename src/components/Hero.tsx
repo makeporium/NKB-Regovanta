@@ -48,25 +48,25 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen">
-      {/* Background */}
-      <div className="absolute inset-0 gradient-hero" />
+      {/* Background - Teal hero section */}
+      <div className="absolute inset-0 bg-[hsl(195_65%_28%)]" />
       
       {/* Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative pt-28 md:pt-36 lg:pt-40 pb-6 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             {/* Left Content - 7 columns */}
-            <div className="lg:col-span-7 text-foreground">
+            <div className="lg:col-span-7 text-white">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-4 md:mb-6 animate-fade-up">
                 Global Medical Device & IVD
-                <span className="text-gradient"> Regulatory Experts</span>
+                <span className="text-white"> Regulatory Experts</span>
               </h1>
 
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 mb-6 md:mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
                 End-to-End Regulatory Solutions for Medical Devices & In-Vitro Diagnostics — US FDA, EU MDR, India CDSCO Licensing & Global Market Access
               </p>
 
@@ -76,25 +76,25 @@ const Hero = () => {
                   <a
                     key={link.label}
                     href="#services"
-                    className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-xl glass-card hover:border-primary/50 transition-all group"
+                    className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all group"
                   >
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors flex-shrink-0">
-                      <link.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors flex-shrink-0">
+                      <link.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
-                    <span className="text-xs sm:text-sm font-semibold leading-tight text-foreground">{link.label}</span>
+                    <span className="text-xs sm:text-sm font-semibold leading-tight text-white">{link.label}</span>
                   </a>
                 ))}
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <Button size="lg" className="btn-gradient w-full sm:w-auto">
+                <Button size="lg" className="bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border-2 border-white/30 w-full sm:w-auto">
                   <a href="#contact" className="flex items-center justify-center gap-2">
                     Get Free Consultation
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-border/50 text-foreground hover:bg-secondary w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/10 w-full sm:w-auto">
                   <a href="#services">Explore Services</a>
                 </Button>
               </div>
@@ -103,8 +103,8 @@ const Hero = () => {
               <div className="flex items-center justify-between gap-2 mt-6 md:hidden animate-fade-up" style={{ animationDelay: "0.4s" }}>
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center flex-1">
-                    <div className="text-xl sm:text-2xl font-bold text-gradient">{stat.value}</div>
-                    <div className="text-[10px] sm:text-xs text-muted-foreground">{stat.label}</div>
+                    <div className="text-xl sm:text-2xl font-bold text-white">{stat.value}</div>
+                    <div className="text-[10px] sm:text-xs text-white/70">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -116,33 +116,33 @@ const Hero = () => {
                 {serviceCards.map((card, index) => (
                   <div
                     key={`${card.title}-${card.category}-${index}`}
-                    className="bg-card/90 border border-border/60 rounded-2xl p-4 shadow-card hover:shadow-elevated transition-all hover:-translate-y-1 cursor-pointer group hover:border-primary/50"
+                    className="bg-white rounded-2xl p-4 shadow-card hover:shadow-elevated transition-all hover:-translate-y-1 cursor-pointer group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-[10px] font-semibold text-primary uppercase tracking-wide">{card.category}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary/30 transition-colors">
+                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
                         <card.icon className="w-7 h-7 text-primary" />
                       </div>
-                      <p className="text-[10px] text-foreground/70 mb-1">{card.subtitle}</p>
+                      <p className="text-[10px] text-muted-foreground mb-1">{card.subtitle}</p>
                       <h3 className="font-bold text-sm text-foreground mb-1">{card.title}</h3>
-                      <p className="text-[11px] text-foreground/60 leading-snug">{card.description}</p>
+                      <p className="text-[11px] text-muted-foreground leading-snug">{card.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Desktop Stats */}
-              <div className="flex items-center justify-between gap-4 mt-6 glass-card p-4">
+              <div className="flex items-center justify-between gap-4 mt-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center flex-1">
                     <div className="flex items-center justify-center gap-2 mb-1">
-                      <stat.icon className="w-5 h-5 text-accent" />
-                      <span className="text-2xl font-bold text-foreground">{stat.value}</span>
+                      <stat.icon className="w-5 h-5 text-white/80" />
+                      <span className="text-2xl font-bold text-white">{stat.value}</span>
                     </div>
-                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                    <div className="text-xs text-white/70">{stat.label}</div>
                   </div>
                 ))}
               </div>
