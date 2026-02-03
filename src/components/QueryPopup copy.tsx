@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Send, MessageCircle } from "lucide-react";
+import { X, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -43,11 +43,33 @@ const QueryPopup = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation
+    // Basic validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.query.trim()) {
       toast({
         title: "Please fill all fields",
-        description: "All fields are required.",
+        description: "All fields are required to submit your query.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Phone validation (basic)
+    const phoneRegex = /^[\d\s\-+()]{10,}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      toast({
+        title: "Invalid phone number",
+        description: "Please enter a valid phone number.",
         variant: "destructive",
       });
       return;
@@ -56,40 +78,25 @@ const QueryPopup = () => {
     setIsSubmitting(true);
 
     try {
-      // Sending data to Web3Forms
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "1de03288-07d7-4d98-9b81-14a4c86207bc",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.query,
-          subject: `New Inquiry from ${formData.name}`,
-          from_name: "NKB Regovanta Website",
-        }),
+      // Create mailto link as fallback (since we don't have backend)
+      const subject = encodeURIComponent(`Query from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nQuery:\n${formData.query}`
+      );
+      
+      window.location.href = `mailto:makeporium@gmail.com?subject=${subject}&body=${body}`;
+      
+      toast({
+        title: "Opening email client",
+        description: "Your default email client will open to send the query.",
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: "Message Sent Successfully!",
-          description: "We will get back to you at makeporium@gmail.com soon.",
-        });
-        setIsOpen(false);
-        setFormData({ name: "", email: "", phone: "", query: "" });
-      } else {
-        throw new Error("Something went wrong");
-      }
+      
+      setIsOpen(false);
+      setFormData({ name: "", email: "", phone: "", query: "" });
     } catch (error) {
       toast({
-        title: "Submission Failed",
-        description: "Please check your connection and try again.",
+        title: "Error",
+        description: "Failed to submit query. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -102,7 +109,7 @@ const QueryPopup = () => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-accent hover:bg-accent/90 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 group"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-accent hover:bg-accent/90 rounded-full shadow-orange flex items-center justify-center transition-all hover:scale-110 group"
         aria-label="Open query form"
       >
         <MessageCircle className="w-6 h-6 md:w-7 md:h-7 text-accent-foreground" />
@@ -138,6 +145,7 @@ const QueryPopup = () => {
                 onChange={handleChange}
                 placeholder="Enter your name"
                 className="h-11 rounded-xl"
+                maxLength={100}
                 required
               />
             </div>
@@ -154,6 +162,7 @@ const QueryPopup = () => {
                 onChange={handleChange}
                 placeholder="your@email.com"
                 className="h-11 rounded-xl"
+                maxLength={255}
                 required
               />
             </div>
@@ -170,6 +179,7 @@ const QueryPopup = () => {
                 onChange={handleChange}
                 placeholder="+91 xxxxxxxxxx"
                 className="h-11 rounded-xl"
+                maxLength={20}
                 required
               />
             </div>
@@ -186,6 +196,7 @@ const QueryPopup = () => {
                 placeholder="Tell us about your regulatory needs..."
                 rows={3}
                 className="rounded-xl resize-none"
+                maxLength={1000}
                 required
               />
             </div>
@@ -193,10 +204,10 @@ const QueryPopup = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl"
+              className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-orange rounded-xl"
             >
               {isSubmitting ? (
-                "Sending..."
+                "Submitting..."
               ) : (
                 <>
                   <Send className="w-4 h-4 mr-2" />
@@ -204,6 +215,10 @@ const QueryPopup = () => {
                 </>
               )}
             </Button>
+
+            <p className="text-xs text-center text-muted-foreground">
+              Your query will be sent to our team at makeporium@gmail.com
+            </p>
           </form>
         </DialogContent>
       </Dialog>

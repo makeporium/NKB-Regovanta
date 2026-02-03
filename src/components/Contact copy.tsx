@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import {
   Select,
   SelectContent,
@@ -13,19 +11,6 @@ import {
 } from "@/components/ui/select";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  // State for form fields
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    company: "",
-    message: "",
-  });
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -49,69 +34,21 @@ const Contact = () => {
     },
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleServiceChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, service: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "1de03288-07d7-4d98-9b81-14a4c86207bc",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          company: formData.company,
-          message: formData.message,
-          subject: `Contact Form: ${formData.name} - ${formData.service}`,
-          from_name: "NKB Regovanta Contact Page",
-        }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. We'll contact you at makeporium@gmail.com soon.",
-        });
-        // Reset form
-        setFormData({ name: "", email: "", phone: "", service: "", company: "", message: "" });
-      } else {
-        throw new Error("Failed to send");
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
     <section id="contact" className="py-20 lg:py-28 bg-background relative">
+      {/* Top Border Accent */}
       <div className="absolute top-0 left-0 right-0 h-1 category-bar" />
+      
+      {/* Gradient Orbs */}
       <div className="absolute top-40 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-40 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
             Contact Us
@@ -125,6 +62,7 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
+          {/* Contact Form - Takes more space */}
           <div className="lg:col-span-3 glass-card p-8 lg:p-10">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
@@ -142,28 +80,13 @@ const Contact = () => {
                   <label htmlFor="name" className="text-sm font-semibold text-foreground">
                     Full Name *
                   </label>
-                  <Input 
-                    id="name" 
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name" 
-                    required 
-                    className="h-12 rounded-xl bg-secondary border-border" 
-                  />
+                  <Input id="name" placeholder="Your name" required className="h-12 rounded-xl bg-secondary border-border" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-semibold text-foreground">
                     Email Address *
                   </label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com" 
-                    required 
-                    className="h-12 rounded-xl bg-secondary border-border" 
-                  />
+                  <Input id="email" type="email" placeholder="your@email.com" required className="h-12 rounded-xl bg-secondary border-border" />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -171,20 +94,13 @@ const Contact = () => {
                   <label htmlFor="phone" className="text-sm font-semibold text-foreground">
                     Phone Number
                   </label>
-                  <Input 
-                    id="phone" 
-                    type="tel" 
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="+91 xxxxxxxxxx" 
-                    className="h-12 rounded-xl bg-secondary border-border" 
-                  />
+                  <Input id="phone" type="tel" placeholder="+91 xxxxxxxxxx" className="h-12 rounded-xl bg-secondary border-border" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="service" className="text-sm font-semibold text-foreground">
                     Service Required
                   </label>
-                  <Select onValueChange={handleServiceChange} value={formData.service}>
+                  <Select>
                     <SelectTrigger className="h-12 rounded-xl bg-secondary border-border">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -203,13 +119,7 @@ const Contact = () => {
                 <label htmlFor="company" className="text-sm font-semibold text-foreground">
                   Company Name
                 </label>
-                <Input 
-                  id="company" 
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Your company name" 
-                  className="h-12 rounded-xl bg-secondary border-border" 
-                />
+                <Input id="company" placeholder="Your company name" className="h-12 rounded-xl bg-secondary border-border" />
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-semibold text-foreground">
@@ -217,30 +127,20 @@ const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   placeholder="Tell us about your regulatory needs..."
                   rows={4}
                   required
                   className="rounded-xl resize-none bg-secondary border-border"
                 />
               </div>
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full h-14 btn-gradient text-lg font-semibold rounded-xl" 
-                size="lg"
-              >
-                {isSubmitting ? "Sending..." : (
-                  <>
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </>
-                )}
+              <Button type="submit" className="w-full h-14 btn-gradient text-lg font-semibold rounded-xl" size="lg">
+                <Send className="w-5 h-5 mr-2" />
+                Send Message
               </Button>
             </form>
           </div>
 
+          {/* Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="glass-card p-8">
               <h4 className="text-xl font-bold mb-6 text-foreground">Contact Information</h4>
@@ -259,8 +159,11 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Quick Info Card */}
             <div className="btn-gradient rounded-3xl p-8 relative overflow-hidden">
+              {/* Decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+              
               <div className="relative">
                 <h4 className="text-xl font-bold mb-3 text-accent-foreground">Need Urgent Assistance?</h4>
                 <p className="text-accent-foreground/80 mb-6">
