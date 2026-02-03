@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@regulamed.com",
+      value: "contact@nkbregovanta.com",
     },
     {
       icon: Clock,

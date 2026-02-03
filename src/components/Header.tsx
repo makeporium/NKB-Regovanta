@@ -47,9 +47,9 @@ const Header = () => {
             <Phone className="w-4 h-4" />
             +91 7672005050
           </a>
-          <a href="mailto:contact@regulamed.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+          <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
             <Mail className="w-4 h-4" />
-            contact@regulamed.com
+            contact@nkbregovanta.com
           </a>
         </div>
       </div>
@@ -76,8 +76,8 @@ const Header = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white border border-border shadow-lg z-50">
                       {link.dropdown.map((item) => (
-                        <DropdownMenuItem key={item.label} asChild className="hover:bg-primary/10 focus:bg-primary/10 cursor-pointer">
-                          <a href={item.href} className="text-foreground hover:text-primary transition-colors font-medium">{item.label}</a>
+                        <DropdownMenuItem key={item.label} asChild className="hover:bg-primary hover:text-white focus:bg-primary focus:text-white cursor-pointer">
+                          <a href={item.href} className="text-foreground font-medium">{item.label}</a>
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>

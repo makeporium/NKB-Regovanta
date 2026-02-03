@@ -64,11 +64,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-1 mb-4 md:mb-6">
-              <span className="text-2xl md:text-3xl font-extrabold text-gradient">Regula</span>
-              <span className="text-2xl md:text-3xl font-extrabold text-foreground">Med</span>
+              <span className="text-2xl md:text-3xl font-extrabold text-gradient">NKB</span>
+              <span className="text-2xl md:text-3xl font-extrabold text-foreground">Regovanta</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4 md:mb-6 max-w-sm">
-              India's leading regulatory consultancy for medical devices and in-vitro diagnostics. Specialized in CDSCO licensing, import/manufacturing approvals & global regulatory support.
+              Leading regulatory consultancy for medical devices and in-vitro diagnostics. Specialized in US FDA, EU MDR, CDSCO licensing, import/manufacturing approvals & global regulatory support.
             </p>
             
             {/* Contact Info */}
@@ -79,11 +79,11 @@ const Footer = () => {
                 </div>
                 +91 7672005050
               </a>
-              <a href="mailto:contact@regulamed.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                contact@regulamed.com
+                contact@nkbregovanta.com
               </a>
               <div className="flex items-start gap-3 text-sm text-muted-foreground">
                 <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
@@ -165,7 +165,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-4 md:py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} RegulaMed. All rights reserved.
+              © {new Date().getFullYear()} NKB Regovanta. All rights reserved.
             </p>
             <div className="flex items-center gap-4 md:gap-6">
               <a href="#" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">
