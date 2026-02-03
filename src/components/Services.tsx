@@ -185,12 +185,12 @@ const Services = () => {
             {globalServices.map((service, index) => (
               <div
                 key={service.title}
-                className={`glass-card p-6 md:p-8 shadow-card hover:shadow-elevated transition-all group relative overflow-hidden ${index === 2 ? 'ring-2 ring-primary' : ''}`}
+                className={`glass-card p-6 md:p-8 shadow-card hover:shadow-elevated transition-all group relative overflow-hidden ${index === 0 ? 'ring-2 ring-primary' : ''}`}
               >
-                {/* Featured Badge for India */}
-                {index === 2 && (
+                {/* Featured Badge for US FDA */}
+                {index === 0 && (
                   <div className="absolute top-4 right-4 px-3 py-1 btn-gradient text-xs font-bold rounded-full">
-                    India Focus
+                    International Focus
                   </div>
                 )}
                 
