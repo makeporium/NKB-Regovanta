@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   const links = {
@@ -63,9 +64,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-1 mb-4 md:mb-6">
-              <span className="text-2xl md:text-3xl font-extrabold text-gradient">NKB</span>
-              <span className="text-2xl md:text-3xl font-extrabold text-foreground">Regovanta</span>
+            <div className="mb-4 md:mb-6">
+              <img src={logo} alt="NKB Regovanta" className="h-14 md:h-16 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4 md:mb-6 max-w-sm">
               Leading regulatory consultancy for medical devices and in-vitro diagnostics. Specialized in US FDA, EU MDR, CDSCO licensing, import/manufacturing approvals & global regulatory support.
