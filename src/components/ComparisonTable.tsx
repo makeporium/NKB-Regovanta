@@ -53,31 +53,31 @@ const ComparisonTable = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 gradient-section-dark text-primary-foreground relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[hsl(195_65%_25%)] text-white relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-foreground/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent font-semibold text-sm mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-white font-semibold text-sm mb-4">
             Global Coverage
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Regulatory Services <span className="text-accent">Comparison</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+            Regulatory Services <span className="text-amber-400">Comparison</span>
           </h2>
-          <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Compare our comprehensive regulatory services across the US, EU, and India markets.
           </p>
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-3xl p-2 md:p-4 overflow-hidden">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-2 md:p-4 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-accent text-accent-foreground">
+                <tr className="bg-amber-500 text-gray-900">
                   <th className="text-left p-4 md:p-5 font-bold rounded-tl-2xl min-w-[180px]">Regulatory Area</th>
                   <th className="text-left p-4 md:p-5 font-bold min-w-[200px]">
                     <div className="flex items-center gap-2">
@@ -103,14 +103,14 @@ const ComparisonTable = () => {
                 {services.map((service, index) => (
                   <tr
                     key={service.area}
-                    className={`border-b border-primary-foreground/10 hover:bg-primary-foreground/5 transition-colors ${
+                    className={`border-b border-white/10 hover:bg-white/5 transition-colors ${
                       index === services.length - 1 ? 'border-b-0' : ''
                     }`}
                   >
-                    <td className="p-4 md:p-5 font-semibold text-primary-foreground">{service.area}</td>
-                    <td className="p-4 md:p-5 text-sm text-primary-foreground/80">{service.usa}</td>
-                    <td className="p-4 md:p-5 text-sm text-primary-foreground/80">{service.eu}</td>
-                    <td className="p-4 md:p-5 text-sm text-primary-foreground/80">{service.india}</td>
+                    <td className="p-4 md:p-5 font-semibold text-white">{service.area}</td>
+                    <td className="p-4 md:p-5 text-sm text-white/90">{service.usa}</td>
+                    <td className="p-4 md:p-5 text-sm text-white/90">{service.eu}</td>
+                    <td className="p-4 md:p-5 text-sm text-white/90">{service.india}</td>
                   </tr>
                 ))}
               </tbody>
@@ -120,9 +120,9 @@ const ComparisonTable = () => {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-accent/20 text-accent">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500 text-gray-900">
             <CheckCircle2 className="w-5 h-5" />
-            <span className="font-semibold">Full Service Available Across All Regions</span>
+            <span className="font-bold">Full Service Available Across All Regions</span>
           </div>
         </div>
       </div>

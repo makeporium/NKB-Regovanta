@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logo from "@/assets/logo.jpeg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,15 +59,8 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-2">
-              <div className="flex items-center">
-                <span className="text-2xl font-extrabold text-white">Regula</span>
-                <span className="text-2xl font-extrabold text-white/80">Med</span>
-              </div>
-              <div className="hidden sm:block border-l border-white/30 pl-2 ml-1">
-                <span className="block text-xs text-white/70 leading-tight">Your Regulatory</span>
-                <span className="block text-xs text-white font-semibold leading-tight">Partner</span>
-              </div>
+            <a href="#home" className="flex items-center gap-3">
+              <img src={logo} alt="NKB Regovanta" className="h-12 md:h-14 w-auto rounded" />
             </a>
 
             {/* Desktop Navigation */}
@@ -78,10 +72,10 @@ const Header = () => {
                       {link.label}
                       <ChevronDown className="w-4 h-4" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-white border-border">
+                    <DropdownMenuContent className="bg-white border border-border shadow-lg z-50">
                       {link.dropdown.map((item) => (
                         <DropdownMenuItem key={item.label} asChild className="hover:bg-primary/10 focus:bg-primary/10 cursor-pointer">
-                          <a href={item.href} className="text-foreground hover:text-primary transition-colors">{item.label}</a>
+                          <a href={item.href} className="text-foreground hover:text-primary transition-colors font-medium">{item.label}</a>
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>

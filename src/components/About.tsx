@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   const highlights = [
-    "Global regulatory expertise (US FDA, EU MDR, India CDSCO)",
-    "Strong CDSCO & State authority experience",
+    "US FDA expertise (510(k), PMA, De Novo)",
+    "EU MDR compliance & CE Marking",
+    "Global regulatory strategy & alignment",
     "Hands-on manufacturing & import licensing",
-    "Seamless global regulatory alignment",
     "End-to-end lifecycle support",
     "Faster approvals & reduced compliance risk",
   ];
@@ -41,10 +41,10 @@ const About = () => {
           {/* Left Content */}
           <div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              We are a specialized regulatory services agency focused on medical device compliance for global markets. We support startups, SMEs, and multinational manufacturers in navigating complex regulatory requirements in the United States, European Union, and India.
+              We are a specialized regulatory services agency focused on medical device compliance for global markets. Our primary expertise lies in US FDA regulations, with comprehensive support for EU MDR and international markets including India.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Our mission is to simplify medical device regulations and help manufacturers deliver safe, effective, and compliant products to patients worldwide. With deep expertise in FDA, EU MDR, and CDSCO regulations, we provide you with a strategic advantage.
+              Our mission is to simplify medical device regulations and help manufacturers deliver safe, effective, and compliant products to patients worldwide. With deep expertise in FDA 510(k), PMA, and global regulatory pathways, we provide you with a strategic advantage.
             </p>
             
             {/* Highlights Grid */}
