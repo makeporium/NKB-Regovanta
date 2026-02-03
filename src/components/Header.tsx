@@ -57,11 +57,11 @@ const Header = () => {
       {/* Main Navigation */}
       <div className="bg-[hsl(195_65%_28%)] border-b border-white/10">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-24 md:h-28">
             {/* Logo */}
             <a href="#home" className="flex items-center">
               <div className="bg-white px-3 py-1.5 rounded">
-                <img src={logo} alt="NKB Regovanta" className="h-10 md:h-12 w-auto" />
+                <img src={logo} alt="NKB Regovanta" className="h-14 md:h-20 w-auto rounded-lg" />
               </div>
             </a>
 

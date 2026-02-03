@@ -65,7 +65,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
             <div className="mb-4 md:mb-6">
-              <img src={logo} alt="NKB Regovanta" className="h-14 md:h-16 w-auto" />
+              <img src={logo} alt="NKB Regovanta" className="h-14 md:h-16 w-auto border-[hsl(195_65%_28%)] border-2 p-1 rounded-md" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4 md:mb-6 max-w-sm">
               Leading regulatory consultancy for medical devices and in-vitro diagnostics. Specialized in US FDA, EU MDR, CDSCO licensing, import/manufacturing approvals & global regulatory support.
