@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { 
   Stethoscope, 
   Microscope, 
@@ -12,6 +14,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
 const Services = () => {
+  const location = useLocation();
+  const hash = location.hash.slice(1);
+  const [activeTab, setActiveTab] = useState<"importer" | "manufacturer">(
+    hash === "for-manufacturer" ? "manufacturer" : "importer"
+  );
+
+  useEffect(() => {
+    if (hash === "for-manufacturer") setActiveTab("manufacturer");
+    else if (hash === "for-importer") setActiveTab("importer");
+  }, [hash]);
   const importerServices = [
     {
       icon: Stethoscope,
@@ -112,7 +124,7 @@ const Services = () => {
         </div>
 
         {/* Tabs for Importer/Manufacturer */}
-        <Tabs defaultValue="importer" className="w-full mb-12 md:mb-20">
+        <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "importer" | "manufacturer")} className="w-full mb-12 md:mb-20">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 md:mb-12 h-14 md:h-16 bg-secondary p-2 rounded-2xl border border-border">
             <TabsTrigger value="importer" className="text-sm md:text-base font-bold rounded-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               For Importer
@@ -123,7 +135,7 @@ const Services = () => {
           </TabsList>
 
           <TabsContent value="importer" className="animate-fade-in">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div id="for-importer" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {importerServices.map((service) => (
                 <div
                   key={service.title}
@@ -146,7 +158,7 @@ const Services = () => {
           </TabsContent>
 
           <TabsContent value="manufacturer" className="animate-fade-in">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div id="for-manufacturer" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {manufacturerServices.map((service) => (
                 <div
                   key={service.title}

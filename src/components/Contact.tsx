@@ -125,7 +125,7 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-3 glass-card p-8 lg:p-10">
+          <div className="lg:col-span-3 glass-card p-8 lg:p-10 shadow-card hover:shadow-elevated transition-all">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 text-primary" />
@@ -242,7 +242,7 @@ const Contact = () => {
           </div>
 
           <div className="lg:col-span-2 space-y-6">
-            <div className="glass-card p-8">
+            <div className="glass-card p-8 shadow-card hover:shadow-elevated transition-all">
               <h4 className="text-xl font-bold mb-6 text-foreground">Contact Information</h4>
               <div className="space-y-5">
                 {contactInfo.map((item) => (

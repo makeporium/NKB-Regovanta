@@ -62,7 +62,7 @@ const Statistics = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 lg:py-28 bg-secondary relative overflow-hidden">
+    <section id="our-impact" className="py-12 md:py-20 lg:py-28 bg-secondary relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -86,7 +86,7 @@ const Statistics = () => {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="glass-card p-4 md:p-6 text-center hover:shadow-card transition-colors"
+              className="glass-card p-4 md:p-6 text-center shadow-card hover:shadow-elevated transition-all"
             >
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-3">
                 <stat.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
@@ -108,7 +108,7 @@ const Statistics = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="glass-card p-6 md:p-8 relative"
+                className="glass-card p-6 md:p-8 shadow-card hover:shadow-elevated transition-all relative"
               >
                 {/* Quote Mark */}
                 <div className="absolute top-4 right-4 text-5xl text-primary/20 font-serif">"</div>

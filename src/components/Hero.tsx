@@ -9,6 +9,7 @@ import {
   Award,
   CheckCircle,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -133,9 +134,10 @@ const Hero = () => {
             <div className="lg:col-span-5 hidden lg:block">
               <div className="grid grid-cols-2 gap-4">
                 {serviceCards.map((card, i) => (
-                  <div
+                  <Link
                     key={i}
-                    className="bg-white rounded-2xl p-4 shadow-card hover:shadow-elevated hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 cursor-pointer group"
+                    to={card.category === "For Importer" ? "/#for-importer" : "/#for-manufacturer"}
+                    className="bg-white rounded-2xl p-4 shadow-card hover:shadow-elevated hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 cursor-pointer group block"
                   >
                     <span className="text-xs font-semibold text-primary uppercase">
                       {card.category}
@@ -158,7 +160,7 @@ const Hero = () => {
                         {card.description}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
@@ -189,9 +191,10 @@ const Hero = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {serviceCards.map((card, i) => (
-              <div
+              <Link
                 key={i}
-                className="rounded-2xl bg-card p-4 shadow-card border border-border/60 hover:shadow-elevated hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 cursor-pointer group"
+                to={card.category === "For Importer" ? "/#for-importer" : "/#for-manufacturer"}
+                className="rounded-2xl bg-card p-4 shadow-card border border-border/60 hover:shadow-elevated hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 cursor-pointer group block"
               >
                 <div className="flex flex-col items-center text-center space-y-1">
 
@@ -216,7 +219,7 @@ const Hero = () => {
                   </p>
 
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

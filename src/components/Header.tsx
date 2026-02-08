@@ -17,29 +17,29 @@ const Header = () => {
     { label: "Home", href: "/#home" },
     {
       label: "For Importer",
-      href: "/#services",
+      href: "/#for-importer",
       dropdown: [
-        { label: "Medical Device Import License", href: "/#services" },
-        { label: "IVD Import License", href: "/#services" },
-        { label: "BIS Certification", href: "/#services" },
-        { label: "Indian Authorised Agent", href: "/#services" },
+        { label: "Medical Device Import License", href: "/#for-importer" },
+        { label: "IVD Import License", href: "/#for-importer" },
+        { label: "BIS Certification", href: "/#for-importer" },
+        { label: "Indian Authorised Agent", href: "/#for-importer" },
       ],
     },
     {
       label: "For Manufacturer",
-      href: "/#services",
+      href: "/#for-manufacturer",
       dropdown: [
-        { label: "Medical Device Manufacturing", href: "/#services" },
-        { label: "IVD Manufacturing License", href: "/#services" },
-        { label: "Quality Systems (ISO 13485)", href: "/#services" },
-        { label: "US FDA 510(k)", href: "/#services" },
+        { label: "Medical Device Manufacturing", href: "/#for-manufacturer" },
+        { label: "IVD Manufacturing License", href: "/#for-manufacturer" },
+        { label: "Quality Systems (ISO 13485)", href: "/#for-manufacturer" },
+        { label: "US FDA 510(k)", href: "/#for-manufacturer" },
       ],
     },
     {
       label: "Advisory",
-      href: "/financial-mis",
+      href: "/#financial-mis",
       dropdown: [
-        { label: "Financial MIS & Reporting", href: "/financial-mis" },
+        { label: "Financial MIS & Reporting", href: "/#financial-mis" },
       ],
     },
     { label: "About Us", href: "/#about" },
@@ -67,11 +67,11 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-24 md:h-28">
             {/* Logo */}
-            <a href="#home" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <div className="bg-white px-3 py-1.5 rounded">
                 <img src={logo} alt="NKB Regovanta" className="h-14 md:h-20 w-auto rounded-lg" />
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
@@ -95,13 +95,13 @@ const Header = () => {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 ) : (
-                  <a
+                  <Link
                     key={link.label}
-                    href={link.href}
+                    to={link.href}
                     className="px-4 py-2 text-sm font-medium text-white hover:text-white/80 transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )
               )}
             </nav>
@@ -109,7 +109,7 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <Button asChild className="bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border border-white/30">
-                <a href="/#contact">Get a Quote</a>
+                <Link to="/#contact">Get a Quote</Link>
               </Button>
             </div>
 
@@ -150,7 +150,7 @@ const Header = () => {
                 )}
                 <div className="px-4 pt-2">
                   <Button asChild className="w-full bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border border-white/30">
-                    <a href="/#contact">Get a Quote</a>
+                    <Link to="/#contact">Get a Quote</Link>
                   </Button>
                 </div>
               </div>

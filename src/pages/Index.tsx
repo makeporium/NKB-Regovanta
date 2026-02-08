@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -5,11 +7,29 @@ import Services from "@/components/Services";
 import ComparisonTable from "@/components/ComparisonTable";
 import Statistics from "@/components/Statistics";
 import WhyUs from "@/components/WhyUs";
+import FinancialMISSection from "@/components/FinancialMISSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import QueryPopup from "@/components/QueryPopup";
 
 const Index = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.slice(1);
+    const scrollToEl = () => {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    // When linking to Services tab content, wait for tab to switch first
+    if (id === "for-importer" || id === "for-manufacturer") {
+      const t = setTimeout(scrollToEl, 100);
+      return () => clearTimeout(t);
+    }
+    scrollToEl();
+  }, [hash]);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -20,6 +40,7 @@ const Index = () => {
         <ComparisonTable />
         <Statistics />
         <WhyUs />
+        <FinancialMISSection />
         <Contact />
       </main>
       <Footer />

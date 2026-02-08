@@ -43,7 +43,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="py-12 md:py-20 lg:py-28 gradient-section-light relative overflow-hidden">
+    <section id="why-us" className="py-12 md:py-20 lg:pb-12 gradient-section-light relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute top-1/2 -translate-y-1/2 -right-48 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       
@@ -68,7 +68,7 @@ const WhyUs = () => {
               {benefits.map((benefit) => (
                 <div
                   key={benefit.title}
-                  className="glass-card p-5 md:p-6 hover:shadow-card transition-all group"
+                  className="glass-card p-5 md:p-6 shadow-card hover:shadow-elevated transition-all group"
                 >
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-all duration-300">
                     <benefit.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
@@ -82,7 +82,7 @@ const WhyUs = () => {
 
           {/* Right - Industries Card */}
           <div className="lg:col-span-5">
-            <div className="glass-card p-6 md:p-8 lg:p-10 sticky top-32">
+            <div className="glass-card p-6 md:p-8 lg:p-10 shadow-card hover:shadow-elevated transition-all sticky top-32">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl btn-gradient flex items-center justify-center">
                   <Target className="w-6 h-6 md:w-7 md:h-7 text-accent-foreground" />
