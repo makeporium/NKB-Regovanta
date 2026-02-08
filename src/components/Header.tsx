@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -32,6 +33,13 @@ const Header = () => {
         { label: "IVD Manufacturing License", href: "#services" },
         { label: "Quality Systems (ISO 13485)", href: "#services" },
         { label: "US FDA 510(k)", href: "#services" },
+      ],
+    },
+    {
+      label: "Advisory",
+      href: "/financial-mis",
+      dropdown: [
+        { label: "Financial MIS & Reporting", href: "/financial-mis" },
       ],
     },
     { label: "About Us", href: "#about" },
@@ -77,7 +85,11 @@ const Header = () => {
                     <DropdownMenuContent className="bg-white border border-border shadow-lg z-50">
                       {link.dropdown.map((item) => (
                         <DropdownMenuItem key={item.label} asChild className="hover:bg-primary hover:text-white focus:bg-primary focus:text-white cursor-pointer">
-                          <a href={item.href} className="text-foreground font-medium">{item.label}</a>
+                          {item.href.startsWith("/") ? (
+                            <Link to={item.href} className="text-foreground font-medium">{item.label}</Link>
+                          ) : (
+                            <a href={item.href} className="text-foreground font-medium">{item.label}</a>
+                          )}
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>
@@ -115,16 +127,27 @@ const Header = () => {
           {isMenuOpen && (
             <nav className="lg:hidden py-4 border-t border-white/20 animate-fade-in">
               <div className="flex flex-col gap-2">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="px-4 py-3 text-sm font-medium text-white hover:text-white/80 hover:bg-white/10 rounded-lg transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {navLinks.map((link) =>
+                  link.href.startsWith("/") ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="px-4 py-3 text-sm font-medium text-white hover:text-white/80 hover:bg-white/10 rounded-lg transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="px-4 py-3 text-sm font-medium text-white hover:text-white/80 hover:bg-white/10 rounded-lg transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
                 <div className="px-4 pt-2">
                   <Button asChild className="w-full bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border border-white/30">
                     <a href="#contact">Get a Quote</a>
