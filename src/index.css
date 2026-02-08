@@ -188,8 +188,7 @@
 
   .service-card {
     @apply rounded-xl p-6 transition-all duration-300 border;
-    background: hsl(var(--card) / 0.85);
-    backdrop-filter: blur(12px);
+    background: hsl(var(--card));
     border-color: hsl(var(--border) / 0.6);
     box-shadow: var(--shadow-card);
   }
@@ -198,7 +197,7 @@
     @apply -translate-y-2;
     box-shadow: var(--shadow-elevated), 0 0 30px -5px hsl(var(--primary) / 0.15);
     border-color: hsl(var(--primary) / 0.5);
-    background: hsl(var(--card) / 0.95);
+    background: hsl(var(--card));
   }
 
   .glass-card {

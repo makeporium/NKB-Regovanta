@@ -14,25 +14,25 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home", href: "#home" },
+    { label: "Home", href: "/#home" },
     {
       label: "For Importer",
-      href: "#services",
+      href: "/#services",
       dropdown: [
-        { label: "Medical Device Import License", href: "#services" },
-        { label: "IVD Import License", href: "#services" },
-        { label: "BIS Certification", href: "#services" },
-        { label: "Indian Authorised Agent", href: "#services" },
+        { label: "Medical Device Import License", href: "/#services" },
+        { label: "IVD Import License", href: "/#services" },
+        { label: "BIS Certification", href: "/#services" },
+        { label: "Indian Authorised Agent", href: "/#services" },
       ],
     },
     {
       label: "For Manufacturer",
-      href: "#services",
+      href: "/#services",
       dropdown: [
-        { label: "Medical Device Manufacturing", href: "#services" },
-        { label: "IVD Manufacturing License", href: "#services" },
-        { label: "Quality Systems (ISO 13485)", href: "#services" },
-        { label: "US FDA 510(k)", href: "#services" },
+        { label: "Medical Device Manufacturing", href: "/#services" },
+        { label: "IVD Manufacturing License", href: "/#services" },
+        { label: "Quality Systems (ISO 13485)", href: "/#services" },
+        { label: "US FDA 510(k)", href: "/#services" },
       ],
     },
     {
@@ -42,8 +42,8 @@ const Header = () => {
         { label: "Financial MIS & Reporting", href: "/financial-mis" },
       ],
     },
-    { label: "About Us", href: "#about" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "About Us", href: "/#about" },
+    { label: "Contact Us", href: "/#contact" },
   ];
 
   return (
@@ -109,7 +109,7 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <Button asChild className="bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border border-white/30">
-                <a href="#contact">Get a Quote</a>
+                <a href="/#contact">Get a Quote</a>
               </Button>
             </div>
 
@@ -150,7 +150,7 @@ const Header = () => {
                 )}
                 <div className="px-4 pt-2">
                   <Button asChild className="w-full bg-[hsl(195_70%_35%)] hover:bg-[hsl(195_70%_40%)] text-white border border-white/30">
-                    <a href="#contact">Get a Quote</a>
+                    <a href="/#contact">Get a Quote</a>
                   </Button>
                 </div>
               </div>
