@@ -47,7 +47,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Background - Teal hero section */}
       <div className="absolute inset-0 bg-[hsl(195_65%_28%)]" />
       
