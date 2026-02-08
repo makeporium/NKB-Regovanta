@@ -188,7 +188,7 @@ const Hero = () => {
             {serviceCards.map((card, index) => (
               <div
                 key={`mobile-${card.title}-${card.category}-${index}`}
-                className="glass-card p-3 sm:p-4 shadow-card hover:shadow-elevated transition-all group border border-border/60"
+                className="rounded-2xl bg-card p-3 sm:p-4 shadow-card hover:shadow-elevated transition-all group border border-border/60"
               >
                 <span className="text-[9px] sm:text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">{card.category}</span>
                 <div className="flex flex-col items-center text-center mt-2">
