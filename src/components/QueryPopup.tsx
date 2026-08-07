@@ -193,7 +193,7 @@ const QueryPopup = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl"
+              className="w-full h-12 btn-gradient rounded-xl"
             >
               {isSubmitting ? (
                 "Sending..."

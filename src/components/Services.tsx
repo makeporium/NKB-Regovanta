@@ -1,237 +1,208 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { 
-  Stethoscope, 
-  Microscope, 
-  FlaskConical,
-  FileCheck,
-  Shield,
-  Globe,
+﻿import { useState } from "react";
+import { Link } from "react-router-dom";
+import {
   ArrowRight,
-  Package
+  Microscope,
+  Stethoscope,
+  FileSearch,
+  ActivitySquare,
 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
+
+type Tab = "consulting" | "preclinical" | "clinical" | "testing";
 
 const Services = () => {
-  const location = useLocation();
-  const hash = location.hash.slice(1);
-  const [activeTab, setActiveTab] = useState<"importer" | "manufacturer">(
-    hash === "for-manufacturer" ? "manufacturer" : "importer"
-  );
+  const [activeTab, setActiveTab] = useState<Tab>("consulting");
 
-  useEffect(() => {
-    if (hash === "for-manufacturer") setActiveTab("manufacturer");
-    else if (hash === "for-importer") setActiveTab("importer");
-  }, [hash]);
-  const importerServices = [
-    {
-      icon: Stethoscope,
-      title: "MEDICAL DEVICE",
-      form: "Form MD 14, MD 15",
-      description: "CDSCO Import License for Medical Devices with FSC evaluation & overseas documentation",
-    },
-    {
-      icon: Microscope,
-      title: "IN-VITRO DIAGNOSTIC",
-      form: "Form MD 14, MD 15",
-      description: "Import License for IVD Kits in India with complete regulatory support",
-    },
-    {
-      icon: Shield,
-      title: "BIS CERTIFICATION",
-      form: "Form V",
-      description: "BIS Certification for Foreign Manufacturers including ISI Mark",
-    },
-    {
-      icon: Package,
-      title: "AUTHORISED AGENT",
-      form: "IAA Services",
-      description: "Complete Indian Authorised Agent representation & Power of Attorney support",
-    },
+  const tabs: { key: Tab; label: string; icon: React.ElementType }[] = [
+    { key: "consulting", label: "Consulting & Strategy", icon: FileSearch },
+    { key: "preclinical", label: "Preclinical Research", icon: Microscope },
+    { key: "clinical", label: "Clinical Research", icon: ActivitySquare },
+    { key: "testing", label: "Medical Device Testing", icon: Stethoscope },
   ];
 
-  const manufacturerServices = [
-    {
-      icon: Stethoscope,
-      title: "MEDICAL DEVICE",
-      form: "Form MD 3, MD 5",
-      description: "SLA (Class A/B) & CDSCO (Class C/D) Manufacturing License support",
-    },
-    {
-      icon: Microscope,
-      title: "IN-VITRO DIAGNOSTIC",
-      form: "Form MD 3, MD 5",
-      description: "Manufacturing License for IVD Kits with QMS implementation",
-    },
-    {
-      icon: FlaskConical,
-      title: "CLINICAL TRIALS",
-      form: "Form MD-22",
-      description: "Clinical Investigation approval, Ethics Committee & trial site coordination",
-    },
-    {
-      icon: FileCheck,
-      title: "QUALITY SYSTEMS",
-      form: "ISO 13485",
-      description: "QMS Implementation, internal audits & certification support",
-    },
-  ];
+  const services: Record<Tab, { icon: React.ElementType; title: string; description: string; link: string }[]> = {
+    consulting: [
+      {
+        icon: FileSearch,
+        title: "US FDA & CMS Consulting",
+        description: "Navigate FDA 510(k), PMA, De Novo, and Q-Submission processes with deep institutional expertise.",
+        link: "/services/us-fda",
+      },
+      {
+        icon: FileSearch,
+        title: "EU MDR & IVDR Consulting",
+        description: "Ensure compliance with European regulations, maintain CE Marking, and manage legacy device transitions.",
+        link: "/services/eu-mdr",
+      },
+      {
+        icon: FileSearch,
+        title: "Global QA/RA Compliance",
+        description: "Implement and optimize ISO 13485 and FDA QSR quality management systems globally.",
+        link: "/services/quality-management",
+      },
+      {
+        icon: FileSearch,
+        title: "Biological Safety Consulting",
+        description: "Biological evaluation plans and reports, CERs, and toxicological risk assessments for your device.",
+        link: "/services/biological-safety",
+      },
+    ],
+    preclinical: [
+      {
+        icon: Microscope,
+        title: "Medical Device GLP Studies",
+        description: "GLP-compliant preclinical studies across our fully equipped ORs and Cath Labs in US and Europe.",
+        link: "/services/preclinical-research",
+      },
+      {
+        icon: Microscope,
+        title: "Early Feasibility Studies",
+        description: "Non-GLP proof-of-concept studies to minimize risk and determine ideal next steps early in development.",
+        link: "/services/preclinical-feasibility",
+      },
+      {
+        icon: Microscope,
+        title: "Preclinical Pathology",
+        description: "Expert in-life histopathology services with board-certified veterinary pathologists on staff.",
+        link: "/services/preclinical-pathology",
+      },
+      {
+        icon: Microscope,
+        title: "Bioskills Training",
+        description: "Surgical and procedural training programs for medical device companies and healthcare professionals.",
+        link: "/services/bioskills",
+      },
+    ],
+    clinical: [
+      {
+        icon: ActivitySquare,
+        title: "Clinical Trial Management",
+        description: "End-to-end clinical trial management from protocol design to final study report.",
+        link: "/services/clinical-research",
+      },
+      {
+        icon: ActivitySquare,
+        title: "Data Management",
+        description: "Robust clinical data management with validated EDC systems and biometrics expertise.",
+        link: "/services/data-management",
+      },
+      {
+        icon: ActivitySquare,
+        title: "Clinical Biostatistics",
+        description: "Rigorous statistical analysis plans and reporting to support regulatory submissions.",
+        link: "/services/clinical-biostatistics",
+      },
+      {
+        icon: ActivitySquare,
+        title: "Safety Management & Reporting",
+        description: "Comprehensive SAE reporting, vigilance, and post-market surveillance services.",
+        link: "/services/safety-management",
+      },
+    ],
+    testing: [
+      {
+        icon: Stethoscope,
+        title: "Biocompatibility Testing",
+        description: "ISO 10993 biological safety testing covering cytotoxicity, sensitization, irritation and more.",
+        link: "/services/medical-device-testing",
+      },
+      {
+        icon: Stethoscope,
+        title: "Microbiology Testing",
+        description: "Sterility, endotoxin, bioburden, and antimicrobial efficacy testing to meet regulatory standards.",
+        link: "/services/microbiology",
+      },
+      {
+        icon: Stethoscope,
+        title: "Chemical Characterization",
+        description: "Extractables and leachables testing and toxicological risk assessments per ISO 10993-18.",
+        link: "/services/chemistry",
+      },
+      {
+        icon: Stethoscope,
+        title: "Biological Evaluation Plans",
+        description: "Expert development of ISO 10993-1 compliant biological evaluation plans and reports.",
+        link: "/services/biological-safety",
+      },
+    ],
+  };
 
-  const globalServices = [
-    {
-      flag: "🇺🇸",
-      title: "US FDA",
-      description: "21 CFR Compliance & FDA Approvals",
-      items: ["510(k), De Novo & PMA", "FDA QSR (21 CFR 820)", "Establishment Registration", "Post-Market MDR & Recalls"],
-    },
-    {
-      flag: "🇪🇺",
-      title: "EU MDR",
-      description: "CE Marking & MDR 2017/745 Compliance",
-      items: ["Technical File & GSPR", "Clinical Evaluation (CER)", "ISO 13485 Implementation", "PMS, PSUR & Vigilance"],
-    },
-    {
-      flag: "🇮🇳",
-      title: "India CDSCO",
-      description: "MDR 2017 & State Authority Compliance",
-      items: ["Manufacturing License (MD-5/7)", "Import License (MD-14/15)", "DMF & SMF Preparation", "Materiovigilance (MvPI)"],
-    },
-  ];
+  const activeServices = services[activeTab];
 
   return (
-    <section id="services" className="py-12 md:py-20 lg:py-28 bg-background relative">
-      {/* Top Border Accent */}
-      <div className="absolute top-0 left-0 right-0 h-1 category-bar" />
-      
-      {/* Gradient Orbs */}
-      <div className="absolute top-40 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-40 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-4 relative">
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
-            Our Services
+    <section id="services" className="py-20 bg-gray-50 relative">
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 rounded-full bg-[#F5C754]/10 text-[#C08518] font-bold text-xs uppercase tracking-widest mb-4">
+            100% Focused on Medical Devices
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Medical Device & IVD <span className="text-gradient">Regulatory Solutions</span>
+          <h2 className="text-3xl md:text-5xl font-black text-[hsl(195_65%_20%)] mb-6">
+            100% Focused on Medical Device<br className="hidden md:block" /> and IVD Safety and Compliance
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            End-to-end regulatory consulting for medical device manufacturers and importers seeking approvals in US, EU, and India. 
-            Our experts support compliance with FDA regulations, EU MDR (2017/745), and India CDSCO Medical Device Rules, 2017.
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We provide a wide range of strategic consulting services, from regulatory strategy to post-market support — as a single project or as an extension of your team.
           </p>
         </div>
 
-        {/* Tabs for Importer/Manufacturer */}
-        <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "importer" | "manufacturer")} className="w-full mb-12 md:mb-20">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 md:mb-12 h-14 md:h-16 bg-secondary p-2 rounded-2xl border border-border">
-            <TabsTrigger value="importer" className="text-sm md:text-base font-bold rounded-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              For Importer
-            </TabsTrigger>
-            <TabsTrigger value="manufacturer" className="text-sm md:text-base font-bold rounded-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              For Manufacturer
-            </TabsTrigger>
-          </TabsList>
+        {/* Custom Tabs - 4 tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                activeTab === tab.key
+                  ? "bg-[hsl(195_65%_20%)] text-white shadow-md"
+                  : "bg-white text-gray-500 border border-gray-200 hover:text-[hsl(195_65%_20%)] hover:border-[hsl(195_65%_20%)]"
+              }`}
+            >
+              <tab.icon className="w-4 h-4" />
+              {tab.label}
+            </button>
+          ))}
+        </div>
 
-          <TabsContent value="importer" className="animate-fade-in">
-            <div id="for-importer" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {importerServices.map((service) => (
-                <div
-                  key={service.title}
-                  className="service-card group cursor-pointer"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-all duration-300">
-                      <service.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
-                    </div>
-                    <p className="text-xs text-muted-foreground mb-1 font-medium">{service.form}</p>
-                    <h4 className="font-bold text-foreground text-base md:text-lg mb-2">{service.title}</h4>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-border flex items-center justify-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="manufacturer" className="animate-fade-in">
-            <div id="for-manufacturer" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {manufacturerServices.map((service) => (
-                <div
-                  key={service.title}
-                  className="service-card group cursor-pointer"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-all duration-300">
-                      <service.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
-                    </div>
-                    <p className="text-xs text-muted-foreground mb-1 font-medium">{service.form}</p>
-                    <h4 className="font-bold text-foreground text-base md:text-lg mb-2">{service.title}</h4>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-border flex items-center justify-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-
-        {/* Global Services - India First */}
-        <div className="relative">
-          <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-semibold text-sm mb-4">
-              <Globe className="w-4 h-4" />
-              Global Regulatory Excellence
-            </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-              Global Regulatory Excellence with International Focus
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {globalServices.map((service, index) => (
-              <div
-                key={service.title}
-                className={`glass-card p-6 md:p-8 shadow-card hover:shadow-elevated transition-all group relative overflow-hidden ${index === 0 ? 'ring-2 ring-primary' : ''}`}
-              >
-                {/* Featured Badge for US FDA */}
-                {index === 0 && (
-                  <div className="absolute top-4 right-4 px-3 py-1 btn-gradient text-xs font-bold rounded-full">
-                    International Focus
-                  </div>
-                )}
-                
-                {/* Background Decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-                
-                <div className="relative">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl md:text-5xl">{service.flag}</span>
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-bold text-foreground">{service.title}</h4>
-                      <p className="text-xs md:text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 md:space-y-3 mb-6">
-                    {service.items.map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-sm text-muted-foreground">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="secondary" className="w-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {activeServices.map((service, index) => (
+            <Link
+              key={index}
+              to={service.link}
+              className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+            >
+              <div className="w-14 h-14 rounded-xl bg-[hsl(195_65%_20%)]/5 flex items-center justify-center mb-6 group-hover:bg-[#F5C754] transition-colors duration-300">
+                <service.icon className="w-7 h-7 text-[hsl(195_65%_20%)] group-hover:text-white transition-colors duration-300" />
               </div>
-            ))}
+
+              <h3 className="text-lg font-black text-[hsl(195_65%_20%)] mb-3 group-hover:text-[#F5C754] transition-colors">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                {service.description}
+              </p>
+
+              <div className="flex items-center text-[#F5C754] text-sm font-bold uppercase tracking-wider gap-1">
+                Learn More <ArrowRight className="w-4 h-4" />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Startup CTA Banner */}
+        <div className="mt-12 bg-[hsl(195_65%_20%)] rounded-3xl p-8 text-white text-center relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+          <div className="relative">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#F5C754]/20 text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">For Startups</span>
+            <h3 className="text-2xl font-black mb-3">Accelerate Your Startup's Path to Market with Integrated CRO Support</h3>
+            <p className="text-white/80 max-w-2xl mx-auto mb-6 text-sm">
+              MedTech startups often lose valuable time coordinating multiple vendors across regulatory, preclinical, clinical, and testing activities. NKB Regovanta provides unified oversight.
+            </p>
+            <Link to="/solutions/startups" className="inline-flex items-center gap-2 bg-[#F5C754] text-[hsl(195_65%_20%)] font-black px-6 py-3 rounded-full hover:bg-[#C08518] hover:text-white transition-all">
+              Startup Solutions <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>

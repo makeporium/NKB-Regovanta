@@ -1,141 +1,143 @@
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Youtube, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   const links = {
-    forImporter: [
-      { label: "Medical Device Import License", href: "#services" },
-      { label: "IVD Import License", href: "#services" },
-      { label: "BIS Certification", href: "#services" },
-      { label: "Indian Authorised Agent", href: "#services" },
+    consulting: [
+      { label: "Regulatory & Strategic Consulting", href: "/services/regulatory-consulting" },
+      { label: "US FDA Consulting", href: "/services/us-fda" },
+      { label: "EU MDR & IVDR", href: "/services/eu-mdr" },
+      { label: "Biological Safety Consulting", href: "/services/biological-safety" },
+      { label: "Human Factors & Usability", href: "/services/human-factors" },
+      { label: "Quality & Compliance", href: "/services/quality-management" },
     ],
-    forManufacturer: [
-      { label: "Manufacturing License", href: "#services" },
-      { label: "Clinical Trials", href: "#services" },
-      { label: "Quality Systems", href: "#services" },
-      { label: "510(k) Submission", href: "#services" },
-      { label: "EU MDR Compliance", href: "#services" },
+    research: [
+      { label: "Preclinical Research", href: "/services/preclinical" },
+      { label: "Clinical Trial Management", href: "/services/clinical/trial-management" },
+      { label: "Biocompatibility Testing", href: "/services/testing/biocompatibility" },
+      { label: "Microbiology & Sterility", href: "/services/testing/microbiology" },
+      { label: "Chemical Characterization", href: "/services/testing/chemistry" },
+    ],
+    expertise: [
+      { label: "Cardiovascular", href: "/expertise/cardiovascular" },
+      { label: "Orthopedics", href: "/expertise/orthopedics" },
+      { label: "Wound Care", href: "/expertise/wound-care" },
+      { label: "IVD", href: "/expertise/ivd" },
+      { label: "SaMD", href: "/expertise/samd" },
+      { label: "All Therapeutic Areas", href: "/expertise" },
     ],
     company: [
-      { label: "About Us", href: "#about" },
-      { label: "Why Choose Us", href: "#why-us" },
-      { label: "Contact", href: "#contact" },
-      { label: "Careers", href: "#" },
-      { label: "Blog", href: "#" },
+      { label: "About NKB Regovanta", href: "/about" },
+      { label: "Leadership Team", href: "/about/leadership" },
+      { label: "Accreditations", href: "/about/accreditations" },
+      { label: "Global Locations", href: "/about/locations" },
+      { label: "Careers", href: "/about/careers" },
+      { label: "News & Press", href: "/about/news" },
+    ],
+    resources: [
+      { label: "Blog & Insights", href: "/resources/blog" },
+      { label: "Whitepapers", href: "/resources/whitepapers" },
+      { label: "Webinars & Training", href: "/resources/webinars" },
+      { label: "Client Stories", href: "/resources/client-stories" },
+      { label: "FAQs", href: "/resources/faqs" },
     ],
   };
 
   return (
-    <footer className="bg-background border-t border-border relative overflow-hidden">
-      {/* Gradient Orbs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
-      {/* Top CTA Section */}
-      <div className="border-b border-border relative">
-        <div className="container mx-auto px-4 py-8 md:py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-foreground">
-                Ready to Start Your <span className="text-gradient">Regulatory Journey?</span>
-              </h3>
-              <p className="text-sm md:text-base text-muted-foreground">
-                Subscribe for the latest CDSCO updates and regulatory insights.
-              </p>
+    <footer className="bg-[hsl(195_65%_15%)] text-white relative overflow-hidden">
+      {/* Newsletter bar */}
+      <div className="border-b border-white/10">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold mb-1">Stay Ahead of Regulatory Changes</h3>
+              <p className="text-white/60 text-sm">Subscribe for the latest FDA, EU MDR, and global MedTech regulatory intelligence.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-              <Input 
-                placeholder="Enter your email" 
-                className="h-12 bg-secondary border-border text-foreground placeholder:text-muted-foreground min-w-[200px] sm:min-w-[250px]"
+              <Input
+                placeholder="Enter your email"
+                className="h-11 bg-white/10 border-white/20 text-white placeholder:text-white/40 min-w-[240px]"
               />
-              <Button className="h-12 btn-gradient px-6 whitespace-nowrap">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button className="h-11 btn-gradient px-6 whitespace-nowrap rounded-full">
+                Subscribe <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 py-10 md:py-16 relative">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-2 lg:col-span-2">
-            <div className="mb-4 md:mb-6">
-              <img src={logo} alt="NKB Regovanta" className="h-14 md:h-16 w-auto border-[hsl(195_65%_28%)] border-2 p-1 rounded-md" />
+      {/* Main footer grid */}
+      <div className="container mx-auto px-4 py-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {/* Brand col */}
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+            <div className="bg-white inline-block px-3 py-2 rounded mb-5">
+              <img src={logo} alt="NKB Regovanta" className="h-10 w-auto" />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4 md:mb-6 max-w-sm">
-              Leading regulatory consultancy for medical devices and in-vitro diagnostics. Specialized in US FDA, EU MDR, CDSCO licensing, import/manufacturing approvals & global regulatory support.
+            <p className="text-white/50 text-sm leading-relaxed mb-5">
+              The Medical Research Organization™ exclusively dedicated to medical device and IVD development.
             </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3 mb-4 md:mb-6">
-              <a href="tel:+917672005050" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-primary" />
-                </div>
-                +91 7672005050
+            <div className="space-y-2 mb-5">
+              <a href="tel:+917672005050" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +91 7672005050
               </a>
-              <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-primary" />
-                </div>
-                contact@nkbregovanta.com
+              <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+                <Mail className="w-3.5 h-3.5" /> contact@nkbregovanta.com
               </a>
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
-                </div>
-                <span>123 Regulatory Plaza, Suite 500<br />Medical District, Mumbai 400001</span>
+              <div className="flex items-start gap-2 text-sm text-white/50">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                <span>123 Regulatory Plaza<br />Mumbai 400001, India</span>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              <a href="#" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-muted-foreground">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-muted-foreground">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-muted-foreground">
-                <Facebook className="w-5 h-5" />
-              </a>
+            <div className="flex gap-2">
+              {[Linkedin, Twitter, Facebook, Youtube].map((Icon, i) => (
+                <a key={i} href="#" className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F5C754]/30 hover:text-[#F5C754] transition-colors text-white/50">
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* For Importer */}
+          {/* Consulting */}
           <div>
-            <h4 className="font-bold mb-4 md:mb-5 text-gradient text-base md:text-lg">For Importer</h4>
-            <ul className="space-y-2 md:space-y-3">
-              {links.forImporter.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
+            <h4 className="font-bold text-white text-xs uppercase tracking-widest mb-4">Consulting</h4>
+            <ul className="space-y-2.5">
+              {links.consulting.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* For Manufacturer */}
+          {/* Research & Testing */}
           <div>
-            <h4 className="font-bold mb-4 md:mb-5 text-gradient text-base md:text-lg">For Manufacturer</h4>
-            <ul className="space-y-2 md:space-y-3">
-              {links.forManufacturer.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
+            <h4 className="font-bold text-white text-xs uppercase tracking-widest mb-4">Research & Testing</h4>
+            <ul className="space-y-2.5">
+              {links.research.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Expertise */}
+          <div>
+            <h4 className="font-bold text-white text-xs uppercase tracking-widest mb-4">Expertise</h4>
+            <ul className="space-y-2.5">
+              {links.expertise.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -143,16 +145,27 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-bold mb-4 md:mb-5 text-gradient text-base md:text-lg">Company</h4>
-            <ul className="space-y-2 md:space-y-3">
-              {links.company.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
+            <h4 className="font-bold text-white text-xs uppercase tracking-widest mb-4">Company</h4>
+            <ul className="space-y-2.5">
+              {links.company.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-bold text-white text-xs uppercase tracking-widest mb-4">Resources</h4>
+            <ul className="space-y-2.5">
+              {links.resources.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -160,21 +173,15 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-border relative">
-        <div className="container mx-auto px-4 py-4 md:py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} NKB Regovanta. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 md:gap-6">
-              <a href="#" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-            </div>
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40">
+          <p>© {new Date().getFullYear()} NKB Regovanta Solutions Pvt. Ltd. All rights reserved.</p>
+          <div className="flex gap-5">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>

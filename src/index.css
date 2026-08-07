@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
@@ -215,9 +215,9 @@
   }
 
   .btn-gradient {
-    background: var(--gradient-accent);
-    @apply text-accent-foreground font-semibold;
-    box-shadow: var(--shadow-accent);
+    background: linear-gradient(to right, #F5C754, #C08518);
+    @apply text-white font-semibold border-transparent;
+    box-shadow: 0 4px 25px -4px #F5C7544d;
   }
 
   .btn-gradient:hover {
@@ -294,4 +294,16 @@
       box-shadow: 0 0 30px -5px hsl(195 70% 35% / 0.3);
     }
   }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 }
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
