@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle, ChevronRight } from "lucide-react";
+import ExpertSidebar from "@/components/ExpertSidebar";
 
 const fdaServices = [
   {
@@ -60,7 +61,7 @@ const UsFdaPage = () => {
     <main className="pt-[88px]">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Consulting Services&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-3xl mb-6">
@@ -77,7 +78,7 @@ const UsFdaPage = () => {
             { value: "315", label: "Medical Device Clinical & Regulatory Specialists" },
             { value: "100%", label: "Medical Device & IVD Focused" },
             { value: "50+", label: "FDA Pre-Submission Meetings Annually" },
-            { value: "55+", label: "Years Experience with US FDA" },
+            { value: "8+", label: "Years Experience with US FDA" },
           ].map((s) => (
             <div key={s.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center flex flex-col justify-center">
               <p className="text-3xl font-black text-[#F5C754]">{s.value}</p>
@@ -96,12 +97,8 @@ const UsFdaPage = () => {
               <p>Whether launching a new medical device in the US or maintaining compliance for a device already marketed, NKB Regovanta's US team of regulatory consultants can help you successfully navigate a challenging FDA regulatory landscape.</p>
               <p>Unlike other regulatory consultancies, NKB Regovanta consultants work closely with our expansive team of preclinical and clinical experts so we understand what FDA reviewers expect to see from you. Our consultants combine NKB Regovanta's institutional knowledge with their own real world expertise to ensure your continued compliance with regulations.</p>
               
-              {/* Image Placeholder */}
-              <div className="my-8 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 aspect-[16/9] relative flex items-center justify-center group">
-                <div className="absolute inset-0 bg-black/5" />
-                <p className="text-gray-400 font-medium text-sm text-center px-4">
-                  [Sign reading "FDA, U.S. Department of Health and Human Services" in front of a modern brick building representing NKB Regovanta's FDA consulting services]
-                </p>
+              <div className="my-8 rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
+                <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&q=80" alt="Service feature" className="w-full h-full object-cover" />
               </div>
             </Section>
 
@@ -154,33 +151,9 @@ const UsFdaPage = () => {
 
           </div>
 
-          {/* Sidebar - Experts */}
+          {/* Sidebar */}
           <div className="space-y-8">
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-xl font-black text-[hsl(195_65%_20%)] mb-2">Meet NKB Regovanta's Experts</h3>
-              <p className="text-sm text-gray-600 mb-6 pb-6 border-b border-gray-200">Our team includes medical writers, auditors and regulatory consultants with decades of practical, real world experience.</p>
-              
-              <div className="space-y-6">
-                {[
-                  { name: "Adam E. Saltman, MD, PhD", title: "Chief Medical Officer", img: "[Person with short gray hair, wearing a suit]" },
-                  { name: "Carla M. Wiese, BS-Mech Eng", title: "Principal Strategy Consultant, Regulatory", img: "[Carla Wiese]" },
-                  { name: "Monica R. Montañez, MS, RAC, CQA", title: "Principal Strategy Consultant, Regulatory", img: "[Placeholder Image]" },
-                  { name: "Sarah B. Nelson, MS", title: "Senior Strategy Consultant, Regulatory", img: "[Person with long hair in black blazer]" }
-                ].map((expert) => (
-                  <div key={expert.name} className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden shrink-0 text-[10px] text-gray-400 text-center leading-tight">
-                      {expert.img}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[hsl(195_65%_20%)] text-sm">{expert.name}</h4>
-                      <p className="text-xs text-gray-500 font-medium mb-1">{expert.title}</p>
-                      <Link to="#" className="text-[#F5C754] text-xs font-bold hover:underline">View Bio</Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
+              <ExpertSidebar />
             <div className="bg-[hsl(195_65%_20%)] rounded-2xl p-6 text-white text-center">
               <h3 className="text-lg font-black mb-2">Other Services That May Interest You</h3>
               <ul className="text-sm text-white/80 space-y-3 mt-4 text-left">

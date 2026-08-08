@@ -31,24 +31,50 @@ const ContactPage = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "", lastName: "", email: "", phone: "",
-    company: "", jobTitle: "", serviceArea: "", message: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    jobTitle: "",
+    company: "",
+    companySize: "",
+    primaryFocus: "",
+    based: "",
+    message: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setIsSubmitting(false);
-    toast({
-      title: "Message sent successfully!",
-      description: "One of our regulatory experts will contact you within 1 business day.",
-    });
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", company: "", jobTitle: "", serviceArea: "", message: "" });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "1de03288-07d7-4d98-9b81-14a4c86207bc",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          message: `Job Title: ${formData.jobTitle}\nCompany: ${formData.company}\nCompany Size: ${formData.companySize}\nPrimary Focus: ${formData.primaryFocus}\nBased In: ${formData.based}\n\nMessage:\n${formData.message}`,
+          subject: `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`,
+          from_name: "NKB Regovanta Website",
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        toast({ title: "Message sent successfully!", description: "One of our regulatory experts will contact you within 1 business day." });
+        setFormData({ firstName: "", lastName: "", email: "", jobTitle: "", company: "", companySize: "", primaryFocus: "", based: "", message: "" });
+      } else {
+        toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Network error", description: "Please check your connection and try again.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -87,53 +113,87 @@ const ContactPage = () => {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-sm font-semibold text-gray-700">First Name *</label>
-                      <Input name="firstName" value={formData.firstName} onChange={handleChange} placeholder="John" className="h-11 rounded-xl" required />
+                      <Input name="firstName" value={formData.firstName} onChange={handleChange} className="h-11 rounded-xl" required />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Last Name *</label>
-                      <Input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Smith" className="h-11 rounded-xl" required />
+                      <label className="text-sm font-semibold text-gray-700">Last Name/Surname *</label>
+                      <Input name="lastName" value={formData.lastName} onChange={handleChange} className="h-11 rounded-xl" required />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Work Email *</label>
-                      <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" className="h-11 rounded-xl" required />
+                      <label className="text-sm font-semibold text-gray-700">Business Email *</label>
+                      <Input name="email" type="email" value={formData.email} onChange={handleChange} className="h-11 rounded-xl" required />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Phone Number</label>
-                      <Input name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" className="h-11 rounded-xl" />
+                      <label className="text-sm font-semibold text-gray-700">Job Title *</label>
+                      <Input name="jobTitle" value={formData.jobTitle} onChange={handleChange} className="h-11 rounded-xl" required />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-sm font-semibold text-gray-700">Company *</label>
-                      <Input name="company" value={formData.company} onChange={handleChange} placeholder="Your Company" className="h-11 rounded-xl" required />
+                      <Input name="company" value={formData.company} onChange={handleChange} className="h-11 rounded-xl" required />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Job Title</label>
-                      <Input name="jobTitle" value={formData.jobTitle} onChange={handleChange} placeholder="VP Regulatory Affairs" className="h-11 rounded-xl" />
+                      <label className="text-sm font-semibold text-gray-700">Company Size *</label>
+                      <select
+                        name="companySize"
+                        value={formData.companySize}
+                        onChange={handleChange}
+                        className="w-full h-11 px-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      >
+                        <option value="">–Please Select–</option>
+                        <option value="1-50">1-50 Employees</option>
+                        <option value="51-200">51-200 Employees</option>
+                        <option value="201-1000">201-1000 Employees</option>
+                        <option value="1001+">1001+ Employees</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <label className="text-sm font-semibold text-gray-700">What is the Primary Focus of Your Inquiry? *</label>
+                      <select
+                        name="primaryFocus"
+                        value={formData.primaryFocus}
+                        onChange={handleChange}
+                        className="w-full h-11 px-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      >
+                        <option value="">–Please Select–</option>
+                        <option value="Regulatory Consulting">Regulatory Consulting</option>
+                        <option value="Clinical Research">Clinical Research</option>
+                        <option value="Preclinical Research">Preclinical Research</option>
+                        <option value="Testing Services">Testing Services</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="text-sm font-semibold text-gray-700">Where Are You Based? *</label>
+                      <select
+                        name="based"
+                        value={formData.based}
+                        onChange={handleChange}
+                        className="w-full h-11 px-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      >
+                        <option value="">–Please Select–</option>
+                        <option value="North America">North America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-sm font-semibold text-gray-700">Service Area of Interest</label>
-                    <select
-                      name="serviceArea"
-                      value={formData.serviceArea}
-                      onChange={handleChange}
-                      className="w-full h-11 px-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    >
-                      <option value="">Select a service area...</option>
-                      {serviceAreas.map((s) => <option key={s} value={s}>{s}</option>)}
-                    </select>
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-semibold text-gray-700">Message *</label>
+                    <label className="text-sm font-semibold text-gray-700">How can we help? *</label>
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Please describe your device, current regulatory status, target markets, and any specific challenges or timelines..."
-                      rows={5}
+                      rows={4}
                       className="rounded-xl resize-none"
                       required
                     />
@@ -144,7 +204,7 @@ const ContactPage = () => {
                     className="w-full h-12 btn-gradient rounded-xl text-base font-semibold"
                   >
                     {isSubmitting ? "Sending..." : (
-                      <><Send className="w-4 h-4 mr-2" /> Submit Inquiry</>
+                      <><Send className="w-4 h-4 mr-2" /> Submit</>
                     )}
                   </Button>
                   <p className="text-xs text-gray-400 text-center">
@@ -158,48 +218,7 @@ const ContactPage = () => {
 
             {/* Contact Info Sidebar */}
             <div className="space-y-5">
-              {/* Hours */}
-              <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="w-5 h-5 text-[#F5C754]" />
-                  <h3 className="font-bold text-gray-900">Business Hours</h3>
-                </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between text-gray-600">
-                    <span>Monday – Friday</span><span className="font-semibold">9:00 AM – 6:00 PM IST</span>
-                  </div>
-                  <div className="flex justify-between text-gray-600">
-                    <span>Saturday</span><span className="font-semibold">10:00 AM – 2:00 PM IST</span>
-                  </div>
-                  <div className="flex justify-between text-gray-600">
-                    <span>Sunday</span><span className="text-gray-400">Closed</span>
-                  </div>
-                </div>
-              </div>
 
-              {/* Offices */}
-              {offices.map((office) => (
-                <div key={office.city} className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#C08518]">{office.type}</span>
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-3">{office.city}</h3>
-                  <div className="space-y-2">
-                    <div className="flex gap-2 text-sm text-gray-600">
-                      <MapPin className="w-4 h-4 text-[#F5C754] flex-shrink-0 mt-0.5" />
-                      <span>{office.address}</span>
-                    </div>
-                    <a href={`tel:${office.phone}`} className="flex gap-2 text-sm text-gray-600 hover:text-[hsl(195_65%_28%)] transition-colors">
-                      <Phone className="w-4 h-4 text-[#F5C754] flex-shrink-0" />
-                      {office.phone}
-                    </a>
-                    <a href={`mailto:${office.email}`} className="flex gap-2 text-sm text-gray-600 hover:text-[hsl(195_65%_28%)] transition-colors">
-                      <Mail className="w-4 h-4 text-[#F5C754] flex-shrink-0" />
-                      {office.email}
-                    </a>
-                  </div>
-                </div>
-              ))}
 
               {/* Quick Links */}
               <div className="bg-[hsl(195_65%_28%)] rounded-2xl p-6 text-white">

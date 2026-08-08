@@ -1,4 +1,4 @@
-import { CheckCircle2, ArrowRight, Globe, Users, Shield, Award } from "lucide-react";
+﻿import { CheckCircle2, ArrowRight, Globe, Users, Shield, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -98,7 +98,7 @@ const About = () => {
 
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 bg-white border border-gray-100 rounded-2xl p-4 shadow-xl hidden lg:block text-center">
-              <div className="text-3xl font-black bg-gradient-to-r from-[#F5C754] to-[#C08518] bg-clip-text text-transparent">55+</div>
+              <div className="text-3xl font-black bg-gradient-to-r from-[#F5C754] to-[#C08518] bg-clip-text text-transparent">8+</div>
               <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Years</div>
               <div className="text-[10px] font-medium text-gray-400">Experience</div>
             </div>

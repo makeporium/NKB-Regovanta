@@ -1,10 +1,10 @@
-﻿import { Users, Award, FileCheck, Globe, Star, TrendingUp } from "lucide-react";
+import { Users, Award, FileCheck, Globe, Star, TrendingUp } from "lucide-react";
 
 const Statistics = () => {
   const stats = [
     {
       icon: Award,
-      value: "1967",
+      value: "2018",
       label: "Year NKB Regovanta Founded",
       description: "Founded to serve medical device companies",
     },
@@ -43,21 +43,21 @@ const Statistics = () => {
   const testimonials = [
     {
       quote: "Inside Solaris Endovascular's Path to PMA: A CEO's Account of a Pivotal Study. NKB Regovanta helped us get our medical device PMA approved — their expertise in US FDA regulations is unmatched.",
-      author: "CEO, Solaris Endovascular",
+      author: "Mark J.",
       company: "Solaris Endovascular",
-      role: "Chief Executive Officer",
+      role: "Clinical Trial Manager",
     },
     {
       quote: "Companies trust NKB Regovanta to get it right the first time. Their team's knowledge of both EU MDR and global clinical strategy made our international expansion seamless.",
       author: "Sarah Chen",
       company: "DiagnoLabs Inc, USA",
-      role: "VP Clinical Operations",
+      role: "Regulatory Submissions Lead",
     },
     {
       quote: "NKB Regovanta is 100% focused on medical device and IVD safety. Professional, responsive, and thorough — they guided us through every step of the biocompatibility testing process.",
       author: "Dr. Amit Sharma",
       company: "BioAssay Diagnostics",
-      role: "CEO",
+      role: "Senior Research Scientist",
     },
   ];
 

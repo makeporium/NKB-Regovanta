@@ -1,4 +1,4 @@
-import {
+﻿import {
   Globe,
   ArrowRight,
   Users,
@@ -52,7 +52,7 @@ const Hero = () => {
   ];
 
   const stats = [
-    { value: "1967", label: "Year Founded", icon: Award },
+    { value: "2018", label: "Year Founded", icon: Award },
     { value: "1,400+", label: "Professionals Worldwide", icon: Users },
     { value: "157K+", label: "Tests Last Year", icon: CheckCircle },
   ];

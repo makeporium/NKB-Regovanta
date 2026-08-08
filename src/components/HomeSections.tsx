@@ -9,7 +9,7 @@ export const HeroSection = () => {
     "NKB REGOVANTA IS THE WORLD'S LEADING MEDTECH CRO OFFERING GLOBAL DEVELOPMENT SERVICES",
     "DRIVEN BY ITS GLOBAL REGULATORY EXPERTISE AND IN-DEPTH THERAPEUTIC KNOWLEDGE",
     "FROM CONCEPT TO POST-MARKET, DELIVERING SIGNIFICANT TIME SAVINGS VS. INDUSTRY AVERAGES",
-    "HELPING MEDICAL DEVICE SPONSORS IMPROVE HEALTHCARE SINCE 1967",
+    "HELPING MEDICAL DEVICE SPONSORS IMPROVE HEALTHCARE SINCE 2018",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,7 +26,7 @@ export const HeroSection = () => {
       {/* Video Background Fallback / Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 transition-transform duration-[10000ms] scale-105"
-        style={{ backgroundImage: `url('https://namsa.com/app/uploads/2021/05/home.jpg')` }}
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80')` }}
       />
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(195_65%_15%)]/90 to-transparent" />
@@ -220,7 +220,7 @@ export const ResourcesCTASection = () => {
   return (
     <section 
       className="py-20 bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: `url('https://namsa.com/app/uploads/2020/07/Resources-CTA.jpg')` }}
+      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&q=80')` }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[hsl(195_65%_15%)]/85" />
@@ -374,7 +374,7 @@ export const WhyNKBSection = () => {
   return (
     <section 
       className="py-20 bg-cover bg-center bg-no-repeat relative text-white"
-      style={{ backgroundImage: `url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')` }}
+      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')` }}
     >
       {/* Dark Teal overlay */}
       <div className="absolute inset-0 bg-[hsl(195_65%_15%)]/85" />
@@ -443,7 +443,7 @@ export const ClientStoriesSection = () => {
                 Login to the NKB Client Portal for sample submissions, testing reports, project tracking, and more.
               </p>
               <Button asChild className="btn-gradient px-6 rounded-full font-bold">
-                <a href="https://namsa.com/client-portals/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="/contact" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   Client Portal <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>

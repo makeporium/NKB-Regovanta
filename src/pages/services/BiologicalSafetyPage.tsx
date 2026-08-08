@@ -19,7 +19,7 @@ const BiologicalSafetyPage = () => (
     <Header />
     <main className="pt-[88px]">
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Biological Safety&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-3xl mb-6">HELPING SPONSORS ENSURE BIOLOGICAL SAFETY COMPLIANCE</h1>
@@ -30,7 +30,7 @@ const BiologicalSafetyPage = () => (
           {[
             { value: "700+", label: "Biological Safety Projects Annually" },
             { value: "12", label: "Medical Device DABT Toxicologists" },
-            { value: "55+", label: "Years of Experience" },
+            { value: "8+", label: "Years of Experience" },
           ].map((s) => (
             <div key={s.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
               <p className="text-3xl font-black text-[#F5C754]">{s.value}</p>

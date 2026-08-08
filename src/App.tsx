@@ -1,10 +1,13 @@
-﻿import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Overview Pages
 import ServicesPage from "./pages/ServicesPage";
@@ -43,14 +46,32 @@ import { ProductDevelopmentStrategyPage, MedicalDeviceTestingPage } from "./page
 const queryClient = new QueryClient();
 
 // Generic placeholder for pages not yet built
-const PagePlaceholder = ({ title }: { title: string }) => (
-  <div className="min-h-[50vh] flex items-center justify-center text-center px-4">
-    <div>
-      <h1 className="text-3xl font-black text-gray-900 mb-4">{title}</h1>
-      <p className="text-gray-500">This page is currently being built with full 1:1 NKB Regovanta content.</p>
+const PagePlaceholder = ({ title }: { title: string }) => {
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1 flex items-center justify-center text-center px-4 pt-[88px] pb-16 min-h-[70vh]">
+        <div>
+          <div className="w-20 h-20 rounded-full bg-[hsl(195_65%_20%)]/10 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-10 h-10 text-[hsl(195_65%_20%)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-black text-gray-900 mb-3">{title}</h1>
+          <p className="text-gray-500 mb-8 max-w-sm mx-auto">This page is currently being built. Please check back soon.</p>
+          <button
+            onClick={() => navigate(-1)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[hsl(195_65%_20%)] text-white font-bold hover:bg-[hsl(195_65%_25%)] transition-colors"
+          >
+            ← Go Back
+          </button>
+        </div>
+      </main>
+      <Footer />
     </div>
-  </div>
-);
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -58,6 +79,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           {/* Home */}
           <Route path="/" element={<Index />} />
@@ -135,6 +157,7 @@ const App = () => (
 
           {/* Contact */}
           <Route path="/locations-contact" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

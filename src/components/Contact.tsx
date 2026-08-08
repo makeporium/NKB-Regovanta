@@ -22,9 +22,9 @@ const Contact = () => {
   });
 
   const contactInfo = [
-    { icon: MapPin, label: "Global Headquarters", value: "6750 Wales Rd.\nNorthwood, OH 43619 USA" },
-    { icon: Phone, label: "Phone", value: "+1 866.666.9455" },
-    { icon: Mail, label: "Email", value: "communications@namsa.com" },
+    { icon: MapPin, label: "Global Headquarters", value: "Building No 20, Awadh KunJ, FARIDI NAGAR, Cimap, Lucknow, Lucknow, Uttar Pradesh, India, 226015" },
+    { icon: Phone, label: "Phone", value: "8861375067" },
+    { icon: Mail, label: "Email", value: "contact@nkbregovanta.com" },
     { icon: Clock, label: "Business Hours", value: "Mon - Fri: 8:00 AM - 5:00 PM EST" },
   ];
 
@@ -36,14 +36,31 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast({
-        title: "Request Received!",
-        description: "Thank you for reaching out. A NKB Regovanta representative will follow up as quickly as possible.",
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "1de03288-07d7-4d98-9b81-14a4c86207bc",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          message: `Job Title: ${formData.jobTitle}\nCompany: ${formData.company}\nCompany Size: ${formData.companySize}\nPrimary Focus: ${formData.primaryFocus}\nLocation: ${formData.location}\n\nMessage:\n${formData.message}`,
+          subject: `New Contact Request from ${formData.firstName} ${formData.lastName}`,
+          from_name: "NKB Regovanta Website",
+        }),
       });
-      setFormData({ firstName: "", lastName: "", email: "", jobTitle: "", company: "", companySize: "", primaryFocus: "", location: "", message: "" });
+      const result = await response.json();
+      if (result.success) {
+        toast({ title: "Request Received!", description: "Thank you for reaching out. A NKB Regovanta representative will follow up as quickly as possible." });
+        setFormData({ firstName: "", lastName: "", email: "", jobTitle: "", company: "", companySize: "", primaryFocus: "", location: "", message: "" });
+      } else {
+        toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Network error", description: "Please check your connection and try again.", variant: "destructive" });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const selectClass = "w-full h-12 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#F5C754] focus:ring-[#F5C754] px-4 text-gray-700 appearance-none cursor-pointer";
@@ -190,7 +207,7 @@ const Contact = () => {
             <div className="bg-[#F5C754] rounded-3xl p-8 shadow-lg text-[hsl(195_65%_20%)] text-center">
               <h4 className="text-lg font-black mb-2">Need immediate assistance?</h4>
               <p className="text-sm font-bold opacity-80 mb-4">Call our global hotline</p>
-              <a href="tel:+18666669455" className="text-2xl font-black hover:underline">+1 866.666.9455</a>
+              <a href="tel:+918861375067" className="text-2xl font-black hover:underline">8861375067</a>
             </div>
           </div>
         </div>

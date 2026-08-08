@@ -117,7 +117,7 @@ const WhyUs = () => {
                   <div className="text-[10px] font-bold uppercase tracking-wider text-white/60">Countries</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-black text-[#F5C754]">1967</div>
+                  <div className="text-2xl md:text-3xl font-black text-[#F5C754]">2018</div>
                   <div className="text-[10px] font-bold uppercase tracking-wider text-white/60">Founded</div>
                 </div>
               </div>

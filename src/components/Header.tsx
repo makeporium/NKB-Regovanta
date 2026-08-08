@@ -107,7 +107,7 @@ const navStructure = [
     href: "/about",
     dropdown: [
       { label: "Company History", href: "/about/our-history" },
-      { label: "Leadership Team", href: "/about/NKB Regovanta-leadership" },
+      // { label: "Leadership Team", href: "/about/NKB Regovanta-leadership" },
       { label: "Accreditations & Certifications", href: "/about/our-accreditations-certifications" },
       { label: "Tradeshows & Events", href: "/events" },
       { label: "Careers at NKB Regovanta", href: "/careers" },
@@ -133,8 +133,8 @@ const Header = () => {
         <div className="container mx-auto px-4 flex items-center justify-between text-xs text-white/70">
           <span>The Medical Research Organization™</span>
           <div className="flex items-center gap-6">
-            <a href="tel:+917672005050" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Phone className="w-3 h-3" /> +91 7672005050
+            <a href="tel:+918861375067" className="flex items-center gap-1.5 hover:text-white transition-colors">
+              <Phone className="w-3 h-3" /> +91 8861375067
             </a>
             <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Mail className="w-3 h-3" /> contact@nkbregovanta.com

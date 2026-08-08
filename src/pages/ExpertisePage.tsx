@@ -1,4 +1,4 @@
-import PageLayout from "@/components/PageLayout";
+﻿import PageLayout from "@/components/PageLayout";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -115,7 +115,7 @@ const ExpertisePage = () => (
               { value: "12+", label: "Therapeutic Areas", sub: "Deep specialist coverage" },
               { value: "40%", label: "Cardiovascular Focus", sub: "Of total clinical portfolio" },
               { value: "1,400+", label: "Global Associates", sub: "Scientists, clinicians & RA experts" },
-              { value: "55+", label: "Years of Experience", sub: "Exclusively in medical devices" },
+              { value: "8+", label: "Years of Experience", sub: "Exclusively in medical devices" },
             ].map((s) => (
               <div key={s.label} className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
                 <div className="text-2xl font-black bg-gradient-to-r from-[#F5C754] to-[#C08518] bg-clip-text text-transparent">{s.value}</div>

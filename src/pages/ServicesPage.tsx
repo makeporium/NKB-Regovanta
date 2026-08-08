@@ -46,7 +46,7 @@ const ServicesPage = () => (
 
     {/* CTA */}
     <section className="py-20 bg-[hsl(195_65%_20%)] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-black text-white mb-4">Not Sure Where to Start?</h2>
         <p className="text-white/70 mb-10 max-w-xl mx-auto text-lg">

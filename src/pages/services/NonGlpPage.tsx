@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import ExpertSidebar from "@/components/ExpertSidebar";
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="py-10 border-b border-gray-100 last:border-0">
@@ -17,7 +18,7 @@ const NonGlpPage = () => (
     <main className="pt-[88px]">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Preclinical Research&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-3xl mb-6">
@@ -54,12 +55,8 @@ const NonGlpPage = () => (
               <p>These proof-of-concept studies receive less regulatory scrutiny and don’t have the same archive or reporting requirements as GLP studies, making them a more cost-effective option. A non-GLP study also provides valuable in vivo data on device performance—an important step before investing in a GLP study.</p>
               <p>With NKB Regovanta, your non-GLP testing can be scheduled and completed quickly thanks to shorter testing durations, smaller sample sizes, and faster report delivery. Pricing can also be optimized when both non-GLP and GLP studies are completed through namsa.</p>
               
-              {/* Image Placeholder */}
-              <div className="my-8 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 aspect-[16/9] relative flex items-center justify-center group">
-                <div className="absolute inset-0 bg-black/5" />
-                <p className="text-gray-400 font-medium text-sm text-center px-4">
-                  [Blue-gloved hands using a pipette to work with pink laboratory tubes]
-                </p>
+              <div className="my-8 rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
+                <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80" alt="Service feature" className="w-full h-full object-cover" />
               </div>
             </Section>
 
@@ -87,34 +84,9 @@ const NonGlpPage = () => (
             </Section>
           </div>
 
-          {/* Sidebar - Experts */}
+          {/* Sidebar */}
           <div className="space-y-8">
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-xl font-black text-[hsl(195_65%_20%)] mb-2">Meet Our Preclinical Experts</h3>
-              <p className="text-sm text-gray-600 mb-6 pb-6 border-b border-gray-200">Explore the depth of our team’s expertise.</p>
-              
-              <div className="space-y-6">
-                {[
-                  { name: "Jack Risdahl, DVM, PhD", title: "Principal Strategy Consultant, Preclinical", img: "[Jack Risdahl]" },
-                  { name: "Gaëlle Clermont, PharmD, PhD", title: "Principal Strategy Consultant", img: "[Person with glasses, wearing black shirt]" },
-                  { name: "Michael A. Jorgenson, BS", title: "Principal Interventionalist", img: "[Person with gray hair in blue scrubs]" },
-                  { name: "Tyler LaMont", title: "Senior Interventionalist", img: "[Person in lab coat and patterned cap]" },
-                  { name: "Katie Miedtke", title: "Interventionalist", img: "[Person in gray jacket and teal shirt]" },
-                  { name: "Corey Leet", title: "Director, Regional Preclinical Operations", img: "[Person in gray shirt]" }
-                ].map((expert) => (
-                  <div key={expert.name} className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden shrink-0 text-[10px] text-gray-400 text-center leading-tight">
-                      {expert.img}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[hsl(195_65%_20%)] text-sm">{expert.name}</h4>
-                      <p className="text-xs text-gray-500 font-medium mb-1">{expert.title}</p>
-                      <Link to="#" className="text-[#F5C754] text-xs font-bold hover:underline">View Bio</Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <ExpertSidebar />
             
             <div className="bg-[hsl(195_65%_20%)] rounded-2xl p-6 text-white text-center">
               <h3 className="text-lg font-black mb-2">Other Services That May Interest You</h3>

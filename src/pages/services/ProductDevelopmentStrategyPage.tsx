@@ -22,7 +22,7 @@ const ServicePageLayout = ({
     <main className="pt-[88px]">
       {/* Hero */}
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">
             — &nbsp;&nbsp;{breadcrumb}&nbsp;&nbsp; —
@@ -142,12 +142,12 @@ export const MedicalDeviceTestingPage = () => (
     stats={[
       { value: "100,000+", label: "Tests Performed Annually" },
       { value: "7", label: "Global Laboratory Locations" },
-      { value: "55+", label: "Years of Experience" },
+      { value: "8+", label: "Years of Experience" },
     ]}
   >
     <div className="container mx-auto px-4 max-w-5xl py-16">
       <Section title="How NKB Regovanta Pioneered the Medical Device Testing Services Industry">
-        <p>Established in 1967, NKB Regovanta is the pioneer of the medical device testing industry and continues to serve as the global marketplace leader for reliable, proven medical device testing services. On an annual basis, our teams conduct over 100,000 tests across our state-of-the-art laboratories across the globe.</p>
+        <p>Established in 2018, NKB Regovanta is the pioneer of the medical device testing industry and continues to serve as the global marketplace leader for reliable, proven medical device testing services. On an annual basis, our teams conduct over 100,000 tests across our state-of-the-art laboratories across the globe.</p>
         <p>We take pride in managing all medical device testing services in-house, unlike other CROs, to ensure direct oversight of test articles and to provide consistent results which are highly recognized and accepted by global regulatory authorities.</p>
         <p>Offering the right personalized suite of medical device testing services from the start translates into resource savings throughout the development continuum, allowing manufacturers to accelerate market introduction and cost-effectively bring life-improving therapies to those that need them most.</p>
         <p>Beyond our team's vast experience in medical device testing services, we're also prepared to help navigate the regulatory obstacles prevalent throughout the process, with many employees who have worked for regulatory agencies.</p>

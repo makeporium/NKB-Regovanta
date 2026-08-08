@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -6,22 +6,22 @@ import Footer from "@/components/Footer";
 import { ChevronDown, Filter, FileText } from "lucide-react";
 
 const allResources = [
-  { title: "Insights Report: Unlocking Successful Partnerships with Hospital Administrators", type: "Insights Report", img: "[Top view of professionals in white coats]" },
-  { title: "Insights Report: Maximizing Tender Success in Medical Capital Equipment", type: "Insights Report", img: "[Clinical researcher reviewing data]" },
-  { title: "Insights Report: Hospital Purchasing Behavior and Procurement Trends of 2025", type: "Insights Report", img: "[Placeholder Image]" },
-  { title: "White Paper: Toxicological Risk Assessment of Medical Devices", type: "White Paper", img: "[Two people discuss charts]" },
-  { title: "Insights Report: Patient Empowerment in Medical Device Treatment Decisions", type: "Insights Report", img: "[Placeholder Image]" },
-  { title: "White Paper: Outsource Your Way to Operational Excellence", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "White Paper: Navigating Dual Regulations: Strategies for IVD Market Approval in China and the EU", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "White Paper: The FDA’s Draft Guidance on AI- and ML-Enabled Device Software Functions", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "White Paper: The Relationship Between Risk Management and Labeling", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "NKB Regovanta Brochure Japanese", type: "Brochure", img: "[Placeholder Image]" },
-  { title: "NKB Regovanta Brochure", type: "Brochure", img: "[Placeholder Image]" },
-  { title: "NKB Regovanta Start-Up 360: Accelerating IVD Product Development", type: "Brochure", img: "[Placeholder Image]" },
-  { title: "White Paper: Medical Device Biological Evaluation Reports: Relevance to ISO 10993-Part 1: 2018", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "Clinical Research Services Brochure", type: "Brochure", img: "[Placeholder Image]" },
-  { title: "White Paper: Particulates in Preclinical Testing: Understanding the Impact on Overall Device Biological Safety", type: "White Paper", img: "[Placeholder Image]" },
-  { title: "White Paper: Medical Device Reimbursement Strategy: How to Plan for Successful Market Commercialization", type: "White Paper", img: "[Placeholder Image]" }
+  { title: "Insights Report: Unlocking Successful Partnerships with Hospital Administrators", type: "Insights Report", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&auto=format&fit=crop&q=80" },
+  { title: "Insights Report: Maximizing Tender Success in Medical Capital Equipment", type: "Insights Report", img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&auto=format&fit=crop&q=80" },
+  { title: "Insights Report: Hospital Purchasing Behavior and Procurement Trends of 2025", type: "Insights Report", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Toxicological Risk Assessment of Medical Devices", type: "White Paper", img: "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=400&auto=format&fit=crop&q=80" },
+  { title: "Insights Report: Patient Empowerment in Medical Device Treatment Decisions", type: "Insights Report", img: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Outsource Your Way to Operational Excellence", type: "White Paper", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Navigating Dual Regulations: Strategies for IVD Market Approval in China and the EU", type: "White Paper", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: The FDA’s Draft Guidance on AI- and ML-Enabled Device Software Functions", type: "White Paper", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: The Relationship Between Risk Management and Labeling", type: "White Paper", img: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&auto=format&fit=crop&q=80" },
+  { title: "NKB Regovanta Brochure Japanese", type: "Brochure", img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&auto=format&fit=crop&q=80" },
+  { title: "NKB Regovanta Brochure", type: "Brochure", img: "https://images.unsplash.com/photo-1526253038957-bce54e05968e?w=400&auto=format&fit=crop&q=80" },
+  { title: "NKB Regovanta Start-Up 360: Accelerating IVD Product Development", type: "Brochure", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Medical Device Biological Evaluation Reports: Relevance to ISO 10993-Part 1: 2018", type: "White Paper", img: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=400&auto=format&fit=crop&q=80" },
+  { title: "Clinical Research Services Brochure", type: "Brochure", img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Particulates in Preclinical Testing: Understanding the Impact on Overall Device Biological Safety", type: "White Paper", img: "https://images.unsplash.com/photo-1518152006812-cdab29b907e6?w=400&auto=format&fit=crop&q=80" },
+  { title: "White Paper: Medical Device Reimbursement Strategy: How to Plan for Successful Market Commercialization", type: "White Paper", img: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=400&auto=format&fit=crop&q=80" }
 ];
 
 const FilterGroup = ({ title, items, activeItem, setActiveItem }: { title: string, items: string[], activeItem: string, setActiveItem: (v: string) => void }) => (
@@ -108,10 +108,14 @@ const ResourcesPage = () => {
                   {allResources.map((resource, idx) => (
                     <div key={idx} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group flex flex-col h-full">
                       {/* Image Area */}
-                      <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-400 text-xs text-center px-4 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[hsl(195_65%_20%)] opacity-5 group-hover:opacity-10 transition-opacity" />
-                        {resource.img}
-                        <div className="absolute top-4 left-4 bg-[#F5C754] text-[hsl(195_65%_20%)] text-[10px] font-black px-2 py-1 uppercase tracking-widest rounded-sm">
+                      <div className="h-48 bg-gray-100 relative overflow-hidden shrink-0">
+                        <img 
+                          src={resource.img} 
+                          alt={resource.title} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
+                        <div className="absolute top-4 left-4 bg-[#F5C754] text-[hsl(195_65%_20%)] text-[10px] font-black px-2 py-1 uppercase tracking-widest rounded-sm z-10">
                           {resource.type}
                         </div>
                       </div>

@@ -1,16 +1,15 @@
-﻿import PageLayout from "@/components/PageLayout";
+import PageLayout from "@/components/PageLayout";
 import { ArrowRight, Award, Globe, Users, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const timeline = [
-  { year: "1967", title: "Founded", desc: "NKB Regovanta established in Toledo, Ohio by Dr. Theodore Gorski as a small independent medical device testing laboratory, identifying a critical need for biocompatibility testing of polymeric materials." },
-  { year: "1980s", title: "Laboratory Expansion", desc: "Expanded biocompatibility and microbiology testing capabilities, becoming a go-to partner for the rapidly growing US medical device industry." },
-  { year: "1990s", title: "Global Reach", desc: "Extended regulatory consulting services and established European operations to support manufacturers navigating the evolving global regulatory landscape." },
-  { year: "2000s", title: "Clinical Research Launch", desc: "Added full-service clinical research management capabilities — transforming from a testing laboratory into a comprehensive Medical Research Organization (MRO)." },
-  { year: "2010s", title: "MRO Model Established", desc: "Formally established the Medical Research Organization™ model — integrating consulting, preclinical, clinical, and testing under one roof for seamless, sponsor-focused service delivery." },
-  { year: "2020", title: "ArchiMed Acquisition", desc: "Acquired by ArchiMed, a leading healthcare-focused private equity firm, enabling accelerated global expansion and capabilities growth." },
-  { year: "2024+", title: "Global Expansion", desc: "Continued global growth with 18 locations across North America, Europe, and Asia-Pacific — serving 3,000+ MedTech sponsors annually." },
+  { year: "2018", title: "Founded", desc: "NKB Regovanta was established with a focused mission: to guide medical device and IVD manufacturers through the world's most complex regulatory environments with precision, expertise, and integrity." },
+  { year: "2019", title: "Core Services Launch", desc: "Established core regulatory consulting capabilities spanning US FDA strategy, EU MDR compliance, biological safety evaluation, and quality management systems." },
+  { year: "2020", title: "Expanded Portfolio", desc: "Added full clinical research support and quality management consulting services — transforming into a true end-to-end Medical Research Organization (MRO)." },
+  { year: "2021", title: "Preclinical & IVDR Focus", desc: "Launched preclinical research advisory services and deepened expertise in ISO 10993 biological evaluation, GLP study oversight, and IVDR compliance readiness." },
+  { year: "2022–2023", title: "Startup Solutions", desc: "Introduced the Startup Solutions program, a dedicated integrated pathway for early-stage MedTech companies to navigate regulatory challenges efficiently and cost-effectively." },
+  { year: "2024+", title: "Global Reach", desc: "Strengthened global regulatory expertise across US FDA, EU, and APAC markets — serving 100+ clients across diverse therapeutic areas annually." },
 ];
 
 const accreditations = [
@@ -35,7 +34,7 @@ const AboutPage = () => (
   <PageLayout
     heroTag="About NKB Regovanta"
     heroTitle="The Medical Research Organization™ Exclusively for Medical Devices & IVDs"
-    heroSubtitle="For over 55 years, NKB Regovanta has been the trusted partner for medical device manufacturers navigating the world's most complex regulatory environments."
+    heroSubtitle="For over 8 Years, NKB Regovanta has been the trusted partner for medical device manufacturers navigating the world's most complex regulatory environments."
     breadcrumbs={[{ label: "About" }]}
   >
     {/* Mission */}
@@ -57,7 +56,7 @@ const AboutPage = () => (
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: Building2, value: "55+", label: "Years of Experience", sub: "Medical device focus since founding" },
+              { icon: Building2, value: "8+", label: "Years of Experience", sub: "Medical device focus since founding" },
               { icon: Users, value: "1,400+", label: "Global Associates", sub: "Scientists, clinicians & RA experts" },
               { icon: Globe, value: "18", label: "Global Locations", sub: "North America, Europe & Asia" },
               { icon: Award, value: "3,000+", label: "Sponsors Served", sub: "Startups to multinationals annually" },
@@ -78,7 +77,7 @@ const AboutPage = () => (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <p className="text-sm font-bold uppercase tracking-widest text-[hsl(195_65%_28%)] mb-3">Our Story</p>
-        <h2 className="text-2xl font-black text-gray-900 mb-10">55 Years of Medical Device Innovation</h2>
+        <h2 className="text-2xl font-black text-gray-900 mb-10">8 Years of Medical Device Innovation</h2>
         <div className="relative">
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F5C754] to-[#C08518] hidden md:block" />
           <div className="space-y-8">
@@ -103,7 +102,7 @@ const AboutPage = () => (
       </div>
     </section>
 
-    {/* Leadership */}
+    {/* Leadership
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <p className="text-sm font-bold uppercase tracking-widest text-[hsl(195_65%_28%)] mb-3">Leadership</p>
@@ -123,6 +122,7 @@ const AboutPage = () => (
         </div>
       </div>
     </section>
+    */}
 
     {/* Accreditations */}
     <section className="py-16 bg-gray-50">

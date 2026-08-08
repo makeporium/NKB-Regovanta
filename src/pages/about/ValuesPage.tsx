@@ -9,14 +9,14 @@ const ValuesPage = () => (
     <Header />
     <main className="pt-[88px]">
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Our Values&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-3xl mb-6">
             INTEGRITY, AGILITY, COLLABORATION
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mb-10">
-            Since 1967, NKB Regovanta has grown, but the values that defined us from the start are those that still guide us today.
+            Since 2018, NKB Regovanta has grown, but the values that defined us from the start are those that still guide us today.
           </p>
         </div>
       </section>

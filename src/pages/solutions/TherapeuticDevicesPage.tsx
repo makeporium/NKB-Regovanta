@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, ChevronRight, FileText, Video, Play } from "lucide-react";
+import ExpertSidebar from "@/components/ExpertSidebar";
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="py-10 border-b border-gray-100 last:border-0">
@@ -17,7 +18,7 @@ const TherapeuticDevicesPage = () => (
     <main className="pt-[88px]">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10 text-center">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Expertise&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-4xl mx-auto mb-6">
@@ -37,12 +38,8 @@ const TherapeuticDevicesPage = () => (
             <Section title="Experience Matters">
               <p>At NKB Regovanta, we believe that relevant therapeutic experience is one of the main components of successful scientific, regulatory, and commercialization outcomes. We take great care to support your specific goals by appointing a project team comprised of experts with relevant product experience…a team that understands the nuances of your particular medical device, providing best practices and proven strategies to help you achieve desired outcomes.</p>
               
-              {/* Image Placeholder */}
-              <div className="my-8 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 aspect-[16/9] relative flex items-center justify-center group">
-                <div className="absolute inset-0 bg-black/5" />
-                <p className="text-gray-400 font-medium text-sm text-center px-4">
-                  [Medical professional using a white handheld device on a patient's face]
-                </p>
+              <div className="my-8 rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
+                <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80" alt="Service feature" className="w-full h-full object-cover" />
               </div>
             </Section>
 
@@ -109,30 +106,7 @@ const TherapeuticDevicesPage = () => (
 
           {/* Sidebar */}
           <div className="space-y-8">
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-xl font-black text-[hsl(195_65%_20%)] mb-2">Meet NKB Regovanta's Experts</h3>
-              <p className="text-sm text-gray-600 mb-6 pb-6 border-b border-gray-200">Explore the depth of our team’s expertise in preclinical and clinical services.</p>
-              
-              <div className="space-y-6">
-                {[
-                  { name: "Alfred Dibao-Dina, PhD", title: "Biological Safety Scientist", img: "[Alfred Dibao-Dina]" },
-                  { name: "Jack Risdahl, DVM, PhD", title: "Principal Strategy Consultant, Preclinical", img: "[Jack Risdahl]" },
-                  { name: "Corie Diaz, BA, MBA", title: "Global Director, Clinical Operations", img: "[Corie Diaz]" },
-                  { name: "Michael A. Jorgenson, BS", title: "Principal Interventionalist", img: "[Michael Jorgenson]" }
-                ].map((expert) => (
-                  <div key={expert.name} className="flex gap-4 items-center">
-                    <div className="w-16 h-16 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden shrink-0 text-[10px] text-gray-400 text-center leading-tight">
-                      {expert.img}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[hsl(195_65%_20%)] text-sm">{expert.name}</h4>
-                      <p className="text-xs text-gray-500 font-medium mb-1 line-clamp-2">{expert.title}</p>
-                      <Link to="#" className="text-[#F5C754] text-xs font-bold hover:underline">View Bio</Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <ExpertSidebar />
             
             <div className="bg-[hsl(195_65%_20%)] rounded-2xl p-6 text-white text-center">
               <h3 className="text-xl font-black mb-2 text-[#F5C754]">Know Now with NKB Regovanta</h3>

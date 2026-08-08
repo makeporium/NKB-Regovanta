@@ -81,20 +81,25 @@ const Footer = () => {
               The Medical Research Organization™ exclusively dedicated to medical device and IVD development.
             </p>
             <div className="space-y-2 mb-5">
-              <a href="tel:+917672005050" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
-                <Phone className="w-3.5 h-3.5" /> +91 7672005050
+              <a href="tel:+918861375067" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +91 8861375067
               </a>
               <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
                 <Mail className="w-3.5 h-3.5" /> contact@nkbregovanta.com
               </a>
               <div className="flex items-start gap-2 text-sm text-white/50">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                <span>123 Regulatory Plaza<br />Mumbai 400001, India</span>
+                <span>Building No 20, Awadh KunJ, FARIDI NAGAR, Cimap,<br />Lucknow, Uttar Pradesh, India, 226015</span>
               </div>
             </div>
             <div className="flex gap-2">
-              {[Linkedin, Twitter, Facebook, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F5C754]/30 hover:text-[#F5C754] transition-colors text-white/50">
+              {[
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/?viewAsMember=true" },
+                { Icon: Twitter, href: "#" },
+                { Icon: Facebook, href: "#" },
+                { Icon: Youtube, href: "#" }
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} target={href !== "#" ? "_blank" : "_self"} rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#F5C754]/30 hover:text-[#F5C754] transition-colors text-white/50">
                   <Icon className="w-4 h-4" />
                 </a>
               ))}

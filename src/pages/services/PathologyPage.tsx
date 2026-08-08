@@ -17,7 +17,7 @@ const PathologyPage = () => (
     <main className="pt-[88px]">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-[hsl(195_65%_20%)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://namsa.com/app/uploads/2020/07/Contact-CTA.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563461661026-49631dd5d68e?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <p className="text-[#F5C754] text-xs font-bold uppercase tracking-widest mb-4">— &nbsp;&nbsp;Preclinical Research&nbsp;&nbsp; —</p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight max-w-3xl mb-6">
@@ -70,17 +70,13 @@ const PathologyPage = () => (
               </ul>
               <p>Each study is conducted by experienced histotechnicians under the supervision of board-certified pathologists. This approach ensures the accuracy and consistency needed to guide critical development decisions and prepare devices for clinical success.</p>
               
-              {/* Image Placeholder */}
-              <div className="my-8 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 aspect-[16/9] relative flex items-center justify-center group">
-                <div className="absolute inset-0 bg-black/5" />
-                <p className="text-gray-400 font-medium text-sm text-center px-4">
-                  [Person using a white microscope in a lab with blue-lit screens in the background.]
-                </p>
+              <div className="my-8 rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80" alt="Service feature" className="w-full h-full object-cover" />
               </div>
             </Section>
 
             <Section title="Advancing Medical Device Pathology Through Proven Expertise">
-              <p>We have been assisting medical device companies with biocompatibility testing, consulting and preclinical services since 1967.</p>
+              <p>We have been assisting medical device companies with biocompatibility testing, consulting and preclinical services since 2018.</p>
               
               <div className="grid sm:grid-cols-2 gap-8 mt-6">
                 <div>
