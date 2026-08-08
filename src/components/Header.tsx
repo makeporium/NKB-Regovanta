@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -165,19 +165,34 @@ const Header = () => {
                   className="relative"
                   onMouseEnter={() => setOpenMega(item.label)}
                 >
-                  <Link
-                    to={item.href}
-                    className={`relative flex items-center gap-1 px-4 py-6 text-sm font-medium transition-colors group
-                      ${isActive(item.href) ? "text-[#F5C754]" : "text-white hover:text-white/80"}`}
-                  >
-                    {item.label}
-                    {(item.dropdown || item.mega) && (
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openMega === item.label ? "rotate-180" : ""}`} />
-                    )}
-                    <span className={`absolute bottom-3 left-4 right-4 h-[2px] bg-gradient-to-r from-[#F5C754] to-[#C08518] transition-transform origin-left duration-300
-                      ${isActive(item.href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                    />
-                  </Link>
+                  {item.label === "Solutions" ? (
+                    <div
+                      className={`relative flex items-center gap-1 px-4 py-6 text-sm font-medium transition-colors group cursor-default
+                        ${isActive(item.href) ? "text-[#F5C754]" : "text-white hover:text-white/80"}`}
+                    >
+                      {item.label}
+                      {(item.dropdown || item.mega) && (
+                        <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openMega === item.label ? "rotate-180" : ""}`} />
+                      )}
+                      <span className={`absolute bottom-3 left-4 right-4 h-[2px] bg-gradient-to-r from-[#F5C754] to-[#C08518] transition-transform origin-left duration-300
+                        ${isActive(item.href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                      />
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`relative flex items-center gap-1 px-4 py-6 text-sm font-medium transition-colors group
+                        ${isActive(item.href) ? "text-[#F5C754]" : "text-white hover:text-white/80"}`}
+                    >
+                      {item.label}
+                      {(item.dropdown || item.mega) && (
+                        <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openMega === item.label ? "rotate-180" : ""}`} />
+                      )}
+                      <span className={`absolute bottom-3 left-4 right-4 h-[2px] bg-gradient-to-r from-[#F5C754] to-[#C08518] transition-transform origin-left duration-300
+                        ${isActive(item.href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                      />
+                    </Link>
+                  )}
 
                   {/* Mega Menu */}
                   {openMega === item.label && item.mega && (
