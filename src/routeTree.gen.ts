@@ -15,6 +15,7 @@ import { Route as AboutcopyRouteImport } from './routes/about copy'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as CaseStudiesAlgorithmClaimRouteImport } from './routes/case-studies.algorithm-claim'
 import { Route as CaseStudiesAustraliaTgaRouteImport } from './routes/case-studies.australia-tga'
 import { Route as CaseStudiesEuMdrRemediationRouteImport } from './routes/case-studies.eu-mdr-remediation'
 import { Route as CaseStudiesFdaBiocompatibilityRouteImport } from './routes/case-studies.fda-biocompatibility'
@@ -38,6 +39,7 @@ import { Route as ServicesIndiaRouteImport } from './routes/services.india'
 import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
 import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
+import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
@@ -141,6 +143,12 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
+const CaseStudiesAlgorithmClaimRoute =
+  CaseStudiesAlgorithmClaimRouteImport.update({
+    id: '/algorithm-claim',
+    path: '/algorithm-claim',
+    getParentRoute: () => CaseStudiesRoute,
+  } as any)
 const CaseStudiesAustraliaTgaRoute = CaseStudiesAustraliaTgaRouteImport.update({
   id: '/australia-tga',
   path: '/australia-tga',
@@ -260,6 +268,12 @@ const ServicesRegulatoryAffairsRoute =
   ServicesRegulatoryAffairsRouteImport.update({
     id: '/services/regulatory-affairs',
     path: '/services/regulatory-affairs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesTechnicalDocumentationRoute =
+  ServicesTechnicalDocumentationRouteImport.update({
+    id: '/services/technical-documentation',
+    path: '/services/technical-documentation',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesUaeRoute = ServicesUaeRouteImport.update({
@@ -656,6 +670,7 @@ export interface FileRoutesByFullPath {
   '/about copy': typeof AboutcopyRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
   '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
@@ -675,6 +690,7 @@ export interface FileRoutesByFullPath {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
@@ -758,6 +774,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/about copy': typeof AboutcopyRoute
   '/contact': typeof ContactRoute
+  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
   '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
@@ -772,6 +789,7 @@ export interface FileRoutesByTo {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
@@ -855,6 +873,7 @@ export interface FileRoutesById {
   '/about copy': typeof AboutcopyRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
   '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
@@ -874,6 +893,7 @@ export interface FileRoutesById {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
@@ -960,6 +980,7 @@ export interface FileRouteTypes {
     | '/about copy'
     | '/case-studies'
     | '/contact'
+    | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
     | '/case-studies/fda-biocompatibility'
@@ -979,6 +1000,7 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
+    | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
@@ -1062,6 +1084,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/about copy'
     | '/contact'
+    | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
     | '/case-studies/fda-biocompatibility'
@@ -1076,6 +1099,7 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
+    | '/services/technical-documentation'
     | '/services/uae'
     | '/case-studies'
     | '/industries'
@@ -1158,6 +1182,7 @@ export interface FileRouteTypes {
     | '/about copy'
     | '/case-studies'
     | '/contact'
+    | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
     | '/case-studies/fda-biocompatibility'
@@ -1177,6 +1202,7 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
+    | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
@@ -1276,6 +1302,7 @@ export interface RootRouteChildren {
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
+  ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
@@ -1327,6 +1354,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/case-studies/'
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/algorithm-claim': {
+      id: '/case-studies/algorithm-claim'
+      path: '/algorithm-claim'
+      fullPath: '/case-studies/algorithm-claim'
+      preLoaderRoute: typeof CaseStudiesAlgorithmClaimRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/case-studies/australia-tga': {
@@ -1488,6 +1522,13 @@ declare module '@tanstack/react-router' {
       path: '/services/regulatory-affairs'
       fullPath: '/services/regulatory-affairs'
       preLoaderRoute: typeof ServicesRegulatoryAffairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/technical-documentation': {
+      id: '/services/technical-documentation'
+      path: '/services/technical-documentation'
+      fullPath: '/services/technical-documentation'
+      preLoaderRoute: typeof ServicesTechnicalDocumentationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/uae': {
@@ -1998,6 +2039,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface CaseStudiesRouteChildren {
+  CaseStudiesAlgorithmClaimRoute: typeof CaseStudiesAlgorithmClaimRoute
   CaseStudiesAustraliaTgaRoute: typeof CaseStudiesAustraliaTgaRoute
   CaseStudiesEuMdrRemediationRoute: typeof CaseStudiesEuMdrRemediationRoute
   CaseStudiesFdaBiocompatibilityRoute: typeof CaseStudiesFdaBiocompatibilityRoute
@@ -2007,6 +2049,7 @@ interface CaseStudiesRouteChildren {
 }
 
 const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
+  CaseStudiesAlgorithmClaimRoute: CaseStudiesAlgorithmClaimRoute,
   CaseStudiesAustraliaTgaRoute: CaseStudiesAustraliaTgaRoute,
   CaseStudiesEuMdrRemediationRoute: CaseStudiesEuMdrRemediationRoute,
   CaseStudiesFdaBiocompatibilityRoute: CaseStudiesFdaBiocompatibilityRoute,
@@ -2250,6 +2293,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
+  ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRoute,
   ServicesUkRoute: ServicesUkRouteWithChildren,
   ServicesUsaRoute: ServicesUsaRouteWithChildren,

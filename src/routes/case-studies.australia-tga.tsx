@@ -16,8 +16,8 @@ export const Route = createFileRoute("/case-studies/australia-tga")({
 function Article() {
   return (
     <>
-      <article className="bg-white py-16 lg:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <article className="bg-white pt-8 pb-16 lg:pt-12 lg:pb-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link to="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-navy/70 hover:text-navy transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" /> Back to Case Studies
           </Link>
@@ -27,7 +27,7 @@ function Article() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-8">
             Reuse What’s Accepted. Rebuild Only What’s Needed.
           </h1>
-          <img src={imgPlaceholder} alt="Australia TGA ARTG Inclusion" className="w-full h-[400px] object-cover rounded-md mb-12 shadow-sm" />
+          <img src={imgPlaceholder} alt="Australia TGA ARTG Inclusion" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
             
             <h2 className="text-2xl font-bold mt-10 mb-4">Challenge</h2>

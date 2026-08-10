@@ -39,7 +39,7 @@ const services = [
     icon: FileCheck,
     title: "Technical Documentation",
     text: "End-to-end technical file writing (STED), risk management & compliance support.",
-    to: "/services",
+    to: "/services/technical-documentation",
   },
   {
     icon: Zap,

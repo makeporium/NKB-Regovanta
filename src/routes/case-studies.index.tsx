@@ -85,6 +85,19 @@ const studies = [
       { icon: CheckCircle2, value: "Efficient", label: "ARTG Inclusion" },
     ],
   },
+  {
+    id: "06",
+    tag: "SaMD | AI/ML | EU MDR",
+    title: "The Algorithm Can Do More. Should the Label?",
+    desc: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose...",
+    img: imgPlaceholder,
+    route: "/case-studies/algorithm-claim",
+    metrics: [
+      { icon: CheckCircle2, value: "Clear", label: "Intended Purpose" },
+      { icon: ShieldCheck, value: "Targeted", label: "Evidence Plan" },
+      { icon: Trophy, value: "Better", label: "Alignment" },
+    ],
+  },
 ];
 
 function CaseStudies() {
