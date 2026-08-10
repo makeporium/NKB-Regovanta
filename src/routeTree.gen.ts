@@ -41,6 +41,33 @@ import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
+import { Route as ServicesAustraliaIndexRouteImport } from './routes/services.australia.index'
+import { Route as ServicesAustraliaArtgInclusionRouteImport } from './routes/services.australia.artg-inclusion'
+import { Route as ServicesAustraliaConformityAssessmentRouteImport } from './routes/services.australia.conformity-assessment'
+import { Route as ServicesAustraliaPmsRouteImport } from './routes/services.australia.pms'
+import { Route as ServicesAustraliaSponsorRouteImport } from './routes/services.australia.sponsor'
+import { Route as ServicesBrazilIndexRouteImport } from './routes/services.brazil.index'
+import { Route as ServicesBrazilBgmpRouteImport } from './routes/services.brazil.bgmp'
+import { Route as ServicesBrazilBrhRouteImport } from './routes/services.brazil.brh'
+import { Route as ServicesBrazilNotificacaoRouteImport } from './routes/services.brazil.notificacao'
+import { Route as ServicesBrazilRegistroRouteImport } from './routes/services.brazil.registro'
+import { Route as ServicesBrazilTechnovigilanceRouteImport } from './routes/services.brazil.technovigilance'
+import { Route as ServicesCanadaIndexRouteImport } from './routes/services.canada.index'
+import { Route as ServicesCanadaChangeManagementRouteImport } from './routes/services.canada.change-management'
+import { Route as ServicesCanadaLiaisonRouteImport } from './routes/services.canada.liaison'
+import { Route as ServicesCanadaMdelRouteImport } from './routes/services.canada.mdel'
+import { Route as ServicesCanadaMdlRouteImport } from './routes/services.canada.mdl'
+import { Route as ServicesCanadaRenewalsRouteImport } from './routes/services.canada.renewals'
+import { Route as ServicesEuIndexRouteImport } from './routes/services.eu.index'
+import { Route as ServicesEuCeRegistrationRouteImport } from './routes/services.eu.ce-registration'
+import { Route as ServicesEuClinicalEvaluationRouteImport } from './routes/services.eu.clinical-evaluation'
+import { Route as ServicesEuEarRouteImport } from './routes/services.eu.ear'
+import { Route as ServicesEuEudamedRouteImport } from './routes/services.eu.eudamed'
+import { Route as ServicesEuLabelingRouteImport } from './routes/services.eu.labeling'
+import { Route as ServicesEuMdrIvdrTransitionRouteImport } from './routes/services.eu.mdr-ivdr-transition'
+import { Route as ServicesEuPmsRouteImport } from './routes/services.eu.pms'
+import { Route as ServicesEuQmsRouteImport } from './routes/services.eu.qms'
+import { Route as ServicesEuTechnicalDocumentationRouteImport } from './routes/services.eu.technical-documentation'
 import { Route as ServicesIndiaIndexRouteImport } from './routes/services.india.index'
 import { Route as ServicesIndiaClassAImportRouteImport } from './routes/services.india.class-a-import'
 import { Route as ServicesIndiaFreeSaleRouteImport } from './routes/services.india.free-sale'
@@ -59,6 +86,19 @@ import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/service
 import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
 import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
 import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesUkIndexRouteImport } from './routes/services.uk.index'
+import { Route as ServicesUkAuditReadinessRouteImport } from './routes/services.uk.audit-readiness'
+import { Route as ServicesUkConformityAssuranceRouteImport } from './routes/services.uk.conformity-assurance'
+import { Route as ServicesUkDorsRegistrationRouteImport } from './routes/services.uk.dors-registration'
+import { Route as ServicesUkLabelingRouteImport } from './routes/services.uk.labeling'
+import { Route as ServicesUkMhraLiaisonRouteImport } from './routes/services.uk.mhra-liaison'
+import { Route as ServicesUkMhraRegistrationRouteImport } from './routes/services.uk.mhra-registration'
+import { Route as ServicesUkPmsRouteImport } from './routes/services.uk.pms'
+import { Route as ServicesUkQmsRouteImport } from './routes/services.uk.qms'
+import { Route as ServicesUkRegulatoryWritingRouteImport } from './routes/services.uk.regulatory-writing'
+import { Route as ServicesUkTechnicalFileRouteImport } from './routes/services.uk.technical-file'
+import { Route as ServicesUkUkrpRouteImport } from './routes/services.uk.ukrp'
+import { Route as ServicesUkVigilanceRouteImport } from './routes/services.uk.vigilance'
 import { Route as ServicesUsaIndexRouteImport } from './routes/services.usa.index'
 import { Route as ServicesUsa510kRouteImport } from './routes/services.usa.510k'
 import { Route as ServicesUsa513gRouteImport } from './routes/services.usa.513g'
@@ -237,6 +277,151 @@ const ServicesUsaRoute = ServicesUsaRouteImport.update({
   path: '/services/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesAustraliaIndexRoute = ServicesAustraliaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesAustraliaRoute,
+} as any)
+const ServicesAustraliaArtgInclusionRoute =
+  ServicesAustraliaArtgInclusionRouteImport.update({
+    id: '/artg-inclusion',
+    path: '/artg-inclusion',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaConformityAssessmentRoute =
+  ServicesAustraliaConformityAssessmentRouteImport.update({
+    id: '/conformity-assessment',
+    path: '/conformity-assessment',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaPmsRoute = ServicesAustraliaPmsRouteImport.update({
+  id: '/pms',
+  path: '/pms',
+  getParentRoute: () => ServicesAustraliaRoute,
+} as any)
+const ServicesAustraliaSponsorRoute =
+  ServicesAustraliaSponsorRouteImport.update({
+    id: '/sponsor',
+    path: '/sponsor',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesBrazilIndexRoute = ServicesBrazilIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilBgmpRoute = ServicesBrazilBgmpRouteImport.update({
+  id: '/bgmp',
+  path: '/bgmp',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilBrhRoute = ServicesBrazilBrhRouteImport.update({
+  id: '/brh',
+  path: '/brh',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilNotificacaoRoute =
+  ServicesBrazilNotificacaoRouteImport.update({
+    id: '/notificacao',
+    path: '/notificacao',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilRegistroRoute = ServicesBrazilRegistroRouteImport.update({
+  id: '/registro',
+  path: '/registro',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilTechnovigilanceRoute =
+  ServicesBrazilTechnovigilanceRouteImport.update({
+    id: '/technovigilance',
+    path: '/technovigilance',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesCanadaIndexRoute = ServicesCanadaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaChangeManagementRoute =
+  ServicesCanadaChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
+const ServicesCanadaLiaisonRoute = ServicesCanadaLiaisonRouteImport.update({
+  id: '/liaison',
+  path: '/liaison',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaMdelRoute = ServicesCanadaMdelRouteImport.update({
+  id: '/mdel',
+  path: '/mdel',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaMdlRoute = ServicesCanadaMdlRouteImport.update({
+  id: '/mdl',
+  path: '/mdl',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaRenewalsRoute = ServicesCanadaRenewalsRouteImport.update({
+  id: '/renewals',
+  path: '/renewals',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesEuIndexRoute = ServicesEuIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuCeRegistrationRoute =
+  ServicesEuCeRegistrationRouteImport.update({
+    id: '/ce-registration',
+    path: '/ce-registration',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuClinicalEvaluationRoute =
+  ServicesEuClinicalEvaluationRouteImport.update({
+    id: '/clinical-evaluation',
+    path: '/clinical-evaluation',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEarRoute = ServicesEuEarRouteImport.update({
+  id: '/ear',
+  path: '/ear',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuEudamedRoute = ServicesEuEudamedRouteImport.update({
+  id: '/eudamed',
+  path: '/eudamed',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuLabelingRoute = ServicesEuLabelingRouteImport.update({
+  id: '/labeling',
+  path: '/labeling',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuMdrIvdrTransitionRoute =
+  ServicesEuMdrIvdrTransitionRouteImport.update({
+    id: '/mdr-ivdr-transition',
+    path: '/mdr-ivdr-transition',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuPmsRoute = ServicesEuPmsRouteImport.update({
+  id: '/pms',
+  path: '/pms',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuQmsRoute = ServicesEuQmsRouteImport.update({
+  id: '/qms',
+  path: '/qms',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuTechnicalDocumentationRoute =
+  ServicesEuTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
 const ServicesIndiaIndexRoute = ServicesIndiaIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -338,6 +523,76 @@ const ServicesIndiaPredicateDevicesRoute =
     path: '/predicate-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesUkIndexRoute = ServicesUkIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkAuditReadinessRoute =
+  ServicesUkAuditReadinessRouteImport.update({
+    id: '/audit-readiness',
+    path: '/audit-readiness',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkConformityAssuranceRoute =
+  ServicesUkConformityAssuranceRouteImport.update({
+    id: '/conformity-assurance',
+    path: '/conformity-assurance',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkDorsRegistrationRoute =
+  ServicesUkDorsRegistrationRouteImport.update({
+    id: '/dors-registration',
+    path: '/dors-registration',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkLabelingRoute = ServicesUkLabelingRouteImport.update({
+  id: '/labeling',
+  path: '/labeling',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkMhraLiaisonRoute = ServicesUkMhraLiaisonRouteImport.update({
+  id: '/mhra-liaison',
+  path: '/mhra-liaison',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkMhraRegistrationRoute =
+  ServicesUkMhraRegistrationRouteImport.update({
+    id: '/mhra-registration',
+    path: '/mhra-registration',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkPmsRoute = ServicesUkPmsRouteImport.update({
+  id: '/pms',
+  path: '/pms',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkQmsRoute = ServicesUkQmsRouteImport.update({
+  id: '/qms',
+  path: '/qms',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkRegulatoryWritingRoute =
+  ServicesUkRegulatoryWritingRouteImport.update({
+    id: '/regulatory-writing',
+    path: '/regulatory-writing',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkTechnicalFileRoute = ServicesUkTechnicalFileRouteImport.update({
+  id: '/technical-file',
+  path: '/technical-file',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkUkrpRoute = ServicesUkUkrpRouteImport.update({
+  id: '/ukrp',
+  path: '/ukrp',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
+const ServicesUkVigilanceRoute = ServicesUkVigilanceRouteImport.update({
+  id: '/vigilance',
+  path: '/vigilance',
+  getParentRoute: () => ServicesUkRoute,
+} as any)
 const ServicesUsaIndexRoute = ServicesUsaIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -412,22 +667,45 @@ export interface FileRoutesByFullPath {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
-  '/services/australia': typeof ServicesAustraliaRoute
-  '/services/brazil': typeof ServicesBrazilRoute
-  '/services/canada': typeof ServicesCanadaRoute
-  '/services/eu': typeof ServicesEuRoute
+  '/services/australia': typeof ServicesAustraliaRouteWithChildren
+  '/services/brazil': typeof ServicesBrazilRouteWithChildren
+  '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
-  '/services/uk': typeof ServicesUkRoute
+  '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
+  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
+  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
+  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/ear': typeof ServicesEuEarRoute
+  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -445,6 +723,18 @@ export interface FileRoutesByFullPath {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
+  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
+  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
+  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
+  '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
+  '/services/uk/pms': typeof ServicesUkPmsRoute
+  '/services/uk/qms': typeof ServicesUkQmsRoute
+  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
+  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
+  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
+  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
@@ -455,7 +745,12 @@ export interface FileRoutesByFullPath {
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/australia/': typeof ServicesAustraliaIndexRoute
+  '/services/brazil/': typeof ServicesBrazilIndexRoute
+  '/services/canada/': typeof ServicesCanadaIndexRoute
+  '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
 }
 export interface FileRoutesByTo {
@@ -474,20 +769,38 @@ export interface FileRoutesByTo {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
-  '/services/australia': typeof ServicesAustraliaRoute
-  '/services/brazil': typeof ServicesBrazilRoute
-  '/services/canada': typeof ServicesCanadaRoute
-  '/services/eu': typeof ServicesEuRoute
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
-  '/services/uk': typeof ServicesUkRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/insights': typeof InsightsIndexRoute
   '/markets': typeof MarketsIndexRoute
   '/services': typeof ServicesIndexRoute
+  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
+  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
+  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
+  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/ear': typeof ServicesEuEarRoute
+  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -505,6 +818,18 @@ export interface FileRoutesByTo {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
+  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
+  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
+  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
+  '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
+  '/services/uk/pms': typeof ServicesUkPmsRoute
+  '/services/uk/qms': typeof ServicesUkQmsRoute
+  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
+  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
+  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
+  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
@@ -515,7 +840,12 @@ export interface FileRoutesByTo {
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/australia': typeof ServicesAustraliaIndexRoute
+  '/services/brazil': typeof ServicesBrazilIndexRoute
+  '/services/canada': typeof ServicesCanadaIndexRoute
+  '/services/eu': typeof ServicesEuIndexRoute
   '/services/india': typeof ServicesIndiaIndexRoute
+  '/services/uk': typeof ServicesUkIndexRoute
   '/services/usa': typeof ServicesUsaIndexRoute
 }
 export interface FileRoutesById {
@@ -536,22 +866,45 @@ export interface FileRoutesById {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
-  '/services/australia': typeof ServicesAustraliaRoute
-  '/services/brazil': typeof ServicesBrazilRoute
-  '/services/canada': typeof ServicesCanadaRoute
-  '/services/eu': typeof ServicesEuRoute
+  '/services/australia': typeof ServicesAustraliaRouteWithChildren
+  '/services/brazil': typeof ServicesBrazilRouteWithChildren
+  '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
-  '/services/uk': typeof ServicesUkRoute
+  '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
+  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
+  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
+  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/ear': typeof ServicesEuEarRoute
+  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -569,6 +922,18 @@ export interface FileRoutesById {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
+  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
+  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
+  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
+  '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
+  '/services/uk/pms': typeof ServicesUkPmsRoute
+  '/services/uk/qms': typeof ServicesUkQmsRoute
+  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
+  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
+  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
+  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
@@ -579,7 +944,12 @@ export interface FileRoutesById {
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/australia/': typeof ServicesAustraliaIndexRoute
+  '/services/brazil/': typeof ServicesBrazilIndexRoute
+  '/services/canada/': typeof ServicesCanadaIndexRoute
+  '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
 }
 export interface FileRouteTypes {
@@ -617,6 +987,29 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/services/australia/artg-inclusion'
+    | '/services/australia/conformity-assessment'
+    | '/services/australia/pms'
+    | '/services/australia/sponsor'
+    | '/services/brazil/bgmp'
+    | '/services/brazil/brh'
+    | '/services/brazil/notificacao'
+    | '/services/brazil/registro'
+    | '/services/brazil/technovigilance'
+    | '/services/canada/change-management'
+    | '/services/canada/liaison'
+    | '/services/canada/mdel'
+    | '/services/canada/mdl'
+    | '/services/canada/renewals'
+    | '/services/eu/ce-registration'
+    | '/services/eu/clinical-evaluation'
+    | '/services/eu/ear'
+    | '/services/eu/eudamed'
+    | '/services/eu/labeling'
+    | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/pms'
+    | '/services/eu/qms'
+    | '/services/eu/technical-documentation'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -634,6 +1027,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/uk/audit-readiness'
+    | '/services/uk/conformity-assurance'
+    | '/services/uk/dors-registration'
+    | '/services/uk/labeling'
+    | '/services/uk/mhra-liaison'
+    | '/services/uk/mhra-registration'
+    | '/services/uk/pms'
+    | '/services/uk/qms'
+    | '/services/uk/regulatory-writing'
+    | '/services/uk/technical-file'
+    | '/services/uk/ukrp'
+    | '/services/uk/vigilance'
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
@@ -644,7 +1049,12 @@ export interface FileRouteTypes {
     | '/services/usa/q-submission'
     | '/services/usa/rfd-pre-rfd'
     | '/services/usa/udi-gudid'
+    | '/services/australia/'
+    | '/services/brazil/'
+    | '/services/canada/'
+    | '/services/eu/'
     | '/services/india/'
+    | '/services/uk/'
     | '/services/usa/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -663,20 +1073,38 @@ export interface FileRouteTypes {
     | '/insights/eu-mdr-2026'
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
-    | '/services/australia'
-    | '/services/brazil'
-    | '/services/canada'
-    | '/services/eu'
     | '/services/iso-13485'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
     | '/services/uae'
-    | '/services/uk'
     | '/case-studies'
     | '/industries'
     | '/insights'
     | '/markets'
     | '/services'
+    | '/services/australia/artg-inclusion'
+    | '/services/australia/conformity-assessment'
+    | '/services/australia/pms'
+    | '/services/australia/sponsor'
+    | '/services/brazil/bgmp'
+    | '/services/brazil/brh'
+    | '/services/brazil/notificacao'
+    | '/services/brazil/registro'
+    | '/services/brazil/technovigilance'
+    | '/services/canada/change-management'
+    | '/services/canada/liaison'
+    | '/services/canada/mdel'
+    | '/services/canada/mdl'
+    | '/services/canada/renewals'
+    | '/services/eu/ce-registration'
+    | '/services/eu/clinical-evaluation'
+    | '/services/eu/ear'
+    | '/services/eu/eudamed'
+    | '/services/eu/labeling'
+    | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/pms'
+    | '/services/eu/qms'
+    | '/services/eu/technical-documentation'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -694,6 +1122,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/uk/audit-readiness'
+    | '/services/uk/conformity-assurance'
+    | '/services/uk/dors-registration'
+    | '/services/uk/labeling'
+    | '/services/uk/mhra-liaison'
+    | '/services/uk/mhra-registration'
+    | '/services/uk/pms'
+    | '/services/uk/qms'
+    | '/services/uk/regulatory-writing'
+    | '/services/uk/technical-file'
+    | '/services/uk/ukrp'
+    | '/services/uk/vigilance'
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
@@ -704,7 +1144,12 @@ export interface FileRouteTypes {
     | '/services/usa/q-submission'
     | '/services/usa/rfd-pre-rfd'
     | '/services/usa/udi-gudid'
+    | '/services/australia'
+    | '/services/brazil'
+    | '/services/canada'
+    | '/services/eu'
     | '/services/india'
+    | '/services/uk'
     | '/services/usa'
   id:
     | '__root__'
@@ -740,6 +1185,29 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/services/australia/artg-inclusion'
+    | '/services/australia/conformity-assessment'
+    | '/services/australia/pms'
+    | '/services/australia/sponsor'
+    | '/services/brazil/bgmp'
+    | '/services/brazil/brh'
+    | '/services/brazil/notificacao'
+    | '/services/brazil/registro'
+    | '/services/brazil/technovigilance'
+    | '/services/canada/change-management'
+    | '/services/canada/liaison'
+    | '/services/canada/mdel'
+    | '/services/canada/mdl'
+    | '/services/canada/renewals'
+    | '/services/eu/ce-registration'
+    | '/services/eu/clinical-evaluation'
+    | '/services/eu/ear'
+    | '/services/eu/eudamed'
+    | '/services/eu/labeling'
+    | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/pms'
+    | '/services/eu/qms'
+    | '/services/eu/technical-documentation'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -757,6 +1225,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/uk/audit-readiness'
+    | '/services/uk/conformity-assurance'
+    | '/services/uk/dors-registration'
+    | '/services/uk/labeling'
+    | '/services/uk/mhra-liaison'
+    | '/services/uk/mhra-registration'
+    | '/services/uk/pms'
+    | '/services/uk/qms'
+    | '/services/uk/regulatory-writing'
+    | '/services/uk/technical-file'
+    | '/services/uk/ukrp'
+    | '/services/uk/vigilance'
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
@@ -767,7 +1247,12 @@ export interface FileRouteTypes {
     | '/services/usa/q-submission'
     | '/services/usa/rfd-pre-rfd'
     | '/services/usa/udi-gudid'
+    | '/services/australia/'
+    | '/services/brazil/'
+    | '/services/canada/'
+    | '/services/eu/'
     | '/services/india/'
+    | '/services/uk/'
     | '/services/usa/'
   fileRoutesById: FileRoutesById
 }
@@ -783,16 +1268,16 @@ export interface RootRouteChildren {
   InsightsEuMdr2026Route: typeof InsightsEuMdr2026Route
   InsightsFdaInspections2026Route: typeof InsightsFdaInspections2026Route
   InsightsFdaQmsr2026Route: typeof InsightsFdaQmsr2026Route
-  ServicesAustraliaRoute: typeof ServicesAustraliaRoute
-  ServicesBrazilRoute: typeof ServicesBrazilRoute
-  ServicesCanadaRoute: typeof ServicesCanadaRoute
-  ServicesEuRoute: typeof ServicesEuRoute
+  ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
+  ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
+  ServicesCanadaRoute: typeof ServicesCanadaRouteWithChildren
+  ServicesEuRoute: typeof ServicesEuRouteWithChildren
   ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
-  ServicesUkRoute: typeof ServicesUkRoute
+  ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
@@ -1026,6 +1511,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/australia/': {
+      id: '/services/australia/'
+      path: '/'
+      fullPath: '/services/australia/'
+      preLoaderRoute: typeof ServicesAustraliaIndexRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/artg-inclusion': {
+      id: '/services/australia/artg-inclusion'
+      path: '/artg-inclusion'
+      fullPath: '/services/australia/artg-inclusion'
+      preLoaderRoute: typeof ServicesAustraliaArtgInclusionRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/conformity-assessment': {
+      id: '/services/australia/conformity-assessment'
+      path: '/conformity-assessment'
+      fullPath: '/services/australia/conformity-assessment'
+      preLoaderRoute: typeof ServicesAustraliaConformityAssessmentRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/pms': {
+      id: '/services/australia/pms'
+      path: '/pms'
+      fullPath: '/services/australia/pms'
+      preLoaderRoute: typeof ServicesAustraliaPmsRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/sponsor': {
+      id: '/services/australia/sponsor'
+      path: '/sponsor'
+      fullPath: '/services/australia/sponsor'
+      preLoaderRoute: typeof ServicesAustraliaSponsorRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/brazil/': {
+      id: '/services/brazil/'
+      path: '/'
+      fullPath: '/services/brazil/'
+      preLoaderRoute: typeof ServicesBrazilIndexRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/bgmp': {
+      id: '/services/brazil/bgmp'
+      path: '/bgmp'
+      fullPath: '/services/brazil/bgmp'
+      preLoaderRoute: typeof ServicesBrazilBgmpRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/brh': {
+      id: '/services/brazil/brh'
+      path: '/brh'
+      fullPath: '/services/brazil/brh'
+      preLoaderRoute: typeof ServicesBrazilBrhRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/notificacao': {
+      id: '/services/brazil/notificacao'
+      path: '/notificacao'
+      fullPath: '/services/brazil/notificacao'
+      preLoaderRoute: typeof ServicesBrazilNotificacaoRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/registro': {
+      id: '/services/brazil/registro'
+      path: '/registro'
+      fullPath: '/services/brazil/registro'
+      preLoaderRoute: typeof ServicesBrazilRegistroRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/technovigilance': {
+      id: '/services/brazil/technovigilance'
+      path: '/technovigilance'
+      fullPath: '/services/brazil/technovigilance'
+      preLoaderRoute: typeof ServicesBrazilTechnovigilanceRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/canada/': {
+      id: '/services/canada/'
+      path: '/'
+      fullPath: '/services/canada/'
+      preLoaderRoute: typeof ServicesCanadaIndexRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/change-management': {
+      id: '/services/canada/change-management'
+      path: '/change-management'
+      fullPath: '/services/canada/change-management'
+      preLoaderRoute: typeof ServicesCanadaChangeManagementRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/liaison': {
+      id: '/services/canada/liaison'
+      path: '/liaison'
+      fullPath: '/services/canada/liaison'
+      preLoaderRoute: typeof ServicesCanadaLiaisonRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/mdel': {
+      id: '/services/canada/mdel'
+      path: '/mdel'
+      fullPath: '/services/canada/mdel'
+      preLoaderRoute: typeof ServicesCanadaMdelRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/mdl': {
+      id: '/services/canada/mdl'
+      path: '/mdl'
+      fullPath: '/services/canada/mdl'
+      preLoaderRoute: typeof ServicesCanadaMdlRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/renewals': {
+      id: '/services/canada/renewals'
+      path: '/renewals'
+      fullPath: '/services/canada/renewals'
+      preLoaderRoute: typeof ServicesCanadaRenewalsRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/eu/': {
+      id: '/services/eu/'
+      path: '/'
+      fullPath: '/services/eu/'
+      preLoaderRoute: typeof ServicesEuIndexRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ce-registration': {
+      id: '/services/eu/ce-registration'
+      path: '/ce-registration'
+      fullPath: '/services/eu/ce-registration'
+      preLoaderRoute: typeof ServicesEuCeRegistrationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/clinical-evaluation': {
+      id: '/services/eu/clinical-evaluation'
+      path: '/clinical-evaluation'
+      fullPath: '/services/eu/clinical-evaluation'
+      preLoaderRoute: typeof ServicesEuClinicalEvaluationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ear': {
+      id: '/services/eu/ear'
+      path: '/ear'
+      fullPath: '/services/eu/ear'
+      preLoaderRoute: typeof ServicesEuEarRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/eudamed': {
+      id: '/services/eu/eudamed'
+      path: '/eudamed'
+      fullPath: '/services/eu/eudamed'
+      preLoaderRoute: typeof ServicesEuEudamedRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/labeling': {
+      id: '/services/eu/labeling'
+      path: '/labeling'
+      fullPath: '/services/eu/labeling'
+      preLoaderRoute: typeof ServicesEuLabelingRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/mdr-ivdr-transition': {
+      id: '/services/eu/mdr-ivdr-transition'
+      path: '/mdr-ivdr-transition'
+      fullPath: '/services/eu/mdr-ivdr-transition'
+      preLoaderRoute: typeof ServicesEuMdrIvdrTransitionRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/pms': {
+      id: '/services/eu/pms'
+      path: '/pms'
+      fullPath: '/services/eu/pms'
+      preLoaderRoute: typeof ServicesEuPmsRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/qms': {
+      id: '/services/eu/qms'
+      path: '/qms'
+      fullPath: '/services/eu/qms'
+      preLoaderRoute: typeof ServicesEuQmsRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/technical-documentation': {
+      id: '/services/eu/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/eu/technical-documentation'
+      preLoaderRoute: typeof ServicesEuTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/india/': {
       id: '/services/india/'
       path: '/'
@@ -1152,6 +1826,97 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/uk/': {
+      id: '/services/uk/'
+      path: '/'
+      fullPath: '/services/uk/'
+      preLoaderRoute: typeof ServicesUkIndexRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/audit-readiness': {
+      id: '/services/uk/audit-readiness'
+      path: '/audit-readiness'
+      fullPath: '/services/uk/audit-readiness'
+      preLoaderRoute: typeof ServicesUkAuditReadinessRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/conformity-assurance': {
+      id: '/services/uk/conformity-assurance'
+      path: '/conformity-assurance'
+      fullPath: '/services/uk/conformity-assurance'
+      preLoaderRoute: typeof ServicesUkConformityAssuranceRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/dors-registration': {
+      id: '/services/uk/dors-registration'
+      path: '/dors-registration'
+      fullPath: '/services/uk/dors-registration'
+      preLoaderRoute: typeof ServicesUkDorsRegistrationRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/labeling': {
+      id: '/services/uk/labeling'
+      path: '/labeling'
+      fullPath: '/services/uk/labeling'
+      preLoaderRoute: typeof ServicesUkLabelingRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/mhra-liaison': {
+      id: '/services/uk/mhra-liaison'
+      path: '/mhra-liaison'
+      fullPath: '/services/uk/mhra-liaison'
+      preLoaderRoute: typeof ServicesUkMhraLiaisonRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/mhra-registration': {
+      id: '/services/uk/mhra-registration'
+      path: '/mhra-registration'
+      fullPath: '/services/uk/mhra-registration'
+      preLoaderRoute: typeof ServicesUkMhraRegistrationRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/pms': {
+      id: '/services/uk/pms'
+      path: '/pms'
+      fullPath: '/services/uk/pms'
+      preLoaderRoute: typeof ServicesUkPmsRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/qms': {
+      id: '/services/uk/qms'
+      path: '/qms'
+      fullPath: '/services/uk/qms'
+      preLoaderRoute: typeof ServicesUkQmsRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/regulatory-writing': {
+      id: '/services/uk/regulatory-writing'
+      path: '/regulatory-writing'
+      fullPath: '/services/uk/regulatory-writing'
+      preLoaderRoute: typeof ServicesUkRegulatoryWritingRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/technical-file': {
+      id: '/services/uk/technical-file'
+      path: '/technical-file'
+      fullPath: '/services/uk/technical-file'
+      preLoaderRoute: typeof ServicesUkTechnicalFileRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/ukrp': {
+      id: '/services/uk/ukrp'
+      path: '/ukrp'
+      fullPath: '/services/uk/ukrp'
+      preLoaderRoute: typeof ServicesUkUkrpRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/vigilance': {
+      id: '/services/uk/vigilance'
+      path: '/vigilance'
+      fullPath: '/services/uk/vigilance'
+      preLoaderRoute: typeof ServicesUkVigilanceRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
     '/services/usa/': {
       id: '/services/usa/'
       path: '/'
@@ -1254,6 +2019,100 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
   CaseStudiesRouteChildren,
 )
 
+interface ServicesAustraliaRouteChildren {
+  ServicesAustraliaArtgInclusionRoute: typeof ServicesAustraliaArtgInclusionRoute
+  ServicesAustraliaConformityAssessmentRoute: typeof ServicesAustraliaConformityAssessmentRoute
+  ServicesAustraliaPmsRoute: typeof ServicesAustraliaPmsRoute
+  ServicesAustraliaSponsorRoute: typeof ServicesAustraliaSponsorRoute
+  ServicesAustraliaIndexRoute: typeof ServicesAustraliaIndexRoute
+}
+
+const ServicesAustraliaRouteChildren: ServicesAustraliaRouteChildren = {
+  ServicesAustraliaArtgInclusionRoute: ServicesAustraliaArtgInclusionRoute,
+  ServicesAustraliaConformityAssessmentRoute:
+    ServicesAustraliaConformityAssessmentRoute,
+  ServicesAustraliaPmsRoute: ServicesAustraliaPmsRoute,
+  ServicesAustraliaSponsorRoute: ServicesAustraliaSponsorRoute,
+  ServicesAustraliaIndexRoute: ServicesAustraliaIndexRoute,
+}
+
+const ServicesAustraliaRouteWithChildren =
+  ServicesAustraliaRoute._addFileChildren(ServicesAustraliaRouteChildren)
+
+interface ServicesBrazilRouteChildren {
+  ServicesBrazilBgmpRoute: typeof ServicesBrazilBgmpRoute
+  ServicesBrazilBrhRoute: typeof ServicesBrazilBrhRoute
+  ServicesBrazilNotificacaoRoute: typeof ServicesBrazilNotificacaoRoute
+  ServicesBrazilRegistroRoute: typeof ServicesBrazilRegistroRoute
+  ServicesBrazilTechnovigilanceRoute: typeof ServicesBrazilTechnovigilanceRoute
+  ServicesBrazilIndexRoute: typeof ServicesBrazilIndexRoute
+}
+
+const ServicesBrazilRouteChildren: ServicesBrazilRouteChildren = {
+  ServicesBrazilBgmpRoute: ServicesBrazilBgmpRoute,
+  ServicesBrazilBrhRoute: ServicesBrazilBrhRoute,
+  ServicesBrazilNotificacaoRoute: ServicesBrazilNotificacaoRoute,
+  ServicesBrazilRegistroRoute: ServicesBrazilRegistroRoute,
+  ServicesBrazilTechnovigilanceRoute: ServicesBrazilTechnovigilanceRoute,
+  ServicesBrazilIndexRoute: ServicesBrazilIndexRoute,
+}
+
+const ServicesBrazilRouteWithChildren = ServicesBrazilRoute._addFileChildren(
+  ServicesBrazilRouteChildren,
+)
+
+interface ServicesCanadaRouteChildren {
+  ServicesCanadaChangeManagementRoute: typeof ServicesCanadaChangeManagementRoute
+  ServicesCanadaLiaisonRoute: typeof ServicesCanadaLiaisonRoute
+  ServicesCanadaMdelRoute: typeof ServicesCanadaMdelRoute
+  ServicesCanadaMdlRoute: typeof ServicesCanadaMdlRoute
+  ServicesCanadaRenewalsRoute: typeof ServicesCanadaRenewalsRoute
+  ServicesCanadaIndexRoute: typeof ServicesCanadaIndexRoute
+}
+
+const ServicesCanadaRouteChildren: ServicesCanadaRouteChildren = {
+  ServicesCanadaChangeManagementRoute: ServicesCanadaChangeManagementRoute,
+  ServicesCanadaLiaisonRoute: ServicesCanadaLiaisonRoute,
+  ServicesCanadaMdelRoute: ServicesCanadaMdelRoute,
+  ServicesCanadaMdlRoute: ServicesCanadaMdlRoute,
+  ServicesCanadaRenewalsRoute: ServicesCanadaRenewalsRoute,
+  ServicesCanadaIndexRoute: ServicesCanadaIndexRoute,
+}
+
+const ServicesCanadaRouteWithChildren = ServicesCanadaRoute._addFileChildren(
+  ServicesCanadaRouteChildren,
+)
+
+interface ServicesEuRouteChildren {
+  ServicesEuCeRegistrationRoute: typeof ServicesEuCeRegistrationRoute
+  ServicesEuClinicalEvaluationRoute: typeof ServicesEuClinicalEvaluationRoute
+  ServicesEuEarRoute: typeof ServicesEuEarRoute
+  ServicesEuEudamedRoute: typeof ServicesEuEudamedRoute
+  ServicesEuLabelingRoute: typeof ServicesEuLabelingRoute
+  ServicesEuMdrIvdrTransitionRoute: typeof ServicesEuMdrIvdrTransitionRoute
+  ServicesEuPmsRoute: typeof ServicesEuPmsRoute
+  ServicesEuQmsRoute: typeof ServicesEuQmsRoute
+  ServicesEuTechnicalDocumentationRoute: typeof ServicesEuTechnicalDocumentationRoute
+  ServicesEuIndexRoute: typeof ServicesEuIndexRoute
+}
+
+const ServicesEuRouteChildren: ServicesEuRouteChildren = {
+  ServicesEuCeRegistrationRoute: ServicesEuCeRegistrationRoute,
+  ServicesEuClinicalEvaluationRoute: ServicesEuClinicalEvaluationRoute,
+  ServicesEuEarRoute: ServicesEuEarRoute,
+  ServicesEuEudamedRoute: ServicesEuEudamedRoute,
+  ServicesEuLabelingRoute: ServicesEuLabelingRoute,
+  ServicesEuMdrIvdrTransitionRoute: ServicesEuMdrIvdrTransitionRoute,
+  ServicesEuPmsRoute: ServicesEuPmsRoute,
+  ServicesEuQmsRoute: ServicesEuQmsRoute,
+  ServicesEuTechnicalDocumentationRoute: ServicesEuTechnicalDocumentationRoute,
+  ServicesEuIndexRoute: ServicesEuIndexRoute,
+}
+
+const ServicesEuRouteWithChildren = ServicesEuRoute._addFileChildren(
+  ServicesEuRouteChildren,
+)
+
 interface ServicesIndiaRouteChildren {
   ServicesIndiaClassAImportRoute: typeof ServicesIndiaClassAImportRoute
   ServicesIndiaFreeSaleRoute: typeof ServicesIndiaFreeSaleRoute
@@ -1302,6 +2161,42 @@ const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
   ServicesIndiaRouteChildren,
 )
 
+interface ServicesUkRouteChildren {
+  ServicesUkAuditReadinessRoute: typeof ServicesUkAuditReadinessRoute
+  ServicesUkConformityAssuranceRoute: typeof ServicesUkConformityAssuranceRoute
+  ServicesUkDorsRegistrationRoute: typeof ServicesUkDorsRegistrationRoute
+  ServicesUkLabelingRoute: typeof ServicesUkLabelingRoute
+  ServicesUkMhraLiaisonRoute: typeof ServicesUkMhraLiaisonRoute
+  ServicesUkMhraRegistrationRoute: typeof ServicesUkMhraRegistrationRoute
+  ServicesUkPmsRoute: typeof ServicesUkPmsRoute
+  ServicesUkQmsRoute: typeof ServicesUkQmsRoute
+  ServicesUkRegulatoryWritingRoute: typeof ServicesUkRegulatoryWritingRoute
+  ServicesUkTechnicalFileRoute: typeof ServicesUkTechnicalFileRoute
+  ServicesUkUkrpRoute: typeof ServicesUkUkrpRoute
+  ServicesUkVigilanceRoute: typeof ServicesUkVigilanceRoute
+  ServicesUkIndexRoute: typeof ServicesUkIndexRoute
+}
+
+const ServicesUkRouteChildren: ServicesUkRouteChildren = {
+  ServicesUkAuditReadinessRoute: ServicesUkAuditReadinessRoute,
+  ServicesUkConformityAssuranceRoute: ServicesUkConformityAssuranceRoute,
+  ServicesUkDorsRegistrationRoute: ServicesUkDorsRegistrationRoute,
+  ServicesUkLabelingRoute: ServicesUkLabelingRoute,
+  ServicesUkMhraLiaisonRoute: ServicesUkMhraLiaisonRoute,
+  ServicesUkMhraRegistrationRoute: ServicesUkMhraRegistrationRoute,
+  ServicesUkPmsRoute: ServicesUkPmsRoute,
+  ServicesUkQmsRoute: ServicesUkQmsRoute,
+  ServicesUkRegulatoryWritingRoute: ServicesUkRegulatoryWritingRoute,
+  ServicesUkTechnicalFileRoute: ServicesUkTechnicalFileRoute,
+  ServicesUkUkrpRoute: ServicesUkUkrpRoute,
+  ServicesUkVigilanceRoute: ServicesUkVigilanceRoute,
+  ServicesUkIndexRoute: ServicesUkIndexRoute,
+}
+
+const ServicesUkRouteWithChildren = ServicesUkRoute._addFileChildren(
+  ServicesUkRouteChildren,
+)
+
 interface ServicesUsaRouteChildren {
   ServicesUsa510kRoute: typeof ServicesUsa510kRoute
   ServicesUsa513gRoute: typeof ServicesUsa513gRoute
@@ -1347,16 +2242,16 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsEuMdr2026Route: InsightsEuMdr2026Route,
   InsightsFdaInspections2026Route: InsightsFdaInspections2026Route,
   InsightsFdaQmsr2026Route: InsightsFdaQmsr2026Route,
-  ServicesAustraliaRoute: ServicesAustraliaRoute,
-  ServicesBrazilRoute: ServicesBrazilRoute,
-  ServicesCanadaRoute: ServicesCanadaRoute,
-  ServicesEuRoute: ServicesEuRoute,
+  ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
+  ServicesBrazilRoute: ServicesBrazilRouteWithChildren,
+  ServicesCanadaRoute: ServicesCanadaRouteWithChildren,
+  ServicesEuRoute: ServicesEuRouteWithChildren,
   ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesUaeRoute: ServicesUaeRoute,
-  ServicesUkRoute: ServicesUkRoute,
+  ServicesUkRoute: ServicesUkRouteWithChildren,
   ServicesUsaRoute: ServicesUsaRouteWithChildren,
   IndustriesIndexRoute: IndustriesIndexRoute,
   InsightsIndexRoute: InsightsIndexRoute,

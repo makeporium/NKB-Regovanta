@@ -17,7 +17,7 @@ function ServicePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/brain/824d3244-b01e-4505-a26c-5a6cd125c95a/us_fda_hero_1786395342316.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/us_fda_hero_1786395342316.png')] bg-cover bg-center" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/services/usa" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
             <ArrowLeft className="h-4 w-4" /> Back to US FDA Services
@@ -55,7 +55,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/brain/824d3244-b01e-4505-a26c-5a6cd125c95a/us_fda_compliance_1786395357791.png" alt="FDA Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/us_fda_compliance_1786395357791.png" alt="FDA Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>
