@@ -1,35 +1,40 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MessageSquare, X, CheckCircle2 } from "lucide-react";
 
 export function QueryPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [sleepUntil, setSleepUntil] = useState<number>(0);
+
+  // Use refs for values that must be synchronously current inside interval/timeout closures.
+  // React state updates are async and can cause a race condition between the close handler
+  // and the interval, making the popup reopen immediately after closing.
+  const sleepUntilRef = useRef<number>(0);
+  const isOpenRef = useRef<boolean>(false);
+
+  // Keep isOpenRef in sync with isOpen state
+  useEffect(() => {
+    isOpenRef.current = isOpen;
+  }, [isOpen]);
+
+  function openIfAllowed() {
+    if (Date.now() >= sleepUntilRef.current && !isOpenRef.current) {
+      setIsOpen(true);
+    }
+  }
+
+  function handleClose() {
+    // Set sleep synchronously via ref — no async lag, no race condition
+    sleepUntilRef.current = Date.now() + 20000;
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     // Open automatically after 5 seconds initially
-    const initialTimer = setTimeout(() => {
-      setSleepUntil((prevSleep) => {
-        if (Date.now() >= prevSleep) {
-          setIsOpen(true);
-        }
-        return prevSleep;
-      });
-    }, 5000);
+    const initialTimer = setTimeout(openIfAllowed, 5000);
 
-    // Continue to pop up every 20 seconds if the user closes it and we are not sleeping
-    const intervalTimer = setInterval(() => {
-      setSleepUntil((prevSleep) => {
-        if (Date.now() >= prevSleep) {
-          setIsOpen((prevOpen) => {
-            if (!prevOpen) return true;
-            return prevOpen;
-          });
-        }
-        return prevSleep;
-      });
-    }, 20000);
+    // Re-check every 20 seconds; opens only if not sleeping and currently closed
+    const intervalTimer = setInterval(openIfAllowed, 20000);
 
     return () => {
       clearTimeout(initialTimer);
@@ -50,16 +55,11 @@ export function QueryPopup() {
       if (response.ok) {
         setIsSuccess(true);
         
-        // Wait 3 seconds to show success, then close and sleep for 90 seconds (1.5 mins)
+        // Show success for 3 seconds, then close and sleep for 90 seconds (1.5 mins)
         setTimeout(() => {
+          sleepUntilRef.current = Date.now() + 90000;
           setIsOpen(false);
-          // Wait for closing animation to finish before resetting form state
-          setTimeout(() => {
-            setIsSuccess(false);
-          }, 500);
-          
-          // Sleep for 90 seconds from now
-          setSleepUntil(Date.now() + 90000);
+          setTimeout(() => setIsSuccess(false), 500);
         }, 3000);
       }
     } catch (error) {
@@ -79,11 +79,7 @@ export function QueryPopup() {
               <p className="text-xs text-white/80 mt-1">We'll get back to you within 24 hours</p>
             </div>
             <button 
-              onClick={() => {
-                setIsOpen(false);
-                // Give the user 20 seconds of peace after manually closing
-                setSleepUntil(Date.now() + 20000);
-              }}
+              onClick={handleClose}
               className="text-white/80 hover:text-white transition-colors"
             >
               <X className="h-5 w-5" />
