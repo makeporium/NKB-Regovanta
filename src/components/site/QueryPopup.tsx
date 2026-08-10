@@ -5,11 +5,23 @@ export function QueryPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Open automatically after 5 seconds
-    const timer = setTimeout(() => {
+    // Open automatically after 5 seconds initially
+    const initialTimer = setTimeout(() => {
       setIsOpen(true);
     }, 5000);
-    return () => clearTimeout(timer);
+
+    // Continue to pop up every 20 seconds if the user closes it
+    const intervalTimer = setInterval(() => {
+      setIsOpen((prev) => {
+        if (!prev) return true;
+        return prev;
+      });
+    }, 20000);
+
+    return () => {
+      clearTimeout(initialTimer);
+      clearInterval(intervalTimer);
+    };
   }, []);
 
   return (

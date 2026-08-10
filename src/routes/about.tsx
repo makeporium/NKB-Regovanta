@@ -16,6 +16,7 @@ import imgUsha from "@/assets/usha.png";
 import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
 import imgSatish from "@/assets/satish.png";
+import imgRitu from "@/assets/ritu.png";
 
 export const Route = createFileRoute("/about")({
     head: () => ({
@@ -100,6 +101,13 @@ const experts = [
       tags: ["Human Resources", "Talent Management", "Organizational Development"],
       img: imgSatish,
       bio: "Satish M. serves as the Manager of Human Resources at NKB Regovanta Solutions, overseeing talent acquisition, employee engagement, and HR operations. He plays a key role in building a strong organizational culture, managing workforce planning, and supporting the professional development of team members. His dedication to creating an inclusive and high-performing work environment is integral to the company's continued growth and employee satisfaction.",
+    },
+    {
+      name: "Ritu Dixit",
+      title: "Quality Assurance and Regulatory Affairs",
+      tags: ["Quality Assurance", "Regulatory Affairs", "Compliance"],
+      img: imgRitu,
+      bio: "Ritu Dixit plays a crucial role in Quality Assurance and Regulatory Affairs at NKB Regovanta. She ensures that processes, products, and services consistently meet the rigorous quality standards demanded by the healthcare industry and regulatory authorities. Her deep understanding of compliance frameworks and dedication to continuous improvement make her a vital asset in maintaining operational excellence and safeguarding the integrity of our regulatory solutions.",
     },
 ];
 

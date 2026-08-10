@@ -28,12 +28,12 @@ const services = [
 ];
 
 const markets = [
-  { flag: "🇺🇸", name: "USA", auth: "FDA" },
-  { flag: "🇪🇺", name: "European Union", auth: "EU MDR" },
-  { flag: "🇬🇧", name: "United Kingdom", auth: "UK requirements" },
-  { flag: "🇨🇦", name: "Canada", auth: "Health Canada" },
-  { flag: "🇦🇺", name: "Australia", auth: "TGA" },
-  { flag: "🇧🇷", name: "Brazil", auth: "ANVISA" },
+  { code: "us", name: "USA", auth: "FDA", route: "/services/usa" },
+  { code: "eu", name: "European Union", auth: "EU MDR", route: "/services/eu" },
+  { code: "gb", name: "United Kingdom", auth: "UK requirements", route: "/services/uk" },
+  { code: "ca", name: "Canada", auth: "Health Canada", route: "/services/canada" },
+  { code: "au", name: "Australia", auth: "TGA", route: "/services/australia" },
+  { code: "br", name: "Brazil", auth: "ANVISA", route: "/markets" },
 ];
 
 const steps = ["Assess", "Strategize", "Prepare", "Submit", "Support", "Maintain"];
@@ -94,13 +94,19 @@ function MedicalDevices() {
           <h2 className="text-[18px] font-bold text-navy mb-8">Markets We Support</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {markets.map((m) => (
-              <div key={m.name} className="flex flex-col items-center gap-2 p-4 bg-white rounded-lg border border-border text-center">
-                <span className="text-3xl">{m.flag}</span>
+              <Link key={m.name} to={m.route} className="flex flex-col items-center gap-3 p-4 bg-white rounded-lg border border-border text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-md group">
+                <img
+                    src={`https://flagcdn.com/w40/${m.code}.png`}
+                    srcSet={`https://flagcdn.com/w80/${m.code}.png 2x`}
+                    width="32"
+                    alt={m.name}
+                    className="rounded-[2px] shadow-sm border border-black/10 group-hover:shadow-md transition-shadow"
+                />
                 <div>
-                  <div className="text-[12px] font-bold text-navy">{m.name}</div>
-                  <div className="text-[11px] text-navy/60">{m.auth}</div>
+                  <div className="text-[12px] font-bold text-navy group-hover:text-accent transition-colors">{m.name}</div>
+                  <div className="text-[11px] text-navy/60 group-hover:text-navy/80">{m.auth}</div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

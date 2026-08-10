@@ -64,9 +64,14 @@ export function Header() {
               Home
             </Link>
             <div className="group relative">
-              <button className={`${linkClass} inline-flex items-center gap-1`}>
+              <Link 
+                to="/services" 
+                className={`${linkClass} inline-flex items-center gap-1`}
+                activeProps={{ className: "text-navy font-semibold" }}
+                activeOptions={{ exact: false }}
+              >
                 Services <ChevronDown className="h-3.5 w-3.5" />
-              </button>
+              </Link>
               <div className="invisible absolute left-0 top-full w-60 translate-y-1 pt-3 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                 <div className="card-elevated overflow-hidden py-1">
                   {services.map((s) => (

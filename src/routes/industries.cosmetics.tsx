@@ -30,10 +30,10 @@ const services = [
 ];
 
 const markets = [
-  { flag: "🇪🇺", name: "European Union", auth: "EU Cosmetics Regulation & CPNP" },
-  { flag: "🇬🇧", name: "Great Britain", auth: "UK Cosmetics requirements & SCPN" },
-  { flag: "🇺🇸", name: "USA", auth: "FDA / MoCRA" },
-  { flag: "🌎", name: "Other Markets", auth: "Requirements assessed per target country" },
+  { code: "eu", name: "European Union", auth: "EU Cosmetics Regulation & CPNP", route: "/services/eu" },
+  { code: "gb", name: "Great Britain", auth: "UK Cosmetics requirements & SCPN", route: "/services/uk" },
+  { code: "us", name: "USA", auth: "FDA / MoCRA", route: "/services/usa" },
+  { code: "un", name: "Other Markets", auth: "Requirements assessed per target country", route: "/markets" },
 ];
 
 const approachSteps = [
@@ -102,13 +102,19 @@ function Cosmetics() {
           <h2 className="text-[18px] font-bold text-navy mb-8">Markets</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {markets.map((m) => (
-              <div key={m.name} className="flex items-start gap-4 p-5 bg-white rounded-lg border border-border">
-                <span className="text-3xl shrink-0">{m.flag}</span>
+              <Link key={m.name} to={m.route} className="flex items-start gap-4 p-5 bg-white rounded-lg border border-border transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-md group">
+                <img
+                    src={`https://flagcdn.com/w40/${m.code}.png`}
+                    srcSet={`https://flagcdn.com/w80/${m.code}.png 2x`}
+                    width="32"
+                    alt={m.name}
+                    className="shrink-0 mt-1 rounded-[2px] shadow-sm border border-black/10 group-hover:shadow-md transition-shadow"
+                />
                 <div>
-                  <div className="text-[13px] font-bold text-navy">{m.name}</div>
-                  <div className="text-[12px] text-navy/60 mt-0.5 leading-snug">{m.auth}</div>
+                  <div className="text-[13px] font-bold text-navy group-hover:text-accent transition-colors">{m.name}</div>
+                  <div className="text-[12px] text-navy/60 mt-0.5 leading-snug group-hover:text-navy/80">{m.auth}</div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
