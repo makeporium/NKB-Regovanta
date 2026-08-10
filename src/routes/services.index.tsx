@@ -45,13 +45,13 @@ const services = [
     icon: Zap,
     title: "Market Access",
     text: "Market entry strategy, pricing, reimbursement & post-market compliance.",
-    to: "/services",
+    to: "/services/market-access",
   },
   {
     icon: FileSearch,
     title: "Audit & Compliance Support",
     text: "Internal audits, supplier audits, compliance & regulatory intelligence.",
-    to: "/services",
+    to: "/services/audit-compliance",
   },
 ];
 

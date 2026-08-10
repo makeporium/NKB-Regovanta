@@ -31,12 +31,14 @@ import { Route as InsightsFdaInspections2026RouteImport } from './routes/insight
 import { Route as InsightsFdaQmsr2026RouteImport } from './routes/insights.fda-qmsr-2026'
 import { Route as MarketsIndexRouteImport } from './routes/markets.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesAuditComplianceRouteImport } from './routes/services.audit-compliance'
 import { Route as ServicesAustraliaRouteImport } from './routes/services.australia'
 import { Route as ServicesBrazilRouteImport } from './routes/services.brazil'
 import { Route as ServicesCanadaRouteImport } from './routes/services.canada'
 import { Route as ServicesEuRouteImport } from './routes/services.eu'
 import { Route as ServicesIndiaRouteImport } from './routes/services.india'
 import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
+import { Route as ServicesMarketAccessRouteImport } from './routes/services.market-access'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
 import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
 import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
@@ -229,6 +231,11 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesAuditComplianceRoute = ServicesAuditComplianceRouteImport.update({
+  id: '/services/audit-compliance',
+  path: '/services/audit-compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesAustraliaRoute = ServicesAustraliaRouteImport.update({
   id: '/services/australia',
   path: '/services/australia',
@@ -257,6 +264,11 @@ const ServicesIndiaRoute = ServicesIndiaRouteImport.update({
 const ServicesIso13485Route = ServicesIso13485RouteImport.update({
   id: '/services/iso-13485',
   path: '/services/iso-13485',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesMarketAccessRoute = ServicesMarketAccessRouteImport.update({
+  id: '/services/market-access',
+  path: '/services/market-access',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesMdsapRoute = ServicesMdsapRouteImport.update({
@@ -682,12 +694,14 @@ export interface FileRoutesByFullPath {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
   '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
@@ -786,7 +800,9 @@ export interface FileRoutesByTo {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
@@ -885,12 +901,14 @@ export interface FileRoutesById {
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
   '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
@@ -992,12 +1010,14 @@ export interface FileRouteTypes {
     | '/insights/eu-mdr-2026'
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
+    | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
     | '/services/eu'
     | '/services/india'
     | '/services/iso-13485'
+    | '/services/market-access'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
     | '/services/technical-documentation'
@@ -1096,7 +1116,9 @@ export interface FileRouteTypes {
     | '/insights/eu-mdr-2026'
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
+    | '/services/audit-compliance'
     | '/services/iso-13485'
+    | '/services/market-access'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
     | '/services/technical-documentation'
@@ -1194,12 +1216,14 @@ export interface FileRouteTypes {
     | '/insights/eu-mdr-2026'
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
+    | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
     | '/services/eu'
     | '/services/india'
     | '/services/iso-13485'
+    | '/services/market-access'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
     | '/services/technical-documentation'
@@ -1294,12 +1318,14 @@ export interface RootRouteChildren {
   InsightsEuMdr2026Route: typeof InsightsEuMdr2026Route
   InsightsFdaInspections2026Route: typeof InsightsFdaInspections2026Route
   InsightsFdaQmsr2026Route: typeof InsightsFdaQmsr2026Route
+  ServicesAuditComplianceRoute: typeof ServicesAuditComplianceRoute
   ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
   ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
   ServicesCanadaRoute: typeof ServicesCanadaRouteWithChildren
   ServicesEuRoute: typeof ServicesEuRouteWithChildren
   ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
   ServicesIso13485Route: typeof ServicesIso13485Route
+  ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
@@ -1468,6 +1494,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/audit-compliance': {
+      id: '/services/audit-compliance'
+      path: '/services/audit-compliance'
+      fullPath: '/services/audit-compliance'
+      preLoaderRoute: typeof ServicesAuditComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/australia': {
       id: '/services/australia'
       path: '/services/australia'
@@ -1508,6 +1541,13 @@ declare module '@tanstack/react-router' {
       path: '/services/iso-13485'
       fullPath: '/services/iso-13485'
       preLoaderRoute: typeof ServicesIso13485RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/market-access': {
+      id: '/services/market-access'
+      path: '/services/market-access'
+      fullPath: '/services/market-access'
+      preLoaderRoute: typeof ServicesMarketAccessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/mdsap': {
@@ -2285,12 +2325,14 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsEuMdr2026Route: InsightsEuMdr2026Route,
   InsightsFdaInspections2026Route: InsightsFdaInspections2026Route,
   InsightsFdaQmsr2026Route: InsightsFdaQmsr2026Route,
+  ServicesAuditComplianceRoute: ServicesAuditComplianceRoute,
   ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
   ServicesBrazilRoute: ServicesBrazilRouteWithChildren,
   ServicesCanadaRoute: ServicesCanadaRouteWithChildren,
   ServicesEuRoute: ServicesEuRouteWithChildren,
   ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
   ServicesIso13485Route: ServicesIso13485Route,
+  ServicesMarketAccessRoute: ServicesMarketAccessRoute,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,

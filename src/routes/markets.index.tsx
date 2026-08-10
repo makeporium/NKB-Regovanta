@@ -35,14 +35,14 @@ const flagMarkets = [
     { code: "ca", label: "Health Canada", sub: "CANADA", to: "/services/canada" },
     { code: "au", label: "TGA", sub: "AUSTRALIA", to: "/services/australia" },
     { code: "br", label: "ANVISA", sub: "BRAZIL", to: "/services/brazil" },
-    { code: null, label: "AND MORE", sub: "40+ COUNTRIES", to: "/contact" },
+    { code: null, label: "AND MORE", sub: "15+ COUNTRIES", to: "/contact" },
 ];
 
 const stats = [
-    { icon: Globe2, value: "40+", label: "Countries\nSupported" },
+    { icon: Globe2, value: "15+", label: "Countries\nSupported" },
     { icon: Users, value: "21+", label: "Global Clients\nServed" },
-    { icon: FileCheck2, value: "1000+", label: "Registrations\nCompleted" },
-    { icon: Handshake, value: "98%", label: "Client Satisfaction\nRate" },
+    { icon: FileCheck2, value: "51+", label: "Regulatory & Quality Projects Completed" },
+    { icon: Handshake, value: "2018", label: "Experience Since\nRegulatory & Quality" },
 ];
 
 function Markets() {

@@ -1,48 +1,45 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
 
-export const Route = createFileRoute("/services/technical-documentation")({
+export const Route = createFileRoute("/services/audit-compliance")({
   head: () => ({
     meta: [
-      { title: "Technical Documentation | Services | NKB Regovanta" },
+      { title: "Audit & Compliance Support | Services | NKB Regovanta" },
       {
         name: "description",
-        content: "End-to-end technical file writing (STED), risk management & compliance support.",
+        content: "Internal audits, supplier audits, compliance & regulatory intelligence.",
       },
     ],
   }),
-  component: TechnicalDocumentationService,
+  component: AuditComplianceService,
 });
 
 const offerings = [
   {
-    title: "Technical File / Technical Documentation",
-    desc: "Structured documentation aligned with applicable regulatory requirements.",
+    title: "Internal Audits",
+    desc: "Independent assessment of QMS processes and regulatory compliance.",
   },
   {
-    title: "Risk Management",
-    desc: "Risk analysis, evaluation and documentation aligned with the product's risk profile.",
+    title: "Supplier Audits",
+    desc: "Evaluate supplier controls, qualification and ongoing performance.",
   },
   {
-    title: "Clinical & Performance Evidence",
-    desc: "Integration of clinical, scientific and performance evidence into the regulatory file.",
+    title: "Regulatory Gap Assessment",
+    desc: "Identify gaps against applicable regulatory and quality requirements.",
   },
   {
-    title: "GSPR / Regulatory Requirements Mapping",
-    desc: "Traceability between applicable requirements and supporting evidence.",
+    title: "Mock Audits",
+    desc: "Simulate audit conditions and identify areas requiring attention.",
   },
   {
-    title: "Labeling & IFU",
-    desc: "Regulatory review of labeling, claims and instructions for use.",
-  },
-  {
-    title: "Post-Market Documentation",
-    desc: "PMS, PMCF/PMPF and lifecycle documentation support.",
-  },
+    title: "CAPA Support",
+    desc: "Root-cause analysis, corrective action and effectiveness assessment.",
+  }
 ];
 
-function TechnicalDocumentationService() {
+function AuditComplianceService() {
   return (
     <>
       <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-4 pt-0">
@@ -52,13 +49,13 @@ function TechnicalDocumentationService() {
               Services
             </Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Technical Documentation</span>
+            <span className="text-navy">Audit & Compliance Support</span>
           </div>
           <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: "clamp(32px, 4vw, 52px)" }}>
-            Technical Documentation
+            Audit & Compliance Support
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-navy/70 font-medium max-w-3xl">
-            End-to-end technical file writing (STED), risk management & compliance support.
+            Internal audits, supplier audits, compliance & regulatory intelligence.
           </p>
         </div>
       </section>
@@ -66,15 +63,15 @@ function TechnicalDocumentationService() {
       <section className="bg-white pt-8 pb-16 lg:pt-10 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-2xl font-bold text-navy mb-6">Evidence That Supports Regulatory Decisions</h2>
+            <h2 className="text-2xl font-bold text-navy mb-6">Prepare Before the Audit. Strengthen Before the Finding.</h2>
             <p className="text-[15px] text-navy/80 leading-relaxed mb-6">
-              Regulatory documentation must do more than describe a product. It must demonstrate how safety, performance, risk and compliance requirements have been addressed.
+              Regulatory readiness is built long before an auditor arrives.
             </p>
             <p className="text-[15px] text-navy/80 leading-relaxed mb-8">
-              NKB Regovanta supports manufacturers in developing structured technical documentation aligned with applicable regulatory requirements and market pathways.
+              NKB Regovanta helps organizations identify compliance gaps, strengthen quality processes and prepare for internal, supplier and regulatory audits.
             </p>
             
-            <h3 className="text-xl font-bold text-navy mb-6">Our Technical Documentation Support</h3>
+            <h3 className="text-xl font-bold text-navy mb-6">Our Audit & Compliance Support</h3>
             <div className="space-y-6">
               {offerings.map((offering, idx) => (
                 <div key={idx} className="flex gap-4">
@@ -92,15 +89,15 @@ function TechnicalDocumentationService() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100 to-blue-50 rounded-[2rem] -z-10 transform rotate-3" />
             <img 
-              src="/assets/brain/technical_documentation_hero_1786399660256.png" 
-              alt="Technical Documentation structured files" 
+              src={imgPlaceholder}
+              alt="Quality and Audit Compliance" 
               className="rounded-2xl shadow-xl border border-white/50 w-full object-cover" 
             />
           </div>
         </div>
       </section>
 
-      <CTABand title="Ready to streamline your documentation?" description="Connect with our technical file experts" />
+      <CTABand title="Ready to strengthen your compliance?" description="Connect with our audit experts today" />
     </>
   );
 }

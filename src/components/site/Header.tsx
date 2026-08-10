@@ -7,6 +7,9 @@ const services = [
   { to: "/services/regulatory-affairs", label: "Regulatory Affairs" },
   { to: "/services/iso-13485", label: "ISO 13485 & QMS" },
   { to: "/services/mdsap", label: "MDSAP" },
+  { to: "/services/technical-documentation", label: "Technical Documentation" },
+  { to: "/services/market-access", label: "Market Access" },
+  { to: "/services/audit-compliance", label: "Audit & Compliance Support" },
   { to: "/services", label: "All Services" },
 ];
 
