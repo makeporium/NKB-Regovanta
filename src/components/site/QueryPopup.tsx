@@ -1,20 +1,33 @@
 import { useState, useEffect } from "react";
-import { MessageSquare, X } from "lucide-react";
+import { MessageSquare, X, CheckCircle2 } from "lucide-react";
 
 export function QueryPopup() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [sleepUntil, setSleepUntil] = useState<number>(0);
 
   useEffect(() => {
     // Open automatically after 5 seconds initially
     const initialTimer = setTimeout(() => {
-      setIsOpen(true);
+      setSleepUntil((prevSleep) => {
+        if (Date.now() >= prevSleep) {
+          setIsOpen(true);
+        }
+        return prevSleep;
+      });
     }, 5000);
 
-    // Continue to pop up every 20 seconds if the user closes it
+    // Continue to pop up every 20 seconds if the user closes it and we are not sleeping
     const intervalTimer = setInterval(() => {
-      setIsOpen((prev) => {
-        if (!prev) return true;
-        return prev;
+      setSleepUntil((prevSleep) => {
+        if (Date.now() >= prevSleep) {
+          setIsOpen((prevOpen) => {
+            if (!prevOpen) return true;
+            return prevOpen;
+          });
+        }
+        return prevSleep;
       });
     }, 20000);
 
@@ -23,6 +36,38 @@ export function QueryPopup() {
       clearInterval(intervalTimer);
     };
   }, []);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(e.currentTarget)
+      });
+      
+      if (response.ok) {
+        setIsSuccess(true);
+        
+        // Wait 3 seconds to show success, then close and sleep for 90 seconds (1.5 mins)
+        setTimeout(() => {
+          setIsOpen(false);
+          // Wait for closing animation to finish before resetting form state
+          setTimeout(() => {
+            setIsSuccess(false);
+          }, 500);
+          
+          // Sleep for 90 seconds from now
+          setSleepUntil(Date.now() + 90000);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error("Submission failed", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
@@ -34,40 +79,54 @@ export function QueryPopup() {
               <p className="text-xs text-white/80 mt-1">We'll get back to you within 24 hours</p>
             </div>
             <button 
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                // Give the user 20 seconds of peace after manually closing
+                setSleepUntil(Date.now() + 20000);
+              }}
               className="text-white/80 hover:text-white transition-colors"
             >
               <X className="h-5 w-5" />
             </button>
           </div>
           <div className="p-5">
-            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
-              <input type="hidden" name="access_key" value="52b40877-c175-4aca-852e-bb2a7e62a86a" />
-              
-              <div className="space-y-1">
-                <label htmlFor="popup-name" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Your Name *</label>
-                <input type="text" id="popup-name" name="name" required placeholder="Enter your name" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+            {isSuccess ? (
+              <div className="flex flex-col items-center justify-center py-8 text-center animate-in fade-in zoom-in duration-300">
+                <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle2 className="h-6 w-6 text-green-600" />
+                </div>
+                <h4 className="text-lg font-bold text-navy mb-1">Query Submitted!</h4>
+                <p className="text-sm text-navy/70">Thank you. We will be in touch shortly.</p>
               </div>
-              
-              <div className="space-y-1">
-                <label htmlFor="popup-email" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Email Address *</label>
-                <input type="email" id="popup-email" name="email" required placeholder="your@email.com" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
-              </div>
-              
-              <div className="space-y-1">
-                <label htmlFor="popup-phone" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Phone Number *</label>
-                <input type="tel" id="popup-phone" name="phone" required placeholder="+91 xxxxxxxxxx" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
-              </div>
-              
-              <div className="space-y-1">
-                <label htmlFor="popup-query" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Your Query *</label>
-                <textarea id="popup-query" name="message" required rows={3} placeholder="Tell us about your regulatory needs..." className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent resize-none"></textarea>
-              </div>
-              
-              <button type="submit" className="w-full rounded-sm bg-accent px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-accent/90">
-                Submit Query
-              </button>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input type="hidden" name="access_key" value="52b40877-c175-4aca-852e-bb2a7e62a86a" />
+                
+                <div className="space-y-1">
+                  <label htmlFor="popup-name" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Your Name *</label>
+                  <input type="text" id="popup-name" name="name" required placeholder="Enter your name" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+                
+                <div className="space-y-1">
+                  <label htmlFor="popup-email" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Email Address *</label>
+                  <input type="email" id="popup-email" name="email" required placeholder="your@email.com" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+                
+                <div className="space-y-1">
+                  <label htmlFor="popup-phone" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Phone Number *</label>
+                  <input type="tel" id="popup-phone" name="phone" required placeholder="+91 xxxxxxxxxx" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+                </div>
+                
+                <div className="space-y-1">
+                  <label htmlFor="popup-query" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Your Query *</label>
+                  <textarea id="popup-query" name="message" required rows={3} placeholder="Tell us about your regulatory needs..." className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent resize-none"></textarea>
+                </div>
+                
+                <button type="submit" disabled={isSubmitting} className="w-full rounded-sm bg-accent px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-accent/90 disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? "Submitting..." : "Submit Query"}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       )}

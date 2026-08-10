@@ -1,22 +1,30 @@
-import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import React, { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 import {
+    Globe2,
+    CheckCircle2,
+    ShieldCheck,
+    Users,
+    FileText,
+    Settings,
+    ArrowRight,
+    FlaskConical,
+    Microscope,
+    HeartPulse,
+    BarChart3,
+    Puzzle,
+    TrendingUp,
     Target,
     Award,
-    Users,
     Lightbulb,
-    ShieldCheck,
-    Globe2,
-    Handshake,
-    Trophy,
     X,
 } from "lucide-react";
-import cityImage from "@/assets/about-city.jpg";
 import imgUsha from "@/assets/usha.png";
 import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
 import imgSatish from "@/assets/satish.png";
 import imgRitu from "@/assets/ritu.png";
+import imgGlobal from "@/assets/world-map.png";
 
 export const Route = createFileRoute("/about")({
     head: () => ({
@@ -24,192 +32,516 @@ export const Route = createFileRoute("/about")({
             { title: "About Us | NKB Regovanta" },
             {
                 name: "description",
-                content:
-                    "NKB Regovanta is a trusted partner for medical device companies worldwide, delivering end-to-end regulatory, quality & compliance solutions.",
+                content: "Learn about NKB Regovanta's global expertise, strategic execution, and commitment to advancing healthcare innovation without borders.",
             },
         ],
     }),
     component: About,
 });
 
-const approach = [
-    {
-        icon: Target,
-        title: "Strategic",
-        desc: "Customized strategies\nfor your success.",
-    },
-    {
-        icon: Award,
-        title: "Reliable",
-        desc: "Trusted by global\nmedical device leaders.",
-    },
-    {
-        icon: Users,
-        title: "Collaborative",
-        desc: "Work as an extension\nof your team.",
-    },
-    {
-        icon: Lightbulb,
-        title: "Innovative",
-        desc: "Smart solutions for\ncomplex challenges.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Compliant",
-        desc: "Ensure global regulatory\ncompliance.",
-    },
-    {
-        icon: Globe2,
-        title: "Global",
-        desc: "Local expertise,\nglobal reach.",
-    },
-];
-
-const stats = [
-    { value: "8+", label: "Years of Experience" },
-    { value: "21+", label: "Clients Served" },
-    { value: "51+", label: "Projects Delivered" },
-    { value: "15+", label: "Countries Supported" },
-    { value: "3", label: "Core Industries" },
-];
-
 const experts = [
     {
-      name: "Miss. Usha S.",
-      title: "Chief Executive Officer",
-      tags: ["Executive Leadership", "Strategic Direction", "Operations"],
-      img: imgUsha,
-      bio: "As Chief Executive Officer, Miss. Usha S. leads the organization's strategic direction, business operations, and growth initiatives. She works closely with healthcare, regulatory, and technical experts to strengthen the company's capabilities and support the delivery of high-quality services to clients. Her focus on operational excellence, strong client partnerships, and sustainable growth helps drive the organization's continued development within the healthcare sector.",
+        name: "Usha S.",
+        title: "Chief Executive Officer",
+        tags: ["Executive Leadership", "Strategic Direction", "Operations"],
+        img: imgUsha,
+        bio: "Usha S. founded NKB Regovanta with a clear belief: regulatory complexity should never stand in the way of responsible innovation reaching the people who need it.\n\nDriven by a vision to bridge regulatory expertise, scientific rigor, quality, and global market access, she built NKB Regovanta to support both emerging innovators and established manufacturers navigating increasingly complex healthcare and regulated-product environments.\n\nUnder her leadership, NKB Regovanta is evolving into a trusted partner across Medical Devices, IVDs, and Cosmetics, connecting Indian innovation with global markets and global expertise with India.\n\nHer vision extends beyond compliance and commercial success—to help create an ecosystem where safer, higher-quality, and meaningful innovations can reach society responsibly.\n\nHer vision is simple: Build trust. Enable innovation. Create impact.",
     },
     {
-      name: "Saurav Gupta",
-      title: "Chief Operating Officer",
-      tags: ["Executive Leadership", "Operations", "Process Management"],
-      img: imgSaurav,
-      bio: "As Chief Operating Officer, Saurav Gupta oversees the day-to-day operational activities of NKB Regovanta Solutions. He is responsible for streamlining internal processes, managing cross-functional teams, and ensuring service delivery meets the highest quality standards. With a strong focus on efficiency, scalability, and organizational alignment, Saurav plays a pivotal role in translating the company's strategic vision into operational reality.",
+        name: "Saurav Gupta",
+        title: "Chief Operating Officer",
+        tags: ["Executive Leadership", "Operations", "Process Management"],
+        img: imgSaurav,
+        bio: "Saurav Gupta plays a key role in translating NKB Regovanta's vision into scalable, high-performing operations. He drives operational excellence across teams, processes, and service delivery, ensuring that the organization grows with consistency, agility, and a strong commitment to quality.\n\nWith a focus on building efficient systems, strengthening collaboration, and enabling sustainable growth, Saurav helps create the operational foundation required to serve clients across India and global markets.\n\nHis focus is simple: Build efficiently. Execute with excellence. Grow with purpose.",
     },
     {
-      name: "Daniel M.",
-      title: "Business Development & Market Access",
-      tags: ["Business Development", "Market Access", "Client Relations"],
-      img: imgDaniel,
-      bio: "Daniel M. leads Business Development and Market Access at NKB Regovanta. He is instrumental in identifying new growth opportunities, building strategic partnerships, and expanding the company's market footprint across regulatory and healthcare sectors. Daniel brings extensive experience in client engagement, commercial strategy, and market analysis, ensuring that NKB Regovanta continues to reach and serve clients effectively on a global scale.",
+        name: "Daniel M.",
+        title: "Business Development & Market Access",
+        tags: ["Business Development", "Market Access", "Client Relations"],
+        img: imgDaniel,
+        bio: "Daniel M. leads Business Development and Market Access at NKB Regovanta. He is instrumental in identifying new growth opportunities, building strategic partnerships, and expanding the company's market footprint across regulatory and healthcare sectors. Daniel brings extensive experience in client engagement, commercial strategy, and market analysis, ensuring that NKB Regovanta continues to reach and serve clients effectively on a global scale.",
     },
     {
-      name: "Satish M.",
-      title: "Manager, Human Resources",
-      tags: ["Human Resources", "Talent Management", "Organizational Development"],
-      img: imgSatish,
-      bio: "Satish M. serves as the Manager of Human Resources at NKB Regovanta Solutions, overseeing talent acquisition, employee engagement, and HR operations. He plays a key role in building a strong organizational culture, managing workforce planning, and supporting the professional development of team members. His dedication to creating an inclusive and high-performing work environment is integral to the company's continued growth and employee satisfaction.",
+        name: "Satish M.",
+        title: "Manager, Human Resources",
+        tags: ["Human Resources", "Talent Management", "Organizational Development"],
+        img: imgSatish,
+        bio: "Satish M. serves as the Manager of Human Resources at NKB Regovanta Solutions, overseeing talent acquisition, employee engagement, and HR operations. He plays a key role in building a strong organizational culture, managing workforce planning, and supporting the professional development of team members. His dedication to creating an inclusive and high-performing work environment is integral to the company's continued growth and employee satisfaction.",
     },
     {
-      name: "Ritu Dixit",
-      title: "Quality Assurance and Regulatory Affairs",
-      tags: ["Quality Assurance", "Regulatory Affairs", "Compliance"],
-      img: imgRitu,
-      bio: "Ritu Dixit plays a crucial role in Quality Assurance and Regulatory Affairs at NKB Regovanta. She ensures that processes, products, and services consistently meet the rigorous quality standards demanded by the healthcare industry and regulatory authorities. Her deep understanding of compliance frameworks and dedication to continuous improvement make her a vital asset in maintaining operational excellence and safeguarding the integrity of our regulatory solutions.",
+        name: "Ritu Dixit",
+        title: "Quality Assurance and Regulatory Affairs",
+        tags: ["Quality Assurance", "Regulatory Affairs", "Compliance"],
+        img: imgRitu,
+        bio: "Ritu Dixit brings extensive global experience in Quality Assurance and Regulatory Affairs, with a strong understanding of international healthcare regulations and quality standards. She provides strategic oversight of quality systems, regulatory compliance, and operational excellence, helping ensure that NKB Regovanta's solutions meet rigorous global expectations.\n\nHer expertise, regulatory insight, and commitment to continuous improvement strengthen our ability to deliver consistent, compliant, and globally aligned solutions to clients across markets.\n\nGlobal Perspective. Regulatory Expertise. Quality Without Compromise.",
     },
-];
-
-const milestones = [
-    { year: "2018", text: "NKB Regovanta founded with a clear mission: to guide medical device and IVD manufacturers through complex global regulatory landscapes with precision and integrity." },
-    { year: "2019", text: "Established core consulting capabilities in US FDA regulatory strategy, EU MDR compliance, and biological safety evaluation." },
-    { year: "2020", text: "Expanded service offerings to include clinical research support and quality management consulting amid rapidly evolving global regulatory requirements." },
-    { year: "2021", text: "Launched preclinical research advisory services and deepened expertise in ISO 10993 biological evaluation, GLP studies, and IVDR compliance." },
-    { year: "2022", text: "Grew the team of regulatory experts and expanded client base to include early-stage MedTech startups and established multinational manufacturers." },
-    { year: "2023", text: "Introduced the Startup Solutions program — a dedicated, integrated pathway for early-stage companies to navigate regulatory challenges efficiently." },
-    { year: "2024", text: "Strengthened global reach with regulatory consulting expertise spanning US FDA, EU, and APAC markets, serving 100+ clients across therapeutic areas." },
-    { year: "Present", text: "Operating as a trusted full-service Medical Research Organization (MRO) delivering integrated regulatory, preclinical, clinical, and testing solutions to MedTech innovators worldwide." },
 ];
 
 function About() {
     const [selectedExpert, setSelectedExpert] = useState<typeof experts[0] | null>(null);
-
     return (
-        <>
-            {/* ── Hero ── */}
-            <section className="bg-white overflow-hidden" style={{ maxHeight: 420 }}>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 items-stretch h-[420px]">
-                    {/* Left */}
-                    <div className="flex flex-col justify-center py-10 pr-12 relative z-10 bg-white">
-                        <p className="text-[12.5px] font-bold text-navy mb-4">About NKB Regovanta</p>
-                        <h1 className="font-display font-extrabold leading-tight text-navy text-[38px] lg:text-[44px]">
-                            Regulatory Expertise.<br />
-                            Practical Execution.<br />
-                            Global Success.
-                        </h1>
-                        <p className="mt-5 text-[14.5px] font-medium text-navy/80 leading-relaxed max-w-[420px]">
-                            NKB Regovanta is a trusted partner for medical device companies worldwide, delivering end-to-end regulatory, quality & compliance solutions.
+        <div className="bg-white">
+            {/* 1. HERO SECTION */}
+            <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
+                <div
+                    className="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none"
+                    style={{
+                        backgroundImage: `url(${imgGlobal})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                />
+                <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-navy/30 via-navy/80 to-navy"></div>
+
+                <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 w-full">
+                    <div className="max-w-3xl">
+                        <p className="text-[#dca85b] font-bold tracking-widest text-sm mb-4 uppercase">
+                            About NKB Regovanta
                         </p>
-                    </div>
-
-                    {/* Right — city skyline faded into white on the left */}
-                    <div className="hidden lg:block h-full relative">
-                        {/* White gradient overlay to fade the left edge seamlessly */}
-                        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-                        <img
-                            src={cityImage}
-                            alt="City skyline"
-                            className="w-full h-full object-cover object-bottom"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Our Approach ── */}
-            <section className="bg-white py-8">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-6">
-                        <h2 className="text-[15px] font-bold text-navy">Our Approach</h2>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-y lg:divide-y-0 lg:divide-x divide-border">
-                        {approach.map((a) => (
-                            <div key={a.title} className="flex flex-col items-center text-center px-4 py-4">
-                                <a.icon className="h-10 w-10 text-navy mb-3" strokeWidth={1.25} />
-                                <h3 className="text-[14px] font-bold text-navy">{a.title}</h3>
-                                <p className="mt-1 text-[11.5px] leading-snug text-navy/70 whitespace-pre-line">{a.desc}</p>
+                        <h1 className="text-white text-4xl sm:text-5xl lg:text-[44px] font-extrabold leading-[1.15] mb-6">
+                            GLOBAL EXPERTISE.<br />
+                            STRATEGIC EXECUTION.<br />
+                            <span className="whitespace-nowrap">HEALTHCARE <span className="text-cyan-400">WITHOUT BORDERS.</span></span>
+                        </h1>
+                        <p className="text-white/80 text-[16px] leading-relaxed mb-8 max-w-2xl">
+                            A global regulatory, quality and market access partner helping organizations navigate complexity and advance healthcare innovation.
+                        </p>
+                        
+                        <div className="flex flex-wrap items-center gap-6 text-white text-[13px] font-bold mb-10">
+                            <div className="flex items-center gap-2">
+                                <Globe2 className="h-5 w-5 text-cyan-400" />
+                                <span>Global Perspective</span>
                             </div>
-                        ))}
+                            <div className="flex items-center gap-2">
+                                <FlaskConical className="h-5 w-5 text-cyan-400" />
+                                <span>Scientific Rigor</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Settings className="h-5 w-5 text-cyan-400" />
+                                <span>Practical Execution</span>
+                            </div>
+                        </div>
+
+                        <button className="bg-[#dca85b] text-navy font-bold py-3.5 px-8 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-sm flex items-center gap-2">
+                            Talk To Our Experts <ArrowRight className="h-4 w-4" />
+                        </button>
                     </div>
                 </div>
             </section>
 
-            {/* ── Our Journey ── */}
-            <section className="bg-surface py-16 lg:py-24">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mb-12">
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Our Journey</p>
-                        <h2 className="mt-4 text-3xl font-extrabold text-navy sm:text-4xl leading-tight">
-                            Navigating Complexity Since 2018
+            {/* 2. FROM INDIA. TO THE WORLD. */}
+            <section className="py-10 lg:py-14 bg-surface border-b border-border">
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                        
+                        {/* Globe Placeholder */}
+                        <div className="lg:col-span-4 flex justify-center">
+                            <div className="w-full max-w-[320px] aspect-square rounded-full border border-border bg-white flex items-center justify-center shadow-inner relative overflow-hidden">
+                                <Globe2 className="h-24 w-24 text-navy/10" />
+                                <span className="absolute bottom-6 text-[10px] font-bold uppercase tracking-widest text-navy/30">Globe Image</span>
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="lg:col-span-5">
+                            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy leading-tight mb-2 whitespace-nowrap">
+                                FROM INDIA. TO THE WORLD.
+                            </h2>
+                            <p className="text-[#dca85b] font-bold text-lg mb-6">
+                                Built on experience. Driven by purpose.
+                            </p>
+                            <div className="space-y-4 text-[14px] leading-relaxed text-navy/80 mb-6">
+                                <p>Our journey began in 2018 and in 2026, NKB Regovanta was formally established to bring deep regulatory, scientific and quality expertise together under one global vision.</p>
+                                <p>Today, we support Medical Devices, IVDs and Cosmetics across India and international markets.</p>
+                            </div>
+                            <h3 className="text-xl font-extrabold text-[#dca85b] leading-tight">
+                                India is our foundation.<br />
+                                The world is our horizon.
+                            </h3>
+                        </div>
+
+                        {/* Vertical Timeline */}
+                        <div className="lg:col-span-3 flex justify-center lg:justify-end">
+                            <div className="relative pl-8 border-l-2 border-border/60 py-4">
+                                <div className="mb-8 relative">
+                                    <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                    <h4 className="font-extrabold text-navy text-sm">2018</h4>
+                                    <p className="text-xs text-navy/70 leading-tight mt-1">Experience begins</p>
+                                </div>
+                                <div className="mb-8 relative">
+                                    <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                    <h4 className="font-extrabold text-navy text-sm">2019–2025</h4>
+                                    <p className="text-xs text-navy/70 leading-tight mt-1">Expanding expertise</p>
+                                </div>
+                                <div className="relative">
+                                    <div className="absolute w-6 h-6 bg-[#dca85b] rounded-full -left-[37px] top-0 flex items-center justify-center shadow-sm">
+                                        <CheckCircle2 className="w-4 h-4 text-white" />
+                                    </div>
+                                    <h4 className="font-extrabold text-navy text-sm">2026</h4>
+                                    <p className="text-xs text-navy/70 leading-tight mt-1">NKB Regovanta</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. FROM LOCAL EXPERTISE TO GLOBAL MARKET ACCESS */}
+            <section className="py-10 lg:py-14 bg-slate-50 relative overflow-hidden border-b border-border">
+                {/* Abstract Dot Map Placeholder */}
+                <div className="absolute right-0 top-0 bottom-0 w-2/3 opacity-30 bg-repeat bg-center" style={{ backgroundImage: 'radial-gradient(#CBD5E1 2px, transparent 2px)', backgroundSize: '16px 16px' }}></div>
+                
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="max-w-xl">
+                        <h2 className="text-3xl font-extrabold text-navy leading-tight mb-4 uppercase">
+                            FROM LOCAL EXPERTISE<br />TO GLOBAL MARKET ACCESS
                         </h2>
-                        <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-navy/70">
-                            <p>
-                                Since its founding in 2018, NKB Regovanta has been an active participant in the medical device industry, assisting manufacturers, startups, and multinational corporations in navigating the world's most complex regulatory landscapes. We were built from the ground up to solve a critical gap — providing integrated regulatory, preclinical, clinical, and testing support under one roof.
-                            </p>
-                            <p>
-                                In 2018, the MedTech regulatory environment was rapidly evolving. Companies needed more than isolated consultants — they needed a single partner who could see the full picture. NKB Regovanta was founded to be that partner, combining deep regulatory expertise with scientific rigor and a genuine commitment to patient safety.
-                            </p>
-                            <p>
-                                Over the past 8 years, NKB Regovanta has expanded its capabilities across US FDA, EU MDR/IVDR, and global regulatory frameworks. We offer a full suite of services that help our clients bring life-changing therapies to market safely and efficiently.
-                            </p>
+                        <h3 className="text-[16px] font-bold text-navy mb-4">
+                            Healthcare innovation is global.<br />
+                            Regulatory pathways are not.
+                        </h3>
+                        <p className="text-[14px] leading-relaxed text-navy/80 mb-8 max-w-md">
+                            We help organizations build clear, compliant and market-ready strategies across major and emerging markets.
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-3">
+                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                                <img src="https://flagcdn.com/w20/us.png" alt="USA" className="w-4 h-auto" /> USA
+                            </span>
+                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                                <img src="https://flagcdn.com/w20/eu.png" alt="EU" className="w-4 h-auto" /> EU
+                            </span>
+                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="UK" className="w-4 h-auto" /> UK
+                            </span>
+                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                                <img src="https://flagcdn.com/w20/ca.png" alt="Canada" className="w-4 h-auto" /> CANADA
+                            </span>
+                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                                <Globe2 className="w-3 h-3 text-navy/50" /> APAC
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>            {/* 4. ONE PARTNER. THREE INDUSTRIES. */}
+            <section className="py-10 lg:py-14 bg-white border-b border-border">
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
+                    <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
+                        ONE PARTNER. THREE INDUSTRIES.
+                    </h2>
+
+                    <div className="grid grid-cols-3 gap-5 mb-10">
+
+                        {/* MEDICAL DEVICES */}
+                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
+                            <div className="w-full h-40 bg-navy/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
+                                Image Plchldr
+                            </div>
+                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
+                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
+                                    <HeartPulse className="h-4 w-4 text-navy" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-sm mb-1">MEDICAL DEVICES</h3>
+                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
+                                        Regulatory, quality, scientific and market-access support across the product lifecycle.
+                                    </p>
+                                    <a href="/industries/medical-devices" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                        Explore <ArrowRight className="h-3 w-3" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* IVDs */}
+                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
+                            <div className="w-full h-40 bg-navy/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
+                                Image Plchldr
+                            </div>
+                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
+                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
+                                    <FlaskConical className="h-4 w-4 text-navy" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-sm mb-1">IVDs</h3>
+                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
+                                        Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
+                                    </p>
+                                    <a href="/industries/ivd" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                        Explore <ArrowRight className="h-3 w-3" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* COSMETICS */}
+                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
+                            <div className="w-full h-40 bg-[#dca85b]/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
+                                Image Plchldr
+                            </div>
+                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
+                                <div className="h-9 w-9 rounded-full border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-white mt-1">
+                                    <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-sm mb-1">COSMETICS</h3>
+                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
+                                        Product safety, regulatory compliance, quality and market requirements.
+                                    </p>
+                                    <a href="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                        Explore <ArrowRight className="h-3 w-3" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p className="text-center text-navy font-bold text-[15px]">
+                        Different products. Different pathways. One commitment to safety, quality and integrity.
+                    </p>
+                </div>
+            </section>
+
+            {/* 5. REGULATORY & SCIENTIFIC EXPERTISE */}
+            <section className="py-10 lg:py-14 bg-white border-b border-border">
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-extrabold text-navy text-center uppercase mb-12">
+                        REGULATORY & SCIENTIFIC EXPERTISE
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                        {/* REGULATORY */}
+                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
+                            <div className="h-14 w-14 rounded-full bg-navy/5 flex flex-col items-center justify-center shrink-0 border border-border">
+                                <Globe2 className="h-6 w-6 text-navy" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">REGULATORY &<br/>MARKET ACCESS</h3>
+                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Regulatory strategy, classification, submissions and market-entry pathways.</p>
+                            </div>
+                        </div>
+
+                        {/* QUALITY */}
+                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
+                            <div className="h-14 w-14 rounded-full bg-navy flex flex-col items-center justify-center shrink-0">
+                                <ShieldCheck className="h-6 w-6 text-white" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">QUALITY &<br/>COMPLIANCE</h3>
+                                <p className="text-[10px] text-navy/70 leading-tight pr-2">QMS strategy, ISO 13485, MDSAP, audits and lifecycle compliance.</p>
+                            </div>
+                        </div>
+
+                        {/* CLINICAL */}
+                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
+                            <div className="h-14 w-14 rounded-full bg-navy flex flex-col items-center justify-center shrink-0">
+                                <Microscope className="h-6 w-6 text-white" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">CLINICAL &<br/>SCIENTIFIC</h3>
+                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Clinical, preclinical, biological safety and evidence strategy.</p>
+                            </div>
+                        </div>
+
+                        {/* TECHNICAL */}
+                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
+                            <div className="h-14 w-14 rounded-full bg-navy/5 flex flex-col items-center justify-center shrink-0 border border-border">
+                                <FileText className="h-6 w-6 text-navy" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">TECHNICAL &<br/>STRATEGIC</h3>
+                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Technical documentation, risk management and product-development strategy.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="relative border-l-2 border-border/60 ml-4 lg:ml-8 space-y-8 pb-4">
-                        {milestones.map((m, i) => (
-                            <div key={i} className="relative pl-6 lg:pl-10">
-                                <div className="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-1.5 border-4 border-surface"></div>
-                                <div className="font-bold text-navy text-lg leading-none mb-2">{m.year}</div>
-                                <p className="text-sm text-navy/70 leading-relaxed max-w-3xl">
-                                    {m.text}
-                                </p>
-                            </div>
-                        ))}
+                    {/* Banner */}
+                    <div className="flex flex-col md:flex-row items-center justify-between border-t border-b border-border py-4 gap-4 bg-white/50 px-4 rounded-sm">
+                        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-[11px] font-extrabold text-navy uppercase tracking-wider">
+                            <span>ISO 13485</span>
+                            <span className="text-border">|</span>
+                            <span>MDSAP</span>
+                            <span className="text-border">|</span>
+                            <span>FDA</span>
+                            <span className="text-border">|</span>
+                            <span>EU MDR</span>
+                            <span className="text-border">|</span>
+                            <span>EU IVDR</span>
+                            <span className="text-border">|</span>
+                            <span>SaMD</span>
+                            <span className="text-border">|</span>
+                            <span>GLOBAL MARKET ACCESS</span>
+                        </div>
+                        <button className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-sm hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
+                            EXPLORE OUR EXPERTISE <ArrowRight className="h-3 w-3" />
+                        </button>
                     </div>
                 </div>
             </section>
 
-            {/* ── Leadership ── */}
+            {/* 6. WHY NKB REGOVANTA */}
+            <section className="py-10 lg:py-14 bg-white border-b border-border">
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-extrabold text-navy uppercase leading-tight mb-10">
+                        WHY NKB REGOVANTA
+                    </h2>
+
+                    <div className="grid md:grid-cols-3 gap-6 mb-10">
+                        <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
+                            <Puzzle className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
+                            <div>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">INTEGRATED THINKING</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">Regulatory, quality, scientific and clinical expertise connected across the product lifecycle.</p>
+                            </div>
+                        </div>
+                        
+                        <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
+                            <Globe2 className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
+                            <div>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">GLOBAL PERSPECTIVE</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">International understanding with market-specific insights for cross-border market access.</p>
+                            </div>
+                        </div>
+
+                        <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
+                            <BarChart3 className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
+                            <div>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">PRACTICAL EXECUTION</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">Complex requirements, clear strategies and measurable progress.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p className="text-center text-navy font-extrabold text-[16px]">
+                        Beyond compliance. Built for market access.
+                    </p>
+                </div>
+            </section>
+
+            {/* 7. BUILT FOR INNOVATORS / BEYOND COMPLIANCE */}
+            <section className="py-10 lg:py-14 bg-navy relative overflow-hidden">
+                {/* Decorative Swoosh/Rocket Placeholder */}
+                <div className="absolute right-[40%] top-0 bottom-0 w-[100px] bg-gradient-to-t from-transparent via-accent/30 to-accent/5 -skew-x-12 opacity-50"></div>
+                <div className="absolute right-[30%] bottom-0 w-1/3 h-full bg-surface/5 flex items-end">
+                    <span className="text-white/20 p-4 text-xs font-bold uppercase tracking-widest">Image Placeholder: Mother & Child</span>
+                </div>
+                
+                <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
+                        
+                        {/* Left */}
+                        <div>
+                            <h2 className="text-3xl font-extrabold text-white uppercase leading-tight mb-4">
+                                BUILT FOR INNOVATORS.
+                            </h2>
+                            <p className="text-[15px] text-white/90 leading-relaxed mb-6 max-w-sm">
+                                From early-stage startups to established manufacturers, we adapt to your complexity, maturity and ambitions.
+                            </p>
+                            
+                            <div className="flex flex-wrap items-center gap-3 text-white text-[12px] font-bold mb-8">
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Startups</span>
+                                <span className="text-white/30">|</span>
+                                <span>Scale-ups</span>
+                                <span className="text-white/30">|</span>
+                                <span>Established Manufacturers</span>
+                            </div>
+
+                            <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2">
+                                LEARN MORE <ArrowRight className="h-3 w-3" />
+                            </button>
+                        </div>
+
+                        {/* Right */}
+                        <div className="md:pl-12">
+                            <h2 className="text-2xl font-extrabold text-white uppercase leading-tight mb-4">
+                                BEYOND COMPLIANCE.
+                            </h2>
+                            <div className="space-y-2 text-[14px] leading-relaxed text-white/90 mb-6">
+                                <p>A medical device can improve a patient's life.</p>
+                                <p>An IVD can contribute to a diagnosis.</p>
+                                <p>A cosmetic product can enhance everyday wellbeing.</p>
+                                <p className="pt-2">Behind every product is a person.</p>
+                            </div>
+                            <p className="text-[14px] leading-relaxed text-white">
+                                That is why <span className="font-extrabold">compliance is not the destination.</span><br/>
+                                <span className="font-extrabold">It is the foundation for trust.</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            {/* 9. THE JOURNEY CONTINUES */}
+            <section className="bg-white py-10 lg:py-14 border-b border-border">
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-extrabold text-navy uppercase leading-tight mb-16 text-center sm:text-left">
+                        THE JOURNEY CONTINUES
+                    </h2>
+                    
+                    <div className="relative">
+                        {/* Connecting Line */}
+                        <div className="absolute top-6 left-12 right-12 h-[1px] bg-border z-0 hidden sm:block"></div>
+                        
+                        <div className="grid sm:grid-cols-4 gap-8 relative z-10 text-center">
+                            
+                            {/* Step 1 */}
+                            <div className="flex flex-col items-center">
+                                <div className="h-12 w-12 rounded-full border border-navy/20 bg-white mb-4 flex items-center justify-center relative shadow-sm">
+                                    <div className="absolute inset-y-0 -right-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <div className="absolute inset-y-0 -left-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <TrendingUp className="h-5 w-5 text-navy" />
+                                </div>
+                                <h3 className="font-bold text-navy text-[13px] mb-1">2018</h3>
+                                <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">FOUNDATION</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">Experience begins.</p>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className="flex flex-col items-center">
+                                <div className="h-12 w-12 rounded-full border border-navy/20 bg-white mb-4 flex items-center justify-center relative shadow-sm">
+                                    <div className="absolute inset-y-0 -right-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <div className="absolute inset-y-0 -left-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <Users className="h-5 w-5 text-navy" />
+                                </div>
+                                <h3 className="font-bold text-navy text-[13px] mb-1">2019–2025</h3>
+                                <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">EXPANDING EXPERTISE</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">Regulatory. Quality. Clinical. Scientific. Global market access.</p>
+                            </div>
+
+                            {/* Step 3 */}
+                            <div className="flex flex-col items-center">
+                                <div className="h-12 w-12 rounded-full border border-navy/20 bg-white mb-4 flex items-center justify-center relative shadow-sm">
+                                    <div className="absolute inset-y-0 -right-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <div className="absolute inset-y-0 -left-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <ShieldCheck className="h-5 w-5 text-navy" />
+                                </div>
+                                <h3 className="font-bold text-navy text-[13px] mb-1">2026</h3>
+                                <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">NKB REGOVANTA</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">One organization.<br/>One vision.<br/>One global perspective.</p>
+                            </div>
+
+                            {/* Step 4 */}
+                            <div className="flex flex-col items-center">
+                                <div className="h-12 w-12 rounded-full border border-navy bg-navy mb-4 flex items-center justify-center relative shadow-sm">
+                                    <div className="absolute inset-y-0 -right-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <div className="absolute inset-y-0 -left-8 w-1/2 bg-white -z-10 hidden sm:block"></div>
+                                    <Globe2 className="h-5 w-5 text-white" />
+                                </div>
+                                <h3 className="font-bold text-navy text-[13px] mb-1">FUTURE</h3>
+                                <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">FROM INDIA. FOR THE WORLD.</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">Global growth.<br/>Responsible innovation.<br/>Meaningful impact.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* LEADERSHIP */}
             <section className="bg-white py-16 lg:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -227,9 +559,8 @@ function About() {
                             <div key={idx} className="bg-white rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group h-full">
                                 <div className="p-6 flex gap-4 items-start border-b border-border/50">
                                     <div className="w-20 h-20 rounded-full bg-surface shrink-0 overflow-hidden flex items-center justify-center border border-border shadow-sm">
-                                        {/* Fallback avatar block */}
                                         {expert.img ? (
-                                            <img src={expert.img} alt={expert.name} className="w-full h-full object-cover object-[center_top]" onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }} />
+                                            <img src={expert.img} alt={expert.name} className="w-full h-full object-cover object-[center_top]" onError={(e) => { e.currentTarget.style.display = 'none'; (e.currentTarget.nextElementSibling as HTMLElement)?.classList.remove('hidden') }} />
                                         ) : null}
                                         <div className={`text-navy font-bold text-xl ${expert.img ? 'hidden' : ''}`}>{expert.name.charAt(0)}</div>
                                     </div>
@@ -259,107 +590,113 @@ function About() {
                 </div>
             </section>
 
-            {/* ── Stats Band ── */}
-            <section className="bg-[#f8f9fa] border-t border-b border-border py-6">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center">
-                        {stats.map((s, i) => (
-                            <div key={s.value} className={`flex flex-col items-center justify-center px-4 py-3 text-center ${i < stats.length - 1 ? 'lg:border-r border-border border-b lg:border-b-0' : 'border-b lg:border-b-0'}`}>
-                                <div className="text-[22px] font-extrabold text-navy leading-none">{s.value}</div>
-                                <div className="mt-1.5 text-[11px] font-semibold text-navy/70 uppercase tracking-wide">{s.label}</div>
-                            </div>
-                        ))}
-                        {/* Button takes the 6th slot, no left border */}
-                        <div className="flex justify-center px-2 lg:px-0 py-3 lg:ml-[-10%] lg:w-[120%]">
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center justify-center rounded-sm bg-navy text-white font-semibold px-8 py-3.5 text-[13.5px] transition-colors hover:bg-navy/90 w-full"
-                            >
-                                Let's Work Together
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Footer CTA Band ── */}
-            <section className="bg-navy text-white py-8">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-                    {/* Top Row */}
-                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-0">
-                        {/* Left: Mission */}
-                        <div className="flex items-center gap-4 lg:w-[400px] lg:pr-8">
-                            <Globe2 className="h-12 w-12 text-white shrink-0" strokeWidth={1} />
-                            <p className="text-[13px] text-white/90 leading-snug font-medium">
-                                Our mission is to simplify compliance and accelerate market access for medical devices globally.
-                            </p>
-                        </div>
-
-                        {/* Middle: 3 Pillars with individual vertical dividers */}
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-0 flex-1 lg:border-l border-white/20">
-                            <div className="flex items-center gap-3 sm:px-6 xl:px-8 flex-1">
-                                <Users className="h-8 w-8 text-white shrink-0" strokeWidth={1.25} />
-                                <div className="text-[12px] font-semibold text-white leading-tight">Expert<br />Team</div>
-                            </div>
-                            <div className="flex items-center gap-3 sm:px-6 xl:px-8 flex-1 sm:border-l border-white/20">
-                                <Handshake className="h-8 w-8 text-white shrink-0" strokeWidth={1.25} />
-                                <div className="text-[12px] font-semibold text-white leading-tight">Client<br />Focused</div>
-                            </div>
-                            <div className="flex items-center gap-3 sm:px-6 xl:px-8 flex-1 sm:border-l border-white/20">
-                                <Trophy className="h-8 w-8 text-white shrink-0" strokeWidth={1.25} />
-                                <div className="text-[12px] font-semibold text-white leading-tight">Proven<br />Results</div>
-                            </div>
-                        </div>
-
-                        {/* Right: Button */}
-                        <div className="flex-shrink-0 lg:pl-8 lg:border-l border-white/20 mt-4 lg:mt-0">
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center justify-center rounded-sm bg-white text-navy font-bold px-8 py-3.5 text-[13px] transition-colors hover:bg-white/90 whitespace-nowrap w-full"
-                            >
-                                Learn More About Us
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Bottom Row */}
-                    <div className="mt-8 pt-5 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4 text-[12.5px] text-white/80">
-                        <div>
-                            &copy; 2025 NKB Regovanta. All rights reserved.
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <a href="mailto:contact@nkbregovanta.com" className="hover:text-white transition-colors">contact@nkbregovanta.com</a>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
             {/* Bio Modal */}
             {selectedExpert && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/60 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setSelectedExpert(null)}>
-                    <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
-                        <button onClick={() => setSelectedExpert(null)} className="absolute top-4 right-4 text-navy/40 hover:text-navy transition-colors">
-                            <X className="w-5 h-5" />
-                        </button>
-                        <div className="flex gap-4 items-center mb-6">
-                            <div className="w-16 h-16 rounded-full bg-surface shrink-0 overflow-hidden flex items-center justify-center border-2 border-accent shadow-sm">
-                                {selectedExpert.img ? (
-                                    <img src={selectedExpert.img} alt={selectedExpert.name} className="w-full h-full object-cover object-[center_top]" onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }} />
-                                ) : null}
-                                <div className={`text-navy font-bold text-xl ${selectedExpert.img ? 'hidden' : ''}`}>{selectedExpert.name.charAt(0)}</div>
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/70 backdrop-blur-sm"
+                    onClick={() => setSelectedExpert(null)}
+                >
+                    <div
+                        className="bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[90vh] flex flex-col overflow-hidden"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Modal Header — navy gradient band */}
+                        <div className="relative bg-gradient-to-br from-navy to-navy/80 px-8 pt-8 pb-6">
+                            <button
+                                onClick={() => setSelectedExpert(null)}
+                                className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            <div className="flex gap-5 items-center">
+                                {/* Photo */}
+                                <div className="w-20 h-20 rounded-full shrink-0 overflow-hidden flex items-center justify-center border-2 border-[#dca85b] shadow-lg bg-navy/50">
+                                    {selectedExpert.img ? (
+                                        <img
+                                            src={selectedExpert.img}
+                                            alt={selectedExpert.name}
+                                            className="w-full h-full object-cover object-[center_top]"
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                (e.currentTarget.nextElementSibling as HTMLElement)?.classList.remove('hidden');
+                                            }}
+                                        />
+                                    ) : null}
+                                    <div className={`text-white font-bold text-2xl ${selectedExpert.img ? 'hidden' : ''}`}>
+                                        {selectedExpert.name.charAt(0)}
+                                    </div>
+                                </div>
+
+                                {/* Name & Title */}
+                                <div>
+                                    <h2 className="text-xl font-extrabold text-white leading-tight">
+                                        {selectedExpert.name}
+                                    </h2>
+                                    <p className="text-[12px] font-bold text-[#dca85b] uppercase tracking-widest mt-1">
+                                        {selectedExpert.title}
+                                    </p>
+                                    {/* Tag chips */}
+                                    <div className="flex flex-wrap gap-1.5 mt-3">
+                                        {selectedExpert.tags.map(tag => (
+                                            <span key={tag} className="px-2 py-0.5 bg-white/10 border border-white/20 text-[9px] font-bold uppercase tracking-wide text-white/70 rounded-sm">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h2 className="text-xl font-extrabold text-navy">{selectedExpert.name}</h2>
-                                <p className="text-[13px] text-accent font-bold uppercase tracking-wide">{selectedExpert.title}</p>
+
+                            {/* Gold accent divider */}
+                            <div className="mt-6 h-px bg-gradient-to-r from-[#dca85b] via-[#dca85b]/40 to-transparent" />
+                        </div>
+
+                        {/* Modal Body — scrollable */}
+                        <div className="overflow-y-auto px-8 py-6 flex-1">
+                            <div className="space-y-4">
+                                {selectedExpert.bio.split('\n\n').map((para, idx) => (
+                                    <p key={idx} className={`text-[14px] leading-relaxed ${
+                                        idx === selectedExpert.bio.split('\n\n').length - 1
+                                            ? 'font-semibold text-navy italic'
+                                            : 'text-navy/80'
+                                    }`}>
+                                        {para}
+                                    </p>
+                                ))}
                             </div>
                         </div>
-                        <p className="text-navy/75 text-[14.5px] leading-relaxed">{selectedExpert.bio}</p>
+
+                        {/* Modal Footer */}
+                        <div className="px-8 py-4 border-t border-border bg-surface/50 flex justify-end">
+                            <button
+                                onClick={() => setSelectedExpert(null)}
+                                className="text-[11px] font-bold text-navy/50 hover:text-navy uppercase tracking-wider transition-colors"
+                            >
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}
-        </>
+
+            {/* 10. FOOTER CTA */}
+            <section className="bg-navy py-12 relative overflow-hidden">
+                <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-left pointer-events-none mix-blend-screen"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent z-0 pointer-events-none"></div>
+                
+                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
+                    <h2 className="text-2xl font-extrabold text-white uppercase leading-tight mb-2">
+                        READY TO NAVIGATE YOUR NEXT MARKET?
+                    </h2>
+                    <p className="text-[14px] text-white/90 mb-6">
+                        Regulatory complexity shouldn't slow responsible innovation.<br/>
+                        <span className="text-cyan-400 font-bold">Let's build the pathway together.</span>
+                    </p>
+                    <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
+                        TALK TO OUR EXPERTS <ArrowRight className="h-3 w-3" />
+                    </button>
+                </div>
+            </section>
+        </div>
     );
 }
