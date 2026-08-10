@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageSquare, X, CheckCircle2 } from "lucide-react";
 
-export function QueryPopup() {
+export const QueryPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

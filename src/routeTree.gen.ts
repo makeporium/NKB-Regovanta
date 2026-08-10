@@ -41,6 +41,24 @@ import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
+import { Route as ServicesIndiaIndexRouteImport } from './routes/services.india.index'
+import { Route as ServicesIndiaClassAImportRouteImport } from './routes/services.india.class-a-import'
+import { Route as ServicesIndiaFreeSaleRouteImport } from './routes/services.india.free-sale'
+import { Route as ServicesIndiaInvestigationalDevicesRouteImport } from './routes/services.india.investigational-devices'
+import { Route as ServicesIndiaIvdClinicalPerformanceRouteImport } from './routes/services.india.ivd-clinical-performance'
+import { Route as ServicesIndiaIvdTestingRouteImport } from './routes/services.india.ivd-testing'
+import { Route as ServicesIndiaLoanClassABRouteImport } from './routes/services.india.loan-class-a-b'
+import { Route as ServicesIndiaLoanClassCDRouteImport } from './routes/services.india.loan-class-c-d'
+import { Route as ServicesIndiaMarketStandingRouteImport } from './routes/services.india.market-standing'
+import { Route as ServicesIndiaMd42RouteImport } from './routes/services.india.md-42'
+import { Route as ServicesIndiaMfgClassABRouteImport } from './routes/services.india.mfg-class-a-b'
+import { Route as ServicesIndiaMfgClassAGsrRouteImport } from './routes/services.india.mfg-class-a-gsr'
+import { Route as ServicesIndiaMfgClassCDRouteImport } from './routes/services.india.mfg-class-c-d'
+import { Route as ServicesIndiaNeutralCodeRouteImport } from './routes/services.india.neutral-code'
+import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/services.india.non-conviction'
+import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
+import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
+import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -208,6 +226,107 @@ const ServicesUsaRoute = ServicesUsaRouteImport.update({
   path: '/services/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndiaIndexRoute = ServicesIndiaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaClassAImportRoute =
+  ServicesIndiaClassAImportRouteImport.update({
+    id: '/class-a-import',
+    path: '/class-a-import',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaFreeSaleRoute = ServicesIndiaFreeSaleRouteImport.update({
+  id: '/free-sale',
+  path: '/free-sale',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaInvestigationalDevicesRoute =
+  ServicesIndiaInvestigationalDevicesRouteImport.update({
+    id: '/investigational-devices',
+    path: '/investigational-devices',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaIvdClinicalPerformanceRoute =
+  ServicesIndiaIvdClinicalPerformanceRouteImport.update({
+    id: '/ivd-clinical-performance',
+    path: '/ivd-clinical-performance',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaIvdTestingRoute = ServicesIndiaIvdTestingRouteImport.update({
+  id: '/ivd-testing',
+  path: '/ivd-testing',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaLoanClassABRoute =
+  ServicesIndiaLoanClassABRouteImport.update({
+    id: '/loan-class-a-b',
+    path: '/loan-class-a-b',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaLoanClassCDRoute =
+  ServicesIndiaLoanClassCDRouteImport.update({
+    id: '/loan-class-c-d',
+    path: '/loan-class-c-d',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaMarketStandingRoute =
+  ServicesIndiaMarketStandingRouteImport.update({
+    id: '/market-standing',
+    path: '/market-standing',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaMd42Route = ServicesIndiaMd42RouteImport.update({
+  id: '/md-42',
+  path: '/md-42',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaMfgClassABRoute = ServicesIndiaMfgClassABRouteImport.update({
+  id: '/mfg-class-a-b',
+  path: '/mfg-class-a-b',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaMfgClassAGsrRoute =
+  ServicesIndiaMfgClassAGsrRouteImport.update({
+    id: '/mfg-class-a-gsr',
+    path: '/mfg-class-a-gsr',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaMfgClassCDRoute = ServicesIndiaMfgClassCDRouteImport.update({
+  id: '/mfg-class-c-d',
+  path: '/mfg-class-c-d',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaNeutralCodeRoute =
+  ServicesIndiaNeutralCodeRouteImport.update({
+    id: '/neutral-code',
+    path: '/neutral-code',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaNonConvictionRoute =
+  ServicesIndiaNonConvictionRouteImport.update({
+    id: '/non-conviction',
+    path: '/non-conviction',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaNovelIvdsRoute = ServicesIndiaNovelIvdsRouteImport.update({
+  id: '/novel-ivds',
+  path: '/novel-ivds',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
+const ServicesIndiaPersonalUseRoute =
+  ServicesIndiaPersonalUseRouteImport.update({
+    id: '/personal-use',
+    path: '/personal-use',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaPredicateDevicesRoute =
+  ServicesIndiaPredicateDevicesRouteImport.update({
+    id: '/predicate-devices',
+    path: '/predicate-devices',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -230,7 +349,7 @@ export interface FileRoutesByFullPath {
   '/services/brazil': typeof ServicesBrazilRoute
   '/services/canada': typeof ServicesCanadaRoute
   '/services/eu': typeof ServicesEuRoute
-  '/services/india': typeof ServicesIndiaRoute
+  '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
@@ -242,6 +361,24 @@ export interface FileRoutesByFullPath {
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
+  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
+  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
+  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
+  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
+  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
+  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
+  '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
+  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
+  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
+  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
+  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
+  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
+  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
+  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india/': typeof ServicesIndiaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -263,7 +400,6 @@ export interface FileRoutesByTo {
   '/services/brazil': typeof ServicesBrazilRoute
   '/services/canada': typeof ServicesCanadaRoute
   '/services/eu': typeof ServicesEuRoute
-  '/services/india': typeof ServicesIndiaRoute
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
@@ -275,6 +411,24 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsIndexRoute
   '/markets': typeof MarketsIndexRoute
   '/services': typeof ServicesIndexRoute
+  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
+  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
+  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
+  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
+  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
+  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
+  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
+  '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
+  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
+  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
+  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
+  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
+  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
+  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
+  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india': typeof ServicesIndiaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -298,7 +452,7 @@ export interface FileRoutesById {
   '/services/brazil': typeof ServicesBrazilRoute
   '/services/canada': typeof ServicesCanadaRoute
   '/services/eu': typeof ServicesEuRoute
-  '/services/india': typeof ServicesIndiaRoute
+  '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
@@ -310,6 +464,24 @@ export interface FileRoutesById {
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
+  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
+  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
+  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
+  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
+  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
+  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
+  '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
+  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
+  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
+  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
+  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
+  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
+  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
+  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india/': typeof ServicesIndiaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -346,6 +518,24 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/services/india/class-a-import'
+    | '/services/india/free-sale'
+    | '/services/india/investigational-devices'
+    | '/services/india/ivd-clinical-performance'
+    | '/services/india/ivd-testing'
+    | '/services/india/loan-class-a-b'
+    | '/services/india/loan-class-c-d'
+    | '/services/india/market-standing'
+    | '/services/india/md-42'
+    | '/services/india/mfg-class-a-b'
+    | '/services/india/mfg-class-a-gsr'
+    | '/services/india/mfg-class-c-d'
+    | '/services/india/neutral-code'
+    | '/services/india/non-conviction'
+    | '/services/india/novel-ivds'
+    | '/services/india/personal-use'
+    | '/services/india/predicate-devices'
+    | '/services/india/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -367,7 +557,6 @@ export interface FileRouteTypes {
     | '/services/brazil'
     | '/services/canada'
     | '/services/eu'
-    | '/services/india'
     | '/services/iso-13485'
     | '/services/mdsap'
     | '/services/regulatory-affairs'
@@ -379,6 +568,24 @@ export interface FileRouteTypes {
     | '/insights'
     | '/markets'
     | '/services'
+    | '/services/india/class-a-import'
+    | '/services/india/free-sale'
+    | '/services/india/investigational-devices'
+    | '/services/india/ivd-clinical-performance'
+    | '/services/india/ivd-testing'
+    | '/services/india/loan-class-a-b'
+    | '/services/india/loan-class-c-d'
+    | '/services/india/market-standing'
+    | '/services/india/md-42'
+    | '/services/india/mfg-class-a-b'
+    | '/services/india/mfg-class-a-gsr'
+    | '/services/india/mfg-class-c-d'
+    | '/services/india/neutral-code'
+    | '/services/india/non-conviction'
+    | '/services/india/novel-ivds'
+    | '/services/india/personal-use'
+    | '/services/india/predicate-devices'
+    | '/services/india'
   id:
     | '__root__'
     | '/'
@@ -413,6 +620,24 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/services/india/class-a-import'
+    | '/services/india/free-sale'
+    | '/services/india/investigational-devices'
+    | '/services/india/ivd-clinical-performance'
+    | '/services/india/ivd-testing'
+    | '/services/india/loan-class-a-b'
+    | '/services/india/loan-class-c-d'
+    | '/services/india/market-standing'
+    | '/services/india/md-42'
+    | '/services/india/mfg-class-a-b'
+    | '/services/india/mfg-class-a-gsr'
+    | '/services/india/mfg-class-c-d'
+    | '/services/india/neutral-code'
+    | '/services/india/non-conviction'
+    | '/services/india/novel-ivds'
+    | '/services/india/personal-use'
+    | '/services/india/predicate-devices'
+    | '/services/india/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -431,7 +656,7 @@ export interface RootRouteChildren {
   ServicesBrazilRoute: typeof ServicesBrazilRoute
   ServicesCanadaRoute: typeof ServicesCanadaRoute
   ServicesEuRoute: typeof ServicesEuRoute
-  ServicesIndiaRoute: typeof ServicesIndiaRoute
+  ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
@@ -670,6 +895,132 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/india/': {
+      id: '/services/india/'
+      path: '/'
+      fullPath: '/services/india/'
+      preLoaderRoute: typeof ServicesIndiaIndexRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/class-a-import': {
+      id: '/services/india/class-a-import'
+      path: '/class-a-import'
+      fullPath: '/services/india/class-a-import'
+      preLoaderRoute: typeof ServicesIndiaClassAImportRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/free-sale': {
+      id: '/services/india/free-sale'
+      path: '/free-sale'
+      fullPath: '/services/india/free-sale'
+      preLoaderRoute: typeof ServicesIndiaFreeSaleRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/investigational-devices': {
+      id: '/services/india/investigational-devices'
+      path: '/investigational-devices'
+      fullPath: '/services/india/investigational-devices'
+      preLoaderRoute: typeof ServicesIndiaInvestigationalDevicesRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/ivd-clinical-performance': {
+      id: '/services/india/ivd-clinical-performance'
+      path: '/ivd-clinical-performance'
+      fullPath: '/services/india/ivd-clinical-performance'
+      preLoaderRoute: typeof ServicesIndiaIvdClinicalPerformanceRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/ivd-testing': {
+      id: '/services/india/ivd-testing'
+      path: '/ivd-testing'
+      fullPath: '/services/india/ivd-testing'
+      preLoaderRoute: typeof ServicesIndiaIvdTestingRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/loan-class-a-b': {
+      id: '/services/india/loan-class-a-b'
+      path: '/loan-class-a-b'
+      fullPath: '/services/india/loan-class-a-b'
+      preLoaderRoute: typeof ServicesIndiaLoanClassABRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/loan-class-c-d': {
+      id: '/services/india/loan-class-c-d'
+      path: '/loan-class-c-d'
+      fullPath: '/services/india/loan-class-c-d'
+      preLoaderRoute: typeof ServicesIndiaLoanClassCDRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/market-standing': {
+      id: '/services/india/market-standing'
+      path: '/market-standing'
+      fullPath: '/services/india/market-standing'
+      preLoaderRoute: typeof ServicesIndiaMarketStandingRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/md-42': {
+      id: '/services/india/md-42'
+      path: '/md-42'
+      fullPath: '/services/india/md-42'
+      preLoaderRoute: typeof ServicesIndiaMd42RouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/mfg-class-a-b': {
+      id: '/services/india/mfg-class-a-b'
+      path: '/mfg-class-a-b'
+      fullPath: '/services/india/mfg-class-a-b'
+      preLoaderRoute: typeof ServicesIndiaMfgClassABRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/mfg-class-a-gsr': {
+      id: '/services/india/mfg-class-a-gsr'
+      path: '/mfg-class-a-gsr'
+      fullPath: '/services/india/mfg-class-a-gsr'
+      preLoaderRoute: typeof ServicesIndiaMfgClassAGsrRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/mfg-class-c-d': {
+      id: '/services/india/mfg-class-c-d'
+      path: '/mfg-class-c-d'
+      fullPath: '/services/india/mfg-class-c-d'
+      preLoaderRoute: typeof ServicesIndiaMfgClassCDRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/neutral-code': {
+      id: '/services/india/neutral-code'
+      path: '/neutral-code'
+      fullPath: '/services/india/neutral-code'
+      preLoaderRoute: typeof ServicesIndiaNeutralCodeRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/non-conviction': {
+      id: '/services/india/non-conviction'
+      path: '/non-conviction'
+      fullPath: '/services/india/non-conviction'
+      preLoaderRoute: typeof ServicesIndiaNonConvictionRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/novel-ivds': {
+      id: '/services/india/novel-ivds'
+      path: '/novel-ivds'
+      fullPath: '/services/india/novel-ivds'
+      preLoaderRoute: typeof ServicesIndiaNovelIvdsRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/personal-use': {
+      id: '/services/india/personal-use'
+      path: '/personal-use'
+      fullPath: '/services/india/personal-use'
+      preLoaderRoute: typeof ServicesIndiaPersonalUseRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/predicate-devices': {
+      id: '/services/india/predicate-devices'
+      path: '/predicate-devices'
+      fullPath: '/services/india/predicate-devices'
+      preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
   }
 }
 
@@ -695,6 +1046,54 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
   CaseStudiesRouteChildren,
 )
 
+interface ServicesIndiaRouteChildren {
+  ServicesIndiaClassAImportRoute: typeof ServicesIndiaClassAImportRoute
+  ServicesIndiaFreeSaleRoute: typeof ServicesIndiaFreeSaleRoute
+  ServicesIndiaInvestigationalDevicesRoute: typeof ServicesIndiaInvestigationalDevicesRoute
+  ServicesIndiaIvdClinicalPerformanceRoute: typeof ServicesIndiaIvdClinicalPerformanceRoute
+  ServicesIndiaIvdTestingRoute: typeof ServicesIndiaIvdTestingRoute
+  ServicesIndiaLoanClassABRoute: typeof ServicesIndiaLoanClassABRoute
+  ServicesIndiaLoanClassCDRoute: typeof ServicesIndiaLoanClassCDRoute
+  ServicesIndiaMarketStandingRoute: typeof ServicesIndiaMarketStandingRoute
+  ServicesIndiaMd42Route: typeof ServicesIndiaMd42Route
+  ServicesIndiaMfgClassABRoute: typeof ServicesIndiaMfgClassABRoute
+  ServicesIndiaMfgClassAGsrRoute: typeof ServicesIndiaMfgClassAGsrRoute
+  ServicesIndiaMfgClassCDRoute: typeof ServicesIndiaMfgClassCDRoute
+  ServicesIndiaNeutralCodeRoute: typeof ServicesIndiaNeutralCodeRoute
+  ServicesIndiaNonConvictionRoute: typeof ServicesIndiaNonConvictionRoute
+  ServicesIndiaNovelIvdsRoute: typeof ServicesIndiaNovelIvdsRoute
+  ServicesIndiaPersonalUseRoute: typeof ServicesIndiaPersonalUseRoute
+  ServicesIndiaPredicateDevicesRoute: typeof ServicesIndiaPredicateDevicesRoute
+  ServicesIndiaIndexRoute: typeof ServicesIndiaIndexRoute
+}
+
+const ServicesIndiaRouteChildren: ServicesIndiaRouteChildren = {
+  ServicesIndiaClassAImportRoute: ServicesIndiaClassAImportRoute,
+  ServicesIndiaFreeSaleRoute: ServicesIndiaFreeSaleRoute,
+  ServicesIndiaInvestigationalDevicesRoute:
+    ServicesIndiaInvestigationalDevicesRoute,
+  ServicesIndiaIvdClinicalPerformanceRoute:
+    ServicesIndiaIvdClinicalPerformanceRoute,
+  ServicesIndiaIvdTestingRoute: ServicesIndiaIvdTestingRoute,
+  ServicesIndiaLoanClassABRoute: ServicesIndiaLoanClassABRoute,
+  ServicesIndiaLoanClassCDRoute: ServicesIndiaLoanClassCDRoute,
+  ServicesIndiaMarketStandingRoute: ServicesIndiaMarketStandingRoute,
+  ServicesIndiaMd42Route: ServicesIndiaMd42Route,
+  ServicesIndiaMfgClassABRoute: ServicesIndiaMfgClassABRoute,
+  ServicesIndiaMfgClassAGsrRoute: ServicesIndiaMfgClassAGsrRoute,
+  ServicesIndiaMfgClassCDRoute: ServicesIndiaMfgClassCDRoute,
+  ServicesIndiaNeutralCodeRoute: ServicesIndiaNeutralCodeRoute,
+  ServicesIndiaNonConvictionRoute: ServicesIndiaNonConvictionRoute,
+  ServicesIndiaNovelIvdsRoute: ServicesIndiaNovelIvdsRoute,
+  ServicesIndiaPersonalUseRoute: ServicesIndiaPersonalUseRoute,
+  ServicesIndiaPredicateDevicesRoute: ServicesIndiaPredicateDevicesRoute,
+  ServicesIndiaIndexRoute: ServicesIndiaIndexRoute,
+}
+
+const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
+  ServicesIndiaRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -711,7 +1110,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesBrazilRoute: ServicesBrazilRoute,
   ServicesCanadaRoute: ServicesCanadaRoute,
   ServicesEuRoute: ServicesEuRoute,
-  ServicesIndiaRoute: ServicesIndiaRoute,
+  ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,

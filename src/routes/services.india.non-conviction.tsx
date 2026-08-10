@@ -1,0 +1,184 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeft, CheckCircle2, ShieldCheck, Scale, FileText } from "lucide-react";
+
+export const Route = createFileRoute("/services/india/non-conviction")({
+  component: NonConvictionPage,
+  head: () => ({
+    meta: [
+      { title: "Non-Conviction Certificate (NCC) | NKB Regovanta" },
+      { name: "description", content: "Obtain a Non-Conviction Certificate from CDSCO to prove regulatory compliance for medical device tenders and procurement in India." },
+    ],
+  }),
+});
+
+function NonConvictionPage() {
+  return (
+    <div className="bg-white">
+      {/* HERO SECTION */}
+      <section className="bg-navy py-16 lg:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('@/assets/world-map.png')] bg-cover bg-center mix-blend-screen pointer-events-none"></div>
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
+          <Link to="/services/india" className="inline-flex items-center text-gold hover:text-white transition-colors mb-8 font-medium text-sm">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to India CDSCO Services
+          </Link>
+          <div className="max-w-3xl">
+            <span className="text-gold font-bold tracking-wider uppercase text-sm mb-4 block">
+              Regulatory Certification
+            </span>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+              Non-Conviction Certificate <br/> (NCC)
+            </h1>
+            <p className="text-lg text-white/80 leading-relaxed">
+              Demonstrate your impeccable regulatory record and secure essential qualification documents for major tenders and procurements in India.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MAIN CONTENT */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-2 space-y-12">
+              <div>
+                <h2 className="text-2xl font-bold text-navy mb-6 flex items-center gap-3">
+                  <Scale className="h-7 w-7 text-blue-600" />
+                  What is the NCC?
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Non-Conviction Certificate (NCC) is a vital official document issued by the Central Drugs Standard Control Organization (CDSCO) or the respective State Licensing Authority. It confirms that a medical device company—whether a manufacturer or importer—has a clean legal record with no history of convictions for serious regulatory offenses.
+                </p>
+                <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                  <h3 className="font-bold text-navy mb-4">The NCC verifies the absence of incidents such as:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3 text-sm text-gray-700 items-center">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0"></div>
+                      <span>Serious injuries or deaths linked to the company's medical devices.</span>
+                    </li>
+                    <li className="flex gap-3 text-sm text-gray-700 items-center">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0"></div>
+                      <span>Reported major device malfunctions or safety recalls.</span>
+                    </li>
+                    <li className="flex gap-3 text-sm text-gray-700 items-center">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0"></div>
+                      <span>Failure of devices to meet stipulated quality standards.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <hr className="border-gray-100" />
+
+              <div>
+                <h2 className="text-2xl font-bold text-navy mb-6 flex items-center gap-3">
+                  <ShieldCheck className="h-7 w-7 text-blue-600" />
+                  Why is the NCC Crucial?
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Beyond standard manufacturing and import approvals, the NCC acts as official proof of your company’s strong regulatory compliance record. It is often an absolute prerequisite for major commercial opportunities.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex gap-4 p-4 rounded-lg bg-gray-50 border border-gray-100 items-start">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-navy">Essential for Tenders & Procurements</h4>
+                      <p className="text-sm text-gray-700 mt-1">Many public (government hospitals) and private sector tenders mandate the NCC as a primary pre-qualification document. Without it, you are effectively blocked from bidding.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 p-4 rounded-lg bg-gray-50 border border-gray-100 items-start">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-navy">Demonstrates Quality & Ethics</h4>
+                      <p className="text-sm text-gray-700 mt-1">It serves as an official testament to your strict adherence to ethical practices and the absence of legal liabilities concerning product safety.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 p-4 rounded-lg bg-gray-50 border border-gray-100 items-start">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-navy">Enhances Market Reputation</h4>
+                      <p className="text-sm text-gray-700 mt-1">An NCC issued by the licensing authority significantly boosts your brand's reputation, assuring clients and partners of your absolute reliability.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-navy mb-6">Eligibility & Application Requirements</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  To be eligible, your company must hold a valid manufacturing or import license (CLA or SLA) and have no past convictions under the Drugs and Cosmetics Act 1940 and Medical Device Rules 2017.
+                </p>
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                  <h4 className="font-bold text-navy mb-4">Required Documents:</h4>
+                  <ul className="grid sm:grid-cols-2 gap-4">
+                    <li className="flex gap-2 text-sm text-gray-700 items-start">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></div>
+                      <span>Copy of valid manufacturing or import license.</span>
+                    </li>
+                    <li className="flex gap-2 text-sm text-gray-700 items-start">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></div>
+                      <span>Specific list of products for the NCC request.</span>
+                    </li>
+                    <li className="flex gap-2 text-sm text-gray-700 items-start">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></div>
+                      <span>Legal undertaking confirming no pending legal action.</span>
+                    </li>
+                    <li className="flex gap-2 text-sm text-gray-700 items-start">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></div>
+                      <span>Requisite application forms and government fees.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-navy rounded-2xl p-8 border border-gray-100 sticky top-24 text-white">
+                <h3 className="text-xl font-bold mb-6">Gain Your Competitive Edge</h3>
+                <p className="text-sm text-white/80 mb-6 leading-relaxed">
+                  Navigating the application process for the NCC requires meticulous documentation. We handle the process so you can focus on winning tenders.
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex gap-3 text-sm text-white/90 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0" />
+                    <span>Accurate document preparation</span>
+                  </li>
+                  <li className="flex gap-3 text-sm text-white/90 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0" />
+                    <span>Drafting of necessary legal undertakings</span>
+                  </li>
+                  <li className="flex gap-3 text-sm text-white/90 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-gold shrink-0" />
+                    <span>Direct liaison with CDSCO/SLA</span>
+                  </li>
+                </ul>
+                <Link to="/contact" className="w-full inline-flex justify-center items-center px-6 py-3 rounded-lg text-sm font-bold text-navy bg-gold hover:bg-white transition-colors">
+                  Apply for NCC Today
+                </Link>
+
+                <div className="mt-8 pt-8 border-t border-white/20">
+                  <h4 className="font-bold text-white mb-4 text-sm uppercase tracking-wide">Related Certificates</h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link to="/services/india/market-standing" className="text-sm text-gold hover:underline flex items-start gap-2">
+                        <FileText className="h-4 w-4 shrink-0 mt-0.5" />
+                        Market Standing Certificate
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
