@@ -59,6 +59,17 @@ import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/service
 import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
 import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
 import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesUsaIndexRouteImport } from './routes/services.usa.index'
+import { Route as ServicesUsa510kRouteImport } from './routes/services.usa.510k'
+import { Route as ServicesUsa513gRouteImport } from './routes/services.usa.513g'
+import { Route as ServicesUsaAgentServiceRouteImport } from './routes/services.usa.agent-service'
+import { Route as ServicesUsaDeNovoRouteImport } from './routes/services.usa.de-novo'
+import { Route as ServicesUsaEStarRouteImport } from './routes/services.usa.e-star'
+import { Route as ServicesUsaEstablishmentRegistrationRouteImport } from './routes/services.usa.establishment-registration'
+import { Route as ServicesUsaPmaRouteImport } from './routes/services.usa.pma'
+import { Route as ServicesUsaQSubmissionRouteImport } from './routes/services.usa.q-submission'
+import { Route as ServicesUsaRfdPreRfdRouteImport } from './routes/services.usa.rfd-pre-rfd'
+import { Route as ServicesUsaUdiGudidRouteImport } from './routes/services.usa.udi-gudid'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -327,6 +338,62 @@ const ServicesIndiaPredicateDevicesRoute =
     path: '/predicate-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesUsaIndexRoute = ServicesUsaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsa510kRoute = ServicesUsa510kRouteImport.update({
+  id: '/510k',
+  path: '/510k',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsa513gRoute = ServicesUsa513gRouteImport.update({
+  id: '/513g',
+  path: '/513g',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaAgentServiceRoute = ServicesUsaAgentServiceRouteImport.update({
+  id: '/agent-service',
+  path: '/agent-service',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaDeNovoRoute = ServicesUsaDeNovoRouteImport.update({
+  id: '/de-novo',
+  path: '/de-novo',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaEStarRoute = ServicesUsaEStarRouteImport.update({
+  id: '/e-star',
+  path: '/e-star',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaEstablishmentRegistrationRoute =
+  ServicesUsaEstablishmentRegistrationRouteImport.update({
+    id: '/establishment-registration',
+    path: '/establishment-registration',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaPmaRoute = ServicesUsaPmaRouteImport.update({
+  id: '/pma',
+  path: '/pma',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaQSubmissionRoute = ServicesUsaQSubmissionRouteImport.update({
+  id: '/q-submission',
+  path: '/q-submission',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaRfdPreRfdRoute = ServicesUsaRfdPreRfdRouteImport.update({
+  id: '/rfd-pre-rfd',
+  path: '/rfd-pre-rfd',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
+const ServicesUsaUdiGudidRoute = ServicesUsaUdiGudidRouteImport.update({
+  id: '/udi-gudid',
+  path: '/udi-gudid',
+  getParentRoute: () => ServicesUsaRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -355,7 +422,7 @@ export interface FileRoutesByFullPath {
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRoute
-  '/services/usa': typeof ServicesUsaRoute
+  '/services/usa': typeof ServicesUsaRouteWithChildren
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -378,7 +445,18 @@ export interface FileRoutesByFullPath {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/usa/510k': typeof ServicesUsa510kRoute
+  '/services/usa/513g': typeof ServicesUsa513gRoute
+  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/e-star': typeof ServicesUsaEStarRoute
+  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/usa/': typeof ServicesUsaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -405,7 +483,6 @@ export interface FileRoutesByTo {
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRoute
-  '/services/usa': typeof ServicesUsaRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/insights': typeof InsightsIndexRoute
@@ -428,7 +505,18 @@ export interface FileRoutesByTo {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/usa/510k': typeof ServicesUsa510kRoute
+  '/services/usa/513g': typeof ServicesUsa513gRoute
+  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/e-star': typeof ServicesUsaEStarRoute
+  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/india': typeof ServicesIndiaIndexRoute
+  '/services/usa': typeof ServicesUsaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -458,7 +546,7 @@ export interface FileRoutesById {
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRoute
-  '/services/usa': typeof ServicesUsaRoute
+  '/services/usa': typeof ServicesUsaRouteWithChildren
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -481,7 +569,18 @@ export interface FileRoutesById {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/usa/510k': typeof ServicesUsa510kRoute
+  '/services/usa/513g': typeof ServicesUsa513gRoute
+  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/e-star': typeof ServicesUsaEStarRoute
+  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/usa/': typeof ServicesUsaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -535,7 +634,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/usa/510k'
+    | '/services/usa/513g'
+    | '/services/usa/agent-service'
+    | '/services/usa/de-novo'
+    | '/services/usa/e-star'
+    | '/services/usa/establishment-registration'
+    | '/services/usa/pma'
+    | '/services/usa/q-submission'
+    | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/udi-gudid'
     | '/services/india/'
+    | '/services/usa/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -562,7 +672,6 @@ export interface FileRouteTypes {
     | '/services/regulatory-affairs'
     | '/services/uae'
     | '/services/uk'
-    | '/services/usa'
     | '/case-studies'
     | '/industries'
     | '/insights'
@@ -585,7 +694,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/usa/510k'
+    | '/services/usa/513g'
+    | '/services/usa/agent-service'
+    | '/services/usa/de-novo'
+    | '/services/usa/e-star'
+    | '/services/usa/establishment-registration'
+    | '/services/usa/pma'
+    | '/services/usa/q-submission'
+    | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/udi-gudid'
     | '/services/india'
+    | '/services/usa'
   id:
     | '__root__'
     | '/'
@@ -637,7 +757,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/usa/510k'
+    | '/services/usa/513g'
+    | '/services/usa/agent-service'
+    | '/services/usa/de-novo'
+    | '/services/usa/e-star'
+    | '/services/usa/establishment-registration'
+    | '/services/usa/pma'
+    | '/services/usa/q-submission'
+    | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/udi-gudid'
     | '/services/india/'
+    | '/services/usa/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -662,7 +793,7 @@ export interface RootRouteChildren {
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
   ServicesUkRoute: typeof ServicesUkRoute
-  ServicesUsaRoute: typeof ServicesUsaRoute
+  ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -1021,6 +1152,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/usa/': {
+      id: '/services/usa/'
+      path: '/'
+      fullPath: '/services/usa/'
+      preLoaderRoute: typeof ServicesUsaIndexRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/510k': {
+      id: '/services/usa/510k'
+      path: '/510k'
+      fullPath: '/services/usa/510k'
+      preLoaderRoute: typeof ServicesUsa510kRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/513g': {
+      id: '/services/usa/513g'
+      path: '/513g'
+      fullPath: '/services/usa/513g'
+      preLoaderRoute: typeof ServicesUsa513gRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/agent-service': {
+      id: '/services/usa/agent-service'
+      path: '/agent-service'
+      fullPath: '/services/usa/agent-service'
+      preLoaderRoute: typeof ServicesUsaAgentServiceRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/de-novo': {
+      id: '/services/usa/de-novo'
+      path: '/de-novo'
+      fullPath: '/services/usa/de-novo'
+      preLoaderRoute: typeof ServicesUsaDeNovoRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/e-star': {
+      id: '/services/usa/e-star'
+      path: '/e-star'
+      fullPath: '/services/usa/e-star'
+      preLoaderRoute: typeof ServicesUsaEStarRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/establishment-registration': {
+      id: '/services/usa/establishment-registration'
+      path: '/establishment-registration'
+      fullPath: '/services/usa/establishment-registration'
+      preLoaderRoute: typeof ServicesUsaEstablishmentRegistrationRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/pma': {
+      id: '/services/usa/pma'
+      path: '/pma'
+      fullPath: '/services/usa/pma'
+      preLoaderRoute: typeof ServicesUsaPmaRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/q-submission': {
+      id: '/services/usa/q-submission'
+      path: '/q-submission'
+      fullPath: '/services/usa/q-submission'
+      preLoaderRoute: typeof ServicesUsaQSubmissionRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/rfd-pre-rfd': {
+      id: '/services/usa/rfd-pre-rfd'
+      path: '/rfd-pre-rfd'
+      fullPath: '/services/usa/rfd-pre-rfd'
+      preLoaderRoute: typeof ServicesUsaRfdPreRfdRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/udi-gudid': {
+      id: '/services/usa/udi-gudid'
+      path: '/udi-gudid'
+      fullPath: '/services/usa/udi-gudid'
+      preLoaderRoute: typeof ServicesUsaUdiGudidRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
   }
 }
 
@@ -1094,6 +1302,39 @@ const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
   ServicesIndiaRouteChildren,
 )
 
+interface ServicesUsaRouteChildren {
+  ServicesUsa510kRoute: typeof ServicesUsa510kRoute
+  ServicesUsa513gRoute: typeof ServicesUsa513gRoute
+  ServicesUsaAgentServiceRoute: typeof ServicesUsaAgentServiceRoute
+  ServicesUsaDeNovoRoute: typeof ServicesUsaDeNovoRoute
+  ServicesUsaEStarRoute: typeof ServicesUsaEStarRoute
+  ServicesUsaEstablishmentRegistrationRoute: typeof ServicesUsaEstablishmentRegistrationRoute
+  ServicesUsaPmaRoute: typeof ServicesUsaPmaRoute
+  ServicesUsaQSubmissionRoute: typeof ServicesUsaQSubmissionRoute
+  ServicesUsaRfdPreRfdRoute: typeof ServicesUsaRfdPreRfdRoute
+  ServicesUsaUdiGudidRoute: typeof ServicesUsaUdiGudidRoute
+  ServicesUsaIndexRoute: typeof ServicesUsaIndexRoute
+}
+
+const ServicesUsaRouteChildren: ServicesUsaRouteChildren = {
+  ServicesUsa510kRoute: ServicesUsa510kRoute,
+  ServicesUsa513gRoute: ServicesUsa513gRoute,
+  ServicesUsaAgentServiceRoute: ServicesUsaAgentServiceRoute,
+  ServicesUsaDeNovoRoute: ServicesUsaDeNovoRoute,
+  ServicesUsaEStarRoute: ServicesUsaEStarRoute,
+  ServicesUsaEstablishmentRegistrationRoute:
+    ServicesUsaEstablishmentRegistrationRoute,
+  ServicesUsaPmaRoute: ServicesUsaPmaRoute,
+  ServicesUsaQSubmissionRoute: ServicesUsaQSubmissionRoute,
+  ServicesUsaRfdPreRfdRoute: ServicesUsaRfdPreRfdRoute,
+  ServicesUsaUdiGudidRoute: ServicesUsaUdiGudidRoute,
+  ServicesUsaIndexRoute: ServicesUsaIndexRoute,
+}
+
+const ServicesUsaRouteWithChildren = ServicesUsaRoute._addFileChildren(
+  ServicesUsaRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -1116,7 +1357,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesUaeRoute: ServicesUaeRoute,
   ServicesUkRoute: ServicesUkRoute,
-  ServicesUsaRoute: ServicesUsaRoute,
+  ServicesUsaRoute: ServicesUsaRouteWithChildren,
   IndustriesIndexRoute: IndustriesIndexRoute,
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,
