@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2, Users, FileCheck2, Handshake } from "lucide-react";
-import mapImage from "@/assets/markets.png";
+import mapImage from "@/assets/map2.png";
 
 export const Route = createFileRoute("/markets/")({
     head: () => ({
@@ -49,10 +49,10 @@ function Markets() {
     return (
         <>
             {/* ── Hero ── */}
-            <section className="bg-white overflow-hidden" style={{ minHeight: 420 }}>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 items-stretch min-h-[420px]">
+            <section className="bg-white overflow-hidden">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-start gap-6">
                     {/* Left */}
-                    <div className="flex flex-col justify-center py-6 pr-6">
+                    <div className="flex flex-col justify-start py-6 shrink-0 w-[42%]">
                         <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">Global Markets</p>
                         <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 3vw, 40px)" }}>
                             Access Multiple Global Markets.
@@ -72,12 +72,12 @@ function Markets() {
                         </ul>
                     </div>
 
-                    {/* Right — image anchored to left so it starts right after the text */}
-                    <div className="hidden lg:block h-full overflow-hidden">
+                    {/* Right — break out to right viewport edge, no crop */}
+                    <div className="hidden lg:block flex-1 -mr-4 sm:-mr-6 lg:-mr-8">
                         <img
                             src={mapImage}
                             alt="Global Markets Map"
-                            className="w-full h-full object-contain object-left"
+                            className="w-full h-auto"
                         />
                     </div>
                 </div>
