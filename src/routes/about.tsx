@@ -5,14 +5,10 @@ import {
     CheckCircle2,
     ShieldCheck,
     Users,
-    FileText,
     Settings,
     ArrowRight,
     FlaskConical,
-    Microscope,
     HeartPulse,
-    BarChart3,
-    Puzzle,
     TrendingUp,
     Target,
     Award,
@@ -24,7 +20,20 @@ import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
 import imgSatish from "@/assets/satish.png";
 import imgRitu from "@/assets/ritu.png";
-import imgGlobal from "@/assets/world-map.png";
+import imgHero from "@/assets/Global Healthcare Expertise in Action.png";
+import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.png";
+import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.png";
+import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.png";
+import imgIvd from "@/assets/Taking Liquid Out of Test Tubes.png";
+import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.png";
+import imgMedical from "@/assets/industry-medical.png";
+import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.png";
+import imgShieldBadge from "@/assets/Blue Security Shield UI Card.png";
+import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.png";
+import imgDocBadge from "@/assets/Document Inspection Icon Banner.png";
+import imgPuzzleBadge from "@/assets/Puzzle Piece in Blue Badge.png";
+import imgGrowthBadge from "@/assets/Riseing Growth Bar Graph Blue.png";
+import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
 
 export const Route = createFileRoute("/about")({
     head: () => ({
@@ -83,15 +92,12 @@ function About() {
         <div className="bg-white">
             {/* 1. HERO SECTION */}
             <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
-                <div
-                    className="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none"
-                    style={{
-                        backgroundImage: `url(${imgGlobal})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
+                <img
+                    src={imgHero}
+                    alt="Global healthcare expertise across regulatory, quality and market access"
+                    className="absolute inset-0 h-full w-full object-cover object-right opacity-90 pointer-events-none"
                 />
-                <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-navy/30 via-navy/80 to-navy"></div>
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-navy via-navy/85 to-navy/10"></div>
 
                 <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 w-full">
                     <div className="max-w-3xl">
@@ -101,7 +107,7 @@ function About() {
                         <h1 className="text-white text-4xl sm:text-5xl lg:text-[44px] font-extrabold leading-[1.15] mb-6">
                             GLOBAL EXPERTISE.<br />
                             STRATEGIC EXECUTION.<br />
-                            <span className="whitespace-nowrap">HEALTHCARE <span className="text-cyan-400">WITHOUT BORDERS.</span></span>
+                            <span className="sm:whitespace-nowrap">HEALTHCARE <span className="text-cyan-400">WITHOUT BORDERS.</span></span>
                         </h1>
                         <p className="text-white/80 text-[16px] leading-relaxed mb-8 max-w-2xl">
                             A global regulatory, quality and market access partner helping organizations navigate complexity and advance healthcare innovation.
@@ -130,21 +136,42 @@ function About() {
             </section>
 
             {/* 2. FROM INDIA. TO THE WORLD. */}
-            <section className="py-10 lg:py-14 bg-surface border-b border-border">
-                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                        
-                        {/* Globe Placeholder */}
-                        <div className="lg:col-span-4 flex justify-center">
-                            <div className="w-full max-w-[320px] aspect-square rounded-full border border-border bg-white flex items-center justify-center shadow-inner relative overflow-hidden">
-                                <Globe2 className="h-24 w-24 text-navy/10" />
-                                <span className="absolute bottom-6 text-[10px] font-bold uppercase tracking-widest text-navy/30">Globe Image</span>
-                            </div>
-                        </div>
+            <section className="relative bg-surface border-b border-border overflow-hidden">
+                {/* Mobile banner image — fades into the panel below instead of a hard edge */}
+                <div className="sm:hidden h-56 w-full overflow-hidden">
+                    <img
+                        src={imgIndiaGlobe}
+                        alt="From India to the world"
+                        className="h-full w-full object-cover"
+                        style={{
+                            objectPosition: "0% center",
+                            maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
+                            WebkitMaskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
+                        }}
+                    />
+                </div>
+
+                {/* Desktop full-bleed image — right edge fades into the panel, no hard seam */}
+                <img
+                    src={imgIndiaGlobe}
+                    alt="From India to the world"
+                    className="hidden sm:block absolute inset-y-0 left-0 h-full w-[46%] lg:w-[44%] object-cover"
+                    style={{
+                        objectPosition: "0% center",
+                        maskImage: "linear-gradient(to right, black 60%, transparent 96%)",
+                        WebkitMaskImage: "linear-gradient(to right, black 60%, transparent 96%)",
+                    }}
+                />
+
+                <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-16">
+                    <div className="grid sm:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+                        {/* Spacer clearing the bled image on desktop */}
+                        <div className="hidden sm:block sm:col-span-4 lg:col-span-5" aria-hidden="true"></div>
 
                         {/* Content */}
-                        <div className="lg:col-span-5">
-                            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy leading-tight mb-2 whitespace-nowrap">
+                        <div className="sm:col-span-5 lg:col-span-4">
+                            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy leading-tight mb-2">
                                 FROM INDIA. TO THE WORLD.
                             </h2>
                             <p className="text-[#dca85b] font-bold text-lg mb-6">
@@ -161,24 +188,26 @@ function About() {
                         </div>
 
                         {/* Vertical Timeline */}
-                        <div className="lg:col-span-3 flex justify-center lg:justify-end">
-                            <div className="relative pl-8 border-l-2 border-border/60 py-4">
-                                <div className="mb-8 relative">
-                                    <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
-                                    <h4 className="font-extrabold text-navy text-sm">2018</h4>
-                                    <p className="text-xs text-navy/70 leading-tight mt-1">Experience begins</p>
-                                </div>
-                                <div className="mb-8 relative">
-                                    <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
-                                    <h4 className="font-extrabold text-navy text-sm">2019–2025</h4>
-                                    <p className="text-xs text-navy/70 leading-tight mt-1">Expanding expertise</p>
-                                </div>
-                                <div className="relative">
-                                    <div className="absolute w-6 h-6 bg-[#dca85b] rounded-full -left-[37px] top-0 flex items-center justify-center shadow-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-white" />
+                        <div className="sm:col-span-3 flex justify-start sm:justify-end">
+                            <div className="bg-blue-50/50 border border-border rounded-lg px-6 py-5 w-full sm:w-auto">
+                                <div className="relative pl-8 border-l-2 border-border/60 py-1">
+                                    <div className="mb-8 relative">
+                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                        <h4 className="font-extrabold text-navy text-sm">2018</h4>
+                                        <p className="text-xs text-navy/70 leading-tight mt-1">Experience begins</p>
                                     </div>
-                                    <h4 className="font-extrabold text-navy text-sm">2026</h4>
-                                    <p className="text-xs text-navy/70 leading-tight mt-1">NKB Regovanta</p>
+                                    <div className="mb-8 relative">
+                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                        <h4 className="font-extrabold text-navy text-sm">2019–2025</h4>
+                                        <p className="text-xs text-navy/70 leading-tight mt-1">Expanding expertise</p>
+                                    </div>
+                                    <div className="relative">
+                                        <div className="absolute w-6 h-6 bg-[#dca85b] rounded-full -left-[37px] top-0 flex items-center justify-center shadow-sm">
+                                            <CheckCircle2 className="w-4 h-4 text-white" />
+                                        </div>
+                                        <h4 className="font-extrabold text-navy text-sm">2026</h4>
+                                        <p className="text-xs text-navy/70 leading-tight mt-1">NKB Regovanta</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,9 +218,16 @@ function About() {
 
             {/* 3. FROM LOCAL EXPERTISE TO GLOBAL MARKET ACCESS */}
             <section className="py-10 lg:py-14 bg-slate-50 relative overflow-hidden border-b border-border">
-                {/* Abstract Dot Map Placeholder */}
-                <div className="absolute right-0 top-0 bottom-0 w-2/3 opacity-30 bg-repeat bg-center" style={{ backgroundImage: 'radial-gradient(#CBD5E1 2px, transparent 2px)', backgroundSize: '16px 16px' }}></div>
-                
+                {/* Golden Network Map */}
+                <div className="absolute right-0 top-0 bottom-0 w-full lg:w-2/3 pointer-events-none">
+                    <img
+                        src={imgGoldNetwork}
+                        alt="Global market access network from India"
+                        className="h-full w-full object-cover object-right opacity-60 lg:opacity-90"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/40 to-transparent lg:via-slate-50/10"></div>
+                </div>
+
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-xl">
                         <h2 className="text-3xl font-extrabold text-navy leading-tight mb-4 uppercase">
@@ -235,8 +271,8 @@ function About() {
 
                         {/* MEDICAL DEVICES */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 bg-navy/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
-                                Image Plchldr
+                            <div className="w-full h-40 border-b border-border overflow-hidden">
+                                <img src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -256,8 +292,8 @@ function About() {
 
                         {/* IVDs */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 bg-navy/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
-                                Image Plchldr
+                            <div className="w-full h-40 border-b border-border overflow-hidden">
+                                <img src={imgIvd} alt="IVDs" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -277,8 +313,8 @@ function About() {
 
                         {/* COSMETICS */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 bg-[#dca85b]/10 flex items-center justify-center text-navy/20 font-bold text-xs uppercase border-b border-border">
-                                Image Plchldr
+                            <div className="w-full h-40 border-b border-border overflow-hidden">
+                                <img src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -311,54 +347,35 @@ function About() {
                         REGULATORY & SCIENTIFIC EXPERTISE
                     </h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-                        {/* REGULATORY */}
-                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
-                            <div className="h-14 w-14 rounded-full bg-navy/5 flex flex-col items-center justify-center shrink-0 border border-border">
-                                <Globe2 className="h-6 w-6 text-navy" />
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                        {/* bgSize/bgPos are measured crops (pixel bounding box of each orb icon
+                            in its source PNG), not eyeballed — keeps every badge centered the same way */}
+                        {[
+                            { img: imgGlobeBadge, bgSize: "349px 175px", bgPos: "-45px -34px", title: "REGULATORY &\nMARKET ACCESS", desc: "Regulatory strategy, classification, submissions and market-entry pathways." },
+                            { img: imgShieldBadge, bgSize: "367px 184px", bgPos: "-40px -37px", title: "QUALITY &\nCOMPLIANCE", desc: "QMS strategy, ISO 13485, MDSAP, audits and lifecycle compliance." },
+                            { img: imgMicroscopeBadge, bgSize: "350px 175px", bgPos: "-39px -34px", title: "CLINICAL &\nSCIENTIFIC", desc: "Clinical, preclinical, biological safety and evidence strategy." },
+                            { img: imgDocBadge, bgSize: "337px 168px", bgPos: "-35px -33px", title: "TECHNICAL &\nSTRATEGIC", desc: "Technical documentation, risk management and product-development strategy." },
+                        ].map((card) => (
+                            <div key={card.title} className="bg-gradient-to-br from-blue-50/70 to-white rounded-xl border border-border shadow-sm p-5 flex items-center gap-4">
+                                <div
+                                    className="h-20 w-20 rounded-full shrink-0 shadow-sm"
+                                    style={{
+                                        backgroundImage: `url(${card.img})`,
+                                        backgroundSize: card.bgSize,
+                                        backgroundPosition: card.bgPos,
+                                        backgroundRepeat: "no-repeat",
+                                    }}
+                                />
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-[12px] leading-tight mb-1.5 uppercase whitespace-pre-line">{card.title}</h3>
+                                    <p className="text-[11px] text-navy/70 leading-relaxed">{card.desc}</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">REGULATORY &<br/>MARKET ACCESS</h3>
-                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Regulatory strategy, classification, submissions and market-entry pathways.</p>
-                            </div>
-                        </div>
-
-                        {/* QUALITY */}
-                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
-                            <div className="h-14 w-14 rounded-full bg-navy flex flex-col items-center justify-center shrink-0">
-                                <ShieldCheck className="h-6 w-6 text-white" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">QUALITY &<br/>COMPLIANCE</h3>
-                                <p className="text-[10px] text-navy/70 leading-tight pr-2">QMS strategy, ISO 13485, MDSAP, audits and lifecycle compliance.</p>
-                            </div>
-                        </div>
-
-                        {/* CLINICAL */}
-                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
-                            <div className="h-14 w-14 rounded-full bg-navy flex flex-col items-center justify-center shrink-0">
-                                <Microscope className="h-6 w-6 text-white" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">CLINICAL &<br/>SCIENTIFIC</h3>
-                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Clinical, preclinical, biological safety and evidence strategy.</p>
-                            </div>
-                        </div>
-
-                        {/* TECHNICAL */}
-                        <div className="bg-white rounded-full border border-border shadow-sm p-3 flex items-center gap-4">
-                            <div className="h-14 w-14 rounded-full bg-navy/5 flex flex-col items-center justify-center shrink-0 border border-border">
-                                <FileText className="h-6 w-6 text-navy" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-navy text-[11px] leading-tight mb-1 uppercase">TECHNICAL &<br/>STRATEGIC</h3>
-                                <p className="text-[10px] text-navy/70 leading-tight pr-2">Technical documentation, risk management and product-development strategy.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     {/* Banner */}
-                    <div className="flex flex-col md:flex-row items-center justify-between border-t border-b border-border py-4 gap-4 bg-white/50 px-4 rounded-sm">
+                    <div className="flex flex-col md:flex-row items-center justify-between border border-border py-4 gap-4 bg-white shadow-sm px-4 rounded-lg">
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-[11px] font-extrabold text-navy uppercase tracking-wider">
                             <span>ISO 13485</span>
                             <span className="text-border">|</span>
@@ -374,7 +391,7 @@ function About() {
                             <span className="text-border">|</span>
                             <span>GLOBAL MARKET ACCESS</span>
                         </div>
-                        <button className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-sm hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <button className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-md hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
                             EXPLORE OUR EXPERTISE <ArrowRight className="h-3 w-3" />
                         </button>
                     </div>
@@ -390,7 +407,9 @@ function About() {
 
                     <div className="grid md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
-                            <Puzzle className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
+                            <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
+                                <img src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
+                            </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">INTEGRATED THINKING</h3>
                                 <p className="text-[12px] text-navy leading-relaxed">Regulatory, quality, scientific and clinical expertise connected across the product lifecycle.</p>
@@ -406,7 +425,9 @@ function About() {
                         </div>
 
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
-                            <BarChart3 className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
+                            <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
+                                <img src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
+                            </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">PRACTICAL EXECUTION</h3>
                                 <p className="text-[12px] text-navy leading-relaxed">Complex requirements, clear strategies and measurable progress.</p>
@@ -422,15 +443,17 @@ function About() {
 
             {/* 7. BUILT FOR INNOVATORS / BEYOND COMPLIANCE */}
             <section className="py-10 lg:py-14 bg-navy relative overflow-hidden">
-                {/* Decorative Swoosh/Rocket Placeholder */}
-                <div className="absolute right-[40%] top-0 bottom-0 w-[100px] bg-gradient-to-t from-transparent via-accent/30 to-accent/5 -skew-x-12 opacity-50"></div>
-                <div className="absolute right-[30%] bottom-0 w-1/3 h-full bg-surface/5 flex items-end">
-                    <span className="text-white/20 p-4 text-xs font-bold uppercase tracking-widest">Image Placeholder: Mother & Child</span>
-                </div>
-                
+                {/* Split background: rocket growth (left) / mother & child care (right) */}
+                <img
+                    src={imgTechCare}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover hidden md:block"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent md:hidden"></div>
+
                 <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
-                        
+
                         {/* Left */}
                         <div>
                             <h2 className="text-3xl font-extrabold text-white uppercase leading-tight mb-4">
@@ -439,7 +462,7 @@ function About() {
                             <p className="text-[15px] text-white/90 leading-relaxed mb-6 max-w-sm">
                                 From early-stage startups to established manufacturers, we adapt to your complexity, maturity and ambitions.
                             </p>
-                            
+
                             <div className="flex flex-wrap items-center gap-3 text-white text-[12px] font-bold mb-8">
                                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Startups</span>
                                 <span className="text-white/30">|</span>
@@ -454,17 +477,17 @@ function About() {
                         </div>
 
                         {/* Right */}
-                        <div className="md:pl-12">
-                            <h2 className="text-2xl font-extrabold text-white uppercase leading-tight mb-4">
+                        <div className="md:pl-12 bg-white/90 md:bg-transparent rounded-lg p-5 md:p-0 -mt-4 md:mt-0">
+                            <h2 className="text-2xl font-extrabold text-navy md:text-navy uppercase leading-tight mb-4">
                                 BEYOND COMPLIANCE.
                             </h2>
-                            <div className="space-y-2 text-[14px] leading-relaxed text-white/90 mb-6">
+                            <div className="space-y-2 text-[14px] leading-relaxed text-navy/80 mb-6">
                                 <p>A medical device can improve a patient's life.</p>
                                 <p>An IVD can contribute to a diagnosis.</p>
                                 <p>A cosmetic product can enhance everyday wellbeing.</p>
                                 <p className="pt-2">Behind every product is a person.</p>
                             </div>
-                            <p className="text-[14px] leading-relaxed text-white">
+                            <p className="text-[14px] leading-relaxed text-navy">
                                 That is why <span className="font-extrabold">compliance is not the destination.</span><br/>
                                 <span className="font-extrabold">It is the foundation for trust.</span>
                             </p>
@@ -681,8 +704,16 @@ function About() {
 
             {/* 10. FOOTER CTA */}
             <section className="bg-navy py-12 relative overflow-hidden">
-                <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-left pointer-events-none mix-blend-screen"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent z-0 pointer-events-none"></div>
+                <img
+                    src={imgEarthCta}
+                    alt=""
+                    className="absolute right-0 top-0 bottom-0 h-full w-2/3 object-cover object-right opacity-40 pointer-events-none"
+                    style={{
+                        maskImage: "linear-gradient(to left, black 30%, transparent 90%)",
+                        WebkitMaskImage: "linear-gradient(to left, black 30%, transparent 90%)",
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40 z-0 pointer-events-none"></div>
                 
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
                     <h2 className="text-2xl font-extrabold text-white uppercase leading-tight mb-2">
