@@ -27,6 +27,7 @@ const linkClass =
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   return (
     <>
@@ -119,18 +120,62 @@ export function Header() {
         </div>
 
         {open && (
-          <div className="border-t border-border bg-background lg:hidden shadow-lg absolute w-full">
+          <div className="border-t border-border bg-background lg:hidden shadow-lg absolute w-full max-h-[calc(100vh-112px)] overflow-y-auto">
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6">
-              {[...nav, ...services, { to: "/contact", label: "Book a Consultation / Contact" }].map((n) => (
+              <Link
+                to="/"
+                onClick={() => setOpen(false)}
+                className="border-b border-border py-3 text-sm font-medium text-foreground/80"
+                activeProps={{ className: "text-navy font-bold" }}
+              >
+                Home
+              </Link>
+              
+              <div className="border-b border-border flex flex-col">
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="flex items-center justify-between py-3 text-sm font-medium text-foreground/80 w-full text-left"
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileServicesOpen && (
+                  <div className="flex flex-col pb-3 pl-4 border-l-2 border-border ml-2 space-y-3 mt-1">
+                    {services.map((s) => (
+                      <Link
+                        key={s.to}
+                        to={s.to}
+                        onClick={() => setOpen(false)}
+                        className="text-sm font-medium text-foreground/70 hover:text-navy"
+                        activeProps={{ className: "text-navy font-bold" }}
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {nav.slice(1).map((n) => (
                 <Link
-                  key={n.to + n.label}
+                  key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className="border-b border-border py-3 text-sm font-medium text-foreground/80 last:border-0"
+                  className="border-b border-border py-3 text-sm font-medium text-foreground/80"
+                  activeProps={{ className: "text-navy font-bold" }}
                 >
                   {n.label}
                 </Link>
               ))}
+
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
+                className="py-3 text-sm font-medium mt-1 text-foreground/80"
+                activeProps={{ className: "text-navy font-bold" }}
+              >
+                Book a Consultation / Contact
+              </Link>
             </div>
           </div>
         )}

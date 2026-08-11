@@ -267,7 +267,7 @@ function About() {
                         ONE PARTNER. THREE INDUSTRIES.
                     </h2>
 
-                    <div className="grid grid-cols-3 gap-5 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
 
                         {/* MEDICAL DEVICES */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
@@ -347,7 +347,7 @@ function About() {
                         REGULATORY & SCIENTIFIC EXPERTISE
                     </h2>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
                         {/* bgSize/bgPos are measured crops (pixel bounding box of each orb icon
                             in its source PNG), not eyeballed — keeps every badge centered the same way */}
                         {[
@@ -405,7 +405,7 @@ function About() {
                         WHY NKB REGOVANTA
                     </h2>
 
-                    <div className="grid md:grid-cols-3 gap-6 mb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
                                 <img src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
@@ -452,7 +452,7 @@ function About() {
                 <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent md:hidden"></div>
 
                 <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
 
                         {/* Left */}
                         <div>
@@ -466,9 +466,9 @@ function About() {
                             <div className="flex flex-wrap items-center gap-3 text-white text-[12px] font-bold mb-8">
                                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Startups</span>
                                 <span className="text-white/30">|</span>
-                                <span>Scale-ups</span>
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Scale-ups</span>
                                 <span className="text-white/30">|</span>
-                                <span>Established Manufacturers</span>
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Established Manufacturers</span>
                             </div>
 
                             <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2">
@@ -509,7 +509,7 @@ function About() {
                         {/* Connecting Line */}
                         <div className="absolute top-6 left-12 right-12 h-[1px] bg-border z-0 hidden sm:block"></div>
 
-                        <div className="grid sm:grid-cols-4 gap-8 relative z-10 text-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10 text-center">
 
                             {/* Step 1 */}
                             <div className="flex flex-col items-center">
@@ -577,7 +577,7 @@ function About() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                         {experts.map((expert, idx) => (
                             <div key={idx} className="bg-white rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group h-full">
                                 <div className="p-6 flex gap-4 items-start border-b border-border/50">
