@@ -73,10 +73,12 @@ export function Footer() {
                 <Mail className="h-4 w-4 shrink-0" />
                 contact@nkbregovanta.com
               </a>
-              <a href="tel:+918861375067" className="flex items-center gap-3 text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors">
+              <div className="flex items-center gap-3 text-sm text-navy-foreground/70">
                 <Phone className="h-4 w-4 shrink-0" />
-                +91 88613 75067
-              </a>
+                <a href="tel:+918861375067" className="hover:text-navy-foreground transition-colors">+91 88613 75067</a>
+                <span className="text-navy-foreground/40">/</span>
+                <a href="tel:+918400039062" className="hover:text-navy-foreground transition-colors">+91 84000 39062</a>
+              </div>
               <div className="flex items-start gap-3 text-sm text-navy-foreground/70">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>

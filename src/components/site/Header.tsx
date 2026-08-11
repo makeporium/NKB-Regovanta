@@ -37,10 +37,12 @@ export function Header() {
               <Mail className="h-3.5 w-3.5" />
               contact@nkbregovanta.com
             </a>
-            <a href="tel:+918861375067" className="hidden sm:flex items-center gap-1.5 hover:text-white/80 transition-colors">
+            <div className="hidden sm:flex items-center gap-1.5 text-white/90">
               <Phone className="h-3.5 w-3.5" />
-              +91 88613 75067
-            </a>
+              <a href="tel:+918861375067" className="hover:text-white transition-colors">+91 88613 75067</a>
+              <span className="text-white/50 mx-1">/</span>
+              <a href="tel:+918400039062" className="hover:text-white transition-colors">+91 84000 39062</a>
+            </div>
           </div>
           <div className="flex items-center gap-6">
             <span className="hidden md:inline-block">India Based. Globally Connected.</span>
