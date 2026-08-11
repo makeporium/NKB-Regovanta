@@ -50,11 +50,11 @@ function Markets() {
         <>
             {/* ── Hero ── */}
             <section className="bg-white overflow-hidden">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-start gap-6">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
                     {/* Left */}
-                    <div className="flex flex-col justify-start py-6 shrink-0 w-[42%]">
+                    <div className="flex flex-col justify-start py-6 shrink-0 w-full lg:w-[42%]">
                         <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">Global Markets</p>
-                        <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 3vw, 40px)" }}>
+                        <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 6vw, 40px)" }}>
                             Access Multiple Global Markets.
                         </h1>
                         <p className="mt-3 text-[13.5px] text-navy/70 leading-relaxed max-w-sm">
@@ -73,22 +73,22 @@ function Markets() {
                     </div>
 
                     {/* Right — break out to right viewport edge, no crop */}
-                    <div className="hidden lg:block flex-1 -mr-4 sm:-mr-6 lg:-mr-8">
+                    <div className="flex-1 w-full lg:-mr-8 -mr-4 mt-6 lg:mt-0">
                         <img
                             src={mapImage}
                             alt="Global Markets Map"
-                            className="w-full h-auto"
+                            className="w-full h-auto object-cover"
                         />
                     </div>
                 </div>
             </section>
 
             {/* ── Flag strip ── */}
-            <section className="py-4 border-t border-b border-border bg-white">
+            <section className="py-6 lg:py-4 border-t border-b border-border bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-8 divide-x divide-border items-center">
+                    <div className="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4 lg:grid-cols-8 lg:divide-x lg:divide-border items-center">
                         {flagMarkets.map((m) => (
-                            <Link to={m.to} key={m.label} className="flex items-center gap-2 justify-center py-2 px-2 hover:bg-slate-50 transition-colors group">
+                            <Link to={m.to} key={m.label} className="flex items-center gap-2 justify-start lg:justify-center py-2 px-2 hover:bg-slate-50 transition-colors group">
                                 {m.code ? (
                                     <img
                                         src={`https://flagcdn.com/w40/${m.code}.png`}
@@ -113,10 +113,10 @@ function Markets() {
             {/* ── Stats + CTA Band ── */}
             <section className="bg-navy text-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    {/* 5-column grid: 4 stats + button — divider only between stats, NOT before button */}
-                    <div className="grid grid-cols-5">
+                    {/* Responsive Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:gap-y-6 lg:divide-x divide-white/20">
                         {stats.map((s, i) => (
-                            <div key={s.value} className={`flex items-center gap-4 px-6 py-6 ${i < stats.length - 1 ? "border-r border-white/20" : ""}`}>
+                            <div key={s.value} className="flex items-center gap-4 px-2 sm:px-6 py-6">
                                 <s.icon className="h-10 w-10 text-white/70 shrink-0" strokeWidth={1.25} />
                                 <div>
                                     <div className="text-[24px] font-extrabold text-white leading-none">{s.value}</div>
@@ -124,8 +124,8 @@ function Markets() {
                                 </div>
                             </div>
                         ))}
-                        {/* Button — 5th column, NO left border */}
-                        <div className="flex items-center justify-center px-6 py-6">
+                        {/* Button */}
+                        <div className="flex items-center justify-center px-2 sm:px-6 py-6 border-t sm:border-t-0 sm:col-span-2 lg:col-span-1 lg:border-l-0">
                             <Link
                                 to="/contact"
                                 className="inline-flex items-center justify-center rounded-sm bg-white text-navy font-bold px-5 py-3 text-[13px] transition-colors hover:bg-white/90 whitespace-nowrap w-full text-center leading-tight"
