@@ -45,6 +45,12 @@ import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/ser
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
+import { Route as IndustriesCosmeticsEuRouteImport } from './routes/industries.cosmetics_.eu'
+import { Route as IndustriesCosmeticsUkRouteImport } from './routes/industries.cosmetics_.uk'
+import { Route as IndustriesCosmeticsUsaRouteImport } from './routes/industries.cosmetics_.usa'
+import { Route as IndustriesIvdEuRouteImport } from './routes/industries.ivd_.eu'
+import { Route as IndustriesIvdIndiaRouteImport } from './routes/industries.ivd_.india'
+import { Route as IndustriesIvdUsaRouteImport } from './routes/industries.ivd_.usa'
 import { Route as ServicesAustraliaIndexRouteImport } from './routes/services.australia.index'
 import { Route as ServicesAustraliaArtgInclusionRouteImport } from './routes/services.australia.artg-inclusion'
 import { Route as ServicesAustraliaConformityAssessmentRouteImport } from './routes/services.australia.conformity-assessment'
@@ -114,6 +120,9 @@ import { Route as ServicesUsaPmaRouteImport } from './routes/services.usa.pma'
 import { Route as ServicesUsaQSubmissionRouteImport } from './routes/services.usa.q-submission'
 import { Route as ServicesUsaRfdPreRfdRouteImport } from './routes/services.usa.rfd-pre-rfd'
 import { Route as ServicesUsaUdiGudidRouteImport } from './routes/services.usa.udi-gudid'
+import { Route as IndustriesCosmeticsIndiaIndexRouteImport } from './routes/industries.cosmetics_.india.index'
+import { Route as IndustriesCosmeticsIndiaForImporterRouteImport } from './routes/industries.cosmetics_.india.for-importer'
+import { Route as IndustriesCosmeticsIndiaForManufacturerRouteImport } from './routes/industries.cosmetics_.india.for-manufacturer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -301,6 +310,36 @@ const ServicesUkRoute = ServicesUkRouteImport.update({
 const ServicesUsaRoute = ServicesUsaRouteImport.update({
   id: '/services/usa',
   path: '/services/usa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesCosmeticsEuRoute = IndustriesCosmeticsEuRouteImport.update({
+  id: '/industries/cosmetics_/eu',
+  path: '/industries/cosmetics/eu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesCosmeticsUkRoute = IndustriesCosmeticsUkRouteImport.update({
+  id: '/industries/cosmetics_/uk',
+  path: '/industries/cosmetics/uk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesCosmeticsUsaRoute = IndustriesCosmeticsUsaRouteImport.update({
+  id: '/industries/cosmetics_/usa',
+  path: '/industries/cosmetics/usa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIvdEuRoute = IndustriesIvdEuRouteImport.update({
+  id: '/industries/ivd_/eu',
+  path: '/industries/ivd/eu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIvdIndiaRoute = IndustriesIvdIndiaRouteImport.update({
+  id: '/industries/ivd_/india',
+  path: '/industries/ivd/india',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIvdUsaRoute = IndustriesIvdUsaRouteImport.update({
+  id: '/industries/ivd_/usa',
+  path: '/industries/ivd/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesAustraliaIndexRoute = ServicesAustraliaIndexRouteImport.update({
@@ -675,6 +714,24 @@ const ServicesUsaUdiGudidRoute = ServicesUsaUdiGudidRouteImport.update({
   path: '/udi-gudid',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const IndustriesCosmeticsIndiaIndexRoute =
+  IndustriesCosmeticsIndiaIndexRouteImport.update({
+    id: '/industries/cosmetics_/india/',
+    path: '/industries/cosmetics/india/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IndustriesCosmeticsIndiaForImporterRoute =
+  IndustriesCosmeticsIndiaForImporterRouteImport.update({
+    id: '/industries/cosmetics_/india/for-importer',
+    path: '/industries/cosmetics/india/for-importer',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IndustriesCosmeticsIndiaForManufacturerRoute =
+  IndustriesCosmeticsIndiaForManufacturerRouteImport.update({
+    id: '/industries/cosmetics_/india/for-manufacturer',
+    path: '/industries/cosmetics/india/for-manufacturer',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -713,6 +770,12 @@ export interface FileRoutesByFullPath {
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
+  '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
+  '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
+  '/industries/ivd/eu': typeof IndustriesIvdEuRoute
+  '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
+  '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
@@ -782,6 +845,9 @@ export interface FileRoutesByFullPath {
   '/services/india/': typeof ServicesIndiaIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
+  '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
+  '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/cosmetics/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -812,6 +878,12 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsIndexRoute
   '/markets': typeof MarketsIndexRoute
   '/services': typeof ServicesIndexRoute
+  '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
+  '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
+  '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
+  '/industries/ivd/eu': typeof IndustriesIvdEuRoute
+  '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
+  '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
@@ -881,6 +953,9 @@ export interface FileRoutesByTo {
   '/services/india': typeof ServicesIndiaIndexRoute
   '/services/uk': typeof ServicesUkIndexRoute
   '/services/usa': typeof ServicesUsaIndexRoute
+  '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
+  '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/cosmetics/india': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -920,6 +995,12 @@ export interface FileRoutesById {
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/industries/cosmetics_/eu': typeof IndustriesCosmeticsEuRoute
+  '/industries/cosmetics_/uk': typeof IndustriesCosmeticsUkRoute
+  '/industries/cosmetics_/usa': typeof IndustriesCosmeticsUsaRoute
+  '/industries/ivd_/eu': typeof IndustriesIvdEuRoute
+  '/industries/ivd_/india': typeof IndustriesIvdIndiaRoute
+  '/industries/ivd_/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
@@ -989,6 +1070,9 @@ export interface FileRoutesById {
   '/services/india/': typeof ServicesIndiaIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
+  '/industries/cosmetics_/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
+  '/industries/cosmetics_/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/cosmetics_/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1029,6 +1113,12 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/industries/cosmetics/eu'
+    | '/industries/cosmetics/uk'
+    | '/industries/cosmetics/usa'
+    | '/industries/ivd/eu'
+    | '/industries/ivd/india'
+    | '/industries/ivd/usa'
     | '/services/australia/artg-inclusion'
     | '/services/australia/conformity-assessment'
     | '/services/australia/pms'
@@ -1098,6 +1188,9 @@ export interface FileRouteTypes {
     | '/services/india/'
     | '/services/uk/'
     | '/services/usa/'
+    | '/industries/cosmetics/india/for-importer'
+    | '/industries/cosmetics/india/for-manufacturer'
+    | '/industries/cosmetics/india/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1128,6 +1221,12 @@ export interface FileRouteTypes {
     | '/insights'
     | '/markets'
     | '/services'
+    | '/industries/cosmetics/eu'
+    | '/industries/cosmetics/uk'
+    | '/industries/cosmetics/usa'
+    | '/industries/ivd/eu'
+    | '/industries/ivd/india'
+    | '/industries/ivd/usa'
     | '/services/australia/artg-inclusion'
     | '/services/australia/conformity-assessment'
     | '/services/australia/pms'
@@ -1197,6 +1296,9 @@ export interface FileRouteTypes {
     | '/services/india'
     | '/services/uk'
     | '/services/usa'
+    | '/industries/cosmetics/india/for-importer'
+    | '/industries/cosmetics/india/for-manufacturer'
+    | '/industries/cosmetics/india'
   id:
     | '__root__'
     | '/'
@@ -1235,6 +1337,12 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/industries/cosmetics_/eu'
+    | '/industries/cosmetics_/uk'
+    | '/industries/cosmetics_/usa'
+    | '/industries/ivd_/eu'
+    | '/industries/ivd_/india'
+    | '/industries/ivd_/usa'
     | '/services/australia/artg-inclusion'
     | '/services/australia/conformity-assessment'
     | '/services/australia/pms'
@@ -1304,6 +1412,9 @@ export interface FileRouteTypes {
     | '/services/india/'
     | '/services/uk/'
     | '/services/usa/'
+    | '/industries/cosmetics_/india/for-importer'
+    | '/industries/cosmetics_/india/for-manufacturer'
+    | '/industries/cosmetics_/india/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1336,6 +1447,15 @@ export interface RootRouteChildren {
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
+  IndustriesCosmeticsEuRoute: typeof IndustriesCosmeticsEuRoute
+  IndustriesCosmeticsUkRoute: typeof IndustriesCosmeticsUkRoute
+  IndustriesCosmeticsUsaRoute: typeof IndustriesCosmeticsUsaRoute
+  IndustriesIvdEuRoute: typeof IndustriesIvdEuRoute
+  IndustriesIvdIndiaRoute: typeof IndustriesIvdIndiaRoute
+  IndustriesIvdUsaRoute: typeof IndustriesIvdUsaRoute
+  IndustriesCosmeticsIndiaForImporterRoute: typeof IndustriesCosmeticsIndiaForImporterRoute
+  IndustriesCosmeticsIndiaForManufacturerRoute: typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  IndustriesCosmeticsIndiaIndexRoute: typeof IndustriesCosmeticsIndiaIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1590,6 +1710,48 @@ declare module '@tanstack/react-router' {
       path: '/services/usa'
       fullPath: '/services/usa'
       preLoaderRoute: typeof ServicesUsaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/cosmetics_/eu': {
+      id: '/industries/cosmetics_/eu'
+      path: '/industries/cosmetics/eu'
+      fullPath: '/industries/cosmetics/eu'
+      preLoaderRoute: typeof IndustriesCosmeticsEuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/cosmetics_/uk': {
+      id: '/industries/cosmetics_/uk'
+      path: '/industries/cosmetics/uk'
+      fullPath: '/industries/cosmetics/uk'
+      preLoaderRoute: typeof IndustriesCosmeticsUkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/cosmetics_/usa': {
+      id: '/industries/cosmetics_/usa'
+      path: '/industries/cosmetics/usa'
+      fullPath: '/industries/cosmetics/usa'
+      preLoaderRoute: typeof IndustriesCosmeticsUsaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/ivd_/eu': {
+      id: '/industries/ivd_/eu'
+      path: '/industries/ivd/eu'
+      fullPath: '/industries/ivd/eu'
+      preLoaderRoute: typeof IndustriesIvdEuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/ivd_/india': {
+      id: '/industries/ivd_/india'
+      path: '/industries/ivd/india'
+      fullPath: '/industries/ivd/india'
+      preLoaderRoute: typeof IndustriesIvdIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/ivd_/usa': {
+      id: '/industries/ivd_/usa'
+      path: '/industries/ivd/usa'
+      fullPath: '/industries/ivd/usa'
+      preLoaderRoute: typeof IndustriesIvdUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/australia/': {
@@ -2075,6 +2237,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaUdiGudidRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
+    '/industries/cosmetics_/india/': {
+      id: '/industries/cosmetics_/india/'
+      path: '/industries/cosmetics/india'
+      fullPath: '/industries/cosmetics/india/'
+      preLoaderRoute: typeof IndustriesCosmeticsIndiaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/cosmetics_/india/for-importer': {
+      id: '/industries/cosmetics_/india/for-importer'
+      path: '/industries/cosmetics/india/for-importer'
+      fullPath: '/industries/cosmetics/india/for-importer'
+      preLoaderRoute: typeof IndustriesCosmeticsIndiaForImporterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/cosmetics_/india/for-manufacturer': {
+      id: '/industries/cosmetics_/india/for-manufacturer'
+      path: '/industries/cosmetics/india/for-manufacturer'
+      fullPath: '/industries/cosmetics/india/for-manufacturer'
+      preLoaderRoute: typeof IndustriesCosmeticsIndiaForManufacturerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2343,6 +2526,17 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
+  IndustriesCosmeticsEuRoute: IndustriesCosmeticsEuRoute,
+  IndustriesCosmeticsUkRoute: IndustriesCosmeticsUkRoute,
+  IndustriesCosmeticsUsaRoute: IndustriesCosmeticsUsaRoute,
+  IndustriesIvdEuRoute: IndustriesIvdEuRoute,
+  IndustriesIvdIndiaRoute: IndustriesIvdIndiaRoute,
+  IndustriesIvdUsaRoute: IndustriesIvdUsaRoute,
+  IndustriesCosmeticsIndiaForImporterRoute:
+    IndustriesCosmeticsIndiaForImporterRoute,
+  IndustriesCosmeticsIndiaForManufacturerRoute:
+    IndustriesCosmeticsIndiaForManufacturerRoute,
+  IndustriesCosmeticsIndiaIndexRoute: IndustriesCosmeticsIndiaIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

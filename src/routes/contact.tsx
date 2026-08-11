@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/Bits";
+import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -52,7 +53,10 @@ function Contact() {
                 </div>
                 <div className="space-y-1.5">
                   <label htmlFor="phone" className="text-xs font-semibold text-navy">Phone</label>
-                  <input type="tel" id="phone" name="phone" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+                  <div className="flex gap-2 items-stretch h-10">
+                    <CountryCodeSelect name="countryCode" value="+91" />
+                    <input type="tel" id="phone" name="phone" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent h-full" />
+                  </div>
                 </div>
                 <div className="space-y-1.5 sm:col-span-2">
                   <label htmlFor="country" className="text-xs font-semibold text-navy">Country</label>

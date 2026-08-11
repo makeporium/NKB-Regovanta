@@ -30,10 +30,11 @@ const services = [
 ];
 
 const markets = [
-  { code: "eu", name: "European Union", auth: "EU Cosmetics Regulation & CPNP", route: "/services/eu" },
-  { code: "gb", name: "Great Britain", auth: "UK Cosmetics requirements & SCPN", route: "/services/uk" },
-  { code: "us", name: "USA", auth: "FDA / MoCRA", route: "/services/usa" },
-  { code: "un", name: "Other Markets", auth: "Requirements assessed per target country", route: "/markets" },
+  { code: "in", name: "India", auth: "CDSCO", route: "/industries/cosmetics/india" },
+  { code: "eu", name: "European Union", auth: "EU Cosmetics Regulation & CPNP", route: "/industries/cosmetics/eu" },
+  { code: "gb", name: "Great Britain", auth: "UK Cosmetics requirements & SCPN", route: "/industries/cosmetics/uk" },
+  { code: "us", name: "USA", auth: "FDA / MoCRA", route: "/industries/cosmetics/usa" },
+  { code: "un", name: "Other Markets", auth: "Requirements assessed per target country", route: "/contact" },
 ];
 
 const approachSteps = [

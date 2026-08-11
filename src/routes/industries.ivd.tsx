@@ -173,34 +173,111 @@ function IVD() {
         </div>
       </section>
 
-      {/* 4. LOGO BAND */}
-      <section className="bg-white py-8 border-y border-border">
+      {/* 4. TARGET MARKETS & COMPARISON */}
+      <section className="py-16 bg-white border-y border-border">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <div className="flex items-center gap-3">
-              <img src={imgEU} alt="EU IVDR" className="h-8 object-contain" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">EU IVDR</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src={imgUS} alt="US FDA" className="h-8 object-contain" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">US FDA</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src={imgISO} alt="ISO 13485" className="h-8 object-contain" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">ISO 13485</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="h-8 w-8 text-blue-500" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">MDSAP</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Network className="h-8 w-8 text-indigo-600" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">EUDAMED</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Globe2 className="h-8 w-8 text-navy" />
-              <span className="text-[12px] font-extrabold text-navy uppercase tracking-wide">GLOBAL MARKET ACCESS</span>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-xl font-extrabold text-navy uppercase tracking-wide">Global Target Markets</h2>
+            <div className="w-12 h-0.5 bg-[#dca85b] mx-auto mt-4"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <Link to="/industries/ivd/india" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
+              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇮🇳</span>
+              <div>
+                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">India</h3>
+                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">CDSCO Under MDR 2017</p>
+              </div>
+              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </Link>
+            
+            <Link to="/industries/ivd/eu" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
+              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇪🇺</span>
+              <div>
+                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">European Union</h3>
+                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">IVDR 2017/746</p>
+              </div>
+              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </Link>
+            
+            <Link to="/industries/ivd/usa" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
+              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇺🇸</span>
+              <div>
+                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">USA</h3>
+                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">US FDA Framework</p>
+              </div>
+              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </Link>
+          </div>
+
+          <div className="bg-[#f8f9fc] rounded-xl p-8 border border-border/50 shadow-sm overflow-x-auto">
+            <h3 className="text-lg font-bold text-navy mb-6">Three-Market Comparison: India vs EU vs USA</h3>
+            <table className="w-full text-left border-collapse min-w-[800px]">
+              <thead>
+                <tr className="border-b-2 border-navy/20">
+                  <th className="py-4 px-4 font-bold text-navy text-[13px] uppercase tracking-wider w-1/4">Dimension</th>
+                  <th className="py-4 px-4 font-bold text-navy text-[13px] uppercase tracking-wider w-1/4">India (CDSCO)</th>
+                  <th className="py-4 px-4 font-bold text-navy text-[13px] uppercase tracking-wider w-1/4">EU (IVDR)</th>
+                  <th className="py-4 px-4 font-bold text-navy text-[13px] uppercase tracking-wider w-1/4">USA (FDA)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr className="hover:bg-white/50 transition-colors">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Governing regulation</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">MDR 2017</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">IVDR 2017/746</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">FD&C Act / 21 CFR</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors bg-white/20">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Classification basis</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Risk-based (Part II, First Schedule)</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Risk + public health impact (IVDR Annex VIII)</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Risk-based (I, II, III)</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Pre-market review</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">CDSCO dossier review + performance evaluation</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Notified Body conformity assessment (Class B/C/D)</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">510(k) / De Novo / PMA</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors bg-white/20">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">In-country performance data</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Mandatory for Class B-D — India-specific data required</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Performance evaluation mandatory — existing data may be used if robust</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Analytical + clinical performance — predicate-based for 510(k)</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Third party review</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">CDSCO directly (no Notified Body equivalent)</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Notified Body (NB) — mandatory for Class B/C/D</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">FDA (no Notified Body equivalent)</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors bg-white/20">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Mutual recognition</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">No — India-specific performance evaluation mandatory</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">No — IVDR compliance required regardless of FDA/other approvals</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">No — FDA clearance required regardless of CE/other</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Database registration</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">SUGAM portal</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">EUDAMED — mandatory from 28 May 2026</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">FDA GUDID (Global UDI Database)</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors bg-white/20">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">UDI requirement</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Rule 46 MDR 2017 — pending implementation date</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Mandatory under IVDR — in EUDAMED from May 2026</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Mandatory — all classes phased since 2013</td>
+                </tr>
+                <tr className="hover:bg-white/50 transition-colors">
+                  <td className="py-4 px-4 text-[13px] font-semibold text-navy/90 align-top">Post-market surveillance</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">MDR 2017 PMS requirements — developing</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">Mandatory PMPF + vigilance reporting in EUDAMED</td>
+                  <td className="py-4 px-4 text-[13px] text-navy/70 leading-relaxed align-top">MDR reporting, PMS studies, MedWatch</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

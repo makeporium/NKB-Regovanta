@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageSquare, X, CheckCircle2 } from "lucide-react";
+import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 
 export const QueryPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,7 +111,10 @@ export const QueryPopup = () => {
                 
                 <div className="space-y-1">
                   <label htmlFor="popup-phone" className="text-[11px] font-bold uppercase tracking-wider text-navy/70">Phone Number *</label>
-                  <input type="tel" id="popup-phone" name="phone" required placeholder="+91 xxxxxxxxxx" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
+                  <div className="flex gap-2 items-stretch h-[38px]">
+                    <CountryCodeSelect name="countryCode" value="+91" />
+                    <input type="tel" id="popup-phone" name="phone" required placeholder="xxxxxxxxxx" className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent h-full" />
+                  </div>
                 </div>
                 
                 <div className="space-y-1">
