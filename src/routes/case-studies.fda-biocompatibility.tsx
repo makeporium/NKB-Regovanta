@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgPlaceholder from "@/assets/iso.png";
+const imgPlaceholder = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
 
 export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
   head: () => ({

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgPlaceholder from "@/assets/regulatory-pathway.jpg";
+const imgPlaceholder = "/assets/brain/cs_test_smarter_1786441137220.png";
 
 export const Route = createFileRoute("/case-studies/test-smarter")({
   head: () => ({
