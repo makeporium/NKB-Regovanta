@@ -1,9 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, BarChart3, ShieldCheck, Globe2, Trophy, Users } from "lucide-react";
 import caseHero from "@/assets/case.png";
-import imgPlaceholder from "@/assets/regulatory-pathway.jpg";
-import imgPlaceholder2 from "@/assets/iso-cleanroom.jpg";
-import imgPlaceholder3 from "@/assets/iso.png";
+const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";
+const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
+const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
+const imgEU = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
+const imgAustralia = "/assets/brain/cs_australia_tga_1786441211612.png";
+const imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
@@ -25,7 +28,7 @@ const studies = [
     tag: "TEST STRATEGY",
     title: "Test Smarter. Cover More.",
     desc: "A hypodermic syringe family included multiple syringe sizes and needle gauges. Testing every possible configuration could have meant unnecessary duplication...",
-    img: imgPlaceholder,
+    img: imgTestSmarter,
     route: "/case-studies/test-smarter",
     metrics: [
       { icon: Clock, value: "Faster", label: "Time to Market" },
@@ -38,7 +41,7 @@ const studies = [
     tag: "US FDA 510(k)",
     title: "Avoiding Duplicate Simulated-Use Work",
     desc: "Leveraging an already marketed safety feature to prevent an automatic repeat usability study for a sharps-injury-prevention feature.",
-    img: imgPlaceholder2,
+    img: imgSimulatedUse,
     route: "/case-studies/fda-simulated-use",
     metrics: [
       { icon: CheckCircle2, value: "Accepted", label: "By FDA" },
@@ -51,7 +54,7 @@ const studies = [
     tag: "US FDA 510(k)",
     title: "Predicate + Biocompatibility Equivalence",
     desc: "Using predicate and material equivalence to avoid repeating biocompatibility testing without regulatory need for a medical device.",
-    img: imgPlaceholder3,
+    img: imgBiocompatibility,
     route: "/case-studies/fda-biocompatibility",
     metrics: [
       { icon: ShieldCheck, value: "Proven", label: "Safety Argument" },
@@ -64,7 +67,7 @@ const studies = [
     tag: "EU MDR",
     title: "Technical Documentation Remediation",
     desc: "Converting a legacy technical file to MDR without rebuilding everything from zero. Treating it as evidence remediation and traceability engineering.",
-    img: imgPlaceholder,
+    img: imgEU,
     route: "/case-studies/eu-mdr-remediation",
     metrics: [
       { icon: Trophy, value: "Retained", label: "Valid Evidence" },
@@ -77,7 +80,7 @@ const studies = [
     tag: "AUSTRALIA TGA",
     title: "Reuse What’s Accepted. Rebuild Only What’s Needed.",
     desc: "Leveraging existing overseas regulatory approvals and evidence to support Australian ARTG inclusion without unnecessary duplication.",
-    img: imgPlaceholder2,
+    img: imgAustralia,
     route: "/case-studies/australia-tga",
     metrics: [
       { icon: Clock, value: "Faster", label: "Preparation" },
@@ -90,7 +93,7 @@ const studies = [
     tag: "SaMD | AI/ML | EU MDR",
     title: "The Algorithm Can Do More. Should the Label?",
     desc: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose...",
-    img: imgPlaceholder,
+    img: imgAlgorithm,
     route: "/case-studies/algorithm-claim",
     metrics: [
       { icon: CheckCircle2, value: "Clear", label: "Intended Purpose" },

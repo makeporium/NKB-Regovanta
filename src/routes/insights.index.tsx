@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-// Temporary images since we hit the API limit
-import imgFDA from "@/assets/regulatory-pathway.jpg";
-import imgEU from "@/assets/iso-cleanroom.jpg";
-import imgInsp from "@/assets/iso.png";
+// Updated images for insights
+const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
+const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
+const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 
 export const Route = createFileRoute("/insights/")({
   head: () => ({

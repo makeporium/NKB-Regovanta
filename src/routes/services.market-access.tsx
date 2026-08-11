@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgPlaceholder from "@/assets/regulatory-pathway.jpg";
+const imgPlaceholder = "/assets/brain/services_market_access_hero_1786440859191.png";
 
 export const Route = createFileRoute("/services/market-access")({
   head: () => ({

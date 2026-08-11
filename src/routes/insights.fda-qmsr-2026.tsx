@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgFDA from "@/assets/regulatory-pathway.jpg";
+const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
