@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
     Globe2,
     CheckCircle2,
@@ -242,21 +242,24 @@ function About() {
                         </p>
 
                         <div className="flex flex-wrap gap-3">
-                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                            <Link to="/services/india" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
+                                <img src="https://flagcdn.com/w20/in.png" alt="India" className="w-4 h-auto" /> INDIA
+                            </Link>
+                            <Link to="/services/usa" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <img src="https://flagcdn.com/w20/us.png" alt="USA" className="w-4 h-auto" /> USA
-                            </span>
-                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                            </Link>
+                            <Link to="/services/eu" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <img src="https://flagcdn.com/w20/eu.png" alt="EU" className="w-4 h-auto" /> EU
-                            </span>
-                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                            </Link>
+                            <Link to="/services/uk" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <img src="https://flagcdn.com/w20/gb.png" alt="UK" className="w-4 h-auto" /> UK
-                            </span>
-                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                            </Link>
+                            <Link to="/services/canada" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <img src="https://flagcdn.com/w20/ca.png" alt="Canada" className="w-4 h-auto" /> CANADA
-                            </span>
-                            <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
+                            </Link>
+                            <Link to="/markets" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <Globe2 className="w-3 h-3 text-navy/50" /> APAC
-                            </span>
+                            </Link>
                         </div>
                     </div>
                 </div>

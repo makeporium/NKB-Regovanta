@@ -28,6 +28,7 @@ const services = [
 ];
 
 const markets = [
+  { code: "in", name: "India", auth: "CDSCO", route: "/services/india" },
   { code: "us", name: "USA", auth: "FDA", route: "/services/usa" },
   { code: "eu", name: "European Union", auth: "EU MDR", route: "/services/eu" },
   { code: "gb", name: "United Kingdom", auth: "UK requirements", route: "/services/uk" },
