@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Stethoscope, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
+import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.png";
 
 export const Route = createFileRoute("/industries/ivd_/india")({
   head: () => ({
@@ -146,12 +147,9 @@ function IVDIndia() {
                 </div>
               </div>
               
-              {/* IMAGE PLACEHOLDER: flowchart or process diagram */}
-              <div className="w-full aspect-[21/9] bg-surface/50 rounded-lg border-2 border-dashed border-border flex items-center justify-center my-10">
-                <div className="text-center">
-                  <Microscope className="w-10 h-10 text-navy/30 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-navy/50 uppercase tracking-widest">[Placeholder: CDSCO IVD Application Flowchart]</p>
-                </div>
+              {/* CDSCO IVD Application Flowchart */}
+              <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
+                <img src={cdscoFlowchart} alt="CDSCO IVD Application Flowchart" className="w-full h-auto object-contain rounded-md" />
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">Key 2025–2026 Regulatory Updates</h2>

@@ -24,6 +24,9 @@ const bullets = [
     { label: "Canada (Health Canada)", to: "/services/canada" },
     { label: "Australia (TGA)", to: "/services/australia" },
     { label: "Brazil (ANVISA)", to: "/services/brazil" },
+    { label: "Saudi Arabia (SFDA)", to: "/services/saudi-arabia" },
+    { label: "United Arab Emirates (MOHAP)", to: "/services/uae" },
+    { label: "New Zealand (Medsafe)", to: "/services/new-zealand" },
     { label: "Rest Of The World (ROW)", to: "/contact" },
 ];
 
@@ -35,6 +38,9 @@ const flagMarkets = [
     { code: "ca", label: "Health Canada", sub: "CANADA", to: "/services/canada" },
     { code: "au", label: "TGA", sub: "AUSTRALIA", to: "/services/australia" },
     { code: "br", label: "ANVISA", sub: "BRAZIL", to: "/services/brazil" },
+    { code: "sa", label: "SFDA", sub: "SAUDI ARABIA", to: "/services/saudi-arabia" },
+    { code: "ae", label: "MOHAP", sub: "UAE", to: "/services/uae" },
+    { code: "nz", label: "Medsafe", sub: "NEW ZEALAND", to: "/services/new-zealand" },
     { code: null, label: "AND MORE", sub: "15+ COUNTRIES", to: "/contact" },
 ];
 
@@ -86,7 +92,7 @@ function Markets() {
             {/* ── Flag strip ── */}
             <section className="py-6 lg:py-4 border-t border-b border-border bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4 lg:grid-cols-8 lg:divide-x lg:divide-border items-center">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-y-6 gap-x-4 sm:gap-x-8 items-center">
                         {flagMarkets.map((m) => (
                             <Link to={m.to} key={m.label} className="flex items-center gap-2 justify-start lg:justify-center py-2 px-2 hover:bg-slate-50 transition-colors group">
                                 {m.code ? (

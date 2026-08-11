@@ -40,7 +40,9 @@ import { Route as ServicesIndiaRouteImport } from './routes/services.india'
 import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
 import { Route as ServicesMarketAccessRouteImport } from './routes/services.market-access'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
+import { Route as ServicesNewZealandRouteImport } from './routes/services.new-zealand'
 import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
+import { Route as ServicesSaudiArabiaRouteImport } from './routes/services.saudi-arabia'
 import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
@@ -285,12 +287,22 @@ const ServicesMdsapRoute = ServicesMdsapRouteImport.update({
   path: '/services/mdsap',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesNewZealandRoute = ServicesNewZealandRouteImport.update({
+  id: '/services/new-zealand',
+  path: '/services/new-zealand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRegulatoryAffairsRoute =
   ServicesRegulatoryAffairsRouteImport.update({
     id: '/services/regulatory-affairs',
     path: '/services/regulatory-affairs',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesSaudiArabiaRoute = ServicesSaudiArabiaRouteImport.update({
+  id: '/services/saudi-arabia',
+  path: '/services/saudi-arabia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesTechnicalDocumentationRoute =
   ServicesTechnicalDocumentationRouteImport.update({
     id: '/services/technical-documentation',
@@ -760,7 +772,9 @@ export interface FileRoutesByFullPath {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
+  '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
@@ -870,7 +884,9 @@ export interface FileRoutesByTo {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
+  '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/case-studies': typeof CaseStudiesIndexRoute
@@ -985,7 +1001,9 @@ export interface FileRoutesById {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
+  '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
@@ -1103,7 +1121,9 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
+    | '/services/new-zealand'
     | '/services/regulatory-affairs'
+    | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
@@ -1213,7 +1233,9 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
+    | '/services/new-zealand'
     | '/services/regulatory-affairs'
+    | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/case-studies'
@@ -1327,7 +1349,9 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
+    | '/services/new-zealand'
     | '/services/regulatory-affairs'
+    | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
@@ -1438,7 +1462,9 @@ export interface RootRouteChildren {
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
   ServicesMdsapRoute: typeof ServicesMdsapRoute
+  ServicesNewZealandRoute: typeof ServicesNewZealandRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
+  ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRoute
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
@@ -1677,11 +1703,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesMdsapRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/new-zealand': {
+      id: '/services/new-zealand'
+      path: '/services/new-zealand'
+      fullPath: '/services/new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/regulatory-affairs': {
       id: '/services/regulatory-affairs'
       path: '/services/regulatory-affairs'
       fullPath: '/services/regulatory-affairs'
       preLoaderRoute: typeof ServicesRegulatoryAffairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/saudi-arabia': {
+      id: '/services/saudi-arabia'
+      path: '/services/saudi-arabia'
+      fullPath: '/services/saudi-arabia'
+      preLoaderRoute: typeof ServicesSaudiArabiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/technical-documentation': {
@@ -2517,7 +2557,9 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesMarketAccessRoute: ServicesMarketAccessRoute,
   ServicesMdsapRoute: ServicesMdsapRoute,
+  ServicesNewZealandRoute: ServicesNewZealandRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
+  ServicesSaudiArabiaRoute: ServicesSaudiArabiaRoute,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRoute,
   ServicesUkRoute: ServicesUkRouteWithChildren,

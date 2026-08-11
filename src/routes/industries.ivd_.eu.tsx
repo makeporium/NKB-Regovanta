@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Database, Calendar, Users, FlaskConical } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
+import eudamedFlowchart from "@/assets/eudamed_registration_workflow.png";
 
 export const Route = createFileRoute("/industries/ivd_/eu")({
   head: () => ({
@@ -131,12 +132,9 @@ function IVDEu() {
                 </div>
               </div>
               
-              {/* IMAGE PLACEHOLDER: EUDAMED workflow */}
-              <div className="w-full aspect-[21/9] bg-surface/50 rounded-lg border-2 border-dashed border-border flex items-center justify-center my-10 relative overflow-hidden group">
-                <div className="text-center relative z-10">
-                  <Database className="w-10 h-10 text-navy/30 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-navy/50 uppercase tracking-widest">[Placeholder: EUDAMED Registration Workflow]</p>
-                </div>
+              {/* EUDAMED workflow */}
+              <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
+                <img src={eudamedFlowchart} alt="EUDAMED Registration Workflow" className="w-full h-auto object-contain rounded-md" />
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4 flex items-center gap-3">

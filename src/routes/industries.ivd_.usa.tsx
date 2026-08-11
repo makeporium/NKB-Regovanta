@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
+import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.png";
 
 export const Route = createFileRoute("/industries/ivd_/usa")({
   head: () => ({
@@ -104,12 +105,9 @@ function IVDUsa() {
                 <p>Without this waiver, your diagnostic test is legally restricted to certified laboratories, drastically limiting market adoption. Securing a waiver requires specialized analytical studies proving the test is foolproof and poses minimal risk of harm from erroneous results in non-laboratory settings.</p>
               </div>
               
-              {/* IMAGE PLACEHOLDER: FDA Pathway Diagram */}
-              <div className="w-full aspect-[21/9] bg-surface/50 rounded-lg border-2 border-dashed border-border flex items-center justify-center my-10 relative overflow-hidden">
-                <div className="text-center relative z-10">
-                  <Network className="w-10 h-10 text-navy/30 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-navy/50 uppercase tracking-widest">[Placeholder: US FDA IVD Regulatory Pathway Flowchart]</p>
-                </div>
+              {/* FDA Pathway Diagram */}
+              <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
+                <img src={fdaIvdFlowchart} alt="US FDA IVD Regulatory Pathway Flowchart" className="w-full h-auto object-contain rounded-md" />
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold text-navy mt-12 mb-6">Key FDA Regulatory Shifts (2025–2026)</h2>

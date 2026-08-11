@@ -106,8 +106,6 @@ function Contact() {
                     <div>
                       <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Phone</div>
                       <div className="mt-1 font-semibold text-navy">
-                        <a href="tel:+918861375067" className="hover:text-accent transition-colors">+91 88613 75067</a>
-                        <span className="mx-2 text-navy/40">/</span>
                         <a href="tel:+918400039062" className="hover:text-accent transition-colors">+91 84000 39062</a>
                       </div>
                     </div>

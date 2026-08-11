@@ -35,7 +35,9 @@ const markets = [
     { code: "ca", name: "Canada", route: "/services/canada" },
     { code: "au", name: "Australia", route: "/services/australia" },
     { code: "br", name: "Brazil", route: "/services/brazil" },
+    { code: "sa", name: "Saudi Arabia", route: "/services/saudi-arabia" },
     { code: "ae", name: "UAE", route: "/services/uae" },
+    { code: "nz", name: "New Zealand", route: "/services/new-zealand" },
 ];
 
 function RegulatoryAffairs() {

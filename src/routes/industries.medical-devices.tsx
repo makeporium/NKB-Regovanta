@@ -34,6 +34,9 @@ const markets = [
   { code: "ca", name: "Canada", auth: "Health Canada", route: "/services/canada" },
   { code: "au", name: "Australia", auth: "TGA", route: "/services/australia" },
   { code: "br", name: "Brazil", auth: "ANVISA", route: "/markets" },
+  { code: "sa", name: "Saudi Arabia", auth: "SFDA", route: "/services/saudi-arabia" },
+  { code: "ae", name: "UAE", auth: "MOHAP", route: "/services/uae" },
+  { code: "nz", name: "New Zealand", auth: "Medsafe", route: "/services/new-zealand" },
 ];
 
 const steps = ["Assess", "Strategize", "Prepare", "Submit", "Support", "Maintain"];
