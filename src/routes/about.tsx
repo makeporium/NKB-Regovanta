@@ -51,10 +51,10 @@ export const Route = createFileRoute("/about")({
 const experts = [
     {
         name: "Usha S.",
-        title: "Chief Executive Officer",
+        title: "Founder, Chief Executive Officer",
         tags: ["Executive Leadership", "Strategic Direction", "Operations"],
         img: imgUsha,
-        bio: "Usha S. founded NKB Regovanta with a clear belief: regulatory complexity should never stand in the way of responsible innovation reaching the people who need it.\n\nDriven by a vision to bridge regulatory expertise, scientific rigor, quality, and global market access, she built NKB Regovanta to support both emerging innovators and established manufacturers navigating increasingly complex healthcare and regulated-product environments.\n\nUnder her leadership, NKB Regovanta is evolving into a trusted partner across Medical Devices, IVDs, and Cosmetics, connecting Indian innovation with global markets and global expertise with India.\n\nHer vision extends beyond compliance and commercial success—to help create an ecosystem where safer, higher-quality, and meaningful innovations can reach society responsibly.\n\nHer vision is simple: Build trust. Enable innovation. Create impact.",
+        bio: "Usha S. founded NKB Regovanta with a clear belief: regulatory complexity should never stand in the way of innovation reaching the people who need it.\n\nDriven by a vision to bridge regulatory expertise, scientific rigor, quality, and global market access, she built NKB Regovanta to support both emerging innovators and established manufacturers navigating increasingly complex healthcare and regulated-product environments.\n\nUnder her leadership, NKB Regovanta is evolving into a trusted partner across Medical Devices, IVDs, and Cosmetics, connecting Indian innovation with global markets and global expertise with India.\n\nHer vision extends beyond compliance and commercial success—to help create an ecosystem where safer, higher-quality, and meaningful innovations can reach society responsibly.\n\nHer vision is simple: Build trust. Enable innovation. Create impact.",
     },
     {
         name: "Saurav Gupta",
@@ -112,7 +112,7 @@ function About() {
                         <p className="text-white/80 text-[16px] leading-relaxed mb-8 max-w-2xl">
                             A global regulatory, quality and market access partner helping organizations navigate complexity and advance healthcare innovation.
                         </p>
-                        
+
                         <div className="flex flex-wrap items-center gap-6 text-white text-[13px] font-bold mb-10">
                             <div className="flex items-center gap-2">
                                 <Globe2 className="h-5 w-5 text-cyan-400" />
@@ -192,12 +192,12 @@ function About() {
                             <div className="bg-blue-50/50 border border-border rounded-lg px-6 py-5 w-full sm:w-auto">
                                 <div className="relative pl-8 border-l-2 border-border/60 py-1">
                                     <div className="mb-8 relative">
-                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3" /></div>
                                         <h4 className="font-extrabold text-navy text-sm">2018</h4>
                                         <p className="text-xs text-navy/70 leading-tight mt-1">Experience begins</p>
                                     </div>
                                     <div className="mb-8 relative">
-                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3"/></div>
+                                        <div className="absolute w-6 h-6 bg-white border-2 border-border rounded-full -left-[37px] top-0 flex items-center justify-center text-[10px] text-navy"><Globe2 className="w-3 h-3" /></div>
                                         <h4 className="font-extrabold text-navy text-sm">2019–2025</h4>
                                         <p className="text-xs text-navy/70 leading-tight mt-1">Expanding expertise</p>
                                     </div>
@@ -240,7 +240,7 @@ function About() {
                         <p className="text-[14px] leading-relaxed text-navy/80 mb-8 max-w-md">
                             We help organizations build clear, compliant and market-ready strategies across major and emerging markets.
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-3">
                             <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border">
                                 <img src="https://flagcdn.com/w20/us.png" alt="USA" className="w-4 h-auto" /> USA
@@ -415,7 +415,7 @@ function About() {
                                 <p className="text-[12px] text-navy leading-relaxed">Regulatory, quality, scientific and clinical expertise connected across the product lifecycle.</p>
                             </div>
                         </div>
-                        
+
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <Globe2 className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
                             <div>
@@ -488,7 +488,7 @@ function About() {
                                 <p className="pt-2">Behind every product is a person.</p>
                             </div>
                             <p className="text-[14px] leading-relaxed text-navy">
-                                That is why <span className="font-extrabold">compliance is not the destination.</span><br/>
+                                That is why <span className="font-extrabold">compliance is not the destination.</span><br />
                                 <span className="font-extrabold">It is the foundation for trust.</span>
                             </p>
                         </div>
@@ -504,13 +504,13 @@ function About() {
                     <h2 className="text-2xl font-extrabold text-navy uppercase leading-tight mb-16 text-center sm:text-left">
                         THE JOURNEY CONTINUES
                     </h2>
-                    
+
                     <div className="relative">
                         {/* Connecting Line */}
                         <div className="absolute top-6 left-12 right-12 h-[1px] bg-border z-0 hidden sm:block"></div>
-                        
+
                         <div className="grid sm:grid-cols-4 gap-8 relative z-10 text-center">
-                            
+
                             {/* Step 1 */}
                             <div className="flex flex-col items-center">
                                 <div className="h-12 w-12 rounded-full border border-navy/20 bg-white mb-4 flex items-center justify-center relative shadow-sm">
@@ -544,7 +544,7 @@ function About() {
                                 </div>
                                 <h3 className="font-bold text-navy text-[13px] mb-1">2026</h3>
                                 <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">NKB REGOVANTA</p>
-                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">One organization.<br/>One vision.<br/>One global perspective.</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">One organization.<br />One vision.<br />One global perspective.</p>
                             </div>
 
                             {/* Step 4 */}
@@ -556,7 +556,7 @@ function About() {
                                 </div>
                                 <h3 className="font-bold text-navy text-[13px] mb-1">FUTURE</h3>
                                 <p className="text-[11px] font-bold text-navy mb-2 uppercase tracking-wide">FROM INDIA. FOR THE WORLD.</p>
-                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">Global growth.<br/>Responsible innovation.<br/>Meaningful impact.</p>
+                                <p className="text-[11px] text-navy/70 leading-relaxed max-w-[150px]">Global growth.<br />Responsible innovation.<br />Meaningful impact.</p>
                             </div>
 
                         </div>
@@ -678,11 +678,10 @@ function About() {
                         <div className="overflow-y-auto px-8 py-6 flex-1">
                             <div className="space-y-4">
                                 {selectedExpert.bio.split('\n\n').map((para, idx) => (
-                                    <p key={idx} className={`text-[14px] leading-relaxed ${
-                                        idx === selectedExpert.bio.split('\n\n').length - 1
-                                            ? 'font-semibold text-navy italic'
-                                            : 'text-navy/80'
-                                    }`}>
+                                    <p key={idx} className={`text-[14px] leading-relaxed ${idx === selectedExpert.bio.split('\n\n').length - 1
+                                        ? 'font-semibold text-navy italic'
+                                        : 'text-navy/80'
+                                        }`}>
                                         {para}
                                     </p>
                                 ))}
@@ -714,13 +713,13 @@ function About() {
                     }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40 z-0 pointer-events-none"></div>
-                
+
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
                     <h2 className="text-2xl font-extrabold text-white uppercase leading-tight mb-2">
                         READY TO NAVIGATE YOUR NEXT MARKET?
                     </h2>
                     <p className="text-[14px] text-white/90 mb-6">
-                        Regulatory complexity shouldn't slow responsible innovation.<br/>
+                        Regulatory complexity shouldn't slow responsible innovation.<br />
                         <span className="text-cyan-400 font-bold">Let's build the pathway together.</span>
                     </p>
                     <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
