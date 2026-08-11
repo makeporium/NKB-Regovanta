@@ -24,7 +24,7 @@ const bullets = [
     { label: "Canada (Health Canada)", to: "/services/canada" },
     { label: "Australia (TGA)", to: "/services/australia" },
     { label: "Brazil (ANVISA)", to: "/services/brazil" },
-    { label: "And more", to: "/contact" },
+    { label: "Rest Of The World (ROW)", to: "/contact" },
 ];
 
 const flagMarkets = [
