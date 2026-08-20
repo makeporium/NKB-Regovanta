@@ -903,7 +903,7 @@ export function Footer() {
           </div>
 
           {/* 4. OTHER SERVICES DIRECTORY GRID (SIDE-BY-SIDE CARDS) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
             {otherServices.map((service, idx) => (
               <div
                 key={idx}

@@ -9,6 +9,7 @@ import {
     ArrowRight,
     FlaskConical,
     HeartPulse,
+    Pill,
     TrendingUp,
     Target,
     Award,
@@ -263,14 +264,14 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </section>            {/* 4. ONE PARTNER. THREE INDUSTRIES. */}
+            </section>            {/* 4. ONE PARTNER. FOUR INDUSTRIES. */}
             <section className="py-10 lg:py-14 bg-white border-b border-border">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
-                        ONE PARTNER. THREE INDUSTRIES.
+                        ONE PARTNER. FOUR INDUSTRIES.
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
 
                         {/* MEDICAL DEVICES */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
@@ -286,9 +287,9 @@ function About() {
                                     <p className="text-[12px] text-navy leading-relaxed mb-3">
                                         Regulatory, quality, scientific and market-access support across the product lifecycle.
                                     </p>
-                                    <a href="/industries/medical-devices" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                    <Link to="/industries/medical-devices" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -307,9 +308,30 @@ function About() {
                                     <p className="text-[12px] text-navy leading-relaxed mb-3">
                                         Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
                                     </p>
-                                    <a href="/industries/ivd" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                    <Link to="/industries/ivd" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
-                                    </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* PHARMACEUTICALS */}
+                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
+                            <div className="w-full h-40 border-b border-border overflow-hidden">
+                                <img src={imgIvd} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
+                            </div>
+                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
+                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
+                                    <Pill className="h-4 w-4 text-navy" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-sm mb-1">PHARMACEUTICALS</h3>
+                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
+                                        CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
+                                    </p>
+                                    <Link to="/services/drug-licenses-for-importers" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                        Explore <ArrowRight className="h-3 w-3" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -328,9 +350,9 @@ function About() {
                                     <p className="text-[12px] text-navy leading-relaxed mb-3">
                                         Product safety, regulatory compliance, quality and market requirements.
                                     </p>
-                                    <a href="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                    <Link to="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -404,9 +426,12 @@ function About() {
             {/* 6. WHY NKB REGOVANTA */}
             <section className="py-10 lg:py-14 bg-white border-b border-border">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-2xl font-extrabold text-navy uppercase leading-tight mb-10">
+                    <h2 className="text-2xl font-extrabold text-navy uppercase leading-tight mb-2">
                         WHY NKB REGOVANTA
                     </h2>
+                    <p className="text-[14px] text-navy/80 font-medium mb-8">
+                        Multi-market regulatory expertise across Medical Devices, IVDs, Pharmaceuticals and Cosmetics.
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
@@ -414,16 +439,16 @@ function About() {
                                 <img src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
-                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">INTEGRATED THINKING</h3>
-                                <p className="text-[12px] text-navy leading-relaxed">Regulatory, quality, scientific and clinical expertise connected across the product lifecycle.</p>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">MARKET-ENTRY CAPABILITY</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">Local regulatory representation, licensing and market-entry support.</p>
                             </div>
                         </div>
 
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <Globe2 className="h-10 w-10 text-navy shrink-0" strokeWidth={1.5} />
                             <div>
-                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">GLOBAL PERSPECTIVE</h3>
-                                <p className="text-[12px] text-navy leading-relaxed">International understanding with market-specific insights for cross-border market access.</p>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">END-TO-END LIFECYCLE SUPPORT</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">From classification and registration through post-market compliance.</p>
                             </div>
                         </div>
 
@@ -432,8 +457,8 @@ function About() {
                                 <img src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
-                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">PRACTICAL EXECUTION</h3>
-                                <p className="text-[12px] text-navy leading-relaxed">Complex requirements, clear strategies and measurable progress.</p>
+                                <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">SENIOR REGULATORY EXPERTISE</h3>
+                                <p className="text-[12px] text-navy leading-relaxed">Experienced regulatory professionals managing complex submissions and authority interactions.</p>
                             </div>
                         </div>
                     </div>

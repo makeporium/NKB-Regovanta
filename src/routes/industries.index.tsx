@@ -4,6 +4,7 @@ import { CTABand } from "@/components/site/Bits";
 import imgMedical from "@/assets/industry-medical.png";
 import imgIVD from "@/assets/industry-ivd.png";
 import imgCosmetics from "@/assets/industry-cosmetics.png";
+import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.png";
 
 export const Route = createFileRoute("/industries/")({
     head: () => ({
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/industries/")({
             {
                 name: "description",
                 content:
-                    "Specialized regulatory, quality and market-access support for Medical Devices, IVDs, and Cosmetics.",
+                    "Specialized regulatory, quality and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
             },
         ],
     }),
@@ -33,6 +34,12 @@ const industries = [
         route: "/industries/ivd",
     },
     {
+        title: "Pharmaceutical & Drug Regulatory Services",
+        description: "CDSCO drug import licensing, Form 41 / Form 10, foreign manufacturer registration, AIR representation and post-approval compliance.",
+        img: imgPharma,
+        route: "/services/drug-licenses-for-importers",
+    },
+    {
         title: "Cosmetics",
         description: "Compliance, product documentation, market-entry and regulatory support for cosmetic products across selected markets.",
         img: imgCosmetics,
@@ -50,12 +57,12 @@ function Industries() {
                         Tailored Solutions for Every Industry
                     </h1>
                     <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-                        Specialized regulatory, quality and market-access support for healthcare and consumer-product companies.
+                        Specialized regulatory, quality and market-access support for healthcare, diagnostic and pharmaceutical companies.
                     </p>
                 </div>
 
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16">
-                    <div className="grid gap-8 md:grid-cols-3">
+                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {industries.map((ind) => (
                             <div key={ind.title} className="card-elevated overflow-hidden flex flex-col">
                                 <img src={ind.img} alt={ind.title} className="w-full h-48 object-cover" />

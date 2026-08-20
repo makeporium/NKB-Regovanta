@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
             {
                 name: "description",
                 content:
-                    "Regulatory, quality and market access consulting for Medical Devices, IVDs and Cosmetics. From first idea to global market access.",
+                    "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
             },
         ],
     }),
@@ -106,7 +106,7 @@ function Index() {
                             </h1>
 
                             <p className="mt-4 text-[16px] font-semibold text-navy leading-snug">
-                                Regulatory, Quality &amp; Market Access Solutions for Medical Devices,<br />IVDs &amp; Cosmetics.
+                                Regulatory, Quality &amp; Market Access Solutions for Medical Devices,<br />IVDs, Cosmetics &amp; Pharmaceuticals.
                             </p>
                             <p className="mt-3 text-[13.5px] leading-relaxed text-navy/70 font-medium">
                                 We help startups and manufacturers navigate regulatory pathways,
