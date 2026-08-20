@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap } from "lucide-react";
+import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill } from "lucide-react";
 import { CTABand, PageHero } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/")({
@@ -22,6 +22,30 @@ const services = [
     title: "Regulatory Affairs",
     text: "Regulatory strategy, submission support and licensing across global markets.",
     to: "/services/regulatory-affairs",
+  },
+  {
+    icon: Pill,
+    title: "Drug Licenses for Importers",
+    text: "Registration Certificate (Form 41), Import License (Form 10/10-A), Form 11 Test Licenses and wholesale distribution support.",
+    to: "/services/drug-licenses-for-importers",
+  },
+  {
+    icon: Radio,
+    title: "WPC Wireless Device Approval",
+    text: "Equipment Type Approval (ETA), Dealer Possession Licenses (DPL) and RF test compliance for connected devices.",
+    to: "/services/wpc-wireless-medical-devices",
+  },
+  {
+    icon: Activity,
+    title: "PC-PNDT Certificate",
+    text: "Statutory Form A & Form B registration for ultrasound, imaging machines and diagnostic equipment in India.",
+    to: "/services/pc-pndt-certificate",
+  },
+  {
+    icon: Landmark,
+    title: "IEC & AD Code Registration",
+    text: "Import Export Code (IEC) and Authorised Dealer (AD) Code registration across Indian customs ports.",
+    to: "/services/iec-ad-code",
   },
   {
     icon: BadgeCheck,

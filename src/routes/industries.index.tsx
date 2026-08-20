@@ -92,7 +92,7 @@ function Industries() {
                             <div className="mt-1 text-xs uppercase tracking-wide text-navy-foreground/70">Experience Since</div>
                         </div>
                         <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right mt-4 lg:mt-0">
-                            <Link to="/services" className="inline-flex items-center justify-center rounded-sm bg-white text-navy font-semibold px-6 py-3 text-sm transition-colors hover:bg-white/90 w-full lg:w-auto">
+                            <Link to="/services" className="inline-flex items-center justify-center rounfor ded-sm bg-white text-navy font-semibold px-6 py-3 text-sm transition-colors hover:bg-white/90 w-full lg:w-auto">
                                 Explore Industry Solutions
                             </Link>
                         </div>

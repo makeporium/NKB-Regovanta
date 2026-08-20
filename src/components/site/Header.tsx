@@ -5,6 +5,10 @@ import { Logo } from "./Logo";
 
 const services = [
   { to: "/services/regulatory-affairs", label: "Regulatory Affairs" },
+  { to: "/services/drug-licenses-for-importers", label: "Drug Licenses for Importers" },
+  { to: "/services/wpc-wireless-medical-devices", label: "WPC Wireless Device Approval" },
+  { to: "/services/pc-pndt-certificate", label: "PC-PNDT Certificate" },
+  { to: "/services/iec-ad-code", label: "IEC & AD Code Registration" },
   { to: "/services/iso-13485", label: "ISO 13485 & QMS" },
   { to: "/services/mdsap", label: "MDSAP" },
   { to: "/services/technical-documentation", label: "Technical Documentation" },

@@ -22,6 +22,11 @@ import {
   TrendingUp,
   Hash,
   Globe2,
+  Radio,
+  Layers,
+  Activity,
+  Landmark,
+  Pill,
 } from "lucide-react";
 import heroImg from "@/assets/cdsco-india-hero.png";
 import imgWorldAccess from "@/assets/India on World Map Accesing.png";
@@ -61,6 +66,13 @@ const cdscoCertificates = [
   { icon: TrendingUp, name: "Market Standing Certificate (MSC)", desc: "Proof of the product's standing in the market.", link: "/services/india/market-standing" },
   { icon: Hash, name: "Neutral Code Certificate (Special Code)", desc: "Special coding for unbranded exports.", link: "/services/india/neutral-code" },
   { icon: Globe2, name: "Free Sale Certificate (FSC)", desc: "Confirms devices are freely sold in India.", link: "/services/india/free-sale" },
+] as const;
+
+const crossFunctionalServices = [
+  { icon: Pill, name: "Drug Licenses for Importers (Form 10 & Form 41)", desc: "CDSCO registration certificates, import permits & AIR representation.", link: "/services/drug-licenses-for-importers" },
+  { icon: Radio, name: "WPC Framework & ETA for Wireless Medical Devices", desc: "Equipment Type Approval (ETA), DPL licenses & RF test compliance.", link: "/services/wpc-wireless-medical-devices" },
+  { icon: Activity, name: "PC-PNDT Certificate for Ultrasound & Imaging Devices", desc: "Statutory Form A & Form B registration under the PC-PNDT Act, 1994.", link: "/services/pc-pndt-certificate" },
+  { icon: Landmark, name: "Import Export Code (IEC) & AD Code Registration", desc: "DGFT registration and ICEGATE port-wise bank AD code linking.", link: "/services/iec-ad-code" },
 ] as const;
 
 type ServiceItem = { icon: LucideIcon; name: string; desc: string; link: string };
@@ -170,13 +182,29 @@ function IndiaCDSCOPage() {
             <p className="mt-[2.2cqw] max-w-[34cqw] text-[1.25cqw] leading-[1.7] text-[#465569]">
               Expert CDSCO consultancy services for medical device import licenses, manufacturing licenses, MDR 2017 compliance, and seamless regulatory approvals in India.
             </p>
-            <Link
-              to="/contact"
-              className="mt-[2.6cqw] inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-gradient-to-r from-[#0a3d96] to-[#1055b5] px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-white shadow-lg shadow-[#0a3d96]/20 transition-opacity hover:opacity-90"
-            >
-              Consult Our CDSCO Experts
-              <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
-            </Link>
+            <div className="mt-[2.6cqw] flex flex-wrap items-center gap-[1cqw]">
+              <Link
+                to="/contact"
+                className="inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-gradient-to-r from-[#0a3d96] to-[#1055b5] px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-white shadow-lg shadow-[#0a3d96]/20 transition-opacity hover:opacity-90"
+              >
+                Consult Our CDSCO Experts
+                <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
+              </Link>
+              <Link
+                to="/services/india/medical-devices"
+                className="inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-white border border-[#0a3d96]/30 px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-[#0a3d96] shadow-md hover:bg-blue-50 transition-colors"
+              >
+                Medical Device Regulatory Services
+                <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
+              </Link>
+              <Link
+                to="/services/india/ivd"
+                className="inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-white border border-[#0a3d96]/30 px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-[#0a3d96] shadow-md hover:bg-blue-50 transition-colors"
+              >
+                IVD Regulatory Services
+                <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
+              </Link>
+            </div>
           </div>
 
           {heroBadges.map(({ icon: Icon, lines, x, y, side }) => (
@@ -214,13 +242,29 @@ function IndiaCDSCOPage() {
           <p className="mt-5 text-base leading-relaxed text-[#465569]">
             Expert CDSCO consultancy services for medical device import licenses, manufacturing licenses, MDR 2017 compliance, and seamless regulatory approvals in India.
           </p>
-          <Link
-            to="/contact"
-            className="mt-7 inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#0a3d96] to-[#1055b5] px-6 py-3.5 text-sm font-bold text-white"
-          >
-            Consult Our CDSCO Experts
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#0a3d96] to-[#1055b5] px-6 py-3.5 text-sm font-bold text-white shadow-md"
+            >
+              Consult Our CDSCO Experts
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/services/india/medical-devices"
+              className="inline-flex items-center gap-3 rounded-lg bg-white border border-[#0a3d96]/30 px-6 py-3.5 text-sm font-bold text-[#0a3d96] shadow-sm hover:bg-blue-50"
+            >
+              Medical Device Services
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/services/india/ivd"
+              className="inline-flex items-center gap-3 rounded-lg bg-white border border-[#0a3d96]/30 px-6 py-3.5 text-sm font-bold text-[#0a3d96] shadow-sm hover:bg-blue-50"
+            >
+              IVD Regulatory Services
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
           <img src={heroImg} alt="" className="mt-8 w-full" />
         </div>
       </section>
@@ -311,6 +355,16 @@ function IndiaCDSCOPage() {
               fullBleedBg
               bgImage={imgCertificatesBg}
               bgPosition="100% 85%"
+            />
+
+            <ServiceGroup
+              icon={Layers}
+              title="Cross-Functional & Telecommunication Services"
+              description="Comprehensive outsourced retainer programs and wireless spectrum approvals across WPC, FSSAI, BIS, and CDSCO."
+              items={crossFunctionalServices}
+              fullBleedBg
+              bgImage={imgWorldAccess}
+              bgPosition="80% 30%"
             />
 
           </div>

@@ -35,18 +35,22 @@ import { Route as ServicesAuditComplianceRouteImport } from './routes/services.a
 import { Route as ServicesAustraliaRouteImport } from './routes/services.australia'
 import { Route as ServicesBrazilRouteImport } from './routes/services.brazil'
 import { Route as ServicesCanadaRouteImport } from './routes/services.canada'
+import { Route as ServicesDrugLicensesForImportersRouteImport } from './routes/services.drug-licenses-for-importers'
 import { Route as ServicesEuRouteImport } from './routes/services.eu'
+import { Route as ServicesIecAdCodeRouteImport } from './routes/services.iec-ad-code'
 import { Route as ServicesIndiaRouteImport } from './routes/services.india'
 import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
 import { Route as ServicesMarketAccessRouteImport } from './routes/services.market-access'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
 import { Route as ServicesNewZealandRouteImport } from './routes/services.new-zealand'
+import { Route as ServicesPcPndtCertificateRouteImport } from './routes/services.pc-pndt-certificate'
 import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
 import { Route as ServicesSaudiArabiaRouteImport } from './routes/services.saudi-arabia'
 import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
+import { Route as ServicesWpcWirelessMedicalDevicesRouteImport } from './routes/services.wpc-wireless-medical-devices'
 import { Route as IndustriesCosmeticsEuRouteImport } from './routes/industries.cosmetics_.eu'
 import { Route as IndustriesCosmeticsUkRouteImport } from './routes/industries.cosmetics_.uk'
 import { Route as IndustriesCosmeticsUsaRouteImport } from './routes/industries.cosmetics_.usa'
@@ -84,12 +88,14 @@ import { Route as ServicesIndiaIndexRouteImport } from './routes/services.india.
 import { Route as ServicesIndiaClassAImportRouteImport } from './routes/services.india.class-a-import'
 import { Route as ServicesIndiaFreeSaleRouteImport } from './routes/services.india.free-sale'
 import { Route as ServicesIndiaInvestigationalDevicesRouteImport } from './routes/services.india.investigational-devices'
+import { Route as ServicesIndiaIvdRouteImport } from './routes/services.india.ivd'
 import { Route as ServicesIndiaIvdClinicalPerformanceRouteImport } from './routes/services.india.ivd-clinical-performance'
 import { Route as ServicesIndiaIvdTestingRouteImport } from './routes/services.india.ivd-testing'
 import { Route as ServicesIndiaLoanClassABRouteImport } from './routes/services.india.loan-class-a-b'
 import { Route as ServicesIndiaLoanClassCDRouteImport } from './routes/services.india.loan-class-c-d'
 import { Route as ServicesIndiaMarketStandingRouteImport } from './routes/services.india.market-standing'
 import { Route as ServicesIndiaMd42RouteImport } from './routes/services.india.md-42'
+import { Route as ServicesIndiaMedicalDevicesRouteImport } from './routes/services.india.medical-devices'
 import { Route as ServicesIndiaMfgClassABRouteImport } from './routes/services.india.mfg-class-a-b'
 import { Route as ServicesIndiaMfgClassAGsrRouteImport } from './routes/services.india.mfg-class-a-gsr'
 import { Route as ServicesIndiaMfgClassCDRouteImport } from './routes/services.india.mfg-class-c-d'
@@ -125,6 +131,8 @@ import { Route as ServicesUsaUdiGudidRouteImport } from './routes/services.usa.u
 import { Route as IndustriesCosmeticsIndiaIndexRouteImport } from './routes/industries.cosmetics_.india.index'
 import { Route as IndustriesCosmeticsIndiaForImporterRouteImport } from './routes/industries.cosmetics_.india.for-importer'
 import { Route as IndustriesCosmeticsIndiaForManufacturerRouteImport } from './routes/industries.cosmetics_.india.for-manufacturer'
+import { Route as IndustriesMedicalDevicesIndiaForImporterRouteImport } from './routes/industries.medical-devices_.india.for-importer'
+import { Route as IndustriesMedicalDevicesIndiaForManufacturerRouteImport } from './routes/industries.medical-devices_.india.for-manufacturer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -262,9 +270,20 @@ const ServicesCanadaRoute = ServicesCanadaRouteImport.update({
   path: '/services/canada',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesDrugLicensesForImportersRoute =
+  ServicesDrugLicensesForImportersRouteImport.update({
+    id: '/services/drug-licenses-for-importers',
+    path: '/services/drug-licenses-for-importers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesEuRoute = ServicesEuRouteImport.update({
   id: '/services/eu',
   path: '/services/eu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIecAdCodeRoute = ServicesIecAdCodeRouteImport.update({
+  id: '/services/iec-ad-code',
+  path: '/services/iec-ad-code',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndiaRoute = ServicesIndiaRouteImport.update({
@@ -292,6 +311,12 @@ const ServicesNewZealandRoute = ServicesNewZealandRouteImport.update({
   path: '/services/new-zealand',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesPcPndtCertificateRoute =
+  ServicesPcPndtCertificateRouteImport.update({
+    id: '/services/pc-pndt-certificate',
+    path: '/services/pc-pndt-certificate',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesRegulatoryAffairsRoute =
   ServicesRegulatoryAffairsRouteImport.update({
     id: '/services/regulatory-affairs',
@@ -324,6 +349,12 @@ const ServicesUsaRoute = ServicesUsaRouteImport.update({
   path: '/services/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWpcWirelessMedicalDevicesRoute =
+  ServicesWpcWirelessMedicalDevicesRouteImport.update({
+    id: '/services/wpc-wireless-medical-devices',
+    path: '/services/wpc-wireless-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesCosmeticsEuRoute = IndustriesCosmeticsEuRouteImport.update({
   id: '/industries/cosmetics_/eu',
   path: '/industries/cosmetics/eu',
@@ -521,6 +552,11 @@ const ServicesIndiaInvestigationalDevicesRoute =
     path: '/investigational-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesIndiaIvdRoute = ServicesIndiaIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesIndiaRoute,
+} as any)
 const ServicesIndiaIvdClinicalPerformanceRoute =
   ServicesIndiaIvdClinicalPerformanceRouteImport.update({
     id: '/ivd-clinical-performance',
@@ -555,6 +591,12 @@ const ServicesIndiaMd42Route = ServicesIndiaMd42RouteImport.update({
   path: '/md-42',
   getParentRoute: () => ServicesIndiaRoute,
 } as any)
+const ServicesIndiaMedicalDevicesRoute =
+  ServicesIndiaMedicalDevicesRouteImport.update({
+    id: '/medical-devices',
+    path: '/medical-devices',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
 const ServicesIndiaMfgClassABRoute = ServicesIndiaMfgClassABRouteImport.update({
   id: '/mfg-class-a-b',
   path: '/mfg-class-a-b',
@@ -744,6 +786,18 @@ const IndustriesCosmeticsIndiaForManufacturerRoute =
     path: '/industries/cosmetics/india/for-manufacturer',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesMedicalDevicesIndiaForImporterRoute =
+  IndustriesMedicalDevicesIndiaForImporterRouteImport.update({
+    id: '/industries/medical-devices_/india/for-importer',
+    path: '/industries/medical-devices/india/for-importer',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IndustriesMedicalDevicesIndiaForManufacturerRoute =
+  IndustriesMedicalDevicesIndiaForManufacturerRouteImport.update({
+    id: '/industries/medical-devices_/india/for-manufacturer',
+    path: '/industries/medical-devices/india/for-manufacturer',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -767,18 +821,22 @@ export interface FileRoutesByFullPath {
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/eu': typeof ServicesEuRouteWithChildren
+  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
+  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
+  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -816,12 +874,14 @@ export interface FileRoutesByFullPath {
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd': typeof ServicesIndiaIvdRoute
   '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
   '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
   '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
   '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
   '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
   '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
   '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
   '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
   '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
@@ -861,6 +921,8 @@ export interface FileRoutesByFullPath {
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
   '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/medical-devices/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
+  '/industries/medical-devices/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
   '/industries/cosmetics/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesByTo {
@@ -881,14 +943,18 @@ export interface FileRoutesByTo {
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
   '/services/audit-compliance': typeof ServicesAuditComplianceRoute
+  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
+  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
+  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
+  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/insights': typeof InsightsIndexRoute
@@ -926,12 +992,14 @@ export interface FileRoutesByTo {
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd': typeof ServicesIndiaIvdRoute
   '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
   '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
   '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
   '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
   '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
   '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
   '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
   '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
   '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
@@ -971,6 +1039,8 @@ export interface FileRoutesByTo {
   '/services/usa': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
   '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/medical-devices/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
+  '/industries/medical-devices/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
   '/industries/cosmetics/india': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesById {
@@ -996,18 +1066,22 @@ export interface FileRoutesById {
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/eu': typeof ServicesEuRouteWithChildren
+  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
+  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
+  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -1045,12 +1119,14 @@ export interface FileRoutesById {
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
+  '/services/india/ivd': typeof ServicesIndiaIvdRoute
   '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
   '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
   '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
   '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
   '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
   '/services/india/md-42': typeof ServicesIndiaMd42Route
+  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
   '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
   '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
   '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
@@ -1090,6 +1166,8 @@ export interface FileRoutesById {
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics_/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
   '/industries/cosmetics_/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  '/industries/medical-devices_/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
+  '/industries/medical-devices_/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
   '/industries/cosmetics_/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRouteTypes {
@@ -1116,18 +1194,22 @@ export interface FileRouteTypes {
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
+    | '/services/drug-licenses-for-importers'
     | '/services/eu'
+    | '/services/iec-ad-code'
     | '/services/india'
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
+    | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
+    | '/services/wpc-wireless-medical-devices'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
@@ -1165,12 +1247,14 @@ export interface FileRouteTypes {
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
+    | '/services/india/ivd'
     | '/services/india/ivd-clinical-performance'
     | '/services/india/ivd-testing'
     | '/services/india/loan-class-a-b'
     | '/services/india/loan-class-c-d'
     | '/services/india/market-standing'
     | '/services/india/md-42'
+    | '/services/india/medical-devices'
     | '/services/india/mfg-class-a-b'
     | '/services/india/mfg-class-a-gsr'
     | '/services/india/mfg-class-c-d'
@@ -1210,6 +1294,8 @@ export interface FileRouteTypes {
     | '/services/usa/'
     | '/industries/cosmetics/india/for-importer'
     | '/industries/cosmetics/india/for-manufacturer'
+    | '/industries/medical-devices/india/for-importer'
+    | '/industries/medical-devices/india/for-manufacturer'
     | '/industries/cosmetics/india/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -1230,14 +1316,18 @@ export interface FileRouteTypes {
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
     | '/services/audit-compliance'
+    | '/services/drug-licenses-for-importers'
+    | '/services/iec-ad-code'
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
+    | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
+    | '/services/wpc-wireless-medical-devices'
     | '/case-studies'
     | '/industries'
     | '/insights'
@@ -1275,12 +1365,14 @@ export interface FileRouteTypes {
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
+    | '/services/india/ivd'
     | '/services/india/ivd-clinical-performance'
     | '/services/india/ivd-testing'
     | '/services/india/loan-class-a-b'
     | '/services/india/loan-class-c-d'
     | '/services/india/market-standing'
     | '/services/india/md-42'
+    | '/services/india/medical-devices'
     | '/services/india/mfg-class-a-b'
     | '/services/india/mfg-class-a-gsr'
     | '/services/india/mfg-class-c-d'
@@ -1320,6 +1412,8 @@ export interface FileRouteTypes {
     | '/services/usa'
     | '/industries/cosmetics/india/for-importer'
     | '/industries/cosmetics/india/for-manufacturer'
+    | '/industries/medical-devices/india/for-importer'
+    | '/industries/medical-devices/india/for-manufacturer'
     | '/industries/cosmetics/india'
   id:
     | '__root__'
@@ -1344,18 +1438,22 @@ export interface FileRouteTypes {
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
+    | '/services/drug-licenses-for-importers'
     | '/services/eu'
+    | '/services/iec-ad-code'
     | '/services/india'
     | '/services/iso-13485'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
+    | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
+    | '/services/wpc-wireless-medical-devices'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
@@ -1393,12 +1491,14 @@ export interface FileRouteTypes {
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
+    | '/services/india/ivd'
     | '/services/india/ivd-clinical-performance'
     | '/services/india/ivd-testing'
     | '/services/india/loan-class-a-b'
     | '/services/india/loan-class-c-d'
     | '/services/india/market-standing'
     | '/services/india/md-42'
+    | '/services/india/medical-devices'
     | '/services/india/mfg-class-a-b'
     | '/services/india/mfg-class-a-gsr'
     | '/services/india/mfg-class-c-d'
@@ -1438,6 +1538,8 @@ export interface FileRouteTypes {
     | '/services/usa/'
     | '/industries/cosmetics_/india/for-importer'
     | '/industries/cosmetics_/india/for-manufacturer'
+    | '/industries/medical-devices_/india/for-importer'
+    | '/industries/medical-devices_/india/for-manufacturer'
     | '/industries/cosmetics_/india/'
   fileRoutesById: FileRoutesById
 }
@@ -1457,18 +1559,22 @@ export interface RootRouteChildren {
   ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
   ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
   ServicesCanadaRoute: typeof ServicesCanadaRouteWithChildren
+  ServicesDrugLicensesForImportersRoute: typeof ServicesDrugLicensesForImportersRoute
   ServicesEuRoute: typeof ServicesEuRouteWithChildren
+  ServicesIecAdCodeRoute: typeof ServicesIecAdCodeRoute
   ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesNewZealandRoute: typeof ServicesNewZealandRoute
+  ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRoute
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
+  ServicesWpcWirelessMedicalDevicesRoute: typeof ServicesWpcWirelessMedicalDevicesRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -1481,6 +1587,8 @@ export interface RootRouteChildren {
   IndustriesIvdUsaRoute: typeof IndustriesIvdUsaRoute
   IndustriesCosmeticsIndiaForImporterRoute: typeof IndustriesCosmeticsIndiaForImporterRoute
   IndustriesCosmeticsIndiaForManufacturerRoute: typeof IndustriesCosmeticsIndiaForManufacturerRoute
+  IndustriesMedicalDevicesIndiaForImporterRoute: typeof IndustriesMedicalDevicesIndiaForImporterRoute
+  IndustriesMedicalDevicesIndiaForManufacturerRoute: typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
   IndustriesCosmeticsIndiaIndexRoute: typeof IndustriesCosmeticsIndiaIndexRoute
 }
 
@@ -1668,11 +1776,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/drug-licenses-for-importers': {
+      id: '/services/drug-licenses-for-importers'
+      path: '/services/drug-licenses-for-importers'
+      fullPath: '/services/drug-licenses-for-importers'
+      preLoaderRoute: typeof ServicesDrugLicensesForImportersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/eu': {
       id: '/services/eu'
       path: '/services/eu'
       fullPath: '/services/eu'
       preLoaderRoute: typeof ServicesEuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/iec-ad-code': {
+      id: '/services/iec-ad-code'
+      path: '/services/iec-ad-code'
+      fullPath: '/services/iec-ad-code'
+      preLoaderRoute: typeof ServicesIecAdCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/india': {
@@ -1708,6 +1830,13 @@ declare module '@tanstack/react-router' {
       path: '/services/new-zealand'
       fullPath: '/services/new-zealand'
       preLoaderRoute: typeof ServicesNewZealandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/pc-pndt-certificate': {
+      id: '/services/pc-pndt-certificate'
+      path: '/services/pc-pndt-certificate'
+      fullPath: '/services/pc-pndt-certificate'
+      preLoaderRoute: typeof ServicesPcPndtCertificateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/regulatory-affairs': {
@@ -1750,6 +1879,13 @@ declare module '@tanstack/react-router' {
       path: '/services/usa'
       fullPath: '/services/usa'
       preLoaderRoute: typeof ServicesUsaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/wpc-wireless-medical-devices': {
+      id: '/services/wpc-wireless-medical-devices'
+      path: '/services/wpc-wireless-medical-devices'
+      fullPath: '/services/wpc-wireless-medical-devices'
+      preLoaderRoute: typeof ServicesWpcWirelessMedicalDevicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries/cosmetics_/eu': {
@@ -2011,6 +2147,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaInvestigationalDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/india/ivd': {
+      id: '/services/india/ivd'
+      path: '/ivd'
+      fullPath: '/services/india/ivd'
+      preLoaderRoute: typeof ServicesIndiaIvdRouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
     '/services/india/ivd-clinical-performance': {
       id: '/services/india/ivd-clinical-performance'
       path: '/ivd-clinical-performance'
@@ -2051,6 +2194,13 @@ declare module '@tanstack/react-router' {
       path: '/md-42'
       fullPath: '/services/india/md-42'
       preLoaderRoute: typeof ServicesIndiaMd42RouteImport
+      parentRoute: typeof ServicesIndiaRoute
+    }
+    '/services/india/medical-devices': {
+      id: '/services/india/medical-devices'
+      path: '/medical-devices'
+      fullPath: '/services/india/medical-devices'
+      preLoaderRoute: typeof ServicesIndiaMedicalDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
     '/services/india/mfg-class-a-b': {
@@ -2298,6 +2448,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesCosmeticsIndiaForManufacturerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries/medical-devices_/india/for-importer': {
+      id: '/industries/medical-devices_/india/for-importer'
+      path: '/industries/medical-devices/india/for-importer'
+      fullPath: '/industries/medical-devices/india/for-importer'
+      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaForImporterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/medical-devices_/india/for-manufacturer': {
+      id: '/industries/medical-devices_/india/for-manufacturer'
+      path: '/industries/medical-devices/india/for-manufacturer'
+      fullPath: '/industries/medical-devices/india/for-manufacturer'
+      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaForManufacturerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2423,12 +2587,14 @@ interface ServicesIndiaRouteChildren {
   ServicesIndiaClassAImportRoute: typeof ServicesIndiaClassAImportRoute
   ServicesIndiaFreeSaleRoute: typeof ServicesIndiaFreeSaleRoute
   ServicesIndiaInvestigationalDevicesRoute: typeof ServicesIndiaInvestigationalDevicesRoute
+  ServicesIndiaIvdRoute: typeof ServicesIndiaIvdRoute
   ServicesIndiaIvdClinicalPerformanceRoute: typeof ServicesIndiaIvdClinicalPerformanceRoute
   ServicesIndiaIvdTestingRoute: typeof ServicesIndiaIvdTestingRoute
   ServicesIndiaLoanClassABRoute: typeof ServicesIndiaLoanClassABRoute
   ServicesIndiaLoanClassCDRoute: typeof ServicesIndiaLoanClassCDRoute
   ServicesIndiaMarketStandingRoute: typeof ServicesIndiaMarketStandingRoute
   ServicesIndiaMd42Route: typeof ServicesIndiaMd42Route
+  ServicesIndiaMedicalDevicesRoute: typeof ServicesIndiaMedicalDevicesRoute
   ServicesIndiaMfgClassABRoute: typeof ServicesIndiaMfgClassABRoute
   ServicesIndiaMfgClassAGsrRoute: typeof ServicesIndiaMfgClassAGsrRoute
   ServicesIndiaMfgClassCDRoute: typeof ServicesIndiaMfgClassCDRoute
@@ -2445,6 +2611,7 @@ const ServicesIndiaRouteChildren: ServicesIndiaRouteChildren = {
   ServicesIndiaFreeSaleRoute: ServicesIndiaFreeSaleRoute,
   ServicesIndiaInvestigationalDevicesRoute:
     ServicesIndiaInvestigationalDevicesRoute,
+  ServicesIndiaIvdRoute: ServicesIndiaIvdRoute,
   ServicesIndiaIvdClinicalPerformanceRoute:
     ServicesIndiaIvdClinicalPerformanceRoute,
   ServicesIndiaIvdTestingRoute: ServicesIndiaIvdTestingRoute,
@@ -2452,6 +2619,7 @@ const ServicesIndiaRouteChildren: ServicesIndiaRouteChildren = {
   ServicesIndiaLoanClassCDRoute: ServicesIndiaLoanClassCDRoute,
   ServicesIndiaMarketStandingRoute: ServicesIndiaMarketStandingRoute,
   ServicesIndiaMd42Route: ServicesIndiaMd42Route,
+  ServicesIndiaMedicalDevicesRoute: ServicesIndiaMedicalDevicesRoute,
   ServicesIndiaMfgClassABRoute: ServicesIndiaMfgClassABRoute,
   ServicesIndiaMfgClassAGsrRoute: ServicesIndiaMfgClassAGsrRoute,
   ServicesIndiaMfgClassCDRoute: ServicesIndiaMfgClassCDRoute,
@@ -2552,18 +2720,23 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
   ServicesBrazilRoute: ServicesBrazilRouteWithChildren,
   ServicesCanadaRoute: ServicesCanadaRouteWithChildren,
+  ServicesDrugLicensesForImportersRoute: ServicesDrugLicensesForImportersRoute,
   ServicesEuRoute: ServicesEuRouteWithChildren,
+  ServicesIecAdCodeRoute: ServicesIecAdCodeRoute,
   ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesMarketAccessRoute: ServicesMarketAccessRoute,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesNewZealandRoute: ServicesNewZealandRoute,
+  ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesSaudiArabiaRoute: ServicesSaudiArabiaRoute,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRoute,
   ServicesUkRoute: ServicesUkRouteWithChildren,
   ServicesUsaRoute: ServicesUsaRouteWithChildren,
+  ServicesWpcWirelessMedicalDevicesRoute:
+    ServicesWpcWirelessMedicalDevicesRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,
@@ -2578,6 +2751,10 @@ const rootRouteChildren: RootRouteChildren = {
     IndustriesCosmeticsIndiaForImporterRoute,
   IndustriesCosmeticsIndiaForManufacturerRoute:
     IndustriesCosmeticsIndiaForManufacturerRoute,
+  IndustriesMedicalDevicesIndiaForImporterRoute:
+    IndustriesMedicalDevicesIndiaForImporterRoute,
+  IndustriesMedicalDevicesIndiaForManufacturerRoute:
+    IndustriesMedicalDevicesIndiaForManufacturerRoute,
   IndustriesCosmeticsIndiaIndexRoute: IndustriesCosmeticsIndiaIndexRoute,
 }
 export const routeTree = rootRouteImport
