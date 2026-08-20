@@ -93,7 +93,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
   {
     title: "Services",
     links: [
-      { label: "Regulatory Affairs", to: "/services/regulatory-affairs" },
+      { label: "Medical Device & IVD Regulatory Services", to: "/services/regulatory-affairs" },
       { label: "Pharmaceutical & Drug Regulatory Services", to: "/services/drug-licenses-for-importers" },
       { label: "Cosmetics Regulatory & Global Market Access", to: "/industries/cosmetics" },
       { label: "Global Quality & Compliance", to: "/services/iso-13485" },
@@ -119,6 +119,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
     links: [
       { label: "Medical Devices", to: "/industries/medical-devices" },
       { label: "In Vitro Diagnostics", to: "/industries/ivd" },
+      { label: "Pharmaceuticals", to: "/services/drug-licenses-for-importers" },
       { label: "Cosmetics", to: "/industries/cosmetics" },
     ],
   },
@@ -160,7 +161,7 @@ export function Footer() {
                 to="/services/regulatory-affairs"
                 className="text-xl sm:text-2xl font-extrabold text-[#0f2340] hover:text-[#0b3a96] transition-colors"
               >
-                Regulatory Affairs
+                Medical Device & IVD Regulatory Services
               </Link>
               <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3 py-1 rounded-md border border-blue-100 w-fit">
                 Global Regulatory Submissions & Approvals

@@ -9,6 +9,7 @@ import {
     ShieldCheck,
     TrendingUp,
     FlaskConical,
+    Pill,
     Users,
     Layers,
 } from "lucide-react";
@@ -30,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 const expertise = [
     {
-        title: "Regulatory Affairs",
+        title: "Medical Devices & IVDs",
         icon: ClipboardCheck,
         items: [
             "Regulatory Strategy",
@@ -40,6 +41,19 @@ const expertise = [
             "US FDA 510(k)",
             "EU MDR / IVDR",
             "CDSCO, TGA, UAE, APAC Registrations",
+        ],
+    },
+    {
+        title: "Pharmaceuticals & Drugs",
+        icon: Pill,
+        items: [
+            "CDSCO Drug Import Licensing",
+            "Registration Certificate (Form 41)",
+            "Import Licence (Form 10 / 10-A)",
+            "Foreign Manufacturer Registration",
+            "Indian Authorized Agent (AIR)",
+            "Wholesale & Distribution Licensing",
+            "Post-Approval Variations & Lifecycle",
         ],
     },
     {
@@ -177,7 +191,7 @@ function Index() {
                         {/* Core Industries */}
                         <div className="flex flex-col items-center text-center p-6 xl:p-8">
                             <Layers className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
-                            <p className="text-[26px] font-bold leading-none mb-2">3</p>
+                            <p className="text-[26px] font-bold leading-none mb-2">4</p>
                             <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">Focus Areas</p>
                             <p className="text-[12px] opacity-80 leading-snug">Core<br/>Industries</p>
                         </div>
@@ -193,52 +207,62 @@ function Index() {
             </section>
 
             {/* ── OUR EXPERTISE ── */}
-            <section className="py-16 lg:py-20 bg-white">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <section className="py-16 lg:py-24 bg-surface/50 border-t border-b border-border/40">
+                <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-8">
 
                     <div className="text-center mb-12">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-navy mb-3">OUR EXPERTISE</p>
-                        <h2 className="text-[28px] font-bold text-navy tracking-tight">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-accent mb-3">OUR EXPERTISE</p>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
                             End-to-End Regulatory, Quality &amp; Market Access Support
                         </h2>
-                        <div className="mx-auto mt-3 h-px w-2/3 max-w-md bg-border/70" />
+                        <p className="mt-3 text-sm text-muted-foreground max-w-2xl mx-auto">
+                            Integrated compliance, quality management, and commercial market-entry across four global healthcare verticals.
+                        </p>
+                        <div className="mx-auto mt-4 h-1 w-16 bg-accent rounded-full" />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
                         {expertise.map((e) => (
                             <div
                                 key={e.title}
-                                className="flex gap-4 p-5 border border-border/60 hover:shadow-md transition-shadow bg-white rounded-[3px]"
+                                className="bg-white rounded-2xl border border-gray-200/80 p-6 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                             >
-                                {/* Icon */}
-                                <div className="shrink-0 mt-1">
-                                    <div className="bg-blue-50 p-2.5 rounded-full border border-navy/15">
-                                        <e.icon className="h-8 w-8 text-navy-deep" strokeWidth={2} />
-                                    </div>
-                                </div>
-
-                                {/* Text */}
                                 <div>
-                                    <h3 className="text-[15px] font-bold text-navy-deep mb-3 leading-tight">{e.title}</h3>
-                                    <ul className="space-y-1.5">
+                                    <div className="flex items-center gap-3 pb-4 mb-4 border-b border-gray-100">
+                                        <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 text-navy group-hover:bg-navy group-hover:text-white transition-colors">
+                                            <e.icon className="h-5 w-5" strokeWidth={2} />
+                                        </div>
+                                        <h3 className="text-[14px] font-extrabold text-navy leading-snug">{e.title}</h3>
+                                    </div>
+
+                                    <ul className="space-y-2.5">
                                         {e.items.map((item) => (
-                                            <li key={item} className="flex items-start gap-1.5 text-[12.5px] text-navy-deep/85 font-medium leading-snug">
-                                                <span className="mt-px font-black text-navy-deep text-[14px] leading-none">•</span>
-                                                {item}
+                                            <li key={item} className="flex items-start gap-2 text-xs text-gray-600 group-hover:text-gray-900 transition-colors leading-relaxed">
+                                                <span className="text-[#0b3a96] font-bold text-xs leading-none mt-1 shrink-0">•</span>
+                                                <span>{item}</span>
                                             </li>
                                         ))}
                                     </ul>
+                                </div>
+
+                                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                                    <Link
+                                        to="/services"
+                                        className="text-xs font-bold text-[#0b3a96] group-hover:text-[#082b70] inline-flex items-center gap-1 transition-colors"
+                                    >
+                                        Learn More <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+                                    </Link>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-12 text-center">
+                    <div className="mt-14 text-center">
                         <Link
                             to="/services"
-                            className="inline-flex items-center gap-2 bg-navy px-8 py-3 text-[13px] font-semibold text-white hover:bg-navy-deep transition-colors rounded-[3px]"
+                            className="inline-flex items-center gap-2 bg-navy px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-navy-deep transition-all shadow-md hover:shadow-lg rounded-full"
                         >
-                            View All Services <ArrowRight className="h-4 w-4" />
+                            Explore Complete Services Directory <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
                 </div>
