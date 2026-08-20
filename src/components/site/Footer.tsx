@@ -1,356 +1,19 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Twitter, Youtube, Mail, Phone, MapPin, Layers, ArrowRight } from "lucide-react";
+import { Linkedin, Twitter, Youtube, Mail, Phone, MapPin, Layers, ArrowRight, Sparkles } from "lucide-react";
 import { Logo } from "./Logo";
 
-type SubDirectoryItem = {
+type SubItem = {
   label: string;
   to: string;
-  groups?: {
-    groupTitle: string;
-    subItems: { label: string; to: string }[];
-  }[];
-  subItems?: { label: string; to: string }[];
 };
 
-type ServiceItem = {
+type OtherService = {
   title: string;
   to: string;
-  items: SubDirectoryItem[];
+  items: SubItem[];
 };
 
-const serviceDirectory: ServiceItem[] = [
-  {
-    title: "Regulatory Affairs",
-    to: "/services/regulatory-affairs",
-    items: [
-      {
-        label: "US FDA",
-        to: "/services/usa",
-        subItems: [
-          { label: "US FDA Regulatory & Market Access", to: "/services/usa" },
-          { label: "510(k) – Premarket Notification", to: "/services/usa/510k" },
-          { label: "De Novo Classification", to: "/services/usa/de-novo" },
-          { label: "PMA – Premarket Approval", to: "/services/usa/pma" },
-          { label: "FDA Q-Submission / Pre-Submission", to: "/services/usa/q-submission" },
-          { label: "FDA Regulatory Strategy & Pathway Assessment", to: "/services/usa" },
-          { label: "Medical Device Classification", to: "/services/usa/513g" },
-          { label: "US FDA Agent Services", to: "/services/usa/agent-service" },
-          { label: "FDA Registration & Device Listing", to: "/services/usa/establishment-registration" },
-          { label: "eSTAR Submission Support", to: "/services/usa/e-star" },
-          { label: "Post-Approval Compliance", to: "/services/usa" },
-          { label: "Device Lifecycle Management", to: "/services/usa" },
-          { label: "Post-Market Regulatory Support", to: "/services/usa" },
-        ],
-      },
-      { label: "Global Regulatory Strategy & Pathways", to: "/services/regulatory-affairs" },
-      {
-        label: "India Regulatory & Market Access Services (CDSCO)",
-        to: "/services/india",
-        groups: [
-          {
-            groupTitle: "A. Importer / Foreign Manufacturer Services",
-            subItems: [
-              { label: "CDSCO Medical Device Import Licence – MD-14 / MD-15", to: "/services/india/class-a-import" },
-              { label: "Class A Registration – GSR 777(E), where applicable", to: "/services/india/mfg-class-a-gsr" },
-              { label: "Investigational Device Import Licence – MD-18 / MD-19", to: "/services/india/investigational-devices" },
-              { label: "Clinical Evaluation Import Permission – MD-24 / MD-25", to: "/services/india/investigational-devices" },
-              { label: "Novel Medical Device / IVD Import Permission – MD-26 / MD-27", to: "/services/india/mfg-class-c-d" },
-              { label: "IVD Testing & Evaluation Import Licence – MD-16 / MD-17", to: "/services/india/ivd" },
-              { label: "Personal Use Import Permission – MD-20 / MD-21", to: "/services/india" },
-              { label: "Indian Authorized Agent / Regulatory Representative", to: "/industries/medical-devices/india/for-importer" },
-              { label: "SUGAM Portal Registration & Application Support", to: "/services/india" },
-              { label: "CDSCO Product Classification & Regulatory Strategy", to: "/services/india" },
-              { label: "CDSCO Submission & Query Response Support", to: "/services/india" },
-              { label: "Post-Approval & Lifecycle Regulatory Support", to: "/services/india" },
-            ],
-          },
-          {
-            groupTitle: "B. Indian Manufacturer Services",
-            subItems: [
-              { label: "Class A & B Manufacturing Licence – MD-3 / MD-5", to: "/services/india/mfg-class-a-b" },
-              { label: "Class C & D Manufacturing Licence – MD-7 / MD-9", to: "/services/india/mfg-class-c-d" },
-              { label: "Class A Registration – GSR 777(E)", to: "/services/india/mfg-class-a-gsr" },
-              { label: "Loan Licence – Class A & B – MD-4 / MD-6", to: "/services/india/manufacturing-licenses" },
-              { label: "Loan Licence – Class C & D – MD-8 / MD-10", to: "/services/india/manufacturing-licenses" },
-              { label: "Manufacturing Facility Regulatory Readiness", to: "/services/india/manufacturing-licenses" },
-              { label: "CDSCO Manufacturing Licence Support", to: "/services/india/manufacturing-licenses" },
-              { label: "SUGAM Portal Registration & Application Support", to: "/services/india" },
-              { label: "Manufacturing Compliance & Post-Approval Support", to: "/services/india" },
-            ],
-          },
-          {
-            groupTitle: "C. Distribution & Commercial Licences",
-            subItems: [
-              { label: "Medical Device Wholesale Licence / Wholesale Drug Licence, as applicable", to: "/services/drug-licenses-for-importers" },
-              { label: "Wholesale Drug Licence – Form 20B / 21B, where applicable", to: "/services/drug-licenses-for-importers" },
-              { label: "State-level distribution / sale licence support", to: "/services/drug-licenses-for-importers" },
-              { label: "Licensing and compliance support for distributors and importers", to: "/services/drug-licenses-for-importers" },
-            ],
-          },
-          {
-            groupTitle: "D. Other Indian Regulatory Approvals & Compliance",
-            subItems: [
-              { label: "PCPNDT Registration & Compliance", to: "/services/pc-pndt-certificate" },
-              { label: "WPC / Wireless Planning & Coordination Approvals", to: "/services/wpc-wireless-medical-devices" },
-              { label: "EPR Registration & Compliance", to: "/services/india" },
-              { label: "E-Waste EPR", to: "/services/india" },
-              { label: "Battery Waste EPR", to: "/services/india" },
-              { label: "Plastic Waste EPR, where applicable", to: "/services/india" },
-              { label: "Free Sale Certificate (FSC)", to: "/services/india/free-sale" },
-              { label: "Market Standing Certificate (MSC)", to: "/services/india/market-standing" },
-              { label: "Non-Conviction Certificate (NCC)", to: "/services/india/non-conviction" },
-              { label: "MD-42 Certificate", to: "/services/india/md-42" },
-              { label: "Neutral / Special Code Certificate", to: "/services/india/neutral-code" },
-              { label: "Other applicable state/product-specific registrations", to: "/services/india" },
-            ],
-          },
-        ],
-      },
-      {
-        label: "EU MDR / IVDR Regulatory & Market Access",
-        to: "/services/eu",
-        groups: [
-          {
-            groupTitle: "Medical Devices – EU MDR",
-            subItems: [
-              { label: "EU MDR 2017/745 Regulatory Strategy", to: "/services/eu" },
-              { label: "Medical Device Classification", to: "/services/eu" },
-              { label: "CE Marking Support", to: "/services/eu" },
-              { label: "Conformity Assessment Strategy", to: "/services/eu" },
-              { label: "Notified Body Selection & Coordination", to: "/services/eu" },
-              { label: "Technical Documentation / Technical File", to: "/services/technical-documentation" },
-              { label: "GSPR Compliance", to: "/services/eu" },
-              { label: "Clinical Evaluation & Clinical Evaluation Report (CER)", to: "/services/technical-documentation" },
-              { label: "Clinical Investigation Strategy", to: "/services/eu" },
-              { label: "Risk Management – ISO 14971", to: "/services/iso-13485" },
-              { label: "PMS – Post-Market Surveillance", to: "/services/technical-documentation" },
-              { label: "PMCF – Post-Market Clinical Follow-up", to: "/services/technical-documentation" },
-              { label: "PSUR – Periodic Safety Update Report", to: "/services/technical-documentation" },
-              { label: "Vigilance & Incident Reporting", to: "/services/eu" },
-              { label: "EUDAMED Registration & Support", to: "/services/eu" },
-              { label: "Legacy Device / MDD-AIMDD to MDR Transition Support", to: "/services/eu" },
-              { label: "Post-Approval / Lifecycle Regulatory Support", to: "/services/eu" },
-            ],
-          },
-          {
-            groupTitle: "In Vitro Diagnostics – EU IVDR",
-            subItems: [
-              { label: "IVDR 2017/746 Regulatory Strategy", to: "/industries/ivd/eu" },
-              { label: "IVD Classification", to: "/industries/ivd/eu" },
-              { label: "CE Marking", to: "/industries/ivd/eu" },
-              { label: "Conformity Assessment Strategy", to: "/industries/ivd/eu" },
-              { label: "Notified Body / EU Reference Laboratory Strategy, where applicable", to: "/industries/ivd/eu" },
-              { label: "Technical Documentation", to: "/services/technical-documentation" },
-              { label: "Performance Evaluation", to: "/industries/ivd/eu" },
-              { label: "Performance Evaluation Report", to: "/services/technical-documentation" },
-              { label: "Scientific Validity", to: "/industries/ivd/eu" },
-              { label: "Analytical Performance", to: "/industries/ivd/eu" },
-              { label: "Clinical Performance", to: "/industries/ivd/eu" },
-              { label: "PMS / PMPF", to: "/services/technical-documentation" },
-              { label: "PSUR, where applicable", to: "/services/technical-documentation" },
-              { label: "Vigilance & Reporting", to: "/industries/ivd/eu" },
-              { label: "EUDAMED Registration", to: "/industries/ivd/eu" },
-              { label: "IVDD to IVDR Transition Support", to: "/industries/ivd/eu" },
-              { label: "Post-Market / Lifecycle Compliance", to: "/industries/ivd/eu" },
-            ],
-          },
-        ],
-      },
-      {
-        label: "European Authorised Representative (EAR)",
-        to: "/services/eu",
-        subItems: [
-          { label: "European Authorised Representative (EAR) Services", to: "/services/eu" },
-          { label: "Regulatory Representation in the EU", to: "/services/eu" },
-          { label: "Competent Authority Communication", to: "/services/eu" },
-          { label: "EUDAMED Support", to: "/services/eu" },
-          { label: "Vigilance / Incident Communication", to: "/services/eu" },
-          { label: "Regulatory Compliance & Lifecycle Support", to: "/services/eu" },
-        ],
-      },
-      {
-        label: "Global Quality & Compliance",
-        to: "/services/iso-13485",
-        subItems: [
-          { label: "ISO 13485 Implementation & Readiness", to: "/services/iso-13485" },
-          { label: "QMS Gap Assessment", to: "/services/iso-13485" },
-          { label: "MDSAP Readiness & Audit Support", to: "/services/mdsap" },
-          { label: "Internal Audit", to: "/services/iso-13485" },
-          { label: "Supplier Quality & Supplier Audits", to: "/services/iso-13485" },
-          { label: "CAPA Management", to: "/services/iso-13485" },
-          { label: "Risk Management", to: "/services/iso-13485" },
-          { label: "Quality System Development", to: "/services/iso-13485" },
-          { label: "Audit Readiness", to: "/services/iso-13485" },
-          { label: "Notified Body / Certification Body Audit Preparation", to: "/services/iso-13485" },
-          { label: "Regulatory Inspection Readiness", to: "/services/iso-13485" },
-          { label: "Post-Market Quality & Compliance", to: "/services/iso-13485" },
-        ],
-      },
-      {
-        label: "United Kingdom",
-        to: "/services/uk",
-        groups: [
-          {
-            groupTitle: "Medical Devices",
-            subItems: [
-              { label: "UK MDR 2002 Regulatory Strategy & Compliance", to: "/services/uk" },
-              { label: "UK Medical Device Classification", to: "/services/uk" },
-              { label: "UKCA Regulatory Strategy", to: "/services/uk" },
-              { label: "CE Mark Recognition / Transitional Arrangements Assessment", to: "/services/uk" },
-              { label: "UK Approved Body Strategy & Coordination", to: "/services/uk" },
-              { label: "UK Responsible Person (UKRP) Services", to: "/services/uk/ukrp" },
-              { label: "MHRA Registration", to: "/services/uk/ukrp" },
-              { label: "Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Clinical Evaluation / Clinical Evidence Strategy", to: "/services/uk" },
-              { label: "Post-Market Surveillance (PMS)", to: "/services/uk/ukrp" },
-              { label: "Vigilance & Incident Reporting", to: "/services/uk/ukrp" },
-              { label: "Regulatory Representation in the UK", to: "/services/uk/ukrp" },
-              { label: "Post-Approval & Lifecycle Regulatory Support", to: "/services/uk" },
-            ],
-          },
-          {
-            groupTitle: "IVDs",
-            subItems: [
-              { label: "UK IVD Regulatory Strategy", to: "/services/uk" },
-              { label: "UK MDR 2002 Compliance for IVDs", to: "/services/uk" },
-              { label: "IVD Classification & Regulatory Pathway Assessment", to: "/services/uk" },
-              { label: "UKCA / CE Regulatory Strategy", to: "/services/uk" },
-              { label: "UK Approved Body Coordination, where applicable", to: "/services/uk" },
-              { label: "UK Responsible Person (UKRP)", to: "/services/uk/ukrp" },
-              { label: "MHRA IVD Registration", to: "/services/uk/ukrp" },
-              { label: "IVD Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Performance Evaluation Strategy", to: "/services/uk" },
-              { label: "Analytical & Clinical Performance Assessment", to: "/services/uk" },
-              { label: "Post-Market Surveillance", to: "/services/uk/ukrp" },
-              { label: "Vigilance & Incident Reporting", to: "/services/uk/ukrp" },
-              { label: "Regulatory Representation", to: "/services/uk/ukrp" },
-              { label: "Post-Approval & Lifecycle Support", to: "/services/uk" },
-            ],
-          },
-          {
-            groupTitle: "Cosmetics",
-            subItems: [
-              { label: "UK Cosmetic Regulatory Strategy", to: "/industries/cosmetics" },
-              { label: "UK Cosmetic Product Compliance", to: "/industries/cosmetics" },
-              { label: "UK Responsible Person (UKRP)", to: "/industries/cosmetics" },
-              { label: "SCPN Notification", to: "/industries/cosmetics" },
-              { label: "Cosmetic Product Information File (PIF) Review", to: "/industries/cosmetics" },
-              { label: "Cosmetic Safety Assessment Coordination", to: "/industries/cosmetics" },
-              { label: "Cosmetic Product Labelling & Claims Review", to: "/industries/cosmetics" },
-              { label: "UK Market Entry Support", to: "/industries/cosmetics" },
-              { label: "Post-Market Compliance & Regulatory Support", to: "/industries/cosmetics" },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Australia",
-        to: "/services/australia",
-        groups: [
-          {
-            groupTitle: "Medical Devices",
-            subItems: [
-              { label: "TGA Regulatory Strategy", to: "/services/australia" },
-              { label: "Medical Device Classification", to: "/services/australia" },
-              { label: "Australian Regulatory Pathway Assessment", to: "/services/australia" },
-              { label: "ARTG Inclusion", to: "/services/australia" },
-              { label: "TGA Application & Submission Support", to: "/services/australia" },
-              { label: "Australian Sponsor Services", to: "/services/australia" },
-              { label: "Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Conformity Assessment Strategy", to: "/services/australia" },
-              { label: "Clinical Evidence / Evaluation Strategy", to: "/services/australia" },
-              { label: "Post-Market Surveillance", to: "/services/australia" },
-              { label: "Vigilance & Incident Reporting", to: "/services/australia" },
-              { label: "Regulatory Representation in Australia", to: "/services/australia" },
-              { label: "Post-Approval & Lifecycle Regulatory Support", to: "/services/australia" },
-            ],
-          },
-          {
-            groupTitle: "IVDs",
-            subItems: [
-              { label: "TGA IVD Regulatory Strategy", to: "/services/australia" },
-              { label: "IVD Classification", to: "/services/australia" },
-              { label: "Regulatory Pathway Assessment", to: "/services/australia" },
-              { label: "ARTG Inclusion for IVDs", to: "/services/australia" },
-              { label: "TGA Submission Support", to: "/services/australia" },
-              { label: "Australian Sponsor Services", to: "/services/australia" },
-              { label: "IVD Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Performance Evaluation Strategy", to: "/services/australia" },
-              { label: "Analytical & Clinical Performance Evidence", to: "/services/australia" },
-              { label: "Post-Market Surveillance", to: "/services/australia" },
-              { label: "Vigilance & Incident Reporting", to: "/services/australia" },
-              { label: "Regulatory Representation", to: "/services/australia" },
-              { label: "Post-Approval & Lifecycle Support", to: "/services/australia" },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Canada",
-        to: "/services/canada",
-        groups: [
-          {
-            groupTitle: "Medical Devices",
-            subItems: [
-              { label: "Health Canada Regulatory Strategy", to: "/services/canada" },
-              { label: "Medical Device Classification", to: "/services/canada" },
-              { label: "Medical Device Licence (MDL)", to: "/services/canada" },
-              { label: "Medical Device Establishment Licence (MDEL)", to: "/services/canada" },
-              { label: "Regulatory Submission Support", to: "/services/canada" },
-              { label: "Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Canadian Regulatory Representation", to: "/services/canada" },
-              { label: "Quality & Compliance Support", to: "/services/canada" },
-              { label: "Post-Market Surveillance", to: "/services/canada" },
-              { label: "Incident / Problem Reporting Support", to: "/services/canada" },
-              { label: "Licence Amendment & Lifecycle Support", to: "/services/canada" },
-            ],
-          },
-          {
-            groupTitle: "IVDs",
-            subItems: [
-              { label: "Health Canada IVD Regulatory Strategy", to: "/services/canada" },
-              { label: "IVD Classification", to: "/services/canada" },
-              { label: "Medical Device Licence (MDL) Support", to: "/services/canada" },
-              { label: "MDEL Support, where applicable", to: "/services/canada" },
-              { label: "IVD Technical Documentation Review", to: "/services/technical-documentation" },
-              { label: "Performance Evidence Strategy", to: "/services/canada" },
-              { label: "Regulatory Submission Support", to: "/services/canada" },
-              { label: "Canadian Regulatory Representation", to: "/services/canada" },
-              { label: "Post-Market Surveillance", to: "/services/canada" },
-              { label: "Incident Reporting", to: "/services/canada" },
-              { label: "Licence Maintenance & Lifecycle Support", to: "/services/canada" },
-            ],
-          },
-        ],
-      },
-      { label: "Authorized Representative (AIR / EAR / UKRP)", to: "/services/regulatory-affairs" },
-    ],
-  },
-  {
-    title: "Drug Licenses for Importers",
-    to: "/services/drug-licenses-for-importers",
-    items: [
-      { label: "Registration Certificate (Form 41 / Form 40)", to: "/services/drug-licenses-for-importers" },
-      { label: "Drug Import License (Form 10 / Form 10-A)", to: "/services/drug-licenses-for-importers" },
-      { label: "Form 11 Test License for Import & R&D", to: "/services/drug-licenses-for-importers" },
-      { label: "Wholesale Drug License (Form 20B/21B)", to: "/services/drug-licenses-for-importers" },
-      { label: "Authorized Indian Agent (AIR / Form 9)", to: "/services/drug-licenses-for-importers" },
-      { label: "Rule 37 Bulk Repackaging Approvals", to: "/services/drug-licenses-for-importers" },
-      { label: "Post-Approval Variations & Shelf-Life", to: "/services/drug-licenses-for-importers" },
-    ],
-  },
-  {
-    title: "WPC Wireless Device Approval",
-    to: "/services/wpc-wireless-medical-devices",
-    items: [
-      { label: "Equipment Type Approval (ETA)", to: "/services/wpc-wireless-medical-devices" },
-      { label: "WPC Import License (RLO Permit)", to: "/services/wpc-wireless-medical-devices" },
-      { label: "Dealer Possession License (DPL / NDPL)", to: "/services/wpc-wireless-medical-devices" },
-      { label: "Experimental & Demo Licenses", to: "/services/wpc-wireless-medical-devices" },
-      { label: "Saral Sanchar Portal Technical Filing", to: "/services/wpc-wireless-medical-devices" },
-      { label: "RF Test Report & Spectrum Compliance", to: "/services/wpc-wireless-medical-devices" },
-    ],
-  },
+const otherServices: OtherService[] = [
   {
     title: "PC-PNDT Certificate",
     to: "/services/pc-pndt-certificate",
@@ -358,8 +21,7 @@ const serviceDirectory: ServiceItem[] = [
       { label: "Form A Statutory Application Filing", to: "/services/pc-pndt-certificate" },
       { label: "Form B Registration Certificate Grant", to: "/services/pc-pndt-certificate" },
       { label: "Ultrasound & Imaging Machine Registration", to: "/services/pc-pndt-certificate" },
-      { label: "Importer, OEM & Dealer Verification", to: "/services/pc-pndt-certificate" },
-      { label: "Buyback & Maintenance Unit Licensure", to: "/services/pc-pndt-certificate" },
+      { label: "OEM, Dealer & Importer Verification Support", to: "/services/pc-pndt-certificate" },
       { label: "Statutory 2-Year Record Retention Setup", to: "/services/pc-pndt-certificate" },
     ],
   },
@@ -368,46 +30,29 @@ const serviceDirectory: ServiceItem[] = [
     to: "/services/iec-ad-code",
     items: [
       { label: "New Import Export Code (IEC) from DGFT", to: "/services/iec-ad-code" },
-      { label: "IEC Application Prep & Modifications", to: "/services/iec-ad-code" },
+      { label: "IEC Application Preparation & Modifications", to: "/services/iec-ad-code" },
       { label: "Bank Authority & Exporter Documentation", to: "/services/iec-ad-code" },
       { label: "Port-Wise AD Code ICEGATE Registration", to: "/services/iec-ad-code" },
-      { label: "Customs EDI Profile & Port Linking", to: "/services/iec-ad-code" },
+      { label: "Customs EDI Profile & Port Registration", to: "/services/iec-ad-code" },
       { label: "AD Code Amendment & Query Resolution", to: "/services/iec-ad-code" },
     ],
   },
   {
-    title: "Quality Systems / ISO 13485",
+    title: "Global Quality & Compliance",
     to: "/services/iso-13485",
     items: [
-      { label: "ISO 13485:2016 QMS Implementation", to: "/services/iso-13485" },
-      { label: "Risk Management Systems (ISO 14971)", to: "/services/iso-13485" },
-      { label: "Design History Files (DHF) & DMR", to: "/services/iso-13485" },
-      { label: "Internal Quality Audits & Gap Analysis", to: "/services/iso-13485" },
-      { label: "CAPA & Supplier Quality Controls", to: "/services/iso-13485" },
-      { label: "Notified Body Audit Preparation", to: "/services/iso-13485" },
-    ],
-  },
-  {
-    title: "MDSAP",
-    to: "/services/mdsap",
-    items: [
-      { label: "5-Country Audit Harmonization Strategy", to: "/services/mdsap" },
-      { label: "FDA, Health Canada, TGA, ANVISA & MHLW", to: "/services/mdsap" },
-      { label: "MDSAP Quality Manual & SOP Alignment", to: "/services/mdsap" },
-      { label: "Mock MDSAP Audits & Audit Defense", to: "/services/mdsap" },
-      { label: "Non-Conformity Grading & Remediation", to: "/services/mdsap" },
-    ],
-  },
-  {
-    title: "Technical Documentation",
-    to: "/services/technical-documentation",
-    items: [
-      { label: "EU MDR (2017/745) Technical Files", to: "/services/technical-documentation" },
-      { label: "Clinical Evaluation Reports (CER / CEP)", to: "/services/technical-documentation" },
-      { label: "Post-Market Surveillance (PMS / PMCF)", to: "/services/technical-documentation" },
-      { label: "Summary of Safety & Performance (SSCP)", to: "/services/technical-documentation" },
-      { label: "US FDA eSTAR Dossier Preparation", to: "/services/technical-documentation" },
-      { label: "STED Dossiers for Global Regulators", to: "/services/technical-documentation" },
+      { label: "ISO 13485 Implementation & Readiness", to: "/services/iso-13485" },
+      { label: "QMS Gap Assessment", to: "/services/iso-13485" },
+      { label: "MDSAP Readiness & Audit Support", to: "/services/mdsap" },
+      { label: "Internal Audit", to: "/services/iso-13485" },
+      { label: "Supplier Quality & Supplier Audits", to: "/services/iso-13485" },
+      { label: "CAPA Management", to: "/services/iso-13485" },
+      { label: "Risk Management", to: "/services/iso-13485" },
+      { label: "Quality System Development", to: "/services/iso-13485" },
+      { label: "Audit Readiness", to: "/services/iso-13485" },
+      { label: "Notified Body / Certification Body Audit Preparation", to: "/services/iso-13485" },
+      { label: "Regulatory Inspection Readiness", to: "/services/iso-13485" },
+      { label: "Post-Market Quality & Compliance", to: "/services/iso-13485" },
     ],
   },
   {
@@ -415,7 +60,7 @@ const serviceDirectory: ServiceItem[] = [
     to: "/services/market-access",
     items: [
       { label: "India CDSCO Market Entry & Distribution", to: "/services/india" },
-      { label: "US FDA 510(k) Clearance & Agent", to: "/services/usa" },
+      { label: "US FDA 510(k) Clearance & Agent Services", to: "/services/usa" },
       { label: "European Union CE Mark Certification", to: "/services/eu" },
       { label: "UK, Australia, Canada & Latin America", to: "/markets" },
       { label: "Free Sale (FSC) & Market Standing (MSC)", to: "/services/india/free-sale" },
@@ -429,8 +74,8 @@ const serviceDirectory: ServiceItem[] = [
       { label: "Mock Regulatory & Pre-Inspection Audits", to: "/services/audit-compliance" },
       { label: "FDA 483 & Warning Letter Remediation", to: "/services/audit-compliance" },
       { label: "Notified Body Non-Conformity Resolution", to: "/services/audit-compliance" },
-      { label: "Biocompatibility & Testing (ISO 10993)", to: "/services/audit-compliance" },
-      { label: "Post-Market Vigilance & Recall Support", to: "/services/audit-compliance" },
+      { label: "Biocompatibility & Testing Strategy (ISO 10993)", to: "/services/audit-compliance" },
+      { label: "Post-Market Vigilance & Recall Coordination", to: "/services/audit-compliance" },
     ],
   },
 ];
@@ -449,15 +94,12 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
     title: "Services",
     links: [
       { label: "Regulatory Affairs", to: "/services/regulatory-affairs" },
-      { label: "Drug Licenses for Importers", to: "/services/drug-licenses-for-importers" },
-      { label: "WPC Wireless Device Approval", to: "/services/wpc-wireless-medical-devices" },
+      { label: "Pharmaceutical & Drug Regulatory Services", to: "/services/drug-licenses-for-importers" },
+      { label: "Cosmetics Regulatory & Global Market Access", to: "/industries/cosmetics" },
+      { label: "Global Quality & Compliance", to: "/services/iso-13485" },
       { label: "PC-PNDT Certificate", to: "/services/pc-pndt-certificate" },
       { label: "IEC & AD Code Registration", to: "/services/iec-ad-code" },
-      { label: "Quality Systems / ISO 13485", to: "/services/iso-13485" },
-      { label: "MDSAP", to: "/services/mdsap" },
-      { label: "Technical Documentation", to: "/services/technical-documentation" },
-      { label: "Market Access", to: "/services/market-access" },
-      { label: "Audit & Compliance Support", to: "/services/audit-compliance" },
+      { label: "Market Access & Audit Compliance", to: "/services/audit-compliance" },
     ],
   },
   {
@@ -485,7 +127,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
 export function Footer() {
   return (
     <footer>
-      {/* SERVICES BREAKDOWN DIRECTORY WITH EXACT SERVICES HEADINGS */}
+      {/* MASTER SERVICES DIRECTORY */}
       <section className="bg-[#f8fafc] text-[#0f2340] border-t border-b border-gray-200 py-14 lg:py-16">
         <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-6 border-b border-gray-200">
@@ -498,7 +140,7 @@ export function Footer() {
                   Services Directory & Compliance Scope
                 </h2>
                 <p className="text-xs text-gray-500">
-                  Comprehensive regulatory, technical documentation, and quality management offerings.
+                  Comprehensive regulatory affairs, pharmaceutical licensing, cosmetic compliance, and technical dossiers.
                 </p>
               </div>
             </div>
@@ -511,12 +153,761 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Wide Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 items-start">
-            {serviceDirectory.map((service, idx) => (
+          {/* 1. MASTER REGULATORY AFFAIRS SECTION */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-gray-200 mb-8">
+              <Link
+                to="/services/regulatory-affairs"
+                className="text-xl sm:text-2xl font-extrabold text-[#0f2340] hover:text-[#0b3a96] transition-colors"
+              >
+                Regulatory Affairs
+              </Link>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3 py-1 rounded-md border border-blue-100 w-fit">
+                Global Regulatory Submissions & Approvals
+              </span>
+            </div>
+
+            <div className="space-y-10">
+              {/* US FDA Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-md bg-[#0b3a96] text-white text-xs font-bold">
+                    US FDA
+                  </span>
+                  <Link to="/services/usa" className="text-sm font-bold text-[#0f2340] hover:text-[#0b3a96]">
+                    US FDA Regulatory & Market Access
+                  </Link>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 pt-2">
+                  {[
+                    { label: "510(k) – Premarket Notification", to: "/services/usa/510k" },
+                    { label: "De Novo Classification", to: "/services/usa/de-novo" },
+                    { label: "PMA – Premarket Approval", to: "/services/usa/pma" },
+                    { label: "FDA Q-Submission / Pre-Submission", to: "/services/usa/q-submission" },
+                    { label: "FDA Regulatory Strategy & Pathway Assessment", to: "/services/usa" },
+                    { label: "Medical Device Classification", to: "/services/usa/513g" },
+                    { label: "US FDA Agent Services", to: "/services/usa/agent-service" },
+                    { label: "FDA Registration & Device Listing", to: "/services/usa/establishment-registration" },
+                    { label: "eSTAR Submission Support", to: "/services/usa/e-star" },
+                    { label: "Post-Approval Compliance", to: "/services/usa" },
+                    { label: "Device Lifecycle Management", to: "/services/usa" },
+                    { label: "Post-Market Regulatory Support", to: "/services/usa" },
+                  ].map((sub, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* India CDSCO Section with Side-by-Side A, B, C, D Subheadings */}
+              <div className="space-y-4 pt-6 border-t border-gray-100">
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-md bg-[#0b3a96] text-white text-xs font-bold">
+                    India CDSCO
+                  </span>
+                  <Link to="/services/india" className="text-sm font-bold text-[#0f2340] hover:text-[#0b3a96]">
+                    India Regulatory & Market Access Services (CDSCO)
+                  </Link>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start pt-2">
+                  {/* Part A */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      A. Importer / Foreign Manufacturer Services
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "CDSCO Medical Device Import Licence – MD-14 / MD-15", to: "/services/india/class-a-import" },
+                        { label: "Class A Registration – GSR 777(E), where applicable", to: "/services/india/mfg-class-a-gsr" },
+                        { label: "Investigational Device Import Licence – MD-18 / MD-19", to: "/services/india/investigational-devices" },
+                        { label: "Clinical Evaluation Import Permission – MD-24 / MD-25", to: "/services/india/investigational-devices" },
+                        { label: "Novel Medical Device / IVD Import Permission – MD-26 / MD-27", to: "/services/india/mfg-class-c-d" },
+                        { label: "IVD Testing & Evaluation Import Licence – MD-16 / MD-17", to: "/services/india/ivd" },
+                        { label: "Personal Use Import Permission – MD-20 / MD-21", to: "/services/india" },
+                        { label: "Indian Authorized Agent / Regulatory Representative", to: "/industries/medical-devices/india/for-importer" },
+                        { label: "SUGAM Portal Registration & Application Support", to: "/services/india" },
+                        { label: "CDSCO Product Classification & Regulatory Strategy", to: "/services/india" },
+                        { label: "CDSCO Submission & Query Response Support", to: "/services/india" },
+                        { label: "Post-Approval & Lifecycle Regulatory Support", to: "/services/india" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Part B */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      B. Indian Manufacturer Services
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "Class A & B Manufacturing Licence – MD-3 / MD-5", to: "/services/india/mfg-class-a-b" },
+                        { label: "Class C & D Manufacturing Licence – MD-7 / MD-9", to: "/services/india/mfg-class-c-d" },
+                        { label: "Class A Registration – GSR 777(E)", to: "/services/india/mfg-class-a-gsr" },
+                        { label: "Loan Licence – Class A & B – MD-4 / MD-6", to: "/services/india/manufacturing-licenses" },
+                        { label: "Loan Licence – Class C & D – MD-8 / MD-10", to: "/services/india/manufacturing-licenses" },
+                        { label: "Manufacturing Facility Regulatory Readiness", to: "/services/india/manufacturing-licenses" },
+                        { label: "CDSCO Manufacturing Licence Support", to: "/services/india/manufacturing-licenses" },
+                        { label: "SUGAM Portal Registration & Application Support", to: "/services/india" },
+                        { label: "Manufacturing Compliance & Post-Approval Support", to: "/services/india" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Part C */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      C. Distribution & Commercial Licences
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "Medical Device Wholesale Licence / Wholesale Drug Licence", to: "/services/drug-licenses-for-importers" },
+                        { label: "Wholesale Drug Licence – Form 20B / 21B", to: "/services/drug-licenses-for-importers" },
+                        { label: "State-level distribution / sale licence support", to: "/services/drug-licenses-for-importers" },
+                        { label: "Licensing and compliance support for distributors & importers", to: "/services/drug-licenses-for-importers" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Part D */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      D. Other Indian Regulatory Approvals & Compliance
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "PCPNDT Registration & Compliance", to: "/services/pc-pndt-certificate" },
+                        { label: "WPC / Wireless Planning & Coordination Approvals", to: "/services/wpc-wireless-medical-devices" },
+                        { label: "EPR Registration & Compliance (E-Waste / Battery / Plastic)", to: "/services/india" },
+                        { label: "Free Sale Certificate (FSC)", to: "/services/india/free-sale" },
+                        { label: "Market Standing Certificate (MSC)", to: "/services/india/market-standing" },
+                        { label: "Non-Conviction Certificate (NCC)", to: "/services/india/non-conviction" },
+                        { label: "MD-42 Certificate", to: "/services/india/md-42" },
+                        { label: "Neutral / Special Code Certificate", to: "/services/india/neutral-code" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* EU MDR / IVDR & EAR Section */}
+              <div className="space-y-4 pt-6 border-t border-gray-100">
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-md bg-[#0b3a96] text-white text-xs font-bold">
+                    European Union
+                  </span>
+                  <Link to="/services/eu" className="text-sm font-bold text-[#0f2340] hover:text-[#0b3a96]">
+                    EU MDR / IVDR Regulatory & Market Access & EAR Services
+                  </Link>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start pt-2">
+                  {/* Medical Devices MDR */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      Medical Devices – EU MDR 2017/745
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "EU MDR 2017/745 Regulatory Strategy", to: "/services/eu" },
+                        { label: "Medical Device Classification & CE Marking", to: "/services/eu" },
+                        { label: "Conformity Assessment Strategy", to: "/services/eu" },
+                        { label: "Notified Body Selection & Coordination", to: "/services/eu" },
+                        { label: "Technical Documentation / Technical File", to: "/services/technical-documentation" },
+                        { label: "GSPR Compliance & Risk Management (ISO 14971)", to: "/services/eu" },
+                        { label: "Clinical Evaluation Reports (CER) & CEP", to: "/services/technical-documentation" },
+                        { label: "PMS, PMCF & PSUR Reporting", to: "/services/technical-documentation" },
+                        { label: "Vigilance, Incident Reporting & EUDAMED", to: "/services/eu" },
+                        { label: "MDD-AIMDD to MDR Transition Support", to: "/services/eu" },
+                        { label: "Post-Approval / Lifecycle Regulatory Support", to: "/services/eu" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* IVD IVDR */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      In Vitro Diagnostics – EU IVDR 2017/746
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "IVDR 2017/746 Regulatory Strategy", to: "/industries/ivd/eu" },
+                        { label: "IVD Classification & CE Marking", to: "/industries/ivd/eu" },
+                        { label: "Conformity Assessment & Notified Body Strategy", to: "/industries/ivd/eu" },
+                        { label: "Technical Documentation Compilation", to: "/services/technical-documentation" },
+                        { label: "Performance Evaluation Reports (PER)", to: "/services/technical-documentation" },
+                        { label: "Scientific Validity, Analytical & Clinical Performance", to: "/industries/ivd/eu" },
+                        { label: "PMS / PMPF Plans & PSUR Reporting", to: "/services/technical-documentation" },
+                        { label: "IVDD to IVDR Transition & EUDAMED Support", to: "/industries/ivd/eu" },
+                        { label: "Post-Market / Lifecycle Compliance", to: "/industries/ivd/eu" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* EAR */}
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-1.5 border-b border-blue-100">
+                      European Authorised Representative (EAR)
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "European Authorised Representative (EAR) Services", to: "/services/eu" },
+                        { label: "Regulatory Representation in the EU", to: "/services/eu" },
+                        { label: "Competent Authority Communication", to: "/services/eu" },
+                        { label: "EUDAMED Support & Mandate Setup", to: "/services/eu" },
+                        { label: "Vigilance / Incident Communication", to: "/services/eu" },
+                        { label: "Regulatory Compliance & Lifecycle Support", to: "/services/eu" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* UK, Australia & Canada Section */}
+              <div className="space-y-4 pt-6 border-t border-gray-100">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                  {/* UK */}
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2.5 py-0.5 rounded bg-[#0b3a96] text-white text-[11px] font-bold">
+                        UK
+                      </span>
+                      <Link to="/services/uk" className="text-xs font-bold text-[#0f2340] hover:text-[#0b3a96] uppercase tracking-wide">
+                        United Kingdom (UKCA & MHRA)
+                      </Link>
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "UK MDR 2002 Regulatory Strategy & Compliance", to: "/services/uk" },
+                        { label: "UK Medical Device & IVD Classification", to: "/services/uk" },
+                        { label: "UK Responsible Person (UKRP) Services", to: "/services/uk/ukrp" },
+                        { label: "MHRA Device & IVD Registration", to: "/services/uk/ukrp" },
+                        { label: "UKCA & CE Mark Recognition Strategy", to: "/services/uk" },
+                        { label: "Post-Market Surveillance (PMS) & Vigilance", to: "/services/uk/ukrp" },
+                        { label: "UK Cosmetic Compliance & SCPN Notification", to: "/industries/cosmetics" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Australia */}
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2.5 py-0.5 rounded bg-[#0b3a96] text-white text-[11px] font-bold">
+                        AUS
+                      </span>
+                      <Link to="/services/australia" className="text-xs font-bold text-[#0f2340] hover:text-[#0b3a96] uppercase tracking-wide">
+                        Australia (TGA)
+                      </Link>
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "TGA Medical Device & IVD Strategy", to: "/services/australia" },
+                        { label: "ARTG Inclusion Submissions Support", to: "/services/australia" },
+                        { label: "Official Australian Sponsor Services", to: "/services/australia" },
+                        { label: "Technical Documentation & Clinical Evaluation", to: "/services/technical-documentation" },
+                        { label: "TGA Post-Market Surveillance & Vigilance", to: "/services/australia" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Canada */}
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2.5 py-0.5 rounded bg-[#0b3a96] text-white text-[11px] font-bold">
+                        CAN
+                      </span>
+                      <Link to="/services/canada" className="text-xs font-bold text-[#0f2340] hover:text-[#0b3a96] uppercase tracking-wide">
+                        Canada (Health Canada)
+                      </Link>
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        { label: "Health Canada Regulatory Strategy & Classification", to: "/services/canada" },
+                        { label: "Medical Device Licence (MDL) Applications", to: "/services/canada" },
+                        { label: "Medical Device Establishment Licence (MDEL)", to: "/services/canada" },
+                        { label: "Canadian Regulatory Representation & Support", to: "/services/canada" },
+                        { label: "Incident & Mandatory Problem Reporting", to: "/services/canada" },
+                      ].map((sub, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                          <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                          <Link to={sub.to} className="leading-snug">
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 2. MASTER PHARMACEUTICAL & DRUG REGULATORY SERVICES SECTION */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-gray-200 mb-8">
+              <Link
+                to="/services/drug-licenses-for-importers"
+                className="text-xl sm:text-2xl font-extrabold text-[#0f2340] hover:text-[#0b3a96] transition-colors"
+              >
+                Pharmaceutical & Drug Regulatory Services
+              </Link>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3 py-1 rounded-md border border-blue-100 w-fit">
+                CDSCO Drug Licensing, Registration & Post-Approval
+              </span>
+            </div>
+
+            {/* 6 Subheadings Side-by-Side in a 3-Column Responsive Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+              {/* 1. Drug Import Licensing & Registration – India */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>1. Drug Import Licensing & Registration – India</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Drug Import Licence & Registration", to: "/services/drug-licenses-for-importers" },
+                    { label: "Registration Certificate – Form 41", to: "/services/drug-licenses-for-importers" },
+                    { label: "Import Licence – Form 10 / 10-A", to: "/services/drug-licenses-for-importers" },
+                    { label: "Form 40 Application Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Form 8 / 8-A Application Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Test Licence – Form 11", to: "/services/drug-licenses-for-importers" },
+                    { label: "Import of Trial / Testing Quantities", to: "/services/drug-licenses-for-importers" },
+                    { label: "New Drug / New Chemical Entity (NCE) Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "API Import Registration & Licensing", to: "/services/drug-licenses-for-importers" },
+                    { label: "Fixed Dose Combination (FDC) Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Phytopharmaceutical Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Biologics & Biosimilars", to: "/services/drug-licenses-for-importers" },
+                    { label: "Vaccines", to: "/services/drug-licenses-for-importers" },
+                    { label: "Recombinant Therapeutic Products", to: "/services/drug-licenses-for-importers" },
+                    { label: "Blood Products", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 2. Foreign Manufacturer & Product Registration */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>2. Foreign Manufacturer & Product Registration</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Overseas Manufacturing Site Registration", to: "/services/drug-licenses-for-importers" },
+                    { label: "Foreign Manufacturer Registration", to: "/services/drug-licenses-for-importers" },
+                    { label: "Product Registration", to: "/services/drug-licenses-for-importers" },
+                    { label: "Plant Master File (PMF)", to: "/services/drug-licenses-for-importers" },
+                    { label: "Drug Master File (DMF) / Open Part Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "GMP Documentation Review", to: "/services/drug-licenses-for-importers" },
+                    { label: "COPP Documentation & Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Manufacturing Site Change / Variation Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Manufacturer Transfer Support", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 3. Indian Authorized Agent & Market Entry */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>3. Indian Authorized Agent & Market Entry</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Authorized Indian Agent (AIR) Services", to: "/services/drug-licenses-for-importers" },
+                    { label: "Regulatory Representation in India", to: "/services/drug-licenses-for-importers" },
+                    { label: "CDSCO Liaison & Regulatory Authority Interaction", to: "/services/drug-licenses-for-importers" },
+                    { label: "SUGAM Portal Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "India Market Entry Strategy", to: "/services/drug-licenses-for-importers" },
+                    { label: "Importer / Distributor Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Regulatory Query & Deficiency Response", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 4. Wholesale & Distribution Licensing */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>4. Wholesale & Distribution Licensing</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Wholesale Drug Licence", to: "/services/drug-licenses-for-importers" },
+                    { label: "Form 20B / 21B", to: "/services/drug-licenses-for-importers" },
+                    { label: "State FDA Licensing Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Distributor / Stockist Licensing", to: "/services/drug-licenses-for-importers" },
+                    { label: "Storage & Warehousing Compliance", to: "/services/drug-licenses-for-importers" },
+                    { label: "Distribution Regulatory Compliance", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 5. Clinical, Testing & R&D Regulatory Support */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>5. Clinical, Testing & R&D Regulatory Support</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Test Licence – Form 11", to: "/services/drug-licenses-for-importers" },
+                    { label: "Import of Trial Quantities", to: "/services/drug-licenses-for-importers" },
+                    { label: "Clinical Batch / Sample Import Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Laboratory Testing / Analysis Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Clinical Trial / R&D Regulatory Support, where applicable", to: "/services/drug-licenses-for-importers" },
+                    { label: "BA/BE Regulatory Support", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 6. Post-Approval & Lifecycle Management */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3a96]" />
+                  <span>6. Post-Approval & Lifecycle Management</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Post-Approval Changes", to: "/services/drug-licenses-for-importers" },
+                    { label: "Site Variations", to: "/services/drug-licenses-for-importers" },
+                    { label: "Product Variations", to: "/services/drug-licenses-for-importers" },
+                    { label: "Shelf-Life Extension", to: "/services/drug-licenses-for-importers" },
+                    { label: "Stability Filing Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Manufacturer Transfer", to: "/services/drug-licenses-for-importers" },
+                    { label: "Rule 37 / Bulk Repackaging Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Renewal / Retention Support", to: "/services/drug-licenses-for-importers" },
+                    { label: "Regulatory Query & Compliance Support", to: "/services/drug-licenses-for-importers" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. MASTER COSMETICS REGULATORY & GLOBAL MARKET ACCESS SECTION */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-gray-200 mb-8">
+              <Link
+                to="/industries/cosmetics"
+                className="text-xl sm:text-2xl font-extrabold text-[#0f2340] hover:text-[#0b3a96] transition-colors flex items-center gap-2"
+              >
+                Cosmetics Regulatory & Global Market Access
+              </Link>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3 py-1 rounded-md border border-blue-100 w-fit">
+                MoCRA, EU RP, CPSR, PIF, CPNP, SCPN & CDSCO
+              </span>
+            </div>
+
+            {/* 6 Country Columns Side-by-Side in a 3-Column Responsive Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+              {/* 1. India – Cosmetics */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇮🇳</span>
+                  <span>India – Cosmetics (CDSCO)</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "CDSCO / Central Licensing Authority Regulatory Strategy", to: "/industries/cosmetics" },
+                    { label: "Cosmetics Rules, 2020 Compliance", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Classification", to: "/industries/cosmetics" },
+                    { label: "Import Registration Certificate – COS-1 / COS-2", to: "/industries/cosmetics" },
+                    { label: "Manufacturing Licence – COS-5 / COS-8, as applicable", to: "/industries/cosmetics" },
+                    { label: "Import & Manufacturing Regulatory Support", to: "/industries/cosmetics" },
+                    { label: "Product / Ingredient Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Information / Technical Documentation Review", to: "/industries/cosmetics" },
+                    { label: "Safety & Ingredient Documentation Review", to: "/industries/cosmetics" },
+                    { label: "Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "SUGAM Portal Support", to: "/industries/cosmetics" },
+                    { label: "Regulatory Query Response Support", to: "/industries/cosmetics" },
+                    { label: "Post-Approval / Lifecycle Compliance", to: "/industries/cosmetics" },
+                    { label: "Regulatory Representation & Market Entry Support", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 2. USA – Cosmetics (MoCRA) */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇺🇸</span>
+                  <span>USA – Cosmetics (MoCRA)</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "FDA Cosmetic Regulatory Support", to: "/industries/cosmetics" },
+                    { label: "US Cosmetic Regulatory Strategy", to: "/industries/cosmetics" },
+                    { label: "MoCRA Compliance Support (Key Framework)", to: "/industries/cosmetics" },
+                    { label: "FDA Facility Registration", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Listing", to: "/industries/cosmetics" },
+                    { label: "Responsible Person Regulatory Support", to: "/industries/cosmetics" },
+                    { label: "Product & Ingredient Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Safety Substantiation Documentation Review", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "Adverse Event Reporting Support", to: "/industries/cosmetics" },
+                    { label: "MoCRA Record-Keeping & Compliance Support", to: "/industries/cosmetics" },
+                    { label: "Regulatory Gap Assessment", to: "/industries/cosmetics" },
+                    { label: "US Market Entry Support", to: "/industries/cosmetics" },
+                    { label: "Post-Market Compliance", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 3. European Union – Cosmetics */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇪🇺</span>
+                  <span>European Union – Cosmetics</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "EU Cosmetic Regulatory & Market Access", to: "/industries/cosmetics" },
+                    { label: "EU Cosmetics Regulation (EC) No. 1223/2009 Compliance", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Classification", to: "/industries/cosmetics" },
+                    { label: "EU Responsible Person (EU RP) Services", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Safety Report (CPSR) Support", to: "/industries/cosmetics" },
+                    { label: "Product Information File (PIF) Review", to: "/industries/cosmetics" },
+                    { label: "CPNP Notification Management", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Ingredient Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Safety Assessment Coordination", to: "/industries/cosmetics" },
+                    { label: "Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "Claims Substantiation Support", to: "/industries/cosmetics" },
+                    { label: "GMP / ISO 22716 Readiness", to: "/industries/cosmetics" },
+                    { label: "Post-Market Surveillance / Cosmetovigilance Support", to: "/industries/cosmetics" },
+                    { label: "Regulatory Representation & EU Market Entry", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 4. United Kingdom – Cosmetics */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇬🇧</span>
+                  <span>United Kingdom – Cosmetics</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "UK Cosmetic Regulatory & Market Access", to: "/industries/cosmetics" },
+                    { label: "UK Cosmetic Regulatory Strategy", to: "/industries/cosmetics" },
+                    { label: "UK Cosmetics Regulation Compliance", to: "/industries/cosmetics" },
+                    { label: "UK Responsible Person (UK RP) Mandate", to: "/industries/cosmetics" },
+                    { label: "SCPN Notification Support", to: "/industries/cosmetics" },
+                    { label: "Product Information File (PIF) Review", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Safety Assessment / CPSR Support", to: "/industries/cosmetics" },
+                    { label: "Ingredient Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "Claims Substantiation", to: "/industries/cosmetics" },
+                    { label: "GMP / ISO 22716 Support", to: "/industries/cosmetics" },
+                    { label: "Post-Market Compliance & Safety Reporting", to: "/industries/cosmetics" },
+                    { label: "UK Market Entry Support & Representation", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 5. Australia – Cosmetics */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇦🇺</span>
+                  <span>Australia – Cosmetics (AICIS)</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Australia Cosmetic Regulatory & Market Access", to: "/industries/cosmetics" },
+                    { label: "Australian Cosmetic Regulatory Strategy", to: "/industries/cosmetics" },
+                    { label: "Product Classification", to: "/industries/cosmetics" },
+                    { label: "AICIS Regulatory Assessment", to: "/industries/cosmetics" },
+                    { label: "AICIS Registration / Notification Support", to: "/industries/cosmetics" },
+                    { label: "Ingredient / Chemical Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Product & Ingredient Review", to: "/industries/cosmetics" },
+                    { label: "Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "Australian Market Entry Support", to: "/industries/cosmetics" },
+                    { label: "Regulatory Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Post-Market Compliance Support", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 6. Canada – Cosmetics */}
+              <div className="space-y-3 bg-gray-50/60 p-4 sm:p-5 rounded-2xl border border-gray-200/80">
+                <div className="text-xs font-bold text-[#0b3a96] uppercase tracking-wide pb-2 border-b border-blue-100 flex items-center gap-1.5">
+                  <span className="text-base">🇨🇦</span>
+                  <span>Canada – Cosmetics (Health Canada)</span>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {[
+                    { label: "Canada Cosmetic Regulatory & Market Access", to: "/industries/cosmetics" },
+                    { label: "Health Canada Cosmetic Regulatory Strategy", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Product Compliance", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Notification Form (CNF)", to: "/industries/cosmetics" },
+                    { label: "Ingredient / Formulation Compliance Assessment", to: "/industries/cosmetics" },
+                    { label: "Cosmetic Ingredient Hotlist Review", to: "/industries/cosmetics" },
+                    { label: "Product Labelling & Claims Review", to: "/industries/cosmetics" },
+                    { label: "Safety & Supporting Documentation Review", to: "/industries/cosmetics" },
+                    { label: "Canadian Market Entry Support", to: "/industries/cosmetics" },
+                    { label: "Regulatory Compliance Support", to: "/industries/cosmetics" },
+                    { label: "Post-Market Compliance", to: "/industries/cosmetics" },
+                  ].map((sub, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                      <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                      <Link to={sub.to} className="leading-snug">
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 4. OTHER SERVICES DIRECTORY GRID (SIDE-BY-SIDE CARDS) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+            {otherServices.map((service, idx) => (
               <div
                 key={idx}
-                className="space-y-4 bg-white p-6 sm:p-7 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                className="bg-white p-6 sm:p-7 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
                   <Link
@@ -525,62 +916,13 @@ export function Footer() {
                   >
                     {service.title}
                   </Link>
-                  <ul className="mt-4 space-y-3">
+                  <ul className="mt-4 space-y-2 pl-1">
                     {service.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="space-y-2">
-                        {item.groups && item.groups.length > 0 ? (
-                          <div className="space-y-3 pt-1">
-                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-50/90 border border-blue-200/70 text-[#0b3a96] text-xs font-bold">
-                              <Link to={item.to} className="hover:underline">
-                                {item.label}
-                              </Link>
-                            </div>
-                            <div className="space-y-4 pl-1">
-                              {item.groups.map((group, gIdx) => (
-                                <div key={gIdx} className="space-y-1.5">
-                                  <div className="text-[11px] font-bold text-[#0f2340] tracking-wide bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
-                                    {group.groupTitle}
-                                  </div>
-                                  <ul className="pl-2.5 space-y-2 border-l-2 border-blue-200/80 ml-1.5">
-                                    {group.subItems.map((sub, subIdx) => (
-                                      <li key={subIdx} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
-                                        <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
-                                        <Link to={sub.to} className="leading-snug">
-                                          {sub.label}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        ) : item.subItems && item.subItems.length > 0 ? (
-                          <div className="space-y-2 pt-1">
-                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-50/90 border border-blue-200/70 text-[#0b3a96] text-xs font-bold">
-                              <Link to={item.to} className="hover:underline">
-                                {item.label}
-                              </Link>
-                            </div>
-                            <ul className="pl-2.5 space-y-2 border-l-2 border-blue-200/80 ml-1.5">
-                              {item.subItems.map((sub, subIdx) => (
-                                <li key={subIdx} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
-                                  <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
-                                  <Link to={sub.to} className="leading-snug">
-                                    {sub.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ) : (
-                          <div className="flex items-start gap-2 text-xs text-gray-700 font-medium hover:text-[#0b3a96] transition-colors">
-                            <span className="text-[#0b3a96] text-sm leading-none mt-0.5">•</span>
-                            <Link to={item.to} className="leading-snug">
-                              {item.label}
-                            </Link>
-                          </div>
-                        )}
+                      <li key={itemIdx} className="flex items-start gap-2 text-xs text-gray-600 hover:text-[#0b3a96] transition-colors">
+                        <span className="text-[#0b3a96] text-xs leading-none mt-1">•</span>
+                        <Link to={item.to} className="leading-snug">
+                          {item.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -618,15 +960,16 @@ export function Footer() {
                   <Mail className="h-4 w-4 shrink-0" />
                   contact@nkbregovanta.com
                 </a>
-                <div className="flex items-center gap-3 text-sm text-navy-foreground/70">
+                <a href="tel:+918800662283" className="flex items-center gap-3 text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors">
                   <Phone className="h-4 w-4 shrink-0" />
-                  <a href="tel:+918400039062" className="hover:text-navy-foreground transition-colors">+91 84000 39062</a>
-                </div>
+                  +91 8800662283
+                </a>
                 <div className="flex items-start gap-3 text-sm text-navy-foreground/70">
-                  <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                  <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
                   <span>
-                    Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,<br />
-                    Lucknow, Uttar Pradesh, India, 226015
+                    Block-B, High Street, Plot No 8, Sector 129,
+                    <br />
+                    Noida, Uttar Pradesh, 201304, India
                   </span>
                 </div>
               </div>
@@ -634,17 +977,17 @@ export function Footer() {
 
             {columns.map((col) => (
               <div key={col.title}>
-                <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-navy-foreground/60">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-navy-foreground/50">
                   {col.title}
                 </h3>
-                <ul className="mt-4 space-y-2.5">
-                  {col.links.map((l) => (
-                    <li key={l.label}>
+                <ul className="mt-4 space-y-3">
+                  {col.links.map((link) => (
+                    <li key={link.label}>
                       <Link
-                        to={l.to}
-                        className="text-sm text-navy-foreground/80 transition-colors hover:text-navy-foreground"
+                        to={link.to}
+                        className="text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors"
                       >
-                        {l.label}
+                        {link.label}
                       </Link>
                     </li>
                   ))}
@@ -653,12 +996,12 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="mt-14 flex flex-col gap-3 border-t border-navy-foreground/15 pt-6 text-xs text-navy-foreground/60 sm:flex-row sm:items-center sm:justify-between">
-            <p>© NKB Regovanta. All rights reserved.</p>
-            <div className="flex gap-4">
-              <Link to="/" className="hover:text-navy-foreground">Privacy Policy</Link>
-              <Link to="/" className="hover:text-navy-foreground">Terms of Use</Link>
-              <Link to="/" className="hover:text-navy-foreground">Cookie Policy</Link>
+          <div className="mt-12 border-t border-navy-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-navy-foreground/50">
+            <p>&copy; {new Date().getFullYear()} NKB Regovanta Solutions Private Limited. All rights reserved.</p>
+            <div className="mt-4 md:mt-0 flex gap-6">
+              <Link to="/about" className="hover:text-navy-foreground">Privacy Policy</Link>
+              <Link to="/about" className="hover:text-navy-foreground">Terms of Service</Link>
+              <Link to="/contact" className="hover:text-navy-foreground">Contact Us</Link>
             </div>
           </div>
         </div>
