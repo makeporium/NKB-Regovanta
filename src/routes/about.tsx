@@ -20,7 +20,7 @@ import imgUsha from "@/assets/usha.png";
 import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
 import imgSatish from "@/assets/satish.png";
-import imgRitu from "@/assets/ritu.png";
+import imgSwati from "@/assets/swati.jpeg";
 import imgHero from "@/assets/Global Healthcare Expertise in Action.png";
 import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.png";
 import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.png";
@@ -79,11 +79,11 @@ const experts = [
         bio: "Satish M. serves as the Manager of Human Resources at NKB Regovanta Solutions, overseeing talent acquisition, employee engagement, and HR operations. He plays a key role in building a strong organizational culture, managing workforce planning, and supporting the professional development of team members. His dedication to creating an inclusive and high-performing work environment is integral to the company's continued growth and employee satisfaction.",
     },
     {
-        name: "Ritu Dixit",
+        name: "Swati Mishra",
         title: "Quality Assurance and Regulatory Affairs",
         tags: ["Quality Assurance", "Regulatory Affairs", "Compliance"],
-        img: imgRitu,
-        bio: "Ritu Dixit brings extensive global experience in Quality Assurance and Regulatory Affairs, with a strong understanding of international healthcare regulations and quality standards. She provides strategic oversight of quality systems, regulatory compliance, and operational excellence, helping ensure that NKB Regovanta's solutions meet rigorous global expectations.\n\nHer expertise, regulatory insight, and commitment to continuous improvement strengthen our ability to deliver consistent, compliant, and globally aligned solutions to clients across markets.\n\nGlobal Perspective. Regulatory Expertise. Quality Without Compromise.",
+        img: imgSwati,
+        bio: "Swati Mishra brings extensive global experience in Quality Assurance and Regulatory Affairs, with a strong understanding of international healthcare regulations and quality standards. She provides strategic oversight of quality systems, regulatory compliance, and operational excellence, helping ensure that NKB Regovanta's solutions meet rigorous global expectations.\n\nHer expertise, regulatory insight, and commitment to continuous improvement strengthen our ability to deliver consistent, compliant, and globally aligned solutions to clients across markets.\n\nGlobal Perspective. Regulatory Expertise. Quality Without Compromise.",
     },
 ];
 
