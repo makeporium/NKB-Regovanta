@@ -119,11 +119,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NKB Regovanta Solutions Pvt. Ltd.",
+  "alternateName": "NKB Regovanta",
+  "url": "https://www.nkbregovanta.com",
+  "logo": "https://www.nkbregovanta.com/favicon.png",
+  "image": "https://www.nkbregovanta.com/og-image.png",
+  "description": "Global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
+  ],
+  "knowsAbout": [
+    "CDSCO Medical Device Classification & Licensing",
+    "CDSCO Pharmaceutical & Drug Import Registration",
+    "US FDA 510(k) Submissions & US Agent",
+    "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking",
+    "ISO 13485:2016 QMS Implementation & Internal Audits",
+    "MDSAP Readiness & Audit Support",
+    "Cosmetics Regulatory Compliance (MoCRA, EU RP, CDSCO COS-1/2)",
+    "PC-PNDT Certificate Registration",
+    "WPC ETA Approval for Medical Equipment",
+    "IEC & AD Code Customs Registration"
+  ]
+};
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body>
         {children}
