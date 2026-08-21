@@ -16,7 +16,7 @@ import {
     Lightbulb,
     X,
 } from "lucide-react";
-import imgUsha from "@/assets/usha.png";
+import imgUsha from "@/assets/usha new.jpeg";
 import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
 import imgSatish from "@/assets/satish.png";
