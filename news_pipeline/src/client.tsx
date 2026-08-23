@@ -1,8 +1,12 @@
-/// <reference types="vinxi/types/client" />
-import { hydrateRoot } from "react-dom/client";
-import { StartClient } from "@tanstack/start";
+import { createRoot } from "react-dom/client";
+import "~/styles/global.css";
+import { RouterProvider } from "@tanstack/react-router";
 import { createRouter } from "./router";
 
 const router = createRouter();
 
-hydrateRoot(document, <StartClient router={router} />);
+const rootElement = document.getElementById('root')!
+if (!rootElement.innerHTML) {
+  const root = createRoot(rootElement)
+  root.render(<RouterProvider router={router} />)
+}

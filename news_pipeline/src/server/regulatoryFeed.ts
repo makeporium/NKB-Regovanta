@@ -5,10 +5,7 @@
  * CDN headers ensure Vercel Edge caches results for 10 min (s-maxage=600)
  * with a 30-min stale-while-revalidate window — zero cold-start cost at scale.
  */
-
-import { createServerFn } from "@tanstack/react-start";
 import { XMLParser } from "fast-xml-parser";
-import { getWebRequest } from "vinxi/http";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -285,25 +282,8 @@ const MOCK_ITEMS: RegulatoryItem[] = [
     },
 ];
 
-// ─── Main Server Function ──────────────────────────────────────────────────────
-
-export const fetchRegulatoryFeed = createServerFn({ method: "GET" }).handler(
-    async () => {
-        // 1. Set CDN cache headers — must happen before any await to be honoured
-        //    by Vercel Edge on the initial response.
-        const req = getWebRequest();
-        if (req) {
-            // @ts-expect-error – vinxi augments the Request with a Response helper
-            const res = req[Symbol.for("vinxi.response")];
-            if (res?.setHeader) {
-                res.setHeader(
-                    "Cache-Control",
-                    "public, s-maxage=600, stale-while-revalidate=1800"
-                );
-            }
-        }
-
-        // 2. Fetch all feeds in parallel, fail gracefully per feed.
+export const fetchRegulatoryFeed = async () => {
+        // 1. Fetch all feeds in parallel, fail gracefully per feed.
         const rawArrays = await Promise.all(FEEDS.map((f) => fetchFeed(f.url)));
         const allItems = rawArrays.flat();
 
@@ -321,4 +301,3 @@ export const fetchRegulatoryFeed = createServerFn({ method: "GET" }).handler(
 
         return structured;
     }
-);
