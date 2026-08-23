@@ -7,13 +7,13 @@
  */
 
 import { createFileRoute } from "@tanstack/react-router";
-import { fetchRegulatoryFeed } from "~/server/regulatoryFeed";
+import { fetchRegulatoryFeedFn } from "~/server/regulatoryFeed";
 import { RegulatoryDashboard } from "~/components/RegulatoryDashboard";
 
 export const Route = createFileRoute("/regulatory-updates")({
     // ── Loader runs server-side (SSR) ──────────────────────────────────────────
     loader: async () => {
-        const items = await fetchRegulatoryFeed();
+        const items = await fetchRegulatoryFeedFn();
         return {
             items,
             cachedAt: new Date().toLocaleTimeString("en-IN", {

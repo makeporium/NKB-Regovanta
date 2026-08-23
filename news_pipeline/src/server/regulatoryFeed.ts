@@ -1,3 +1,5 @@
+"use server";
+import { createServerFn } from "@tanstack/react-start";
 import { XMLParser } from "fast-xml-parser";
 
 export type SourceAgency = "CDSCO" | "USFDA" | "EU_MDR" | "MDSAP" | "OTHER";
@@ -272,3 +274,10 @@ export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
         return preClassified.map(item => ({ ...item, summary: item.title.slice(0, 80) }));
     }
 }
+
+// ── Server function wrapper ─────────────────────────────────────────────────
+// Guarantees server-side-only execution (process.env, Node fetch) on both
+// initial SSR and client-side navigations via the TanStack Start RPC layer.
+export const fetchRegulatoryFeedFn = createServerFn({ method: "GET" }).handler(
+    fetchRegulatoryFeed,
+);
