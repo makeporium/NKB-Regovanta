@@ -4,7 +4,6 @@ import {
     ScrollRestoration,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import globalCss from "~/styles/global.css?url";
 
 export const Route = createRootRoute({
     component: RootComponent,

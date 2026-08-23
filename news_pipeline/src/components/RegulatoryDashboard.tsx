@@ -1,43 +1,7 @@
-/**
- * src/components/RegulatoryDashboard.tsx
- *
- * Clean, responsive dark UI for the Regulatory Intelligence Feed.
- * Uses Tailwind CSS utility classes + Radix UI for accessible primitives.
- */
-
 import { useState, useMemo } from "react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import type { RegulatoryItem, SourceAgency, ImpactLevel } from "~/server/regulatoryFeed";
-
-// ─── Badge Config ─────────────────────────────────────────────────────────────
-
-const IMPACT_CONFIG: Record<
-    ImpactLevel,
-    { label: string; classes: string; dot: string }
-> = {
-    CRITICAL: {
-        label: "CRITICAL",
-        classes:
-            "bg-red-950/80 text-red-300 border border-red-700/60 glow-critical",
-        dot: "bg-red-400 animate-pulse",
-    },
-    HIGH: {
-        label: "HIGH",
-        classes: "bg-yellow-950/80 text-yellow-300 border border-yellow-700/60 glow-high",
-        dot: "bg-yellow-400",
-    },
-    MEDIUM: {
-        label: "MEDIUM",
-        classes: "bg-blue-950/80 text-blue-300 border border-blue-700/60",
-        dot: "bg-blue-400",
-    },
-    LOW: {
-        label: "LOW",
-        classes: "bg-zinc-800/80 text-zinc-400 border border-zinc-600/60",
-        dot: "bg-zinc-500",
-    },
-};
+import type { RegulatoryItem, SourceAgency } from "~/server/regulatoryFeed";
 
 const AGENCY_CONFIG: Record<
     SourceAgency | "ALL",
@@ -68,6 +32,11 @@ const AGENCY_CONFIG: Record<
         color: "text-violet-300",
         active: "bg-violet-600 text-white",
     },
+    OTHER: {
+        label: "Other",
+        color: "text-zinc-300",
+        active: "bg-zinc-600 text-white",
+    },
 };
 
 const AGENCIES: (SourceAgency | "ALL")[] = [
@@ -80,18 +49,6 @@ const AGENCIES: (SourceAgency | "ALL")[] = [
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-function ImpactBadge({ level }: { level: ImpactLevel }) {
-    const cfg = IMPACT_CONFIG[level];
-    return (
-        <span
-            className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold tracking-wide ${cfg.classes}`}
-        >
-            <span className={`h-1.5 w-1.5 rounded-full ${cfg.dot}`} />
-            {cfg.label}
-        </span>
-    );
-}
-
 function AgencyPill({
     agency,
     active,
@@ -101,7 +58,7 @@ function AgencyPill({
     active: boolean;
     onClick: () => void;
 }) {
-    const cfg = AGENCY_CONFIG[agency];
+    const cfg = AGENCY_CONFIG[agency] || AGENCY_CONFIG["OTHER"];
     return (
         <button
             onClick={onClick}
@@ -115,16 +72,8 @@ function AgencyPill({
     );
 }
 
-function CategoryTag({ category }: { category: string }) {
-    return (
-        <span className="rounded-md bg-zinc-800 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-zinc-400">
-            {category}
-        </span>
-    );
-}
-
 function FeedCard({ item }: { item: RegulatoryItem }) {
-    const agencyCfg = AGENCY_CONFIG[item.source_agency];
+    const agencyCfg = AGENCY_CONFIG[item.source_agency] || AGENCY_CONFIG["OTHER"];
 
     return (
         <article className="glass group relative flex flex-col gap-3 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-600/50 hover:shadow-xl hover:shadow-zinc-900/50">
@@ -136,9 +85,7 @@ function FeedCard({ item }: { item: RegulatoryItem }) {
                     >
                         {item.source_agency.replace("_", " ")}
                     </span>
-                    <CategoryTag category={item.category} />
                 </div>
-                <ImpactBadge level={item.impact_level} />
             </div>
 
             {/* Title */}
@@ -149,16 +96,8 @@ function FeedCard({ item }: { item: RegulatoryItem }) {
             {/* Summary */}
             <p className="text-sm leading-relaxed text-zinc-400">{item.summary}</p>
 
-            {/* Action required */}
-            <div className="rounded-lg border border-amber-700/30 bg-amber-950/20 px-3.5 py-2.5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-1">
-                    Action Required
-                </p>
-                <p className="text-sm text-amber-200/90">{item.action_required}</p>
-            </div>
-
             {/* Source link */}
-            <div className="flex items-center justify-end pt-1">
+            <div className="flex items-center justify-end pt-1 mt-auto">
                 <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                         <a
@@ -198,35 +137,6 @@ function FeedCard({ item }: { item: RegulatoryItem }) {
     );
 }
 
-// ─── Stats Bar ────────────────────────────────────────────────────────────────
-
-function StatsBar({ items }: { items: RegulatoryItem[] }) {
-    const counts = useMemo(() => {
-        return {
-            CRITICAL: items.filter((i) => i.impact_level === "CRITICAL").length,
-            HIGH: items.filter((i) => i.impact_level === "HIGH").length,
-            MEDIUM: items.filter((i) => i.impact_level === "MEDIUM").length,
-            LOW: items.filter((i) => i.impact_level === "LOW").length,
-        };
-    }, [items]);
-
-    return (
-        <div className="flex flex-wrap gap-3">
-            {(["CRITICAL", "HIGH", "MEDIUM", "LOW"] as ImpactLevel[]).map((lvl) => (
-                <div
-                    key={lvl}
-                    className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm ${IMPACT_CONFIG[lvl].classes}`}
-                >
-                    <span
-                        className={`h-2 w-2 rounded-full ${IMPACT_CONFIG[lvl].dot}`}
-                    />
-                    <span className="font-semibold">{counts[lvl]}</span>
-                    <span className="opacity-70">{lvl}</span>
-                </div>
-            ))}
-        </div>
-    );
-}
 
 // ─── Main Dashboard ────────────────────────────────────────────────────────────
 
@@ -245,31 +155,18 @@ export function RegulatoryDashboard({
     const filtered = useMemo(() => {
         const q = search.toLowerCase().trim();
         return items.filter((item) => {
+            // Strictly hide all articles flagged as non-governmental ('OTHER')
+            if (item.source_agency === "OTHER") return false;
+
             const agencyOk = agency === "ALL" || item.source_agency === agency;
             const searchOk =
                 !q ||
                 item.title.toLowerCase().includes(q) ||
-                item.summary.toLowerCase().includes(q) ||
-                item.action_required.toLowerCase().includes(q);
+                item.summary.toLowerCase().includes(q);
             return agencyOk && searchOk;
         });
     }, [items, search, agency]);
 
-    // Sort: CRITICAL first, then HIGH, MEDIUM, LOW
-    const IMPACT_ORDER: Record<ImpactLevel, number> = {
-        CRITICAL: 0,
-        HIGH: 1,
-        MEDIUM: 2,
-        LOW: 3,
-    };
-    const sorted = useMemo(
-        () =>
-            [...filtered].sort(
-                (a, b) =>
-                    IMPACT_ORDER[a.impact_level] - IMPACT_ORDER[b.impact_level]
-            ),
-        [filtered]
-    );
 
     return (
         <Tooltip.Provider delayDuration={300}>
@@ -325,11 +222,6 @@ export function RegulatoryDashboard({
                                 </p>
                             </div>
                         </div>
-
-                        {/* Stats bar */}
-                        <div className="pt-2">
-                            <StatsBar items={filtered} />
-                        </div>
                     </header>
 
                     {/* ── Divider ── */}
@@ -375,7 +267,7 @@ export function RegulatoryDashboard({
                     </div>
 
                     {/* ── Feed Grid ── */}
-                    {sorted.length === 0 ? (
+                    {filtered.length === 0 ? (
                         <div className="flex flex-col items-center justify-center py-20 text-center">
                             <svg
                                 className="h-12 w-12 text-zinc-700 mb-4"
@@ -407,7 +299,7 @@ export function RegulatoryDashboard({
                         <ScrollArea.Root className="relative">
                             <ScrollArea.Viewport>
                                 <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
-                                    {sorted.map((item, idx) => (
+                                    {filtered.map((item, idx) => (
                                         <FeedCard key={`${item.source_url}-${idx}`} item={item} />
                                     ))}
                                 </div>
