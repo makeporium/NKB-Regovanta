@@ -16,22 +16,5 @@ export default defineConfig({
     ],
     server: {
         port: 3001,
-        proxy: {
-            "/api/proxy/fda": {
-                target: "https://www.fda.gov",
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api\/proxy\/fda/, ""),
-            },
-            "/api/proxy/eu": {
-                target: "https://health.ec.europa.eu",
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api\/proxy\/eu/, ""),
-            },
-            "/api/proxy/google": {
-                target: "https://news.google.com",
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api\/proxy\/google/, ""),
-            },
-        },
     },
 });

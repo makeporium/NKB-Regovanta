@@ -11,19 +11,19 @@ export interface RegulatoryItem {
 
 const FEEDS = [
     {
-        url: "/api/proxy/fda/AboutFDA/ContactFDA/StayInformed/RSSFeeds/MedWatch/rss.xml",
+        url: "https://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/MedWatch/rss.xml",
         label: "FDA CDRH",
     },
     {
-        url: "/api/proxy/google/rss/search?q=%22european+commission%22+AND+(%22MDR%22+OR+%22IVDR%22+OR+%22MDCG%22)&hl=en-GB&gl=GB&ceid=GB:en",
+        url: "https://news.google.com/rss/search?q=%22european+commission%22+AND+(%22MDR%22+OR+%22IVDR%22+OR+%22MDCG%22)&hl=en-GB&gl=GB&ceid=GB:en",
         label: "EU MDCG",
     },
     {
-        url: "/api/proxy/google/rss/search?q=medical+device+OR+medtech+OR+CDSCO+OR+USFDA+OR+MDCG&hl=en-IN&gl=IN&ceid=IN:en",
+        url: "https://news.google.com/rss/search?q=medical+device+OR+medtech+OR+CDSCO+OR+USFDA+OR+MDCG&hl=en-IN&gl=IN&ceid=IN:en",
         label: "Google News Broad",
     },
     {
-        url: "/api/proxy/google/rss/search?q=%22notified+body%22+OR+%22MDSAP%22+OR+%22IVDR%22+OR+%22CE+mark%22+device&hl=en-IN&gl=IN&ceid=IN:en",
+        url: "https://news.google.com/rss/search?q=%22notified+body%22+OR+%22MDSAP%22+OR+%22IVDR%22+OR+%22CE+mark%22+device&hl=en-IN&gl=IN&ceid=IN:en",
         label: "Google News Regulatory",
     }
 ];
@@ -86,12 +86,12 @@ function parseRssFeed(xml: string, label: string): RawItem[] {
             .map((item: unknown) => {
                 const i = item as Record<string, unknown>;
                 const rawUrl = String(
-                        i["link"] ??
-                        (typeof i["link"] === "object"
-                            ? (i["link"] as Record<string, unknown>)["@_href"]
-                            : "") ??
-                        ""
-                    );
+                    i["link"] ??
+                    (typeof i["link"] === "object"
+                        ? (i["link"] as Record<string, unknown>)["@_href"]
+                        : "") ??
+                    ""
+                );
                 return {
                     title: String(i["title"] ?? ""),
                     link: decodeGoogleNewsUrl(rawUrl),
@@ -149,12 +149,10 @@ Rules: Raw JSON array only, no markdown.
 ITEMS:
 ${itemList}`;
 }
-
 async function callAI(prompt: string): Promise<RegulatoryItem[]> {
-    // @ts-ignore
-    const apiKey = typeof import.meta !== "undefined" && import.meta.env ? import.meta.env.VITE_GROQ_API_KEY : "";
+    const apiKey = process.env.GROQ_API_KEY ?? "";
     if (!apiKey) {
-        return [{ title: "API KEY ERROR: VITE_GROQ_API_KEY not found. Check .env.local.", source_agency: "OTHER", summary: "Add VITE_GROQ_API_KEY to .env.local and restart the dev server.", source_url: "#" }];
+        return [{ title: "API KEY ERROR: GROQ_API_KEY not found. Check .env.local.", source_agency: "OTHER", summary: "Add GROQ_API_KEY to .env.local and restart the dev server.", source_url: "#" }];
     }
 
     try {
@@ -165,7 +163,7 @@ async function callAI(prompt: string): Promise<RegulatoryItem[]> {
                 Authorization: `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-                model: "groq/compound-mini",
+                model: "compound-beta-mini",
                 temperature: 0.1,
                 messages: [{ role: "user", content: prompt }],
             }),
