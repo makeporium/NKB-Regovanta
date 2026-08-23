@@ -12,7 +12,6 @@ export default defineConfig({
     },
     plugins: [
         tanstackStart(),
-        TanStackRouterVite({ routesDirectory: "./src/routes", generatedRouteTree: "./src/routeTree.gen.ts" }),
         react(),
         tailwindcss(),
     ],

@@ -9,6 +9,10 @@ export function createRouter() {
     });
 }
 
+// Satisfy TanStack internal module runner
+export const getRouter = async () => createRouter();
+export default { getRouter, createRouter };
+
 declare module "@tanstack/react-router" {
     interface Register {
         router: ReturnType<typeof createRouter>;

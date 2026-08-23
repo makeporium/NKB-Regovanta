@@ -13,7 +13,7 @@ export interface RegulatoryItem {
 
 const FEEDS = [
     {
-        url: "https://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/MedWatch/rss.xml",
+        url: "https://news.google.com/rss/search?q=FDA+medical+device+guidance+OR+recall+OR+clearance&hl=en-US&gl=US&ceid=US:en",
         label: "FDA CDRH",
     },
     {
@@ -117,8 +117,10 @@ function keywordMatch(item: RawItem): boolean {
 async function fetchFeed(url: string, label: string): Promise<RawItem[]> {
     try {
         const res = await fetch(url, {
-            headers: { "User-Agent": "RegulatoryBot/1.0" },
-            signal: AbortSignal.timeout(8_000),
+            headers: { 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" 
+            },
+            signal: AbortSignal.timeout(10_000),
         });
         if (!res.ok) return [];
         const xml = await res.text();
@@ -141,9 +143,9 @@ function buildPrompt(items: RawItem[]): string {
 
     return `You are a regulatory intelligence specialist.
 
-For each feed item below, write a one-sentence summary of ≤10 words.
+For each feed item below, write a one-sentence summary of <=10 words.
 Return ONLY a valid JSON array of objects with keys:
-- "summary": your ≤10 word summary
+- "summary": your <=10 word summary
 - "source_url": leave this as an empty string ""
 
 Rules: Raw JSON array only, no markdown.
@@ -151,6 +153,7 @@ Rules: Raw JSON array only, no markdown.
 ITEMS:
 ${itemList}`;
 }
+
 async function callAI(prompt: string): Promise<RegulatoryItem[]> {
     const apiKey = process.env.GROQ_API_KEY ?? "";
     if (!apiKey) {
@@ -165,7 +168,7 @@ async function callAI(prompt: string): Promise<RegulatoryItem[]> {
                 Authorization: `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-                model: "compound-beta-mini",
+                model: "groq/compound-mini",
                 temperature: 0.1,
                 messages: [{ role: "user", content: prompt }],
             }),
@@ -211,7 +214,7 @@ const MOCK_ITEMS: RegulatoryItem[] = [
         source_url: "https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar",
     },
     {
-        title: "EU MDR Notified Body Audit Capacity Update – Q4 2024",
+        title: "EU MDR Notified Body Audit Capacity Update Q4 2024",
         source_agency: "EU_MDR",
         summary: "EU Commission warns of continued Notified Body capacity constraints, urging manufacturers to book MDR conformity assessment audits well in advance of 2027 deadlines.",
         source_url: "https://health.ec.europa.eu/medical-devices-topics-interest/notified-bodies-and-eudamed_en",
@@ -223,7 +226,7 @@ const MOCK_ITEMS: RegulatoryItem[] = [
         source_url: "https://www.who.int/teams/regulation-prequalification/regulation-and-safety/medical-devices/mdsap",
     },
     {
-        title: "FDA 510(k) Substantial Equivalence Decision Making – Guidance Finalized",
+        title: "FDA 510(k) Substantial Equivalence Decision Making Guidance Finalized",
         source_agency: "USFDA",
         summary: "FDA finalizes guidance clarifying the step-by-step decision-making process for determining substantial equivalence, particularly for combination products and novel technologies.",
         source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
@@ -275,7 +278,7 @@ export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
     }
 }
 
-// ── Server function wrapper ─────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // Guarantees server-side-only execution (process.env, Node fetch) on both
 // initial SSR and client-side navigations via the TanStack Start RPC layer.
 export const fetchRegulatoryFeedFn = createServerFn({ method: "GET" }).handler(
