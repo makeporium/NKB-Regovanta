@@ -6,7 +6,7 @@
  * with a 30-min stale-while-revalidate window — zero cold-start cost at scale.
  */
 
-import { createServerFn } from "@tanstack/start";
+import { createServerFn } from "@tanstack/react-start";
 import { XMLParser } from "fast-xml-parser";
 import { getWebRequest } from "vinxi/http";
 
