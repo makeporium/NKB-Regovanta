@@ -22,9 +22,12 @@ import imgIvd2 from "@/assets/ivd2.png";
 export const Route = createFileRoute("/industries/ivd")({
   head: () => ({
     meta: [
-      { title: "IVD Regulatory & Market Access Support | NKB Regovanta" },
+      { title: "IVD Regulatory Consultant | EU IVDR CDSCO FDA | NKB Regovanta" },
       { name: "description", content: "Build the Right Evidence. Navigate the Right Pathway. NKB Regovanta supports IVD manufacturers in building a comprehensive regulatory strategy from product assessment through approval and post-market compliance." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd" },
+  ],
   }),
   component: IVD,
 });

@@ -9,6 +9,9 @@ export const Route = createFileRoute("/industries/cosmetics_/usa")({
       { title: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
       { name: "description", content: "Expert guidance on FDA cosmetic product listing, facility registration, MoCRA compliance, and labeling requirements in the USA." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
+  ],
   }),
   component: USACosmetics,
 });

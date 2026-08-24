@@ -27,7 +27,19 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/india/medical-devices")({
-  component: MedicalDevicesIndiaPage,
+  head: () => ({
+        meta: [
+            { title: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
+            {
+                name: "description",
+                content: "Expert CDSCO medical device regulatory consulting in India. Import Licence (MD-14/MD-15), Manufacturing Licence (MD-3 to MD-9), Class A-D, Indian Authorized Agent, SUGAM portal support and post-market compliance.",
+            },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/medical-devices" },
+        ],
+    }),
+    component: MedicalDevicesIndiaPage,
 });
 
 function MedicalDevicesIndiaPage() {

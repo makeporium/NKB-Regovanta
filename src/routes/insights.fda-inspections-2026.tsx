@@ -13,6 +13,9 @@ export const Route = createFileRoute("/insights/fda-inspections-2026")({
           "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-inspections-2026" },
+  ],
   }),
   component: Article,
 });

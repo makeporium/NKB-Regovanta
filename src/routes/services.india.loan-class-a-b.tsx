@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/loan-class-a-b")({
       { title: "Loan Licenses for Class A & B Devices | MD-4 & MD-6" },
       { name: "description", content: "Learn how to obtain SLA MD-6 loan licenses to manufacture Class A and B medical devices in existing licensed facilities in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/loan-class-a-b" },
+    ],
   }),
 });
 

@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
       { title: "Manufacturing Registration for Class A Medical Devices | GSR 777(E)" },
       { name: "description", content: "Fast-track CDSCO manufacturing registration for non-sterile and non-measuring Class A medical devices under GSR 777(E) in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-a-gsr" },
+    ],
   }),
 });
 

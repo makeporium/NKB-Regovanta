@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/algorithm-claim")({
       { title: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
       { name: "description", content: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },
+  ],
   }),
   component: Article,
 });

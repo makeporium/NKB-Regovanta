@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/canada/mdel')({
       { title: 'Medical Device Establishment License (MDEL) | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada Medical Device Establishment License (MDEL) services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdel" },
+  ],
   }),
   component: ServicePage,
 })

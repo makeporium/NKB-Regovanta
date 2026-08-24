@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/australia/sponsor')({
       { title: 'Australian Sponsor Services | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia Australian Sponsor Services services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/sponsor" },
+  ],
   }),
   component: ServicePage,
 })

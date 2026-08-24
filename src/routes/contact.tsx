@@ -6,13 +6,16 @@ import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us | NKB Regovanta" },
+      { title: "Contact NKB Regovanta | Medical Device & IVD Regulatory Consultant India" },
       {
         name: "description",
         content:
           "Let's Discuss Your Regulatory Journey. Tell us what you are working on and where you need support.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/contact" },
+  ],
   }),
   component: Contact,
 });

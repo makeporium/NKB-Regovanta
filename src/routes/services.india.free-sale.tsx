@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/free-sale")({
       { title: "Free Sale Certificate (FSC) | NKB Regovanta" },
       { name: "description", content: "Apply for a CDSCO Free Sale Certificate to seamlessly export your medical devices to international markets." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/free-sale" },
+    ],
   }),
 });
 

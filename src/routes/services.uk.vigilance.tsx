@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/vigilance')({
       { title: 'Vigilance & Incident Coordination | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Vigilance & Incident Coordination services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/vigilance" },
+  ],
   }),
   component: ServicePage,
 })

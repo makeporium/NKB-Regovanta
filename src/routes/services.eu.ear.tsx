@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/ear')({
       { title: 'European Authorized Representative (EAR) | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU European Authorized Representative (EAR) services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ear" },
+  ],
   }),
   component: ServicePage,
 })

@@ -33,6 +33,9 @@ export const Route = createFileRoute("/services/usa/agent-service")({
           "Official U.S. FDA Agent services, foreign establishment registration, device listing, and 510(k) submission support for overseas medical device and IVD manufacturers under 21 CFR 807.40.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/agent-service" },
+  ],
   }),
   component: USAgentServicePage,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/de-novo')({
       { title: 'De-Novo Classification Request | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA De-Novo Classification Request services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/de-novo" },
+  ],
   }),
   component: ServicePage,
 })

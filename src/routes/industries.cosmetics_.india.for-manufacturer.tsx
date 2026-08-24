@@ -8,6 +8,9 @@ export const Route = createFileRoute("/industries/cosmetics_/india/for-manufactu
       { title: "Cosmetics Manufacturing License in India | NKB Regovanta" },
       { name: "description", content: "Expert guidance for cosmetic manufacturers in India to obtain Form COS-8 and Form COS-9 licenses." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india/for-manufacturer" },
+  ],
   }),
   component: ForManufacturer,
 });

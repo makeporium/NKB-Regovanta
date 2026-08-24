@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/clinical-evaluation')({
       { title: 'Clinical & Performance Evaluation | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU Clinical & Performance Evaluation services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/clinical-evaluation" },
+  ],
   }),
   component: ServicePage,
 })

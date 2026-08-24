@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/loan-class-c-d")({
       { title: "Loan Licenses for Class C & D Devices | MD-8 & MD-10" },
       { name: "description", content: "Learn how to obtain CDSCO MD-10 loan licenses to manufacture Class C and D high-risk medical devices in existing licensed facilities in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/loan-class-c-d" },
+    ],
   }),
 });
 

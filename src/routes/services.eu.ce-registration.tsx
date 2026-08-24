@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/ce-registration')({
       { title: 'CE Device Registration Pathway | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU CE Device Registration Pathway services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-registration" },
+  ],
   }),
   component: ServicePage,
 })

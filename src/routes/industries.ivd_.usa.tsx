@@ -10,6 +10,9 @@ export const Route = createFileRoute("/industries/ivd_/usa")({
             { title: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
             { name: "description", content: "Expert assistance with US FDA regulations for IVD devices, including 510(k), De Novo, PMA submissions, and CLIA waivers for Point-of-Care testing." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/usa" },
+    ],
     }),
     component: IVDUsa,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/513g')({
       { title: '513(g) Requests for Information | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA 513(g) Requests for Information services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/513g" },
+  ],
   }),
   component: ServicePage,
 })

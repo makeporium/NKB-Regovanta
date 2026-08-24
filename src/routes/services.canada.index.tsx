@@ -10,12 +10,15 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/canada/")({
     head: () => ({
         meta: [
-            { title: "Health Canada Medical Device Registration | NKB Regovanta" },
+            { title: "Health Canada MDL MDEL Consultant | MDSAP Canada | NKB Regovanta" },
             {
                 name: "description",
                 content: "Navigate the Health Canada medical device registration process. Expert support for MDEL, MDL, MDSAP compliance, and lifecycle management.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada" },
+    ],
     }),
     component: CanadaMarket,
 });

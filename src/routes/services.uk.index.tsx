@@ -10,12 +10,15 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/uk/")({
     head: () => ({
         meta: [
-            { title: "UK MHRA Medical Device Registration | NKB Regovanta" },
+            { title: "MHRA Medical Device Registration & UK Responsible Person | NKB Regovanta" },
             {
                 name: "description",
                 content: "Navigate the UK MHRA medical device registration process. Expert support for UKCA marking, DORS submissions, and UK Responsible Person (UKRP) services.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk" },
+    ],
     }),
     component: UKMarket,
 });

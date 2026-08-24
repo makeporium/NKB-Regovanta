@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/regulatory-writing')({
       { title: 'Advanced Regulatory Writing | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Advanced Regulatory Writing services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/regulatory-writing" },
+  ],
   }),
   component: ServicePage,
 })

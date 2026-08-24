@@ -29,13 +29,16 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/drug-licenses-for-importers")({
   head: () => ({
     meta: [
-      { title: "Drug Licenses for Importers in India (Form 10, Form 41) | NKB Regovanta" },
+      { title: "Drug Import Licence Registration CDSCO India | Form 41, Form 10 | NKB Regovanta" },
       {
         name: "description",
         content:
           "Comprehensive regulatory consulting for pharmaceutical drug import in India. Form 10, Form 41 Registration Certificate, Form 11 Test License & Authorized Agent services by NKB Regovanta.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
+  ],
   }),
   component: DrugLicensesForImportersPage,
 });

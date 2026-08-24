@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/mhra-registration')({
       { title: 'MHRA Device Registration | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK MHRA Device Registration services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" },
+  ],
   }),
   component: ServicePage,
 })

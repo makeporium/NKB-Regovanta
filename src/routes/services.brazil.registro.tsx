@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/brazil/registro')({
       { title: 'Registro Pathway | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Registro Pathway services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/registro" },
+  ],
   }),
   component: ServicePage,
 })

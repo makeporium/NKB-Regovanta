@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/test-smarter")({
       { title: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
       { name: "description", content: "A hypodermic syringe family included multiple syringe sizes and needle gauges. Testing every possible configuration could have meant unnecessary duplication." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/test-smarter" },
+  ],
   }),
   component: Article,
 });

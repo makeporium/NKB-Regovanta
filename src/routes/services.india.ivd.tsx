@@ -43,6 +43,9 @@ export const Route = createFileRoute("/services/india/ivd")({
           "Complete CDSCO regulatory consulting for In-Vitro Diagnostic (IVD) kits and reagents in India for Importers and Manufacturers. End-to-end guidance for Form MD-14/15, Form MD-5/6, Form MD-9/10, Form MD-12/13, Form MD-24/25, and Form MD-28/29.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd" },
+  ],
   }),
   component: IVDRegulatoryServicesIndiaPage,
 });

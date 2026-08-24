@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/md-42")({
       { title: "MD-42 Certificate (Medical Device Registration) | NKB Regovanta" },
       { name: "description", content: "Get your MD-42 Medical Device Registration Certificate to legally sell, stock, and distribute medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/md-42" },
+    ],
   }),
 });
 

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/eudamed')({
       { title: 'UDI & EUDAMED Registration Support | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU UDI & EUDAMED Registration Support services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/eudamed" },
+  ],
   }),
   component: ServicePage,
 })

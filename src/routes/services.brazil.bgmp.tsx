@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/brazil/bgmp')({
       { title: 'BGMP Certification Support | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil BGMP Certification Support services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/bgmp" },
+  ],
   }),
   component: ServicePage,
 })

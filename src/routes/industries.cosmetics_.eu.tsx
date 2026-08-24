@@ -9,6 +9,9 @@ export const Route = createFileRoute("/industries/cosmetics_/eu")({
       { title: "EU Cosmetic Regulation & Registration Services | NKB Regovanta" },
       { name: "description", content: "End-to-end EU cosmetics compliance, Responsible Person (RP) services, PIF, CPSR, and CPNP notification." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/eu" },
+  ],
   }),
   component: EUCosmetics,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/brazil/notificacao')({
       { title: 'Notificação Pathway | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Notificação Pathway services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/notificacao" },
+  ],
   }),
   component: ServicePage,
 })

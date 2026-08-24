@@ -38,6 +38,9 @@ export const Route = createFileRoute("/services/uk/ukrp")({
           "Official UK Responsible Person (UKRP) representation and MHRA medical device and IVD registration services under UK MDR 2002 (as amended by UK MDR 2019).",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/ukrp" },
+  ],
   }),
   component: UKRPServicePage,
 });

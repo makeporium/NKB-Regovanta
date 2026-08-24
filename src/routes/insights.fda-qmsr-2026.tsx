@@ -13,6 +13,9 @@ export const Route = createFileRoute("/insights/fda-qmsr-2026")({
           "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations and actions medical device manufacturers should take to maintain compliance.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
+  ],
   }),
   component: Article,
 });

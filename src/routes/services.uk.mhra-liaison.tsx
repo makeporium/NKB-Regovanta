@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/mhra-liaison')({
       { title: 'MHRA Communication Liaison | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK MHRA Communication Liaison services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-liaison" },
+  ],
   }),
   component: ServicePage,
 })

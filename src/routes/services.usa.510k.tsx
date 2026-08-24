@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/510k')({
       { title: '510(k) Premarket Notification | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA 510(k) Premarket Notification services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/510k" },
+  ],
   }),
   component: ServicePage,
 })

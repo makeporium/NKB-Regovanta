@@ -5,9 +5,12 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics")({
   head: () => ({
     meta: [
-      { title: "Global Cosmetics Regulatory & Compliance Support | NKB Regovanta" },
+      { title: "Cosmetic Regulatory Consultant India | CDSCO MoCRA EU Cosmetics | NKB Regovanta" },
       { name: "description", content: "Take Your Cosmetic Products to Market with Confidence. NKB Regovanta helps cosmetic manufacturers and brands identify regulatory requirements early and establish a practical pathway to compliant market entry." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics" },
+  ],
   }),
   component: Cosmetics,
 });

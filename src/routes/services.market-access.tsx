@@ -12,6 +12,9 @@ export const Route = createFileRoute("/services/market-access")({
         content: "Market entry strategy, pricing, reimbursement & post-market compliance.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/market-access" },
+  ],
   }),
   component: MarketAccessService,
 });

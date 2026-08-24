@@ -17,6 +17,9 @@ export const Route = createFileRoute("/insights/")({
           "Latest regulatory news, updates, and best practices for the medical device industry.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/insights" },
+  ],
   }),
   component: Insights,
 });

@@ -18,6 +18,9 @@ export const Route = createFileRoute("/case-studies/")({
           "Explore how we've helped medical device companies achieve compliance, accelerate approvals, and grow their global presence.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies" },
+  ],
   }),
   component: CaseStudies,
 });

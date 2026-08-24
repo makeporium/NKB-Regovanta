@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/q-submission')({
       { title: 'Q-Submission (Pre-Sub) Meetings | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA Q-Submission (Pre-Sub) Meetings services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/q-submission" },
+  ],
   }),
   component: ServicePage,
 })

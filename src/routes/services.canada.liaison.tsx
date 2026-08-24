@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/canada/liaison')({
       { title: 'Health Canada Liaison Support | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada Health Canada Liaison Support services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/liaison" },
+  ],
   }),
   component: ServicePage,
 })

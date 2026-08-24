@@ -5,13 +5,16 @@ import imgISO from "@/assets/iso.png";
 export const Route = createFileRoute("/services/iso-13485")({
   head: () => ({
     meta: [
-      { title: "ISO 13485 QMS | NKB Regovanta" },
+      { title: "ISO 13485 QMS Implementation Consultant India | NKB Regovanta" },
       {
         name: "description",
         content:
           "End-to-end support for ISO 13485 Quality Management System implementation and certification.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iso-13485" },
+  ],
   }),
   component: Iso13485,
 });

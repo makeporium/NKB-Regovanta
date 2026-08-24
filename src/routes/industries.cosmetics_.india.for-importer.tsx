@@ -8,6 +8,9 @@ export const Route = createFileRoute("/industries/cosmetics_/india/for-importer"
       { title: "Cosmetics Registration for Importers in India | NKB Regovanta" },
       { name: "description", content: "Expert guidance for foreign cosmetic brands to obtain Form COS-2 Import Registration Certificate in India." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india/for-importer" },
+  ],
   }),
   component: ForImporter,
 });

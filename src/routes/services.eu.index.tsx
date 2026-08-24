@@ -10,12 +10,15 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/eu/")({
     head: () => ({
         meta: [
-            { title: "EU MDR/IVDR Medical Device Registration | NKB Regovanta" },
+            { title: "CE Marking EU MDR IVDR Consultant | European Authorized Representative | NKB Regovanta" },
             {
                 name: "description",
                 content: "Navigate the EU medical device registration process. Expert support for MDR/IVDR compliance, CE marking, and European Authorized Representative (EAR) services.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" },
+    ],
     }),
     component: EUMarket,
 });

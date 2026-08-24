@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/audit-readiness')({
       { title: 'Inspection & Audit Readiness | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Inspection & Audit Readiness services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/audit-readiness" },
+  ],
   }),
   component: ServicePage,
 })

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/australia/artg-inclusion')({
       { title: 'ARTG Inclusion Process | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia ARTG Inclusion Process services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" },
+  ],
   }),
   component: ServicePage,
 })

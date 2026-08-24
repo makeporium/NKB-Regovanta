@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/qms')({
       { title: 'QMS Implementation Support | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK QMS Implementation Support services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/qms" },
+  ],
   }),
   component: ServicePage,
 })

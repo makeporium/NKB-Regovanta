@@ -10,9 +10,12 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/australia/")({
     head: () => ({
         meta: [
-            { title: "Australia TGA Medical Device Registration | NKB Regovanta" },
+            { title: "TGA ARTG Inclusion & Australian Sponsor Services | NKB Regovanta" },
             { name: "description", content: "Navigate the Australia TGA medical device registration process. Expert support for ARTG inclusion and Australian Sponsor requirements." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia" },
+    ],
     }),
     component: AustraliaMarket,
 });

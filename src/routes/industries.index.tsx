@@ -9,13 +9,16 @@ import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.png";
 export const Route = createFileRoute("/industries/")({
     head: () => ({
         meta: [
-            { title: "Industries We Serve | NKB Regovanta" },
+            { title: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
             {
                 name: "description",
                 content:
                     "Specialized regulatory, quality and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/industries" },
+    ],
     }),
     component: Industries,
 });

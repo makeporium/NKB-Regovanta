@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/australia-tga")({
       { title: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
       { name: "description", content: "Leveraging existing overseas regulatory approvals and evidence to support Australian ARTG inclusion." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/australia-tga" },
+  ],
   }),
   component: Article,
 });

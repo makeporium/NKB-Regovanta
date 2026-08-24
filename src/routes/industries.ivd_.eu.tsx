@@ -10,6 +10,9 @@ export const Route = createFileRoute("/industries/ivd_/eu")({
             { title: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
             { name: "description", content: "Navigate the EU's In Vitro Diagnostic Medical Devices Regulation (IVDR). Expert support for Notified Body conformity, EUDAMED registration, and clinical evidence." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/eu" },
+    ],
     }),
     component: IVDEu,
 });

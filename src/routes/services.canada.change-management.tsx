@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/canada/change-management')({
       { title: 'Post-Approval Change Management | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada Post-Approval Change Management services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/change-management" },
+  ],
   }),
   component: ServicePage,
 })

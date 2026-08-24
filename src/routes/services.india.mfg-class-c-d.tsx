@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/mfg-class-c-d")({
       { title: "Manufacturing License for Class C & D Devices | MD-7 & MD-9" },
       { name: "description", content: "Expert guidance for obtaining CDSCO MD-9 manufacturing licenses for high-risk Class C and D medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-c-d" },
+    ],
   }),
 });
 

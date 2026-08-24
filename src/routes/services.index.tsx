@@ -12,6 +12,9 @@ export const Route = createFileRoute("/services/")({
           "Comprehensive regulatory, quality & market access solutions tailored to your business needs.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services" },
+  ],
   }),
   component: ServicesOverview,
 });

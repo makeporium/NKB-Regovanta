@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/canada/renewals')({
       { title: 'License Maintenance & Renewals | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada License Maintenance & Renewals services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/renewals" },
+  ],
   }),
   component: ServicePage,
 })

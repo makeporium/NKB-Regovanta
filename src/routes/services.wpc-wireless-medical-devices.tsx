@@ -35,6 +35,9 @@ export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
           "Complete WPC regulatory compliance for wireless medical devices in India. Equipment Type Approval (ETA), Dealer Possession License (DPL), RF test verification & import licensing by NKB Regovanta.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
+  ],
   }),
   component: WpcWirelessMedicalDevicesPage,
 });

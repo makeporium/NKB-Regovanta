@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/brazil/technovigilance')({
       { title: 'Technovigilance Services | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Technovigilance Services services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technovigilance" },
+  ],
   }),
   component: ServicePage,
 })

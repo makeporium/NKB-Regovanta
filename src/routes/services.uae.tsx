@@ -10,6 +10,9 @@ export const Route = createFileRoute("/services/uae")({
             { title: "UAE MOHAP Medical Device Registration | NKB Regovanta" },
             { name: "description", content: "Expert support for UAE MOHAP medical device registration, Dubai Customs requirements, and dedicated Local Representative services for seamless market access." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/uae" },
+    ],
     }),
     component: UAEMarket,
 });

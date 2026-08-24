@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/pms')({
       { title: 'Post-Market Surveillance (PMS) | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Post-Market Surveillance (PMS) services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/pms" },
+  ],
   }),
   component: ServicePage,
 })

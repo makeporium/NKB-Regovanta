@@ -12,11 +12,14 @@ const heroBadges = [
 export const Route = createFileRoute("/services/india/neutral-code")({
     component: NeutralCodePage,
     head: () => ({
-        meta: [
-            { title: "Neutral Code Certificate (Special Code) | NKB Regovanta" },
-            { name: "description", content: "Apply for a CDSCO Neutral Code to export medical devices compliantly while maintaining manufacturing identity confidentiality." },
-        ],
-    }),
+    meta: [
+      { title: "Neutral Code Certificate (Special Code) | NKB Regovanta" },
+      { name: "description", content: "Apply for a CDSCO Neutral Code to export medical devices compliantly while maintaining manufacturing identity confidentiality." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/neutral-code" },
+    ],
+  }),
 });
 
 function NeutralCodePage() {

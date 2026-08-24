@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/brazil/brh')({
       { title: 'Brazilian Registration Holder (BRH) | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Brazilian Registration Holder (BRH) services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" },
+  ],
   }),
   component: ServicePage,
 })

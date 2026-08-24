@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/mdr-ivdr-transition')({
       { title: 'Regulatory Strategy & MDR/IVDR Transition | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU Regulatory Strategy & MDR/IVDR Transition services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/mdr-ivdr-transition" },
+  ],
   }),
   component: ServicePage,
 })

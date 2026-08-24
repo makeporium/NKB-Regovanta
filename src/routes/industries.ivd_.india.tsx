@@ -10,6 +10,9 @@ export const Route = createFileRoute("/industries/ivd_/india")({
             { title: "IVD Regulation in India | CDSCO Under MDR 2017 | NKB Regovanta" },
             { name: "description", content: "Expert guidance on India's IVD regulations under the Medical Devices Rules (MDR) 2017, CDSCO pathways, classification, and mandatory clinical performance evaluation." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/india" },
+    ],
     }),
     component: IVDIndia,
 });

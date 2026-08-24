@@ -5,13 +5,16 @@ import mapImage from "@/assets/map2.png";
 export const Route = createFileRoute("/markets/")({
     head: () => ({
         meta: [
-            { title: "Global Markets | NKB Regovanta" },
+            { title: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
             {
                 name: "description",
                 content:
                     "We help you navigate regulatory requirements and market-access pathways across key international markets.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/markets" },
+    ],
     }),
     component: Markets,
 });

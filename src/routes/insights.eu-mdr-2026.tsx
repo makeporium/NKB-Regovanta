@@ -13,6 +13,9 @@ export const Route = createFileRoute("/insights/eu-mdr-2026")({
           "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/insights/eu-mdr-2026" },
+  ],
   }),
   component: Article,
 });

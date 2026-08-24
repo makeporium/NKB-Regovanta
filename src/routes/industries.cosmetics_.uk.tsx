@@ -9,6 +9,9 @@ export const Route = createFileRoute("/industries/cosmetics_/uk")({
       { title: "UK Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "Post-Brexit UK cosmetics compliance, UK Responsible Person (RP), SCPN notification, and OPSS regulations." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/uk" },
+  ],
   }),
   component: UKCosmetics,
 });

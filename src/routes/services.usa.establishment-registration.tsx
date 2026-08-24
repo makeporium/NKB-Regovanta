@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/establishment-registration')
       { title: 'Establishment Registration & Device Listing | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA Establishment Registration & Device Listing services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/establishment-registration" },
+  ],
   }),
   component: ServicePage,
 })

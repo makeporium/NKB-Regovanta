@@ -25,6 +25,9 @@ export const Route = createFileRoute("/industries/medical-devices_/india/for-man
           "End-to-end CDSCO and State FDA regulatory consulting for domestic medical device manufacturing. Form MD-5, MD-6, MD-9, MD-10, and ISO 13485 certification.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer" },
+  ],
   }),
   component: MedicalDeviceForManufacturerPage,
 });

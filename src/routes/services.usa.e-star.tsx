@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/e-star')({
       { title: 'eSTAR Submissions | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA eSTAR Submissions services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/e-star" },
+  ],
   }),
   component: ServicePage,
 })

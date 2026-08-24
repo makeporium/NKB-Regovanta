@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/non-conviction")({
       { title: "Non-Conviction Certificate (NCC) | NKB Regovanta" },
       { name: "description", content: "Obtain a Non-Conviction Certificate from CDSCO to prove regulatory compliance for medical device tenders and procurement in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/non-conviction" },
+    ],
   }),
 });
 

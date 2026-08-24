@@ -10,6 +10,9 @@ export const Route = createFileRoute("/services/new-zealand")({
             { title: "New Zealand Medical Device Registration & Medsafe WAND | NKB Regovanta" },
             { name: "description", content: "Expert support for New Zealand Medsafe medical device registration, WAND database notification, and Local Sponsor services." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand" },
+    ],
     }),
     component: NewZealandMarket,
 });

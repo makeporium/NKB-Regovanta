@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
       { title: "Import License for Predicate Medical Devices | MD-14 & MD-15" },
       { name: "description", content: "Get your MD-15 CDSCO import license for Class A, B, C, or D predicate medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/predicate-devices" },
+    ],
   }),
 });
 

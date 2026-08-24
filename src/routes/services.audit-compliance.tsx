@@ -12,6 +12,9 @@ export const Route = createFileRoute("/services/audit-compliance")({
         content: "Internal audits, supplier audits, compliance & regulatory intelligence.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/audit-compliance" },
+  ],
   }),
   component: AuditComplianceService,
 });

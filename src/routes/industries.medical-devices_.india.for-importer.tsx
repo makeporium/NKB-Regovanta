@@ -24,6 +24,9 @@ export const Route = createFileRoute("/industries/medical-devices_/india/for-imp
           "End-to-end CDSCO regulatory consulting for foreign medical device manufacturers. Authorized Indian Representative (AIR), Form MD-14 filing, and Form MD-15 import license grant.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices/india/for-importer" },
+  ],
   }),
   component: MedicalDeviceForImporterPage,
 });

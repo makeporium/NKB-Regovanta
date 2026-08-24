@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/class-a-import")({
       { title: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
       { name: "description", content: "Simplified CDSCO registration for low-risk, Class A (non-sterile & non-measuring) medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/class-a-import" },
+    ],
   }),
 });
 

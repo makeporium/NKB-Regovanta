@@ -13,6 +13,9 @@ export const Route = createFileRoute("/services/regulatory-affairs")({
                     "From early regulatory strategy to market authorization and post-market support, we help you move forward with a clear, compliant plan.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+    ],
     }),
     component: RegulatoryAffairs,
 });

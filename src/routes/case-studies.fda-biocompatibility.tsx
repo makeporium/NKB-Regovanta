@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
       { title: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
       { name: "description", content: "Using Predicate and Material Equivalence to Avoid Repeating Biocompatibility Testing Without Regulatory Need" },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },
+  ],
   }),
   component: Article,
 });

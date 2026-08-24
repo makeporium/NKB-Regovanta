@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/labeling')({
       { title: 'Labeling & Artwork Compliance | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU Labeling & Artwork Compliance services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/labeling" },
+  ],
   }),
   component: ServicePage,
 })

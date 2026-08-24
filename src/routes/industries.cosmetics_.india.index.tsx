@@ -9,6 +9,9 @@ export const Route = createFileRoute("/industries/cosmetics_/india/")({
       { title: "India Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "Comprehensive regulatory strategy, CDSCO registration, and compliance services for cosmetics in India." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india" },
+  ],
   }),
   component: IndiaCosmetics,
 });

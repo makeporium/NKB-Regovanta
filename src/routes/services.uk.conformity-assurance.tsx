@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/conformity-assurance')({
       { title: 'Documentation & Conformity Assurance | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Documentation & Conformity Assurance services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/conformity-assurance" },
+  ],
   }),
   component: ServicePage,
 })

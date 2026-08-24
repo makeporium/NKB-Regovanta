@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/fda-simulated-use")({
       { title: "US FDA 510(k) | Avoiding Duplicate Work | Case Studies | NKB Regovanta" },
       { name: "description", content: "Avoiding Duplicate Simulated-Use Work by Leveraging an Already Marketed Safety Feature." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-simulated-use" },
+  ],
   }),
   component: Article,
 });

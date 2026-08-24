@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/eu/technical-documentation')({
       { title: 'Technical Documentation & Conformity Assessment | EU Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized EU Technical Documentation & Conformity Assessment services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/technical-documentation" },
+  ],
   }),
   component: ServicePage,
 })

@@ -31,6 +31,9 @@ export const Route = createFileRoute("/services/iec-ad-code")({
           "Professional Import Export Code (IEC) and Authorised Dealer (AD) Code registration services in India. Complete DGFT and Customs documentation assistance by NKB Regovanta.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iec-ad-code" },
+  ],
   }),
   component: IecAdCodePage,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/australia/conformity-assessment'
       { title: 'Conformity Assessment Support | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia Conformity Assessment Support services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/conformity-assessment" },
+  ],
   }),
   component: ServicePage,
 })

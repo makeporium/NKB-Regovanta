@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/personal-use")({
       { title: "Personal Use Import License | MD-20 & MD-21" },
       { name: "description", content: "Navigate Forms MD-20 and MD-21 for importing specialized medical devices for personal use and treatment in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/personal-use" },
+    ],
   }),
 });
 

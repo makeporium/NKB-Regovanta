@@ -10,6 +10,9 @@ export const Route = createFileRoute("/services/saudi-arabia")({
             { title: "Saudi Arabia Medical Device Registration & SFDA Approval | NKB Regovanta" },
             { name: "description", content: "Comprehensive support for Saudi Arabia SFDA medical device registration (MDMA), Authorized Representative services, and GHAD system navigation." },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia" },
+    ],
     }),
     component: SaudiArabiaMarket,
 });

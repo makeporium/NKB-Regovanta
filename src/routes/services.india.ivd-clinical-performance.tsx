@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/ivd-clinical-performance")
       { title: "IVD Clinical Performance Evaluation | MD-24 & MD-25" },
       { name: "description", content: "Learn how to obtain CDSCO permissions (MD-24, MD-25) to conduct Clinical Performance Evaluations for new IVD medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd-clinical-performance" },
+    ],
   }),
 });
 

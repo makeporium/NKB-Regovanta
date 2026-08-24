@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/canada/mdl')({
       { title: 'Medical Device License (MDL) | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada Medical Device License (MDL) services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdl" },
+  ],
   }),
   component: ServicePage,
 })

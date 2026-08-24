@@ -11,6 +11,9 @@ export const Route = createFileRoute("/services/technical-documentation")({
         content: "End-to-end technical file writing (STED), risk management & compliance support.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/technical-documentation" },
+  ],
   }),
   component: TechnicalDocumentationService,
 });

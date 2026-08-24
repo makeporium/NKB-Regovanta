@@ -153,8 +153,11 @@ export const Route = createFileRoute("/services/india/")({
   component: IndiaCDSCOPage,
   head: () => ({
     meta: [
-      { title: "CDSCO Medical Device Registration India | NKB Regovanta" },
+      { title: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
       { name: "description", content: "Expert CDSCO consultancy services for medical device import license, manufacturing license, and regulatory approvals in India." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india" },
     ],
   }),
 });

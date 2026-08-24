@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/pma')({
       { title: 'Premarket Approval (PMA) | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA Premarket Approval (PMA) services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/pma" },
+  ],
   }),
   component: ServicePage,
 })

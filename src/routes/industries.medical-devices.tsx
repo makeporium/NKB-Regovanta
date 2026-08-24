@@ -5,9 +5,12 @@ import imgHero from "@/assets/industry-medical.png";
 export const Route = createFileRoute("/industries/medical-devices")({
   head: () => ({
     meta: [
-      { title: "Medical Device Regulatory & Quality Support | NKB Regovanta" },
+      { title: "Medical Device Regulatory Consultant India | CDSCO FDA CE Marking | NKB Regovanta" },
       { name: "description", content: "Navigate Complex Regulations. Accelerate Market Access. NKB Regovanta supports medical device manufacturers from early regulatory planning through market authorization and ongoing lifecycle compliance." },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices" },
+  ],
   }),
   component: MedicalDevices,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/technical-file')({
       { title: 'Technical File & Dossier Compilation | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Technical File & Dossier Compilation services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/technical-file" },
+  ],
   }),
   component: ServicePage,
 })

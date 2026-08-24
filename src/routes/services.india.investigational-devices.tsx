@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/investigational-devices")(
       { title: "Import Authorization for Investigational Devices | NKB Regovanta" },
       { name: "description", content: "Learn about the MD-18 and MD-19 forms for importing investigational medical devices for compassionate use in Indian government hospitals." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/investigational-devices" },
+    ],
   }),
 });
 

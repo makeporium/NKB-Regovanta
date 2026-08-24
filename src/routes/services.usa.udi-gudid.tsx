@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/usa/udi-gudid')({
       { title: 'UDI & GUDID Solutions | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA UDI & GUDID Solutions services.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/udi-gudid" },
+  ],
   }),
   component: ServicePage,
 })

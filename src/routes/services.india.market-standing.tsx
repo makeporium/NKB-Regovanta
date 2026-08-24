@@ -7,7 +7,10 @@ export const Route = createFileRoute("/services/india/market-standing")({
   head: () => ({
     meta: [
       { title: "Market Standing Certificate (MSC) | NKB Regovanta" },
-      { name: "description", content: "Obtain a CDSCO Market Standing Certificate to prove your medical device company's established presence for tenders and exports." },
+      { name: "description", content: "Obtain a CDSCO Market Standing Certificate to prove your medical device company\'s established presence for tenders and exports." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/market-standing" },
     ],
   }),
 });

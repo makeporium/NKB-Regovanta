@@ -39,12 +39,15 @@ import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
 export const Route = createFileRoute("/about")({
     head: () => ({
         meta: [
-            { title: "About Us | NKB Regovanta" },
+            { title: "About NKB Regovanta | Medical Device Regulatory Consulting Company India" },
             {
                 name: "description",
                 content: "Learn about NKB Regovanta's global expertise, strategic execution, and commitment to advancing healthcare innovation without borders.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/about" },
+    ],
     }),
     component: About,
 });

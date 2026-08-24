@@ -35,6 +35,9 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
           "Statutory PC-PNDT registration (Form A & Form B) for ultrasound, imaging and diagnostic equipment in India. Expert regulatory compliance for manufacturers, importers & dealers by NKB Regovanta.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+  ],
   }),
   component: PcPndtCertificatePage,
 });

@@ -8,6 +8,9 @@ export const Route = createFileRoute('/services/uk/dors-registration')({
       { title: 'Device Registration via DORS | UK Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized UK Device Registration via DORS services for medical devices and IVDs.' },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/dors-registration" },
+  ],
   }),
   component: ServicePage,
 })

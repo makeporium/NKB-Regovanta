@@ -9,6 +9,9 @@ export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
       { title: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
       { name: "description", content: "Converting a Legacy Technical File to MDR Without Rebuilding Everything From Zero" },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },
+  ],
   }),
   component: Article,
 });

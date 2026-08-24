@@ -9,6 +9,9 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
       { title: "Manufacturing License for Class A & B Devices | MD-3 & MD-5" },
       { name: "description", content: "Expert assistance for acquiring CDSCO MD-5 manufacturing licenses for low-to-moderate risk Class A and B medical devices in India." },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-a-b" },
+    ],
   }),
 });
 

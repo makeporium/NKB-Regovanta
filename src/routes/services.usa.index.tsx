@@ -10,12 +10,15 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
         meta: [
-            { title: "US FDA Medical Device Registration | NKB Regovanta" },
+            { title: "FDA 510(k) Consultant & US Agent Services India | NKB Regovanta" },
             {
                 name: "description",
                 content: "Navigate the US FDA medical device registration process. Explore pathways, classification, agent requirements, and post-approval obligations for the US market.",
             },
         ],
+    links: [
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" },
+    ],
     }),
     component: USAMarket,
 });

@@ -5,13 +5,16 @@ import imgMdsap from "@/assets/mdsap.png";
 export const Route = createFileRoute("/services/mdsap")({
   head: () => ({
     meta: [
-      { title: "MDSAP Preparation & Support | NKB Regovanta" },
+      { title: "MDSAP Readiness & Audit Consultant India | NKB Regovanta" },
       {
         name: "description",
         content:
           "Build an audit-ready quality system aligned with the Medical Device Single Audit Program.",
       },
     ],
+  links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap" },
+  ],
   }),
   component: Mdsap,
 });

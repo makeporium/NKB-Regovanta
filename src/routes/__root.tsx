@@ -87,6 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
       { property: "og:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.nkbregovanta.com" },
       { property: "og:site_name", content: "NKB Regovanta" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
