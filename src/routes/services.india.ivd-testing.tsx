@@ -6,7 +6,11 @@ export const Route = createFileRoute("/services/india/ivd-testing")({
   component: IVDTestingPage,
   head: () => ({
     meta: [
+<<<<<<< HEAD
       { title: "Test License for IVD Devices | MD-16 & MD-17 | NKB Regovanta" },
+=======
+      { title: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
+>>>>>>> 1b4a3fe77047ee93016859bf1c17c659e5fc8139
       { name: "description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
     ],
     links: [

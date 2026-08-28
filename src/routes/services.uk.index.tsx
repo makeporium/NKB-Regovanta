@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { LinearFlow } from "@/components/site/ProcessFlow";
@@ -53,6 +53,7 @@ function UKMarket() {
 
     return (
         <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{"@context":"https://schema.org","@type":"Service","name":"MHRA Medical Device Registration Consulting","url":"https://www.nkbregovanta.com/services/uk","description":"MHRA device registration via DORS, UK Responsible Person (UKRP), UKCA technical file compilation, PMS and vigilance support for UK medical device market access.","provider":{"@type":"ProfessionalService","name":"NKB Regovanta Solutions Pvt. Ltd.","url":"https://www.nkbregovanta.com"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nkbregovanta.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.nkbregovanta.com/services"},{"@type":"ListItem","position":3,"name":"UK MHRA","item":"https://www.nkbregovanta.com/services/uk"}]}]) }} />
             <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-12 pt-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
                     <div className="flex items-center gap-2 text-[11px] text-navy/60 font-semibold mb-4">

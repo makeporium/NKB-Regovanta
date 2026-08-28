@@ -95,7 +95,12 @@ function ServiceGroup({
   bgPosition?: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#eef3fb] to-[#f8fafc] px-6 py-12 sm:px-10 sm:py-14 lg:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `[{"@context":"https://schema.org","@type":"Service","name":"CDSCO Medical Device Regulatory Consulting India","url":"https://www.nkbregovanta.com/services/india","description":"Expert CDSCO medical device import and manufacturing licence consulting in India. MD-14, MD-15, GSR 777(E), Class A-D device registration, IVD licensing, and post-market compliance.","provider":{"@type":"ProfessionalService","name":"NKB Regovanta Solutions Pvt. Ltd.","url":"https://www.nkbregovanta.com"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nkbregovanta.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.nkbregovanta.com/services"},{"@type":"ListItem","position":3,"name":"India CDSCO","item":"https://www.nkbregovanta.com/services/india"}]}]` }}
+      />
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#eef3fb] to-[#f8fafc] px-6 py-12 sm:px-10 sm:py-14 lg:py-16">
       {fullBleedBg ? (
         <img
           src={bgImage}
@@ -146,6 +151,7 @@ function ServiceGroup({
         </div>
       </div>
     </div>
+    </>
   );
 }
 

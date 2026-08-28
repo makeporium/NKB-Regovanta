@@ -81,6 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+<<<<<<< HEAD
       { title: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
       {
         name: "description",
@@ -121,6 +122,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.nkbregovanta.com" },
       { property: "og:locale", content: "en_US" },
+=======
+      { title: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { name: "description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. India-based regulatory consultants serving 15+ countries." },
+      { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
+      { property: "og:title", content: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { property: "og:description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.nkbregovanta.com" },
+      { property: "og:site_name", content: "NKB Regovanta" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { name: "twitter:description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics." },
+>>>>>>> 1b4a3fe77047ee93016859bf1c17c659e5fc8139
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { property: "og:image:secure_url", content: "https://www.nkbregovanta.com/og-image.png" },
       { property: "og:image:type", content: "image/png" },
@@ -165,7 +179,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+<<<<<<< HEAD
 const structuredDataGraph = {
+=======
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NKB Regovanta",
+  "alternateName": ["NKB Regovanta Solutions", "NKB Regovanta Solutions Pvt. Ltd."],
+  "url": "https://www.nkbregovanta.com",
+};
+
+const organizationSchema = {
+>>>>>>> 1b4a3fe77047ee93016859bf1c17c659e5fc8139
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -327,7 +353,15 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           type="application/ld+json"
+<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
+=======
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+>>>>>>> 1b4a3fe77047ee93016859bf1c17c659e5fc8139
         />
       </head>
       <body>
