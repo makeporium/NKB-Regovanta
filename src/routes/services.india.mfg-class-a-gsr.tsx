@@ -6,11 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
   component: MfgClassAGsrPage,
   head: () => ({
     meta: [
-<<<<<<< HEAD
-      { title: "Manufacturing Registration for Class A Medical Devices | GSR 777(E) | NKB Regovanta" },
-=======
-      { title: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
->>>>>>> 1b4a3fe77047ee93016859bf1c17c659e5fc8139
+{ title: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
       { name: "description", content: "Fast-track CDSCO manufacturing registration for non-sterile and non-measuring Class A medical devices under GSR 777(E) in India." },
     ],
     links: [
