@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-c-d")({
   component: LoanClassCDPage,
   head: () => ({
     meta: [
-      { title: "Loan Licenses for Class C & D Devices | MD-8 & MD-10" },
+      { title: "Loan Licenses for Class C & D Devices | MD-8 & MD-10 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO MD-10 loan licenses to manufacture Class C and D high-risk medical devices in existing licensed facilities in India." },
     ],
     links: [
@@ -167,10 +167,10 @@ function LoanClassCDPage() {
                 <h3 className="text-xl font-bold text-navy mb-6">The MD-8 Application Workflow</h3>
                 <div className="space-y-6">
                   {[
-                    { title: "Documentation Compilation", desc: "Gather agreements between loanee and licensor, QMS certificates, valid CDSCO Test Licenses, Plant Master Files, and Device Master Files." },
-                    { title: "Online Submission", desc: "Submit MD-8 and pay the requisite government base and device-specific fees." },
-                    { title: "Notified Body Audit", desc: "The CLA appoints an approved Notified Body to rigorously audit the actual manufacturing premises." },
-                    { title: "CLA Scrutiny & Approval", desc: "Following a rigorous review of the dossier and the Notified Body's audit report, the CLA issues the MD-10 license." },
+                    { title: "Documentation Compilation | NKB Regovanta", desc: "Gather agreements between loanee and licensor, QMS certificates, valid CDSCO Test Licenses, Plant Master Files, and Device Master Files." },
+                    { title: "Online Submission | NKB Regovanta", desc: "Submit MD-8 and pay the requisite government base and device-specific fees." },
+                    { title: "Notified Body Audit | NKB Regovanta", desc: "The CLA appoints an approved Notified Body to rigorously audit the actual manufacturing premises." },
+                    { title: "CLA Scrutiny & Approval | NKB Regovanta", desc: "Following a rigorous review of the dossier and the Notified Body's audit report, the CLA issues the MD-10 license." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

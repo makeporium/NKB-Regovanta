@@ -11,16 +11,26 @@ const imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
     meta: [
-      { title: "Case Studies | NKB Regovanta" },
+      { title: "Client Case Studies & Success Stories | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Explore how we've helped medical device companies achieve compliance, accelerate approvals, and grow their global presence.",
+          "Explore real-world case studies of medical device, IVD, and pharma companies achieving FDA 510(k) clearances, EU MDR certifications, and TGA approvals with NKB Regovanta.",
       },
+      {
+        name: "keywords",
+        content: "regulatory case studies, FDA 510k success, EU MDR remediation, TGA approval case study, medical device consulting results, NKB Regovanta",
+      },
+      { property: "og:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "Proven track record in global regulatory approvals, ISO 13485 compliance, and market expansion.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies" },
-  ],
+    ],
   }),
   component: CaseStudies,
 });

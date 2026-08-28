@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
-      { title: "Import License for Predicate Medical Devices | MD-14 & MD-15" },
+      { title: "Import License for Predicate Medical Devices | MD-14 & MD-15 | NKB Regovanta" },
       { name: "description", content: "Get your MD-15 CDSCO import license for Class A, B, C, or D predicate medical devices in India." },
     ],
     links: [
@@ -146,10 +146,10 @@ function PredicateDevicesPage() {
                 </h2>
                 <div className="space-y-6">
                   {[
-                    { title: "Application via Form MD-14", desc: "The Authorized Agent submits the online MD-14 application on the CDSCO portal, detailing the device's generic name, intended use, risk class, and materials." },
-                    { title: "Document Upload", desc: "A comprehensive Device Master File is required, including product specifications, biocompatibility data, clinical evidence, QMS certificates, and Free Sale Certificates (FSC)." },
-                    { title: "Fee Payment", desc: "Payment of the requisite government fees as stipulated in the Second Schedule of the Medical Device Rules, 2017." },
-                    { title: "CDSCO Review & Approval", desc: "The licensing authority rigorously reviews the technical dossier. Upon satisfaction, they issue the MD-15 import license." },
+                    { title: "Application via Form MD-14 | NKB Regovanta", desc: "The Authorized Agent submits the online MD-14 application on the CDSCO portal, detailing the device's generic name, intended use, risk class, and materials." },
+                    { title: "Document Upload | NKB Regovanta", desc: "A comprehensive Device Master File is required, including product specifications, biocompatibility data, clinical evidence, QMS certificates, and Free Sale Certificates (FSC)." },
+                    { title: "Fee Payment | NKB Regovanta", desc: "Payment of the requisite government fees as stipulated in the Second Schedule of the Medical Device Rules, 2017." },
+                    { title: "CDSCO Review & Approval | NKB Regovanta", desc: "The licensing authority rigorously reviews the technical dossier. Upon satisfaction, they issue the MD-15 import license." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

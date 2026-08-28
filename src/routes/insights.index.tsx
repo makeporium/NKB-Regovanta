@@ -10,16 +10,26 @@ const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 export const Route = createFileRoute("/insights/")({
   head: () => ({
     meta: [
-      { title: "Insights | NKB Regovanta" },
+      { title: "Regulatory Insights & Industry Intelligence | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Latest regulatory news, updates, and best practices for the medical device industry.",
+          "Expert insights, regulatory updates, and compliance guides on US FDA, EU MDR, CDSCO, and global medical device regulations from NKB Regovanta.",
       },
+      {
+        name: "keywords",
+        content: "medical device insights, EU MDR 2026, FDA QMSR, FDA inspections, CDSCO updates, regulatory consulting intelligence, NKB Regovanta",
+      },
+      { property: "og:title", content: "Regulatory Insights & Industry Intelligence | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "Latest regulatory news, updates, and best practices for the medical device and IVD industry from NKB Regovanta.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights" },
-  ],
+    ],
   }),
   component: Insights,
 });

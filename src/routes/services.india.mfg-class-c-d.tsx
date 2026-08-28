@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-c-d")({
   component: MfgClassCDPage,
   head: () => ({
     meta: [
-      { title: "Manufacturing License for Class C & D Devices | MD-7 & MD-9" },
+      { title: "Manufacturing License for Class C & D Devices | MD-7 & MD-9 | NKB Regovanta" },
       { name: "description", content: "Expert guidance for obtaining CDSCO MD-9 manufacturing licenses for high-risk Class C and D medical devices in India." },
     ],
     links: [
@@ -155,10 +155,10 @@ function MfgClassCDPage() {
                 
                 <div className="space-y-6">
                   {[
-                    { title: "Application via MD-7", desc: "Electronic submission to the Central Licensing Authority." },
-                    { title: "Rigorous Documentation", desc: "Submit Plant & Device Master Files (MDR 2017 format), robust QMS documentation, valid Quality Certificates, Test Licenses, and IVD performance evaluation reports if applicable." },
-                    { title: "CDSCO Audit & Inspection", desc: "The CLA will review the dossier and conduct a thorough physical inspection of the manufacturing site to verify Fifth Schedule QMS compliance." },
-                    { title: "MD-9 Issuance", desc: "The license is granted indefinitely, contingent on the payment of retention fees every 5 years to avoid suspension." },
+                    { title: "Application via MD-7 | NKB Regovanta", desc: "Electronic submission to the Central Licensing Authority." },
+                    { title: "Rigorous Documentation | NKB Regovanta", desc: "Submit Plant & Device Master Files (MDR 2017 format), robust QMS documentation, valid Quality Certificates, Test Licenses, and IVD performance evaluation reports if applicable." },
+                    { title: "CDSCO Audit & Inspection | NKB Regovanta", desc: "The CLA will review the dossier and conduct a thorough physical inspection of the manufacturing site to verify Fifth Schedule QMS compliance." },
+                    { title: "MD-9 Issuance | NKB Regovanta", desc: "The license is granted indefinitely, contingent on the payment of retention fees every 5 years to avoid suspension." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

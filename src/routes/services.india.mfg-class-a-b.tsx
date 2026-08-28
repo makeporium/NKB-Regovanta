@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
   component: MfgClassABPage,
   head: () => ({
     meta: [
-      { title: "Manufacturing License for Class A & B Devices | MD-3 & MD-5" },
+      { title: "Manufacturing License for Class A & B Devices | MD-3 & MD-5 | NKB Regovanta" },
       { name: "description", content: "Expert assistance for acquiring CDSCO MD-5 manufacturing licenses for low-to-moderate risk Class A and B medical devices in India." },
     ],
     links: [
@@ -155,10 +155,10 @@ function MfgClassABPage() {
                 
                 <div className="space-y-6">
                   {[
-                    { title: "Online Application (Form MD-3)", desc: "Submit details about the company, facility, responsible personnel, and the proposed medical devices via the CDSCO portal." },
-                    { title: "Documentation Submission", desc: "Upload facility layouts, design dossiers, labeling information, and QMS documentation. ISO 13485 certification is highly recommended to demonstrate QMS compliance." },
-                    { title: "SLA Inspection", desc: "The State Licensing Authority may conduct an on-site inspection of the manufacturing facility to verify adherence to the Medical Device Rules, 2017." },
-                    { title: "MD-5 Grant & Validity", desc: "Upon approval, the MD-5 license is granted. It is permanently valid, provided the mandatory license retention fees are paid every 5 years." },
+                    { title: "Online Application (Form MD-3) | NKB Regovanta", desc: "Submit details about the company, facility, responsible personnel, and the proposed medical devices via the CDSCO portal." },
+                    { title: "Documentation Submission | NKB Regovanta", desc: "Upload facility layouts, design dossiers, labeling information, and QMS documentation. ISO 13485 certification is highly recommended to demonstrate QMS compliance." },
+                    { title: "SLA Inspection | NKB Regovanta", desc: "The State Licensing Authority may conduct an on-site inspection of the manufacturing facility to verify adherence to the Medical Device Rules, 2017." },
+                    { title: "MD-5 Grant & Validity | NKB Regovanta", desc: "Upon approval, the MD-5 license is granted. It is permanently valid, provided the mandatory license retention fees are paid every 5 years." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

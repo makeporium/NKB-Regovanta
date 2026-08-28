@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/ivd-testing")({
   component: IVDTestingPage,
   head: () => ({
     meta: [
-      { title: "Test License for IVD Devices | MD-16 & MD-17" },
+      { title: "Test License for IVD Devices | MD-16 & MD-17 | NKB Regovanta" },
       { name: "description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
     ],
     links: [
@@ -166,10 +166,10 @@ function IVDTestingPage() {
                   <h3 className="text-xl font-bold text-navy mb-6">The Application Process</h3>
                   <div className="space-y-6">
                     {[
-                      { title: "Justification of Quantity", desc: "A rigorous rationale for the exact quantity requested, including a breakdown (e.g., test vs. retention)." },
-                      { title: "Test Protocol Submission", desc: "For clinical investigations, an approved PEP or test protocol must be provided." },
-                      { title: "Non-Commercial Undertaking", desc: "A binding declaration stating devices will not be sold or distributed commercially." },
-                      { title: "CDSCO Sugam Registration", desc: "Complete online submission via the Sugam portal, including fee payment (USD 100 per distinct device)." },
+                      { title: "Justification of Quantity | NKB Regovanta", desc: "A rigorous rationale for the exact quantity requested, including a breakdown (e.g., test vs. retention)." },
+                      { title: "Test Protocol Submission | NKB Regovanta", desc: "For clinical investigations, an approved PEP or test protocol must be provided." },
+                      { title: "Non-Commercial Undertaking | NKB Regovanta", desc: "A binding declaration stating devices will not be sold or distributed commercially." },
+                      { title: "CDSCO Sugam Registration | NKB Regovanta", desc: "Complete online submission via the Sugam portal, including fee payment (USD 100 per distinct device)." },
                     ].map((step, i) => (
                       <div key={i} className="flex gap-4">
                         <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

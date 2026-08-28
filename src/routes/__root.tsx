@@ -82,20 +82,65 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
-      { name: "author", content: "NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR compliance consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      },
+      {
+        name: "keywords",
+        content:
+          "NKB Regovanta, NKB Regovanta Solutions, NKB Regovanta Solutions Pvt. Ltd., nkbregovanta, regovanta, medical device regulatory consultants, CDSCO consulting, CDSCO medical device registration, US FDA 510k, EU MDR 2017/745, IVDR 2017/746, ISO 13485 QMS, MDSAP certification, Indian Authorized Agent, drug import license India, cosmetics MoCRA, PC-PNDT certificate, WPC ETA approval, IEC AD Code",
+      },
+      { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
+      { name: "publisher", content: "NKB Regovanta" },
+      {
+        name: "robots",
+        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      },
+      {
+        name: "googlebot",
+        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      },
+      {
+        name: "bingbot",
+        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      },
+      { name: "application-name", content: "NKB Regovanta" },
+      { name: "apple-mobile-web-app-title", content: "NKB Regovanta" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+      { name: "theme-color", content: "#0b3a96" },
+      { property: "og:site_name", content: "NKB Regovanta" },
       { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { property: "og:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
+      {
+        property: "og:description",
+        content:
+          "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.nkbregovanta.com" },
-      { property: "og:site_name", content: "NKB Regovanta" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "twitter:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
+      { property: "og:locale", content: "en_US" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image:secure_url", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@nkbregovanta" },
+      { name: "twitter:creator", content: "@nkbregovanta" },
+      { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+      {
+        name: "twitter:description",
+        content:
+          "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image:alt", content: "NKB Regovanta Logo & Brand Banner" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -120,33 +165,158 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const organizationSchema = {
+const structuredDataGraph = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "NKB Regovanta Solutions Pvt. Ltd.",
-  "alternateName": "NKB Regovanta",
-  "url": "https://www.nkbregovanta.com",
-  "logo": "https://www.nkbregovanta.com/favicon.png",
-  "image": "https://www.nkbregovanta.com/og-image.png",
-  "description": "Global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
-  ],
-  "knowsAbout": [
-    "CDSCO Medical Device Classification & Licensing",
-    "CDSCO Pharmaceutical & Drug Import Registration",
-    "US FDA 510(k) Submissions & US Agent",
-    "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking",
-    "ISO 13485:2016 QMS Implementation & Internal Audits",
-    "MDSAP Readiness & Audit Support",
-    "Cosmetics Regulatory Compliance (MoCRA, EU RP, CDSCO COS-1/2)",
-    "PC-PNDT Certificate Registration",
-    "WPC ETA Approval for Medical Equipment",
-    "IEC & AD Code Customs Registration"
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://www.nkbregovanta.com/#organization",
+      "name": "NKB Regovanta",
+      "legalName": "NKB Regovanta Solutions Pvt. Ltd.",
+      "alternateName": [
+        "NKB Regovanta Solutions",
+        "NKB Regovanta Solutions Pvt. Ltd.",
+        "NKBS",
+        "Regovanta",
+        "nkbregovanta",
+        "nkbregovanta.com"
+      ],
+      "url": "https://www.nkbregovanta.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.nkbregovanta.com/#logo",
+        "url": "https://www.nkbregovanta.com/favicon.png",
+        "caption": "NKB Regovanta Logo"
+      },
+      "image": "https://www.nkbregovanta.com/og-image.png",
+      "description": "NKB Regovanta Solutions Pvt. Ltd. is a leading regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      "email": "contact@nkbregovanta.com",
+      "telephone": "+918400039062",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Worldwide",
+        "India",
+        "United States",
+        "European Union",
+        "United Kingdom",
+        "Australia",
+        "Canada",
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Brazil",
+        "New Zealand"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
+      ],
+      "knowsAbout": [
+        "CDSCO Medical Device Classification & Licensing",
+        "CDSCO Pharmaceutical & Drug Import Registration (Form 41 / Form 10)",
+        "Indian Authorized Agent (AIR) Services",
+        "US FDA 510(k) Submissions & US Agent Services",
+        "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking",
+        "ISO 13485:2016 QMS Implementation & Internal Audits",
+        "MDSAP Readiness & Audit Support",
+        "Cosmetics Regulatory Compliance (MoCRA, EU RP, CDSCO COS-1/2)",
+        "PC-PNDT Certificate Registration",
+        "WPC ETA Approval for Wireless Medical Devices",
+        "IEC & AD Code Customs Registration",
+        "Post-Market Surveillance (PMS) & Vigilance Reporting",
+        "Clinical Evaluation Reports (CER) & Performance Evaluation Reports (PER)"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Regulatory & Quality Consulting Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CDSCO Medical Device & Drug Licensing India",
+              "url": "https://www.nkbregovanta.com/services/india"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "US FDA 510(k), De Novo & US Agent Services",
+              "url": "https://www.nkbregovanta.com/services/usa"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EU MDR & IVDR CE Marking Compliance",
+              "url": "https://www.nkbregovanta.com/services/eu"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ISO 13485 & MDSAP Quality Management Systems",
+              "url": "https://www.nkbregovanta.com/services/iso-13485"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UK MHRA Registration & UKRP Services",
+              "url": "https://www.nkbregovanta.com/services/uk"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "WPC Wireless Equipment Type Approval (ETA)",
+              "url": "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PC-PNDT Certificate Registration",
+              "url": "https://www.nkbregovanta.com/services/pc-pndt-certificate"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IEC & AD Code Customs ICEGATE Registration",
+              "url": "https://www.nkbregovanta.com/services/iec-ad-code"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nkbregovanta.com/#website",
+      "url": "https://www.nkbregovanta.com",
+      "name": "NKB Regovanta",
+      "alternateName": ["NKB Regovanta Solutions", "nkbregovanta", "Regovanta"],
+      "publisher": {
+        "@id": "https://www.nkbregovanta.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.nkbregovanta.com/services?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
   ]
 };
 
@@ -157,7 +327,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
         />
       </head>
       <body>

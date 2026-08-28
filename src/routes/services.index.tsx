@@ -5,16 +5,28 @@ import { CTABand, PageHero } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Our Services | NKB Regovanta" },
+      { title: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Comprehensive regulatory, quality & market access solutions tailored to your business needs.",
+          "Explore NKB Regovanta's global regulatory consulting services: CDSCO India licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, MDSAP, Drug & Cosmetics compliance.",
       },
+      {
+        name: "keywords",
+        content:
+          "NKB Regovanta services, regulatory consulting services, CDSCO registration, US FDA 510k, EU MDR CE mark, ISO 13485 consulting, MDSAP, drug license importer, WPC ETA, PC-PNDT certificate",
+      },
+      { property: "og:title", content: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Comprehensive regulatory, quality & market access solutions tailored to Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services" },
-  ],
+    ],
   }),
   component: ServicesOverview,
 });

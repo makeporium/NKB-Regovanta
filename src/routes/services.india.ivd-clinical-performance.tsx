@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/ivd-clinical-performance")
   component: IVDClinicalPerformancePage,
   head: () => ({
     meta: [
-      { title: "IVD Clinical Performance Evaluation | MD-24 & MD-25" },
+      { title: "IVD Clinical Performance Evaluation | MD-24 & MD-25 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO permissions (MD-24, MD-25) to conduct Clinical Performance Evaluations for new IVD medical devices in India." },
     ],
     links: [
@@ -139,12 +139,12 @@ function IVDClinicalPerformancePage() {
                 </h2>
                 <div className="space-y-6">
                   {[
-                    { title: "Develop the Evaluation Plan (PEP)", desc: "Create a meticulous PEP detailing study design, sample collection protocols, and statistical analysis plans." },
-                    { title: "Obtain Ethical Committee (EC) Approval", desc: "The PEP must pass rigorous review by a CDSCO-registered independent Ethics Committee to ensure subject welfare." },
-                    { title: "Site & Investigator Selection", desc: "Identify qualified clinical laboratories and lead investigators equipped with the necessary expertise." },
-                    { title: "Compile Device Information", desc: "Gather technical specifications, in-house analytical data (sensitivity/specificity), and comprehensive risk assessments." },
-                    { title: "CDSCO Sugam Submission", desc: "Submit Form MD-24 electronically with all supporting dossier files via the official portal." },
-                    { title: "Regulatory Review & Grant", desc: "Following expert review (typically 1-2 months), CDSCO grants the MD-25 permission, obligating the study to commence within one year." },
+                    { title: "Develop the Evaluation Plan (PEP) | NKB Regovanta", desc: "Create a meticulous PEP detailing study design, sample collection protocols, and statistical analysis plans." },
+                    { title: "Obtain Ethical Committee (EC) Approval | NKB Regovanta", desc: "The PEP must pass rigorous review by a CDSCO-registered independent Ethics Committee to ensure subject welfare." },
+                    { title: "Site & Investigator Selection | NKB Regovanta", desc: "Identify qualified clinical laboratories and lead investigators equipped with the necessary expertise." },
+                    { title: "Compile Device Information | NKB Regovanta", desc: "Gather technical specifications, in-house analytical data (sensitivity/specificity), and comprehensive risk assessments." },
+                    { title: "CDSCO Sugam Submission | NKB Regovanta", desc: "Submit Form MD-24 electronically with all supporting dossier files via the official portal." },
+                    { title: "Regulatory Review & Grant | NKB Regovanta", desc: "Following expert review (typically 1-2 months), CDSCO grants the MD-25 permission, obligating the study to commence within one year." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

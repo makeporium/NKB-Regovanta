@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/personal-use")({
   component: PersonalUsePage,
   head: () => ({
     meta: [
-      { title: "Personal Use Import License | MD-20 & MD-21" },
+      { title: "Personal Use Import License | MD-20 & MD-21 | NKB Regovanta" },
       { name: "description", content: "Navigate Forms MD-20 and MD-21 for importing specialized medical devices for personal use and treatment in India." },
     ],
     links: [

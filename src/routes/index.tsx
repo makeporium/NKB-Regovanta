@@ -18,16 +18,28 @@ import heroImage from "@/assets/hero-global.png";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Medical Device & IVD Regulatory Consultant India | NKB Regovanta" },
+            { title: "NKB Regovanta — Medical Device & IVD Regulatory Consultants | Global Market Access" },
             {
                 name: "description",
                 content:
-                    "Expert CDSCO, US FDA, EU MDR/IVDR, ISO 13485 and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. India-based regulatory consultants serving global markets.",
+                    "NKB Regovanta is a premier regulatory affairs and quality compliance consulting firm. Expert CDSCO India licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485, MDSAP, Pharma and Cosmetics consulting.",
             },
+            {
+                name: "keywords",
+                content:
+                    "NKB Regovanta, NKB Regovanta Solutions, nkbregovanta, medical device regulatory consultants, CDSCO consulting, US FDA 510k, EU MDR 2017/745, IVDR 2017/746, ISO 13485, MDSAP, Indian Authorized Agent, Pharma drug import license, Cosmetics MoCRA",
+            },
+            { property: "og:title", content: "NKB Regovanta — Medical Device & IVD Regulatory Consultants" },
+            {
+                property: "og:description",
+                content:
+                    "NKB Regovanta provides global regulatory affairs, quality systems, CDSCO, US FDA, EU MDR/IVDR, ISO 13485 and market access consulting.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com" },
+        ],
     }),
     component: Index,
 });

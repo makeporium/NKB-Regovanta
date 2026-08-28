@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/novel-ivds")({
   component: NovelIVDsPage,
   head: () => ({
     meta: [
-      { title: "Import Authorization for Novel IVDs | MD-26 & MD-27" },
+      { title: "Import Authorization for Novel IVDs | MD-26 & MD-27 | NKB Regovanta" },
       { name: "description", content: "Secure CDSCO permissions (MD-26 and MD-27) to import or manufacture new In Vitro Diagnostic (IVD) medical devices in India." },
     ],
     links: [
@@ -143,12 +143,12 @@ function NovelIVDsPage() {
                 
                 <div className="space-y-6">
                   {[
-                    { title: "Classification & Scope", desc: "Accurately classify the new IVD to determine the specific regulatory pathway. Clearly define its intended use to avoid any ambiguity." },
-                    { title: "Technical Documentation (Device Master File)", desc: "Prepare a comprehensive dossier detailing design and development records, manufacturing processes, QC procedures, and complete product specifications." },
-                    { title: "Performance Data", desc: "Submit robust analytical performance data (sensitivity, specificity, accuracy, precision) and clinical performance evaluation data proving real-world effectiveness." },
-                    { title: "Risk Management", desc: "Develop an ISO 14971-compliant risk management plan and report, outlining robust mitigation strategies." },
-                    { title: "QMS Documentation", desc: "Provide evidence of a rigorous Quality Management System, such as ISO 13485 certification." },
-                    { title: "CDSCO Expert Review", desc: "The CLA and subject matter experts thoroughly review the dossier, potentially requesting clarifications or facility audits." },
+                    { title: "Classification & Scope | NKB Regovanta", desc: "Accurately classify the new IVD to determine the specific regulatory pathway. Clearly define its intended use to avoid any ambiguity." },
+                    { title: "Technical Documentation (Device Master File) | NKB Regovanta", desc: "Prepare a comprehensive dossier detailing design and development records, manufacturing processes, QC procedures, and complete product specifications." },
+                    { title: "Performance Data | NKB Regovanta", desc: "Submit robust analytical performance data (sensitivity, specificity, accuracy, precision) and clinical performance evaluation data proving real-world effectiveness." },
+                    { title: "Risk Management | NKB Regovanta", desc: "Develop an ISO 14971-compliant risk management plan and report, outlining robust mitigation strategies." },
+                    { title: "QMS Documentation | NKB Regovanta", desc: "Provide evidence of a rigorous Quality Management System, such as ISO 13485 certification." },
+                    { title: "CDSCO Expert Review | NKB Regovanta", desc: "The CLA and subject matter experts thoroughly review the dossier, potentially requesting clarifications or facility audits." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">

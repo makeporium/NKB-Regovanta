@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-a-b")({
   component: LoanClassABPage,
   head: () => ({
     meta: [
-      { title: "Loan Licenses for Class A & B Devices | MD-4 & MD-6" },
+      { title: "Loan Licenses for Class A & B Devices | MD-4 & MD-6 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain SLA MD-6 loan licenses to manufacture Class A and B medical devices in existing licensed facilities in India." },
     ],
     links: [
@@ -167,10 +167,10 @@ function LoanClassABPage() {
                 <h3 className="text-xl font-bold text-navy mb-6">The MD-4 Application Workflow</h3>
                 <div className="space-y-6">
                   {[
-                    { title: "Documentation Compilation", desc: "Gather agreements between loanee and licensor, QMS certificates, valid CDSCO Test Licenses, Plant Master Files, and Device Master Files." },
-                    { title: "Online Submission", desc: "Submit MD-4 and pay the requisite government base and device-specific fees via the CDSCO portal." },
-                    { title: "Notified Body Audit", desc: "The SLA appoints an approved Notified Body to audit the actual manufacturing premises." },
-                    { title: "SLA Scrutiny & Approval", desc: "Following a review of the dossier and the audit report, the SLA issues the MD-6 loan license." },
+                    { title: "Documentation Compilation | NKB Regovanta", desc: "Gather agreements between loanee and licensor, QMS certificates, valid CDSCO Test Licenses, Plant Master Files, and Device Master Files." },
+                    { title: "Online Submission | NKB Regovanta", desc: "Submit MD-4 and pay the requisite government base and device-specific fees via the CDSCO portal." },
+                    { title: "Notified Body Audit | NKB Regovanta", desc: "The SLA appoints an approved Notified Body to audit the actual manufacturing premises." },
+                    { title: "SLA Scrutiny & Approval | NKB Regovanta", desc: "Following a review of the dossier and the audit report, the SLA issues the MD-6 loan license." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
