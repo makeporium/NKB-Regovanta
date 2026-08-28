@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-a-b")({
   component: LoanClassABPage,
   head: () => ({
     meta: [
-      { title: "Loan Licenses for Class A & B Devices | MD-4 & MD-6" },
+      { title: "Loan Licenses for Class A & B Medical Devices India | MD-4 & MD-6 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain SLA MD-6 loan licenses to manufacture Class A and B medical devices in existing licensed facilities in India." },
     ],
     links: [

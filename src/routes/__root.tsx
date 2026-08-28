@@ -81,17 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
-      { name: "author", content: "NKB Regovanta" },
-      { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { property: "og:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
+      { title: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { name: "description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. India-based regulatory consultants serving 15+ countries." },
+      { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
+      { property: "og:title", content: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { property: "og:description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.nkbregovanta.com" },
       { property: "og:site_name", content: "NKB Regovanta" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "twitter:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
+      { name: "twitter:title", content: "NKB Regovanta — Medical Device, IVD & Pharma Regulatory Consulting India" },
+      { name: "twitter:description", content: "NKB Regovanta Solutions Pvt. Ltd. provides CDSCO, US FDA, EU MDR/IVDR, ISO 13485, and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics." },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
@@ -119,6 +119,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NKB Regovanta",
+  "alternateName": ["NKB Regovanta Solutions", "NKB Regovanta Solutions Pvt. Ltd."],
+  "url": "https://www.nkbregovanta.com",
+};
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -155,6 +163,10 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/ivd-clinical-performance")
   component: IVDClinicalPerformancePage,
   head: () => ({
     meta: [
-      { title: "IVD Clinical Performance Evaluation | MD-24 & MD-25" },
+      { title: "IVD Clinical Performance Evaluation India | MD-24 & MD-25 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO permissions (MD-24, MD-25) to conduct Clinical Performance Evaluations for new IVD medical devices in India." },
     ],
     links: [

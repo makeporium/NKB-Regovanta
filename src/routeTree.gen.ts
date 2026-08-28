@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as AboutcopyRouteImport } from './routes/about copy'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
@@ -142,11 +141,6 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutcopyRoute = AboutcopyRouteImport.update({
-  id: '/about copy',
-  path: '/about copy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
@@ -802,7 +796,6 @@ const IndustriesMedicalDevicesIndiaForManufacturerRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/about copy': typeof AboutcopyRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
@@ -928,7 +921,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/about copy': typeof AboutcopyRoute
   '/contact': typeof ContactRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
@@ -1047,7 +1039,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/about copy': typeof AboutcopyRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
@@ -1175,7 +1166,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/about copy'
     | '/case-studies'
     | '/contact'
     | '/case-studies/algorithm-claim'
@@ -1301,7 +1291,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/about copy'
     | '/contact'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
@@ -1419,7 +1408,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/about copy'
     | '/case-studies'
     | '/contact'
     | '/case-studies/algorithm-claim'
@@ -1546,7 +1534,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AboutcopyRoute: typeof AboutcopyRoute
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   IndustriesCosmeticsRoute: typeof IndustriesCosmeticsRoute
@@ -1606,13 +1593,6 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about copy': {
-      id: '/about copy'
-      path: '/about copy'
-      fullPath: '/about copy'
-      preLoaderRoute: typeof AboutcopyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies': {
@@ -2707,7 +2687,6 @@ const ServicesUsaRouteWithChildren = ServicesUsaRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AboutcopyRoute: AboutcopyRoute,
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
   IndustriesCosmeticsRoute: IndustriesCosmeticsRoute,

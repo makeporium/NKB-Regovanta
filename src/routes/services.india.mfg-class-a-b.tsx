@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
   component: MfgClassABPage,
   head: () => ({
     meta: [
-      { title: "Manufacturing License for Class A & B Devices | MD-3 & MD-5" },
+      { title: "Manufacturing License Class A & B Medical Devices India | MD-3 & MD-5 | NKB Regovanta" },
       { name: "description", content: "Expert assistance for acquiring CDSCO MD-5 manufacturing licenses for low-to-moderate risk Class A and B medical devices in India." },
     ],
     links: [

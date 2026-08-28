@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/novel-ivds")({
   component: NovelIVDsPage,
   head: () => ({
     meta: [
-      { title: "Import Authorization for Novel IVDs | MD-26 & MD-27" },
+      { title: "Import Authorization for Novel IVDs India | MD-26 & MD-27 | NKB Regovanta" },
       { name: "description", content: "Secure CDSCO permissions (MD-26 and MD-27) to import or manufacture new In Vitro Diagnostic (IVD) medical devices in India." },
     ],
     links: [

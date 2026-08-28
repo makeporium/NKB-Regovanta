@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-c-d")({
   component: LoanClassCDPage,
   head: () => ({
     meta: [
-      { title: "Loan Licenses for Class C & D Devices | MD-8 & MD-10" },
+      { title: "Loan Licenses for Class C & D Medical Devices India | MD-8 & MD-10 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO MD-10 loan licenses to manufacture Class C and D high-risk medical devices in existing licensed facilities in India." },
     ],
     links: [

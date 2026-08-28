@@ -18,11 +18,11 @@ import heroImage from "@/assets/hero-global.png";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Medical Device & IVD Regulatory Consultant India | NKB Regovanta" },
+            { title: "NKB Regovanta | Medical Device & IVD Regulatory Consultant India" },
             {
                 name: "description",
                 content:
-                    "Expert CDSCO, US FDA, EU MDR/IVDR, ISO 13485 and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. India-based regulatory consultants serving global markets.",
+                    "NKB Regovanta Solutions — Expert CDSCO, US FDA, EU MDR/IVDR, ISO 13485 and global market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. India-based regulatory consultants serving 15+ countries.",
             },
         ],
     links: [

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
-      { title: "Import License for Predicate Medical Devices | MD-14 & MD-15" },
+      { title: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
       { name: "description", content: "Get your MD-15 CDSCO import license for Class A, B, C, or D predicate medical devices in India." },
     ],
     links: [

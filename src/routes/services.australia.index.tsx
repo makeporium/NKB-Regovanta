@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { CheckCircle2, ChevronRight, AlertCircle } from "lucide-react";
 import { LinearFlow } from "@/components/site/ProcessFlow";
@@ -33,6 +33,7 @@ function AustraliaMarket() {
     const [activeTab, setActiveTab] = useState(tabs[0]);
     return (
         <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{"@context":"https://schema.org","@type":"Service","name":"TGA ARTG Medical Device Registration Consulting","url":"https://www.nkbregovanta.com/services/australia","description":"TGA ARTG inclusion, Australian Sponsor services, conformity assessment, and PMS support for medical device companies entering the Australian market.","provider":{"@type":"ProfessionalService","name":"NKB Regovanta Solutions Pvt. Ltd.","url":"https://www.nkbregovanta.com"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nkbregovanta.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.nkbregovanta.com/services"},{"@type":"ListItem","position":3,"name":"Australia TGA","item":"https://www.nkbregovanta.com/services/australia"}]}]) }} />
             <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-12 pt-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
                     <div className="flex items-center gap-2 text-[11px] text-navy/60 font-semibold mb-4">
