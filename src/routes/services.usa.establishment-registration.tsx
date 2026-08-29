@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/establishment-registration')({
   head: () => ({
     meta: [
-      { title: 'Establishment Registration & Device Listing | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA Establishment Registration & Device Listing services.' },
+      { title: 'FDA Establishment Registration and Device Listing (FURLS) | NKB Regovanta' },
+      { name: 'description', content: 'Comprehensive FDA Establishment Registration and Device Listing (FURLS) support, annual user fee payment handling, and FDA Official Correspondent management.' },
+      { name: 'keywords', content: 'FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, FDA DRLM registration, US FDA annual establishment registration, NKB Regovanta' },
+      { property: 'og:title', content: 'FDA Establishment Registration & Device Listing (FURLS) | NKB Regovanta' },
+      { property: 'og:description', content: 'Complete FDA annual registration, device listing, and Official Correspondent services for domestic and foreign establishments.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/establishment-registration' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/establishment-registration" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

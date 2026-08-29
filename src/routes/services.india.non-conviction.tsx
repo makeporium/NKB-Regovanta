@@ -6,8 +6,12 @@ export const Route = createFileRoute("/services/india/non-conviction")({
   component: NonConvictionPage,
   head: () => ({
     meta: [
-      { title: "Non-Conviction Certificate (NCC) | NKB Regovanta" },
-      { name: "description", content: "Obtain a Non-Conviction Certificate from CDSCO to prove regulatory compliance for medical device tenders and procurement in India." },
+      { title: "Non-Conviction Certificate (NCC) CDSCO India | NKB Regovanta" },
+      { name: "description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to prove total regulatory compliance for medical device tenders, institutional procurement and global market audits." },
+      { name: "keywords", content: "Non-Conviction Certificate (NCC), CDSCO NCC certificate, State Licensing Authority NCC, drug and cosmetic non conviction certificate India, NKB Regovanta" },
+      { property: "og:title", content: "Non-Conviction Certificate (NCC) CDSCO | NKB Regovanta" },
+      { property: "og:description", content: "Non-Conviction Certificate (NCC) licensing assistance for medical device & pharmaceutical manufacturers in India." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/non-conviction" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/non-conviction" },

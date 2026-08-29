@@ -6,16 +6,28 @@ import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact NKB Regovanta | Medical Device & IVD Regulatory Consultant India" },
+      { title: "Contact NKB Regovanta | Book a Regulatory & Compliance Consultation" },
       {
         name: "description",
         content:
-          "Let's Discuss Your Regulatory Journey. Tell us what you are working on and where you need support.",
+          "Schedule a consultation with NKB Regovanta's global regulatory specialists for CDSCO licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, and Cosmetics compliance.",
       },
+      {
+        name: "keywords",
+        content:
+          "Medical device regulatory consultant India, CDSCO medical device consultation, FDA 510k consultant contact, EU MDR regulatory consultant, NKB Regovanta contact",
+      },
+      { property: "og:title", content: "Contact NKB Regovanta — Regulatory Affairs & Compliance Experts" },
+      {
+        property: "og:description",
+        content:
+          "Get in touch with NKB Regovanta to accelerate your medical device, pharma, or cosmetic regulatory approvals.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/contact" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/contact" },
-  ],
+    ],
   }),
   component: Contact,
 });

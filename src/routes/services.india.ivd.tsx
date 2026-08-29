@@ -36,16 +36,28 @@ import {
 export const Route = createFileRoute("/services/india/ivd")({
   head: () => ({
     meta: [
-      { title: "In-Vitro Diagnostic (IVD) Regulatory Services in India | Importer & Manufacturer CDSCO Licensing | NKB Regovanta" },
+      { title: "In-Vitro Diagnostic (IVD) Regulatory Services in India | CDSCO IVD Licensing | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Complete CDSCO regulatory consulting for In-Vitro Diagnostic (IVD) kits and reagents in India for Importers and Manufacturers. End-to-end guidance for Form MD-14/15, Form MD-5/6, Form MD-9/10, Form MD-12/13, Form MD-24/25, and Form MD-28/29.",
+          "Complete CDSCO regulatory consulting for In-Vitro Diagnostic (IVD) kits, instruments, and reagents in India. End-to-end guidance for IVD import licence MD-14/MD-15, IVD test licence MD-16/MD-17, manufacturing licences MD-3/5 & MD-7/9, and clinical performance evaluations.",
       },
+      {
+        name: "keywords",
+        content:
+          "IVD test licence MD-16 MD-17, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Novel medical device import MD-26 MD-27, Clinical evaluation import permission MD-24 MD-25, Indian Authorized Agent AIR IAA, SUGAM portal registration support, CDSCO product classification & predicate strategy, Medical device regulatory consultant India",
+      },
+      { property: "og:title", content: "In-Vitro Diagnostic (IVD) Regulatory Services India | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "CDSCO IVD licensing, import approvals (MD-14/15), test licences (MD-16/17), and manufacturing registration for IVD kits & reagents in India.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/ivd" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd" },
-  ],
+    ],
   }),
   component: IVDRegulatoryServicesIndiaPage,
 });

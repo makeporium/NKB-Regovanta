@@ -10,15 +10,25 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
         meta: [
-            { title: "FDA 510(k) Consultant & US Agent Services India | NKB Regovanta" },
+            { title: "US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent | NKB Regovanta" },
             {
                 name: "description",
-                content: "Navigate the US FDA medical device registration process. Explore pathways, classification, agent requirements, and post-approval obligations for the US market.",
+                content: "US FDA 510k submission consultant & medical device regulatory services. End-to-end guidance for FDA 510(k) clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval, US FDA US Agent services for foreign facilities, FDA Establishment Registration & Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, and Q-Submission / Pre-Sub.",
             },
+            {
+                name: "keywords",
+                content: "US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, FDA cosmetic facility registration, FDA cosmetic product listing (SPL), NKB Regovanta",
+            },
+            { property: "og:title", content: "US FDA 510(k) Clearance & US Agent Consulting | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "Complete FDA regulatory strategy, eSTAR dossier compilation, 510(k) clearance, US Agent representation, and FURLS registration.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/usa" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" },
+        ],
     }),
     component: USAMarket,
 });

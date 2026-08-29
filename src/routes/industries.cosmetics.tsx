@@ -5,12 +5,16 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics")({
   head: () => ({
     meta: [
-      { title: "Cosmetic Regulatory Consultant India | CDSCO MoCRA EU Cosmetics | NKB Regovanta" },
-      { name: "description", content: "Take Your Cosmetic Products to Market with Confidence. NKB Regovanta helps cosmetic manufacturers and brands identify regulatory requirements early and establish a practical pathway to compliant market entry." },
+      { title: "Cosmetics Regulatory Consultant | CDSCO COS-1/2, MoCRA & EU RP | NKB Regovanta" },
+      { name: "description", content: "Global cosmetics regulatory compliance services: CDSCO cosmetic import registration COS-1 COS-2, Cosmetic manufacturing licence Form 32 India, EU Cosmetic Product Safety Report (CPSR), EU RP & CPNP portal notification, UK SCPN & UK RP, US FDA MoCRA cosmetic facility registration, and INCI ingredient reviews." },
+      { name: "keywords", content: "CDSCO cosmetic import registration COS-1 COS-2, Cosmetic manufacturing licence Form 32 India, Sugam portal cosmetic registration, Indian Authorized Representative cosmetics, EU Cosmetic Product Safety Report (CPSR), EU Cosmetic Responsible Person (EU RP), CPNP portal notification Europe, UK Cosmetic Product Notification Portal (SCPN), UK Cosmetic Responsible Person, US FDA MoCRA cosmetic facility registration, FDA cosmetic product listing SPL format, Cosmetic labeling and ingredient review (INCI compliance), NKB Regovanta" },
+      { property: "og:title", content: "Cosmetics Regulatory Compliance Consulting | NKB Regovanta" },
+      { property: "og:description", content: "End-to-end cosmetics regulatory support for India CDSCO, US MoCRA, EU & UK CPNP/SCPN and Responsible Person representation." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics" },
-  ],
+    ],
   }),
   component: Cosmetics,
 });

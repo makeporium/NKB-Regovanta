@@ -28,16 +28,28 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/pc-pndt-certificate")({
   head: () => ({
     meta: [
-      { title: "PC-PNDT Certificate & Ultrasound Device Registration in India | NKB Regovanta" },
+      { title: "PC-PNDT Certificate & Ultrasound Registration India | Form A & Form B | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Statutory PC-PNDT registration (Form A & Form B) for ultrasound, imaging and diagnostic equipment in India. Expert regulatory compliance for manufacturers, importers & dealers by NKB Regovanta.",
+          "Statutory PC-PNDT Certificate registration (Form A & Form B) for ultrasound machines, imaging scanners and diagnostic equipment in India. Expert PCPNDT consultant India services by NKB Regovanta.",
       },
+      {
+        name: "keywords",
+        content:
+          "PC-PNDT Certificate registration, Form A & Form B PCPNDT ultrasound registration, PCPNDT consultant India, ultrasound machine registration India, diagnostic imaging regulatory approval, NKB Regovanta",
+      },
+      { property: "og:title", content: "PC-PNDT Certificate Registration India | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "End-to-end statutory PC-PNDT registration, Form A & Form B licensing for ultrasound and imaging equipment manufacturers, importers, and dealers in India.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
-  ],
+    ],
   }),
   component: PcPndtCertificatePage,
 });

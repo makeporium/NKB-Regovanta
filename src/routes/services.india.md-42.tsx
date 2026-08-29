@@ -6,8 +6,12 @@ export const Route = createFileRoute("/services/india/md-42")({
   component: MD42Page,
   head: () => ({
     meta: [
-      { title: "MD-42 Certificate (Medical Device Registration) | NKB Regovanta" },
-      { name: "description", content: "Get your MD-42 Medical Device Registration Certificate to legally sell, stock, and distribute medical devices in India." },
+      { title: "MD-42 Certificate (Medical Device Registration) CDSCO | NKB Regovanta" },
+      { name: "description", content: "Get your MD-42 certificate to legally sell, stock, wholesale, and distribute medical devices in India under Medical Device Rules (MDR) 2017." },
+      { name: "keywords", content: "MD-42 certificate, CDSCO MD-42 registration, medical device registration certificate MD-42, MDR 2017 distribution license India, NKB Regovanta" },
+      { property: "og:title", content: "MD-42 Certificate (Medical Device Registration) | NKB Regovanta" },
+      { property: "og:description", content: "End-to-end support for obtaining MD-42 medical device registration certificates from State Licensing Authorities in India." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/md-42" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/md-42" },

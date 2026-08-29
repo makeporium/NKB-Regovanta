@@ -9,12 +9,12 @@ export const Route = createFileRoute("/services/")({
       {
         name: "description",
         content:
-          "Explore NKB Regovanta's global regulatory consulting services: CDSCO India licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, MDSAP, Drug & Cosmetics compliance.",
+          "Explore NKB Regovanta's global regulatory consulting services: CDSCO India licensing (MD-14/15, Form 41/10), US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, MDSAP, Drug & Cosmetics compliance.",
       },
       {
         name: "keywords",
         content:
-          "NKB Regovanta services, regulatory consulting services, CDSCO registration, US FDA 510k, EU MDR CE mark, ISO 13485 consulting, MDSAP, drug license importer, WPC ETA, PC-PNDT certificate",
+          "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, MD-3 MD-5 manufacturing licence, MD-7 MD-9 manufacturing licence, Loan manufacturing MD-4 MD-6, Indian Authorized Agent AIR, SUGAM portal support, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, European Authorized Representative EC REP, UK MHRA medical device registration, UK Responsible Person UKRP, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP",
       },
       { property: "og:title", content: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
       {

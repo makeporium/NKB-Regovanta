@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "keywords",
         content:
-          "NKB Regovanta, NKB Regovanta Solutions, NKB Regovanta Solutions Pvt. Ltd., nkbregovanta, regovanta, medical device regulatory consultants, CDSCO consulting, CDSCO medical device registration, US FDA 510k, EU MDR 2017/745, IVDR 2017/746, ISO 13485 QMS, MDSAP certification, Indian Authorized Agent, drug import license India, cosmetics MoCRA, PC-PNDT certificate, WPC ETA approval, IEC AD Code",
+          "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Clinical evaluation import permission MD-24 MD-25, Novel medical device import MD-26 MD-27, IVD test licence MD-16 MD-17, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6 / MD-8 MD-10, Test licence for manufacturing MD-12 MD-13, Indian Authorized Agent (AIR / IAA), SUGAM portal registration support, CDSCO product classification & predicate strategy, Medical device regulatory consultant India, Drug Import Licence India, Registration Certificate Form 41 CDSCO, Import Licence Form 10 / 10-A, Form 40 application support, Form 8 / 8-A support, Test Licence Form 11, Foreign manufacturer registration India, Overseas manufacturing site registration, Plant Master File (PMF) CDSCO, Drug Master File (DMF) open part, API import registration India, Phytopharmaceutical & biologics regulatory support, PC-PNDT Certificate registration, Form A & Form B PCPNDT ultrasound registration, PCPNDT consultant India, WPC ETA approval medical devices, Saral Sanchar WPC import license (RLO permit), Dealer Possession License (DPL), IEC Code registration DGFT, AD Code registration ICEGATE customs profile, Bank authority letter AD Code, Free Sale Certificate (FSC) CDSCO, Market Standing Certificate (MSC), Non-Conviction Certificate (NCC), MD-42 certificate, Neutral / Special Code certificate, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, FDA cosmetic facility registration, FDA cosmetic product listing (SPL), EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, Notified Body coordination EU, Technical Documentation / STED dossier, GSPR compliance, EU IVDR 2017/746 consultant, Performance Evaluation Report (PER), European Authorized Representative (EC REP / EAR), EUDAMED registration support, Clinical Evaluation Report (CER) EU MDR, PMS / PMCF plans, UK MHRA medical device registration, UK Responsible Person (UKRP), UKCA marking medical devices, Australia TGA ARTG inclusion, Australian Sponsor medical devices, Health Canada MDL (Medical Device Licence), Health Canada MDEL (Medical Device Establishment Licence), ANVISA Brazil registration, BRH Brazilian Registration Holder, Saudi Arabia SFDA, UAE MOHAP medical device registration, ISO 13485 implementation consultant, ISO 13485 QMS gap assessment, MDSAP audit readiness support (FDA, HC, TGA, ANVISA, MHLW), ISO 13485 internal audits, FDA QMSR compliance, ISO 14971 Risk Management, CAPA management, CDSCO cosmetic import registration COS-1 COS-2, Cosmetics manufacturing licence COS-5 COS-8, EU Cosmetic Responsible Person (EU RP), Cosmetic Product Safety Report (CPSR), CPNP notification, UK SCPN notification, Canada Cosmetic Notification Form (CNF), Australia AICIS cosmetics, NKB Regovanta, NKB Regovanta Solutions",
       },
       { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
       { name: "publisher", content: "NKB Regovanta" },
@@ -116,7 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
+          "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9), US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.nkbregovanta.com" },
@@ -134,7 +134,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "twitter:description",
         content:
-          "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
+          "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
       },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:image:alt", content: "NKB Regovanta Logo & Brand Banner" },
@@ -189,7 +189,7 @@ const structuredDataGraph = {
         "caption": "NKB Regovanta Logo"
       },
       "image": "https://www.nkbregovanta.com/og-image.png",
-      "description": "NKB Regovanta Solutions Pvt. Ltd. is a leading regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      "description": "NKB Regovanta Solutions Pvt. Ltd. is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
       "email": "contact@nkbregovanta.com",
       "telephone": "+918400039062",
       "priceRange": "$$$",
@@ -216,19 +216,44 @@ const structuredDataGraph = {
         "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
       ],
       "knowsAbout": [
-        "CDSCO Medical Device Classification & Licensing",
-        "CDSCO Pharmaceutical & Drug Import Registration (Form 41 / Form 10)",
-        "Indian Authorized Agent (AIR) Services",
-        "US FDA 510(k) Submissions & US Agent Services",
-        "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking",
-        "ISO 13485:2016 QMS Implementation & Internal Audits",
-        "MDSAP Readiness & Audit Support",
-        "Cosmetics Regulatory Compliance (MoCRA, EU RP, CDSCO COS-1/2)",
-        "PC-PNDT Certificate Registration",
-        "WPC ETA Approval for Wireless Medical Devices",
-        "IEC & AD Code Customs Registration",
-        "Post-Market Surveillance (PMS) & Vigilance Reporting",
-        "Clinical Evaluation Reports (CER) & Performance Evaluation Reports (PER)"
+        "CDSCO Medical Device Import Licence (MD-14 & MD-15)",
+        "CDSCO Medical Device Manufacturing Licence (MD-3/5, MD-7/9, MD-4/6, MD-8/10)",
+        "Class A GSR 777(E) Registration & Test Licences (MD-12/13, MD-16/17)",
+        "Investigational & Novel Medical Device Import (MD-18/19, MD-24/25, MD-26/27)",
+        "Indian Authorized Agent (AIR / IAA) Representation & SUGAM Portal Support",
+        "CDSCO Product Classification & Predicate Device Strategy",
+        "Medical Device Regulatory Consultant India",
+        "Drug Import Licence India (Form 41 Registration Certificate & Form 10/10-A)",
+        "Pharmaceutical Form 40, Form 8/8-A and Form 11 Test Licence Support",
+        "Foreign Manufacturer Registration & Overseas Manufacturing Site Registration",
+        "Plant Master File (PMF) & Drug Master File (DMF Open Part) CDSCO",
+        "API Import Registration India & Phytopharmaceutical / Biologics Support",
+        "PC-PNDT Certificate Registration (Form A & Form B Ultrasound / Diagnostic Imaging)",
+        "WPC ETA Approval for Medical Devices & Saral Sanchar RLO / DPL Licensing",
+        "IEC Code DGFT & AD Code ICEGATE Customs Profile Registration",
+        "Free Sale Certificate (FSC), Market Standing (MSC), Non-Conviction (NCC) & MD-42",
+        "US FDA 510(k) Clearance & eSTAR Dossier Compilation Consultant",
+        "FDA De Novo Classification & Premarket Approval (PMA)",
+        "US FDA US Agent Services for Foreign Facilities & FURLS Registration / Listing",
+        "FDA Official Correspondent, 513(g) Information Request & Q-Submission / Pre-Sub",
+        "MoCRA Compliance, FDA Cosmetic Facility Registration & Cosmetic Product Listing (SPL)",
+        "EU MDR 2017/745 Regulatory Consultant & CE Marking Europe",
+        "Technical Documentation & STED Dossier Compilation with GSPR Compliance",
+        "EU IVDR 2017/746 Consultant & Performance Evaluation Report (PER)",
+        "European Authorized Representative (EC REP / EAR) & EUDAMED Registration",
+        "Clinical Evaluation Reports (CER) EU MDR & PMS / PMCF Plans",
+        "UK MHRA Medical Device Registration, UK Responsible Person (UKRP) & UKCA Marking",
+        "Australia TGA ARTG Inclusion & Australian Sponsor Services",
+        "Health Canada Medical Device Licence (MDL) & Establishment Licence (MDEL)",
+        "ANVISA Brazil Registration & Brazilian Registration Holder (BRH)",
+        "Saudi Arabia SFDA Medical Device & Pharma Registration",
+        "UAE MOHAP Medical Device Registration & Import Clearance",
+        "ISO 13485:2016 QMS Implementation, Gap Assessment & Internal Audits",
+        "MDSAP Audit Readiness Support (FDA, HC, TGA, ANVISA, MHLW)",
+        "FDA QMSR Quality System Harmonization, ISO 14971 Risk Management & CAPA",
+        "Cosmetics CDSCO Import Registration (COS-1 / COS-2) & Manufacturing (COS-5 / COS-8)",
+        "EU Cosmetic Responsible Person (EU RP), CPSR Safety Assessment & CPNP Notification",
+        "UK SCPN Notification, Canada Cosmetic Notification (CNF) & Australia AICIS"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -238,15 +263,23 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "CDSCO Medical Device & Drug Licensing India",
-              "url": "https://www.nkbregovanta.com/services/india"
+              "name": "CDSCO Medical Device & IVD Licensing India (MD-14/15, MD-3 to MD-10, AIR)",
+              "url": "https://www.nkbregovanta.com/services/india/medical-devices"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "US FDA 510(k), De Novo & US Agent Services",
+              "name": "CDSCO Pharmaceutical & Drug Import Licensing (Form 41, Form 10, PMF, DMF)",
+              "url": "https://www.nkbregovanta.com/services/drug-licenses-for-importers"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "US FDA 510(k), eSTAR, De Novo, PMA & US Agent Services",
               "url": "https://www.nkbregovanta.com/services/usa"
             }
           },
@@ -254,7 +287,7 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "EU MDR & IVDR CE Marking Compliance",
+              "name": "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking & EC REP",
               "url": "https://www.nkbregovanta.com/services/eu"
             }
           },
@@ -262,7 +295,7 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "ISO 13485 & MDSAP Quality Management Systems",
+              "name": "ISO 13485 QMS, MDSAP Readiness & FDA QMSR Compliance",
               "url": "https://www.nkbregovanta.com/services/iso-13485"
             }
           },
@@ -270,7 +303,7 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "UK MHRA Registration & UKRP Services",
+              "name": "UK MHRA Registration, UKRP & UKCA Marking",
               "url": "https://www.nkbregovanta.com/services/uk"
             }
           },
@@ -278,15 +311,39 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "WPC Wireless Equipment Type Approval (ETA)",
-              "url": "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices"
+              "name": "Australia TGA ARTG Inclusion & Sponsor Services",
+              "url": "https://www.nkbregovanta.com/services/australia"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "PC-PNDT Certificate Registration",
+              "name": "Health Canada MDL & MDEL Licensing",
+              "url": "https://www.nkbregovanta.com/services/canada"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ANVISA Brazil Registration & BRH Services",
+              "url": "https://www.nkbregovanta.com/services/brazil"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Saudi Arabia SFDA & UAE MOHAP Market Access",
+              "url": "https://www.nkbregovanta.com/services/saudi-arabia"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PC-PNDT Certificate Registration (Form A & Form B)",
               "url": "https://www.nkbregovanta.com/services/pc-pndt-certificate"
             }
           },
@@ -294,8 +351,32 @@ const structuredDataGraph = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "IEC & AD Code Customs ICEGATE Registration",
+              "name": "WPC Wireless Equipment Type Approval (ETA & DPL)",
+              "url": "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IEC Code DGFT & AD Code ICEGATE Customs Registration",
               "url": "https://www.nkbregovanta.com/services/iec-ad-code"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CDSCO Free Sale (FSC), MSC, NCC & MD-42 Certificates",
+              "url": "https://www.nkbregovanta.com/services/india/free-sale"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cosmetics Regulatory Services (MoCRA, EU RP, CDSCO COS-1/2, CPSR)",
+              "url": "https://www.nkbregovanta.com/industries/cosmetics"
             }
           }
         ]

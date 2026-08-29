@@ -13,12 +13,22 @@ export const Route = createFileRoute("/services/canada/")({
             { title: "Health Canada MDL MDEL Consultant | MDSAP Canada | NKB Regovanta" },
             {
                 name: "description",
-                content: "Navigate the Health Canada medical device registration process. Expert support for MDEL, MDL, MDSAP compliance, and lifecycle management.",
+                content: "Expert Health Canada regulatory consultant support for Health Canada Medical Device Licence (MDL), Medical Device Establishment Licence (MDEL) Canada, and MDSAP QMS compliance for Class I-IV devices.",
             },
+            {
+                name: "keywords",
+                content: "Health Canada Medical Device Licence (MDL), Medical Device Establishment Licence (MDEL) Canada, Health Canada regulatory consultant, MDSAP Canada, Class II III IV MDL Canada, NKB Regovanta",
+            },
+            { property: "og:title", content: "Health Canada MDL & MDEL Regulatory Consulting | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "End-to-end Health Canada device licensing, MDEL establishment licenses, Class II-IV MDL applications, and MDSAP audit readiness.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/canada" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada" },
+        ],
     }),
     component: CanadaMarket,
 });

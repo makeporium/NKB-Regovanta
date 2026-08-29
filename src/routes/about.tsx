@@ -39,15 +39,25 @@ import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
 export const Route = createFileRoute("/about")({
     head: () => ({
         meta: [
-            { title: "About NKB Regovanta | Medical Device Regulatory Consulting Company India" },
+            { title: "About NKB Regovanta | Medical Device & Regulatory Consulting Leaders" },
             {
                 name: "description",
-                content: "Learn about NKB Regovanta's global expertise, strategic execution, and commitment to advancing healthcare innovation without borders.",
+                content: "Learn about NKB Regovanta's global regulatory affairs leadership, scientific rigor, ISO 13485 quality systems, CDSCO licensing, US FDA 510(k), and EU MDR expertise.",
             },
+            {
+                name: "keywords",
+                content: "NKB Regovanta, NKB Regovanta Solutions, Medical device regulatory consultant India, CDSCO medical device consultant, FDA 510k consultant, EU MDR consultant, ISO 13485 implementation consultant, regulatory affairs leadership",
+            },
+            { property: "og:title", content: "About NKB Regovanta — Global Regulatory & Quality Leaders" },
+            {
+                property: "og:description",
+                content: "Learn about NKB Regovanta's mission, leadership team, and global regulatory affairs capabilities spanning India, USA, Europe, UK, and APAC.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/about" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/about" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/about" },
+        ],
     }),
     component: About,
 });

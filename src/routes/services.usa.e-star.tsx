@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/e-star')({
   head: () => ({
     meta: [
-      { title: 'eSTAR Submissions | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA eSTAR Submissions services.' },
+      { title: 'eSTAR FDA Dossier Compilation | US FDA eSTAR Submissions | NKB Regovanta' },
+      { name: 'description', content: 'Expert eSTAR FDA dossier compilation and electronic PDF template submission services for 510(k), De Novo, and PMA device filings to FDA CDRH and CBER.' },
+      { name: 'keywords', content: 'eSTAR FDA dossier compilation, US FDA 510k submission consultant, FDA eSTAR template, CDRH electronic submission, NKB Regovanta' },
+      { property: 'og:title', content: 'eSTAR FDA Dossier Compilation & Submission | NKB Regovanta' },
+      { property: 'og:description', content: 'Professional compilation of FDA eSTAR dynamic PDF templates for 510(k) and De Novo applications.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/e-star' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/e-star" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

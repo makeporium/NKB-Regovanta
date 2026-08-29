@@ -6,8 +6,12 @@ export const Route = createFileRoute("/services/india/free-sale")({
   component: FreeSalePage,
   head: () => ({
     meta: [
-      { title: "Free Sale Certificate (FSC) | NKB Regovanta" },
-      { name: "description", content: "Apply for a CDSCO Free Sale Certificate to seamlessly export your medical devices to international markets." },
+      { title: "Free Sale Certificate (FSC) CDSCO India | Certificate of Export | NKB Regovanta" },
+      { name: "description", content: "Apply for a Free Sale Certificate (FSC) CDSCO to seamlessly export your Indian-manufactured medical devices and IVDs to international markets." },
+      { name: "keywords", content: "Free Sale Certificate (FSC) CDSCO, Certificate of Export India, CDSCO FSC application, medical device export licence India, NKB Regovanta" },
+      { property: "og:title", content: "Free Sale Certificate (FSC) CDSCO | NKB Regovanta" },
+      { property: "og:description", content: "Expert assistance in obtaining Free Sale Certificates from CDSCO for medical devices and pharmaceuticals." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/free-sale" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/free-sale" },

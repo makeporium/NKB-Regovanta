@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/510k')({
   head: () => ({
     meta: [
-      { title: '510(k) Premarket Notification | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA 510(k) Premarket Notification services.' },
+      { title: 'US FDA 510k Submission Consultant | FDA 510(k) Clearance | NKB Regovanta' },
+      { name: 'description', content: 'Expert US FDA 510k submission consultant services. Expedited FDA 510(k) clearance medical devices, substantial equivalence determination, and dossier filings.' },
+      { name: 'keywords', content: 'US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, 510k premarket notification, medical device FDA clearance, NKB Regovanta' },
+      { property: 'og:title', content: 'US FDA 510(k) Premarket Notification Consultant | NKB Regovanta' },
+      { property: 'og:description', content: 'End-to-end US FDA 510(k) clearance strategy, predicate device selection, and electronic dossier compilation.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/510k' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/510k" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/q-submission')({
   head: () => ({
     meta: [
-      { title: 'Q-Submission (Pre-Sub) Meetings | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA Q-Submission (Pre-Sub) Meetings services.' },
+      { title: 'FDA Q-Submission / Pre-Sub Meeting Consultant | US FDA Services | NKB Regovanta' },
+      { name: 'description', content: 'De-risk your US FDA regulatory path with strategic Q-Submission (Pre-Sub) meetings. Briefing document compilation, meeting representation, and formal feedback addressing.' },
+      { name: 'keywords', content: 'FDA Q-Submission / Pre-Sub, FDA pre-submission meeting, FDA briefing document, CDRH feedback meeting, NKB Regovanta' },
+      { property: 'og:title', content: 'FDA Q-Submission / Pre-Sub Consulting | NKB Regovanta' },
+      { property: 'og:description', content: 'Strategic FDA Q-Submission preparation, CDRH meeting execution, and regulatory feedback integration.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/q-submission' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/q-submission" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

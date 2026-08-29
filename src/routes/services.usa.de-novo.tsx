@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/de-novo')({
   head: () => ({
     meta: [
-      { title: 'De-Novo Classification Request | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA De-Novo Classification Request services.' },
+      { title: 'FDA De Novo Classification Request Consultant | US FDA Services | NKB Regovanta' },
+      { name: 'description', content: 'Specialized FDA De Novo classification pathway support for novel low-to-moderate-risk medical devices without valid predicates. Risk assessment, special controls, and eSTAR compilation.' },
+      { name: 'keywords', content: 'FDA De Novo classification, novel medical device FDA approval, De Novo request consultant, Class I Class II novel device FDA, NKB Regovanta' },
+      { property: 'og:title', content: 'FDA De Novo Classification Consulting | NKB Regovanta' },
+      { property: 'og:description', content: 'End-to-end FDA De Novo petition compilation, special controls establishment, and FDA Pre-Sub meetings.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/de-novo' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/de-novo" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

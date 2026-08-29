@@ -7,12 +7,16 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uae")({
     head: () => ({
         meta: [
-            { title: "UAE MOHAP Medical Device Registration | NKB Regovanta" },
-            { name: "description", content: "Expert support for UAE MOHAP medical device registration, Dubai Customs requirements, and dedicated Local Representative services for seamless market access." },
+            { title: "UAE MOHAP Medical Device Registration & ECAS | NKB Regovanta" },
+            { name: "description", content: "Expert support for UAE MOHAP medical device registration, UAE ECAS / EQM certification, MoIAT Emirates Conformity Assessment Scheme, and dedicated UAE Local Representative services." },
+            { name: "keywords", content: "UAE MOHAP medical device registration, UAE ECAS / EQM certification, UAE Local Representative medical devices, MoIAT Emirates Conformity Assessment Scheme, UAE medical device distributor, NKB Regovanta" },
+            { property: "og:title", content: "UAE MOHAP Medical Device Registration | NKB Regovanta" },
+            { property: "og:description", content: "Complete UAE healthcare market access: MOHAP product registration, MoIAT ECAS/EQM certificates, and local representation." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/uae" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/uae" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/uae" },
+        ],
     }),
     component: UAEMarket,
 });

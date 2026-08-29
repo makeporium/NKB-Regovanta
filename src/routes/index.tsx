@@ -18,22 +18,22 @@ import heroImage from "@/assets/hero-global.png";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "NKB Regovanta — Medical Device & IVD Regulatory Consultants | Global Market Access" },
+            { title: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants" },
             {
                 name: "description",
                 content:
-                    "NKB Regovanta is a premier regulatory affairs and quality compliance consulting firm. Expert CDSCO India licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485, MDSAP, Pharma and Cosmetics consulting.",
+                    "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), EU MDR/IVDR, and Cosmetics compliance consulting firm.",
             },
             {
                 name: "keywords",
                 content:
-                    "NKB Regovanta, NKB Regovanta Solutions, nkbregovanta, medical device regulatory consultants, CDSCO consulting, US FDA 510k, EU MDR 2017/745, IVDR 2017/746, ISO 13485, MDSAP, Indian Authorized Agent, Pharma drug import license, Cosmetics MoCRA",
+                    "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6, Indian Authorized Agent AIR IAA, Medical device regulatory consultant India, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, Plant Master File PMF, Drug Master File DMF, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, EC REP European Authorized Representative, UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP, NKB Regovanta, NKB Regovanta Solutions",
             },
-            { property: "og:title", content: "NKB Regovanta — Medical Device & IVD Regulatory Consultants" },
+            { property: "og:title", content: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Consultants" },
             {
                 property: "og:description",
                 content:
-                    "NKB Regovanta provides global regulatory affairs, quality systems, CDSCO, US FDA, EU MDR/IVDR, ISO 13485 and market access consulting.",
+                    "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com" },
         ],

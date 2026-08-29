@@ -10,15 +10,25 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/uk/")({
     head: () => ({
         meta: [
-            { title: "MHRA Medical Device Registration & UK Responsible Person | NKB Regovanta" },
+            { title: "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | NKB Regovanta" },
             {
                 name: "description",
-                content: "Navigate the UK MHRA medical device registration process. Expert support for UKCA marking, DORS submissions, and UK Responsible Person (UKRP) services.",
+                content: "Complete UK MHRA medical device registration & UK Responsible Person (UKRP) services. Expert guidance for UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002 compliance, and Northern Ireland medical device protocol.",
             },
+            {
+                name: "keywords",
+                content: "UK MHRA medical device registration, UK Responsible Person (UKRP) services, UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002 compliance, Northern Ireland medical device protocol, NKB Regovanta",
+            },
+            { property: "og:title", content: "UK MHRA Medical Device Registration & UKRP Services | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "UK Responsible Person (UKRP) representation, MHRA DORS portal registration, and UKCA conformity assessment for medical devices.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/uk" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk" },
+        ],
     }),
     component: UKMarket,
 });

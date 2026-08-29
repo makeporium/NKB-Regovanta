@@ -31,16 +31,28 @@ import {
 export const Route = createFileRoute("/services/uk/ukrp")({
   head: () => ({
     meta: [
-      { title: "UK Responsible Person (UKRP) Services | MHRA Device Registration | NKB Regovanta" },
+      { title: "UK Responsible Person (UKRP) Services & MHRA Registration | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Official UK Responsible Person (UKRP) representation and MHRA medical device and IVD registration services under UK MDR 2002 (as amended by UK MDR 2019).",
+          "Official UK Responsible Person (UKRP) representation and UK MHRA medical device and IVD registration services under UK MDR 2002. DORS portal registration MHRA and vigilance reporting by NKB Regovanta.",
       },
+      {
+        name: "keywords",
+        content:
+          "UK Responsible Person (UKRP) services, UK MHRA medical device registration, UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002 compliance, Northern Ireland medical device protocol, NKB Regovanta",
+      },
+      { property: "og:title", content: "UK Responsible Person (UKRP) Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Legally mandated UKRP representation and MHRA registration for overseas medical device and IVD manufacturers selling into Great Britain.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/ukrp" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/ukrp" },
-  ],
+    ],
   }),
   component: UKRPServicePage,
 });

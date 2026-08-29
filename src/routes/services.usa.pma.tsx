@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/pma')({
   head: () => ({
     meta: [
-      { title: 'Premarket Approval (PMA) | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA Premarket Approval (PMA) services.' },
+      { title: 'PMA Premarket Approval FDA Consultant | Class III Medical Devices | NKB Regovanta' },
+      { name: 'description', content: 'Comprehensive PMA Premarket Approval FDA consulting for high-risk Class III medical devices. Clinical protocol design, IDE filings, non-clinical validation, and FDA advisory panel support.' },
+      { name: 'keywords', content: 'PMA Premarket Approval FDA, Class III medical device FDA, FDA PMA submission consultant, IDE investigational device exemption, NKB Regovanta' },
+      { property: 'og:title', content: 'PMA Premarket Approval (PMA) FDA Consulting | NKB Regovanta' },
+      { property: 'og:description', content: 'End-to-end FDA Class III Premarket Approval (PMA) scientific & regulatory strategy.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/pma' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/pma" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

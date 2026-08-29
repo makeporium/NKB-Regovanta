@@ -5,16 +5,28 @@ import imgMdsap from "@/assets/mdsap.png";
 export const Route = createFileRoute("/services/mdsap")({
   head: () => ({
     meta: [
-      { title: "MDSAP Readiness & Audit Consultant India | NKB Regovanta" },
+      { title: "MDSAP Audit Readiness & Consulting | 5 Jurisdictions | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Build an audit-ready quality system aligned with the Medical Device Single Audit Program.",
+          "MDSAP audit readiness (Medical Device Single Audit Program) and MDSAP consulting across 5 jurisdictions: US FDA, Health Canada, ANVISA Brazil, MHLW/PMDA Japan, and TGA Australia. Mock MDSAP audits & nonconformity remediation.",
       },
+      {
+        name: "keywords",
+        content:
+          "MDSAP audit readiness (Medical Device Single Audit Program), MDSAP consulting 5 jurisdictions (US, Canada, Brazil, Japan, Australia), MDSAP companion document, MDSAP mock audit, Auditing Organization AO support, NKB Regovanta",
+      },
+      { property: "og:title", content: "MDSAP Readiness & Audit Consulting | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Single QMS audit for 5 global markets: US, Canada, Brazil, Japan, and Australia. Comprehensive MDSAP readiness and mock auditing.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap" },
-  ],
+    ],
   }),
   component: Mdsap,
 });

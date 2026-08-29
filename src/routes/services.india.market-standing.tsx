@@ -6,8 +6,12 @@ export const Route = createFileRoute("/services/india/market-standing")({
   component: MarketStandingPage,
   head: () => ({
     meta: [
-      { title: "Market Standing Certificate (MSC) | NKB Regovanta" },
-      { name: "description", content: "Obtain a CDSCO Market Standing Certificate to prove your medical device company\'s established presence for tenders and exports." },
+      { title: "Market Standing Certificate (MSC) CDSCO India | NKB Regovanta" },
+      { name: "description", content: "Obtain a CDSCO Market Standing Certificate (MSC) to prove your medical device and pharmaceutical manufacturing track record for domestic tenders and global exports." },
+      { name: "keywords", content: "Market Standing Certificate (MSC), CDSCO Market Standing Certificate, pharmaceutical MSC India, medical device MSC certificate, NKB Regovanta" },
+      { property: "og:title", content: "Market Standing Certificate (MSC) CDSCO | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO Market Standing Certificate (MSC) filing and verification support for Indian manufacturers." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/market-standing" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/market-standing" },
