@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill } from "lucide-react";
+import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill, Factory } from "lucide-react";
 import { CTABand, PageHero } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/")({
@@ -85,6 +85,12 @@ const services = [
     title: "Market Access",
     text: "Market entry strategy, pricing, reimbursement & post-market compliance.",
     to: "/services/market-access",
+  },
+  {
+    icon: Factory,
+    title: "Product & Manufacturing Solutions",
+    text: "cGMP-compliant pharmaceutical machinery, SS 304/316 cleanroom furniture, blenders, conveyors, and material handling solutions.",
+    to: "/services/manufacturing",
   },
   {
     icon: FileSearch,

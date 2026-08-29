@@ -39,6 +39,7 @@ import { Route as ServicesEuRouteImport } from './routes/services.eu'
 import { Route as ServicesIecAdCodeRouteImport } from './routes/services.iec-ad-code'
 import { Route as ServicesIndiaRouteImport } from './routes/services.india'
 import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
+import { Route as ServicesManufacturingRouteImport } from './routes/services.manufacturing'
 import { Route as ServicesMarketAccessRouteImport } from './routes/services.market-access'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
 import { Route as ServicesNewZealandRouteImport } from './routes/services.new-zealand'
@@ -288,6 +289,11 @@ const ServicesIndiaRoute = ServicesIndiaRouteImport.update({
 const ServicesIso13485Route = ServicesIso13485RouteImport.update({
   id: '/services/iso-13485',
   path: '/services/iso-13485',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesManufacturingRoute = ServicesManufacturingRouteImport.update({
+  id: '/services/manufacturing',
+  path: '/services/manufacturing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesMarketAccessRoute = ServicesMarketAccessRouteImport.update({
@@ -819,6 +825,7 @@ export interface FileRoutesByFullPath {
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
@@ -938,6 +945,7 @@ export interface FileRoutesByTo {
   '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
@@ -1062,6 +1070,7 @@ export interface FileRoutesById {
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
   '/services/iso-13485': typeof ServicesIso13485Route
+  '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/new-zealand': typeof ServicesNewZealandRoute
@@ -1189,6 +1198,7 @@ export interface FileRouteTypes {
     | '/services/iec-ad-code'
     | '/services/india'
     | '/services/iso-13485'
+    | '/services/manufacturing'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
@@ -1308,6 +1318,7 @@ export interface FileRouteTypes {
     | '/services/drug-licenses-for-importers'
     | '/services/iec-ad-code'
     | '/services/iso-13485'
+    | '/services/manufacturing'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
@@ -1431,6 +1442,7 @@ export interface FileRouteTypes {
     | '/services/iec-ad-code'
     | '/services/india'
     | '/services/iso-13485'
+    | '/services/manufacturing'
     | '/services/market-access'
     | '/services/mdsap'
     | '/services/new-zealand'
@@ -1551,6 +1563,7 @@ export interface RootRouteChildren {
   ServicesIecAdCodeRoute: typeof ServicesIecAdCodeRoute
   ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
   ServicesIso13485Route: typeof ServicesIso13485Route
+  ServicesManufacturingRoute: typeof ServicesManufacturingRoute
   ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
   ServicesMdsapRoute: typeof ServicesMdsapRoute
   ServicesNewZealandRoute: typeof ServicesNewZealandRoute
@@ -1789,6 +1802,13 @@ declare module '@tanstack/react-router' {
       path: '/services/iso-13485'
       fullPath: '/services/iso-13485'
       preLoaderRoute: typeof ServicesIso13485RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/manufacturing': {
+      id: '/services/manufacturing'
+      path: '/services/manufacturing'
+      fullPath: '/services/manufacturing'
+      preLoaderRoute: typeof ServicesManufacturingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/market-access': {
@@ -2704,6 +2724,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesIecAdCodeRoute: ServicesIecAdCodeRoute,
   ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
   ServicesIso13485Route: ServicesIso13485Route,
+  ServicesManufacturingRoute: ServicesManufacturingRoute,
   ServicesMarketAccessRoute: ServicesMarketAccessRoute,
   ServicesMdsapRoute: ServicesMdsapRoute,
   ServicesNewZealandRoute: ServicesNewZealandRoute,
