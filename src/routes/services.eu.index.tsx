@@ -10,15 +10,25 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/eu/")({
     head: () => ({
         meta: [
-            { title: "CE Marking EU MDR IVDR Consultant | European Authorized Representative | NKB Regovanta" },
+            { title: "EU MDR 2017/745 & EU IVDR 2017/746 Consultant | CE Marking & EC REP | NKB Regovanta" },
             {
                 name: "description",
-                content: "Navigate the EU medical device registration process. Expert support for MDR/IVDR compliance, CE marking, and European Authorized Representative (EAR) services.",
+                content: "Expert EU MDR 2017/745 regulatory consultant & EU IVDR 2017/746 compliance. Technical Documentation File (TDF) compilation, General Safety and Performance Requirements (GSPR) checklist, Clinical Evaluation Report (CER) MEDDEV 2.7/1 Rev 4, Performance Evaluation Report (PER), European Authorized Representative (EC REP), EUDAMED registration, and Post-Market Surveillance (PMS) / PSUR.",
             },
+            {
+                name: "keywords",
+                content: "EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746 consultant, Technical Documentation File (TDF) compilation MDR, General Safety and Performance Requirements (GSPR) checklist, Clinical Evaluation Report (CER) MEDDEV 2.7/1 Rev 4, Performance Evaluation Report (PER) IVDR, European Authorized Representative (EC REP), EUDAMED registration and UDI compliance, Post-Market Surveillance (PMS) / PSUR EU MDR, Notified Body audit support EU, NKB Regovanta",
+            },
+            { property: "og:title", content: "EU MDR 2017/745 & CE Marking Consulting | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "Comprehensive CE Marking, MDR/IVDR technical documentation, Clinical Evaluation Reports (CER), and EC REP representation in Europe.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/eu" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" },
+        ],
     }),
     component: EUMarket,
 });

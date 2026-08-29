@@ -29,16 +29,28 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/drug-licenses-for-importers")({
   head: () => ({
     meta: [
-      { title: "Drug Import Licence Registration CDSCO India | Form 41, Form 10 | NKB Regovanta" },
+      { title: "Drug Import Licence Registration CDSCO India | Form 41, Form 10/10-A, DMF & PMF" },
       {
         name: "description",
         content:
-          "Comprehensive regulatory consulting for pharmaceutical drug import in India. Form 10, Form 41 Registration Certificate, Form 11 Test License & Authorized Agent services by NKB Regovanta.",
+          "Comprehensive pharmaceutical regulatory consulting for drug import in India. End-to-end support for Form 41 Registration Certificate, Form 10/10-A Import Licence, Form 40, Form 8/8-A, Form 11 Test Licence, Plant Master File (PMF), Drug Master File (DMF open part), API import and biologics registration.",
       },
+      {
+        name: "keywords",
+        content:
+          "Drug Import Licence India, Registration Certificate Form 41 CDSCO, Import Licence Form 10 / 10-A, Form 40 application support, Form 8 / 8-A support, Test Licence Form 11, Foreign manufacturer registration India, Overseas manufacturing site registration, Plant Master File (PMF) CDSCO, Drug Master File (DMF) open part, API import registration India, Phytopharmaceutical & biologics regulatory support, NKB Regovanta",
+      },
+      { property: "og:title", content: "Drug Import Licence Registration CDSCO India | Form 41, Form 10 | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "CDSCO pharmaceutical registration, overseas site inspection, Form 41 RC, Form 10 Import License, and DMF/PMF dossier filing in India.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
-  ],
+    ],
   }),
   component: DrugLicensesForImportersPage,
 });

@@ -28,16 +28,28 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
   head: () => ({
     meta: [
-      { title: "WPC Approval & Compliance for Wireless Medical Devices | NKB Regovanta" },
+      { title: "WPC ETA Approval for Wireless Medical Devices India | Saral Sanchar & DPL | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Complete WPC regulatory compliance for wireless medical devices in India. Equipment Type Approval (ETA), Dealer Possession License (DPL), RF test verification & import licensing by NKB Regovanta.",
+          "Complete WPC regulatory compliance for wireless & connected medical devices in India. Equipment Type Approval (WPC ETA approval), Saral Sanchar WPC import license (RLO permit), Dealer Possession License (DPL), and RF test report verification.",
       },
+      {
+        name: "keywords",
+        content:
+          "WPC ETA approval medical devices, Saral Sanchar WPC import license (RLO permit), Dealer Possession License (DPL), wireless medical device compliance India, RF testing approval ETA, NKB Regovanta",
+      },
+      { property: "og:title", content: "WPC ETA Approval for Wireless Medical Devices India | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "WPC ETA approval, Saral Sanchar import permissions, and DPL licensing for Bluetooth, WiFi, and telemetry medical devices.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
-  ],
+    ],
   }),
   component: WpcWirelessMedicalDevicesPage,
 });

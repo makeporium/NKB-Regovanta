@@ -26,16 +26,28 @@ import {
 export const Route = createFileRoute("/services/usa/agent-service")({
   head: () => ({
     meta: [
-      { title: "U.S. FDA Agent Service & Device Registration | US FDA Services | NKB Regovanta" },
+      { title: "US FDA US Agent Services for Foreign Facilities & FURLS Registration | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Official U.S. FDA Agent services, foreign establishment registration, device listing, and 510(k) submission support for overseas medical device and IVD manufacturers under 21 CFR 807.40.",
+          "Official US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), and FDA Official Correspondent representation for overseas medical device, pharma, and cosmetic manufacturers under 21 CFR 807.40.",
       },
+      {
+        name: "keywords",
+        content:
+          "US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 21 CFR 807.40, US Agent medical devices, NKB Regovanta",
+      },
+      { property: "og:title", content: "US FDA US Agent Services & FURLS Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Official FDA US Agent representation, annual establishment registration, and device listings on FDA FURLS / CDRH portal.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/agent-service" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/agent-service" },
-  ],
+    ],
   }),
   component: USAgentServicePage,
 });

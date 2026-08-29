@@ -5,16 +5,28 @@ import imgISO from "@/assets/iso.png";
 export const Route = createFileRoute("/services/iso-13485")({
   head: () => ({
     meta: [
-      { title: "ISO 13485 QMS Implementation Consultant India | NKB Regovanta" },
+      { title: "ISO 13485:2016 Implementation Consultant & Certification | NKB Regovanta" },
       {
         name: "description",
         content:
-          "End-to-end support for ISO 13485 Quality Management System implementation and certification.",
+          "End-to-end support for ISO 13485:2016 Quality Management System implementation, certification support, FDA Quality Management System Regulation (QMSR 21 CFR Part 820), ISO 14971 Risk Management, and mock audits.",
       },
+      {
+        name: "keywords",
+        content:
+          "ISO 13485 implementation consultant, ISO 13485:2016 certification support, FDA Quality Management System Regulation (QMSR 21 CFR Part 820), FDA 21 CFR Part 820 to QMSR transition, Internal audit medical devices ISO 13485, Mock FDA inspection / Notified Body mock audit, ISO 14971 Risk Management for medical devices, CAPA remediation and FDA 483 response consultant, Warning Letter remediation FDA, NKB Regovanta",
+      },
+      { property: "og:title", content: "ISO 13485 QMS Implementation & Certification Support | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Comprehensive ISO 13485:2016 design, internal audits, FDA QMSR alignment, and certification audit readiness for medical device manufacturers.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/iso-13485" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/iso-13485" },
-  ],
+    ],
   }),
   component: Iso13485,
 });

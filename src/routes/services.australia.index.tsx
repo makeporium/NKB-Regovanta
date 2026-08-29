@@ -10,12 +10,16 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/australia/")({
     head: () => ({
         meta: [
-            { title: "TGA ARTG Inclusion & Australian Sponsor Services | NKB Regovanta" },
-            { name: "description", content: "Navigate the Australia TGA medical device registration process. Expert support for ARTG inclusion and Australian Sponsor requirements." },
+            { title: "Australia TGA ARTG Inclusion & Australian Sponsor Services | NKB Regovanta" },
+            { name: "description", content: "Navigate the Australia TGA medical device registration process. Expert Australia TGA medical device consultant support for Australia TGA ARTG inclusion, Australian Sponsor services (TGA Sponsor), and post-market vigilance." },
+            { name: "keywords", content: "Australia TGA ARTG inclusion, Australia TGA medical device consultant, Australian Sponsor services (TGA Sponsor), TGA conformity assessment, MDSAP Australia TGA, NKB Regovanta" },
+            { property: "og:title", content: "Australia TGA ARTG Inclusion & Sponsor Services | NKB Regovanta" },
+            { property: "og:description", content: "Complete Australia TGA regulatory strategy, ARTG inclusion dossiers, and in-country TGA Sponsor services." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/australia" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia" },
+        ],
     }),
     component: AustraliaMarket,
 });

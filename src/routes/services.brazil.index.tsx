@@ -10,12 +10,16 @@ const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:te
 export const Route = createFileRoute("/services/brazil/")({
     head: () => ({
         meta: [
-            { title: "Brazil ANVISA Medical Device Registration | NKB Regovanta" },
-            { name: "description", content: "Navigate the Brazil ANVISA medical device registration process. Expert support for BRH representation, BGMP compliance, and RDC 751/2022 guidelines." },
+            { title: "ANVISA Brazil Medical Device Registration & BGMP | NKB Regovanta" },
+            { name: "description", content: "Navigate the ANVISA Brazil medical device registration process. Expert support for ANVISA Notificação and Registro, Brazil BGMP audit readiness (RDC 665/2022), and Brazil Registration Holder (BRH) representation." },
+            { name: "keywords", content: "ANVISA Brazil medical device registration, ANVISA Notificação and Registro, Brazil BGMP audit readiness (RDC 665/2022), Brazil Registration Holder (BRH), RDC 751/2022, NKB Regovanta" },
+            { property: "og:title", content: "ANVISA Brazil Device Registration & BRH Services | NKB Regovanta" },
+            { property: "og:description", content: "Complete Brazilian regulatory access: ANVISA Notificação, Registro, BGMP compliance, and BRH hosting." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil" },
+        ],
     }),
     component: BrazilMarket,
 });

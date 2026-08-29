@@ -7,12 +7,16 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/saudi-arabia")({
     head: () => ({
         meta: [
-            { title: "Saudi Arabia Medical Device Registration & SFDA Approval | NKB Regovanta" },
-            { name: "description", content: "Comprehensive support for Saudi Arabia SFDA medical device registration (MDMA), Authorized Representative services, and GHAD system navigation." },
+            { title: "Saudi Arabia SFDA Medical Device Registration & MDMA | NKB Regovanta" },
+            { name: "description", content: "Comprehensive support for Saudi Arabia SFDA medical device marketing authorization (MDMA), SFDA Authorized Representative Saudi Arabia (AR) services, GHAD portal registration SFDA, and SFDA MDNR listing Class A." },
+            { name: "keywords", content: "Saudi Arabia SFDA medical device marketing authorization (MDMA), SFDA Authorized Representative Saudi Arabia (AR), GHAD portal registration SFDA, SFDA MDNR listing Class A, Saudi FDA medical device consultant, NKB Regovanta" },
+            { property: "og:title", content: "Saudi Arabia SFDA Medical Device Registration | NKB Regovanta" },
+            { property: "og:description", content: "Full SFDA MDMA approval support, GHAD system submission, and in-kingdom Authorized Representative services." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia" },
+        ],
     }),
     component: SaudiArabiaMarket,
 });

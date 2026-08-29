@@ -13,8 +13,12 @@ export const Route = createFileRoute("/services/india/neutral-code")({
     component: NeutralCodePage,
     head: () => ({
     meta: [
-      { title: "Neutral Code Certificate (Special Code) | NKB Regovanta" },
-      { name: "description", content: "Apply for a CDSCO Neutral Code to export medical devices compliantly while maintaining manufacturing identity confidentiality." },
+      { title: "Neutral / Special Code Certificate CDSCO India | NKB Regovanta" },
+      { name: "description", content: "Apply for a Neutral / Special Code certificate from CDSCO to export medical devices compliantly while maintaining OEM confidentiality and merchant exporter branding." },
+      { name: "keywords", content: "Neutral / Special Code certificate, CDSCO Neutral Code, Special code certificate India, OEM confidential export license CDSCO, NKB Regovanta" },
+      { property: "og:title", content: "Neutral / Special Code Certificate CDSCO | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO Neutral Code and Special Code certificate allocation services for merchant exporters and medical device OEMs." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/neutral-code" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/neutral-code" },

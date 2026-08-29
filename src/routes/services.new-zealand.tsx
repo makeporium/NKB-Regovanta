@@ -7,12 +7,16 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand")({
     head: () => ({
         meta: [
-            { title: "New Zealand Medical Device Registration & Medsafe WAND | NKB Regovanta" },
-            { name: "description", content: "Expert support for New Zealand Medsafe medical device registration, WAND database notification, and Local Sponsor services." },
+            { title: "New Zealand WAND Notification & Medsafe Compliance | NKB Regovanta" },
+            { name: "description", content: "Expert support for New Zealand WAND notification (Medsafe), Web Assisted Notification of Devices, New Zealand Local Sponsor services, and therapeutic products regulatory compliance." },
+            { name: "keywords", content: "New Zealand WAND notification (Medsafe), Medsafe medical device registration, WAND database notification, New Zealand Sponsor services, NKB Regovanta" },
+            { property: "og:title", content: "New Zealand WAND Notification & Medsafe Consulting | NKB Regovanta" },
+            { property: "og:description", content: "Complete New Zealand market access via Medsafe WAND database notification and local sponsor representation." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand" },
+        ],
     }),
     component: NewZealandMarket,
 });

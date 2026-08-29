@@ -5,12 +5,16 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/513g')({
   head: () => ({
     meta: [
-      { title: '513(g) Requests for Information | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA 513(g) Requests for Information services.' },
+      { title: '513(g) Information Request FDA Consulting | Device Classification | NKB Regovanta' },
+      { name: 'description', content: 'Obtain official FDA regulatory feedback on product classification and applicable regulatory requirements through a formal 513(g) Information Request.' },
+      { name: 'keywords', content: '513(g) Information Request, FDA product classification request, 513g regulatory pathway, CDRH jurisdiction query, NKB Regovanta' },
+      { property: 'og:title', content: '513(g) Information Request FDA Consulting | NKB Regovanta' },
+      { property: 'og:description', content: 'Clarify FDA device classification and regulatory requirements with an official 513(g) Information Request dossier.' },
+      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/513g' },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/513g" },
-  ],
+    ],
   }),
   component: ServicePage,
 })

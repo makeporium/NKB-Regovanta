@@ -24,16 +24,28 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/iec-ad-code")({
   head: () => ({
     meta: [
-      { title: "Import Export Code (IEC) & AD Code Registration Services | NKB Regovanta" },
+      { title: "IEC Code DGFT & AD Code ICEGATE Registration Services | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Professional Import Export Code (IEC) and Authorised Dealer (AD) Code registration services in India. Complete DGFT and Customs documentation assistance by NKB Regovanta.",
+          "Professional IEC Code registration DGFT, AD Code registration ICEGATE customs profile, and Bank authority letter AD Code generation services in India by NKB Regovanta.",
       },
+      {
+        name: "keywords",
+        content:
+          "IEC Code registration DGFT, AD Code registration ICEGATE customs profile, Bank authority letter AD Code, DGFT import export code, customs port registration India, NKB Regovanta",
+      },
+      { property: "og:title", content: "IEC Code DGFT & AD Code ICEGATE Customs Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Fast-track DGFT IEC registration and ICEGATE AD Code customs portal profile setup for medical device, pharma & cosmetics importers.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/iec-ad-code" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/iec-ad-code" },
-  ],
+    ],
   }),
   component: IecAdCodePage,
 });
