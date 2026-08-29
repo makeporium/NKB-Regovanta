@@ -29,11 +29,7 @@ import {
 export const Route = createFileRoute("/services/india/medical-devices")({
   head: () => ({
         meta: [
-<<<<<<< Updated upstream
-            { title: "India Medical Device Regulatory Services | CDSCO Import & Mfg Licence | NKB Regovanta" },
-=======
             { title: "CDSCO Medical Device Import & Manufacturing Licence India | MD-14, MD-15, MD-3 to MD-9" },
->>>>>>> Stashed changes
             {
                 name: "description",
                 content: "Expert CDSCO medical device regulatory consulting in India. Import Licence (MD-14/MD-15), Class A GSR 777(E), Manufacturing Licences (MD-3/5, MD-7/9), Loan Licences (MD-4/6, MD-8/10), Test Licences (MD-12/13, MD-16/17), Investigational Import (MD-18/19, MD-24/25, MD-26/27), Indian Authorized Agent (AIR/IAA), SUGAM portal support and predicate strategy.",
