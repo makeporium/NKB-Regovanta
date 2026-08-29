@@ -13,7 +13,7 @@ const services = [
   { to: "/services/mdsap", label: "MDSAP" },
   { to: "/services/technical-documentation", label: "Technical Documentation" },
   { to: "/services/market-access", label: "Market Access" },
-  { to: "/services/manufacturing", label: "Manufacturing & Equipment" },
+  { to: "/services/manufacturing", label: "Manufacturing" },
   { to: "/services/audit-compliance", label: "Audit & Compliance Support" },
   { to: "/services", label: "All Services" },
 ];

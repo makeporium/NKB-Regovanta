@@ -88,7 +88,7 @@ const services = [
   },
   {
     icon: Factory,
-    title: "Product & Manufacturing Solutions",
+    title: "Our Products (Manufacturing)",
     text: "cGMP-compliant pharmaceutical machinery, SS 304/316 cleanroom furniture, blenders, conveyors, and material handling solutions.",
     to: "/services/manufacturing",
   },

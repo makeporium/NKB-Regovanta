@@ -14,16 +14,34 @@ import {
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgCleanroomSolutions from "@/assets/mfg-cleanroom-solutions.jpg";
 
+// Dynamically load all product images (from root and subdirectories)
+const productImages = import.meta.glob<{ default: string }>("@/assets/products/**/*.{png,jpg,jpeg}", { eager: true });
+
+function getProductImage(relPath: string): string {
+  const normalized = relPath.startsWith("/") ? relPath.slice(1) : relPath;
+  const key = `/src/assets/products/${normalized}`;
+  if (productImages[key]?.default) {
+    return productImages[key].default;
+  }
+  const baseName = normalized.split("/").pop();
+  for (const [k, v] of Object.entries(productImages)) {
+    if (k.endsWith(`/${baseName}`)) {
+      return v.default;
+    }
+  }
+  return imgPharmaEquipment;
+}
+
 export const Route = createFileRoute("/services/manufacturing")({
   head: () => ({
     meta: [
-      { title: "Product & Manufacturing Solutions | NKB Regovanta" },
+      { title: "OUR PRODUCTS (MANUFACTURING) | NKB Regovanta" },
       {
         name: "description",
         content:
           "High-grade SS 304/316 Machinery, Blenders, Conveyor Belts, Change Room Accessories, Clean Room Furniture, Trolley Division, Lifting Devices, Ancillaries, Storage Containers, and Canteen Furniture.",
       },
-      { property: "og:title", content: "Product & Manufacturing Solutions | NKB Regovanta" },
+      { property: "og:title", content: "OUR PRODUCTS (MANUFACTURING) | NKB Regovanta" },
       {
         property: "og:description",
         content:
@@ -64,7 +82,7 @@ const catalogSections: SectionData[] = [
         spec: "Tablet De-Dusting Machine",
         grade: "SS 304 / SS 316L",
         description: "Vertical spiral vibration tablet de-dusting system with adjustable speed controller and suction port.",
-        image: imgPharmaEquipment,
+        image: getProductImage("de-duster.png"),
         keyFeatures: ["Variable vibration frequency", "Dust extraction suction port", "cGMP tool-less dismantling"],
       },
       {
@@ -72,7 +90,7 @@ const catalogSections: SectionData[] = [
         spec: "12 / 24 / 48 / 96 Trays",
         grade: "SS 304 / SS 316 Contact",
         description: "Heavy-duty electric / steam heated drying oven with digital PID temperature controller and air dampers.",
-        image: imgPharmaEquipment,
+        image: getProductImage("tray-dryer.png"),
         keyFeatures: ["Uniform air circulation", "Perforated SS trays", "High-density thermal insulation"],
       },
       {
@@ -80,7 +98,7 @@ const catalogSections: SectionData[] = [
         spec: "Static & Dynamic Models",
         grade: "SS 304 / SS 316",
         description: "Cleanroom transfer pass box with electromagnetic door interlock, UV germicidal lamp, and HEPA filter option.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("passbox.png"),
         keyFeatures: ["Electromagnetic interlock", "UV-C germicidal lamp", "Tempered double-wall glass window"],
       },
     ],
@@ -97,7 +115,7 @@ const catalogSections: SectionData[] = [
         spec: "50L to 5000L Capacity",
         grade: "SS 316L Mirror Finish",
         description: "Octagonal blending vessel mounted on heavy structural drive frame with safety railing and limit switches.",
-        image: imgPharmaEquipment,
+        image: getProductImage("blender1.png"),
         keyFeatures: ["Gentle low-shear dry blending", "Safety barrier with limit switch", "Zero dead-spot geometry"],
       },
       {
@@ -105,7 +123,7 @@ const catalogSections: SectionData[] = [
         spec: "50kg to 500kg Capacity",
         grade: "SS 316 Contact Parts",
         description: "Horizontal trough mass mixer with paddle-blade agitator for thorough wet and dry mass homogenization.",
-        image: imgPharmaEquipment,
+        image: getProductImage("blender2.png"),
         keyFeatures: ["Forward / Reverse mixing rotation", "Transparent acrylic safety cover", "Manual / motorized tilt discharge"],
       },
       {
@@ -113,7 +131,7 @@ const catalogSections: SectionData[] = [
         spec: "Twin-Shell Cone",
         grade: "SS 316L Contact",
         description: "Precision V-Cone twin-shell blender engineered for dry powder and fragile granule homogenization.",
-        image: imgPharmaEquipment,
+        image: getProductImage("blender3.png"),
         keyFeatures: ["High blending uniformity", "Complete gravity discharge", "Internal intensifier bar option"],
       },
       {
@@ -121,7 +139,7 @@ const catalogSections: SectionData[] = [
         spec: "Semi / Fully Automatic",
         grade: "SS 304 / SS 316",
         description: "Auger-driven precision volumetric powder filling machine for bottles, jars, and pharmaceutical containers.",
-        image: imgPharmaEquipment,
+        image: getProductImage("blender4.png"),
         keyFeatures: ["PLC touchscreen controls", "No-bottle no-fill sensor", "Dispensing accuracy ±1%"],
       },
     ],
@@ -138,7 +156,7 @@ const catalogSections: SectionData[] = [
         spec: "Continuous Flatbed Conveyor",
         grade: "SS 304 / SS 316",
         description: "Sanitary flatbed conveyor belt with adjustable side guide rails and variable frequency drive (VFD).",
-        image: imgPharmaEquipment,
+        image: getProductImage("conveyor-belt1.png"),
         keyFeatures: ["Food/Pharma grade belt", "Variable speed motor", "Washdown hygienic structure"],
       },
       {
@@ -146,7 +164,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Tier Incline / Decline",
         grade: "SS 304 / SS 316",
         description: "Space-saving S-shaped elevating conveyor for vertical transfer between packaging and processing stages.",
-        image: imgPharmaEquipment,
+        image: getProductImage("conveyor-belt2.png"),
         keyFeatures: ["Space-efficient vertical lift", "High-grip cleated belt", "Sturdy vibration-free frame"],
       },
       {
@@ -154,7 +172,7 @@ const catalogSections: SectionData[] = [
         spec: "Heavy-Duty Wire Mesh",
         grade: "Full SS 304 / SS 316",
         description: "All-stainless steel wire mesh conveyor designed for washdown, high temperature, and harsh chemical zones.",
-        image: imgPharmaEquipment,
+        image: getProductImage("conveyor-belt3.png"),
         keyFeatures: ["High temperature resistant", "Superior drainage & washdown", "Heavy load carrying capacity"],
       },
     ],
@@ -171,7 +189,7 @@ const catalogSections: SectionData[] = [
         spec: "Tablet Tooling Storage",
         grade: "SS 304 with Inserts",
         description: "Specialized tablet press tooling storage cabinet with custom drawers holding upper punches, lower punches & dies.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room1.png"),
         keyFeatures: ["Precision tooling slots", "Protects cutting edges", "Lockable heavy-duty drawers"],
       },
       {
@@ -179,7 +197,7 @@ const catalogSections: SectionData[] = [
         spec: "Tooling Transport Trays",
         grade: "SS 304",
         description: "Portable stainless steel crates and trays for washing, sonic cleaning, and transporting punch dies.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room2.png"),
         keyFeatures: ["Stackable nesting design", "Drainage perforations", "Sturdy carry handles"],
       },
       {
@@ -187,7 +205,7 @@ const catalogSections: SectionData[] = [
         spec: "Single / Multi Door Units",
         grade: "SS 304",
         description: "Personal belongings locker bank for change rooms and personnel entry airlocks with individual cam locks.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room3.png"),
         keyFeatures: ["Heavy-gauge SS doors", "Cam lock with master key", "Sloped top to prevent dust"],
       },
       {
@@ -195,7 +213,7 @@ const catalogSections: SectionData[] = [
         spec: "Combined Wardrobe Unit",
         grade: "SS 304",
         description: "Full-height gowning wardrobe combining vertical apron hanging space with lower shoe/boot compartment.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room4.png"),
         keyFeatures: ["Hanger rail & storage shelves", "Lower shoe rack compartment", "Perforated ventilation slots"],
       },
       {
@@ -203,7 +221,7 @@ const catalogSections: SectionData[] = [
         spec: "16 Pigeonhole Compartments",
         grade: "SS 304",
         description: "Multi-compartment cleanroom footwear storage cabinet with 16 numbered doors and airflow louvers.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room5.png"),
         keyFeatures: ["16 numbered compartments", "Louvered ventilation slots", "Easy washdown drainage design"],
       },
       {
@@ -211,7 +229,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Drawer Cabinet",
         grade: "SS 304",
         description: "High-density horizontal storage cabinet with 18 smooth-sliding drawers for spare parts and calibration tools.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room6.png"),
         keyFeatures: ["18 ball-bearing slide drawers", "Front label holder on each drawer", "Anti-tilt safety interlock"],
       },
       {
@@ -219,7 +237,7 @@ const catalogSections: SectionData[] = [
         spec: "Change Room Lockers",
         grade: "SS 304",
         description: "Custom modular cleanroom locker banks engineered for personnel change rooms and gowning airlocks.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room7.png"),
         keyFeatures: ["Padlock hasp or cam lock", "Louvers for air circulation", "Corrosion and wipe-down proof"],
       },
       {
@@ -227,7 +245,7 @@ const catalogSections: SectionData[] = [
         spec: "15 Doors + Shoe Rack",
         grade: "SS 304",
         description: "Combined change room locker unit featuring 15 individual locker compartments and bottom shoe rack.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room8.png"),
         keyFeatures: ["Integrated shoe rack base", "15 lockable compartments", "Mirror / Matt finish available"],
       },
       {
@@ -235,7 +253,7 @@ const catalogSections: SectionData[] = [
         spec: "Cleanroom Gowning Wardrobe",
         grade: "SS 304",
         description: "Enclosed stainless steel cleanroom garment wardrobe for sterile overalls, aprons, and cleanroom bunny suits.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room9.png"),
         keyFeatures: ["Optional HEPA air purge", "Hanger rail & storage shelves", "Magnetic door closure"],
       },
       {
@@ -243,7 +261,7 @@ const catalogSections: SectionData[] = [
         spec: "Smooth Radius Design",
         grade: "SS 304 Matt Finish",
         description: "GMP cross-over step bench with smooth ergonomic curvature separating primary and secondary change rooms.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room10.png"),
         keyFeatures: ["Smooth continuous radius edge", "Zero dirt accumulation pockets", "Sturdy floor-bolted feet"],
       },
       {
@@ -251,7 +269,7 @@ const catalogSections: SectionData[] = [
         spec: "Dual-Utility Step Barrier",
         grade: "SS 304",
         description: "Dual-utility crossover barrier bench with built-in shoe rack pigeonholes below the sitting plank.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room11.png"),
         keyFeatures: ["Space-saving combined utility", "Slanted pigeonhole design", "Laser-cut ventilation slots"],
       },
       {
@@ -259,7 +277,7 @@ const catalogSections: SectionData[] = [
         spec: "Foot-Operated Sanitizer Stand",
         grade: "SS 304",
         description: "Touchless foot-pedal operated Isopropyl Alcohol sanitizer stand for hands-free gowning room disinfection.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("change-room12.png"),
         keyFeatures: ["100% hands-free foot pedal", "Accepts standard 500ml/1L bottles", "Stable anti-topple weighted base"],
       },
     ],
@@ -276,7 +294,7 @@ const catalogSections: SectionData[] = [
         spec: "SS 304/316 Cleanroom Pallet",
         grade: "SS 304 / SS 316",
         description: "Hygienic 2-way and 4-way entry stainless steel pallets for cleanroom warehouse and raw material staging.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room1.png"),
         keyFeatures: ["Up to 2000kg static load", "Seamless welded top planks", "Autoclavable & pressure-wash safe"],
       },
       {
@@ -284,7 +302,7 @@ const catalogSections: SectionData[] = [
         spec: "Executive Cleanroom Desk",
         grade: "SS 304 Matt Finish",
         description: "Ergonomic cleanroom executive office desk with integrated stainless steel drawers and modesty panel.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room2.png"),
         keyFeatures: ["Smooth-glide drawer tracks", "Lockable central drawer", "Smooth rounded edges"],
       },
       {
@@ -292,7 +310,7 @@ const catalogSections: SectionData[] = [
         spec: "Sliding / Hinged Doors",
         grade: "SS 304",
         description: "Stainless steel cleanroom storage cabinet with lockable smooth-sliding doors and adjustable internal shelves.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room3.png"),
         keyFeatures: ["Smooth-sliding or hinged doors", "Adjustable inner shelves", "Flush recessed door handles"],
       },
       {
@@ -300,7 +318,7 @@ const catalogSections: SectionData[] = [
         spec: "Gowning Entry Storage",
         grade: "SS 304",
         description: "Dedicated wall or floor-mounted storage cabinet for visitor gowning, aprons, and disposable cleanroom suits.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room4.png"),
         keyFeatures: ["Clear visual door panel", "Spacious hanging rod", "Compact space-saving design"],
       },
       {
@@ -308,7 +326,7 @@ const catalogSections: SectionData[] = [
         spec: "Deep Pressed Wash Station",
         grade: "SS 304 / SS 316",
         description: "Pharmaceutical washing station with deep pressed seamless sinks, rear splashback, and drainboards.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room5.png"),
         keyFeatures: ["Seamless pressed bowls", "3-inch rear splash guard", "Sensor / Knee-operated tap provision"],
       },
       {
@@ -316,7 +334,7 @@ const catalogSections: SectionData[] = [
         spec: "Standard Workstation Table",
         grade: "SS 304 / SS 316",
         description: "Heavy-duty cleanroom assembly table with rigid square tubular legs, bottom undershelf, and leveling studs.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room6.png"),
         keyFeatures: ["Crevice-free TIG welded", "Reinforced top under-structure", "Adjustable nylon leveling pads"],
       },
       {
@@ -324,7 +342,7 @@ const catalogSections: SectionData[] = [
         spec: "Cleanroom IT Workstation",
         grade: "SS 304",
         description: "Cleanroom computer terminal desk with retractable keyboard tray, CPU mount, and cable grommet.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room7.png"),
         keyFeatures: ["Retractable keyboard drawer", "Dedicated CPU cradle", "Hygienic cable management"],
       },
       {
@@ -332,7 +350,7 @@ const catalogSections: SectionData[] = [
         spec: "Anti-Slip Step Stool",
         grade: "SS 304 Chequered / Perforated",
         description: "Sturdy 2-step access ladder with embossed anti-slip treads and heavy-duty rubber base feet.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room8.png"),
         keyFeatures: ["Anti-skid chequered steps", "Stable non-marking rubber feet", "Easy-lift side grab handles"],
       },
       {
@@ -340,7 +358,7 @@ const catalogSections: SectionData[] = [
         spec: "360° Swivel with Gas Lift",
         grade: "SS 304 Construction",
         description: "Ergonomic cleanroom height-adjustable revolving stool with 5-star stainless steel base and conductive casters.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room9.png"),
         keyFeatures: ["Smooth hydraulic height adjustment", "Non-shedding conductive wheels", "Full circular footrest ring"],
       },
       {
@@ -348,7 +366,7 @@ const catalogSections: SectionData[] = [
         spec: "Ergonomic Backrest Chair",
         grade: "SS 304 Tubular Frame",
         description: "Heavy-duty stainless steel cleanroom chair with contoured backrest designed for prolonged packing work.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room10.png"),
         keyFeatures: ["Supportive contoured backrest", "Rigid tubular construction", "Antistatic ESD foot caps"],
       },
       {
@@ -356,7 +374,7 @@ const catalogSections: SectionData[] = [
         spec: "4-Leg Solid Base",
         grade: "SS 304 Matt Finish",
         description: "Solid four-legged cleanroom stool with pressed circular seat top and welded reinforcement ring.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room11.png"),
         keyFeatures: ["Zero-crevice welded joints", "Stackable design option", "Chemical & IPA wipe resistant"],
       },
       {
@@ -364,7 +382,7 @@ const catalogSections: SectionData[] = [
         spec: "Sorting & Inspection Table",
         grade: "SS 316 Mirror Polish",
         description: "Precision sorting and inspection table with perimeter safety border lip and mirror-finish surface.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("clean-room12.png"),
         keyFeatures: ["Perimeter containment lip", "Illuminated top frame option", "Autoclavable surface"],
       },
     ],
@@ -381,7 +399,7 @@ const catalogSections: SectionData[] = [
         spec: "Enclosed Mobile Storage",
         grade: "SS 304",
         description: "Enclosed mobile cabinet cart with lockable double doors and interior shelves for sterile drug transport.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division1.png"),
         keyFeatures: ["Full enclosure protection", "Lockable double doors", "Smooth hospital-grade PU wheels"],
       },
       {
@@ -389,7 +407,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Tier Carton Mover",
         grade: "SS 304 Tubular Frame",
         description: "Multi-shelf open trolley designed for transporting bulk shipping cartons and packing materials.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division2.png"),
         keyFeatures: ["High load per shelf (150kg)", "Perimeter fall-prevention ledge", "Two fixed + two swivel braked casters"],
       },
       {
@@ -397,7 +415,7 @@ const catalogSections: SectionData[] = [
         spec: "Calibration Weight Mover",
         grade: "Heavy-Gauge SS 304",
         description: "Low-center-of-gravity solid platform cart built specifically for heavy standard calibration weight boxes.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division3.png"),
         keyFeatures: ["Reinforced underbody ribs", "Low deck height for easy loading", "Ergonomic loop push handle"],
       },
       {
@@ -405,7 +423,7 @@ const catalogSections: SectionData[] = [
         spec: "Flat Deck Truck (200-500kg)",
         grade: "SS 304 Matt Finish",
         description: "Heavy-duty flatbed transport trolley with fixed push handle and non-marking antistatic polyurethane wheels.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division4.png"),
         keyFeatures: ["Anti-skid embossed or flat deck", "All-around bumper buffer", "Smooth silent rolling casters"],
       },
       {
@@ -413,7 +431,7 @@ const catalogSections: SectionData[] = [
         spec: "Cleanroom Janitorial Cart",
         grade: "SS 304 Autoclavable",
         description: "Specialized janitorial cleanroom trolley with multi-bucket wringer, mop holders, and supply caddy.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division5.png"),
         keyFeatures: ["Autoclavable components", "Heavy-duty downward wringer", "Trash bag holder bracket"],
       },
       {
@@ -421,7 +439,7 @@ const catalogSections: SectionData[] = [
         spec: "Security Wire Mesh Cage",
         grade: "SS 304 Welded Mesh",
         description: "Lockable wire-mesh enclosed mobile cart for secure handling of high-value API, vials, and finished goods.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division6.png"),
         keyFeatures: ["Padlockable mesh double doors", "Visibility of inside contents", "Impact-resistant mesh welding"],
       },
       {
@@ -429,7 +447,7 @@ const catalogSections: SectionData[] = [
         spec: "Tooling Organizer Cart",
         grade: "SS 304",
         description: "Custom slotted storage cart for safely transporting vibro-sifter screens, multi-mill blades, and perforated plates.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division7.png"),
         keyFeatures: ["Dedicated screen slots", "Prevents wire mesh de-shaping", "Compact footprint"],
       },
       {
@@ -437,7 +455,7 @@ const catalogSections: SectionData[] = [
         spec: "Dual / Triple Bucket Mopper",
         grade: "SS 304",
         description: "Twin/triple bucket autoclavable cleanroom mopping cart with down-press mechanical wringer.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division8.png"),
         keyFeatures: ["Twin / triple bucket options", "Smooth rolling swivel casters", "Chemical-resistant plastic buckets"],
       },
       {
@@ -445,7 +463,7 @@ const catalogSections: SectionData[] = [
         spec: "Mobile Access Platform",
         grade: "SS 304 Heavy Duty",
         description: "Tall mobile maintenance ladder with continuous safety handrails, deep step treads, and step-lock brake casters.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division9.png"),
         keyFeatures: ["Spring-loaded step lock casters", "3-sided top platform guardrail", "Conforms to industrial safety codes"],
       },
       {
@@ -453,7 +471,7 @@ const catalogSections: SectionData[] = [
         spec: "Gown Collection Hamper",
         grade: "SS 304 with Mesh / Bag",
         description: "Open-top mobile hamper for collecting used sterile suits, bouffant caps, and cleanroom linens.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division10.png"),
         keyFeatures: ["Lightweight tubular design", "Foot-pedal lid opener option", "Removable washable fabric bag"],
       },
       {
@@ -461,7 +479,7 @@ const catalogSections: SectionData[] = [
         spec: "Vessel Mover Base Ring",
         grade: "SS 304 Heavy Tubular",
         description: "Custom round and square mobile base dollies fitted to process containers for seamless factory transit.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division11.png"),
         keyFeatures: ["Snug container fit rim", "Heavy-duty swivel wheels with brakes", "Handles up to 300L vessels"],
       },
       {
@@ -469,7 +487,7 @@ const catalogSections: SectionData[] = [
         spec: "Cleanroom Laundry Cart",
         grade: "SS 304",
         description: "High-capacity tubular frame cart with fabric/mesh liner for cleanroom laundry and sterile suit movement.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("trolly-division12.png"),
         keyFeatures: ["Spacious linen capacity", "Non-marking swivel wheels", "Easily sanitized surfaces"],
       },
     ],
@@ -486,7 +504,7 @@ const catalogSections: SectionData[] = [
         spec: "2000kg / 2500kg Capacity",
         grade: "100% Full SS 304",
         description: "Completely stainless steel hydraulic hand pallet truck engineered for cleanrooms and sterile wet areas.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices1.png"),
         keyFeatures: ["Full SS chassis & pump", "Sealed waterproof bearings", "Non-marking nylon / PU rollers"],
       },
       {
@@ -494,7 +512,7 @@ const catalogSections: SectionData[] = [
         spec: "2.5 Ton Capacity",
         grade: "Industrial Grade",
         description: "Heavy-duty hydraulic manual pallet jack with overload bypass valve and 3-position fingertip control handle.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices2.png"),
         keyFeatures: ["Hard chrome plated piston", "Reinforced fork structure", "Tandem load rollers"],
       },
       {
@@ -502,7 +520,7 @@ const catalogSections: SectionData[] = [
         spec: "Powder Coated Mild Steel",
         grade: "MS Powder Coated",
         description: "Economical and robust manual pallet truck for outer packaging and general warehouse material handling.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices3.png"),
         keyFeatures: ["High-tensile steel build", "Epoxy powder-coated finish", "Ergonomic rubberized grip"],
       },
       {
@@ -510,7 +528,7 @@ const catalogSections: SectionData[] = [
         spec: "200L / 210L Drum Capacity",
         grade: "MS / SS 304",
         description: "Tri-wheel tilting drum dolly for single-person loading, transport, and dispensing of heavy chemical drums.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices4.png"),
         keyFeatures: ["Effortless self-standing tilt", "Rear swivel caster for steering", "Secure rim-clamp hook"],
       },
       {
@@ -518,7 +536,7 @@ const catalogSections: SectionData[] = [
         spec: "200L Drum Tilter",
         grade: "Heavy Duty Tubular",
         description: "Specialized three-wheel drum trolley for safe rotation, transport and decanting of 200L barrels.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices5.png"),
         keyFeatures: ["Easy tipping balance point", "Smooth heavy-duty wheels", "Safety drum lock strap"],
       },
       {
@@ -526,7 +544,7 @@ const catalogSections: SectionData[] = [
         spec: "Up to 1000kg / 800mm Lift",
         grade: "SS 304 / MS Available",
         description: "Hydraulic scissor high-lift pallet truck serving as both a transport dolly and an ergonomic work height table.",
-        image: imgPharmaEquipment,
+        image: getProductImage("lifting-devices6.png"),
         keyFeatures: ["Dual hydraulic cylinder lift", "Automatic stabilizing outriggers", "Reduces operator bending fatigue"],
       },
     ],
@@ -543,7 +561,7 @@ const catalogSections: SectionData[] = [
         spec: "Hygienic Cleanroom Floor Drain",
         grade: "SS 304 / SS 316",
         description: "Autoclavable stainless steel floor drain trap with water seal preventing pest entry, backflow, and sewer gas.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005214.png"),
         keyFeatures: ["Easy removable basket", "Zero foul odor backflow", "Flush-mount floor grill"],
       },
       {
@@ -551,7 +569,7 @@ const catalogSections: SectionData[] = [
         spec: "Side Outlet Drainage Trap",
         grade: "SS 304 / SS 316",
         description: "Stainless steel side-outlet cleanroom floor drain trap engineered for shallow floor slab depths.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005216.png"),
         keyFeatures: ["Low-profile side outlet", "Water-seal odor barrier", "Completely removable strainer"],
       },
       {
@@ -559,7 +577,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Tier Cantilever",
         grade: "SS 304 Mirror Finish",
         description: "Stainless steel cleanroom maintenance tool box with cantilever opening compartments and padlock hole.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005219.png"),
         keyFeatures: ["Non-rusting sterile friendly", "Multi-tier tool organization", "Comfortable tubular carry handle"],
       },
       {
@@ -567,7 +585,7 @@ const catalogSections: SectionData[] = [
         spec: "Hands-Free Waste Bin",
         grade: "SS 304",
         description: "Hands-free foot pedal operated cleanroom dustbin with smooth internal bag retention ring.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005222.png"),
         keyFeatures: ["100% hands-free foot pedal", "Internal bag retention ring", "Quiet soft-closing lid mechanism"],
       },
       {
@@ -575,7 +593,7 @@ const catalogSections: SectionData[] = [
         spec: "Document Display Podium",
         grade: "SS 304 + Clear Acrylic",
         description: "Cleanroom document display podium for SOP sheets, batch manufacturing records (BMR), and logbooks.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005225.png"),
         keyFeatures: ["Transparent acrylic front", "30-degree ergonomic tilt", "Wall or pedestal mountable"],
       },
       {
@@ -583,7 +601,7 @@ const catalogSections: SectionData[] = [
         spec: "Manual Dispensing Tray",
         grade: "SS 304 / SS 316",
         description: "Manual corrugated tablet/capsule counting tray with clean pouring spout for quality inspection.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005228.png"),
         keyFeatures: ["Corrugated counting slots", "Smooth pouring spout", "Mirror electro-polish finish"],
       },
       {
@@ -591,7 +609,7 @@ const catalogSections: SectionData[] = [
         spec: "4 / 5 Tier Storage Rack",
         grade: "SS 304",
         description: "Heavy-duty stainless steel cleanroom storage shelving rack with solid or perforated shelves.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005232.png"),
         keyFeatures: ["Solid / perforated shelf options", "Adjustable tier heights", "Leveling bullet feet"],
       },
       {
@@ -599,7 +617,7 @@ const catalogSections: SectionData[] = [
         spec: "Counter-Weighted Swing Lid",
         grade: "SS 304",
         description: "Self-closing tilting lid stainless steel waste bin for common corridors and airlocks.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005235.png"),
         keyFeatures: ["Smooth counterweight lid swing", "Fingerprint-resistant finish", "Easy empty inner container"],
       },
       {
@@ -607,7 +625,7 @@ const catalogSections: SectionData[] = [
         spec: "Telescopic Liquid Dip Sampler",
         grade: "SS 316L Electropolished",
         description: "Precision liquid dip sampler for sampling liquids and suspensions at various vessel depths.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005238.png"),
         keyFeatures: ["Telescopic extendable rod", "Sanitary screw disassembly", "Ra < 0.2µm mirror finish"],
       },
       {
@@ -615,7 +633,7 @@ const catalogSections: SectionData[] = [
         spec: "Pharmaceutical Dispensing Scoop",
         grade: "SS 316L Seamless",
         description: "Seamless pressed stainless steel open scoop with reinforced grip handle for bulk powder sampling.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005241.png"),
         keyFeatures: ["Seamless single-piece pressing", "No welds or crevices", "Graduated volume capacity"],
       },
       {
@@ -623,7 +641,7 @@ const catalogSections: SectionData[] = [
         spec: "Microbiological Plate Stand",
         grade: "SS 304",
         description: "Specialized cleanroom laboratory stand for holding settle plates and airborne microbe exposure dishes.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005244.png"),
         keyFeatures: ["Multi-plate height tiers", "Stable non-tipping base", "Autoclave safe"],
       },
       {
@@ -631,7 +649,7 @@ const catalogSections: SectionData[] = [
         spec: "Graduated SS Measuring Jug",
         grade: "SS 304 / SS 316",
         description: "Seamless pharmaceutical liquid measuring jug with precision pouring lip, sturdy handle, and laser markings.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005247.png"),
         keyFeatures: ["Laser-etched volume graduations", "Non-drip pouring spout", "Autoclavable"],
       },
       {
@@ -639,7 +657,7 @@ const catalogSections: SectionData[] = [
         spec: "Cylindrical Powder Scoop",
         grade: "SS 316L",
         description: "Deep cylindrical powder scoop with ergonomic side grip handle designed for deep barrel powder extraction.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005250.png"),
         keyFeatures: ["Deep cylindrical barrel body", "Ergonomic side grip handle", "Mirror finish interior"],
       },
       {
@@ -647,7 +665,7 @@ const catalogSections: SectionData[] = [
         spec: "Environmental Monitoring Stand",
         grade: "SS 304",
         description: "Adjustable height pedestal stand designed to position petri dishes at required cleanroom sampling heights.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005254.png"),
         keyFeatures: ["Height-adjustable stem", "Heavy cast circular base", "Secure dish retaining ring"],
       },
       {
@@ -655,7 +673,7 @@ const catalogSections: SectionData[] = [
         spec: "Hand Sanitizer Stand",
         grade: "SS 304",
         description: "Touchless foot-pedal operated Isopropyl Alcohol sanitizer stand with stable weighted base.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005257.png"),
         keyFeatures: ["100% hands-free foot pedal", "Accepts standard 500ml/1L bottles", "Stable anti-topple weighted base"],
       },
       {
@@ -663,7 +681,7 @@ const catalogSections: SectionData[] = [
         spec: "Sanitary Lubrication Dispenser",
         grade: "SS 304",
         description: "Stainless steel cleanroom precision oiler dispenser with flexible nozzle for machine maintenance.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005300.png"),
         keyFeatures: ["Fine dispensing nozzle", "Airtight pump mechanism", "Corrosion-free body"],
       },
       {
@@ -671,7 +689,7 @@ const catalogSections: SectionData[] = [
         spec: "Wall-Mounted Push / Sensor",
         grade: "SS 304",
         description: "Heavy-gauge stainless steel hand wash / disinfectant soap dispenser for change rooms and wash stations.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005304.png"),
         keyFeatures: ["Non-clogging pump valve", "Level indicator window", "Anti-vandalism lock key"],
       },
       {
@@ -679,7 +697,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Zone Core Sampler",
         grade: "SS 316L Electropolished",
         description: "Slot-type core thief sampler for taking representative multi-level powder samples from drums and bags.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005307.png"),
         keyFeatures: ["Multi-compartment zone sampling", "Pointed tip for easy penetration", "Tool-less cleaning"],
       },
       {
@@ -687,7 +705,7 @@ const catalogSections: SectionData[] = [
         spec: "Double-Ended Lab Spatula",
         grade: "SS 316L",
         description: "Pharmaceutical laboratory spatulas with flat and spoon ends for precise powder weighing and handling.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005311.png"),
         keyFeatures: ["Flexible high-tensile blade", "Zero-crevice polish", "Autoclavable"],
       },
       {
@@ -695,7 +713,7 @@ const catalogSections: SectionData[] = [
         spec: "Long Handle Sampling Spoons",
         grade: "SS 316L",
         description: "Long-stem stainless steel sampling and dispensing spoons for deep container reach.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005317.png"),
         keyFeatures: ["Long ergonomic stem", "Smooth hemispherical bowl", "Mirror polish finish"],
       },
       {
@@ -703,7 +721,7 @@ const catalogSections: SectionData[] = [
         spec: "Seamless Transport Trays",
         grade: "SS 304 / SS 316",
         description: "Deep and shallow stainless steel utility trays for autoclaving, instrument handling, and drying.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005321.png"),
         keyFeatures: ["Seamless pressed corners", "Rolled safety rim edge", "Stackable design"],
       },
       {
@@ -711,7 +729,7 @@ const catalogSections: SectionData[] = [
         spec: "Partitioned Transport Box",
         grade: "SS 304 / SS 316",
         description: "Precision stainless steel partitioned cassette boxes for holding and autoclaving glass vials and ampoules.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005325.png"),
         keyFeatures: ["Custom grid cell dimensions", "Perforated steam flow base", "Removable locking lid"],
       },
       {
@@ -719,7 +737,7 @@ const catalogSections: SectionData[] = [
         spec: "Queue Barrier & Fender Stanchions",
         grade: "SS 304 Mirror / Matt",
         description: "Heavy-duty retractable belt queue barrier posts and floor fenders for cleanroom personnel segregation.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("Ancillaries/Screenshot 2026-08-30 005330.png"),
         keyFeatures: ["2m/3m retractable belt", "Heavy weighted cast-iron base", "4-way locking head"],
       },
     ],
@@ -736,7 +754,7 @@ const catalogSections: SectionData[] = [
         spec: "Sanitary Triclover Ports",
         grade: "SS 316L (Ra < 0.4µm)",
         description: "High-grade pharmaceutical liquid filling vessel with sterile TC connections, vent filter, and sight glass.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005423.png"),
         keyFeatures: ["Electropolished mirror interior", "Triclover sanitary fittings", "Zero-drain holdup bottom valve"],
       },
       {
@@ -744,7 +762,7 @@ const catalogSections: SectionData[] = [
         spec: "ASME / GMP Certified",
         grade: "SS 316L (Code Certified)",
         description: "Pressurized mobile compounding tank equipped with pressure relief valve, calibrated gauge, and dip tube.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005426.png"),
         keyFeatures: ["Pressure tested up to 6 Bar", "Silicone / EPDM sanitary gasket", "Jacketed heating/cooling option"],
       },
       {
@@ -752,7 +770,7 @@ const catalogSections: SectionData[] = [
         spec: "50L, 100L, 200L Capacity",
         grade: "SS 304 / SS 316",
         description: "Seamless cylindrical stainless steel storage drums with airtight toggle clamp lid and heavy-duty side handles.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005428.png"),
         keyFeatures: ["Airtight band clamp lid", "Crevice-free rolled top rim", "Stackable lid profile"],
       },
       {
@@ -760,7 +778,7 @@ const catalogSections: SectionData[] = [
         spec: "100L to 10,000L",
         grade: "SS 316L Internal",
         description: "Vertical and horizontal pharmaceutical liquid mixing and storage tanks with top agitator and CIP spray balls.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005431.png"),
         keyFeatures: ["CIP/SIP cleanable design", "High-efficiency top mixer drive", "Dimple / Limpet jacket option"],
       },
       {
@@ -768,7 +786,7 @@ const catalogSections: SectionData[] = [
         spec: "Airtight Rectangular Tank",
         grade: "SS 304 / SS 316",
         description: "Heavy-gauge stainless steel square storage container with top clamp cover and reinforced side corners.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005434.png"),
         keyFeatures: ["Space-saving square footprint", "Reinforced corner joints", "Leak-tested weld joints"],
       },
       {
@@ -776,7 +794,7 @@ const catalogSections: SectionData[] = [
         spec: "IBC Powder Container",
         grade: "SS 316L Contact",
         description: "Intermediate Bulk Container (IBC) square bin with 60-degree discharge cone, butterfly valve, and mobile frame.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005437.png"),
         keyFeatures: ["Smooth 60° hopper discharge", "Sanitary butterfly valve", "Forklift & pallet truck liftable"],
       },
       {
@@ -784,7 +802,7 @@ const catalogSections: SectionData[] = [
         spec: "5L to 30L Graduated",
         grade: "SS 304 / SS 316",
         description: "Seamless pressed pharmaceutical buckets with laser volume markings, swing handle, and skirt base.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005441.png"),
         keyFeatures: ["Laser-etched volume graduations", "Seamless pressed single piece", "Reinforced bottom skirt"],
       },
       {
@@ -792,7 +810,7 @@ const catalogSections: SectionData[] = [
         spec: "Loose / Clamp Cover",
         grade: "SS 304 / SS 316",
         description: "Multipurpose cylindrical storage containers with airtight lid options for dry powder and granulate holding.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005444.png"),
         keyFeatures: ["Sanitary rolled rim", "Airtight silicone gasket", "Heavy-duty drop handles"],
       },
       {
@@ -800,7 +818,7 @@ const catalogSections: SectionData[] = [
         spec: "Sanitary Powder & Liquid Funnels",
         grade: "SS 304 / SS 316",
         description: "Stainless steel conical funnels with wide top diameter and sanitary spout for powder and liquid charging.",
-        image: imgPharmaEquipment,
+        image: getProductImage("Liquid/Screenshot 2026-08-30 005447.png"),
         keyFeatures: ["Wide anti-spill charging bowl", "Air relief channel stem", "Mirror finish interior"],
       },
     ],
@@ -817,7 +835,7 @@ const catalogSections: SectionData[] = [
         spec: "Commercial Kitchen Range",
         grade: "SS 304 Heavy Duty",
         description: "Commercial heavy-duty stainless steel LPG/PNG gas cooking range with 3 high-power cast-iron burners.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005812.png"),
         keyFeatures: ["High-power cast iron burners", "Removable drip trays", "Heavy square tubular legs"],
       },
       {
@@ -825,7 +843,7 @@ const catalogSections: SectionData[] = [
         spec: "Commercial Deep Fryer",
         grade: "SS 304 Industrial",
         description: "High-capacity deep fryer with thermostatic control and rapid bottom oil drain valve for cafeteria kitchens.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005816.png"),
         keyFeatures: ["Thermostatic temperature control", "Safety auto cut-off", "Easy oil drain ball valve"],
       },
       {
@@ -833,7 +851,7 @@ const catalogSections: SectionData[] = [
         spec: "Electric / Gas Flat Griddle",
         grade: "SS 304 Heavy Top",
         description: "Heavy flat-griddle hot plate table for commercial cafeteria chapati, dosa, and bulk grilling preparation.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005819.png"),
         keyFeatures: ["Uniform heating distribution", "Perimeter grease trough", "Sturdy reinforced frame"],
       },
       {
@@ -841,7 +859,7 @@ const catalogSections: SectionData[] = [
         spec: "Heavy Stock Pot Stove",
         grade: "SS 304",
         description: "Heavy-duty single burner stock pot stove designed for large cooking cauldrons and soup vessels.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005821.png"),
         keyFeatures: ["Heavy cast iron pan support", "Individual pilot burner", "Spill collection tray"],
       },
       {
@@ -849,7 +867,7 @@ const catalogSections: SectionData[] = [
         spec: "Commercial Double Door",
         grade: "SS 304",
         description: "Double-door commercial vertical refrigerator with digital temperature display and energy-efficient cooling.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005824.png"),
         keyFeatures: ["Digital temperature controller", "Auto-defrost cooling system", "Adjustable heavy-gauge SS wire shelves"],
       },
       {
@@ -857,7 +875,7 @@ const catalogSections: SectionData[] = [
         spec: "Dining Table with Fixed Stools",
         grade: "SS 304",
         description: "Commercial cafeteria 6/8-seater dining table with integrated swivel circular stools and wipe-clean surface.",
-        image: imgPharmaEquipment,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005827.png"),
         keyFeatures: ["Integrated swivel seats", "Scratch-resistant matt SS top", "Heavy tubular sub-frame"],
       },
       {
@@ -865,7 +883,7 @@ const catalogSections: SectionData[] = [
         spec: "Multi-Tier Drying Rack",
         grade: "SS 304 Heavy Duty",
         description: "Multi-tier stainless steel clean dish and tray drying rack with slatted tiers for efficient air drying.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005830.png"),
         keyFeatures: ["Slatted drainage shelves", "Heavy-load tubular uprights", "Easy washdown maintenance"],
       },
       {
@@ -873,7 +891,7 @@ const catalogSections: SectionData[] = [
         spec: "3-Compartment Pot Washing Station",
         grade: "SS 304 Heavy Duty",
         description: "Commercial 3-compartment deep pot washing sink unit with high splashback and heavy drainboards.",
-        image: imgCleanroomSolutions,
+        image: getProductImage("canteen-furniture/Screenshot 2026-08-30 005833.png"),
         keyFeatures: ["Three deep sink compartments", "Reinforced front & rear splashback", "Heavy-duty drain strainers"],
       },
     ],
@@ -935,7 +953,7 @@ function ManufacturingPage() {
                 </span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy tracking-tight leading-tight">
-                Product &amp; Manufacturing Solutions
+                OUR PRODUCTS (MANUFACTURING)
               </h1>
               <p className="mt-4 text-base sm:text-lg text-gray-700 font-medium leading-relaxed">
                 Precision pharmaceutical machinery, sanitary stainless steel (SS 304 / SS 316L) cleanroom furniture,
@@ -1088,11 +1106,11 @@ function ManufacturingPage() {
                     >
                       {/* Product Image Placeholder */}
                       <div>
-                        <div className="h-44 w-full overflow-hidden bg-slate-100 relative border-b border-gray-100">
+                        <div className="h-44 w-full overflow-hidden bg-white relative border-b border-gray-100 flex items-center justify-center p-3">
                           <img
                             src={prod.image}
                             alt={prod.name}
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                           />
                           <span className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded text-[10.5px] font-extrabold bg-navy/90 text-white tracking-wide shadow-xs">
                             {prod.grade}
@@ -1157,55 +1175,6 @@ function ManufacturingPage() {
               </button>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* ── OUR CURRENT CUSTOMERS ARE ── */}
-      <section className="py-14 sm:py-20 bg-white border-t border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block px-4 py-1.5 rounded-md text-xs font-extrabold uppercase tracking-widest bg-[#0b3a96] text-white mb-3 shadow-xs">
-              Our Current Customers Are
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
-              Trusted by Leading Organizations
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-gray-600 font-medium">
-              We proudly engineer and deliver regulatory-compliant pharmaceutical equipment, cleanroom furniture,
-              and manufacturing solutions to leading pharmaceutical, healthcare, and research institutions worldwide.
-            </p>
-          </div>
-
-          {/* Client Logo Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6">
-            {customers.map((client) => (
-              <div
-                key={client.name}
-                className="bg-surface/50 hover:bg-white rounded-xl border border-gray-200/80 p-5 flex flex-col items-center justify-center text-center shadow-2xs hover:shadow-md hover:border-[#0b3a96]/40 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 shadow-2xs flex items-center justify-center mb-3 group-hover:scale-105 transition-transform text-[#0b3a96]">
-                  <Building2 className="h-6 w-6 stroke-[1.5]" />
-                </div>
-                <h3 className="text-[14.5px] font-extrabold text-navy leading-tight group-hover:text-[#0b3a96] transition-colors">
-                  {client.name}
-                </h3>
-                <p className="text-[11px] text-gray-500 font-medium mt-1 leading-snug">
-                  {client.subtitle}
-                </p>
-                <span className="mt-2.5 text-[9.5px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-gray-100 text-gray-700">
-                  {client.badge}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Connecting More Customers Tagline */}
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3.5 rounded-full border border-gray-200 shadow-xs italic">
-              <Sparkles className="h-4 w-4 text-[#0b3a96]" />
-              <span>Connecting More Customers.....</span>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -18,12 +18,32 @@ import {
     Factory,
     Truck,
     Headphones,
+    Building2,
+    Sparkles,
 } from "lucide-react";
 import heroImage from "@/assets/hero-global.png";
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgCleanroomSolutions from "@/assets/mfg-cleanroom-solutions.jpg";
 import imgHealthcareProducts from "@/assets/mfg-healthcare-products.jpg";
 import imgComplianceSupport from "@/assets/mfg-compliance-support.png";
+
+// Client Logos
+import logoIpca from "@/assets/clients/ipca.png";
+import logoCipla from "@/assets/clients/cipla.png";
+import logoFelix from "@/assets/clients/felix.png";
+import logoPar from "@/assets/clients/par.png";
+import logoAstrazeneca from "@/assets/clients/astrazeneca.png";
+import logoAcg from "@/assets/clients/acg.png";
+import logoProcon from "@/assets/clients/procon.png";
+import logoDrReddys from "@/assets/clients/dr-reddys.png";
+import logoIsro from "@/assets/clients/isro.png";
+import logoNovartis from "@/assets/clients/novartis.png";
+import logoUnichem from "@/assets/clients/unichem.png";
+import logoEncube from "@/assets/clients/encube.png";
+import logoKnovea from "@/assets/clients/knovea.png";
+import logoSymbiotec from "@/assets/clients/symbiotec.png";
+import logoPfizer from "@/assets/clients/pfizer.png";
+import logoIimIndore from "@/assets/clients/iim-indore.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -205,6 +225,24 @@ const endToEndApproach = [
     },
 ];
 
+const clientPartners = [
+    { name: "Ipca", subtitle: "Ipca Laboratories Ltd.", badge: "Pharmaceuticals", logo: logoIpca },
+    { name: "Cipla", subtitle: "Cipla Global Healthcare", badge: "Pharmaceuticals", logo: logoCipla },
+    { name: "Felix", subtitle: "Felix Generics Pvt Ltd", badge: "Generics", logo: logoFelix },
+    { name: "PAR", subtitle: "PAR Pharmaceutical", badge: "Global Pharma", logo: logoPar },
+    { name: "AstraZeneca", subtitle: "AstraZeneca International", badge: "Biopharma", logo: logoAstrazeneca },
+    { name: "ACG", subtitle: "ACG Worldwide", badge: "Machinery & Capsules", logo: logoAcg },
+    { name: "PV PROCON VENTURES", subtitle: "Procon Ventures", badge: "Engineering", logo: logoProcon },
+    { name: "Dr.Reddy's", subtitle: "Dr. Reddy's Laboratories", badge: "Pharmaceuticals", logo: logoDrReddys },
+    { name: "इसरो isro", subtitle: "Indian Space Research Organisation", badge: "Aerospace & Tech", logo: logoIsro },
+    { name: "NOVARTIS", subtitle: "Novartis Healthcare", badge: "Global Healthcare", logo: logoNovartis },
+    { name: "UNICHEM LABORATORIES LTD.", subtitle: "Unichem Laboratories", badge: "Formulations", logo: logoUnichem },
+    { name: "Encube", subtitle: "Encube Ethicals", badge: "Topicals & Pharma", logo: logoEncube },
+    { name: "Knovea", subtitle: "Knovea Pharmaceuticals", badge: "Healthcare", logo: logoKnovea },
+    { name: "SYMBIOTEC PHARMALAB (P) LIMITED", subtitle: "Symbiotec Pharmalab", badge: "Steroid APIs", logo: logoSymbiotec },
+    { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
+    { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
+];
 
 function Index() {
     return (
@@ -396,7 +434,7 @@ function Index() {
                                     OUR INTEGRATED CAPABILITY
                                 </p>
                                 <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-navy tracking-tight leading-tight">
-                                    PRODUCT &amp; MANUFACTURING SOLUTIONS
+                                    OUR PRODUCTS (MANUFACTURING)
                                 </h2>
                                 <p className="mt-2 text-[14.5px] sm:text-[15.5px] text-gray-800 leading-relaxed font-medium">
                                     Integrated product, equipment and manufacturing solutions for pharmaceutical, healthcare and life-sciences organizations.
@@ -478,6 +516,60 @@ function Index() {
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </section>
+
+            {/* ── OUR CLIENTS & PARTNERS ── */}
+            <section className="py-12 sm:py-16 lg:py-20 bg-white border-t border-b border-gray-200">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-[#0b3a96]/10 text-[#0b3a96] border border-[#0b3a96]/20 mb-3 shadow-2xs">
+                            <Sparkles className="h-3.5 w-3.5 text-[#0b3a96]" />
+                            Our Clients &amp; Partners
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                            Trusted by Leading Organizations
+                        </h2>
+                        <p className="mt-3 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                            Powering global regulatory approvals, CDSCO &amp; US FDA licensing, quality systems (ISO 13485 / MDSAP),
+                            and precision manufacturing solutions for premier institutions worldwide.
+                        </p>
+                    </div>
+
+                    {/* Client Cards Grid */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6">
+                        {clientPartners.map((client) => (
+                            <div
+                                key={client.name}
+                                className="bg-surface/50 hover:bg-white rounded-2xl border border-gray-200/80 p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-2xs hover:shadow-lg hover:border-[#0b3a96]/40 hover:-translate-y-0.5 transition-all duration-300 group"
+                            >
+                                <div className="h-20 w-full rounded-xl bg-white border border-gray-100/90 shadow-2xs flex items-center justify-center p-3 mb-4 group-hover:shadow-xs group-hover:scale-[1.03] transition-all duration-300">
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className="max-h-14 max-w-[90%] object-contain"
+                                    />
+                                </div>
+                                <h3 className="text-[14.5px] sm:text-[15px] font-extrabold text-navy leading-tight group-hover:text-[#0b3a96] transition-colors">
+                                    {client.name}
+                                </h3>
+                                <p className="text-[11px] sm:text-[11.5px] text-gray-500 font-medium mt-1 leading-snug">
+                                    {client.subtitle}
+                                </p>
+                                <span className="mt-2.5 text-[9.5px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700">
+                                    {client.badge}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Connecting More Customers Tagline */}
+                    <div className="mt-10 sm:mt-12 text-center">
+                        <div className="inline-flex items-center gap-2 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3 rounded-full border border-gray-200 shadow-2xs italic">
+                            <Sparkles className="h-4 w-4 text-[#0b3a96]" />
+                            <span>Connecting More Customers.....</span>
+                        </div>
                     </div>
                 </div>
             </section>

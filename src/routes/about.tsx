@@ -15,7 +15,9 @@ import {
     Award,
     Lightbulb,
     X,
+    Factory,
 } from "lucide-react";
+import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgUsha from "@/assets/usha new.jpeg";
 import imgSaurav from "@/assets/saurav.png";
 import imgDaniel from "@/assets/daniel.png";
@@ -25,7 +27,8 @@ import imgHero from "@/assets/Global Healthcare Expertise in Action.png";
 import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.png";
 import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.png";
 import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.png";
-import imgIvd from "@/assets/Taking Liquid Out of Test Tubes.png";
+import imgIvd from "@/assets/industry-ivd.png";
+import imgPharma from "@/assets/industry-pharma.png";
 import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.png";
 import imgMedical from "@/assets/industry-medical.png";
 import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.png";
@@ -277,14 +280,14 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </section>            {/* 4. ONE PARTNER. FOUR INDUSTRIES. */}
+            </section>            {/* 4. ONE PARTNER. FIVE INDUSTRIES. */}
             <section className="py-10 lg:py-14 bg-white border-b border-border">
-                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
+                <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
-                        ONE PARTNER. FOUR INDUSTRIES.
+                        ONE PARTNER. FIVE INDUSTRIES.
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
 
                         {/* MEDICAL DEVICES */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
@@ -331,7 +334,7 @@ function About() {
                         {/* PHARMACEUTICALS */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgIvd} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
+                                <img src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -364,6 +367,27 @@ function About() {
                                         Product safety, regulatory compliance, quality and market requirements.
                                     </p>
                                     <Link to="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                        Explore <ArrowRight className="h-3 w-3" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* MANUFACTURING */}
+                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
+                            <div className="w-full h-40 border-b border-border overflow-hidden">
+                                <img src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover" />
+                            </div>
+                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
+                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
+                                    <Factory className="h-4 w-4 text-navy" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-navy text-sm mb-1">MANUFACTURING</h3>
+                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
+                                        cGMP machinery, cleanroom furniture, SS equipment and containment solutions.
+                                    </p>
+                                    <Link to="/services/manufacturing" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
                                     </Link>
                                 </div>
