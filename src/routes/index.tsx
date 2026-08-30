@@ -44,6 +44,8 @@ import logoKnovea from "@/assets/clients/knovea.png";
 import logoSymbiotec from "@/assets/clients/symbiotec.png";
 import logoPfizer from "@/assets/clients/pfizer.png";
 import logoIimIndore from "@/assets/clients/iim-indore.png";
+import logoRoche from "@/assets/clients/roche.png";
+import logoAbbott from "@/assets/clients/abbott.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -226,6 +228,8 @@ const endToEndApproach = [
 ];
 
 const clientPartners = [
+    { name: "Roche", subtitle: "F. Hoffmann-La Roche AG", badge: "Diagnostics & Pharma", logo: logoRoche },
+    { name: "Abbott", subtitle: "Abbott Laboratories", badge: "Medical Devices & IVDs", logo: logoAbbott },
     { name: "Ipca", subtitle: "Ipca Laboratories Ltd.", badge: "Pharmaceuticals", logo: logoIpca },
     { name: "Cipla", subtitle: "Cipla Global Healthcare", badge: "Pharmaceuticals", logo: logoCipla },
     { name: "Felix", subtitle: "Felix Generics Pvt Ltd", badge: "Generics", logo: logoFelix },
@@ -538,7 +542,7 @@ function Index() {
                     </div>
 
                     {/* Client Cards Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
                         {clientPartners.map((client) => (
                             <div
                                 key={client.name}
