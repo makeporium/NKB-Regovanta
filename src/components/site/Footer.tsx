@@ -15,6 +15,17 @@ type OtherService = {
 
 const otherServices: OtherService[] = [
   {
+    title: "Manufacturing Solutions",
+    to: "/services/manufacturing",
+    items: [
+      { label: "Pharmaceutical & cGMP Machinery", to: "/services/manufacturing" },
+      { label: "Cleanroom SS Furniture & Passboxes", to: "/services/manufacturing" },
+      { label: "Material Handling & Storage Trolleys", to: "/services/manufacturing" },
+      { label: "Liquid Processing & Fluid Transfer", to: "/services/manufacturing" },
+      { label: "Equipment Catalog & Ancillaries", to: "/services/manufacturing" },
+    ],
+  },
+  {
     title: "PC-PNDT Certificate",
     to: "/services/pc-pndt-certificate",
     items: [
@@ -96,6 +107,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
       { label: "Medical Device & IVD Regulatory Services", to: "/services/regulatory-affairs" },
       { label: "Pharmaceutical & Drug Regulatory Services", to: "/services/drug-licenses-for-importers" },
       { label: "Cosmetics Regulatory & Global Market Access", to: "/industries/cosmetics" },
+      { label: "Manufacturing & Equipment Solutions", to: "/services/manufacturing" },
       { label: "Global Quality & Compliance", to: "/services/iso-13485" },
       { label: "PC-PNDT Certificate", to: "/services/pc-pndt-certificate" },
       { label: "IEC & AD Code Registration", to: "/services/iec-ad-code" },
@@ -121,6 +133,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
       { label: "In Vitro Diagnostics", to: "/industries/ivd" },
       { label: "Pharmaceuticals", to: "/services/drug-licenses-for-importers" },
       { label: "Cosmetics", to: "/industries/cosmetics" },
+      { label: "Manufacturing", to: "/services/manufacturing" },
     ],
   },
 ];
@@ -904,7 +917,7 @@ export function Footer() {
           </div>
 
           {/* 4. OTHER SERVICES DIRECTORY GRID (SIDE-BY-SIDE CARDS) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-6 items-start">
             {otherServices.map((service, idx) => (
               <div
                 key={idx}
@@ -941,7 +954,7 @@ export function Footer() {
             <div className="lg:col-span-2">
               <Logo light />
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-foreground/70">
-                From First Idea to Global Market Access. Regulatory, quality & market access
+                From First Idea to Global Market Access. Regulatory, quality, manufacturing & market access
                 solutions for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.
               </p>
               <div className="mt-6 flex gap-3">

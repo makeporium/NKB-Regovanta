@@ -280,11 +280,12 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </section>            {/* 4. ONE PARTNER. FIVE INDUSTRIES. */}
+            </section>
+            {/* 4. ONE PARTNER. FOUR INDUSTRIES. */}
             <section className="py-10 lg:py-14 bg-white border-b border-border">
                 <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
-                        ONE PARTNER. FIVE INDUSTRIES.
+                        ONE PARTNER. FOUR INDUSTRIES.
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
