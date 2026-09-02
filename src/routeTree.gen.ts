@@ -154,6 +154,20 @@ import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/service
 import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
 import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
 import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesNewZealandIndexRouteImport } from './routes/services.new-zealand.index'
+import { Route as ServicesNewZealandChangeManagementRouteImport } from './routes/services.new-zealand.change-management'
+import { Route as ServicesNewZealandClassificationRouteImport } from './routes/services.new-zealand.classification'
+import { Route as ServicesNewZealandIvdRouteImport } from './routes/services.new-zealand.ivd'
+import { Route as ServicesNewZealandLabelingRouteImport } from './routes/services.new-zealand.labeling'
+import { Route as ServicesNewZealandMedsafeQueriesRouteImport } from './routes/services.new-zealand.medsafe-queries'
+import { Route as ServicesNewZealandPostMarketRouteImport } from './routes/services.new-zealand.post-market'
+import { Route as ServicesNewZealandQmsComplianceRouteImport } from './routes/services.new-zealand.qms-compliance'
+import { Route as ServicesNewZealandSoftwareRouteImport } from './routes/services.new-zealand.software'
+import { Route as ServicesNewZealandSponsorRouteImport } from './routes/services.new-zealand.sponsor'
+import { Route as ServicesNewZealandSupplyChainRouteImport } from './routes/services.new-zealand.supply-chain'
+import { Route as ServicesNewZealandTechnicalDocumentationRouteImport } from './routes/services.new-zealand.technical-documentation'
+import { Route as ServicesNewZealandTestingStrategyRouteImport } from './routes/services.new-zealand.testing-strategy'
+import { Route as ServicesNewZealandWandNotificationRouteImport } from './routes/services.new-zealand.wand-notification'
 import { Route as ServicesSaudiArabiaIndexRouteImport } from './routes/services.saudi-arabia.index'
 import { Route as ServicesSaudiArabiaAuthorizedRepresentativeRouteImport } from './routes/services.saudi-arabia.authorized-representative'
 import { Route as ServicesSaudiArabiaChangeManagementRouteImport } from './routes/services.saudi-arabia.change-management'
@@ -1010,6 +1024,88 @@ const ServicesIndiaPredicateDevicesRoute =
     path: '/predicate-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesNewZealandIndexRoute = ServicesNewZealandIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesNewZealandRoute,
+} as any)
+const ServicesNewZealandChangeManagementRoute =
+  ServicesNewZealandChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandClassificationRoute =
+  ServicesNewZealandClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandIvdRoute = ServicesNewZealandIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesNewZealandRoute,
+} as any)
+const ServicesNewZealandLabelingRoute =
+  ServicesNewZealandLabelingRouteImport.update({
+    id: '/labeling',
+    path: '/labeling',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandMedsafeQueriesRoute =
+  ServicesNewZealandMedsafeQueriesRouteImport.update({
+    id: '/medsafe-queries',
+    path: '/medsafe-queries',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandPostMarketRoute =
+  ServicesNewZealandPostMarketRouteImport.update({
+    id: '/post-market',
+    path: '/post-market',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandQmsComplianceRoute =
+  ServicesNewZealandQmsComplianceRouteImport.update({
+    id: '/qms-compliance',
+    path: '/qms-compliance',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandSoftwareRoute =
+  ServicesNewZealandSoftwareRouteImport.update({
+    id: '/software',
+    path: '/software',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandSponsorRoute =
+  ServicesNewZealandSponsorRouteImport.update({
+    id: '/sponsor',
+    path: '/sponsor',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandSupplyChainRoute =
+  ServicesNewZealandSupplyChainRouteImport.update({
+    id: '/supply-chain',
+    path: '/supply-chain',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandTechnicalDocumentationRoute =
+  ServicesNewZealandTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandTestingStrategyRoute =
+  ServicesNewZealandTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
+const ServicesNewZealandWandNotificationRoute =
+  ServicesNewZealandWandNotificationRouteImport.update({
+    id: '/wand-notification',
+    path: '/wand-notification',
+    getParentRoute: () => ServicesNewZealandRoute,
+  } as any)
 const ServicesSaudiArabiaIndexRoute =
   ServicesSaudiArabiaIndexRouteImport.update({
     id: '/',
@@ -1402,7 +1498,7 @@ export interface FileRoutesByFullPath {
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
-  '/services/new-zealand': typeof ServicesNewZealandRoute
+  '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
@@ -1514,6 +1610,19 @@ export interface FileRoutesByFullPath {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
+  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
+  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
+  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
+  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
+  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
+  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
+  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
+  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
+  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
   '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
   '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
@@ -1575,6 +1684,7 @@ export interface FileRoutesByFullPath {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/new-zealand/': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
@@ -1608,7 +1718,6 @@ export interface FileRoutesByTo {
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
-  '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
@@ -1716,6 +1825,19 @@ export interface FileRoutesByTo {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
+  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
+  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
+  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
+  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
+  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
+  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
+  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
+  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
+  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
   '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
   '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
@@ -1777,6 +1899,7 @@ export interface FileRoutesByTo {
   '/services/canada': typeof ServicesCanadaIndexRoute
   '/services/eu': typeof ServicesEuIndexRoute
   '/services/india': typeof ServicesIndiaIndexRoute
+  '/services/new-zealand': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae': typeof ServicesUaeIndexRoute
   '/services/uk': typeof ServicesUkIndexRoute
@@ -1817,7 +1940,7 @@ export interface FileRoutesById {
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
   '/services/mdsap': typeof ServicesMdsapRoute
-  '/services/new-zealand': typeof ServicesNewZealandRoute
+  '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
@@ -1929,6 +2052,19 @@ export interface FileRoutesById {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
+  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
+  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
+  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
+  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
+  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
+  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
+  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
+  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
+  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
   '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
   '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
@@ -1990,6 +2126,7 @@ export interface FileRoutesById {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/new-zealand/': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
@@ -2143,6 +2280,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/new-zealand/change-management'
+    | '/services/new-zealand/classification'
+    | '/services/new-zealand/ivd'
+    | '/services/new-zealand/labeling'
+    | '/services/new-zealand/medsafe-queries'
+    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/qms-compliance'
+    | '/services/new-zealand/software'
+    | '/services/new-zealand/sponsor'
+    | '/services/new-zealand/supply-chain'
+    | '/services/new-zealand/technical-documentation'
+    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
     | '/services/saudi-arabia/change-management'
     | '/services/saudi-arabia/classification'
@@ -2204,6 +2354,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/new-zealand/'
     | '/services/saudi-arabia/'
     | '/services/uae/'
     | '/services/uk/'
@@ -2237,7 +2388,6 @@ export interface FileRouteTypes {
     | '/services/manufacturing'
     | '/services/market-access'
     | '/services/mdsap'
-    | '/services/new-zealand'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/technical-documentation'
@@ -2345,6 +2495,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/new-zealand/change-management'
+    | '/services/new-zealand/classification'
+    | '/services/new-zealand/ivd'
+    | '/services/new-zealand/labeling'
+    | '/services/new-zealand/medsafe-queries'
+    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/qms-compliance'
+    | '/services/new-zealand/software'
+    | '/services/new-zealand/sponsor'
+    | '/services/new-zealand/supply-chain'
+    | '/services/new-zealand/technical-documentation'
+    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
     | '/services/saudi-arabia/change-management'
     | '/services/saudi-arabia/classification'
@@ -2406,6 +2569,7 @@ export interface FileRouteTypes {
     | '/services/canada'
     | '/services/eu'
     | '/services/india'
+    | '/services/new-zealand'
     | '/services/saudi-arabia'
     | '/services/uae'
     | '/services/uk'
@@ -2557,6 +2721,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/new-zealand/change-management'
+    | '/services/new-zealand/classification'
+    | '/services/new-zealand/ivd'
+    | '/services/new-zealand/labeling'
+    | '/services/new-zealand/medsafe-queries'
+    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/qms-compliance'
+    | '/services/new-zealand/software'
+    | '/services/new-zealand/sponsor'
+    | '/services/new-zealand/supply-chain'
+    | '/services/new-zealand/technical-documentation'
+    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
     | '/services/saudi-arabia/change-management'
     | '/services/saudi-arabia/classification'
@@ -2618,6 +2795,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/new-zealand/'
     | '/services/saudi-arabia/'
     | '/services/uae/'
     | '/services/uk/'
@@ -2652,7 +2830,7 @@ export interface RootRouteChildren {
   ServicesManufacturingRoute: typeof ServicesManufacturingRoute
   ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
   ServicesMdsapRoute: typeof ServicesMdsapRoute
-  ServicesNewZealandRoute: typeof ServicesNewZealandRoute
+  ServicesNewZealandRoute: typeof ServicesNewZealandRouteWithChildren
   ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRouteWithChildren
@@ -3695,6 +3873,104 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/new-zealand/': {
+      id: '/services/new-zealand/'
+      path: '/'
+      fullPath: '/services/new-zealand/'
+      preLoaderRoute: typeof ServicesNewZealandIndexRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/change-management': {
+      id: '/services/new-zealand/change-management'
+      path: '/change-management'
+      fullPath: '/services/new-zealand/change-management'
+      preLoaderRoute: typeof ServicesNewZealandChangeManagementRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/classification': {
+      id: '/services/new-zealand/classification'
+      path: '/classification'
+      fullPath: '/services/new-zealand/classification'
+      preLoaderRoute: typeof ServicesNewZealandClassificationRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/ivd': {
+      id: '/services/new-zealand/ivd'
+      path: '/ivd'
+      fullPath: '/services/new-zealand/ivd'
+      preLoaderRoute: typeof ServicesNewZealandIvdRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/labeling': {
+      id: '/services/new-zealand/labeling'
+      path: '/labeling'
+      fullPath: '/services/new-zealand/labeling'
+      preLoaderRoute: typeof ServicesNewZealandLabelingRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/medsafe-queries': {
+      id: '/services/new-zealand/medsafe-queries'
+      path: '/medsafe-queries'
+      fullPath: '/services/new-zealand/medsafe-queries'
+      preLoaderRoute: typeof ServicesNewZealandMedsafeQueriesRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/post-market': {
+      id: '/services/new-zealand/post-market'
+      path: '/post-market'
+      fullPath: '/services/new-zealand/post-market'
+      preLoaderRoute: typeof ServicesNewZealandPostMarketRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/qms-compliance': {
+      id: '/services/new-zealand/qms-compliance'
+      path: '/qms-compliance'
+      fullPath: '/services/new-zealand/qms-compliance'
+      preLoaderRoute: typeof ServicesNewZealandQmsComplianceRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/software': {
+      id: '/services/new-zealand/software'
+      path: '/software'
+      fullPath: '/services/new-zealand/software'
+      preLoaderRoute: typeof ServicesNewZealandSoftwareRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/sponsor': {
+      id: '/services/new-zealand/sponsor'
+      path: '/sponsor'
+      fullPath: '/services/new-zealand/sponsor'
+      preLoaderRoute: typeof ServicesNewZealandSponsorRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/supply-chain': {
+      id: '/services/new-zealand/supply-chain'
+      path: '/supply-chain'
+      fullPath: '/services/new-zealand/supply-chain'
+      preLoaderRoute: typeof ServicesNewZealandSupplyChainRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/technical-documentation': {
+      id: '/services/new-zealand/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/new-zealand/technical-documentation'
+      preLoaderRoute: typeof ServicesNewZealandTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/testing-strategy': {
+      id: '/services/new-zealand/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/new-zealand/testing-strategy'
+      preLoaderRoute: typeof ServicesNewZealandTestingStrategyRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/wand-notification': {
+      id: '/services/new-zealand/wand-notification'
+      path: '/wand-notification'
+      fullPath: '/services/new-zealand/wand-notification'
+      preLoaderRoute: typeof ServicesNewZealandWandNotificationRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
     '/services/saudi-arabia/': {
       id: '/services/saudi-arabia/'
       path: '/'
@@ -4433,6 +4709,47 @@ const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
   ServicesIndiaRouteChildren,
 )
 
+interface ServicesNewZealandRouteChildren {
+  ServicesNewZealandChangeManagementRoute: typeof ServicesNewZealandChangeManagementRoute
+  ServicesNewZealandClassificationRoute: typeof ServicesNewZealandClassificationRoute
+  ServicesNewZealandIvdRoute: typeof ServicesNewZealandIvdRoute
+  ServicesNewZealandLabelingRoute: typeof ServicesNewZealandLabelingRoute
+  ServicesNewZealandMedsafeQueriesRoute: typeof ServicesNewZealandMedsafeQueriesRoute
+  ServicesNewZealandPostMarketRoute: typeof ServicesNewZealandPostMarketRoute
+  ServicesNewZealandQmsComplianceRoute: typeof ServicesNewZealandQmsComplianceRoute
+  ServicesNewZealandSoftwareRoute: typeof ServicesNewZealandSoftwareRoute
+  ServicesNewZealandSponsorRoute: typeof ServicesNewZealandSponsorRoute
+  ServicesNewZealandSupplyChainRoute: typeof ServicesNewZealandSupplyChainRoute
+  ServicesNewZealandTechnicalDocumentationRoute: typeof ServicesNewZealandTechnicalDocumentationRoute
+  ServicesNewZealandTestingStrategyRoute: typeof ServicesNewZealandTestingStrategyRoute
+  ServicesNewZealandWandNotificationRoute: typeof ServicesNewZealandWandNotificationRoute
+  ServicesNewZealandIndexRoute: typeof ServicesNewZealandIndexRoute
+}
+
+const ServicesNewZealandRouteChildren: ServicesNewZealandRouteChildren = {
+  ServicesNewZealandChangeManagementRoute:
+    ServicesNewZealandChangeManagementRoute,
+  ServicesNewZealandClassificationRoute: ServicesNewZealandClassificationRoute,
+  ServicesNewZealandIvdRoute: ServicesNewZealandIvdRoute,
+  ServicesNewZealandLabelingRoute: ServicesNewZealandLabelingRoute,
+  ServicesNewZealandMedsafeQueriesRoute: ServicesNewZealandMedsafeQueriesRoute,
+  ServicesNewZealandPostMarketRoute: ServicesNewZealandPostMarketRoute,
+  ServicesNewZealandQmsComplianceRoute: ServicesNewZealandQmsComplianceRoute,
+  ServicesNewZealandSoftwareRoute: ServicesNewZealandSoftwareRoute,
+  ServicesNewZealandSponsorRoute: ServicesNewZealandSponsorRoute,
+  ServicesNewZealandSupplyChainRoute: ServicesNewZealandSupplyChainRoute,
+  ServicesNewZealandTechnicalDocumentationRoute:
+    ServicesNewZealandTechnicalDocumentationRoute,
+  ServicesNewZealandTestingStrategyRoute:
+    ServicesNewZealandTestingStrategyRoute,
+  ServicesNewZealandWandNotificationRoute:
+    ServicesNewZealandWandNotificationRoute,
+  ServicesNewZealandIndexRoute: ServicesNewZealandIndexRoute,
+}
+
+const ServicesNewZealandRouteWithChildren =
+  ServicesNewZealandRoute._addFileChildren(ServicesNewZealandRouteChildren)
+
 interface ServicesSaudiArabiaRouteChildren {
   ServicesSaudiArabiaAuthorizedRepresentativeRoute: typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
   ServicesSaudiArabiaChangeManagementRoute: typeof ServicesSaudiArabiaChangeManagementRoute
@@ -4624,7 +4941,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesManufacturingRoute: ServicesManufacturingRoute,
   ServicesMarketAccessRoute: ServicesMarketAccessRoute,
   ServicesMdsapRoute: ServicesMdsapRoute,
-  ServicesNewZealandRoute: ServicesNewZealandRoute,
+  ServicesNewZealandRoute: ServicesNewZealandRouteWithChildren,
   ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesSaudiArabiaRoute: ServicesSaudiArabiaRouteWithChildren,
