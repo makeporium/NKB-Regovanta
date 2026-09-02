@@ -168,6 +168,21 @@ import { Route as ServicesSaudiArabiaSfdaQueriesRouteImport } from './routes/ser
 import { Route as ServicesSaudiArabiaSoftwareRouteImport } from './routes/services.saudi-arabia.software'
 import { Route as ServicesSaudiArabiaTechnicalDocumentationRouteImport } from './routes/services.saudi-arabia.technical-documentation'
 import { Route as ServicesSaudiArabiaTestingStrategyRouteImport } from './routes/services.saudi-arabia.testing-strategy'
+import { Route as ServicesUaeIndexRouteImport } from './routes/services.uae.index'
+import { Route as ServicesUaeChangeManagementRouteImport } from './routes/services.uae.change-management'
+import { Route as ServicesUaeClassificationRouteImport } from './routes/services.uae.classification'
+import { Route as ServicesUaeEcasRouteImport } from './routes/services.uae.ecas'
+import { Route as ServicesUaeIvdRouteImport } from './routes/services.uae.ivd'
+import { Route as ServicesUaeLabelingRouteImport } from './routes/services.uae.labeling'
+import { Route as ServicesUaeLocalApplicantRouteImport } from './routes/services.uae.local-applicant'
+import { Route as ServicesUaeMohapQueriesRouteImport } from './routes/services.uae.mohap-queries'
+import { Route as ServicesUaeMohapRegistrationRouteImport } from './routes/services.uae.mohap-registration'
+import { Route as ServicesUaePostMarketRouteImport } from './routes/services.uae.post-market'
+import { Route as ServicesUaeQmsInspectionRouteImport } from './routes/services.uae.qms-inspection'
+import { Route as ServicesUaeSoftwareRouteImport } from './routes/services.uae.software'
+import { Route as ServicesUaeSupplyChainRouteImport } from './routes/services.uae.supply-chain'
+import { Route as ServicesUaeTechnicalDocumentationRouteImport } from './routes/services.uae.technical-documentation'
+import { Route as ServicesUaeTestingStrategyRouteImport } from './routes/services.uae.testing-strategy'
 import { Route as ServicesUkIndexRouteImport } from './routes/services.uk.index'
 import { Route as ServicesUkAuditReadinessRouteImport } from './routes/services.uk.audit-readiness'
 import { Route as ServicesUkConformityAssuranceRouteImport } from './routes/services.uk.conformity-assurance'
@@ -1077,6 +1092,88 @@ const ServicesSaudiArabiaTestingStrategyRoute =
     path: '/testing-strategy',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
+const ServicesUaeIndexRoute = ServicesUaeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeChangeManagementRoute =
+  ServicesUaeChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaeClassificationRoute =
+  ServicesUaeClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaeEcasRoute = ServicesUaeEcasRouteImport.update({
+  id: '/ecas',
+  path: '/ecas',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeIvdRoute = ServicesUaeIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeLabelingRoute = ServicesUaeLabelingRouteImport.update({
+  id: '/labeling',
+  path: '/labeling',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeLocalApplicantRoute =
+  ServicesUaeLocalApplicantRouteImport.update({
+    id: '/local-applicant',
+    path: '/local-applicant',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaeMohapQueriesRoute = ServicesUaeMohapQueriesRouteImport.update({
+  id: '/mohap-queries',
+  path: '/mohap-queries',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeMohapRegistrationRoute =
+  ServicesUaeMohapRegistrationRouteImport.update({
+    id: '/mohap-registration',
+    path: '/mohap-registration',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaePostMarketRoute = ServicesUaePostMarketRouteImport.update({
+  id: '/post-market',
+  path: '/post-market',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeQmsInspectionRoute =
+  ServicesUaeQmsInspectionRouteImport.update({
+    id: '/qms-inspection',
+    path: '/qms-inspection',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaeSoftwareRoute = ServicesUaeSoftwareRouteImport.update({
+  id: '/software',
+  path: '/software',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeSupplyChainRoute = ServicesUaeSupplyChainRouteImport.update({
+  id: '/supply-chain',
+  path: '/supply-chain',
+  getParentRoute: () => ServicesUaeRoute,
+} as any)
+const ServicesUaeTechnicalDocumentationRoute =
+  ServicesUaeTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
+const ServicesUaeTestingStrategyRoute =
+  ServicesUaeTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesUaeRoute,
+  } as any)
 const ServicesUkIndexRoute = ServicesUkIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -1310,7 +1407,7 @@ export interface FileRoutesByFullPath {
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
-  '/services/uae': typeof ServicesUaeRoute
+  '/services/uae': typeof ServicesUaeRouteWithChildren
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
@@ -1430,6 +1527,20 @@ export interface FileRoutesByFullPath {
   '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
   '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
   '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
+  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
+  '/services/uae/classification': typeof ServicesUaeClassificationRoute
+  '/services/uae/ecas': typeof ServicesUaeEcasRoute
+  '/services/uae/ivd': typeof ServicesUaeIvdRoute
+  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
+  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
+  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
+  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
+  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
+  '/services/uae/software': typeof ServicesUaeSoftwareRoute
+  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
+  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
+  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1465,6 +1576,7 @@ export interface FileRoutesByFullPath {
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
+  '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -1500,7 +1612,6 @@ export interface FileRoutesByTo {
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
-  '/services/uae': typeof ServicesUaeRoute
   '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
@@ -1618,6 +1729,20 @@ export interface FileRoutesByTo {
   '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
   '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
   '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
+  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
+  '/services/uae/classification': typeof ServicesUaeClassificationRoute
+  '/services/uae/ecas': typeof ServicesUaeEcasRoute
+  '/services/uae/ivd': typeof ServicesUaeIvdRoute
+  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
+  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
+  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
+  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
+  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
+  '/services/uae/software': typeof ServicesUaeSoftwareRoute
+  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
+  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
+  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1653,6 +1778,7 @@ export interface FileRoutesByTo {
   '/services/eu': typeof ServicesEuIndexRoute
   '/services/india': typeof ServicesIndiaIndexRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaIndexRoute
+  '/services/uae': typeof ServicesUaeIndexRoute
   '/services/uk': typeof ServicesUkIndexRoute
   '/services/usa': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -1696,7 +1822,7 @@ export interface FileRoutesById {
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
-  '/services/uae': typeof ServicesUaeRoute
+  '/services/uae': typeof ServicesUaeRouteWithChildren
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
@@ -1816,6 +1942,20 @@ export interface FileRoutesById {
   '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
   '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
   '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
+  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
+  '/services/uae/classification': typeof ServicesUaeClassificationRoute
+  '/services/uae/ecas': typeof ServicesUaeEcasRoute
+  '/services/uae/ivd': typeof ServicesUaeIvdRoute
+  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
+  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
+  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
+  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
+  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
+  '/services/uae/software': typeof ServicesUaeSoftwareRoute
+  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
+  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
+  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1851,6 +1991,7 @@ export interface FileRoutesById {
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
+  '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics_/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -2015,6 +2156,20 @@ export interface FileRouteTypes {
     | '/services/saudi-arabia/software'
     | '/services/saudi-arabia/technical-documentation'
     | '/services/saudi-arabia/testing-strategy'
+    | '/services/uae/change-management'
+    | '/services/uae/classification'
+    | '/services/uae/ecas'
+    | '/services/uae/ivd'
+    | '/services/uae/labeling'
+    | '/services/uae/local-applicant'
+    | '/services/uae/mohap-queries'
+    | '/services/uae/mohap-registration'
+    | '/services/uae/post-market'
+    | '/services/uae/qms-inspection'
+    | '/services/uae/software'
+    | '/services/uae/supply-chain'
+    | '/services/uae/technical-documentation'
+    | '/services/uae/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -2050,6 +2205,7 @@ export interface FileRouteTypes {
     | '/services/eu/'
     | '/services/india/'
     | '/services/saudi-arabia/'
+    | '/services/uae/'
     | '/services/uk/'
     | '/services/usa/'
     | '/industries/cosmetics/india/for-importer'
@@ -2085,7 +2241,6 @@ export interface FileRouteTypes {
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/technical-documentation'
-    | '/services/uae'
     | '/services/wpc-wireless-medical-devices'
     | '/case-studies'
     | '/industries'
@@ -2203,6 +2358,20 @@ export interface FileRouteTypes {
     | '/services/saudi-arabia/software'
     | '/services/saudi-arabia/technical-documentation'
     | '/services/saudi-arabia/testing-strategy'
+    | '/services/uae/change-management'
+    | '/services/uae/classification'
+    | '/services/uae/ecas'
+    | '/services/uae/ivd'
+    | '/services/uae/labeling'
+    | '/services/uae/local-applicant'
+    | '/services/uae/mohap-queries'
+    | '/services/uae/mohap-registration'
+    | '/services/uae/post-market'
+    | '/services/uae/qms-inspection'
+    | '/services/uae/software'
+    | '/services/uae/supply-chain'
+    | '/services/uae/technical-documentation'
+    | '/services/uae/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -2238,6 +2407,7 @@ export interface FileRouteTypes {
     | '/services/eu'
     | '/services/india'
     | '/services/saudi-arabia'
+    | '/services/uae'
     | '/services/uk'
     | '/services/usa'
     | '/industries/cosmetics/india/for-importer'
@@ -2400,6 +2570,20 @@ export interface FileRouteTypes {
     | '/services/saudi-arabia/software'
     | '/services/saudi-arabia/technical-documentation'
     | '/services/saudi-arabia/testing-strategy'
+    | '/services/uae/change-management'
+    | '/services/uae/classification'
+    | '/services/uae/ecas'
+    | '/services/uae/ivd'
+    | '/services/uae/labeling'
+    | '/services/uae/local-applicant'
+    | '/services/uae/mohap-queries'
+    | '/services/uae/mohap-registration'
+    | '/services/uae/post-market'
+    | '/services/uae/qms-inspection'
+    | '/services/uae/software'
+    | '/services/uae/supply-chain'
+    | '/services/uae/technical-documentation'
+    | '/services/uae/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -2435,6 +2619,7 @@ export interface FileRouteTypes {
     | '/services/eu/'
     | '/services/india/'
     | '/services/saudi-arabia/'
+    | '/services/uae/'
     | '/services/uk/'
     | '/services/usa/'
     | '/industries/cosmetics_/india/for-importer'
@@ -2472,7 +2657,7 @@ export interface RootRouteChildren {
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
   ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRouteWithChildren
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
-  ServicesUaeRoute: typeof ServicesUaeRoute
+  ServicesUaeRoute: typeof ServicesUaeRouteWithChildren
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
   ServicesWpcWirelessMedicalDevicesRoute: typeof ServicesWpcWirelessMedicalDevicesRoute
@@ -3608,6 +3793,111 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSaudiArabiaTestingStrategyRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
+    '/services/uae/': {
+      id: '/services/uae/'
+      path: '/'
+      fullPath: '/services/uae/'
+      preLoaderRoute: typeof ServicesUaeIndexRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/change-management': {
+      id: '/services/uae/change-management'
+      path: '/change-management'
+      fullPath: '/services/uae/change-management'
+      preLoaderRoute: typeof ServicesUaeChangeManagementRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/classification': {
+      id: '/services/uae/classification'
+      path: '/classification'
+      fullPath: '/services/uae/classification'
+      preLoaderRoute: typeof ServicesUaeClassificationRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/ecas': {
+      id: '/services/uae/ecas'
+      path: '/ecas'
+      fullPath: '/services/uae/ecas'
+      preLoaderRoute: typeof ServicesUaeEcasRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/ivd': {
+      id: '/services/uae/ivd'
+      path: '/ivd'
+      fullPath: '/services/uae/ivd'
+      preLoaderRoute: typeof ServicesUaeIvdRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/labeling': {
+      id: '/services/uae/labeling'
+      path: '/labeling'
+      fullPath: '/services/uae/labeling'
+      preLoaderRoute: typeof ServicesUaeLabelingRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/local-applicant': {
+      id: '/services/uae/local-applicant'
+      path: '/local-applicant'
+      fullPath: '/services/uae/local-applicant'
+      preLoaderRoute: typeof ServicesUaeLocalApplicantRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/mohap-queries': {
+      id: '/services/uae/mohap-queries'
+      path: '/mohap-queries'
+      fullPath: '/services/uae/mohap-queries'
+      preLoaderRoute: typeof ServicesUaeMohapQueriesRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/mohap-registration': {
+      id: '/services/uae/mohap-registration'
+      path: '/mohap-registration'
+      fullPath: '/services/uae/mohap-registration'
+      preLoaderRoute: typeof ServicesUaeMohapRegistrationRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/post-market': {
+      id: '/services/uae/post-market'
+      path: '/post-market'
+      fullPath: '/services/uae/post-market'
+      preLoaderRoute: typeof ServicesUaePostMarketRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/qms-inspection': {
+      id: '/services/uae/qms-inspection'
+      path: '/qms-inspection'
+      fullPath: '/services/uae/qms-inspection'
+      preLoaderRoute: typeof ServicesUaeQmsInspectionRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/software': {
+      id: '/services/uae/software'
+      path: '/software'
+      fullPath: '/services/uae/software'
+      preLoaderRoute: typeof ServicesUaeSoftwareRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/supply-chain': {
+      id: '/services/uae/supply-chain'
+      path: '/supply-chain'
+      fullPath: '/services/uae/supply-chain'
+      preLoaderRoute: typeof ServicesUaeSupplyChainRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/technical-documentation': {
+      id: '/services/uae/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/uae/technical-documentation'
+      preLoaderRoute: typeof ServicesUaeTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/testing-strategy': {
+      id: '/services/uae/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/uae/testing-strategy'
+      preLoaderRoute: typeof ServicesUaeTestingStrategyRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
     '/services/uk/': {
       id: '/services/uk/'
       path: '/'
@@ -4186,6 +4476,47 @@ const ServicesSaudiArabiaRouteChildren: ServicesSaudiArabiaRouteChildren = {
 const ServicesSaudiArabiaRouteWithChildren =
   ServicesSaudiArabiaRoute._addFileChildren(ServicesSaudiArabiaRouteChildren)
 
+interface ServicesUaeRouteChildren {
+  ServicesUaeChangeManagementRoute: typeof ServicesUaeChangeManagementRoute
+  ServicesUaeClassificationRoute: typeof ServicesUaeClassificationRoute
+  ServicesUaeEcasRoute: typeof ServicesUaeEcasRoute
+  ServicesUaeIvdRoute: typeof ServicesUaeIvdRoute
+  ServicesUaeLabelingRoute: typeof ServicesUaeLabelingRoute
+  ServicesUaeLocalApplicantRoute: typeof ServicesUaeLocalApplicantRoute
+  ServicesUaeMohapQueriesRoute: typeof ServicesUaeMohapQueriesRoute
+  ServicesUaeMohapRegistrationRoute: typeof ServicesUaeMohapRegistrationRoute
+  ServicesUaePostMarketRoute: typeof ServicesUaePostMarketRoute
+  ServicesUaeQmsInspectionRoute: typeof ServicesUaeQmsInspectionRoute
+  ServicesUaeSoftwareRoute: typeof ServicesUaeSoftwareRoute
+  ServicesUaeSupplyChainRoute: typeof ServicesUaeSupplyChainRoute
+  ServicesUaeTechnicalDocumentationRoute: typeof ServicesUaeTechnicalDocumentationRoute
+  ServicesUaeTestingStrategyRoute: typeof ServicesUaeTestingStrategyRoute
+  ServicesUaeIndexRoute: typeof ServicesUaeIndexRoute
+}
+
+const ServicesUaeRouteChildren: ServicesUaeRouteChildren = {
+  ServicesUaeChangeManagementRoute: ServicesUaeChangeManagementRoute,
+  ServicesUaeClassificationRoute: ServicesUaeClassificationRoute,
+  ServicesUaeEcasRoute: ServicesUaeEcasRoute,
+  ServicesUaeIvdRoute: ServicesUaeIvdRoute,
+  ServicesUaeLabelingRoute: ServicesUaeLabelingRoute,
+  ServicesUaeLocalApplicantRoute: ServicesUaeLocalApplicantRoute,
+  ServicesUaeMohapQueriesRoute: ServicesUaeMohapQueriesRoute,
+  ServicesUaeMohapRegistrationRoute: ServicesUaeMohapRegistrationRoute,
+  ServicesUaePostMarketRoute: ServicesUaePostMarketRoute,
+  ServicesUaeQmsInspectionRoute: ServicesUaeQmsInspectionRoute,
+  ServicesUaeSoftwareRoute: ServicesUaeSoftwareRoute,
+  ServicesUaeSupplyChainRoute: ServicesUaeSupplyChainRoute,
+  ServicesUaeTechnicalDocumentationRoute:
+    ServicesUaeTechnicalDocumentationRoute,
+  ServicesUaeTestingStrategyRoute: ServicesUaeTestingStrategyRoute,
+  ServicesUaeIndexRoute: ServicesUaeIndexRoute,
+}
+
+const ServicesUaeRouteWithChildren = ServicesUaeRoute._addFileChildren(
+  ServicesUaeRouteChildren,
+)
+
 interface ServicesUkRouteChildren {
   ServicesUkAuditReadinessRoute: typeof ServicesUkAuditReadinessRoute
   ServicesUkConformityAssuranceRoute: typeof ServicesUkConformityAssuranceRoute
@@ -4298,7 +4629,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
   ServicesSaudiArabiaRoute: ServicesSaudiArabiaRouteWithChildren,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
-  ServicesUaeRoute: ServicesUaeRoute,
+  ServicesUaeRoute: ServicesUaeRouteWithChildren,
   ServicesUkRoute: ServicesUkRouteWithChildren,
   ServicesUsaRoute: ServicesUsaRouteWithChildren,
   ServicesWpcWirelessMedicalDevicesRoute:
