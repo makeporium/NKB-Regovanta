@@ -154,6 +154,20 @@ import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/service
 import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
 import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
 import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesSaudiArabiaIndexRouteImport } from './routes/services.saudi-arabia.index'
+import { Route as ServicesSaudiArabiaAuthorizedRepresentativeRouteImport } from './routes/services.saudi-arabia.authorized-representative'
+import { Route as ServicesSaudiArabiaChangeManagementRouteImport } from './routes/services.saudi-arabia.change-management'
+import { Route as ServicesSaudiArabiaClassificationRouteImport } from './routes/services.saudi-arabia.classification'
+import { Route as ServicesSaudiArabiaEstablishmentLicensingRouteImport } from './routes/services.saudi-arabia.establishment-licensing'
+import { Route as ServicesSaudiArabiaInspectionRouteImport } from './routes/services.saudi-arabia.inspection'
+import { Route as ServicesSaudiArabiaIvdRouteImport } from './routes/services.saudi-arabia.ivd'
+import { Route as ServicesSaudiArabiaLabelingRouteImport } from './routes/services.saudi-arabia.labeling'
+import { Route as ServicesSaudiArabiaMdmaRouteImport } from './routes/services.saudi-arabia.mdma'
+import { Route as ServicesSaudiArabiaPostMarketRouteImport } from './routes/services.saudi-arabia.post-market'
+import { Route as ServicesSaudiArabiaSfdaQueriesRouteImport } from './routes/services.saudi-arabia.sfda-queries'
+import { Route as ServicesSaudiArabiaSoftwareRouteImport } from './routes/services.saudi-arabia.software'
+import { Route as ServicesSaudiArabiaTechnicalDocumentationRouteImport } from './routes/services.saudi-arabia.technical-documentation'
+import { Route as ServicesSaudiArabiaTestingStrategyRouteImport } from './routes/services.saudi-arabia.testing-strategy'
 import { Route as ServicesUkIndexRouteImport } from './routes/services.uk.index'
 import { Route as ServicesUkAuditReadinessRouteImport } from './routes/services.uk.audit-readiness'
 import { Route as ServicesUkConformityAssuranceRouteImport } from './routes/services.uk.conformity-assurance'
@@ -981,6 +995,88 @@ const ServicesIndiaPredicateDevicesRoute =
     path: '/predicate-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesSaudiArabiaIndexRoute =
+  ServicesSaudiArabiaIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaAuthorizedRepresentativeRoute =
+  ServicesSaudiArabiaAuthorizedRepresentativeRouteImport.update({
+    id: '/authorized-representative',
+    path: '/authorized-representative',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaChangeManagementRoute =
+  ServicesSaudiArabiaChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaClassificationRoute =
+  ServicesSaudiArabiaClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaEstablishmentLicensingRoute =
+  ServicesSaudiArabiaEstablishmentLicensingRouteImport.update({
+    id: '/establishment-licensing',
+    path: '/establishment-licensing',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaInspectionRoute =
+  ServicesSaudiArabiaInspectionRouteImport.update({
+    id: '/inspection',
+    path: '/inspection',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaIvdRoute = ServicesSaudiArabiaIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesSaudiArabiaRoute,
+} as any)
+const ServicesSaudiArabiaLabelingRoute =
+  ServicesSaudiArabiaLabelingRouteImport.update({
+    id: '/labeling',
+    path: '/labeling',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaMdmaRoute = ServicesSaudiArabiaMdmaRouteImport.update({
+  id: '/mdma',
+  path: '/mdma',
+  getParentRoute: () => ServicesSaudiArabiaRoute,
+} as any)
+const ServicesSaudiArabiaPostMarketRoute =
+  ServicesSaudiArabiaPostMarketRouteImport.update({
+    id: '/post-market',
+    path: '/post-market',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaSfdaQueriesRoute =
+  ServicesSaudiArabiaSfdaQueriesRouteImport.update({
+    id: '/sfda-queries',
+    path: '/sfda-queries',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaSoftwareRoute =
+  ServicesSaudiArabiaSoftwareRouteImport.update({
+    id: '/software',
+    path: '/software',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaTechnicalDocumentationRoute =
+  ServicesSaudiArabiaTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
+const ServicesSaudiArabiaTestingStrategyRoute =
+  ServicesSaudiArabiaTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesSaudiArabiaRoute,
+  } as any)
 const ServicesUkIndexRoute = ServicesUkIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -1212,7 +1308,7 @@ export interface FileRoutesByFullPath {
   '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
@@ -1321,6 +1417,19 @@ export interface FileRoutesByFullPath {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
+  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
+  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
+  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
+  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
+  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
+  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
+  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
+  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
+  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
+  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
+  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
+  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1355,6 +1464,7 @@ export interface FileRoutesByFullPath {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -1389,7 +1499,6 @@ export interface FileRoutesByTo {
   '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
@@ -1496,6 +1605,19 @@ export interface FileRoutesByTo {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
+  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
+  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
+  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
+  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
+  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
+  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
+  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
+  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
+  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
+  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
+  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
+  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1530,6 +1652,7 @@ export interface FileRoutesByTo {
   '/services/canada': typeof ServicesCanadaIndexRoute
   '/services/eu': typeof ServicesEuIndexRoute
   '/services/india': typeof ServicesIndiaIndexRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaIndexRoute
   '/services/uk': typeof ServicesUkIndexRoute
   '/services/usa': typeof ServicesUsaIndexRoute
   '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -1571,7 +1694,7 @@ export interface FileRoutesById {
   '/services/new-zealand': typeof ServicesNewZealandRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/saudi-arabia': typeof ServicesSaudiArabiaRoute
+  '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRoute
   '/services/uk': typeof ServicesUkRouteWithChildren
@@ -1680,6 +1803,19 @@ export interface FileRoutesById {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
+  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
+  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
+  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
+  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
+  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
+  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
+  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
+  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
+  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
+  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
+  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
+  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
   '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
   '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
   '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
@@ -1714,6 +1850,7 @@ export interface FileRoutesById {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
   '/industries/cosmetics_/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
@@ -1865,6 +2002,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/saudi-arabia/authorized-representative'
+    | '/services/saudi-arabia/change-management'
+    | '/services/saudi-arabia/classification'
+    | '/services/saudi-arabia/establishment-licensing'
+    | '/services/saudi-arabia/inspection'
+    | '/services/saudi-arabia/ivd'
+    | '/services/saudi-arabia/labeling'
+    | '/services/saudi-arabia/mdma'
+    | '/services/saudi-arabia/post-market'
+    | '/services/saudi-arabia/sfda-queries'
+    | '/services/saudi-arabia/software'
+    | '/services/saudi-arabia/technical-documentation'
+    | '/services/saudi-arabia/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -1899,6 +2049,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/saudi-arabia/'
     | '/services/uk/'
     | '/services/usa/'
     | '/industries/cosmetics/india/for-importer'
@@ -1933,7 +2084,6 @@ export interface FileRouteTypes {
     | '/services/new-zealand'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
-    | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
     | '/services/wpc-wireless-medical-devices'
@@ -2040,6 +2190,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/saudi-arabia/authorized-representative'
+    | '/services/saudi-arabia/change-management'
+    | '/services/saudi-arabia/classification'
+    | '/services/saudi-arabia/establishment-licensing'
+    | '/services/saudi-arabia/inspection'
+    | '/services/saudi-arabia/ivd'
+    | '/services/saudi-arabia/labeling'
+    | '/services/saudi-arabia/mdma'
+    | '/services/saudi-arabia/post-market'
+    | '/services/saudi-arabia/sfda-queries'
+    | '/services/saudi-arabia/software'
+    | '/services/saudi-arabia/technical-documentation'
+    | '/services/saudi-arabia/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -2074,6 +2237,7 @@ export interface FileRouteTypes {
     | '/services/canada'
     | '/services/eu'
     | '/services/india'
+    | '/services/saudi-arabia'
     | '/services/uk'
     | '/services/usa'
     | '/industries/cosmetics/india/for-importer'
@@ -2223,6 +2387,19 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/saudi-arabia/authorized-representative'
+    | '/services/saudi-arabia/change-management'
+    | '/services/saudi-arabia/classification'
+    | '/services/saudi-arabia/establishment-licensing'
+    | '/services/saudi-arabia/inspection'
+    | '/services/saudi-arabia/ivd'
+    | '/services/saudi-arabia/labeling'
+    | '/services/saudi-arabia/mdma'
+    | '/services/saudi-arabia/post-market'
+    | '/services/saudi-arabia/sfda-queries'
+    | '/services/saudi-arabia/software'
+    | '/services/saudi-arabia/technical-documentation'
+    | '/services/saudi-arabia/testing-strategy'
     | '/services/uk/audit-readiness'
     | '/services/uk/conformity-assurance'
     | '/services/uk/dors-registration'
@@ -2257,6 +2434,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/saudi-arabia/'
     | '/services/uk/'
     | '/services/usa/'
     | '/industries/cosmetics_/india/for-importer'
@@ -2292,7 +2470,7 @@ export interface RootRouteChildren {
   ServicesNewZealandRoute: typeof ServicesNewZealandRoute
   ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
-  ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRoute
+  ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRouteWithChildren
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRoute
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
@@ -3332,6 +3510,104 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/saudi-arabia/': {
+      id: '/services/saudi-arabia/'
+      path: '/'
+      fullPath: '/services/saudi-arabia/'
+      preLoaderRoute: typeof ServicesSaudiArabiaIndexRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/authorized-representative': {
+      id: '/services/saudi-arabia/authorized-representative'
+      path: '/authorized-representative'
+      fullPath: '/services/saudi-arabia/authorized-representative'
+      preLoaderRoute: typeof ServicesSaudiArabiaAuthorizedRepresentativeRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/change-management': {
+      id: '/services/saudi-arabia/change-management'
+      path: '/change-management'
+      fullPath: '/services/saudi-arabia/change-management'
+      preLoaderRoute: typeof ServicesSaudiArabiaChangeManagementRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/classification': {
+      id: '/services/saudi-arabia/classification'
+      path: '/classification'
+      fullPath: '/services/saudi-arabia/classification'
+      preLoaderRoute: typeof ServicesSaudiArabiaClassificationRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/establishment-licensing': {
+      id: '/services/saudi-arabia/establishment-licensing'
+      path: '/establishment-licensing'
+      fullPath: '/services/saudi-arabia/establishment-licensing'
+      preLoaderRoute: typeof ServicesSaudiArabiaEstablishmentLicensingRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/inspection': {
+      id: '/services/saudi-arabia/inspection'
+      path: '/inspection'
+      fullPath: '/services/saudi-arabia/inspection'
+      preLoaderRoute: typeof ServicesSaudiArabiaInspectionRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/ivd': {
+      id: '/services/saudi-arabia/ivd'
+      path: '/ivd'
+      fullPath: '/services/saudi-arabia/ivd'
+      preLoaderRoute: typeof ServicesSaudiArabiaIvdRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/labeling': {
+      id: '/services/saudi-arabia/labeling'
+      path: '/labeling'
+      fullPath: '/services/saudi-arabia/labeling'
+      preLoaderRoute: typeof ServicesSaudiArabiaLabelingRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/mdma': {
+      id: '/services/saudi-arabia/mdma'
+      path: '/mdma'
+      fullPath: '/services/saudi-arabia/mdma'
+      preLoaderRoute: typeof ServicesSaudiArabiaMdmaRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/post-market': {
+      id: '/services/saudi-arabia/post-market'
+      path: '/post-market'
+      fullPath: '/services/saudi-arabia/post-market'
+      preLoaderRoute: typeof ServicesSaudiArabiaPostMarketRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/sfda-queries': {
+      id: '/services/saudi-arabia/sfda-queries'
+      path: '/sfda-queries'
+      fullPath: '/services/saudi-arabia/sfda-queries'
+      preLoaderRoute: typeof ServicesSaudiArabiaSfdaQueriesRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/software': {
+      id: '/services/saudi-arabia/software'
+      path: '/software'
+      fullPath: '/services/saudi-arabia/software'
+      preLoaderRoute: typeof ServicesSaudiArabiaSoftwareRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/technical-documentation': {
+      id: '/services/saudi-arabia/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/saudi-arabia/technical-documentation'
+      preLoaderRoute: typeof ServicesSaudiArabiaTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
+    '/services/saudi-arabia/testing-strategy': {
+      id: '/services/saudi-arabia/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/saudi-arabia/testing-strategy'
+      preLoaderRoute: typeof ServicesSaudiArabiaTestingStrategyRouteImport
+      parentRoute: typeof ServicesSaudiArabiaRoute
+    }
     '/services/uk/': {
       id: '/services/uk/'
       path: '/'
@@ -3867,6 +4143,49 @@ const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
   ServicesIndiaRouteChildren,
 )
 
+interface ServicesSaudiArabiaRouteChildren {
+  ServicesSaudiArabiaAuthorizedRepresentativeRoute: typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
+  ServicesSaudiArabiaChangeManagementRoute: typeof ServicesSaudiArabiaChangeManagementRoute
+  ServicesSaudiArabiaClassificationRoute: typeof ServicesSaudiArabiaClassificationRoute
+  ServicesSaudiArabiaEstablishmentLicensingRoute: typeof ServicesSaudiArabiaEstablishmentLicensingRoute
+  ServicesSaudiArabiaInspectionRoute: typeof ServicesSaudiArabiaInspectionRoute
+  ServicesSaudiArabiaIvdRoute: typeof ServicesSaudiArabiaIvdRoute
+  ServicesSaudiArabiaLabelingRoute: typeof ServicesSaudiArabiaLabelingRoute
+  ServicesSaudiArabiaMdmaRoute: typeof ServicesSaudiArabiaMdmaRoute
+  ServicesSaudiArabiaPostMarketRoute: typeof ServicesSaudiArabiaPostMarketRoute
+  ServicesSaudiArabiaSfdaQueriesRoute: typeof ServicesSaudiArabiaSfdaQueriesRoute
+  ServicesSaudiArabiaSoftwareRoute: typeof ServicesSaudiArabiaSoftwareRoute
+  ServicesSaudiArabiaTechnicalDocumentationRoute: typeof ServicesSaudiArabiaTechnicalDocumentationRoute
+  ServicesSaudiArabiaTestingStrategyRoute: typeof ServicesSaudiArabiaTestingStrategyRoute
+  ServicesSaudiArabiaIndexRoute: typeof ServicesSaudiArabiaIndexRoute
+}
+
+const ServicesSaudiArabiaRouteChildren: ServicesSaudiArabiaRouteChildren = {
+  ServicesSaudiArabiaAuthorizedRepresentativeRoute:
+    ServicesSaudiArabiaAuthorizedRepresentativeRoute,
+  ServicesSaudiArabiaChangeManagementRoute:
+    ServicesSaudiArabiaChangeManagementRoute,
+  ServicesSaudiArabiaClassificationRoute:
+    ServicesSaudiArabiaClassificationRoute,
+  ServicesSaudiArabiaEstablishmentLicensingRoute:
+    ServicesSaudiArabiaEstablishmentLicensingRoute,
+  ServicesSaudiArabiaInspectionRoute: ServicesSaudiArabiaInspectionRoute,
+  ServicesSaudiArabiaIvdRoute: ServicesSaudiArabiaIvdRoute,
+  ServicesSaudiArabiaLabelingRoute: ServicesSaudiArabiaLabelingRoute,
+  ServicesSaudiArabiaMdmaRoute: ServicesSaudiArabiaMdmaRoute,
+  ServicesSaudiArabiaPostMarketRoute: ServicesSaudiArabiaPostMarketRoute,
+  ServicesSaudiArabiaSfdaQueriesRoute: ServicesSaudiArabiaSfdaQueriesRoute,
+  ServicesSaudiArabiaSoftwareRoute: ServicesSaudiArabiaSoftwareRoute,
+  ServicesSaudiArabiaTechnicalDocumentationRoute:
+    ServicesSaudiArabiaTechnicalDocumentationRoute,
+  ServicesSaudiArabiaTestingStrategyRoute:
+    ServicesSaudiArabiaTestingStrategyRoute,
+  ServicesSaudiArabiaIndexRoute: ServicesSaudiArabiaIndexRoute,
+}
+
+const ServicesSaudiArabiaRouteWithChildren =
+  ServicesSaudiArabiaRoute._addFileChildren(ServicesSaudiArabiaRouteChildren)
+
 interface ServicesUkRouteChildren {
   ServicesUkAuditReadinessRoute: typeof ServicesUkAuditReadinessRoute
   ServicesUkConformityAssuranceRoute: typeof ServicesUkConformityAssuranceRoute
@@ -3977,7 +4296,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesNewZealandRoute: ServicesNewZealandRoute,
   ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
-  ServicesSaudiArabiaRoute: ServicesSaudiArabiaRoute,
+  ServicesSaudiArabiaRoute: ServicesSaudiArabiaRouteWithChildren,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRoute,
   ServicesUkRoute: ServicesUkRouteWithChildren,
