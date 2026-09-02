@@ -248,6 +248,19 @@ const clientPartners = [
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
 ];
 
+const supportedCountries = [
+    { name: "India", code: "in", auth: "CDSCO", to: "/services/india" },
+    { name: "USA", code: "us", auth: "FDA", to: "/services/usa" },
+    { name: "EU", code: "eu", auth: "CE MDR/IVDR", to: "/services/eu" },
+    { name: "UK", code: "gb", auth: "MHRA", to: "/services/uk" },
+    { name: "Canada", code: "ca", auth: "Health Canada", to: "/services/canada" },
+    { name: "Australia", code: "au", auth: "TGA", to: "/services/australia" },
+    { name: "Brazil", code: "br", auth: "ANVISA", to: "/services/brazil" },
+    { name: "Saudi Arabia", code: "sa", auth: "SFDA", to: "/services/saudi-arabia" },
+    { name: "UAE", code: "ae", auth: "MOHAP", to: "/services/uae" },
+    { name: "New Zealand", code: "nz", auth: "Medsafe", to: "/services/new-zealand" },
+];
+
 function Index() {
     return (
         <>
@@ -310,6 +323,59 @@ function Index() {
                                 className="w-full max-w-[580px] object-contain"
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── COUNTRIES WE SUPPORT (CLEAN INTEGRATED ROUNDED CARDS) ── */}
+            <section className="bg-gradient-to-b from-[#eef4ff] via-white to-slate-50 border-y border-gray-200/80 py-7 sm:py-8 relative overflow-hidden">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-5 pb-3 border-b border-gray-200/70">
+                        <div className="flex items-center gap-2.5 flex-wrap">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0b3a96]/10 text-[#0b3a96] text-[11px] font-extrabold uppercase tracking-wider border border-[#0b3a96]/20">
+                                <Globe2 className="h-3.5 w-3.5" />
+                                Countries We Support
+                            </span>
+                            <span className="hidden sm:inline text-navy/20">|</span>
+                            <span className="hidden sm:inline text-xs font-semibold text-navy/70">
+                                Medical Device, IVD, Pharma &amp; Cosmetics Regulatory Approvals
+                            </span>
+                        </div>
+
+                        <Link
+                            to="/markets"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3a96] hover:text-[#082b70] transition-colors self-start sm:self-auto group"
+                        >
+                            <span>View All Supported Markets</span>
+                            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+
+                    {/* 10 Countries in clean rounded circle cards */}
+                    <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-2.5 sm:gap-3.5">
+                        {supportedCountries.map((c) => (
+                            <Link
+                                key={c.code}
+                                to={c.to}
+                                className="group flex flex-col items-center justify-center p-3 rounded-2xl bg-white hover:bg-blue-50/40 border border-gray-200 hover:border-[#0b3a96]/40 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center"
+                            >
+                                {/* Clean Circular Flag with shadow */}
+                                <div className="w-12 h-12 rounded-full p-0.5 bg-white shadow-xs border border-gray-200 group-hover:border-[#0b3a96]/50 group-hover:scale-105 transition-all mb-2 flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src={`https://flagcdn.com/w80/${c.code}.png`}
+                                        srcSet={`https://flagcdn.com/w160/${c.code}.png 2x`}
+                                        alt={`${c.name} Flag`}
+                                        className="w-full h-full object-cover rounded-full"
+                                        loading="lazy"
+                                    />
+                                </div>
+
+                                {/* Country Name */}
+                                <span className="text-[12.5px] font-extrabold text-navy group-hover:text-[#0b3a96] leading-tight transition-colors">
+                                    {c.name}
+                                </span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>
