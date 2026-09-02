@@ -75,15 +75,32 @@ import { Route as ServicesCanadaMdelRouteImport } from './routes/services.canada
 import { Route as ServicesCanadaMdlRouteImport } from './routes/services.canada.mdl'
 import { Route as ServicesCanadaRenewalsRouteImport } from './routes/services.canada.renewals'
 import { Route as ServicesEuIndexRouteImport } from './routes/services.eu.index'
+import { Route as ServicesEuArticle117RouteImport } from './routes/services.eu.article-117'
+import { Route as ServicesEuCeMarkingRouteImport } from './routes/services.eu.ce-marking'
 import { Route as ServicesEuCeRegistrationRouteImport } from './routes/services.eu.ce-registration'
+import { Route as ServicesEuChangeAssessmentRouteImport } from './routes/services.eu.change-assessment'
+import { Route as ServicesEuClassDIvdrRouteImport } from './routes/services.eu.class-d-ivdr'
+import { Route as ServicesEuClassificationRouteImport } from './routes/services.eu.classification'
 import { Route as ServicesEuClinicalEvaluationRouteImport } from './routes/services.eu.clinical-evaluation'
+import { Route as ServicesEuDeficiencyResponseRouteImport } from './routes/services.eu.deficiency-response'
 import { Route as ServicesEuEarRouteImport } from './routes/services.eu.ear'
 import { Route as ServicesEuEudamedRouteImport } from './routes/services.eu.eudamed'
+import { Route as ServicesEuIvdrRouteImport } from './routes/services.eu.ivdr'
+import { Route as ServicesEuIvdrAnalyticalPerformanceRouteImport } from './routes/services.eu.ivdr-analytical-performance'
+import { Route as ServicesEuIvdrClassificationRouteImport } from './routes/services.eu.ivdr-classification'
+import { Route as ServicesEuIvdrClinicalPerformanceRouteImport } from './routes/services.eu.ivdr-clinical-performance'
+import { Route as ServicesEuIvdrPerformanceEvaluationRouteImport } from './routes/services.eu.ivdr-performance-evaluation'
+import { Route as ServicesEuIvdrPmpfRouteImport } from './routes/services.eu.ivdr-pmpf'
 import { Route as ServicesEuLabelingRouteImport } from './routes/services.eu.labeling'
+import { Route as ServicesEuMdrRouteImport } from './routes/services.eu.mdr'
 import { Route as ServicesEuMdrIvdrTransitionRouteImport } from './routes/services.eu.mdr-ivdr-transition'
+import { Route as ServicesEuNotifiedBodyRouteImport } from './routes/services.eu.notified-body'
 import { Route as ServicesEuPmsRouteImport } from './routes/services.eu.pms'
+import { Route as ServicesEuPmsPmcfRouteImport } from './routes/services.eu.pms-pmcf'
 import { Route as ServicesEuQmsRouteImport } from './routes/services.eu.qms'
+import { Route as ServicesEuSoftwareRouteImport } from './routes/services.eu.software'
 import { Route as ServicesEuTechnicalDocumentationRouteImport } from './routes/services.eu.technical-documentation'
+import { Route as ServicesEuTestingStrategyRouteImport } from './routes/services.eu.testing-strategy'
 import { Route as ServicesIndiaIndexRouteImport } from './routes/services.india.index'
 import { Route as ServicesIndiaClassAImportRouteImport } from './routes/services.india.class-a-import'
 import { Route as ServicesIndiaFreeSaleRouteImport } from './routes/services.india.free-sale'
@@ -488,16 +505,49 @@ const ServicesEuIndexRoute = ServicesEuIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesEuRoute,
 } as any)
+const ServicesEuArticle117Route = ServicesEuArticle117RouteImport.update({
+  id: '/article-117',
+  path: '/article-117',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuCeMarkingRoute = ServicesEuCeMarkingRouteImport.update({
+  id: '/ce-marking',
+  path: '/ce-marking',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
 const ServicesEuCeRegistrationRoute =
   ServicesEuCeRegistrationRouteImport.update({
     id: '/ce-registration',
     path: '/ce-registration',
     getParentRoute: () => ServicesEuRoute,
   } as any)
+const ServicesEuChangeAssessmentRoute =
+  ServicesEuChangeAssessmentRouteImport.update({
+    id: '/change-assessment',
+    path: '/change-assessment',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuClassDIvdrRoute = ServicesEuClassDIvdrRouteImport.update({
+  id: '/class-d-ivdr',
+  path: '/class-d-ivdr',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuClassificationRoute =
+  ServicesEuClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
 const ServicesEuClinicalEvaluationRoute =
   ServicesEuClinicalEvaluationRouteImport.update({
     id: '/clinical-evaluation',
     path: '/clinical-evaluation',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuDeficiencyResponseRoute =
+  ServicesEuDeficiencyResponseRouteImport.update({
+    id: '/deficiency-response',
+    path: '/deficiency-response',
     getParentRoute: () => ServicesEuRoute,
   } as any)
 const ServicesEuEarRoute = ServicesEuEarRouteImport.update({
@@ -510,9 +560,48 @@ const ServicesEuEudamedRoute = ServicesEuEudamedRouteImport.update({
   path: '/eudamed',
   getParentRoute: () => ServicesEuRoute,
 } as any)
+const ServicesEuIvdrRoute = ServicesEuIvdrRouteImport.update({
+  id: '/ivdr',
+  path: '/ivdr',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuIvdrAnalyticalPerformanceRoute =
+  ServicesEuIvdrAnalyticalPerformanceRouteImport.update({
+    id: '/ivdr-analytical-performance',
+    path: '/ivdr-analytical-performance',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuIvdrClassificationRoute =
+  ServicesEuIvdrClassificationRouteImport.update({
+    id: '/ivdr-classification',
+    path: '/ivdr-classification',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuIvdrClinicalPerformanceRoute =
+  ServicesEuIvdrClinicalPerformanceRouteImport.update({
+    id: '/ivdr-clinical-performance',
+    path: '/ivdr-clinical-performance',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuIvdrPerformanceEvaluationRoute =
+  ServicesEuIvdrPerformanceEvaluationRouteImport.update({
+    id: '/ivdr-performance-evaluation',
+    path: '/ivdr-performance-evaluation',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuIvdrPmpfRoute = ServicesEuIvdrPmpfRouteImport.update({
+  id: '/ivdr-pmpf',
+  path: '/ivdr-pmpf',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
 const ServicesEuLabelingRoute = ServicesEuLabelingRouteImport.update({
   id: '/labeling',
   path: '/labeling',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuMdrRoute = ServicesEuMdrRouteImport.update({
+  id: '/mdr',
+  path: '/mdr',
   getParentRoute: () => ServicesEuRoute,
 } as any)
 const ServicesEuMdrIvdrTransitionRoute =
@@ -521,9 +610,19 @@ const ServicesEuMdrIvdrTransitionRoute =
     path: '/mdr-ivdr-transition',
     getParentRoute: () => ServicesEuRoute,
   } as any)
+const ServicesEuNotifiedBodyRoute = ServicesEuNotifiedBodyRouteImport.update({
+  id: '/notified-body',
+  path: '/notified-body',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
 const ServicesEuPmsRoute = ServicesEuPmsRouteImport.update({
   id: '/pms',
   path: '/pms',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
+const ServicesEuPmsPmcfRoute = ServicesEuPmsPmcfRouteImport.update({
+  id: '/pms-pmcf',
+  path: '/pms-pmcf',
   getParentRoute: () => ServicesEuRoute,
 } as any)
 const ServicesEuQmsRoute = ServicesEuQmsRouteImport.update({
@@ -531,10 +630,21 @@ const ServicesEuQmsRoute = ServicesEuQmsRouteImport.update({
   path: '/qms',
   getParentRoute: () => ServicesEuRoute,
 } as any)
+const ServicesEuSoftwareRoute = ServicesEuSoftwareRouteImport.update({
+  id: '/software',
+  path: '/software',
+  getParentRoute: () => ServicesEuRoute,
+} as any)
 const ServicesEuTechnicalDocumentationRoute =
   ServicesEuTechnicalDocumentationRouteImport.update({
     id: '/technical-documentation',
     path: '/technical-documentation',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuTestingStrategyRoute =
+  ServicesEuTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
     getParentRoute: () => ServicesEuRoute,
   } as any)
 const ServicesIndiaIndexRoute = ServicesIndiaIndexRouteImport.update({
@@ -911,15 +1021,32 @@ export interface FileRoutesByFullPath {
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/article-117': typeof ServicesEuArticle117Route
+  '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
+  '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
+  '/services/eu/classification': typeof ServicesEuClassificationRoute
   '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
   '/services/eu/ear': typeof ServicesEuEarRoute
   '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/ivdr': typeof ServicesEuIvdrRoute
+  '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
+  '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
+  '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
+  '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
+  '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
   '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
   '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
   '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/software': typeof ServicesEuSoftwareRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
+  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -1036,15 +1163,32 @@ export interface FileRoutesByTo {
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/article-117': typeof ServicesEuArticle117Route
+  '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
+  '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
+  '/services/eu/classification': typeof ServicesEuClassificationRoute
   '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
   '/services/eu/ear': typeof ServicesEuEarRoute
   '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/ivdr': typeof ServicesEuIvdrRoute
+  '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
+  '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
+  '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
+  '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
+  '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
   '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
   '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
   '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/software': typeof ServicesEuSoftwareRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
+  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -1170,15 +1314,32 @@ export interface FileRoutesById {
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/eu/article-117': typeof ServicesEuArticle117Route
+  '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
+  '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
+  '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
+  '/services/eu/classification': typeof ServicesEuClassificationRoute
   '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
+  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
   '/services/eu/ear': typeof ServicesEuEarRoute
   '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/ivdr': typeof ServicesEuIvdrRoute
+  '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
+  '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
+  '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
+  '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
+  '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
   '/services/eu/labeling': typeof ServicesEuLabelingRoute
+  '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
+  '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
   '/services/eu/pms': typeof ServicesEuPmsRoute
+  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
   '/services/eu/qms': typeof ServicesEuQmsRoute
+  '/services/eu/software': typeof ServicesEuSoftwareRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
+  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
   '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
   '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
   '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
@@ -1305,15 +1466,32 @@ export interface FileRouteTypes {
     | '/services/canada/mdel'
     | '/services/canada/mdl'
     | '/services/canada/renewals'
+    | '/services/eu/article-117'
+    | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
+    | '/services/eu/change-assessment'
+    | '/services/eu/class-d-ivdr'
+    | '/services/eu/classification'
     | '/services/eu/clinical-evaluation'
+    | '/services/eu/deficiency-response'
     | '/services/eu/ear'
     | '/services/eu/eudamed'
+    | '/services/eu/ivdr'
+    | '/services/eu/ivdr-analytical-performance'
+    | '/services/eu/ivdr-classification'
+    | '/services/eu/ivdr-clinical-performance'
+    | '/services/eu/ivdr-performance-evaluation'
+    | '/services/eu/ivdr-pmpf'
     | '/services/eu/labeling'
+    | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/notified-body'
     | '/services/eu/pms'
+    | '/services/eu/pms-pmcf'
     | '/services/eu/qms'
+    | '/services/eu/software'
     | '/services/eu/technical-documentation'
+    | '/services/eu/testing-strategy'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -1430,15 +1608,32 @@ export interface FileRouteTypes {
     | '/services/canada/mdel'
     | '/services/canada/mdl'
     | '/services/canada/renewals'
+    | '/services/eu/article-117'
+    | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
+    | '/services/eu/change-assessment'
+    | '/services/eu/class-d-ivdr'
+    | '/services/eu/classification'
     | '/services/eu/clinical-evaluation'
+    | '/services/eu/deficiency-response'
     | '/services/eu/ear'
     | '/services/eu/eudamed'
+    | '/services/eu/ivdr'
+    | '/services/eu/ivdr-analytical-performance'
+    | '/services/eu/ivdr-classification'
+    | '/services/eu/ivdr-clinical-performance'
+    | '/services/eu/ivdr-performance-evaluation'
+    | '/services/eu/ivdr-pmpf'
     | '/services/eu/labeling'
+    | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/notified-body'
     | '/services/eu/pms'
+    | '/services/eu/pms-pmcf'
     | '/services/eu/qms'
+    | '/services/eu/software'
     | '/services/eu/technical-documentation'
+    | '/services/eu/testing-strategy'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -1563,15 +1758,32 @@ export interface FileRouteTypes {
     | '/services/canada/mdel'
     | '/services/canada/mdl'
     | '/services/canada/renewals'
+    | '/services/eu/article-117'
+    | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
+    | '/services/eu/change-assessment'
+    | '/services/eu/class-d-ivdr'
+    | '/services/eu/classification'
     | '/services/eu/clinical-evaluation'
+    | '/services/eu/deficiency-response'
     | '/services/eu/ear'
     | '/services/eu/eudamed'
+    | '/services/eu/ivdr'
+    | '/services/eu/ivdr-analytical-performance'
+    | '/services/eu/ivdr-classification'
+    | '/services/eu/ivdr-clinical-performance'
+    | '/services/eu/ivdr-performance-evaluation'
+    | '/services/eu/ivdr-pmpf'
     | '/services/eu/labeling'
+    | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
+    | '/services/eu/notified-body'
     | '/services/eu/pms'
+    | '/services/eu/pms-pmcf'
     | '/services/eu/qms'
+    | '/services/eu/software'
     | '/services/eu/technical-documentation'
+    | '/services/eu/testing-strategy'
     | '/services/india/class-a-import'
     | '/services/india/free-sale'
     | '/services/india/investigational-devices'
@@ -2147,6 +2359,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuIndexRouteImport
       parentRoute: typeof ServicesEuRoute
     }
+    '/services/eu/article-117': {
+      id: '/services/eu/article-117'
+      path: '/article-117'
+      fullPath: '/services/eu/article-117'
+      preLoaderRoute: typeof ServicesEuArticle117RouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ce-marking': {
+      id: '/services/eu/ce-marking'
+      path: '/ce-marking'
+      fullPath: '/services/eu/ce-marking'
+      preLoaderRoute: typeof ServicesEuCeMarkingRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/eu/ce-registration': {
       id: '/services/eu/ce-registration'
       path: '/ce-registration'
@@ -2154,11 +2380,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuCeRegistrationRouteImport
       parentRoute: typeof ServicesEuRoute
     }
+    '/services/eu/change-assessment': {
+      id: '/services/eu/change-assessment'
+      path: '/change-assessment'
+      fullPath: '/services/eu/change-assessment'
+      preLoaderRoute: typeof ServicesEuChangeAssessmentRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/class-d-ivdr': {
+      id: '/services/eu/class-d-ivdr'
+      path: '/class-d-ivdr'
+      fullPath: '/services/eu/class-d-ivdr'
+      preLoaderRoute: typeof ServicesEuClassDIvdrRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/classification': {
+      id: '/services/eu/classification'
+      path: '/classification'
+      fullPath: '/services/eu/classification'
+      preLoaderRoute: typeof ServicesEuClassificationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/eu/clinical-evaluation': {
       id: '/services/eu/clinical-evaluation'
       path: '/clinical-evaluation'
       fullPath: '/services/eu/clinical-evaluation'
       preLoaderRoute: typeof ServicesEuClinicalEvaluationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/deficiency-response': {
+      id: '/services/eu/deficiency-response'
+      path: '/deficiency-response'
+      fullPath: '/services/eu/deficiency-response'
+      preLoaderRoute: typeof ServicesEuDeficiencyResponseRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/eu/ear': {
@@ -2175,11 +2429,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuEudamedRouteImport
       parentRoute: typeof ServicesEuRoute
     }
+    '/services/eu/ivdr': {
+      id: '/services/eu/ivdr'
+      path: '/ivdr'
+      fullPath: '/services/eu/ivdr'
+      preLoaderRoute: typeof ServicesEuIvdrRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ivdr-analytical-performance': {
+      id: '/services/eu/ivdr-analytical-performance'
+      path: '/ivdr-analytical-performance'
+      fullPath: '/services/eu/ivdr-analytical-performance'
+      preLoaderRoute: typeof ServicesEuIvdrAnalyticalPerformanceRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ivdr-classification': {
+      id: '/services/eu/ivdr-classification'
+      path: '/ivdr-classification'
+      fullPath: '/services/eu/ivdr-classification'
+      preLoaderRoute: typeof ServicesEuIvdrClassificationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ivdr-clinical-performance': {
+      id: '/services/eu/ivdr-clinical-performance'
+      path: '/ivdr-clinical-performance'
+      fullPath: '/services/eu/ivdr-clinical-performance'
+      preLoaderRoute: typeof ServicesEuIvdrClinicalPerformanceRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ivdr-performance-evaluation': {
+      id: '/services/eu/ivdr-performance-evaluation'
+      path: '/ivdr-performance-evaluation'
+      fullPath: '/services/eu/ivdr-performance-evaluation'
+      preLoaderRoute: typeof ServicesEuIvdrPerformanceEvaluationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/ivdr-pmpf': {
+      id: '/services/eu/ivdr-pmpf'
+      path: '/ivdr-pmpf'
+      fullPath: '/services/eu/ivdr-pmpf'
+      preLoaderRoute: typeof ServicesEuIvdrPmpfRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/eu/labeling': {
       id: '/services/eu/labeling'
       path: '/labeling'
       fullPath: '/services/eu/labeling'
       preLoaderRoute: typeof ServicesEuLabelingRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/mdr': {
+      id: '/services/eu/mdr'
+      path: '/mdr'
+      fullPath: '/services/eu/mdr'
+      preLoaderRoute: typeof ServicesEuMdrRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/eu/mdr-ivdr-transition': {
@@ -2189,11 +2492,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuMdrIvdrTransitionRouteImport
       parentRoute: typeof ServicesEuRoute
     }
+    '/services/eu/notified-body': {
+      id: '/services/eu/notified-body'
+      path: '/notified-body'
+      fullPath: '/services/eu/notified-body'
+      preLoaderRoute: typeof ServicesEuNotifiedBodyRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/eu/pms': {
       id: '/services/eu/pms'
       path: '/pms'
       fullPath: '/services/eu/pms'
       preLoaderRoute: typeof ServicesEuPmsRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/pms-pmcf': {
+      id: '/services/eu/pms-pmcf'
+      path: '/pms-pmcf'
+      fullPath: '/services/eu/pms-pmcf'
+      preLoaderRoute: typeof ServicesEuPmsPmcfRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/eu/qms': {
@@ -2203,11 +2520,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuQmsRouteImport
       parentRoute: typeof ServicesEuRoute
     }
+    '/services/eu/software': {
+      id: '/services/eu/software'
+      path: '/software'
+      fullPath: '/services/eu/software'
+      preLoaderRoute: typeof ServicesEuSoftwareRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
     '/services/eu/technical-documentation': {
       id: '/services/eu/technical-documentation'
       path: '/technical-documentation'
       fullPath: '/services/eu/technical-documentation'
       preLoaderRoute: typeof ServicesEuTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/testing-strategy': {
+      id: '/services/eu/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/eu/testing-strategy'
+      preLoaderRoute: typeof ServicesEuTestingStrategyRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/india/': {
@@ -2694,28 +3025,65 @@ const ServicesCanadaRouteWithChildren = ServicesCanadaRoute._addFileChildren(
 )
 
 interface ServicesEuRouteChildren {
+  ServicesEuArticle117Route: typeof ServicesEuArticle117Route
+  ServicesEuCeMarkingRoute: typeof ServicesEuCeMarkingRoute
   ServicesEuCeRegistrationRoute: typeof ServicesEuCeRegistrationRoute
+  ServicesEuChangeAssessmentRoute: typeof ServicesEuChangeAssessmentRoute
+  ServicesEuClassDIvdrRoute: typeof ServicesEuClassDIvdrRoute
+  ServicesEuClassificationRoute: typeof ServicesEuClassificationRoute
   ServicesEuClinicalEvaluationRoute: typeof ServicesEuClinicalEvaluationRoute
+  ServicesEuDeficiencyResponseRoute: typeof ServicesEuDeficiencyResponseRoute
   ServicesEuEarRoute: typeof ServicesEuEarRoute
   ServicesEuEudamedRoute: typeof ServicesEuEudamedRoute
+  ServicesEuIvdrRoute: typeof ServicesEuIvdrRoute
+  ServicesEuIvdrAnalyticalPerformanceRoute: typeof ServicesEuIvdrAnalyticalPerformanceRoute
+  ServicesEuIvdrClassificationRoute: typeof ServicesEuIvdrClassificationRoute
+  ServicesEuIvdrClinicalPerformanceRoute: typeof ServicesEuIvdrClinicalPerformanceRoute
+  ServicesEuIvdrPerformanceEvaluationRoute: typeof ServicesEuIvdrPerformanceEvaluationRoute
+  ServicesEuIvdrPmpfRoute: typeof ServicesEuIvdrPmpfRoute
   ServicesEuLabelingRoute: typeof ServicesEuLabelingRoute
+  ServicesEuMdrRoute: typeof ServicesEuMdrRoute
   ServicesEuMdrIvdrTransitionRoute: typeof ServicesEuMdrIvdrTransitionRoute
+  ServicesEuNotifiedBodyRoute: typeof ServicesEuNotifiedBodyRoute
   ServicesEuPmsRoute: typeof ServicesEuPmsRoute
+  ServicesEuPmsPmcfRoute: typeof ServicesEuPmsPmcfRoute
   ServicesEuQmsRoute: typeof ServicesEuQmsRoute
+  ServicesEuSoftwareRoute: typeof ServicesEuSoftwareRoute
   ServicesEuTechnicalDocumentationRoute: typeof ServicesEuTechnicalDocumentationRoute
+  ServicesEuTestingStrategyRoute: typeof ServicesEuTestingStrategyRoute
   ServicesEuIndexRoute: typeof ServicesEuIndexRoute
 }
 
 const ServicesEuRouteChildren: ServicesEuRouteChildren = {
+  ServicesEuArticle117Route: ServicesEuArticle117Route,
+  ServicesEuCeMarkingRoute: ServicesEuCeMarkingRoute,
   ServicesEuCeRegistrationRoute: ServicesEuCeRegistrationRoute,
+  ServicesEuChangeAssessmentRoute: ServicesEuChangeAssessmentRoute,
+  ServicesEuClassDIvdrRoute: ServicesEuClassDIvdrRoute,
+  ServicesEuClassificationRoute: ServicesEuClassificationRoute,
   ServicesEuClinicalEvaluationRoute: ServicesEuClinicalEvaluationRoute,
+  ServicesEuDeficiencyResponseRoute: ServicesEuDeficiencyResponseRoute,
   ServicesEuEarRoute: ServicesEuEarRoute,
   ServicesEuEudamedRoute: ServicesEuEudamedRoute,
+  ServicesEuIvdrRoute: ServicesEuIvdrRoute,
+  ServicesEuIvdrAnalyticalPerformanceRoute:
+    ServicesEuIvdrAnalyticalPerformanceRoute,
+  ServicesEuIvdrClassificationRoute: ServicesEuIvdrClassificationRoute,
+  ServicesEuIvdrClinicalPerformanceRoute:
+    ServicesEuIvdrClinicalPerformanceRoute,
+  ServicesEuIvdrPerformanceEvaluationRoute:
+    ServicesEuIvdrPerformanceEvaluationRoute,
+  ServicesEuIvdrPmpfRoute: ServicesEuIvdrPmpfRoute,
   ServicesEuLabelingRoute: ServicesEuLabelingRoute,
+  ServicesEuMdrRoute: ServicesEuMdrRoute,
   ServicesEuMdrIvdrTransitionRoute: ServicesEuMdrIvdrTransitionRoute,
+  ServicesEuNotifiedBodyRoute: ServicesEuNotifiedBodyRoute,
   ServicesEuPmsRoute: ServicesEuPmsRoute,
+  ServicesEuPmsPmcfRoute: ServicesEuPmsPmcfRoute,
   ServicesEuQmsRoute: ServicesEuQmsRoute,
+  ServicesEuSoftwareRoute: ServicesEuSoftwareRoute,
   ServicesEuTechnicalDocumentationRoute: ServicesEuTechnicalDocumentationRoute,
+  ServicesEuTestingStrategyRoute: ServicesEuTestingStrategyRoute,
   ServicesEuIndexRoute: ServicesEuIndexRoute,
 }
 

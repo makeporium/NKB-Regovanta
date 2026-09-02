@@ -3,57 +3,65 @@ import {
   ArrowLeft,
   CheckCircle2,
   ChevronRight,
-  Shield,
+  Building2,
   Sparkles,
   ArrowRight,
-  Building2,
-  UserCheck,
-  ClipboardCheck,
+  ShieldCheck,
+  Award,
+  Search,
+  FileText,
+  AlertTriangle,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/eu/qms")({
+export const Route = createFileRoute("/services/eu/notified-body")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR QMS Integration, Article 10 & PRRC Consultant | NKB Regovanta" },
+      { title: "EU Notified Body Strategy, Audit Readiness & Review Defense | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Integrate EU MDR 2017/745 Article 10 & IVDR 2017/746 Quality Management System requirements, ISO 13485 alignment, PRRC governance, and Notified Body audit readiness.",
+          "Senior Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity CAPA resolution under EU MDR and IVDR.",
       },
       {
         name: "keywords",
         content:
-          "EU MDR QMS integration, Article 10 MDR QMS, Article 15 PRRC Person Responsible for Regulatory Compliance, ISO 13485 MDR alignment, IVDR QMS, Notified Body QMS audit, NKB Regovanta",
+          "Notified Body selection Europe, MDR Notified Body audit readiness, Stage 1 Stage 2 audit preparation, Notified Body deficiency response, CE mark technical review, NKB Regovanta",
       },
-      { property: "og:title", content: "MDR / IVDR QMS Integration, Article 10 & PRRC | NKB Regovanta" },
+      { property: "og:title", content: "Notified Body Strategy & Audit Readiness | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "We embed EU MDR/IVDR mandates into ISO 13485 quality systems, establishing robust PRRC governance and audit-proven implementation.",
+          "We prepare manufacturers to defend their technical files and QMS before Notified Bodies, tracing audit findings to their regulatory root cause.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/qms" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/notified-body" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/qms" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/notified-body" }],
   }),
-  component: EUQMSPage,
+  component: EUNotifiedBodyPage,
 });
 
-function EUQMSPage() {
-  const qmsAreas = [
-    "Design and development controls & Design History File (DHF)",
-    "Risk management integration aligned with ISO 14971",
-    "Supplier and outsourced-process control & critical supplier audits",
-    "Verification, validation and manufacturing process validation",
-    "Clinical evaluation / performance evaluation governance",
-    "PMS, PMCF / PMPF and vigilance reporting procedures",
-    "Complaint handling and trend reporting systems",
-    "CAPA and nonconformity management",
-    "Change control and Notified Body notification triggers",
-    "Document and record control across device lifecycles",
-    "Training, competence and regulatory qualification records",
-    "Internal audit and management review governance",
-    "Regulatory data, UDI and EUDAMED registration controls",
+function EUNotifiedBodyPage() {
+  const nbSupportItems = [
+    "Notified Body scope, designation code and suitability review",
+    "Application readiness, scheduling and certification planning",
+    "Pre-assessment and mock audit of Annex II/III technical documentation",
+    "QMS readiness and objective-evidence verification across procedures",
+    "Clinical evaluation (CER) / Performance evaluation (PER) audit readiness",
+    "GSPR and ISO 14971 risk traceability deep-dive review",
+    "Mock audits and technical staff / PRRC interview preparation",
+    "Technical review question-response strategy and timeline management",
+    "Nonconformity root-cause analysis and CAPA evidence preparation",
+    "Certificate maintenance, unannounced audits and annual surveillance readiness",
+  ];
+
+  const deficiencyFramework = [
+    { num: "01", label: "NB Finding" },
+    { num: "02", label: "Underlying Regulatory Concern" },
+    { num: "03", label: "Root Cause" },
+    { num: "04", label: "Evidence / QMS Gap" },
+    { num: "05", label: "Corrective Strategy" },
+    { num: "06", label: "Revised File & CAPA" },
   ];
 
   return (
@@ -65,10 +73,10 @@ function EUQMSPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "EU MDR & IVDR QMS Integration, Article 10 & PRRC",
-              url: "https://www.nkbregovanta.com/services/eu/qms",
+              name: "EU Notified Body Strategy & Audit Readiness",
+              url: "https://www.nkbregovanta.com/services/eu/notified-body",
               description:
-                "Integration of EU MDR and IVDR quality management system mandates, Article 10 compliance, and Article 15 PRRC regulatory governance.",
+                "Notified Body selection, audit preparation, technical file defense, and deficiency response under EU MDR and IVDR.",
               provider: {
                 "@type": "ProfessionalService",
                 name: "NKB Regovanta Solutions Pvt. Ltd.",
@@ -82,7 +90,7 @@ function EUQMSPage() {
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nkbregovanta.com" },
                 { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
                 { "@type": "ListItem", position: 3, name: "European Union", item: "https://www.nkbregovanta.com/services/eu" },
-                { "@type": "ListItem", position: 4, name: "QMS & PRRC", item: "https://www.nkbregovanta.com/services/eu/qms" },
+                { "@type": "ListItem", position: 4, name: "Notified Body", item: "https://www.nkbregovanta.com/services/eu/notified-body" },
               ],
             },
           ]),
@@ -99,7 +107,7 @@ function EUQMSPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/eu" className="hover:text-navy transition-colors">European Union</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">QMS Integration &amp; PRRC</span>
+            <span className="text-navy">Notified Body Strategy</span>
           </div>
 
           <Link
@@ -111,23 +119,23 @@ function EUQMSPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
-              <ClipboardCheck className="h-3.5 w-3.5" /> Article 10 &amp; Article 15 Governance
+              <Building2 className="h-3.5 w-3.5" /> Technical File Defense
             </div>
             <h1
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDR / IVDR QMS Integration, Article 10 &amp; PRRC
+              MDR &amp; IVDR Notified Body Strategy &amp; Audit Readiness
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
-              Regulatory compliance cannot be sustained through technical documentation alone. NKB Regovanta reviews how MDR/IVDR obligations are embedded into the manufacturer’s quality system so that procedures, records and implementation remain aligned with the certified device and its lifecycle.
+              We prepare manufacturers to defend their files and quality systems — not just submit paperwork. We review evidence rationale, conduct mock audits, and draft root-cause deficiency responses.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
               >
-                Align Your QMS with MDR / IVDR <ArrowRight className="h-4 w-4" />
+                Prepare for Notified Body Review <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -139,13 +147,31 @@ function EUQMSPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-8 space-y-10">
-              {/* QMS Areas We Assess */}
+              {/* Deficiency Analysis Framework */}
+              <div className="p-7 rounded-2xl bg-surface/40 border border-gray-200/80 space-y-4">
+                <h2 className="text-xl font-extrabold text-navy tracking-tight">
+                  Deficiency Analysis &amp; Resolution Framework
+                </h2>
+                <p className="text-[13px] text-navy/75 leading-relaxed font-medium">
+                  We resolve audit findings and nonconformities at their root cause rather than patching surface wording.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 pt-2">
+                  {deficiencyFramework.map((item) => (
+                    <div key={item.num} className="p-3 rounded-xl bg-white border border-gray-200 text-center shadow-2xs">
+                      <span className="text-[10px] font-extrabold text-blue-600 block">{item.num}</span>
+                      <p className="text-[11px] font-extrabold text-navy mt-0.5 leading-tight">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 10 NB Readiness Support Areas */}
               <div className="p-7 rounded-2xl bg-surface/40 border border-gray-200/80 space-y-4">
                 <h2 className="text-xl sm:text-2xl font-extrabold text-navy tracking-tight">
-                  13 Core QMS Areas We Assess
+                  10 Key Notified Body Readiness Services
                 </h2>
                 <div className="grid grid-cols-1 gap-2.5 pt-2">
-                  {qmsAreas.map((item, idx) => (
+                  {nbSupportItems.map((item, idx) => (
                     <div
                       key={idx}
                       className="p-3.5 rounded-xl bg-white border border-gray-200 shadow-2xs flex items-start gap-3"
@@ -157,21 +183,6 @@ function EUQMSPage() {
                 </div>
               </div>
 
-              {/* PRRC & Regulatory Governance */}
-              <div className="p-7 rounded-2xl bg-surface/40 border border-gray-200/80 space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-navy shrink-0">
-                    <UserCheck className="h-5 w-5 text-[#0b3a96]" />
-                  </div>
-                  <h3 className="text-lg font-extrabold text-navy">
-                    PRRC &amp; Regulatory Governance (Article 15)
-                  </h3>
-                </div>
-                <p className="text-[13.5px] text-navy/75 leading-relaxed font-medium">
-                  Where applicable, we review how Person Responsible for Regulatory Compliance (PRRC) responsibilities interface with batch release, technical documentation maintenance, PMS/vigilance and lifecycle compliance. The objective is clear accountability, demonstrable qualification records, and uncompromised regulatory oversight.
-                </p>
-              </div>
-
               {/* Expert Differentiator */}
               <div className="p-7 rounded-2xl bg-gradient-to-br from-navy to-[#0b2b6b] text-white shadow-md">
                 <div className="flex items-center gap-2.5 mb-3 text-blue-300">
@@ -179,10 +190,10 @@ function EUQMSPage() {
                   <span className="text-xs font-extrabold uppercase tracking-widest">Expert Differentiator</span>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
-                  Implementation Testing Over Paper Checklists
+                  Address the Regulatory Root Cause, Not Just the Question
                 </h3>
                 <p className="text-[13.5px] text-white/85 leading-relaxed font-normal">
-                  A compliant technical file cannot compensate for weak implementation. We test whether the QMS can produce objective evidence that the regulatory strategy is actually being executed on the manufacturing floor and in post-market surveillance.
+                  When a Notified Body raises a question, we determine whether the issue is missing evidence, weak rationale, inconsistent documentation, inadequate implementation or a broader regulatory strategy gap. The response then addresses the root problem rather than only the wording of the finding.
                 </p>
               </div>
             </div>
@@ -191,26 +202,26 @@ function EUQMSPage() {
             <div className="lg:col-span-4 space-y-6">
               <div className="bg-slate-50 p-6 rounded-2xl border border-gray-200/80 shadow-xs">
                 <h4 className="text-sm font-extrabold text-navy uppercase tracking-wider mb-4 pb-3 border-b border-gray-200">
-                  Audit Readiness Scope
+                  Notified Body Support Scope
                 </h4>
                 <div className="space-y-3 text-xs font-medium text-navy/75">
-                  <p>• ISO 13485:2016 + MDR/IVDR Gap Analysis</p>
-                  <p>• Mock Notified Body Stage 1 &amp; Stage 2 Audits</p>
-                  <p>• Critical Subcontractor &amp; Supplier Audits</p>
-                  <p>• CAPA Remediation &amp; Root-Cause Resolution</p>
+                  <p>• Scope codes selection (TÜV SÜD, BSI, DEKRA, DNV, etc.)</p>
+                  <p>• Pre-submission completeness screening</p>
+                  <p>• Onsite &amp; remote audit representation support</p>
+                  <p>• Formal AI / deficiency response matrices</p>
                 </div>
               </div>
 
               <div className="bg-blue-50/60 p-6 rounded-2xl border border-blue-200 text-center">
-                <h4 className="text-base font-extrabold text-navy mb-2">Prepare for QMS Audit</h4>
+                <h4 className="text-base font-extrabold text-navy mb-2">Facing an NB Nonconformity?</h4>
                 <p className="text-xs text-navy/70 mb-5 leading-relaxed">
-                  Ensure your quality management system produces defensible objective evidence before Notified Body inspectors arrive.
+                  Turn around Notified Body findings within tight official response windows with our regulatory defense team.
                 </p>
                 <Link
-                  to="/contact"
+                  to="/services/eu/deficiency-response"
                   className="inline-flex w-full items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-white text-xs font-bold py-3 rounded-md transition-colors"
                 >
-                  Schedule QMS Audit <ArrowRight className="h-3.5 w-3.5" />
+                  Deficiency Support <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </div>
@@ -219,8 +230,8 @@ function EUQMSPage() {
       </section>
 
       <CTABand
-        title="Harmonize Your Quality System with European Regulatory Mandates"
-        description="Connect your procedures, PRRC responsibilities, and technical files into one seamless audit-ready infrastructure."
+        title="Secure and Defend Your European CE Mark Certification"
+        description="Our seasoned consultants prepare your team and documentation for uncompromising Notified Body audits."
       />
     </>
   );

@@ -1,207 +1,628 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
-import { LinearFlow } from "@/components/site/ProcessFlow";
-import { CTABand } from "@/components/site/Bits";
-import { ReactNode } from "react";
-
-const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:text-blue-800 transition-colors underline decoration-blue-300/50 hover:decoration-blue-600 underline-offset-4 duration-300";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ChevronRight,
+  Shield,
+  FileText,
+  Building2,
+  Activity,
+  Database,
+  Search,
+  Layers,
+  FlaskConical,
+  Award,
+  RefreshCw,
+  TrendingUp,
+  Cpu,
+  Sparkles,
+  Check,
+  Stethoscope,
+  Microscope,
+  Heart,
+  Eye,
+  Smile,
+  Zap,
+  Clock,
+  Send,
+  HelpCircle,
+} from "lucide-react";
+import euHeroMapImg from "@/assets/eu-hero-map.png";
+import euMdrDeviceImg from "@/assets/eu-mdr-device.png";
+import euIvdrDeviceImg from "@/assets/eu-ivdr-device.png";
 
 export const Route = createFileRoute("/services/eu/")({
-    head: () => ({
-        meta: [
-            { title: "EU MDR 2017/745 & EU IVDR 2017/746 Consultant | CE Marking & EC REP | NKB Regovanta" },
-            {
-                name: "description",
-                content: "Expert EU MDR 2017/745 regulatory consultant & EU IVDR 2017/746 compliance. Technical Documentation File (TDF) compilation, General Safety and Performance Requirements (GSPR) checklist, Clinical Evaluation Report (CER) MEDDEV 2.7/1 Rev 4, Performance Evaluation Report (PER), European Authorized Representative (EC REP), EUDAMED registration, and Post-Market Surveillance (PMS) / PSUR.",
-            },
-            {
-                name: "keywords",
-                content: "EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746 consultant, Technical Documentation File (TDF) compilation MDR, General Safety and Performance Requirements (GSPR) checklist, Clinical Evaluation Report (CER) MEDDEV 2.7/1 Rev 4, Performance Evaluation Report (PER) IVDR, European Authorized Representative (EC REP), EUDAMED registration and UDI compliance, Post-Market Surveillance (PMS) / PSUR EU MDR, Notified Body audit support EU, NKB Regovanta",
-            },
-            { property: "og:title", content: "EU MDR 2017/745 & CE Marking Consulting | NKB Regovanta" },
-            {
-                property: "og:description",
-                content: "Comprehensive CE Marking, MDR/IVDR technical documentation, Clinical Evaluation Reports (CER), and EC REP representation in Europe.",
-            },
-            { property: "og:url", content: "https://www.nkbregovanta.com/services/eu" },
-        ],
-        links: [
-            { rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" },
-        ],
-    }),
-    component: EUMarket,
+  head: () => ({
+    meta: [
+      {
+        title:
+          "EU MDR 2017/745 & EU IVDR 2017/746 Regulatory Consulting | CE Marking & Technical Documentation | NKB Regovanta",
+      },
+      {
+        name: "description",
+        content:
+          "Senior EU MDR 2017/745 & EU IVDR 2017/746 regulatory consultants. CE marking, Annex II & III technical documentation, GSPR compliance, Clinical Evaluation (CER), Performance Evaluation (PER), Notified Body strategy, EUDAMED, and PMS compliance.",
+      },
+      {
+        name: "keywords",
+        content:
+          "EU MDR 2017/745 regulatory consultant, EU IVDR 2017/746 consulting, CE Marking medical devices, MDR technical documentation, GSPR compliance, CER clinical evaluation, IVDR PER performance evaluation, Notified Body strategy, EUDAMED UDI, NKB Regovanta",
+      },
+      {
+        property: "og:title",
+        content: "EU MDR & IVDR Regulatory Consulting | CE Marking & Technical Documentation | NKB Regovanta",
+      },
+      {
+        property: "og:description",
+        content:
+          "Comprehensive European regulatory consulting across Medical Devices (MDR) and In Vitro Diagnostics (IVDR). One unified, defensible conformity package.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" }],
+  }),
+  component: EUMarketHubPage,
 });
 
-const tabs = [
-    "Overview & Compliance Landscape",
-    "Step-by-Step EU Process",
-    "NKB REGOVANTA EU Key Offerings",
-    "EU Authorized Representative (EAR)"
+/* ── Static Data ── */
+
+const trustBadges = [
+  { icon: Award, label: "CE Marking" },
+  { icon: FileText, label: "Technical Documentation" },
+  { icon: Building2, label: "Notified Body Strategy" },
+  { icon: Activity, label: "Clinical & Performance Evidence" },
+  { icon: Database, label: "EUDAMED Support" },
 ];
 
-const keyOfferings: { title: ReactNode, desc: ReactNode }[] = [
-    { title: <Link to="/services/eu/mdr-ivdr-transition" className={inlineLinkCls}>Regulatory Strategy & MDR/IVDR Transition</Link>, desc: "We design comprehensive, end-to-end regulatory roadmaps specifically adapted for the EU MDR and EU IVDR frameworks. Our guidance ensures a seamless transition from legacy Directive regimes while achieving full alignment with the latest European requirements." },
-    { title: <Link to="/services/eu/technical-documentation" className={inlineLinkCls}>Technical Documentation & Conformity Assessment</Link>, desc: "Our specialists facilitate the complete lifecycle of your Technical Files and Design Dossiers—from initial development and rigorous review to final submission. We also guide Notified Body interactions, oversee CE-Marking procedures, and support device safety and performance testing validations." },
-    { title: <Link to="/services/eu/clinical-evaluation" className={inlineLinkCls}>Clinical & Performance Evaluation</Link>, desc: "NKB Regovanta delivers expert preparation for critical clinical documentation, including Clinical Evaluation Reports (CERs), Performance Evaluation Reports (PERs), PMCF/PMPF plans, PSURs, and biological evaluation data. We ensure absolute technical precision and regulatory fidelity across all device classifications." },
-    { title: <Link to="/services/eu/eudamed" className={inlineLinkCls}>UDI & EUDAMED Registration Support</Link>, desc: "We meticulously verify that your Unique Device Identification (UDI) systems are fully compliant and provide hands-on assistance with the complex registration processes within the European database on medical devices (EUDAMED), alongside ongoing lifecycle management." },
-    { title: <Link to="/services/eu/ear" className={inlineLinkCls}>European Authorized Representative (EAR) & Local Representation</Link>, desc: "For medical device manufacturers headquartered outside the EU, EEA, or Turkey, we serve as your legally mandated European Authorized Representative (EAR), delivering robust local compliance oversight and support across all EU member states." },
-    { title: <Link to="/services/eu/pms" className={inlineLinkCls}>Post-Market Surveillance (PMS)</Link>, desc: "We assist in establishing, implementing, and maintaining resilient PMS infrastructures. This includes drafting Post-Market Surveillance Plans (PMSP) and Reports (PMSR), managing vigilance reporting, Field Safety Corrective Actions (FSCAs), and ensuring sustainable market access through continuous CE-mark retention." },
-    { title: <Link to="/services/eu/ce-registration" className={inlineLinkCls}>CE Device Registration Pathway</Link>, desc: "NKB Regovanta oversees the entire EU CE-marking registration journey. We support conformity assessments, compile impeccable submissions, strategically engage with Notified Bodies, and drive timely approvals across all medical device and in vitro diagnostic categories." },
-    { title: <Link to="/services/eu/qms" className={inlineLinkCls}>QMS Implementation Support</Link>, desc: "We provide comprehensive support for the deployment and ongoing maintenance of ISO 13485-compliant Quality Management Systems. Our approach ensures strict alignment with EU MDR/IVDR Quality and Safety mandates and fully anticipates Notified Body audit expectations." },
-    { title: <Link to="/services/eu/labeling" className={inlineLinkCls}>Labeling & Artwork Compliance</Link>, desc: "Our regulatory team meticulously reviews your labeling, Instructions for Use (IFUs), product packaging, and symbology to guarantee full compliance with MDR/IVDR standards and the complex multilingual requirements spanning all 27 EU member states." }
+const mdrHighlights = [
+  "Product Classification & Conformity Assessment",
+  "GSPR Compliance & Risk Management",
+  "Clinical Evaluation (CEP & CER) & PMCF",
+  "Technical Documentation (Annex II & III)",
+  "Notified Body Strategy & Audit Readiness",
+  "PMS, Vigilance, PSUR & FSCA",
+  "MDD/AIMDD to MDR Transition",
+  "EUDAMED & Economic Operator Support",
 ];
 
-const earOfferings: { title: ReactNode, desc: ReactNode }[] = [
-    { title: "Device Registration with EU Authorities", desc: <span>As your appointed <Link to="/services/eu/ear" className={inlineLinkCls}>European Authorized Representative (EAR)</Link>, NKB Regovanta fulfills all MDR/IVDR local representation mandates for non-EU manufacturers. Operating from our European base, we facilitate direct device registration activities with relevant Competent Authorities and maintain all statutorily required regulatory records to secure your legal placement on the Union market.</span> },
-    { title: "Documentation & Conformity Assurance", desc: "Our regulatory compliance experts conduct rigorous verifications of your Declaration of Conformity (DoC), CE Certificates, and Technical Files. We ensure these critical documents remain complete, continuously updated, and strictly compliant with MDR/IVDR standards, guaranteeing total readiness for conformity assessments." },
-    { title: "Responding to Competent Authority Queries", desc: "NKB Regovanta assumes the responsibility for all direct communications and formal clarification requests initiated by EU Competent Authorities or Notified Bodies. We provide prompt, technically accurate responses on your behalf, mitigating the risk of approval delays or post-market regulatory complications." },
-    { title: "Vigilance & Incident Communication", desc: "In our capacity as your EAR, we serve as the primary conduit for all safety-related regulatory communications. When required, we expertly coordinate incident notifications, Field Safety Corrective Actions (FSCA), and comprehensive vigilance reporting, ensuring seamless alignment between the manufacturer, healthcare professionals, and regulatory authorities." },
-    { title: "Inspection & Audit Readiness", desc: "We proactively maintain all necessary documentation, official correspondence, and mandatory records required for authority audits and inspections. Our team guarantees that your Technical Documentation, labeling records, and post-market data are immediately accessible and fully compliant with all MDR/IVDR expectations." }
+const ivdrHighlights = [
+  "IVDR Classification & Conformity Assessment",
+  "Performance Evaluation Plan & Report (PER)",
+  "Scientific Validity",
+  "Analytical Performance",
+  "Clinical Performance",
+  "Performance Studies & Lab Strategy",
+  "PMS, PMPF, PSUR & Vigilance",
+  "IVDD to IVDR Transition & EUDAMED Support",
 ];
 
-function EUMarket() {
-    const [activeTab, setActiveTab] = useState(tabs[0]);
+const coreServices = [
+  {
+    icon: Search,
+    title: "Regulatory Strategy\n& Classification",
+    desc: "Define regulatory pathway, classification, applicable rules and conformity assessment route under MDR or IVDR.",
+    to: "/services/eu/classification",
+    cta: "Define Your EU Regulatory Pathway",
+  },
+  {
+    icon: FileText,
+    title: "Technical Documentation\n& GSPR Compliance",
+    desc: "Prepare and review technical documentation aligned with Annex II & III and applicable harmonised standards.",
+    to: "/services/eu/technical-documentation",
+    cta: "Strengthen Your Technical Documentation",
+  },
+  {
+    icon: Activity,
+    title: "Clinical Evaluation\n& MDR Evidence Strategy",
+    desc: "CEP, CER, literature strategy, clinical evidence gap analysis and PMCF planning tailored to device risk and claims.",
+    to: "/services/eu/clinical-evaluation",
+    cta: "Review Your MDR Clinical Evidence",
+  },
+  {
+    icon: FlaskConical,
+    title: "IVDR Performance\nEvaluation",
+    desc: "Scientific validity, analytical performance and clinical performance integrated into a robust PER and PMPF.",
+    to: "/services/eu/ivdr-performance-evaluation",
+    cta: "Build Your IVDR Evidence Strategy",
+  },
+  {
+    icon: Building2,
+    title: "Notified Body Strategy\n& Audit Readiness",
+    desc: "NB selection, application readiness, QMS readiness, audit preparation and response to NB findings.",
+    to: "/services/eu/notified-body",
+    cta: "Prepare for Notified Body Review",
+  },
+  {
+    icon: Award,
+    title: "CE Marking &\nEU Registration",
+    desc: "Conformity assessment support, EU Declaration of Conformity, CE marking and registration requirements.",
+    to: "/services/eu/ce-marking",
+    cta: "Plan Your CE Marking Strategy",
+  },
+  {
+    icon: Shield,
+    title: "PMS, PMCF/PMPF\n& Vigilance",
+    desc: "PMS planning, PMCF/PMPF execution, PSUR, trend reporting, vigilance and FSCA support.",
+    to: "/services/eu/pms-pmcf",
+    cta: "Strengthen Your Post-Market System",
+  },
+  {
+    icon: Database,
+    title: "EUDAMED & Economic\nOperator Support",
+    desc: "SRN, actor registration, EUDAMED modules, data submission and UDI support for devices & IVDs.",
+    to: "/services/eu/eudamed",
+    cta: "Prepare Your EU Registration Strategy",
+  },
+  {
+    icon: RefreshCw,
+    title: "Legacy Device /\nTransition Support",
+    desc: "MDD to MDR and IVDD to IVDR transition, gap analysis, technical file update and NB re-certification.",
+    to: "/services/eu/mdr-ivdr-transition",
+    cta: "Assess a Regulatory Change",
+  },
+  {
+    icon: Layers,
+    title: "Change Assessment\n& Lifecycle Support",
+    desc: "Impact assessment for changes, supplements, renewals and ongoing compliance strategy.",
+    to: "/services/eu/change-assessment",
+    cta: "Assess a Device Change",
+  },
+];
 
-    return (
-        <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{"@context":"https://schema.org","@type":"Service","name":"EU MDR IVDR CE Marking Consulting","url":"https://www.nkbregovanta.com/services/eu","description":"CE marking under EU MDR 2017/745 and EU IVDR 2017/746. European Authorized Representative (EAR), EUDAMED registration, clinical evaluation, and PMS support.","provider":{"@type":"ProfessionalService","name":"NKB Regovanta Solutions Pvt. Ltd.","url":"https://www.nkbregovanta.com"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nkbregovanta.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.nkbregovanta.com/services"},{"@type":"ListItem","position":3,"name":"EU MDR IVDR","item":"https://www.nkbregovanta.com/services/eu"}]}]) }} />
-            <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-12 pt-0">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
-                    <div className="flex items-center gap-2 text-[11px] text-navy/60 font-semibold mb-4">
-                        <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
-                        <ChevronRight className="h-3 w-3" />
-                        <Link to="/services/regulatory-affairs" className="hover:text-navy transition-colors">Regulatory Affairs</Link>
-                        <ChevronRight className="h-3 w-3" />
-                        <span className="text-navy">EU</span>
-                    </div>
-                    <div className="flex items-center gap-4 mb-4">
-                        <img src="https://flagcdn.com/w80/eu.png" srcSet="https://flagcdn.com/w160/eu.png 2x" width="48" alt="European Union" className="rounded-[3px] shadow-sm border border-black/10" />
-                        <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70">European Union</p>
-                    </div>
-                    <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: "clamp(28px, 3.5vw, 44px)" }}>
-                        EU MDR / IVDR Compliance & Registration
-                    </h1>
-                    <p className="mt-4 text-[13.5px] leading-relaxed text-navy/70 font-medium max-w-2xl">
-                        NKB Regovanta simplifies compliance with stringent EU medical device requirements under the Medical Devices Regulation (EU 2017/745) and In Vitro Diagnostic Regulation (EU 2017/746). We expertly guide manufacturers through Notified Body conformity assessments, CE technical documentation, EUDAMED registration, and the seamless transition from legacy directives to the new regulatory landscape.
+const lifecycleSteps = [
+  { num: "01", label: "Strategy & Intended Purpose", desc: "Define intended purpose, device qualification & regulatory roadmap" },
+  { num: "02", label: "Classification & Conformity", desc: "MDR rules / IVDR Rules 1–7 & conformity assessment route" },
+  { num: "03", label: "Evidence & Testing Strategy", desc: "V&V, GSPR mapping, clinical evaluation (CER) & performance studies" },
+  { num: "04", label: "Technical Documentation", desc: "Annex II & III dossier compilation, risk management & labeling" },
+  { num: "05", label: "Notified Body Review & CE", desc: "Audit defense, deficiency resolution, DoC & CE marking" },
+  { num: "06", label: "Post-Market Compliance", desc: "PMS, PMCF / PMPF, PSUR, vigilance & EUDAMED maintenance" },
+];
+
+const whyChoose = [
+  "Regulatory strategy before dossier preparation",
+  "Technical documentation built for regulatory scrutiny",
+  "Deep MDR & IVDR expertise across all risk classes",
+  "Evidence-driven approach for MDR & IVDR success",
+  "Strong relationships with leading Notified Bodies",
+  "Lifecycle support beyond initial CE marking",
+];
+
+const industriesSupported = [
+  { icon: Stethoscope, label: "Medical Devices" },
+  { icon: Microscope, label: "In Vitro Diagnostics" },
+  { icon: Zap, label: "Active Implantable Devices" },
+  { icon: Cpu, label: "Software as a Medical Device" },
+  { icon: Shield, label: "Combination Products" },
+  { icon: Smile, label: "Dental & Orthodontics" },
+  { icon: Heart, label: "Cardiovascular & Implants" },
+  { icon: Eye, label: "Ophthalmic & Optics" },
+];
+
+function EUMarketHubPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: "EU MDR 2017/745 & EU IVDR 2017/746 Regulatory Consulting",
+              url: "https://www.nkbregovanta.com/services/eu",
+              description:
+                "Comprehensive European medical device and in vitro diagnostic regulatory consulting, CE marking, technical documentation, CER, PER, and Notified Body support.",
+              provider: {
+                "@type": "ProfessionalService",
+                name: "NKB Regovanta Solutions Pvt. Ltd.",
+                url: "https://www.nkbregovanta.com",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nkbregovanta.com" },
+                { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
+                { "@type": "ListItem", position: 3, name: "European Union", item: "https://www.nkbregovanta.com/services/eu" },
+              ],
+            },
+          ]),
+        }}
+      />
+
+      {/* ── 1. HERO SECTION (Dark Navy / Gradient Theme matching Pic 1) ── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#05152e] via-[#092248] to-[#0d2e5e] text-white pt-12 pb-16 lg:pt-16 lg:pb-20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_-10%,rgba(37,99,235,0.25),rgba(255,255,255,0))]" />
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-1.5 text-[11px] text-blue-200/60 font-semibold mb-6">
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-[#f5c754] font-bold uppercase tracking-widest text-[10px]">European Union</span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#f5c754] block mb-2">
+                European Union
+              </span>
+              <h1
+                className="font-display font-extrabold text-white leading-[1.05] tracking-tight mb-3"
+                style={{ fontSize: "clamp(28px, 3.8vw, 48px)" }}
+              >
+                EU MDR 2017/745 &amp;<br />EU IVDR 2017/746
+              </h1>
+              <p className="text-sm sm:text-base font-extrabold uppercase tracking-widest text-blue-200 mb-5">
+                Regulatory Consulting
+              </p>
+
+              {/* Trust Badges Bar */}
+              <div className="flex flex-wrap gap-2.5 mb-6 text-[11px] font-semibold text-blue-100/80">
+                {trustBadges.map((badge) => (
+                  <div
+                    key={badge.label}
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 border border-white/15 backdrop-blur-xs"
+                  >
+                    <badge.icon className="h-3.5 w-3.5 text-[#f5c754]" />
+                    <span>{badge.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-[13.5px] sm:text-[14.5px] text-blue-100/90 leading-relaxed font-normal mb-8 max-w-2xl">
+                NKB Regovanta supports Medical Device and IVD manufacturers across the complete European regulatory lifecycle — from intended purpose, classification and conformity assessment through testing strategy, technical documentation, clinical or performance evidence, Notified Body readiness, CE marking and post-market compliance.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-[#f5c754] hover:bg-[#ebd255] text-navy text-[13px] font-bold px-6 py-3.5 rounded-md transition-all shadow-lg shadow-amber-900/20"
+                >
+                  Discuss Your EU Regulatory Strategy <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic: 3D EU Map & MDR / IVDR Badges */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[420px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#0e2a54] to-[#081832] p-2">
+                <img
+                  src={euHeroMapImg}
+                  alt="European Union 3D Map with EU MDR 2017/745 & EU IVDR 2017/746"
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. TWO DISTINCT REGULATORY SYSTEMS (MDR vs IVDR Big Dual Cards) ── */}
+      <section className="py-14 bg-[#f8fafc] border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Card 1: MEDICAL DEVICES – EU MDR 2017/745 */}
+            <div className="flex flex-col rounded-3xl border-2 border-[#103a71]/30 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+              {/* Card Header */}
+              <div className="bg-[#0b274e] text-white px-6 py-4 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-400/30 flex items-center justify-center shrink-0">
+                  <Shield className="h-4.5 w-4.5 text-[#f5c754]" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-200 block">Regulation (EU) 2017/745</span>
+                  <h2 className="text-base sm:text-lg font-extrabold text-white">
+                    MEDICAL DEVICES – EU MDR 2017/745
+                  </h2>
+                </div>
+              </div>
+
+              {/* Card Body */}
+              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <p className="text-[12.5px] text-navy/75 font-medium leading-relaxed">
+                      Support across Class I, Is, Im, Ir, IIa, IIb and III Medical Devices, including implantable, active, software and custom-made devices.
                     </p>
-                </div>
-            </section>
-
-            <div className="sticky top-0 z-30 bg-white border-b border-border shadow-sm">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex gap-0 overflow-x-auto">
-                        {tabs.map((tab) => (
-                            <button key={tab} id={`tab-${tab.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} onClick={() => setActiveTab(tab)}
-                                className={`whitespace-nowrap px-5 py-4 text-[12.5px] font-semibold border-b-2 transition-colors ${activeTab === tab ? "border-navy text-navy" : "border-transparent text-navy/50 hover:text-navy"}`}>
-                                {tab}
-                            </button>
-                        ))}
+                    <div className="w-20 h-20 shrink-0 hidden sm:block">
+                      <img
+                        src={euMdrDeviceImg}
+                        alt="Medical Device Cart"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
+                  </div>
+
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[12px] font-medium text-navy/80">
+                    {mdrHighlights.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-[#0b3a96] shrink-0 mt-0.5" strokeWidth={2.5} />
+                        <span className="leading-tight">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Positioning Line */}
+                  <div className="mt-5 p-3 rounded-lg bg-blue-50/70 border border-blue-100 text-[11px] font-semibold text-navy/85">
+                    <span className="text-blue-700 font-bold uppercase tracking-wider block mb-1">MDR Evidence Logic</span>
+                    Intended Purpose → Classification → GSPR → Risk → V&amp;V → Clinical Evidence → CER → PMCF → PMS
+                  </div>
                 </div>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <Link
+                    to="/services/eu/mdr"
+                    className="inline-flex items-center gap-2 text-[13px] font-bold text-[#0b3a96] hover:text-[#082b70] transition-colors group"
+                  >
+                    Learn more about MDR Services <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
             </div>
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-                {activeTab === "Overview & Compliance Landscape" && (
-                    <div className="space-y-10 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-6">Compliance for Medical Device Registration & Regulation Landscape in EU</h2>
-                            <p className="text-[13.5px] text-navy/80 leading-relaxed mb-6">
-                                The European Union stands as one of the most rigorously regulated, yet commercially vital, medical device markets globally. Encompassing 27 member states, alongside 3 EEA nations and Turkey, the Union market operates under a strictly harmonized regulatory ecosystem. This framework, defined by the EU MDR (2017/745) for medical devices and the EU IVDR (2017/746) for in vitro diagnostics, mandates uniform safety and performance benchmarks across all product categories.
-                            </p>
-                            <p className="text-[13.5px] text-navy/80 leading-relaxed mb-8">
-                                To legally introduce a device into the Union market, manufacturers are required to secure CE marking. This certification serves as a formal declaration of compliance with applicable regulations, contingent upon the device’s specific risk classification and the appropriate conformity assessment route. Non-compliance carries severe repercussions, potentially resulting in product recalls, customs seizures, suspension of existing certifications, or a total loss of market access privileges.
-                            </p>
-                            
-                            <h3 className="text-base font-bold text-navy mb-4">Under the current EU Regulatory regime:</h3>
-                            <div className="grid gap-4 md:grid-cols-2">
-                                <div className="flex gap-3 p-5 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <CheckCircle2 className="h-5 w-5 text-navy mt-0.5 shrink-0" />
-                                    <p className="text-[13px] text-navy/80 leading-relaxed"><strong>CE marking is strictly mandatory</strong> for all medical devices and IVDs prior to commercialization within the region.</p>
-                                </div>
-                                <div className="flex gap-3 p-5 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <CheckCircle2 className="h-5 w-5 text-navy mt-0.5 shrink-0" />
-                                    <p className="text-[13px] text-navy/80 leading-relaxed"><strong>EUDAMED device registration</strong> is actively being implemented in phased rollouts, with multiple modules already designated for mandatory use.</p>
-                                </div>
-                                <div className="flex gap-3 p-5 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <CheckCircle2 className="h-5 w-5 text-navy mt-0.5 shrink-0" />
-                                    <p className="text-[13px] text-navy/80 leading-relaxed"><strong>European Authorised Representative (EAR)</strong> appointment is legally obligatory for any manufacturing entity located outside the EU/EEA/Turkey jurisdictions.</p>
-                                </div>
-                                <div className="flex gap-3 p-5 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <CheckCircle2 className="h-5 w-5 text-navy mt-0.5 shrink-0" />
-                                    <p className="text-[13px] text-navy/80 leading-relaxed"><strong>Stringent MDR/IVDR classification rules</strong> necessitate highly robust technical documentation, definitive clinical or performance evidence, and active, continuous lifecycle monitoring.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
+            {/* Card 2: IN VITRO DIAGNOSTICS – EU IVDR 2017/746 */}
+            <div className="flex flex-col rounded-3xl border-2 border-[#b45309]/30 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+              {/* Card Header */}
+              <div className="bg-[#b45309] text-white px-6 py-4 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-amber-400/20 border border-amber-300/30 flex items-center justify-center shrink-0">
+                  <FlaskConical className="h-4.5 w-4.5 text-white" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-100 block">Regulation (EU) 2017/746</span>
+                  <h2 className="text-base sm:text-lg font-extrabold text-white">
+                    IN VITRO DIAGNOSTICS – EU IVDR 2017/746
+                  </h2>
+                </div>
+              </div>
 
-                {activeTab === "Step-by-Step EU Process" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">Step-by-Step EU Compliance Process</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed mb-6">
-                                Successfully securing market access for a medical device or IVD within the EU involves navigating a series of well-defined regulatory stages. The typical processing time spans from 3 to 12 months, contingent upon the device's classification level and the current state of documentation readiness.
-                            </p>
-                            
-                            <LinearFlow steps={[
-                            { title: "Product classification as per EUMDR & EU IVDR" },
-                            { title: "Technical file compilation as per Annex II & III of EUMDR & EUIVDR" },
-                            { title: "Draft EU DoC" },
-                            { title: "Identify NANDO registered EU NB for class Im, Ir, IIa, IIb & III" },
-                            { title: "Guidance through CE certification" },
-                            { title: "Affix CE to your device" },
-                            { title: "Support in registering your device on EUDAMED" },
-                            { title: "Maintain compliance with Post market activities" }
-                        ]} />
-                        </div>
+              {/* Card Body */}
+              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <p className="text-[12.5px] text-navy/75 font-medium leading-relaxed">
+                      Support across Class A, B, C and D IVDs under Rules 1–7, with deep expertise in scientific validity, analytical performance and higher-risk scrutiny.
+                    </p>
+                    <div className="w-20 h-20 shrink-0 hidden sm:block">
+                      <img
+                        src={euIvdrDeviceImg}
+                        alt="IVD Microscope"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
-                )}
+                  </div>
 
-                {activeTab === "NKB REGOVANTA EU Key Offerings" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">NKB REGOVANTA Medical Device EU Key Offerings</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed">
-                                Our comprehensive suite of regulatory services is designed to guide manufacturers from initial strategy through to post-market compliance, ensuring seamless entry and sustained presence in the European Union market.
-                            </p>
-                        </div>
-                        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                            {keyOfferings.map((item) => (
-                                <div key={item.title} className="p-6 rounded-lg bg-blue-50/50 border border-blue-100 flex flex-col h-full">
-                                    <h3 className="text-[13.5px] font-bold text-navy mb-3">{item.title}</h3>
-                                    <p className="text-[12.5px] text-navy/70 leading-relaxed flex-grow">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[12px] font-medium text-navy/80">
+                    {ivdrHighlights.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-[#b45309] shrink-0 mt-0.5" strokeWidth={2.5} />
+                        <span className="leading-tight">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                {activeTab === "EU Authorized Representative (EAR)" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">EU Authorized Representative (EAR) Service Offerings</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed">
-                                For manufacturers outside the EU, having a reliable European Authorized Representative is not just a legal requirement—it is a critical component of your regional market access strategy and ongoing compliance security.
-                            </p>
-                        </div>
-                        <div className="space-y-5">
-                            {earOfferings.map((item, i) => (
-                                <div key={i} className="flex gap-4 p-6 rounded-lg border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-xs font-bold mt-0.5">{i + 1}</div>
-                                    <div>
-                                        <h3 className="font-bold text-navy text-[14px] mb-2">{item.title}</h3>
-                                        <p className="text-[13px] text-navy/70 leading-relaxed">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                  {/* Positioning Line */}
+                  <div className="mt-5 p-3 rounded-lg bg-amber-50/70 border border-amber-200 text-[11px] font-semibold text-navy/85">
+                    <span className="text-[#b45309] font-bold uppercase tracking-wider block mb-1">IVDR Evidence Logic</span>
+                    Intended Purpose → Rule 1–7 → Scientific Validity → Analytical → Clinical → PER → PMPF → PMS
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <Link
+                    to="/services/eu/ivdr"
+                    className="inline-flex items-center gap-2 text-[13px] font-bold text-[#b45309] hover:text-[#92400e] transition-colors group"
+                  >
+                    Learn more about IVDR Services <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. OUR CORE SERVICES (10 Cards from Section 22) ── */}
+      <section className="py-16 bg-white border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
+              European Regulatory Services
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mt-3">
+              Our Core EU Services
+            </h2>
+            <p className="text-sm text-navy/70 mt-2 font-medium">
+              End-to-end guidance across every phase of qualification, testing, technical documentation, CE marking and post-market compliance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4.5">
+            {coreServices.map((card) => (
+              <div
+                key={card.title}
+                className="flex flex-col p-5 rounded-2xl border border-gray-200/80 bg-white hover:shadow-lg hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 mb-3.5 group-hover:bg-navy group-hover:border-navy transition-all">
+                  <card.icon className="h-5 w-5 text-[#0b3a96] group-hover:text-white transition-colors" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-[13px] font-extrabold text-navy leading-snug whitespace-pre-line mb-2 group-hover:text-[#0b3a96] transition-colors">
+                  {card.title}
+                </h3>
+                <p className="text-[11.5px] text-navy/70 leading-relaxed flex-1 mb-4 font-medium">
+                  {card.desc}
+                </p>
+                <Link
+                  to={card.to}
+                  className="inline-flex items-center gap-1 text-[11.5px] font-extrabold text-[#0b3a96] hover:text-[#082b70] pt-2 border-t border-gray-100 group/link"
+                >
+                  Learn more <ArrowRight className="h-3 w-3 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. THE REGULATORY DECISION CHAIN (6-Step Lifecycle Process Flow) ── */}
+      <section className="py-16 bg-slate-50 border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-navy/70">
+              Conformity Architecture
+            </span>
+            <h2 className="text-xl sm:text-2xl font-extrabold text-navy tracking-tight mt-1">
+              End-to-End Support Across the Product Lifecycle
+            </h2>
+            <p className="text-xs sm:text-sm text-navy/65 mt-1 font-medium">
+              The Regulatory Decision Chain: How strategy, evidence, files and Notified Bodies connect.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+            {lifecycleSteps.map((step, idx) => (
+              <div
+                key={step.num}
+                className="flex flex-col items-center text-center p-4 rounded-xl bg-white border border-gray-200/80 shadow-2xs relative"
+              >
+                {idx < lifecycleSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-7 -right-2.5 z-10">
+                    <ArrowRight className="h-3.5 w-3.5 text-navy/30" />
+                  </div>
                 )}
+                <div className="w-8 h-8 rounded-full bg-navy text-[#f5c754] flex items-center justify-center text-[11px] font-extrabold mb-2.5 shadow-2xs">
+                  {step.num}
+                </div>
+                <h4 className="text-[12px] font-extrabold text-navy leading-snug mb-1">
+                  {step.label}
+                </h4>
+                <p className="text-[10.5px] text-navy/65 leading-tight font-medium">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. WHY NKB REGOVANTA? + OUR REGULATORY EXPERTISE ── */}
+      <section className="py-16 bg-white border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Why NKB */}
+            <div className="lg:col-span-4 p-7 rounded-3xl bg-slate-50 border border-gray-200/80 flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-extrabold text-navy mb-5">
+                  Why Choose NKB Regovanta?
+                </h3>
+                <ul className="space-y-3 text-[12.5px] font-medium text-navy/80">
+                  {whyChoose.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="h-4 w-4 text-[#0b3a96] shrink-0 mt-0.5" strokeWidth={2.5} />
+                      <span className="leading-snug">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-6 pt-5 border-t border-gray-200">
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3a96] hover:text-navy"
+                >
+                  Explore our consulting approach <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
             </div>
 
-            <CTABand title="Ready to secure EU CE Marking?" description="Speak to our European Experts" />
-        </>
-    );
+            {/* Regulatory Expertise breakdown */}
+            <div className="lg:col-span-8 space-y-6">
+              <h3 className="text-lg font-extrabold text-navy">
+                Our Regulatory Expertise
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {/* MDR Classes */}
+                <div className="p-6 rounded-2xl bg-blue-50/50 border border-blue-100">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Shield className="h-4.5 w-4.5 text-[#0b3a96]" />
+                    <h4 className="text-sm font-extrabold text-navy">Medical Devices (MDR)</h4>
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-navy/75 font-medium">
+                    <li>• Class I, Is, Im, Ir</li>
+                    <li>• Class IIa &amp; Class IIb</li>
+                    <li>• Class III &amp; Implantable Devices</li>
+                    <li>• Software as a Medical Device (Rule 11)</li>
+                    <li>• Custom-Made &amp; System/Procedure Packs</li>
+                  </ul>
+                </div>
+
+                {/* IVDR Classes */}
+                <div className="p-6 rounded-2xl bg-amber-50/60 border border-amber-200">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FlaskConical className="h-4.5 w-4.5 text-[#b45309]" />
+                    <h4 className="text-sm font-extrabold text-navy">In Vitro Diagnostics (IVDR)</h4>
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-navy/75 font-medium">
+                    <li>• Class A (Non-sterile &amp; Sterile)</li>
+                    <li>• Class B &amp; Class C Assays</li>
+                    <li>• Class D High-Risk (EURL / Common Specs)</li>
+                    <li>• Companion Diagnostics (CDx)</li>
+                    <li>• Self-Testing &amp; Near-Patient Testing</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Industries We Support */}
+              <div className="pt-4">
+                <h4 className="text-xs uppercase font-extrabold tracking-wider text-navy/60 mb-3">
+                  Industries We Support
+                </h4>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {industriesSupported.map((ind) => (
+                    <div
+                      key={ind.label}
+                      className="p-3 rounded-xl bg-slate-50 border border-gray-200/70 flex items-center gap-2.5 text-xs font-semibold text-navy hover:bg-blue-50/50 transition-colors"
+                    >
+                      <ind.icon className="h-4 w-4 text-[#0b3a96] shrink-0" />
+                      <span className="truncate">{ind.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. BOTTOM PARTNER BANNER + CTA ── */}
+      <section className="py-14 bg-gradient-to-r from-[#071b36] via-[#0b274e] to-[#0f3468] text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <span className="text-xs uppercase font-bold text-[#f5c754] tracking-widest block mb-1">
+                Your Partner for EU Market Access
+              </span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2">
+                Build a Defensible EU MDR &amp; IVDR Conformity Roadmap
+              </h3>
+              <p className="text-xs sm:text-sm text-blue-100/80 max-w-2xl leading-relaxed">
+                We build regulatory strategies and technical documentation that drive CE Marking success and ensure long-term compliance in the European market.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex justify-start lg:justify-end">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-[#f5c754] hover:bg-[#ebd255] text-navy text-[13px] font-bold px-6 py-3.5 rounded-md transition-all shadow-lg"
+              >
+                Talk to Our EU Experts <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
-

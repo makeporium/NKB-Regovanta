@@ -3,64 +3,54 @@ import {
   ArrowLeft,
   CheckCircle2,
   ChevronRight,
-  ShieldCheck,
+  Shield,
   Sparkles,
   ArrowRight,
-  Building2,
-  Globe2,
+  Pill,
+  Syringe,
   FileText,
+  Building2,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/eu/ear")({
+export const Route = createFileRoute("/services/eu/article-117")({
   head: () => ({
     meta: [
-      { title: "European Authorized Representative (EAR / EC REP) Services | NKB Regovanta" },
+      { title: "EU MDR Article 117 Drug-Device Combination Products & Notified Body Opinion | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Legally mandated European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR Article 11 and IVDR Article 11.",
+          "Senior regulatory consulting for Drug-Device Combination Products under EU MDR Article 117, Notified Body Opinion (NBOp) dossier compilation, GSPR conformity, and EMA / Competent Authority interface.",
       },
       {
         name: "keywords",
         content:
-          "European Authorized Representative EAR, EC REP services Europe, MDR Article 11 Authorised Representative, Competent Authority liaison, EUDAMED registration, NKB Regovanta",
+          "EU MDR Article 117, Drug-Device Combination Products, Notified Body Opinion NBOp, GSPR compliance medicinal products, prefilled syringes auto-injectors, NKB Regovanta",
       },
-      { property: "og:title", content: "European Authorized Representative (EC REP) | NKB Regovanta" },
+      { property: "og:title", content: "Drug-Device Combination Products & Article 117 | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Fulfill your legal representation mandates across all 27 EU member states with our senior European regulatory representation infrastructure.",
+          "We align device-constituent GSPR evidence, usability, functional performance, and Notified Body Opinion preparation for pharmaceutical combination products.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ear" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/article-117" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ear" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/article-117" }],
   }),
-  component: EUEARPage,
+  component: EUArticle117Page,
 });
 
-function EUEARPage() {
-  const earOfferings = [
-    {
-      title: "Device Registration with EU Competent Authorities",
-      desc: "As your appointed European Authorized Representative (EAR), NKB Regovanta fulfills all MDR/IVDR local representation mandates for non-EU manufacturers, facilitating direct device registration and maintaining mandatory regulatory records.",
-    },
-    {
-      title: "Documentation & Technical Conformity Assurance",
-      desc: "Our regulatory compliance experts conduct rigorous verifications of your Declaration of Conformity (DoC), CE Certificates, and Annex II/III Technical Files to ensure continuous audit readiness.",
-    },
-    {
-      title: "Direct Competent Authority & Notified Body Liaison",
-      desc: "NKB Regovanta manages all formal communications, safety inquiries, and clarification requests from EU Competent Authorities and Notified Bodies on your behalf.",
-    },
-    {
-      title: "Vigilance & Incident Communication",
-      desc: "We serve as the primary conduit for safety notifications, coordinating Field Safety Corrective Actions (FSCA), Field Safety Notices (FSN), and serious incident reporting.",
-    },
-    {
-      title: "Inspection & Audit Representation",
-      desc: "We maintain all statutorily required files, official correspondence, and post-market records immediately accessible for authority inspections and audits.",
-    },
+function EUArticle117Page() {
+  const supportItems = [
+    "Article 117 applicability assessment (integral vs co-packaged / referenced combinations)",
+    "Device constituent qualification, intended purpose and applicable MDR GSPR mapping",
+    "Risk management file (ISO 14971) focused on device-drug interactions and delivery errors",
+    "Human factors & usability engineering studies for delivery devices (IEC 62366-1)",
+    "Functional performance, dose accuracy and delivery repeatability testing",
+    "Biocompatibility (ISO 10993) and chemical characterization of fluid path materials",
+    "Sterility assurance, terminal sterilization validation and packaging integrity",
+    "Technical documentation preparation specifically tailored for Notified Body Opinion (NBOp)",
+    "Direct Notified Body interaction, deficiency defense and post-opinion change impact assessment",
   ];
 
   return (
@@ -72,10 +62,10 @@ function EUEARPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "European Authorized Representative (EAR / EC REP) Services",
-              url: "https://www.nkbregovanta.com/services/eu/ear",
+              name: "EU MDR Article 117 Drug-Device Combination Products & Notified Body Opinion",
+              url: "https://www.nkbregovanta.com/services/eu/article-117",
               description:
-                "Legally mandated European Authorized Representative representation under Regulation (EU) 2017/745 and Regulation (EU) 2017/746.",
+                "Regulatory consulting for medicinal products with integral device constituent parts requiring a Notified Body Opinion under EU MDR Article 117.",
               provider: {
                 "@type": "ProfessionalService",
                 name: "NKB Regovanta Solutions Pvt. Ltd.",
@@ -89,7 +79,7 @@ function EUEARPage() {
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nkbregovanta.com" },
                 { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
                 { "@type": "ListItem", position: 3, name: "European Union", item: "https://www.nkbregovanta.com/services/eu" },
-                { "@type": "ListItem", position: 4, name: "EC REP (EAR)", item: "https://www.nkbregovanta.com/services/eu/ear" },
+                { "@type": "ListItem", position: 4, name: "Article 117", item: "https://www.nkbregovanta.com/services/eu/article-117" },
               ],
             },
           ]),
@@ -106,7 +96,7 @@ function EUEARPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/eu" className="hover:text-navy transition-colors">European Union</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">European Authorized Representative</span>
+            <span className="text-navy">Article 117 Combinations</span>
           </div>
 
           <Link
@@ -118,23 +108,23 @@ function EUEARPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
-              <Globe2 className="h-3.5 w-3.5" /> MDR / IVDR Article 11 Mandate
+              <Syringe className="h-3.5 w-3.5" /> Notified Body Opinion (NBOp)
             </div>
             <h1
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              European Authorized Representative (EAR / EC REP)
+              Drug-Device Combination Products &amp; Article 117
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
-              For medical device and IVD manufacturers located outside the EU/EEA, appointing a legally designated European Authorized Representative (EC REP) is a mandatory prerequisite to place products on the Union market.
+              For medicinal products incorporating an integral device constituent part (such as pre-filled pens, auto-injectors, or inhalers), Article 117 mandates evidence of conformity with applicable MDR Annex I GSPRs and a Notified Body Opinion (NBOp). We prepare and defend the complete device evidence dossier.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
               >
-                Appoint Your EC REP <ArrowRight className="h-4 w-4" />
+                Assess Your Article 117 Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -146,39 +136,35 @@ function EUEARPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-8 space-y-10">
+              {/* Deliverables */}
               <div className="p-7 rounded-2xl bg-surface/40 border border-gray-200/80 space-y-4">
                 <h2 className="text-xl sm:text-2xl font-extrabold text-navy tracking-tight">
-                  Core EAR Responsibilities &amp; Capabilities
+                  Article 117 Compliance &amp; NBOp Deliverables
                 </h2>
-                <div className="grid grid-cols-1 gap-3.5 pt-2">
-                  {earOfferings.map((item, idx) => (
+                <div className="grid grid-cols-1 gap-2.5 pt-2">
+                  {supportItems.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-4 rounded-xl bg-white border border-gray-200 shadow-2xs flex items-start gap-4"
+                      className="p-3.5 rounded-xl bg-white border border-gray-200 shadow-2xs flex items-start gap-3"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#0b3a96] flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">
-                        0{idx + 1}
-                      </div>
-                      <div>
-                        <h4 className="text-[14px] font-extrabold text-navy">{item.title}</h4>
-                        <p className="text-[12.5px] text-navy/70 mt-1 font-medium leading-relaxed">{item.desc}</p>
-                      </div>
+                      <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] mt-0.5 shrink-0" strokeWidth={2.5} />
+                      <span className="text-[13px] font-medium text-navy/90">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Differentiator */}
+              {/* Expert Differentiator */}
               <div className="p-7 rounded-2xl bg-gradient-to-br from-navy to-[#0b2b6b] text-white shadow-md">
                 <div className="flex items-center gap-2.5 mb-3 text-blue-300">
                   <Sparkles className="h-5 w-5" />
-                  <span className="text-xs font-extrabold uppercase tracking-widest">Expert Representation</span>
+                  <span className="text-xs font-extrabold uppercase tracking-widest">Expert Differentiator</span>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
-                  Active Regulatory Guardianship Across 27 Member States
+                  Combined Product Risk and Delivery Realities
                 </h3>
                 <p className="text-[13.5px] text-white/85 leading-relaxed font-normal">
-                  We do not act as passive mailbox representatives. We actively safeguard your commercial access, scrutinize labeling and PRRC qualifications, verify technical documentation completeness, and interface with European authorities.
+                  We align the device-constituent risks, usability protocols and validation evidence directly with the combined product clinical use and drug characteristics, rather than treating the device component as an isolated checklist.
                 </p>
               </div>
             </div>
@@ -187,26 +173,27 @@ function EUEARPage() {
             <div className="lg:col-span-4 space-y-6">
               <div className="bg-slate-50 p-6 rounded-2xl border border-gray-200/80 shadow-xs">
                 <h4 className="text-sm font-extrabold text-navy uppercase tracking-wider mb-4 pb-3 border-b border-gray-200">
-                  EC REP Mandate Requirements
+                  Typical Product Types
                 </h4>
-                <ul className="space-y-2.5 text-xs text-navy/75 font-medium">
-                  <li>• Written mandate contract per Article 11</li>
-                  <li>• Verified PRRC availability at EC REP</li>
-                  <li>• Technical file access &amp; 10/15-year archiving</li>
-                  <li>• EUDAMED Actor Registration &amp; SRN linkage</li>
-                </ul>
+                <div className="space-y-3 text-xs font-medium text-navy/75">
+                  <p>• Pre-filled syringes &amp; pens</p>
+                  <p>• Auto-injectors &amp; wearable bolus injectors</p>
+                  <p>• Metered dose inhalers (MDIs) &amp; DPIs</p>
+                  <p>• Transdermal delivery systems</p>
+                  <p>• Implants with drug-eluting functions</p>
+                </div>
               </div>
 
               <div className="bg-blue-50/60 p-6 rounded-2xl border border-blue-200 text-center">
-                <h4 className="text-base font-extrabold text-navy mb-2">Appoint Your EAR</h4>
+                <h4 className="text-base font-extrabold text-navy mb-2">Need an NBOp Dossier?</h4>
                 <p className="text-xs text-navy/70 mb-5 leading-relaxed">
-                  Establish legally compliant representation in the European Union.
+                  Prepare your device constituent documentation to interface smoothly with EMA or National Competent Authority MAA submissions.
                 </p>
                 <Link
                   to="/contact"
                   className="inline-flex w-full items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-white text-xs font-bold py-3 rounded-md transition-colors"
                 >
-                  Request EC REP Agreement <ArrowRight className="h-3.5 w-3.5" />
+                  Request NBOp Support <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </div>
@@ -215,8 +202,8 @@ function EUEARPage() {
       </section>
 
       <CTABand
-        title="Secure Legally Mandated Representation Across the European Union"
-        description="Partner with NKB Regovanta as your European Authorized Representative (EC REP)."
+        title="Secure Your Notified Body Opinion under EU MDR Article 117"
+        description="Our combination product specialists integrate medical device engineering with pharmaceutical regulatory submissions."
       />
     </>
   );
