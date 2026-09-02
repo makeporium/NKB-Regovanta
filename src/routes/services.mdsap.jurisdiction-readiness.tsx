@@ -71,11 +71,11 @@ function JurisdictionReadinessPage() {
   ];
 
   const countries = [
-    { name: "Australia", auth: "Therapeutic Goods Administration (TGA)", flag: "🇦🇺" },
-    { name: "Brazil", auth: "Agência Nacional de Vigilância Sanitária (ANVISA)", flag: "🇧🇷" },
-    { name: "Canada", auth: "Health Canada (Mandatory for Class II, III, IV)", flag: "🇨🇦" },
-    { name: "Japan", auth: "Ministry of Health, Labour and Welfare (MHLW) / PMDA", flag: "🇯🇵" },
-    { name: "United States", auth: "U.S. Food and Drug Administration (FDA)", flag: "🇺🇸" },
+    { name: "Australia", auth: "Therapeutic Goods Administration (TGA)", code: "au" },
+    { name: "Brazil", auth: "Agência Nacional de Vigilância Sanitária (ANVISA)", code: "br" },
+    { name: "Canada", auth: "Health Canada (Mandatory for Class II, III, IV)", code: "ca" },
+    { name: "Japan", auth: "Ministry of Health, Labour and Welfare (MHLW) / PMDA", code: "jp" },
+    { name: "United States", auth: "U.S. Food and Drug Administration (FDA)", code: "us" },
   ];
 
   return (
@@ -135,10 +135,20 @@ function JurisdictionReadinessPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {countries.map((c, i) => (
-              <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-gray-200 text-center">
-                <div className="text-2xl mb-1">{c.flag}</div>
-                <h3 className="text-sm font-extrabold text-navy">{c.name}</h3>
-                <p className="text-[11px] text-navy/70 font-medium mt-0.5">{c.auth}</p>
+              <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-gray-200 text-center flex flex-col justify-between">
+                <div>
+                  <div className="flex justify-center mb-2">
+                    <img
+                      src={`https://flagcdn.com/w80/${c.code}.png`}
+                      srcSet={`https://flagcdn.com/w160/${c.code}.png 2x`}
+                      alt={`${c.name} Flag`}
+                      className="w-12 h-7.5 object-cover rounded shadow-2xs border border-gray-200"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="text-sm font-extrabold text-navy">{c.name}</h3>
+                </div>
+                <p className="text-[11px] text-navy/70 font-medium mt-1">{c.auth}</p>
               </div>
             ))}
           </div>

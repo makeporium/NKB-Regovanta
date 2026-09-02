@@ -81,31 +81,31 @@ function MdsapHubPage() {
     {
       name: "AUSTRALIA",
       auth: "TGA",
-      flag: "🇦🇺",
+      code: "au",
       desc: "Therapeutic Goods Administration",
     },
     {
       name: "BRAZIL",
       auth: "ANVISA",
-      flag: "🇧🇷",
+      code: "br",
       desc: "Agência Nacional de Vigilância Sanitária",
     },
     {
       name: "CANADA",
       auth: "Health Canada",
-      flag: "🇨🇦",
+      code: "ca",
       desc: "Mandatory for Class II, III & IV Licences",
     },
     {
       name: "JAPAN",
       auth: "MHLW / PMDA",
-      flag: "🇯🇵",
+      code: "jp",
       desc: "Ministry of Health, Labour & Welfare",
     },
     {
       name: "UNITED STATES",
       auth: "FDA",
-      flag: "🇺🇸",
+      code: "us",
       desc: "Accepts MDSAP in Lieu of Routine QSIT Inspections",
     },
   ];
@@ -442,10 +442,18 @@ function MdsapHubPage() {
             {jurisdictions.map((j, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-gray-200 text-center shadow-xs hover:border-[#0b3a96] hover:shadow-md transition-all flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white border border-gray-200 text-center shadow-xs hover:border-[#0b3a96] hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-4xl mb-2">{j.flag}</div>
+                  <div className="flex justify-center mb-3">
+                    <img
+                      src={`https://flagcdn.com/w80/${j.code}.png`}
+                      srcSet={`https://flagcdn.com/w160/${j.code}.png 2x`}
+                      alt={`${j.name} Flag`}
+                      className="w-13 h-8.5 object-cover rounded-md shadow-2xs border border-gray-200"
+                      loading="lazy"
+                    />
+                  </div>
                   <h3 className="text-xs font-black text-navy uppercase tracking-wider mb-1">
                     {j.name}
                   </h3>
