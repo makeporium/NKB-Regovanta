@@ -34,6 +34,7 @@ import { Route as ServicesAuditComplianceRouteImport } from './routes/services.a
 import { Route as ServicesAustraliaRouteImport } from './routes/services.australia'
 import { Route as ServicesBrazilRouteImport } from './routes/services.brazil'
 import { Route as ServicesCanadaRouteImport } from './routes/services.canada'
+import { Route as ServicesDrugDeviceCombinationProductsRouteImport } from './routes/services.drug-device-combination-products'
 import { Route as ServicesDrugLicensesForImportersRouteImport } from './routes/services.drug-licenses-for-importers'
 import { Route as ServicesEuRouteImport } from './routes/services.eu'
 import { Route as ServicesIecAdCodeRouteImport } from './routes/services.iec-ad-code'
@@ -45,6 +46,7 @@ import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
 import { Route as ServicesNewZealandRouteImport } from './routes/services.new-zealand'
 import { Route as ServicesPcPndtCertificateRouteImport } from './routes/services.pc-pndt-certificate'
 import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
+import { Route as ServicesRegulatoryDueDiligenceRouteImport } from './routes/services.regulatory-due-diligence'
 import { Route as ServicesSaudiArabiaRouteImport } from './routes/services.saudi-arabia'
 import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
@@ -365,6 +367,12 @@ const ServicesCanadaRoute = ServicesCanadaRouteImport.update({
   path: '/services/canada',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesDrugDeviceCombinationProductsRoute =
+  ServicesDrugDeviceCombinationProductsRouteImport.update({
+    id: '/services/drug-device-combination-products',
+    path: '/services/drug-device-combination-products',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesDrugLicensesForImportersRoute =
   ServicesDrugLicensesForImportersRouteImport.update({
     id: '/services/drug-licenses-for-importers',
@@ -421,6 +429,12 @@ const ServicesRegulatoryAffairsRoute =
   ServicesRegulatoryAffairsRouteImport.update({
     id: '/services/regulatory-affairs',
     path: '/services/regulatory-affairs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesRegulatoryDueDiligenceRoute =
+  ServicesRegulatoryDueDiligenceRouteImport.update({
+    id: '/services/regulatory-due-diligence',
+    path: '/services/regulatory-due-diligence',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesSaudiArabiaRoute = ServicesSaudiArabiaRouteImport.update({
@@ -1490,6 +1504,7 @@ export interface FileRoutesByFullPath {
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
   '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
@@ -1501,6 +1516,7 @@ export interface FileRoutesByFullPath {
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRouteWithChildren
@@ -1712,6 +1728,7 @@ export interface FileRoutesByTo {
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
   '/services/audit-compliance': typeof ServicesAuditComplianceRoute
+  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
   '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
   '/services/iso-13485': typeof ServicesIso13485Route
@@ -1720,6 +1737,7 @@ export interface FileRoutesByTo {
   '/services/mdsap': typeof ServicesMdsapRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
   '/case-studies': typeof CaseStudiesIndexRoute
@@ -1932,6 +1950,7 @@ export interface FileRoutesById {
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
+  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
   '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
   '/services/eu': typeof ServicesEuRouteWithChildren
   '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
@@ -1943,6 +1962,7 @@ export interface FileRoutesById {
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
+  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
   '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRouteWithChildren
@@ -2160,6 +2180,7 @@ export interface FileRouteTypes {
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
+    | '/services/drug-device-combination-products'
     | '/services/drug-licenses-for-importers'
     | '/services/eu'
     | '/services/iec-ad-code'
@@ -2171,6 +2192,7 @@ export interface FileRouteTypes {
     | '/services/new-zealand'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
+    | '/services/regulatory-due-diligence'
     | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
@@ -2382,6 +2404,7 @@ export interface FileRouteTypes {
     | '/insights/fda-inspections-2026'
     | '/insights/fda-qmsr-2026'
     | '/services/audit-compliance'
+    | '/services/drug-device-combination-products'
     | '/services/drug-licenses-for-importers'
     | '/services/iec-ad-code'
     | '/services/iso-13485'
@@ -2390,6 +2413,7 @@ export interface FileRouteTypes {
     | '/services/mdsap'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
+    | '/services/regulatory-due-diligence'
     | '/services/technical-documentation'
     | '/services/wpc-wireless-medical-devices'
     | '/case-studies'
@@ -2601,6 +2625,7 @@ export interface FileRouteTypes {
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
+    | '/services/drug-device-combination-products'
     | '/services/drug-licenses-for-importers'
     | '/services/eu'
     | '/services/iec-ad-code'
@@ -2612,6 +2637,7 @@ export interface FileRouteTypes {
     | '/services/new-zealand'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
+    | '/services/regulatory-due-diligence'
     | '/services/saudi-arabia'
     | '/services/technical-documentation'
     | '/services/uae'
@@ -2822,6 +2848,7 @@ export interface RootRouteChildren {
   ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
   ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
   ServicesCanadaRoute: typeof ServicesCanadaRouteWithChildren
+  ServicesDrugDeviceCombinationProductsRoute: typeof ServicesDrugDeviceCombinationProductsRoute
   ServicesDrugLicensesForImportersRoute: typeof ServicesDrugLicensesForImportersRoute
   ServicesEuRoute: typeof ServicesEuRouteWithChildren
   ServicesIecAdCodeRoute: typeof ServicesIecAdCodeRoute
@@ -2833,6 +2860,7 @@ export interface RootRouteChildren {
   ServicesNewZealandRoute: typeof ServicesNewZealandRouteWithChildren
   ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
+  ServicesRegulatoryDueDiligenceRoute: typeof ServicesRegulatoryDueDiligenceRoute
   ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRouteWithChildren
   ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRouteWithChildren
@@ -3033,6 +3061,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/drug-device-combination-products': {
+      id: '/services/drug-device-combination-products'
+      path: '/services/drug-device-combination-products'
+      fullPath: '/services/drug-device-combination-products'
+      preLoaderRoute: typeof ServicesDrugDeviceCombinationProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/drug-licenses-for-importers': {
       id: '/services/drug-licenses-for-importers'
       path: '/services/drug-licenses-for-importers'
@@ -3108,6 +3143,13 @@ declare module '@tanstack/react-router' {
       path: '/services/regulatory-affairs'
       fullPath: '/services/regulatory-affairs'
       preLoaderRoute: typeof ServicesRegulatoryAffairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/regulatory-due-diligence': {
+      id: '/services/regulatory-due-diligence'
+      path: '/services/regulatory-due-diligence'
+      fullPath: '/services/regulatory-due-diligence'
+      preLoaderRoute: typeof ServicesRegulatoryDueDiligenceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/saudi-arabia': {
@@ -4933,6 +4975,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
   ServicesBrazilRoute: ServicesBrazilRouteWithChildren,
   ServicesCanadaRoute: ServicesCanadaRouteWithChildren,
+  ServicesDrugDeviceCombinationProductsRoute:
+    ServicesDrugDeviceCombinationProductsRoute,
   ServicesDrugLicensesForImportersRoute: ServicesDrugLicensesForImportersRoute,
   ServicesEuRoute: ServicesEuRouteWithChildren,
   ServicesIecAdCodeRoute: ServicesIecAdCodeRoute,
@@ -4944,6 +4988,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesNewZealandRoute: ServicesNewZealandRouteWithChildren,
   ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
+  ServicesRegulatoryDueDiligenceRoute: ServicesRegulatoryDueDiligenceRoute,
   ServicesSaudiArabiaRoute: ServicesSaudiArabiaRouteWithChildren,
   ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRouteWithChildren,

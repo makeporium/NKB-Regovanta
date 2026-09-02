@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill, Factory } from "lucide-react";
+import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill, Factory, Syringe } from "lucide-react";
 import { CTABand, PageHero } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/")({
@@ -37,6 +37,18 @@ const services = [
     title: "Global Medical Device & IVD Regulatory Registration",
     text: "Regulatory strategy, submission support and licensing across global markets.",
     to: "/services/regulatory-affairs",
+  },
+  {
+    icon: Syringe,
+    title: "Drug-Device Combination Product Consulting",
+    text: "Global regulatory pathways, FDA 21 CFR Part 4, EU MDR Article 117 Notified Body Opinions (NBOp), DHF and ISO 14971 compliance.",
+    to: "/services/drug-device-combination-products",
+  },
+  {
+    icon: FileSearch,
+    title: "Regulatory Due Diligence for Medical Devices & IVDs",
+    text: "Decision-grade regulatory audits for M&A, private equity investments, QMS maturity, FDA 483 assessments, and valuation risk modeling.",
+    to: "/services/regulatory-due-diligence",
   },
   {
     icon: Pill,

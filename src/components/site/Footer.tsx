@@ -105,6 +105,8 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
     title: "Services",
     links: [
       { label: "Medical Device & IVD Regulatory Services", to: "/services/regulatory-affairs" },
+      { label: "Drug-Device Combination Product Consulting", to: "/services/drug-device-combination-products" },
+      { label: "Regulatory Due Diligence for Medical Devices & IVDs", to: "/services/regulatory-due-diligence" },
       { label: "Pharmaceutical & Drug Regulatory Services", to: "/services/drug-licenses-for-importers" },
       { label: "Cosmetics Regulatory & Global Market Access", to: "/industries/cosmetics" },
       { label: "Manufacturing & Equipment Solutions", to: "/services/manufacturing" },
