@@ -212,10 +212,10 @@ function IVDIndia() {
                             </p>
                         </div>
                         <Link
-                            to="/services/india"
+                            to="/services/india/ivd"
                             className="shrink-0 inline-flex items-center gap-2 bg-[#0b3a96] hover:bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-all shadow-xs hover:shadow-md group"
                         >
-                            <span>Explore India Regulatory Services</span>
+                            <span>Explore India IVD Regulatory Services</span>
                             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>

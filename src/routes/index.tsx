@@ -394,7 +394,7 @@ function Index() {
                         {/* Projects Completed */}
                         <div className="flex flex-col items-center text-center p-6 xl:p-8">
                             <CheckCircle className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
-                            <p className="text-[26px] font-bold leading-none mb-2">51+</p>
+                            <p className="text-[26px] font-bold leading-none mb-2">151+</p>
                             <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">Completed</p>
                             <p className="text-[12px] opacity-80 leading-snug">Regulatory &amp; Quality<br/>Projects</p>
                         </div>

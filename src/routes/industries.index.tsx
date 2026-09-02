@@ -86,7 +86,7 @@ function Industries() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5 items-center text-center">
                         <div className="flex flex-col items-center">
-                            <div className="text-2xl font-extrabold">51+</div>
+                            <div className="text-2xl font-extrabold">151+</div>
                             <div className="mt-1 text-xs uppercase tracking-wide text-navy-foreground/70">Regulatory & Quality Projects</div>
                         </div>
                         <div className="flex flex-col items-center">

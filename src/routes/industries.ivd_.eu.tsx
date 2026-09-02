@@ -446,10 +446,10 @@ function IVDEu() {
                             </p>
                         </div>
                         <Link
-                            to="/services/eu"
+                            to="/services/eu/ivdr"
                             className="shrink-0 inline-flex items-center gap-2 bg-[#0b3a96] hover:bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-all shadow-xs hover:shadow-md group"
                         >
-                            <span>Explore EU Regulatory Services</span>
+                            <span>Explore EU IVDR Services</span>
                             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>

@@ -191,12 +191,12 @@ function IVD() {
               { code: "eu", name: "European Union", auth: "IVDR 2017/746", route: "/industries/ivd/eu" },
               { code: "us", name: "United States", auth: "US FDA 510(k) & De Novo", route: "/industries/ivd/usa" },
               { code: "gb", name: "United Kingdom", auth: "MHRA & UKCA IVD", route: "/services/uk" },
-              { code: "ca", name: "Canada", auth: "Health Canada Class II–IV", route: "/services/canada" },
-              { code: "au", name: "Australia", auth: "TGA IVD Inclusions", route: "/services/australia" },
-              { code: "br", name: "Brazil", auth: "ANVISA & BGMP", route: "/services/brazil" },
-              { code: "sa", name: "Saudi Arabia", auth: "SFDA MDMA Approvals", route: "/services/saudi-arabia" },
-              { code: "ae", name: "UAE", auth: "MOHAP IVD Registration", route: "/services/uae" },
-              { code: "nz", name: "New Zealand", auth: "Medsafe WAND", route: "/services/new-zealand" },
+              { code: "ca", name: "Canada", auth: "Health Canada Class II–IV", route: "/services/canada/ivd" },
+              { code: "au", name: "Australia", auth: "TGA IVD Inclusions", route: "/services/australia/ivd" },
+              { code: "br", name: "Brazil", auth: "ANVISA & BGMP", route: "/services/brazil/ivd" },
+              { code: "sa", name: "Saudi Arabia", auth: "SFDA MDMA Approvals", route: "/services/saudi-arabia/ivd" },
+              { code: "ae", name: "UAE", auth: "MOHAP IVD Registration", route: "/services/uae/ivd" },
+              { code: "nz", name: "New Zealand", auth: "Medsafe WAND", route: "/services/new-zealand/ivd" },
             ].map((m) => (
               <Link
                 key={m.code}

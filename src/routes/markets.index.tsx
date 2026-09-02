@@ -50,7 +50,7 @@ const flagMarkets = [
 const stats = [
     { icon: Globe2, value: "15+", label: "Countries\nSupported" },
     { icon: Users, value: "21+", label: "Global Clients\nServed" },
-    { icon: FileCheck2, value: "51+", label: "Regulatory & Quality Projects Completed" },
+    { icon: FileCheck2, value: "151+", label: "Regulatory & Quality Projects Completed" },
     { icon: Handshake, value: "2018", label: "Experience Since\nRegulatory & Quality" },
 ];
 
