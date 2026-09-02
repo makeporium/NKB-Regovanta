@@ -140,6 +140,19 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
   },
 ];
 
+const supportedCountriesFooter = [
+  { name: "India", code: "in", to: "/services/india" },
+  { name: "USA", code: "us", to: "/services/usa" },
+  { name: "EU", code: "eu", to: "/services/eu" },
+  { name: "UK", code: "gb", to: "/services/uk" },
+  { name: "Canada", code: "ca", to: "/services/canada" },
+  { name: "Australia", code: "au", to: "/services/australia" },
+  { name: "Brazil", code: "br", to: "/services/brazil" },
+  { name: "Saudi Arabia", code: "sa", to: "/services/saudi-arabia" },
+  { name: "UAE", code: "ae", to: "/services/uae" },
+  { name: "New Zealand", code: "nz", to: "/services/new-zealand" },
+];
+
 export function Footer() {
   return (
     <footer>
@@ -945,6 +958,45 @@ export function Footer() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COUNTRIES WE SUPPORT GLOBAL BAND */}
+      <section className="bg-[#06162d] text-white border-t border-b border-white/10 py-6">
+        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div className="flex items-center gap-2.5">
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-blue-200">
+                COUNTRIES WE SUPPORT
+              </span>
+              <span className="hidden sm:inline text-white/30">|</span>
+              <span className="hidden sm:inline text-xs text-white/70 font-medium">
+                Full-Lifecycle Medical Device, IVD, Pharma &amp; Cosmetics Regulatory Approvals
+              </span>
+            </div>
+
+            <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 sm:gap-2.5">
+              {supportedCountriesFooter.map((c) => (
+                <Link
+                  key={c.code}
+                  to={c.to}
+                  className="group flex flex-col items-center p-2 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 transition-all text-center"
+                >
+                  <img
+                    src={`https://flagcdn.com/w40/${c.code}.png`}
+                    srcSet={`https://flagcdn.com/w80/${c.code}.png 2x`}
+                    alt={c.name}
+                    className="w-7 h-4.5 object-cover rounded-xs border border-white/20 group-hover:scale-110 transition-transform mb-1"
+                    loading="lazy"
+                  />
+                  <span className="text-[11px] font-bold text-white/90 group-hover:text-teal-300 leading-none">
+                    {c.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

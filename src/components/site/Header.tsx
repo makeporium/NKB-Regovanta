@@ -36,9 +36,21 @@ const services = [
   { to: "/services", label: "All Services Directory" },
 ];
 
+const supportedCountriesNav = [
+  { name: "India", code: "in", auth: "CDSCO Registration", to: "/services/india" },
+  { name: "USA", code: "us", auth: "FDA 510(k) & US Agent", to: "/services/usa" },
+  { name: "EU", code: "eu", auth: "CE Marking MDR/IVDR", to: "/services/eu" },
+  { name: "UK", code: "gb", auth: "MHRA & UKRP Services", to: "/services/uk" },
+  { name: "Canada", code: "ca", auth: "Health Canada MDL", to: "/services/canada" },
+  { name: "Australia", code: "au", auth: "TGA ARTG Inclusion", to: "/services/australia" },
+  { name: "Brazil", code: "br", auth: "ANVISA Registration", to: "/services/brazil" },
+  { name: "Saudi Arabia", code: "sa", auth: "SFDA Medical Devices", to: "/services/saudi-arabia" },
+  { name: "UAE", code: "ae", auth: "MOHAP Medical Approval", to: "/services/uae" },
+  { name: "New Zealand", code: "nz", auth: "Medsafe WAND & Agent", to: "/services/new-zealand" },
+];
+
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/markets", label: "Markets" },
   { to: "/industries", label: "Industries" },
   { to: "/about", label: "About Us" },
   { to: "/insights", label: "Insights" },
@@ -51,6 +63,7 @@ const linkClass =
 export function Header() {
   const [open, setOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileMarketsOpen, setMobileMarketsOpen] = useState(false);
 
   return (
     <>
@@ -90,6 +103,8 @@ export function Header() {
             <Link to="/" className={linkClass} activeProps={{ className: "text-navy font-semibold" }}>
               Home
             </Link>
+            
+            {/* Services Dropdown */}
             <div className="group relative">
               <Link 
                 to="/services" 
@@ -137,6 +152,62 @@ export function Header() {
                 </div>
               </div>
             </div>
+
+            {/* Markets Dropdown with Flags */}
+            <div className="group relative">
+              <Link 
+                to="/markets" 
+                className={`${linkClass} inline-flex items-center gap-1`}
+                activeProps={{ className: "text-navy font-semibold" }}
+                activeOptions={{ exact: false }}
+              >
+                Markets <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+              </Link>
+              
+              <div className="invisible absolute -left-16 top-full w-[490px] translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 z-50">
+                <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl">
+                  <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#0b3a96] pb-2 mb-3 border-b border-gray-100 flex items-center justify-between">
+                    <span className="flex items-center gap-1.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#0b3a96]" />
+                      Countries We Support (10 Markets)
+                    </span>
+                    <span className="text-[10px] text-navy/60 font-semibold normal-case">Full Regulatory Clearance</span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                    {supportedCountriesNav.map((c) => (
+                      <Link
+                        key={c.code}
+                        to={c.to}
+                        className="flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-[12.5px] font-medium text-navy/85 hover:bg-blue-50/70 hover:text-navy transition-all"
+                      >
+                        <img
+                          src={`https://flagcdn.com/w40/${c.code}.png`}
+                          srcSet={`https://flagcdn.com/w80/${c.code}.png 2x`}
+                          alt={c.name}
+                          className="w-5.5 h-3.5 object-cover rounded-xs border border-gray-200 shrink-0 shadow-2xs"
+                        />
+                        <div className="flex flex-col min-w-0">
+                          <span className="font-bold text-[12.5px] leading-tight truncate text-navy">{c.name}</span>
+                          <span className="text-[10px] text-navy/60 leading-tight truncate">{c.auth}</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between bg-slate-50 -mx-5 -mb-5 p-3 px-5 rounded-b-2xl">
+                    <span className="text-[11px] text-navy/70 font-medium">Global regulatory intelligence &amp; licensing</span>
+                    <Link
+                      to="/markets"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3a96] hover:text-[#082b70] transition-colors"
+                    >
+                      View All Markets Overview <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {nav.slice(1).map((n) => (
               <Link
                 key={n.to}
@@ -197,6 +268,44 @@ export function Header() {
                         activeProps={{ className: "text-navy font-bold" }}
                       >
                         {s.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Markets Accordion */}
+              <div className="border-b border-border flex flex-col">
+                <button
+                  onClick={() => setMobileMarketsOpen(!mobileMarketsOpen)}
+                  className="flex items-center justify-between py-3 text-sm font-medium text-foreground/80 w-full text-left"
+                >
+                  Markets &amp; Supported Countries
+                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileMarketsOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileMarketsOpen && (
+                  <div className="flex flex-col pb-3 pl-4 border-l-2 border-border ml-2 space-y-2 mt-1">
+                    <Link
+                      to="/markets"
+                      onClick={() => setOpen(false)}
+                      className="text-xs font-bold text-[#0b3a96] hover:underline mb-1"
+                    >
+                      All Supported Markets Overview →
+                    </Link>
+                    {supportedCountriesNav.map((c) => (
+                      <Link
+                        key={c.code}
+                        to={c.to}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-navy"
+                        activeProps={{ className: "text-navy font-bold" }}
+                      >
+                        <img
+                          src={`https://flagcdn.com/w40/${c.code}.png`}
+                          alt={c.name}
+                          className="w-4.5 h-3 object-cover rounded-xs border border-gray-200 shrink-0"
+                        />
+                        <span>{c.name} — <span className="text-xs text-navy/60">{c.auth}</span></span>
                       </Link>
                     ))}
                   </div>
