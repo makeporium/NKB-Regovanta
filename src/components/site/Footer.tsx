@@ -104,7 +104,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
   {
     title: "Services",
     links: [
-      { label: "Medical Device & IVD Regulatory Services", to: "/services/regulatory-affairs" },
+      { label: "Medical Device & IVD Regulatory Services", to: "/industries/ivd" },
       { label: "Drug-Device Combination Product Consulting", to: "/services/drug-device-combination-products" },
       { label: "Regulatory Due Diligence for Medical Devices & IVDs", to: "/services/regulatory-due-diligence" },
       { label: "Pharmaceutical & Drug Regulatory Services", to: "/services/drug-licenses-for-importers" },
@@ -186,13 +186,13 @@ export function Footer() {
           <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-gray-200 mb-8">
               <Link
-                to="/services/regulatory-affairs"
+                to="/industries/ivd"
                 className="text-xl sm:text-2xl font-extrabold text-[#0f2340] hover:text-[#0b3a96] transition-colors"
               >
-                Medical Device & IVD Regulatory Services
+                Medical Device &amp; IVD Regulatory Services
               </Link>
               <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3 py-1 rounded-md border border-blue-100 w-fit">
-                Global Regulatory Submissions & Approvals
+                Global Regulatory Submissions &amp; Approvals
               </span>
             </div>
 
