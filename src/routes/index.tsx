@@ -275,23 +275,29 @@ function Index() {
                                 Regulatory. Quality. Manufacturing. Market Access.
                             </p>
 
-                            <h1 className="font-display font-extrabold leading-[1.05] text-navy">
-                                <span className="block whitespace-nowrap" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    FROM FIRST IDEA TO
-                                </span>
-                                <span className="block whitespace-nowrap text-blue-700" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    GLOBAL MARKET ACCESS
-                                </span>
+                            <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
+                                Medical Device &amp; IVD Regulatory Consulting
                             </h1>
+                            <p className="mt-2 text-[17px] sm:text-[18px] font-semibold text-blue-700 leading-snug">
+                                From First Idea to Global Market Access
+                            </p>
 
-                            <p className="mt-4 text-[15.5px] sm:text-[16px] font-semibold text-navy leading-normal">
-                                Regulatory, Quality, Manufacturing &amp; Market Access Solutions for Medical Devices, IVDs, Cosmetics &amp; Pharmaceuticals.
+                            <p className="mt-4 text-[14px] sm:text-[14.5px] font-medium text-navy/80 leading-relaxed">
+                                Boutique regulatory, quality, testing, manufacturing and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics across India and global markets.
                             </p>
-                            <p className="mt-3 text-[13.5px] leading-relaxed text-navy/70 font-medium">
-                                We help startups and manufacturers navigate regulatory pathways,
-                                build compliant quality systems, source GMP equipment, and bring innovative products to
-                                international markets.
+                            <p className="mt-3 text-[13px] leading-relaxed text-navy/65 font-medium">
+                                We support manufacturers with regulatory strategy, product registration, technical documentation, QMS readiness, testing strategy, manufacturing solutions and market entry across CDSCO, US FDA, EU MDR/IVDR, Brazil ANVISA and other international regulatory pathways.
                             </p>
+
+                            {/* Regulatory Authorities Strip */}
+                            <div className="mt-4 flex flex-wrap gap-x-2 gap-y-1 items-center">
+                                {["CDSCO", "US FDA 510(k), De Novo & PMA", "EU MDR", "EU IVDR", "UK MHRA", "Health Canada", "TGA", "ANVISA", "SFDA", "MOHAP"].map((auth, i, arr) => (
+                                    <span key={auth} className="flex items-center gap-x-2">
+                                        <span className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{auth}</span>
+                                        {i < arr.length - 1 && <span className="text-navy/25 text-[10px]">|</span>}
+                                    </span>
+                                ))}
+                            </div>
 
                             <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-3 items-center">
                                 <Link
@@ -371,8 +377,12 @@ function Index() {
                                 </div>
 
                                 {/* Country Name */}
-                                <span className="text-[12.5px] font-extrabold text-navy group-hover:text-[#0b3a96] leading-tight transition-colors">
+                                <span className="text-[12px] font-extrabold text-navy group-hover:text-[#0b3a96] leading-tight transition-colors">
                                     {c.name}
+                                </span>
+                                {/* Regulatory Authority */}
+                                <span className="mt-0.5 text-[9.5px] font-semibold text-navy/50 group-hover:text-[#0b3a96]/70 transition-colors leading-tight">
+                                    {c.auth}
                                 </span>
                             </Link>
                         ))}
@@ -504,10 +514,10 @@ function Index() {
                                     OUR INTEGRATED CAPABILITY
                                 </p>
                                 <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-navy tracking-tight leading-tight">
-                                    OUR PRODUCTS (MANUFACTURING)
+                                    Integrated Manufacturing &amp; Facility Solutions
                                 </h2>
                                 <p className="mt-2 text-[14.5px] sm:text-[15.5px] text-gray-800 leading-relaxed font-medium">
-                                    Integrated product, equipment and manufacturing solutions for pharmaceutical, healthcare and life-sciences organizations.
+                                    Integrated equipment, manufacturing, cleanroom and compliance solutions for pharmaceutical, medical-device and healthcare organizations.
                                 </p>
                             </div>
                             <div>
@@ -634,11 +644,11 @@ function Index() {
                         ))}
                     </div>
 
-                    {/* Connecting More Customers Tagline */}
+                    {/* Trusted By Tagline */}
                     <div className="mt-10 sm:mt-12 text-center">
-                        <div className="inline-flex items-center gap-2 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3 rounded-full border border-gray-200 shadow-2xs italic">
-                            <Sparkles className="h-4 w-4 text-[#0b3a96]" />
-                            <span>Connecting More Customers.....</span>
+                        <div className="inline-flex items-center gap-2.5 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3 rounded-full border border-gray-200 shadow-2xs">
+                            <Sparkles className="h-4 w-4 text-[#dca85b] shrink-0" />
+                            <span>Growing alongside leaders in healthcare, diagnostics and life sciences.</span>
                         </div>
                     </div>
                 </div>
