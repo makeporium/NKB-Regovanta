@@ -121,12 +121,19 @@ import { Route as ServicesUsaIndexRouteImport } from './routes/services.usa.inde
 import { Route as ServicesUsa510kRouteImport } from './routes/services.usa.510k'
 import { Route as ServicesUsa513gRouteImport } from './routes/services.usa.513g'
 import { Route as ServicesUsaAgentServiceRouteImport } from './routes/services.usa.agent-service'
+import { Route as ServicesUsaClassificationRouteImport } from './routes/services.usa.classification'
 import { Route as ServicesUsaDeNovoRouteImport } from './routes/services.usa.de-novo'
+import { Route as ServicesUsaDeficiencyResponseRouteImport } from './routes/services.usa.deficiency-response'
 import { Route as ServicesUsaEStarRouteImport } from './routes/services.usa.e-star'
 import { Route as ServicesUsaEstablishmentRegistrationRouteImport } from './routes/services.usa.establishment-registration'
+import { Route as ServicesUsaGlobalMarketAccessRouteImport } from './routes/services.usa.global-market-access'
 import { Route as ServicesUsaPmaRouteImport } from './routes/services.usa.pma'
+import { Route as ServicesUsaPostClearanceLifecycleRouteImport } from './routes/services.usa.post-clearance-lifecycle'
+import { Route as ServicesUsaPredicateStrategyRouteImport } from './routes/services.usa.predicate-strategy'
 import { Route as ServicesUsaQSubmissionRouteImport } from './routes/services.usa.q-submission'
+import { Route as ServicesUsaQmsrInspectionRouteImport } from './routes/services.usa.qmsr-inspection'
 import { Route as ServicesUsaRfdPreRfdRouteImport } from './routes/services.usa.rfd-pre-rfd'
+import { Route as ServicesUsaTestingStrategyRouteImport } from './routes/services.usa.testing-strategy'
 import { Route as ServicesUsaUdiGudidRouteImport } from './routes/services.usa.udi-gudid'
 import { Route as IndustriesCosmeticsIndiaIndexRouteImport } from './routes/industries.cosmetics_.india.index'
 import { Route as IndustriesCosmeticsIndiaForImporterRouteImport } from './routes/industries.cosmetics_.india.for-importer'
@@ -732,11 +739,23 @@ const ServicesUsaAgentServiceRoute = ServicesUsaAgentServiceRouteImport.update({
   path: '/agent-service',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const ServicesUsaClassificationRoute =
+  ServicesUsaClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaDeNovoRoute = ServicesUsaDeNovoRouteImport.update({
   id: '/de-novo',
   path: '/de-novo',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const ServicesUsaDeficiencyResponseRoute =
+  ServicesUsaDeficiencyResponseRouteImport.update({
+    id: '/deficiency-response',
+    path: '/deficiency-response',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaEStarRoute = ServicesUsaEStarRouteImport.update({
   id: '/e-star',
   path: '/e-star',
@@ -748,21 +767,51 @@ const ServicesUsaEstablishmentRegistrationRoute =
     path: '/establishment-registration',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
+const ServicesUsaGlobalMarketAccessRoute =
+  ServicesUsaGlobalMarketAccessRouteImport.update({
+    id: '/global-market-access',
+    path: '/global-market-access',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaPmaRoute = ServicesUsaPmaRouteImport.update({
   id: '/pma',
   path: '/pma',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const ServicesUsaPostClearanceLifecycleRoute =
+  ServicesUsaPostClearanceLifecycleRouteImport.update({
+    id: '/post-clearance-lifecycle',
+    path: '/post-clearance-lifecycle',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaPredicateStrategyRoute =
+  ServicesUsaPredicateStrategyRouteImport.update({
+    id: '/predicate-strategy',
+    path: '/predicate-strategy',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaQSubmissionRoute = ServicesUsaQSubmissionRouteImport.update({
   id: '/q-submission',
   path: '/q-submission',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const ServicesUsaQmsrInspectionRoute =
+  ServicesUsaQmsrInspectionRouteImport.update({
+    id: '/qmsr-inspection',
+    path: '/qmsr-inspection',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaRfdPreRfdRoute = ServicesUsaRfdPreRfdRouteImport.update({
   id: '/rfd-pre-rfd',
   path: '/rfd-pre-rfd',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
+const ServicesUsaTestingStrategyRoute =
+  ServicesUsaTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
 const ServicesUsaUdiGudidRoute = ServicesUsaUdiGudidRouteImport.update({
   id: '/udi-gudid',
   path: '/udi-gudid',
@@ -905,12 +954,19 @@ export interface FileRoutesByFullPath {
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/classification': typeof ServicesUsaClassificationRoute
   '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
   '/services/usa/e-star': typeof ServicesUsaEStarRoute
   '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
   '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
+  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/australia/': typeof ServicesAustraliaIndexRoute
   '/services/brazil/': typeof ServicesBrazilIndexRoute
@@ -1023,12 +1079,19 @@ export interface FileRoutesByTo {
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/classification': typeof ServicesUsaClassificationRoute
   '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
   '/services/usa/e-star': typeof ServicesUsaEStarRoute
   '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
   '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
+  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/australia': typeof ServicesAustraliaIndexRoute
   '/services/brazil': typeof ServicesBrazilIndexRoute
@@ -1150,12 +1213,19 @@ export interface FileRoutesById {
   '/services/usa/510k': typeof ServicesUsa510kRoute
   '/services/usa/513g': typeof ServicesUsa513gRoute
   '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
+  '/services/usa/classification': typeof ServicesUsaClassificationRoute
   '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
+  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
   '/services/usa/e-star': typeof ServicesUsaEStarRoute
   '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
   '/services/usa/pma': typeof ServicesUsaPmaRoute
+  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
+  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
   '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
+  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
   '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
+  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
   '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
   '/services/australia/': typeof ServicesAustraliaIndexRoute
   '/services/brazil/': typeof ServicesBrazilIndexRoute
@@ -1278,12 +1348,19 @@ export interface FileRouteTypes {
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
+    | '/services/usa/classification'
     | '/services/usa/de-novo'
+    | '/services/usa/deficiency-response'
     | '/services/usa/e-star'
     | '/services/usa/establishment-registration'
+    | '/services/usa/global-market-access'
     | '/services/usa/pma'
+    | '/services/usa/post-clearance-lifecycle'
+    | '/services/usa/predicate-strategy'
     | '/services/usa/q-submission'
+    | '/services/usa/qmsr-inspection'
     | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/testing-strategy'
     | '/services/usa/udi-gudid'
     | '/services/australia/'
     | '/services/brazil/'
@@ -1396,12 +1473,19 @@ export interface FileRouteTypes {
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
+    | '/services/usa/classification'
     | '/services/usa/de-novo'
+    | '/services/usa/deficiency-response'
     | '/services/usa/e-star'
     | '/services/usa/establishment-registration'
+    | '/services/usa/global-market-access'
     | '/services/usa/pma'
+    | '/services/usa/post-clearance-lifecycle'
+    | '/services/usa/predicate-strategy'
     | '/services/usa/q-submission'
+    | '/services/usa/qmsr-inspection'
     | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/testing-strategy'
     | '/services/usa/udi-gudid'
     | '/services/australia'
     | '/services/brazil'
@@ -1522,12 +1606,19 @@ export interface FileRouteTypes {
     | '/services/usa/510k'
     | '/services/usa/513g'
     | '/services/usa/agent-service'
+    | '/services/usa/classification'
     | '/services/usa/de-novo'
+    | '/services/usa/deficiency-response'
     | '/services/usa/e-star'
     | '/services/usa/establishment-registration'
+    | '/services/usa/global-market-access'
     | '/services/usa/pma'
+    | '/services/usa/post-clearance-lifecycle'
+    | '/services/usa/predicate-strategy'
     | '/services/usa/q-submission'
+    | '/services/usa/qmsr-inspection'
     | '/services/usa/rfd-pre-rfd'
+    | '/services/usa/testing-strategy'
     | '/services/usa/udi-gudid'
     | '/services/australia/'
     | '/services/brazil/'
@@ -2378,11 +2469,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaAgentServiceRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
+    '/services/usa/classification': {
+      id: '/services/usa/classification'
+      path: '/classification'
+      fullPath: '/services/usa/classification'
+      preLoaderRoute: typeof ServicesUsaClassificationRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
     '/services/usa/de-novo': {
       id: '/services/usa/de-novo'
       path: '/de-novo'
       fullPath: '/services/usa/de-novo'
       preLoaderRoute: typeof ServicesUsaDeNovoRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/deficiency-response': {
+      id: '/services/usa/deficiency-response'
+      path: '/deficiency-response'
+      fullPath: '/services/usa/deficiency-response'
+      preLoaderRoute: typeof ServicesUsaDeficiencyResponseRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
     '/services/usa/e-star': {
@@ -2399,11 +2504,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaEstablishmentRegistrationRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
+    '/services/usa/global-market-access': {
+      id: '/services/usa/global-market-access'
+      path: '/global-market-access'
+      fullPath: '/services/usa/global-market-access'
+      preLoaderRoute: typeof ServicesUsaGlobalMarketAccessRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
     '/services/usa/pma': {
       id: '/services/usa/pma'
       path: '/pma'
       fullPath: '/services/usa/pma'
       preLoaderRoute: typeof ServicesUsaPmaRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/post-clearance-lifecycle': {
+      id: '/services/usa/post-clearance-lifecycle'
+      path: '/post-clearance-lifecycle'
+      fullPath: '/services/usa/post-clearance-lifecycle'
+      preLoaderRoute: typeof ServicesUsaPostClearanceLifecycleRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/predicate-strategy': {
+      id: '/services/usa/predicate-strategy'
+      path: '/predicate-strategy'
+      fullPath: '/services/usa/predicate-strategy'
+      preLoaderRoute: typeof ServicesUsaPredicateStrategyRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
     '/services/usa/q-submission': {
@@ -2413,11 +2539,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaQSubmissionRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
+    '/services/usa/qmsr-inspection': {
+      id: '/services/usa/qmsr-inspection'
+      path: '/qmsr-inspection'
+      fullPath: '/services/usa/qmsr-inspection'
+      preLoaderRoute: typeof ServicesUsaQmsrInspectionRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
     '/services/usa/rfd-pre-rfd': {
       id: '/services/usa/rfd-pre-rfd'
       path: '/rfd-pre-rfd'
       fullPath: '/services/usa/rfd-pre-rfd'
       preLoaderRoute: typeof ServicesUsaRfdPreRfdRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/testing-strategy': {
+      id: '/services/usa/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/usa/testing-strategy'
+      preLoaderRoute: typeof ServicesUsaTestingStrategyRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
     '/services/usa/udi-gudid': {
@@ -2675,12 +2815,19 @@ interface ServicesUsaRouteChildren {
   ServicesUsa510kRoute: typeof ServicesUsa510kRoute
   ServicesUsa513gRoute: typeof ServicesUsa513gRoute
   ServicesUsaAgentServiceRoute: typeof ServicesUsaAgentServiceRoute
+  ServicesUsaClassificationRoute: typeof ServicesUsaClassificationRoute
   ServicesUsaDeNovoRoute: typeof ServicesUsaDeNovoRoute
+  ServicesUsaDeficiencyResponseRoute: typeof ServicesUsaDeficiencyResponseRoute
   ServicesUsaEStarRoute: typeof ServicesUsaEStarRoute
   ServicesUsaEstablishmentRegistrationRoute: typeof ServicesUsaEstablishmentRegistrationRoute
+  ServicesUsaGlobalMarketAccessRoute: typeof ServicesUsaGlobalMarketAccessRoute
   ServicesUsaPmaRoute: typeof ServicesUsaPmaRoute
+  ServicesUsaPostClearanceLifecycleRoute: typeof ServicesUsaPostClearanceLifecycleRoute
+  ServicesUsaPredicateStrategyRoute: typeof ServicesUsaPredicateStrategyRoute
   ServicesUsaQSubmissionRoute: typeof ServicesUsaQSubmissionRoute
+  ServicesUsaQmsrInspectionRoute: typeof ServicesUsaQmsrInspectionRoute
   ServicesUsaRfdPreRfdRoute: typeof ServicesUsaRfdPreRfdRoute
+  ServicesUsaTestingStrategyRoute: typeof ServicesUsaTestingStrategyRoute
   ServicesUsaUdiGudidRoute: typeof ServicesUsaUdiGudidRoute
   ServicesUsaIndexRoute: typeof ServicesUsaIndexRoute
 }
@@ -2689,13 +2836,21 @@ const ServicesUsaRouteChildren: ServicesUsaRouteChildren = {
   ServicesUsa510kRoute: ServicesUsa510kRoute,
   ServicesUsa513gRoute: ServicesUsa513gRoute,
   ServicesUsaAgentServiceRoute: ServicesUsaAgentServiceRoute,
+  ServicesUsaClassificationRoute: ServicesUsaClassificationRoute,
   ServicesUsaDeNovoRoute: ServicesUsaDeNovoRoute,
+  ServicesUsaDeficiencyResponseRoute: ServicesUsaDeficiencyResponseRoute,
   ServicesUsaEStarRoute: ServicesUsaEStarRoute,
   ServicesUsaEstablishmentRegistrationRoute:
     ServicesUsaEstablishmentRegistrationRoute,
+  ServicesUsaGlobalMarketAccessRoute: ServicesUsaGlobalMarketAccessRoute,
   ServicesUsaPmaRoute: ServicesUsaPmaRoute,
+  ServicesUsaPostClearanceLifecycleRoute:
+    ServicesUsaPostClearanceLifecycleRoute,
+  ServicesUsaPredicateStrategyRoute: ServicesUsaPredicateStrategyRoute,
   ServicesUsaQSubmissionRoute: ServicesUsaQSubmissionRoute,
+  ServicesUsaQmsrInspectionRoute: ServicesUsaQmsrInspectionRoute,
   ServicesUsaRfdPreRfdRoute: ServicesUsaRfdPreRfdRoute,
+  ServicesUsaTestingStrategyRoute: ServicesUsaTestingStrategyRoute,
   ServicesUsaUdiGudidRoute: ServicesUsaUdiGudidRoute,
   ServicesUsaIndexRoute: ServicesUsaIndexRoute,
 }

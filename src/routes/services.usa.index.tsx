@@ -1,11 +1,29 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, CheckCircle2, ChevronRight, FileText, Download, Factory } from "lucide-react";
-import { LinearFlow } from "@/components/site/ProcessFlow";
-import { CTABand } from "@/components/site/Bits";
-import { ReactNode } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+    ArrowRight,
+    CheckCircle2,
+    ChevronRight,
+    FileText,
+    Shield,
+    Globe2,
+    ClipboardList,
+    Search,
+    Target,
+    FlaskConical,
+    Send,
+    MessageSquare,
+    Wrench,
+    TrendingUp,
+    CalendarDays,
+    CheckCircle,
+    Users,
+    Layers,
+    Network,
+    BadgeCheck,
+    LayoutList,
+} from "lucide-react";
 
-const inlineLinkCls = "inline-flex items-center font-bold text-blue-600 hover:text-blue-800 transition-colors underline decoration-blue-300/50 hover:decoration-blue-600 underline-offset-4 duration-300";
+/* ── Route ── */
 
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
@@ -17,341 +35,337 @@ export const Route = createFileRoute("/services/usa/")({
             },
             {
                 name: "keywords",
-                content: "US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, FDA cosmetic facility registration, FDA cosmetic product listing (SPL), NKB Regovanta",
+                content: "US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, NKB Regovanta",
             },
             { property: "og:title", content: "US FDA 510(k) Clearance & US Agent Consulting | NKB Regovanta" },
-            {
-                property: "og:description",
-                content: "Complete FDA regulatory strategy, eSTAR dossier compilation, 510(k) clearance, US Agent representation, and FURLS registration.",
-            },
+            { property: "og:description", content: "Complete FDA regulatory strategy, eSTAR dossier compilation, 510(k) clearance, US Agent representation, and FURLS registration." },
             { property: "og:url", content: "https://www.nkbregovanta.com/services/usa" },
         ],
-        links: [
-            { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" },
-        ],
+        links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" }],
     }),
     component: USAMarket,
 });
 
-const tabs = [
-    "Overview",
-    "Medical Device Classification USA",
-    "Non-CDRH Medical Device Registrations",
-    "Post Approval Compliance Requirements for Medical Devices",
-    "Process flow",
-    "Post Approval Device Life Cycle Management"
+/* ── Static Data ── */
+
+const quickStats = [
+    { label: "510(k) Clearance", desc: "No routine expiration; ongoing compliance and change assessment apply." },
+    { label: "Establishment Registration", desc: "Annual renewal required." },
+    { label: "QMS Requirement", desc: "FDA QMSR – 21 CFR Part 820, incorporating ISO 13485:2016" },
 ];
 
-const classificationData: { classLabel: string, risk: string, pathway: ReactNode }[] = [
-    { classLabel: "Class I", risk: "Low Risk", pathway: "510(k) Exempt" },
-    { classLabel: "Class II", risk: "Moderate Risk (with predicate)", pathway: <Link to="/services/usa/510k" className={inlineLinkCls}>Premarket Notification / 510(k)</Link> },
-    { classLabel: "Class II", risk: "Moderate Risk (no predicate)", pathway: <Link to="/services/usa/de-novo" className={inlineLinkCls}>De-Novo Classification Request</Link> },
-    { classLabel: "Class III", risk: "High Risk", pathway: <Link to="/services/usa/pma" className={inlineLinkCls}>Premarket Approval (PMA)</Link> },
+const regulatoryServices = [
+    { icon: LayoutList, label: "Medical Device\nClassification\nUSA", to: "/services/usa/classification" },
+    { icon: FileText, label: "510(k)\nPremarket\nNotification", to: "/services/usa/510k" },
+    { icon: Search, label: "Special 510(k) &\nChange\nAssessment", to: "/services/usa/post-clearance-lifecycle" },
+    { icon: Layers, label: "De Novo\nClassification", to: "/services/usa/de-novo" },
+    { icon: Shield, label: "PMA\nSupport", to: "/services/usa/pma" },
+    { icon: ClipboardList, label: "eSTAR Dossier\nPreparation", to: "/services/usa/e-star" },
+    { icon: MessageSquare, label: "Q-Submission /\nPre-Submission", to: "/services/usa/q-submission" },
+    { icon: Globe2, label: "US Agent\nServices", to: "/services/usa/agent-service" },
+    { icon: BadgeCheck, label: "Registration\n& Listing", to: "/services/usa/establishment-registration" },
 ];
 
-const summaryData: { risk: string, cls: string, audit: string, predicate: string, pathway: ReactNode, agent: string, timeline: string }[] = [
-    { risk: "Low Risk", cls: "I", audit: "No", predicate: "N/A", pathway: "Exempt", agent: "Yes", timeline: "~1 Month" },
-    { risk: "Medium Risk", cls: "II", audit: "Yes (post-approval)", predicate: "Yes", pathway: <Link to="/services/usa/510k" className={inlineLinkCls}>510(k) PMN</Link>, agent: "Yes", timeline: "9-12 Months" },
-    { risk: "Medium Risk", cls: "II", audit: "Yes (post-approval)", predicate: "No", pathway: <Link to="/services/usa/de-novo" className={inlineLinkCls}>De-Novo</Link>, agent: "Yes", timeline: "18-30 Months" },
-    { risk: "High Risk", cls: "III", audit: "Yes (pre-approval)", predicate: "N/A", pathway: <Link to="/services/usa/pma" className={inlineLinkCls}>PMA</Link>, agent: "Yes", timeline: "18-30 Months" },
+const submissionSteps = [
+    { num: "01", label: "Assess", desc: "Evaluate device, intended use, classification, applicable pathway & documentation gaps" },
+    { num: "02", label: "Strategize", desc: "Predicate strategy, testing strategy & regulatory roadmap" },
+    { num: "03", label: "Test", desc: "Test planning & laboratory coordination" },
+    { num: "04", label: "Prepare", desc: "eSTAR dossier & supporting technical documentation" },
+    { num: "05", label: "Submit", desc: "FDA submission through CDRH Portal" },
+    { num: "06", label: "Respond", desc: "Address FDA questions, deficiencies & additional information requests" },
+    { num: "07", label: "Maintain", desc: "Post-clearance support, change assessment & lifecycle management" },
 ];
 
-const regulatoryDetails: { label: string, value: ReactNode }[] = [
-    { label: "Regulatory Authority", value: "Food and Drug Administration (FDA)" },
-    { label: "Governing Regulation", value: "Title 21 Code of Federal Regulations (21 CFR) Parts 800-1299" },
-    { label: "Registration Pathway", value: <span className="inline-flex gap-1 flex-wrap"><Link to="/services/usa/510k" className={inlineLinkCls}>Premarket Notification (510k)</Link>, <Link to="/services/usa/pma" className={inlineLinkCls}>Premarket Approval (PMA)</Link>, or <Link to="/services/usa/de-novo" className={inlineLinkCls}>De-Novo Classification</Link></span> },
-    { label: "Authorized Representative", value: <Link to="/services/usa/agent-service" className={inlineLinkCls}>U.S. FDA Agent</Link> },
-    { label: "QMS Requirement", value: "Quality System Regulation (QSR) - 21 CFR Part 820" },
-    { label: "Technical Assessment Body", value: "Centre for Devices and Radiological Health (CDRH)" },
-    { label: "License Validity", value: "Unlimited" },
-    { label: "Labeling Requirements", value: "21 CFR Part 801" },
-    { label: "Submission Format", value: <Link to="/services/usa/e-star" className={inlineLinkCls}>eSTAR</Link> },
-    { label: "Language", value: "English" },
+const serviceCards = [
+    {
+        icon: LayoutList,
+        title: "Product Classification &\nRegulatory Pathway Assessment",
+        desc: "Before testing begins or a dossier is drafted, we establish the device's regulatory identity: classification, regulation number, product code, applicable controls, exemption status and likely premarket pathway. This early assessment prevents costly work from being built around the wrong FDA route.",
+        to: "/services/usa/classification",
+    },
+    {
+        icon: FileText,
+        title: "510(k) Premarket\nNotification Support",
+        desc: "We structure the 510(k) around the substantial equivalence decision FDA must make. Classification, predicate eligibility, technological differences, evidence requirements and labeling are aligned before the eSTAR submission is built.",
+        to: "/services/usa/510k",
+    },
+    {
+        icon: Target,
+        title: "Predicate & Substantial\nEquivalence Strategy",
+        desc: "We evaluate whether a proposed predicate can withstand FDA's substantial equivalence analysis, then trace every meaningful technological difference into the evidence needed to support it.",
+        to: "/services/usa/predicate-strategy",
+    },
+    {
+        icon: FlaskConical,
+        title: "Testing Strategy &\nLaboratory Coordination",
+        desc: "We design the testing plan backward from the FDA decision the evidence must support — challenging configuration, worst-case rationale, standards, acceptance criteria and whether the resulting data will actually answer the regulatory question.",
+        to: "/services/usa/testing-strategy",
+    },
+    {
+        icon: ClipboardList,
+        title: "eSTAR Dossier\nPreparation",
+        desc: "We treat eSTAR as the container for the regulatory argument — not as the strategy itself. The dossier is built only after pathway, predicate and evidence requirements are clear, then checked for cross-section consistency.",
+        to: "/services/usa/e-star",
+    },
+    {
+        icon: MessageSquare,
+        title: "FDA Q-Submission\n& Pre-Submission",
+        desc: "We determine which uncertainties are worth taking to FDA, frame focused questions and provide enough technical context for FDA feedback to be actionable before major testing or submission decisions are locked.",
+        to: "/services/usa/q-submission",
+    },
+    {
+        icon: Layers,
+        title: "De Novo & PMA\nSupport",
+        desc: "For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision, integrating risk, controls, non-clinical evidence, clinical evidence and FDA interaction.",
+        to: "/services/usa/de-novo",
+    },
+    {
+        icon: Send,
+        title: "FDA Additional Information\n& Deficiency Response",
+        desc: "We deconstruct each FDA question to identify the underlying regulatory concern, trace it back through the submission and determine whether the real issue is evidence, study design, predicate logic, labeling, consistency or presentation.",
+        to: "/services/usa/deficiency-response",
+    },
+    {
+        icon: Shield,
+        title: "QMSR & FDA Inspection\nPreparation",
+        desc: "We test whether the quality system can produce objective evidence when an FDA investigator follows a real transaction through the organization — not merely whether the required SOPs exist.",
+        to: "/services/usa/qmsr-inspection",
+    },
+    {
+        icon: Globe2,
+        title: "US Agent Services",
+        desc: "We provide US Agent representation as part of a broader regulatory interface — supporting FDA communication, registration coordination and escalation when the foreign manufacturer needs a reliable US regulatory contact.",
+        to: "/services/usa/agent-service",
+    },
+    {
+        icon: BadgeCheck,
+        title: "FDA Establishment Registration\n& Device Listing",
+        desc: "We support initial registration, device listing and annual maintenance while checking that the administrative registration activity remains aligned with the device's actual regulatory status and market authorization pathway.",
+        to: "/services/usa/establishment-registration",
+    },
+    {
+        icon: Wrench,
+        title: "Post-Clearance & Device\nLifecycle Support",
+        desc: "We assess the regulatory impact of device changes before implementation — focusing on whether the modification affects intended use, technological characteristics, safety, effectiveness, performance or the basis of the original clearance.",
+        to: "/services/usa/post-clearance-lifecycle",
+    },
+    {
+        icon: TrendingUp,
+        title: "Planning for Global\nMarket Access",
+        desc: "We plan regulatory evidence across target markets so common testing and technical documentation can be leveraged where scientifically and regulatorily appropriate, while market-specific gaps are identified early.",
+        to: "/services/usa/global-market-access",
+    },
 ];
 
-const nonCDRHItems = [
-    {
-        agency: "CDC / NIOSH",
-        desc: "Certain borderline products — such as surgical respirators — are regulated not by the FDA's CDRH but by the Centers for Disease Control and Prevention (CDC) in collaboration with the National Institute for Occupational Safety and Health (NIOSH). These agencies govern products primarily intended to protect workers from occupational health hazards rather than to treat or diagnose medical conditions."
-    },
-    {
-        agency: "Environmental Protection Agency (EPA)",
-        desc: "Healthcare-grade disinfectants and antimicrobial sterilization agents that would be considered medical devices in many other countries are instead registered and regulated by the U.S. Environmental Protection Agency (EPA). Their primary classification is based on the active chemical composition and intended biocidal use rather than a device function."
-    },
-    {
-        agency: "CBER — Centre for Biologics Evaluation and Research",
-        desc: "Products at the intersection of devices and biological materials — commonly referred to as combination products — may be subject to CBER review rather than CDRH. This includes certain in vitro diagnostic systems involving biological reagents and therapies that combine a physical device with a biological component as the primary mechanism of action."
-    },
-    {
-        agency: "CDER — Centre for Drug Evaluation and Research",
-        desc: "Where a product's primary mechanism of action is pharmacological — even when it incorporates a device component — jurisdiction typically falls under CDER rather than CDRH. Drug-device combination products are reviewed based on their predominant mode of action, and manufacturers are advised to seek a formal product jurisdiction determination early in development to avoid costly reclassification later."
-    },
+const whyChoose = [
+    "Boutique regulatory consulting with senior level, hands-on support",
+    "Strategy before submission – not just dossier preparation",
+    "Medical Device & IVD expertise across all risk classes",
+    "End-to-end FDA support from strategy to clearance and beyond",
+    "Testing coordination with trusted laboratory network",
+    "Global perspective to support multi-market regulatory strategies",
 ];
 
-const postApprovalItems: { title: ReactNode, desc: ReactNode }[] = [
-    {
-        title: <Link to="/services/usa/establishment-registration" className={inlineLinkCls}>Establishment Registration & Device Listing</Link>,
-        desc: "Every device manufacturing establishment — irrespective of the device's risk class — must be registered in the FDA's Unified Registration and Listing System (FURLS) database. In addition, each approved device must be listed in this system before marketing activities can commence in the United States. Certain product categories, such as radiation-emitting devices, may be subject to supplementary requirements — including obtaining an accession number — before the product can be legally imported into the country."
-    },
-    {
-        title: <Link to="/services/usa/udi-gudid" className={inlineLinkCls}>Unique Device Identification (UDI) Compliance</Link>,
-        desc: "Under FDA's Unique Device Identification system, all device classes are required to carry a UDI — a standardized numeric or alphanumeric code that enables consistent and reliable identification of devices throughout the supply chain. UDI compliance applies to labeling, packaging, and the Global Unique Device Identification Database (GUDID). Meeting UDI requirements is mandatory before a device can be legally placed on the U.S. market, regardless of risk classification."
-    },
-    {
-        title: "Annual Establishment Fee Payments",
-        desc: "To maintain an active establishment registration and retain the legal right to continue distributing devices in the U.S., manufacturers are required to pay annual establishment fees to the FDA under the Medical Device User Fee Amendments (MDUFA) framework. The FDA provides a tiered fee reduction structure for entities that hold a valid Small Business Determination (SBD) certificate, recognizing the different financial burden on smaller organizations relative to large multinational corporations."
-    },
-    {
-        title: "Quality Management System Audits",
-        desc: "For any device that is not explicitly GMP-exempt, the FDA reserves the right to conduct unannounced inspections of the manufacturing facility at any point following approval. These inspections assess the establishment's compliance with Quality Systems Regulation (QSR) requirements as outlined in 21 CFR Part 820, covering areas such as design controls, corrective and preventive actions (CAPA), complaint handling, and production records. A finding of non-compliance can result in warning letters, import alerts, or product recalls."
-    },
+const homeStats = [
+    { icon: CalendarDays, value: "2018", label: "Experience Since", sub: "Regulatory & Quality\nExperience" },
+    { icon: CheckCircle, value: "51+", label: "Completed", sub: "Regulatory & Quality\nProjects" },
+    { icon: Users, value: "21+", label: "Supported", sub: "Global\nClients" },
+    { icon: Globe2, value: "15+", label: "Supported", sub: "International\nCountries" },
+    { icon: Layers, value: "4", label: "Focus Areas", sub: "Core\nIndustries" },
+    { icon: Network, value: "Global", label: "India Based", sub: "Connected Network\nof Experts" },
 ];
 
-const lifecycleItems: { title: ReactNode, desc: ReactNode }[] = [
-    {
-        title: "Post-Approval Change Management",
-        desc: <span>Modifications to an approved medical device — whether they relate to design, materials, manufacturing processes, software, indications for use, or labeling — must be carefully evaluated against FDA change control requirements. Depending on the nature and significance of the change, a new <Link to="/services/usa/510k" className={inlineLinkCls}>510(k)</Link>, PMA supplement, or a simple records update may be required. NKB Regovanta helps manufacturers assess, document, and file changes efficiently to minimize disruption to ongoing commercialization.</span>
-    },
-    {
-        title: "License & Registration Renewal",
-        desc: "Maintaining uninterrupted market access in the U.S. requires consistent attention to annual MDUFA fee deadlines and establishment registration renewals. Lapses in payment or registration can lead to import alerts and halt distribution. Our team monitors all relevant deadlines and ensures timely submissions so manufacturers can focus on product development and sales without administrative risk."
-    },
-    {
-        title: "FDA Correspondence & Liaison",
-        desc: "Direct communication with the U.S. FDA — whether in response to deficiency letters, inspection observations, or voluntary reporting obligations — requires careful, well-documented responses that demonstrate regulatory compliance. NKB Regovanta acts as the interface between the manufacturer and the Agency, managing correspondence, preparing responses to FDA queries, and coordinating all logistical and regulatory requirements during facility inspections."
-    },
-];
+/* ── Component ── */
 
 function USAMarket() {
-    const [activeTab, setActiveTab] = useState("Overview");
-
     return (
         <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{"@context":"https://schema.org","@type":"Service","name":"US FDA 510(k) Regulatory Consulting","url":"https://www.nkbregovanta.com/services/usa","description":"FDA 510(k), De Novo, PMA, Q-Submission, and US Agent services for medical device companies seeking US market access. India-based FDA consultants serving global manufacturers.","provider":{"@type":"ProfessionalService","name":"NKB Regovanta Solutions Pvt. Ltd.","url":"https://www.nkbregovanta.com"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nkbregovanta.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.nkbregovanta.com/services"},{"@type":"ListItem","position":3,"name":"USA FDA","item":"https://www.nkbregovanta.com/services/usa"}]}]) }} />
-            <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-12 pt-0">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
-                    <div className="flex items-center gap-2 text-[11px] text-navy/60 font-semibold mb-4">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Service", "name": "US FDA 510(k) Regulatory Consulting", "url": "https://www.nkbregovanta.com/services/usa", "description": "FDA 510(k), De Novo, PMA, Q-Submission, and US Agent services for medical device companies seeking US market access.", "provider": { "@type": "ProfessionalService", "name": "NKB Regovanta Solutions Pvt. Ltd.", "url": "https://www.nkbregovanta.com" } }, { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nkbregovanta.com/services" }, { "@type": "ListItem", "position": 3, "name": "USA FDA", "item": "https://www.nkbregovanta.com/services/usa" }] }]) }} />
+
+            {/* ── HERO ── */}
+            <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/50 to-slate-100">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-10">
+                    <div className="flex items-center gap-1.5 text-[11px] text-navy/55 font-semibold mb-5">
+                        <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+                        <ChevronRight className="h-3 w-3" />
                         <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
                         <ChevronRight className="h-3 w-3" />
-                        <Link to="/services/regulatory-affairs" className="hover:text-navy transition-colors">Regulatory Affairs</Link>
-                        <ChevronRight className="h-3 w-3" />
-                        <span className="text-navy">USA</span>
+                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e02020]">United States</span>
+                        <span className="text-navy/40 mx-1">|</span>
+                        <span className="text-navy/70">US FDA Regulatory &amp; Market Access</span>
                     </div>
-                    <div className="flex items-center gap-4 mb-4">
-                        <img src="https://flagcdn.com/w80/us.png" srcSet="https://flagcdn.com/w160/us.png 2x" width="48" alt="United States" className="rounded-[3px] shadow-sm border border-black/10" />
-                        <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70">United States of America</p>
-                    </div>
-                    <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: "clamp(28px, 3.5vw, 44px)" }}>
-                        US FDA Medical Device Registration
-                    </h1>
-                    <p className="mt-4 text-[13.5px] leading-relaxed text-navy/70 font-medium max-w-2xl">
-                        The United States is among the world most stringently regulated markets for medical devices. With a regulatory framework dating back to 1976 and continuously refined since, the FDA Centre for Devices and Radiological Health (CDRH) governs the entire product lifecycle from development strategy through post-market compliance.
-                    </p>
-                </div>
-            </section>
 
-            <div className="sticky top-0 z-30 bg-white border-b border-border shadow-sm">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex gap-0 overflow-x-auto">
-                        {tabs.map((tab) => (
-                            <button key={tab} id={`tab-${tab.toLowerCase().replace(/\s+/g, "-")}`} onClick={() => setActiveTab(tab)}
-                                className={`whitespace-nowrap px-5 py-4 text-[12.5px] font-semibold border-b-2 transition-colors ${activeTab === tab ? "border-navy text-navy" : "border-transparent text-navy/50 hover:text-navy"}`}>
-                                {tab}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-
-                {activeTab === "Overview" && (
-                    <div className="space-y-10 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-6">US FDA Medical Device Registration Overview</h2>
-                            <p className="text-[13.5px] text-navy/80 leading-relaxed mb-6">
-                                The United States of America represents one of the most prominent, stringently regulated medical device markets globally, featuring highly structured registration pathways and compliance prerequisites. The foundational medical device regulations in the U.S. were established in 1976 and have undergone significant evolution over the decades. Oversight and regulation are managed by the Centre for Devices and Radiological Health (CDRH), a specialized branch operating under the broader Food and Drug Administration (FDA). NKB Regovanta has partnered with numerous device manufacturers worldwide, successfully guiding them through the complexities of the US FDA medical device registration lifecycle.
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                        <div className="max-w-xl">
+                            <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4" style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}>
+                                US FDA 510(k), De Novo,<br />PMA &amp; Regulatory Consulting<br />for Medical Devices and IVDs
+                            </h1>
+                            <p className="text-[14px] leading-relaxed text-navy/70 font-medium mb-7 max-w-lg">
+                                From regulatory strategy and predicate analysis to testing, eSTAR dossier preparation, FDA submission and deficiency response – we provide end-to-end support to help you achieve US market authorization.
                             </p>
-                            <div className="grid gap-4 md:grid-cols-2">
-                                {regulatoryDetails.map((d) => (
-                                    <div key={d.label} className="flex gap-3 p-4 rounded-md bg-blue-50/50 border border-blue-100">
-                                        <CheckCircle2 className="h-4 w-4 text-navy mt-0.5 shrink-0" />
-                                        <div>
-                                            <p className="text-[11px] uppercase tracking-wider font-bold text-navy/60">{d.label}</p>
-                                            <p className="text-[13px] font-semibold text-navy mt-0.5">{d.value}</p>
-                                        </div>
+                            <div className="flex flex-wrap gap-3 mb-8">
+                                <Link to="/contact" className="inline-flex items-center gap-2 bg-navy text-white text-[12.5px] font-semibold px-5 py-2.5 rounded-sm hover:bg-navy/90 transition-all shadow-sm">
+                                    <Send className="h-3.5 w-3.5" /> Discuss Your FDA Submission
+                                </Link>
+                                <Link to="/contact" className="inline-flex items-center gap-2 border border-navy/50 text-navy text-[12.5px] font-semibold px-5 py-2.5 rounded-sm hover:bg-blue-50 transition-all">
+                                    Request Regulatory Assessment
+                                </Link>
+                            </div>
+                            <div className="flex flex-wrap gap-5 text-[11.5px] font-semibold text-navy/70">
+                                <div className="flex items-center gap-2"><Users className="h-4 w-4 text-navy/50" /><span>Boutique<br />Regulatory Consulting</span></div>
+                                <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-navy/50" /><span>Medical Devices<br />&amp; IVD Expertise</span></div>
+                                <div className="flex items-center gap-2"><Globe2 className="h-4 w-4 text-navy/50" /><span>Global Perspective,<br />Local Understanding</span></div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col gap-4 lg:pt-4">
+                            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900 h-44 flex items-end">
+                                <img src="https://flagcdn.com/w1280/us.png" alt="United States Flag" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                                <div className="relative z-10 p-5">
+                                    <p className="text-white font-extrabold text-lg leading-tight">US FDA Regulatory &amp; Market Access</p>
+                                    <p className="text-white/70 text-xs font-medium">CDRH · 21 CFR · eSTAR · FURLS</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                {quickStats.map((s) => (
+                                    <div key={s.label} className="bg-white rounded-xl border border-gray-200/80 p-4 shadow-xs">
+                                        <p className="text-[12px] font-extrabold text-navy leading-snug mb-1">{s.label}</p>
+                                        <p className="text-[11px] text-navy/60 leading-snug">{s.desc}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="space-y-6 text-[13.5px] text-navy/80 leading-relaxed">
-                            <div>
-                                <h3 className="text-base font-bold text-navy mb-2"><Link to="/services/usa/agent-service" className={inlineLinkCls}>U.S. FDA Agent Requirement</Link></h3>
-                                <p>Foreign device manufacturers that do not maintain an established place of business within the United States are legally required to designate a U.S. FDA Agent prior to initiating any registration or import activities. This agent — whether an individual or an organization — must be physically located within the United States and is responsible for serving as the FDA's primary point of contact with the manufacturer. The scope of the agent's responsibilities is formally defined under applicable CFR regulations and includes receiving regulatory correspondence, facilitating inspections, and supporting submission activities on the manufacturer's behalf.</p>
-                                <p className="mt-3">The U.S. Agent plays a critical role throughout both the registration and post-market phases, and selecting an experienced agent with deep knowledge of FDA processes is strongly recommended for manufacturers new to the U.S. market.</p>
-                            </div>
-                            <div>
-                                <h3 className="text-base font-bold text-navy mb-2"><Link to="/services/usa/q-submission" className={inlineLinkCls}>Interactive Pre-Submission Meetings with the FDA</Link></h3>
-                                <p>The FDA has established a structured Q-Submission (Q-Sub) program that allows device manufacturers to engage directly with CDRH reviewers at multiple stages of the product development and registration journey. These interactions — which include Pre-Submissions (formerly known as Pre-IDE meetings), Informational Meetings, and Study Risk Determinations — are designed to help manufacturers better understand regulatory expectations before committing to a specific development or submission pathway.</p>
-                                <p className="mt-3">Engaging with the FDA through the Q-Sub process before initiating development activities or filing a formal registration application can provide clarity on classification, acceptable testing standards, clinical data expectations, and likely review timelines. This proactive approach has been shown to meaningfully reduce both the total cost and duration of the device commercialization process in the U.S.</p>
-                            </div>
-                        </div>
                     </div>
-                )}
+                </div>
+            </section>
 
-                {activeTab === "Medical Device Classification USA" && (
-                    <div className="space-y-10 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">Medical Device Classification USA</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed mb-8">
-                                The FDA categorizes Medical Devices into three distinct, risk-based classifications: Class I, Class II, and Class III. Within this framework, Class I encompasses devices presenting the lowest potential risk to patients, whereas Class III is reserved for devices associated with the highest risk levels. The specific registration prerequisites and appropriate regulatory pathways are directly dictated by the device's assigned class.
-                            </p>
-                            <div className="overflow-x-auto rounded-lg border border-border">
-                                <table className="w-full text-sm">
-                                    <thead className="bg-navy text-white">
-                                        <tr>
-                                            <th className="px-5 py-3 text-left text-[11px] font-semibold tracking-wider">Device Class</th>
-                                            <th className="px-5 py-3 text-left text-[11px] font-semibold tracking-wider">Risk Level</th>
-                                            <th className="px-5 py-3 text-left text-[11px] font-semibold tracking-wider">Registration Pathway</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-border">
-                                        {classificationData.map((row, i) => (
-                                            <tr key={i} className="hover:bg-blue-50/40 transition-colors">
-                                                <td className="px-5 py-3 font-bold text-navy">{row.classLabel}</td>
-                                                <td className="px-5 py-3 text-navy/70">{row.risk}</td>
-                                                <td className="px-5 py-3 font-semibold text-navy">{row.pathway}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div className="space-y-5 text-[13.5px] text-navy/80 leading-relaxed">
-                            <div>
-                                <h3 className="font-bold text-navy mb-2">Class I — Low Risk Devices</h3>
-                                <p>The majority of Class I devices are exempt from both GMP (Good Manufacturing Practice) requirements and 510(k) submission obligations, meaning they can generally be introduced to the U.S. market without prior FDA approval. However, manufacturers of even GMP-exempt devices are still bound by a set of baseline obligations: they must register their establishment with the FDA, list all marketed devices in the appropriate FDA database, comply with Unique Device Identification (UDI) labeling requirements, and maintain post-market surveillance records. These requirements apply regardless of whether a premarket submission is needed.</p>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-navy mb-2">Class II — Medium Risk Devices</h3>
-                                <p>Class II devices carry a moderate level of risk and are subject to more stringent regulatory controls than Class I. Manufacturers of Class II devices that can identify a legally marketed predicate device — one that is substantially equivalent in intended use and technological characteristics — may pursue the Premarket Notification (510(k)) pathway, also referred to as 510(k) registration. This is the most widely adopted route for U.S. market entry across the industry. The subject device must demonstrate Substantial Equivalence (SE) to the identified predicate through performance testing, design comparisons, and in some cases clinical data.</p>
-                                <p className="mt-2">For Class II devices where no suitable predicate exists, manufacturers may petition the FDA for reclassification through the De-Novo process. A successful De-Novo application results in the device being assigned a new device type and product code, and it may itself serve as a predicate for future 510(k) submissions by others.</p>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-navy mb-2">Class III — High Risk Devices</h3>
-                                <p>Class III encompasses the highest-risk device categories — typically those that sustain or support human life, are implanted in the body, or present a significant risk of illness or injury if they fail. Manufacturers of Class III devices must submit a Premarket Approval (PMA) application to the FDA, which requires comprehensive clinical evidence demonstrating the device's safety and effectiveness. The FDA review process for a PMA is far more intensive than for a 510(k) and typically includes a detailed review of clinical study data, manufacturing information, and labeling.</p>
-                                <p className="mt-2">As a component of the PMA review, the FDA will conduct a pre-approval Quality Management System (QMS) inspection of the device manufacturer's facility to verify that production processes meet required quality standards. Approval of a PMA does not exempt the manufacturer from ongoing post-market commitments, which may include post-approval studies and mandatory reporting obligations.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 className="text-base font-bold text-navy mb-4">Registration Summary</h3>
-                            <div className="overflow-x-auto rounded-lg border border-border">
-                                <table className="w-full text-xs">
-                                    <thead className="bg-navy text-white">
-                                        <tr>{["Risk","Class","QMS Audit","Predicate","Pathway","U.S. Agent","Timeline"].map(h => (<th key={h} className="px-4 py-3 text-left font-semibold tracking-wider">{h}</th>))}</tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-border">
-                                        {summaryData.map((r, i) => (
-                                            <tr key={i} className="hover:bg-blue-50/40 transition-colors">
-                                                <td className="px-4 py-3 text-navy/70">{r.risk}</td>
-                                                <td className="px-4 py-3 font-bold text-navy">{r.cls}</td>
-                                                <td className="px-4 py-3 text-navy/70">{r.audit}</td>
-                                                <td className="px-4 py-3 text-navy/70">{r.predicate}</td>
-                                                <td className="px-4 py-3 font-semibold text-navy">{r.pathway}</td>
-                                                <td className="px-4 py-3 text-navy/70">{r.agent}</td>
-                                                <td className="px-4 py-3 font-semibold text-navy">{r.timeline}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === "Non-CDRH Medical Device Registrations" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">Non-CDRH Medical Device Registrations</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed">
-                                Depending on their specific indications for use, certain borderline products that might be classified strictly as medical devices in other jurisdictions — such as surgical respirators, specific disinfectants, or complex combination products — may require the involvement of alternative federal agencies. These can include the Centers for Disease Control and Prevention (CDC), the National Institute for Occupational Safety and Health (NIOSH), the Environmental Protection Agency (EPA), the Centre for Biologics Evaluation and Research (CBER), or the Centre for Drug Evaluation and Research (CDER).
-                            </p>
-                        </div>
-                        <div className="grid gap-5 md:grid-cols-2">
-                            {nonCDRHItems.map((item) => (
-                                <div key={item.agency} className="p-5 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <h3 className="text-[13px] font-bold text-navy mb-2">{item.agency}</h3>
-                                    <p className="text-[12.5px] text-navy/70 leading-relaxed">{item.desc}</p>
+            {/* ── OUR US FDA REGULATORY SERVICES ── */}
+            <section className="py-14 bg-white border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-center text-xl sm:text-2xl font-extrabold text-navy mb-10">Our US FDA Regulatory Services</h2>
+                    <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-4 sm:gap-6">
+                        {regulatoryServices.map((svc) => (
+                            <Link
+                                key={svc.label}
+                                to={svc.to}
+                                className="flex flex-col items-center text-center gap-2.5 group"
+                            >
+                                <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-200 shadow-xs">
+                                    <svc.icon className="h-6 w-6 text-navy group-hover:text-white transition-colors" strokeWidth={1.75} />
                                 </div>
-                            ))}
-                        </div>
-                        <div className="p-5 rounded-lg border border-amber-200 bg-amber-50/60">
-                            <p className="text-[13px] font-semibold text-amber-900 mb-1">Important Note</p>
-                            <p className="text-[12.5px] text-amber-800 leading-relaxed">Correctly determining the regulatory jurisdiction for borderline and combination products is one of the most consequential early decisions in the U.S. market-entry process. A misclassification can result in submission under the wrong authority, leading to significant delays, additional clinical data requirements, or full resubmission. NKB Regovanta provides product classification assessments and formal jurisdiction determination support to help manufacturers start the process correctly.</p>
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === "Post Approval Compliance Requirements for Medical Devices" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">Post Approval Compliance Requirements for Medical Devices</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed">
-                                Securing initial market authorization is only the first step. Every device manufacturer is obligated to strictly adhere to the following post-approval compliance requirements to maintain their standing in the U.S. market:
-                            </p>
-                        </div>
-                        <div className="space-y-5">
-                            {postApprovalItems.map((item, i) => (
-                                <div key={i} className="flex gap-4 p-5 rounded-lg border border-border">
-                                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center text-xs font-bold mt-0.5">{i + 1}</div>
-                                    <div>
-                                        <h3 className="font-bold text-navy text-[13.5px] mb-1">{item.title}</h3>
-                                        <p className="text-[13px] text-navy/70 leading-relaxed">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === "Process flow" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-6">Process flow</h2>
-                            <LinearFlow steps={[{title: "Classification of Device"},{title: "Identification of QSR Requirements"},{title: "Predicate Device Identification"},{title: "Gap Analysis of Source Documents"},{title: "Compilation of Technical File"},{title: "Creation And Validation of E-Copies"},{title: "Submission of Application"},{title: "US FDA Approval"},{title: "Appointment of US Agent"},{title: "Establishment Registration and Device Listing"},{title: "Post-Approval Activities and Compliance"}]} />
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === "Post Approval Device Life Cycle Management" && (
-                    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                        <div>
-                            <h2 className="text-xl font-bold text-navy mb-3">Post Approval Device Life Cycle Management</h2>
-                            <p className="text-[13.5px] text-navy/70 leading-relaxed">
-                                NKB Regovanta provides comprehensive, end-to-end medical device lifecycle management support for foreign manufacturers, which encompasses critical post-approval activities such as:
-                            </p>
-                        </div>
-                        <div className="grid gap-5 md:grid-cols-3">
-                            {lifecycleItems.map((item) => (
-                                <div key={item.title} className="p-6 rounded-lg bg-blue-50/50 border border-blue-100">
-                                    <h3 className="font-bold text-navy text-[13.5px] mb-2">{item.title}</h3>
-                                    <p className="text-[12.5px] text-navy/70 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="p-6 rounded-lg bg-navy text-white">
-                            <h3 className="font-bold text-white text-base mb-3">Dedicated U.S. Regulatory Support</h3>
-                            <p className="text-[13.5px] leading-relaxed opacity-90">NKB Regovanta maintains a dedicated team of regulatory professionals with hands-on experience in U.S. device submissions, quality system compliance, and direct FDA engagement. Our experts actively track all FDA guidance updates, draft guidance documents, and Federal Register notices — ensuring that our clients are always informed about changes that affect their product's compliance status and commercial standing in the U.S. market.</p>
-                            <p className="text-[13.5px] leading-relaxed opacity-90 mt-3">Whether you are managing a single device approval or a complex portfolio of products across multiple FDA classifications, our team provides structured, reliable support at every step of the post-approval lifecycle — so you can remain focused on innovation while we handle regulatory continuity.</p>
-                            <Link to="/contact" className="inline-flex items-center gap-2 mt-5 bg-white text-navy text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-white/90 transition-colors">
-                                Talk to Our US Regulatory Team <ArrowRight className="h-4 w-4" />
+                                <p className="text-[10.5px] font-bold text-navy/80 leading-snug whitespace-pre-line group-hover:text-navy transition-colors">
+                                    {svc.label}
+                                </p>
                             </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SUBMISSION APPROACH ── */}
+            <section className="py-14 bg-slate-50 border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-center text-xl sm:text-2xl font-extrabold text-navy mb-10">Our US FDA Submission Approach</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+                        {submissionSteps.map((step, idx) => (
+                            <div key={step.num} className="flex flex-col items-center text-center gap-2 relative">
+                                {idx < submissionSteps.length - 1 && (
+                                    <div className="hidden lg:block absolute top-5 left-[calc(100%-8px)] w-4 z-10">
+                                        <ArrowRight className="h-3.5 w-3.5 text-navy/30" />
+                                    </div>
+                                )}
+                                <div className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-[11px] font-extrabold shadow-sm">{step.num}</div>
+                                <p className="text-[12px] font-extrabold text-navy">{step.label}</p>
+                                <p className="text-[10.5px] text-navy/60 leading-snug">{step.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SERVICE CARDS GRID ── */}
+            <section className="py-14 bg-white border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
+                            Comprehensive Expertise
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mt-3">
+                            Specialized US FDA Regulatory Solutions
+                        </h2>
+                        <p className="text-sm text-navy/70 mt-2 font-medium">
+                            End-to-end support across every phase of device classification, testing, clearance, and post-market compliance.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                        {serviceCards.map((card) => (
+                            <div key={card.title} className="flex flex-col p-5 rounded-2xl border border-gray-200/80 bg-white hover:shadow-lg hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 group">
+                                <div className="flex items-start gap-3 mb-3.5">
+                                    <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 group-hover:bg-navy group-hover:border-navy transition-all duration-300 shadow-2xs">
+                                        <card.icon className="h-5 w-5 text-[#0b3a96] group-hover:text-white transition-colors" strokeWidth={1.75} />
+                                    </div>
+                                    <h3 className="text-[13px] font-extrabold text-navy leading-snug whitespace-pre-line pt-0.5 group-hover:text-[#0b3a96] transition-colors">
+                                        {card.title}
+                                    </h3>
+                                </div>
+                                <p className="text-[12px] text-navy/70 leading-relaxed flex-1 mb-4 font-medium">
+                                    {card.desc}
+                                </p>
+                                <Link to={card.to} className="inline-flex items-center gap-1.5 text-[12px] font-extrabold text-[#0b3a96] hover:text-[#082b70] pt-2 border-t border-gray-100 group/link">
+                                    Learn more <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── WHY CHOOSE + CTA ── */}
+            <section className="py-14 bg-slate-50 border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <h2 className="text-xl sm:text-2xl font-extrabold text-navy mb-6">Why Manufacturers Choose<br />NKB Regovanta</h2>
+                            <ul className="space-y-3.5">
+                                {whyChoose.map((item) => (
+                                    <li key={item} className="flex items-start gap-3">
+                                        <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] mt-0.5 shrink-0" strokeWidth={2.5} />
+                                        <span className="text-[13.5px] text-navy/80 font-medium leading-snug">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="bg-navy rounded-2xl p-8 text-white shadow-lg">
+                            <h3 className="text-xl font-extrabold mb-3">Ready to Enter the US Market?</h3>
+                            <p className="text-[13.5px] text-white/80 leading-relaxed mb-7">Let our US FDA regulatory experts guide you through the right pathway with confidence.</p>
+                            <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-navy text-[13px] font-bold px-6 py-3 rounded-sm hover:bg-blue-50 transition-all shadow-sm">
+                                Talk to a Regulatory Expert <ArrowRight className="h-4 w-4" />
+                            </Link>
+                            <div className="mt-5 pt-5 border-t border-white/20 text-[12px] text-white/60 space-y-1">
+                                <p>Email: <a href="mailto:info@nkbregovanta.com" className="text-white/80 hover:text-white transition-colors">info@nkbregovanta.com</a></p>
+                                <p>Phone: <a href="tel:+911141005051" className="text-white/80 hover:text-white transition-colors">+91 11 4100 5051</a></p>
+                            </div>
                         </div>
                     </div>
-                )}
-            </div>
+                </div>
+            </section>
 
-            <CTABand title="Ready to enter the US market?" description="Book a Consultation" />
+            {/* ── STATS BAR ── */}
+            <section className="bg-navy text-white">
+                <div className="mx-auto max-w-[1400px] px-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-white/10">
+                        {homeStats.map((stat) => (
+                            <div key={stat.value} className="flex flex-col items-center text-center p-6 xl:p-8">
+                                <stat.icon className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
+                                <p className="text-[26px] font-bold leading-none mb-2">{stat.value}</p>
+                                <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">{stat.label}</p>
+                                <p className="text-[12px] opacity-80 leading-snug whitespace-pre-line">{stat.sub}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
