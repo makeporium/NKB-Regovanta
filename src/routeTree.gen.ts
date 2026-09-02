@@ -156,6 +156,19 @@ import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/service
 import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
 import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
 import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesMdsapIndexRouteImport } from './routes/services.mdsap.index'
+import { Route as ServicesMdsapAuditDocumentationRouteImport } from './routes/services.mdsap.audit-documentation'
+import { Route as ServicesMdsapCapaRemediationRouteImport } from './routes/services.mdsap.capa-remediation'
+import { Route as ServicesMdsapComplaintVigilanceRouteImport } from './routes/services.mdsap.complaint-vigilance'
+import { Route as ServicesMdsapDesignControlsRouteImport } from './routes/services.mdsap.design-controls'
+import { Route as ServicesMdsapGapAssessmentRouteImport } from './routes/services.mdsap.gap-assessment'
+import { Route as ServicesMdsapJurisdictionReadinessRouteImport } from './routes/services.mdsap.jurisdiction-readiness'
+import { Route as ServicesMdsapMockAuditsRouteImport } from './routes/services.mdsap.mock-audits'
+import { Route as ServicesMdsapPostCertificationRouteImport } from './routes/services.mdsap.post-certification'
+import { Route as ServicesMdsapProcessReadinessRouteImport } from './routes/services.mdsap.process-readiness'
+import { Route as ServicesMdsapProductionSupplierValidationRouteImport } from './routes/services.mdsap.production-supplier-validation'
+import { Route as ServicesMdsapQmsAlignmentRouteImport } from './routes/services.mdsap.qms-alignment'
+import { Route as ServicesMdsapStrategyScopeRouteImport } from './routes/services.mdsap.strategy-scope'
 import { Route as ServicesNewZealandIndexRouteImport } from './routes/services.new-zealand.index'
 import { Route as ServicesNewZealandChangeManagementRouteImport } from './routes/services.new-zealand.change-management'
 import { Route as ServicesNewZealandClassificationRouteImport } from './routes/services.new-zealand.classification'
@@ -1038,6 +1051,82 @@ const ServicesIndiaPredicateDevicesRoute =
     path: '/predicate-devices',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
+const ServicesMdsapIndexRoute = ServicesMdsapIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesMdsapRoute,
+} as any)
+const ServicesMdsapAuditDocumentationRoute =
+  ServicesMdsapAuditDocumentationRouteImport.update({
+    id: '/audit-documentation',
+    path: '/audit-documentation',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapCapaRemediationRoute =
+  ServicesMdsapCapaRemediationRouteImport.update({
+    id: '/capa-remediation',
+    path: '/capa-remediation',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapComplaintVigilanceRoute =
+  ServicesMdsapComplaintVigilanceRouteImport.update({
+    id: '/complaint-vigilance',
+    path: '/complaint-vigilance',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapDesignControlsRoute =
+  ServicesMdsapDesignControlsRouteImport.update({
+    id: '/design-controls',
+    path: '/design-controls',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapGapAssessmentRoute =
+  ServicesMdsapGapAssessmentRouteImport.update({
+    id: '/gap-assessment',
+    path: '/gap-assessment',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapJurisdictionReadinessRoute =
+  ServicesMdsapJurisdictionReadinessRouteImport.update({
+    id: '/jurisdiction-readiness',
+    path: '/jurisdiction-readiness',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapMockAuditsRoute = ServicesMdsapMockAuditsRouteImport.update({
+  id: '/mock-audits',
+  path: '/mock-audits',
+  getParentRoute: () => ServicesMdsapRoute,
+} as any)
+const ServicesMdsapPostCertificationRoute =
+  ServicesMdsapPostCertificationRouteImport.update({
+    id: '/post-certification',
+    path: '/post-certification',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapProcessReadinessRoute =
+  ServicesMdsapProcessReadinessRouteImport.update({
+    id: '/process-readiness',
+    path: '/process-readiness',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapProductionSupplierValidationRoute =
+  ServicesMdsapProductionSupplierValidationRouteImport.update({
+    id: '/production-supplier-validation',
+    path: '/production-supplier-validation',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapQmsAlignmentRoute =
+  ServicesMdsapQmsAlignmentRouteImport.update({
+    id: '/qms-alignment',
+    path: '/qms-alignment',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
+const ServicesMdsapStrategyScopeRoute =
+  ServicesMdsapStrategyScopeRouteImport.update({
+    id: '/strategy-scope',
+    path: '/strategy-scope',
+    getParentRoute: () => ServicesMdsapRoute,
+  } as any)
 const ServicesNewZealandIndexRoute = ServicesNewZealandIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -1512,7 +1601,7 @@ export interface FileRoutesByFullPath {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
-  '/services/mdsap': typeof ServicesMdsapRoute
+  '/services/mdsap': typeof ServicesMdsapRouteWithChildren
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
@@ -1626,6 +1715,18 @@ export interface FileRoutesByFullPath {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
+  '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
+  '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
+  '/services/mdsap/design-controls': typeof ServicesMdsapDesignControlsRoute
+  '/services/mdsap/gap-assessment': typeof ServicesMdsapGapAssessmentRoute
+  '/services/mdsap/jurisdiction-readiness': typeof ServicesMdsapJurisdictionReadinessRoute
+  '/services/mdsap/mock-audits': typeof ServicesMdsapMockAuditsRoute
+  '/services/mdsap/post-certification': typeof ServicesMdsapPostCertificationRoute
+  '/services/mdsap/process-readiness': typeof ServicesMdsapProcessReadinessRoute
+  '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
+  '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
+  '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
   '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
   '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
   '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
@@ -1700,6 +1801,7 @@ export interface FileRoutesByFullPath {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/mdsap/': typeof ServicesMdsapIndexRoute
   '/services/new-zealand/': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae/': typeof ServicesUaeIndexRoute
@@ -1734,7 +1836,6 @@ export interface FileRoutesByTo {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
-  '/services/mdsap': typeof ServicesMdsapRoute
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
   '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
@@ -1843,6 +1944,18 @@ export interface FileRoutesByTo {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
+  '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
+  '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
+  '/services/mdsap/design-controls': typeof ServicesMdsapDesignControlsRoute
+  '/services/mdsap/gap-assessment': typeof ServicesMdsapGapAssessmentRoute
+  '/services/mdsap/jurisdiction-readiness': typeof ServicesMdsapJurisdictionReadinessRoute
+  '/services/mdsap/mock-audits': typeof ServicesMdsapMockAuditsRoute
+  '/services/mdsap/post-certification': typeof ServicesMdsapPostCertificationRoute
+  '/services/mdsap/process-readiness': typeof ServicesMdsapProcessReadinessRoute
+  '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
+  '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
+  '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
   '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
   '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
   '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
@@ -1917,6 +2030,7 @@ export interface FileRoutesByTo {
   '/services/canada': typeof ServicesCanadaIndexRoute
   '/services/eu': typeof ServicesEuIndexRoute
   '/services/india': typeof ServicesIndiaIndexRoute
+  '/services/mdsap': typeof ServicesMdsapIndexRoute
   '/services/new-zealand': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae': typeof ServicesUaeIndexRoute
@@ -1958,7 +2072,7 @@ export interface FileRoutesById {
   '/services/iso-13485': typeof ServicesIso13485Route
   '/services/manufacturing': typeof ServicesManufacturingRoute
   '/services/market-access': typeof ServicesMarketAccessRoute
-  '/services/mdsap': typeof ServicesMdsapRoute
+  '/services/mdsap': typeof ServicesMdsapRouteWithChildren
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
   '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
   '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
@@ -2072,6 +2186,18 @@ export interface FileRoutesById {
   '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
   '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
   '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
+  '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
+  '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
+  '/services/mdsap/design-controls': typeof ServicesMdsapDesignControlsRoute
+  '/services/mdsap/gap-assessment': typeof ServicesMdsapGapAssessmentRoute
+  '/services/mdsap/jurisdiction-readiness': typeof ServicesMdsapJurisdictionReadinessRoute
+  '/services/mdsap/mock-audits': typeof ServicesMdsapMockAuditsRoute
+  '/services/mdsap/post-certification': typeof ServicesMdsapPostCertificationRoute
+  '/services/mdsap/process-readiness': typeof ServicesMdsapProcessReadinessRoute
+  '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
+  '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
+  '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
   '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
   '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
   '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
@@ -2146,6 +2272,7 @@ export interface FileRoutesById {
   '/services/canada/': typeof ServicesCanadaIndexRoute
   '/services/eu/': typeof ServicesEuIndexRoute
   '/services/india/': typeof ServicesIndiaIndexRoute
+  '/services/mdsap/': typeof ServicesMdsapIndexRoute
   '/services/new-zealand/': typeof ServicesNewZealandIndexRoute
   '/services/saudi-arabia/': typeof ServicesSaudiArabiaIndexRoute
   '/services/uae/': typeof ServicesUaeIndexRoute
@@ -2302,6 +2429,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/mdsap/audit-documentation'
+    | '/services/mdsap/capa-remediation'
+    | '/services/mdsap/complaint-vigilance'
+    | '/services/mdsap/design-controls'
+    | '/services/mdsap/gap-assessment'
+    | '/services/mdsap/jurisdiction-readiness'
+    | '/services/mdsap/mock-audits'
+    | '/services/mdsap/post-certification'
+    | '/services/mdsap/process-readiness'
+    | '/services/mdsap/production-supplier-validation'
+    | '/services/mdsap/qms-alignment'
+    | '/services/mdsap/strategy-scope'
     | '/services/new-zealand/change-management'
     | '/services/new-zealand/classification'
     | '/services/new-zealand/ivd'
@@ -2376,6 +2515,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/mdsap/'
     | '/services/new-zealand/'
     | '/services/saudi-arabia/'
     | '/services/uae/'
@@ -2410,7 +2550,6 @@ export interface FileRouteTypes {
     | '/services/iso-13485'
     | '/services/manufacturing'
     | '/services/market-access'
-    | '/services/mdsap'
     | '/services/pc-pndt-certificate'
     | '/services/regulatory-affairs'
     | '/services/regulatory-due-diligence'
@@ -2519,6 +2658,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/mdsap/audit-documentation'
+    | '/services/mdsap/capa-remediation'
+    | '/services/mdsap/complaint-vigilance'
+    | '/services/mdsap/design-controls'
+    | '/services/mdsap/gap-assessment'
+    | '/services/mdsap/jurisdiction-readiness'
+    | '/services/mdsap/mock-audits'
+    | '/services/mdsap/post-certification'
+    | '/services/mdsap/process-readiness'
+    | '/services/mdsap/production-supplier-validation'
+    | '/services/mdsap/qms-alignment'
+    | '/services/mdsap/strategy-scope'
     | '/services/new-zealand/change-management'
     | '/services/new-zealand/classification'
     | '/services/new-zealand/ivd'
@@ -2593,6 +2744,7 @@ export interface FileRouteTypes {
     | '/services/canada'
     | '/services/eu'
     | '/services/india'
+    | '/services/mdsap'
     | '/services/new-zealand'
     | '/services/saudi-arabia'
     | '/services/uae'
@@ -2747,6 +2899,18 @@ export interface FileRouteTypes {
     | '/services/india/novel-ivds'
     | '/services/india/personal-use'
     | '/services/india/predicate-devices'
+    | '/services/mdsap/audit-documentation'
+    | '/services/mdsap/capa-remediation'
+    | '/services/mdsap/complaint-vigilance'
+    | '/services/mdsap/design-controls'
+    | '/services/mdsap/gap-assessment'
+    | '/services/mdsap/jurisdiction-readiness'
+    | '/services/mdsap/mock-audits'
+    | '/services/mdsap/post-certification'
+    | '/services/mdsap/process-readiness'
+    | '/services/mdsap/production-supplier-validation'
+    | '/services/mdsap/qms-alignment'
+    | '/services/mdsap/strategy-scope'
     | '/services/new-zealand/change-management'
     | '/services/new-zealand/classification'
     | '/services/new-zealand/ivd'
@@ -2821,6 +2985,7 @@ export interface FileRouteTypes {
     | '/services/canada/'
     | '/services/eu/'
     | '/services/india/'
+    | '/services/mdsap/'
     | '/services/new-zealand/'
     | '/services/saudi-arabia/'
     | '/services/uae/'
@@ -2856,7 +3021,7 @@ export interface RootRouteChildren {
   ServicesIso13485Route: typeof ServicesIso13485Route
   ServicesManufacturingRoute: typeof ServicesManufacturingRoute
   ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
-  ServicesMdsapRoute: typeof ServicesMdsapRoute
+  ServicesMdsapRoute: typeof ServicesMdsapRouteWithChildren
   ServicesNewZealandRoute: typeof ServicesNewZealandRouteWithChildren
   ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
   ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
@@ -3915,6 +4080,97 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
+    '/services/mdsap/': {
+      id: '/services/mdsap/'
+      path: '/'
+      fullPath: '/services/mdsap/'
+      preLoaderRoute: typeof ServicesMdsapIndexRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/audit-documentation': {
+      id: '/services/mdsap/audit-documentation'
+      path: '/audit-documentation'
+      fullPath: '/services/mdsap/audit-documentation'
+      preLoaderRoute: typeof ServicesMdsapAuditDocumentationRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/capa-remediation': {
+      id: '/services/mdsap/capa-remediation'
+      path: '/capa-remediation'
+      fullPath: '/services/mdsap/capa-remediation'
+      preLoaderRoute: typeof ServicesMdsapCapaRemediationRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/complaint-vigilance': {
+      id: '/services/mdsap/complaint-vigilance'
+      path: '/complaint-vigilance'
+      fullPath: '/services/mdsap/complaint-vigilance'
+      preLoaderRoute: typeof ServicesMdsapComplaintVigilanceRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/design-controls': {
+      id: '/services/mdsap/design-controls'
+      path: '/design-controls'
+      fullPath: '/services/mdsap/design-controls'
+      preLoaderRoute: typeof ServicesMdsapDesignControlsRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/gap-assessment': {
+      id: '/services/mdsap/gap-assessment'
+      path: '/gap-assessment'
+      fullPath: '/services/mdsap/gap-assessment'
+      preLoaderRoute: typeof ServicesMdsapGapAssessmentRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/jurisdiction-readiness': {
+      id: '/services/mdsap/jurisdiction-readiness'
+      path: '/jurisdiction-readiness'
+      fullPath: '/services/mdsap/jurisdiction-readiness'
+      preLoaderRoute: typeof ServicesMdsapJurisdictionReadinessRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/mock-audits': {
+      id: '/services/mdsap/mock-audits'
+      path: '/mock-audits'
+      fullPath: '/services/mdsap/mock-audits'
+      preLoaderRoute: typeof ServicesMdsapMockAuditsRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/post-certification': {
+      id: '/services/mdsap/post-certification'
+      path: '/post-certification'
+      fullPath: '/services/mdsap/post-certification'
+      preLoaderRoute: typeof ServicesMdsapPostCertificationRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/process-readiness': {
+      id: '/services/mdsap/process-readiness'
+      path: '/process-readiness'
+      fullPath: '/services/mdsap/process-readiness'
+      preLoaderRoute: typeof ServicesMdsapProcessReadinessRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/production-supplier-validation': {
+      id: '/services/mdsap/production-supplier-validation'
+      path: '/production-supplier-validation'
+      fullPath: '/services/mdsap/production-supplier-validation'
+      preLoaderRoute: typeof ServicesMdsapProductionSupplierValidationRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/qms-alignment': {
+      id: '/services/mdsap/qms-alignment'
+      path: '/qms-alignment'
+      fullPath: '/services/mdsap/qms-alignment'
+      preLoaderRoute: typeof ServicesMdsapQmsAlignmentRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
+    '/services/mdsap/strategy-scope': {
+      id: '/services/mdsap/strategy-scope'
+      path: '/strategy-scope'
+      fullPath: '/services/mdsap/strategy-scope'
+      preLoaderRoute: typeof ServicesMdsapStrategyScopeRouteImport
+      parentRoute: typeof ServicesMdsapRoute
+    }
     '/services/new-zealand/': {
       id: '/services/new-zealand/'
       path: '/'
@@ -4751,6 +5007,44 @@ const ServicesIndiaRouteWithChildren = ServicesIndiaRoute._addFileChildren(
   ServicesIndiaRouteChildren,
 )
 
+interface ServicesMdsapRouteChildren {
+  ServicesMdsapAuditDocumentationRoute: typeof ServicesMdsapAuditDocumentationRoute
+  ServicesMdsapCapaRemediationRoute: typeof ServicesMdsapCapaRemediationRoute
+  ServicesMdsapComplaintVigilanceRoute: typeof ServicesMdsapComplaintVigilanceRoute
+  ServicesMdsapDesignControlsRoute: typeof ServicesMdsapDesignControlsRoute
+  ServicesMdsapGapAssessmentRoute: typeof ServicesMdsapGapAssessmentRoute
+  ServicesMdsapJurisdictionReadinessRoute: typeof ServicesMdsapJurisdictionReadinessRoute
+  ServicesMdsapMockAuditsRoute: typeof ServicesMdsapMockAuditsRoute
+  ServicesMdsapPostCertificationRoute: typeof ServicesMdsapPostCertificationRoute
+  ServicesMdsapProcessReadinessRoute: typeof ServicesMdsapProcessReadinessRoute
+  ServicesMdsapProductionSupplierValidationRoute: typeof ServicesMdsapProductionSupplierValidationRoute
+  ServicesMdsapQmsAlignmentRoute: typeof ServicesMdsapQmsAlignmentRoute
+  ServicesMdsapStrategyScopeRoute: typeof ServicesMdsapStrategyScopeRoute
+  ServicesMdsapIndexRoute: typeof ServicesMdsapIndexRoute
+}
+
+const ServicesMdsapRouteChildren: ServicesMdsapRouteChildren = {
+  ServicesMdsapAuditDocumentationRoute: ServicesMdsapAuditDocumentationRoute,
+  ServicesMdsapCapaRemediationRoute: ServicesMdsapCapaRemediationRoute,
+  ServicesMdsapComplaintVigilanceRoute: ServicesMdsapComplaintVigilanceRoute,
+  ServicesMdsapDesignControlsRoute: ServicesMdsapDesignControlsRoute,
+  ServicesMdsapGapAssessmentRoute: ServicesMdsapGapAssessmentRoute,
+  ServicesMdsapJurisdictionReadinessRoute:
+    ServicesMdsapJurisdictionReadinessRoute,
+  ServicesMdsapMockAuditsRoute: ServicesMdsapMockAuditsRoute,
+  ServicesMdsapPostCertificationRoute: ServicesMdsapPostCertificationRoute,
+  ServicesMdsapProcessReadinessRoute: ServicesMdsapProcessReadinessRoute,
+  ServicesMdsapProductionSupplierValidationRoute:
+    ServicesMdsapProductionSupplierValidationRoute,
+  ServicesMdsapQmsAlignmentRoute: ServicesMdsapQmsAlignmentRoute,
+  ServicesMdsapStrategyScopeRoute: ServicesMdsapStrategyScopeRoute,
+  ServicesMdsapIndexRoute: ServicesMdsapIndexRoute,
+}
+
+const ServicesMdsapRouteWithChildren = ServicesMdsapRoute._addFileChildren(
+  ServicesMdsapRouteChildren,
+)
+
 interface ServicesNewZealandRouteChildren {
   ServicesNewZealandChangeManagementRoute: typeof ServicesNewZealandChangeManagementRoute
   ServicesNewZealandClassificationRoute: typeof ServicesNewZealandClassificationRoute
@@ -4984,7 +5278,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesIso13485Route: ServicesIso13485Route,
   ServicesManufacturingRoute: ServicesManufacturingRoute,
   ServicesMarketAccessRoute: ServicesMarketAccessRoute,
-  ServicesMdsapRoute: ServicesMdsapRoute,
+  ServicesMdsapRoute: ServicesMdsapRouteWithChildren,
   ServicesNewZealandRoute: ServicesNewZealandRouteWithChildren,
   ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
   ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
