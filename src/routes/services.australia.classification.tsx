@@ -44,54 +44,53 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/classification")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australia TGA Medical Device & IVD Classification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "Strategic TGA classification for Medical Devices (Class I, Is, Im, IIa, IIb, III) and IVDs (Class 1-4) under Australian Therapeutic Goods Regulations. GMDN code determination and kind-of-device assessment.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/classification" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaClassificationPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaClassificationPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Launching a new medical device or IVD in Australia",
+    "Changing intended purpose, indications, duration of use, anatomical site or user population",
+    "Adding software functionality or converting a hardware feature into software",
+    "Introducing sterile, measuring, implantable or active functionality",
+    "Using an overseas classification as the starting point and needing to confirm whether Australian rules produce the same outcome",
+    "Building a multi-market product family where Australian grouping and evidence must be aligned early",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Product qualification as a medical device, IVD, software-based medical device or other therapeutic good",
+    "Intended purpose and claims review against Australian regulatory definitions",
+    "Class I, Is, Im, IIa, IIb and III classification strategy for non-IVD medical devices",
+    "IVD Class 1, 2, 3 and 4 classification strategy under the risk-based IVD rules",
+    "Accessory, system and procedure pack considerations",
+    "Software / SaMD classification and exemption / exclusion assessment where applicable",
+    "GMDN term selection and “kind of medical device” grouping assessment",
+    "Conformity assessment route determination based on risk class",
+    "Initial UDI applicability and compliance-timing assessment",
+    "Regulatory evidence roadmap from classification to ARTG inclusion",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Whether the intended purpose supports the proposed class",
+    "Whether multiple classification rules apply and the highest class has been considered",
+    "Whether accessories and software have been classified separately where required",
+    "Whether the GMDN / kind-of-device strategy matches the proposed ARTG inclusion",
+    "Whether the existing conformity evidence actually covers the Australian scope",
   ];
 
   return (
@@ -105,7 +104,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Product Classification</span>
           </div>
 
           <Link
@@ -117,20 +116,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              Therapeutic Goods Regulations
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Australia Regulatory Strategy &amp; Product Classification
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Classification is not an administrative label. It drives the minimum conformity evidence, ARTG pathway, application-audit exposure, UDI timing and post-market obligations. NKB Regovanta reviews the intended purpose and the device characteristics that actually trigger the Australian classification rules before the market-access plan is fixed.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Define Your TGA Regulatory Pathway <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +181,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                If the intended purpose changes, does the classification still hold — and does the existing conformity evidence still cover the Australian kind of device?
               </p>
             </div>
           </div>
@@ -190,8 +189,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Establish Your Australian Medical Device Classification"
+        description="Our TGA regulatory specialists evaluate your intended purpose, map GMDN codes, and structure a compliant ARTG grouping strategy."
       />
     </>
   );

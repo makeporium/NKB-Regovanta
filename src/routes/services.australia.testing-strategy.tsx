@@ -44,54 +44,59 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/testing-strategy")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australia Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "Strategic pre-clinical testing protocol design, NATA-accredited and ISO 17025 laboratory coordination, biocompatibility, electrical safety EMC, and IVD performance studies for TGA.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/testing-strategy" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaTestingStrategyPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaTestingStrategyPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "New medical device or IVD requiring verification and validation evidence for TGA submission",
+    "Predicate or overseas evidence does not fully cover the Australian marketed configuration or indications",
+    "TGA application audit identifies a specific testing or pre-clinical data gap",
+    "New material, supplier, sterilisation process, software version, packaging system or manufacturing site",
+    "Performance claims require additional analytical, bench, usability or clinical substantiation",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Biocompatibility and biological evaluation (ISO 10993 series)",
+    "Chemical characterisation and toxicological risk assessment",
+    "Sterilisation validation (EO, Gamma, E-beam, Steam, VHP)",
+    "Packaging validation and transportation transit testing (ASTM D4169, ISO 11607)",
+    "Shelf-life and accelerated / real-time ageing studies",
+    "Electrical safety and EMC testing (IEC 60601-1, IEC 60601-1-2)",
+    "Bench and functional performance verification",
+    "Mechanical durability, fatigue and tensile testing",
+    "Software verification and validation (IEC 62304)",
+    "Cybersecurity penetration testing and vulnerability analysis",
+    "Human factors and usability engineering validation (IEC 62366-1)",
+    "IVD analytical performance studies (sensitivity, specificity, LoD, precision)",
+    "IVD clinical performance studies and comparator benchmarking",
+    "Device-specific verification and validation protocols",
+    "Protocol and final-report regulatory review before dossier inclusion",
+    "Laboratory coordination with NATA and ISO 17025 accredited facilities",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Worst-case configuration chosen for convenience rather than clinical/safety risk",
+    "Protocol acceptance criteria that are not technically or clinically justified",
+    "Testing to a standard version that does not fully address the claimed use",
+    "Samples that do not represent the final production-equivalent finished device",
+    "Final laboratory reports that cannot be cleanly mapped into the Essential Principles checklist",
+    "IVD analytical studies disconnected from the claimed specimen type or intended population",
   ];
 
   return (
@@ -105,7 +110,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Testing Strategy</span>
           </div>
 
           <Link
@@ -117,20 +122,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              NATA &amp; ISO 17025 Lab Coordination
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Testing Strategy &amp; Laboratory Coordination
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Testing should be designed around the regulatory question it needs to answer. NKB Regovanta defines the testing strategy from classification, risks, Essential Principles, device claims and conformity evidence, then coordinates with established laboratories where external testing is required.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Build Your Australia Testing Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -169,7 +174,7 @@ function AustraliaARTGInclusionPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Testing Areas We Support &amp; Coordinate</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -182,7 +187,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Will the final test report answer the regulatory question TGA is likely to ask — or merely show that a laboratory test was completed?
               </p>
             </div>
           </div>
@@ -190,8 +195,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Execute Pre-Clinical Testing with Clear TGA Regulatory Alignment"
+        description="Our team designs study protocols, justifies sample sizes, and oversees testing at accredited laboratories."
       />
     </>
   );

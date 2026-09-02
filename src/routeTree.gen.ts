@@ -59,9 +59,22 @@ import { Route as IndustriesIvdIndiaRouteImport } from './routes/industries.ivd_
 import { Route as IndustriesIvdUsaRouteImport } from './routes/industries.ivd_.usa'
 import { Route as ServicesAustraliaIndexRouteImport } from './routes/services.australia.index'
 import { Route as ServicesAustraliaArtgInclusionRouteImport } from './routes/services.australia.artg-inclusion'
+import { Route as ServicesAustraliaAustralianSponsorRouteImport } from './routes/services.australia.australian-sponsor'
+import { Route as ServicesAustraliaChangeManagementRouteImport } from './routes/services.australia.change-management'
+import { Route as ServicesAustraliaClassificationRouteImport } from './routes/services.australia.classification'
+import { Route as ServicesAustraliaClinicalEvidenceRouteImport } from './routes/services.australia.clinical-evidence'
 import { Route as ServicesAustraliaConformityAssessmentRouteImport } from './routes/services.australia.conformity-assessment'
+import { Route as ServicesAustraliaIvdRouteImport } from './routes/services.australia.ivd'
+import { Route as ServicesAustraliaLabelingRouteImport } from './routes/services.australia.labeling'
+import { Route as ServicesAustraliaManufacturerEvidenceRouteImport } from './routes/services.australia.manufacturer-evidence'
 import { Route as ServicesAustraliaPmsRouteImport } from './routes/services.australia.pms'
+import { Route as ServicesAustraliaPostMarketRouteImport } from './routes/services.australia.post-market'
+import { Route as ServicesAustraliaSoftwareRouteImport } from './routes/services.australia.software'
 import { Route as ServicesAustraliaSponsorRouteImport } from './routes/services.australia.sponsor'
+import { Route as ServicesAustraliaSupplyChainRouteImport } from './routes/services.australia.supply-chain'
+import { Route as ServicesAustraliaTechnicalDocumentationRouteImport } from './routes/services.australia.technical-documentation'
+import { Route as ServicesAustraliaTestingStrategyRouteImport } from './routes/services.australia.testing-strategy'
+import { Route as ServicesAustraliaTgaAuditRouteImport } from './routes/services.australia.tga-audit'
 import { Route as ServicesBrazilIndexRouteImport } from './routes/services.brazil.index'
 import { Route as ServicesBrazilBgmpRouteImport } from './routes/services.brazil.bgmp'
 import { Route as ServicesBrazilBrhRouteImport } from './routes/services.brazil.brh'
@@ -430,10 +443,51 @@ const ServicesAustraliaArtgInclusionRoute =
     path: '/artg-inclusion',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
+const ServicesAustraliaAustralianSponsorRoute =
+  ServicesAustraliaAustralianSponsorRouteImport.update({
+    id: '/australian-sponsor',
+    path: '/australian-sponsor',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaChangeManagementRoute =
+  ServicesAustraliaChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaClassificationRoute =
+  ServicesAustraliaClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaClinicalEvidenceRoute =
+  ServicesAustraliaClinicalEvidenceRouteImport.update({
+    id: '/clinical-evidence',
+    path: '/clinical-evidence',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
 const ServicesAustraliaConformityAssessmentRoute =
   ServicesAustraliaConformityAssessmentRouteImport.update({
     id: '/conformity-assessment',
     path: '/conformity-assessment',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaIvdRoute = ServicesAustraliaIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesAustraliaRoute,
+} as any)
+const ServicesAustraliaLabelingRoute =
+  ServicesAustraliaLabelingRouteImport.update({
+    id: '/labeling',
+    path: '/labeling',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaManufacturerEvidenceRoute =
+  ServicesAustraliaManufacturerEvidenceRouteImport.update({
+    id: '/manufacturer-evidence',
+    path: '/manufacturer-evidence',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
 const ServicesAustraliaPmsRoute = ServicesAustraliaPmsRouteImport.update({
@@ -441,10 +495,46 @@ const ServicesAustraliaPmsRoute = ServicesAustraliaPmsRouteImport.update({
   path: '/pms',
   getParentRoute: () => ServicesAustraliaRoute,
 } as any)
+const ServicesAustraliaPostMarketRoute =
+  ServicesAustraliaPostMarketRouteImport.update({
+    id: '/post-market',
+    path: '/post-market',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaSoftwareRoute =
+  ServicesAustraliaSoftwareRouteImport.update({
+    id: '/software',
+    path: '/software',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
 const ServicesAustraliaSponsorRoute =
   ServicesAustraliaSponsorRouteImport.update({
     id: '/sponsor',
     path: '/sponsor',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaSupplyChainRoute =
+  ServicesAustraliaSupplyChainRouteImport.update({
+    id: '/supply-chain',
+    path: '/supply-chain',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaTechnicalDocumentationRoute =
+  ServicesAustraliaTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaTestingStrategyRoute =
+  ServicesAustraliaTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesAustraliaRoute,
+  } as any)
+const ServicesAustraliaTgaAuditRoute =
+  ServicesAustraliaTgaAuditRouteImport.update({
+    id: '/tga-audit',
+    path: '/tga-audit',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
 const ServicesBrazilIndexRoute = ServicesBrazilIndexRouteImport.update({
@@ -1073,9 +1163,22 @@ export interface FileRoutesByFullPath {
   '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
+  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
+  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
+  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
+  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
+  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
+  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
   '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
+  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
+  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
+  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
@@ -1225,9 +1328,22 @@ export interface FileRoutesByTo {
   '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
+  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
+  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
+  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
+  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
+  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
+  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
   '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
+  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
+  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
+  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
@@ -1386,9 +1502,22 @@ export interface FileRoutesById {
   '/industries/ivd_/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd_/usa': typeof IndustriesIvdUsaRoute
   '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
+  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
+  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
+  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
+  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
   '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
+  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
+  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
+  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
   '/services/australia/pms': typeof ServicesAustraliaPmsRoute
+  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
+  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
   '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
+  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
+  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
+  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
+  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
@@ -1548,9 +1677,22 @@ export interface FileRouteTypes {
     | '/industries/ivd/india'
     | '/industries/ivd/usa'
     | '/services/australia/artg-inclusion'
+    | '/services/australia/australian-sponsor'
+    | '/services/australia/change-management'
+    | '/services/australia/classification'
+    | '/services/australia/clinical-evidence'
     | '/services/australia/conformity-assessment'
+    | '/services/australia/ivd'
+    | '/services/australia/labeling'
+    | '/services/australia/manufacturer-evidence'
     | '/services/australia/pms'
+    | '/services/australia/post-market'
+    | '/services/australia/software'
     | '/services/australia/sponsor'
+    | '/services/australia/supply-chain'
+    | '/services/australia/technical-documentation'
+    | '/services/australia/testing-strategy'
+    | '/services/australia/tga-audit'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
     | '/services/brazil/notificacao'
@@ -1700,9 +1842,22 @@ export interface FileRouteTypes {
     | '/industries/ivd/india'
     | '/industries/ivd/usa'
     | '/services/australia/artg-inclusion'
+    | '/services/australia/australian-sponsor'
+    | '/services/australia/change-management'
+    | '/services/australia/classification'
+    | '/services/australia/clinical-evidence'
     | '/services/australia/conformity-assessment'
+    | '/services/australia/ivd'
+    | '/services/australia/labeling'
+    | '/services/australia/manufacturer-evidence'
     | '/services/australia/pms'
+    | '/services/australia/post-market'
+    | '/services/australia/software'
     | '/services/australia/sponsor'
+    | '/services/australia/supply-chain'
+    | '/services/australia/technical-documentation'
+    | '/services/australia/testing-strategy'
+    | '/services/australia/tga-audit'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
     | '/services/brazil/notificacao'
@@ -1860,9 +2015,22 @@ export interface FileRouteTypes {
     | '/industries/ivd_/india'
     | '/industries/ivd_/usa'
     | '/services/australia/artg-inclusion'
+    | '/services/australia/australian-sponsor'
+    | '/services/australia/change-management'
+    | '/services/australia/classification'
+    | '/services/australia/clinical-evidence'
     | '/services/australia/conformity-assessment'
+    | '/services/australia/ivd'
+    | '/services/australia/labeling'
+    | '/services/australia/manufacturer-evidence'
     | '/services/australia/pms'
+    | '/services/australia/post-market'
+    | '/services/australia/software'
     | '/services/australia/sponsor'
+    | '/services/australia/supply-chain'
+    | '/services/australia/technical-documentation'
+    | '/services/australia/testing-strategy'
+    | '/services/australia/tga-audit'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
     | '/services/brazil/notificacao'
@@ -2372,11 +2540,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAustraliaArtgInclusionRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
+    '/services/australia/australian-sponsor': {
+      id: '/services/australia/australian-sponsor'
+      path: '/australian-sponsor'
+      fullPath: '/services/australia/australian-sponsor'
+      preLoaderRoute: typeof ServicesAustraliaAustralianSponsorRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/change-management': {
+      id: '/services/australia/change-management'
+      path: '/change-management'
+      fullPath: '/services/australia/change-management'
+      preLoaderRoute: typeof ServicesAustraliaChangeManagementRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/classification': {
+      id: '/services/australia/classification'
+      path: '/classification'
+      fullPath: '/services/australia/classification'
+      preLoaderRoute: typeof ServicesAustraliaClassificationRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/clinical-evidence': {
+      id: '/services/australia/clinical-evidence'
+      path: '/clinical-evidence'
+      fullPath: '/services/australia/clinical-evidence'
+      preLoaderRoute: typeof ServicesAustraliaClinicalEvidenceRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
     '/services/australia/conformity-assessment': {
       id: '/services/australia/conformity-assessment'
       path: '/conformity-assessment'
       fullPath: '/services/australia/conformity-assessment'
       preLoaderRoute: typeof ServicesAustraliaConformityAssessmentRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/ivd': {
+      id: '/services/australia/ivd'
+      path: '/ivd'
+      fullPath: '/services/australia/ivd'
+      preLoaderRoute: typeof ServicesAustraliaIvdRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/labeling': {
+      id: '/services/australia/labeling'
+      path: '/labeling'
+      fullPath: '/services/australia/labeling'
+      preLoaderRoute: typeof ServicesAustraliaLabelingRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/manufacturer-evidence': {
+      id: '/services/australia/manufacturer-evidence'
+      path: '/manufacturer-evidence'
+      fullPath: '/services/australia/manufacturer-evidence'
+      preLoaderRoute: typeof ServicesAustraliaManufacturerEvidenceRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
     '/services/australia/pms': {
@@ -2386,11 +2603,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAustraliaPmsRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
+    '/services/australia/post-market': {
+      id: '/services/australia/post-market'
+      path: '/post-market'
+      fullPath: '/services/australia/post-market'
+      preLoaderRoute: typeof ServicesAustraliaPostMarketRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/software': {
+      id: '/services/australia/software'
+      path: '/software'
+      fullPath: '/services/australia/software'
+      preLoaderRoute: typeof ServicesAustraliaSoftwareRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
     '/services/australia/sponsor': {
       id: '/services/australia/sponsor'
       path: '/sponsor'
       fullPath: '/services/australia/sponsor'
       preLoaderRoute: typeof ServicesAustraliaSponsorRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/supply-chain': {
+      id: '/services/australia/supply-chain'
+      path: '/supply-chain'
+      fullPath: '/services/australia/supply-chain'
+      preLoaderRoute: typeof ServicesAustraliaSupplyChainRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/technical-documentation': {
+      id: '/services/australia/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/australia/technical-documentation'
+      preLoaderRoute: typeof ServicesAustraliaTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/testing-strategy': {
+      id: '/services/australia/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/australia/testing-strategy'
+      preLoaderRoute: typeof ServicesAustraliaTestingStrategyRouteImport
+      parentRoute: typeof ServicesAustraliaRoute
+    }
+    '/services/australia/tga-audit': {
+      id: '/services/australia/tga-audit'
+      path: '/tga-audit'
+      fullPath: '/services/australia/tga-audit'
+      preLoaderRoute: typeof ServicesAustraliaTgaAuditRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
     '/services/brazil/': {
@@ -3157,18 +3416,49 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
 
 interface ServicesAustraliaRouteChildren {
   ServicesAustraliaArtgInclusionRoute: typeof ServicesAustraliaArtgInclusionRoute
+  ServicesAustraliaAustralianSponsorRoute: typeof ServicesAustraliaAustralianSponsorRoute
+  ServicesAustraliaChangeManagementRoute: typeof ServicesAustraliaChangeManagementRoute
+  ServicesAustraliaClassificationRoute: typeof ServicesAustraliaClassificationRoute
+  ServicesAustraliaClinicalEvidenceRoute: typeof ServicesAustraliaClinicalEvidenceRoute
   ServicesAustraliaConformityAssessmentRoute: typeof ServicesAustraliaConformityAssessmentRoute
+  ServicesAustraliaIvdRoute: typeof ServicesAustraliaIvdRoute
+  ServicesAustraliaLabelingRoute: typeof ServicesAustraliaLabelingRoute
+  ServicesAustraliaManufacturerEvidenceRoute: typeof ServicesAustraliaManufacturerEvidenceRoute
   ServicesAustraliaPmsRoute: typeof ServicesAustraliaPmsRoute
+  ServicesAustraliaPostMarketRoute: typeof ServicesAustraliaPostMarketRoute
+  ServicesAustraliaSoftwareRoute: typeof ServicesAustraliaSoftwareRoute
   ServicesAustraliaSponsorRoute: typeof ServicesAustraliaSponsorRoute
+  ServicesAustraliaSupplyChainRoute: typeof ServicesAustraliaSupplyChainRoute
+  ServicesAustraliaTechnicalDocumentationRoute: typeof ServicesAustraliaTechnicalDocumentationRoute
+  ServicesAustraliaTestingStrategyRoute: typeof ServicesAustraliaTestingStrategyRoute
+  ServicesAustraliaTgaAuditRoute: typeof ServicesAustraliaTgaAuditRoute
   ServicesAustraliaIndexRoute: typeof ServicesAustraliaIndexRoute
 }
 
 const ServicesAustraliaRouteChildren: ServicesAustraliaRouteChildren = {
   ServicesAustraliaArtgInclusionRoute: ServicesAustraliaArtgInclusionRoute,
+  ServicesAustraliaAustralianSponsorRoute:
+    ServicesAustraliaAustralianSponsorRoute,
+  ServicesAustraliaChangeManagementRoute:
+    ServicesAustraliaChangeManagementRoute,
+  ServicesAustraliaClassificationRoute: ServicesAustraliaClassificationRoute,
+  ServicesAustraliaClinicalEvidenceRoute:
+    ServicesAustraliaClinicalEvidenceRoute,
   ServicesAustraliaConformityAssessmentRoute:
     ServicesAustraliaConformityAssessmentRoute,
+  ServicesAustraliaIvdRoute: ServicesAustraliaIvdRoute,
+  ServicesAustraliaLabelingRoute: ServicesAustraliaLabelingRoute,
+  ServicesAustraliaManufacturerEvidenceRoute:
+    ServicesAustraliaManufacturerEvidenceRoute,
   ServicesAustraliaPmsRoute: ServicesAustraliaPmsRoute,
+  ServicesAustraliaPostMarketRoute: ServicesAustraliaPostMarketRoute,
+  ServicesAustraliaSoftwareRoute: ServicesAustraliaSoftwareRoute,
   ServicesAustraliaSponsorRoute: ServicesAustraliaSponsorRoute,
+  ServicesAustraliaSupplyChainRoute: ServicesAustraliaSupplyChainRoute,
+  ServicesAustraliaTechnicalDocumentationRoute:
+    ServicesAustraliaTechnicalDocumentationRoute,
+  ServicesAustraliaTestingStrategyRoute: ServicesAustraliaTestingStrategyRoute,
+  ServicesAustraliaTgaAuditRoute: ServicesAustraliaTgaAuditRoute,
   ServicesAustraliaIndexRoute: ServicesAustraliaIndexRoute,
 }
 

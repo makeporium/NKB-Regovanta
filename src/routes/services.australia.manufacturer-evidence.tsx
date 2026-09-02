@@ -44,54 +44,53 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/manufacturer-evidence")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "TGA Manufacturer Evidence & Conformity Assessment | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "TGA Manufacturer Evidence application, certificate alignment, comparable overseas regulator evidence (EU MDR/IVDR, US FDA 510k/PMA, Health Canada MDSAP, Japan PMDA), and Declaration of Conformity review.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/manufacturer-evidence" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaManufacturerEvidencePage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaManufacturerEvidencePage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Preparing a first Australian ARTG application",
+    "Using EU, UK, US, Canadian or other overseas regulatory evidence to support Australia",
+    "Changing certification body, conformity assessment certificate, manufacturing site or legal manufacturer",
+    "Transitioning from older EU certificates to MDR / IVDR certificates",
+    "Extending a product family or adding models under existing evidence",
+    "Responding to a TGA question about the adequacy or scope of manufacturer evidence",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Review of TGA Conformity Assessment Certificates where applicable",
+    "Review of acceptable comparable overseas regulator / assessment body evidence (EU MDR/IVDR, US FDA, Health Canada, Japan PMDA)",
+    "Manufacturer Evidence application and variation strategy in TGA Business Services",
+    "QMS certificate and product-assessment evidence review",
+    "Declaration of Conformity drafting and review",
+    "Certificate scope, device family and classification alignment",
+    "Manufacturer legal name, site address and corporate entity consistency",
+    "Assessment of evidence validity, conditions of certification and transition status",
+    "Identification of evidence gaps before ARTG inclusion application",
+    "Strategy for certificate lapse, replacement, re-certification or variation",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Certificate scope narrower than the products proposed for ARTG inclusion",
+    "Different manufacturer names, sites or legal entities across certificates and declarations",
+    "Evidence that covers a related product but not the same design / intended purpose",
+    "Expired, superseded or transition-dependent evidence",
+    "Using overseas evidence without confirming it is acceptable for the Australian class and application type",
   ];
 
   return (
@@ -105,7 +104,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Manufacturer Evidence</span>
           </div>
 
           <Link
@@ -117,20 +116,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              Conformity Assessment &amp; Overseas Evidence
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Manufacturer Evidence &amp; Conformity Assessment Strategy
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Manufacturer Evidence is a core gate in the Australian pathway. For most device and IVD applications, the Sponsor must hold an accepted Manufacturer Evidence identifier before the ARTG application can proceed. The evidence must be current, applicable to the manufacturer and appropriate for the risk class and product scope.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Review Your Manufacturer Evidence <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +181,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Can the Sponsor demonstrate, document by document, that the conformity assessment evidence applies to the same manufacturer, same device scope and same intended purpose being represented in Australia?
               </p>
             </div>
           </div>
@@ -190,8 +189,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Secure Your TGA Manufacturer Evidence Acceptance"
+        description="Our team verifies comparable overseas certificates, drafts Declarations of Conformity, and submits Manufacturer Evidence filings to TGA."
       />
     </>
   );

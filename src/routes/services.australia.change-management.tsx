@@ -44,54 +44,60 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/change-management")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australia ARTG Variations, Significant Changes & Lifecycle Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "TGA significant change evaluation, ARTG variation applications under Section 9D, kind-of-device impact analysis, Manufacturer Evidence updates, and lifecycle engineering change control in Australia.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/change-management" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaChangeManagementPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaChangeManagementPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Design or technical specification modification to a marketed device",
+    "Raw material, chemical formulation, or critical supplier change",
+    "Software, firmware, or cybersecurity algorithmic update",
+    "Manufacturing site relocation, line extension, or legal entity transfer",
+    "Manufacturing process, sterilisation method, or cycle parameter change",
+    "Primary/secondary packaging or shelf-life / expiry date extension",
+    "Labelling, IFU, clinical indication, or intended purpose expansion",
+    "Clinical evaluation update or new performance data generation",
+    "Conformity certificate change, scope renewal, or transition to MDR/IVDR",
+    "Sponsor transfer, corporate restructuring, or manufacturer data modification",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Regulatory change-impact assessment against Therapeutic Goods legislation",
+    "Verification and validation requirement definition for proposed changes",
+    "Manufacturer Evidence variation strategy and TGA Business Services filing",
+    "ARTG Section 9D variation application vs. new ARTG inclusion assessment",
+    "Conformity certificate scope and notified body / CAB impact review",
+    "Technical documentation and Essential Principles update roadmap",
+    "Clinical / performance evidence impact assessment",
+    "Risk management file (ISO 14971) update and benefit-risk re-evaluation",
+    "Labelling, packaging artwork, and IFU modification review",
+    "UDI trigger analysis and AusUDID data attribute update execution",
+    "Sponsor notification protocols and governance documentation",
+    "Post-market surveillance and annual reporting continuity planning",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Change implemented in production before regulatory impact assessment is performed",
+    "New device model assumed to fit under existing ARTG inclusion without kind-of-device grouping review",
+    "Conformity certificate updated overseas but not reflected in TGA Manufacturer Evidence",
+    "Software update alters clinical performance or diagnostic output but is treated as routine maintenance",
+    "UDI change trigger missed during catalogue or model restructuring",
+    "Manufacturing transfer completed without validating process equivalency and regulatory evidence",
   ];
 
   return (
@@ -105,7 +111,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Change Management</span>
           </div>
 
           <Link
@@ -117,20 +123,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              Section 9D Variations &amp; Changes
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              ARTG Variations, Significant Changes &amp; Device Lifecycle Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Device changes can affect more than the technical file. A modification may affect conformity assessment evidence, Manufacturer Evidence, ARTG representation, UDI, labelling, Sponsor records or post-market obligations. Changes should therefore be assessed before implementation.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Assess an Australian Device Change <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +188,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Does the change alter the regulatory basis on which conformity was demonstrated or the kind of medical device represented in the ARTG?
               </p>
             </div>
           </div>
@@ -190,8 +196,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Manage ARTG Variations and Device Lifecycle Changes"
+        description="Our regulatory strategists assess change impact, lodge Section 9D variations, and maintain Manufacturer Evidence continuity."
       />
     </>
   );

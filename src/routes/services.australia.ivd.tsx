@@ -44,54 +44,58 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/ivd")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australia IVD Regulatory Strategy & ARTG Inclusion | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "Risk-based IVD classification (Class 1-4), analytical and clinical performance evidence, Performance Evaluation Report (PER), Class 4 annual reporting, and ARTG inclusion for in vitro diagnostics in Australia.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/ivd" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaIVDPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaIVDPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Class 1, 2, 3 or 4 IVD market launch in Australia",
+    "Self-testing, point-of-care (PoC), near-patient, or centralized laboratory IVD system",
+    "New analyte, specimen type, intended target population, or expanded clinical claim",
+    "Transition to new Manufacturer Evidence, IVDR certification, or MDSAP audit basis",
+    "Performance study planning, assay validation, or analytical gap remediation",
+    "Class 4 high-risk IVD requiring higher scrutiny, preliminary review, and mandatory annual reporting",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "IVD qualification and risk-based classification (Class 1 to 4)",
+    "Intended purpose, analyte detection, specimen type, and clinical-use review",
+    "Conformity assessment and Manufacturer Evidence pathway strategy",
+    "ARTG inclusion and kind-of-device grouping for IVDs",
+    "Essential Principles compliance mapping for in vitro diagnostics",
+    "Analytical performance evaluation strategy (sensitivity, specificity, LoD, LoQ, precision, cross-reactivity)",
+    "Clinical performance evaluation strategy and diagnostic accuracy benchmarking",
+    "Performance study design, protocol authoring, and clinical trial coordination",
+    "Laboratory coordination with accredited diagnostic testing facilities",
+    "IVD labelling, Instructions for Use (IFU), and package insert review",
+    "Class 4 annual reporting systems readiness and post-market tracking",
+    "Post-market surveillance, vigilance, and IRIS adverse incident reporting",
+    "UDI / AusUDID readiness in line with phased Australian implementation",
+    "IVD variation, design modification, and lifecycle change control",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Performance claims not supported by the exact specimen type or validated population",
+    "Clinical performance evidence generated using an inappropriate comparator or reference method",
+    "Cut-off values or clinical acceptance criteria not clinically justified",
+    "Analytical studies performed on a reagent/instrument configuration different from the marketed assay",
+    "IVD intended purpose stated in marketing broader than the study cohort",
+    "Class 4 post-market annual reporting responsibilities not operationalised within Sponsor workflows",
   ];
 
   return (
@@ -105,7 +109,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">IVD Registration</span>
           </div>
 
           <Link
@@ -117,20 +121,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              In Vitro Diagnostics (Class 1–4)
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              IVD Regulatory Strategy, Performance Evidence &amp; ARTG Inclusion
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Australian IVD regulation is risk-based and classification depends on intended purpose and the potential public-health or personal harm from an incorrect result. IVD market access therefore requires both an ARTG strategy and a performance-evidence strategy that supports the claims made for the assay or system.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Build Your Australian IVD Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +186,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                If the IVD gives an incorrect result, what is the individual and public-health consequence — and does the classification and evidence package reflect that risk?
               </p>
             </div>
           </div>
@@ -190,8 +194,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Authorize Your In Vitro Diagnostic in Australia"
+        description="Our diagnostic regulatory experts guide analytical studies, clinical performance validations, and ARTG inclusion applications."
       />
     </>
   );

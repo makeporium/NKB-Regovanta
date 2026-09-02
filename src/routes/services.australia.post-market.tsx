@@ -44,54 +44,58 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/post-market")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "TGA Post-Market Surveillance, MDIR Incident Reporting & Vigilance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "Australia TGA post-market vigilance, Medical Device Incident Reporting (MDIR in IRIS), 48-hour/10-day/30-day timelines, annual reporting for Class III & implantable devices, recalls, and PRAC market actions.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/post-market" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaPostMarketPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaPostMarketPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "New ARTG inclusion requiring a functioning Australian post-market operating model",
+    "Adverse event or near-incident occurring in Australia or overseas involving the device",
+    "Safety signal, trend, or recurring complaint cluster identified in global PMS data",
+    "Field Safety Corrective Action (FSCA), recall, safety alert, or product correction initiated",
+    "Higher-risk device subject to mandatory annual reports for the first three years of inclusion",
+    "TGA post-market review, compliance audit, or official Section 41JA information request",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Post-market surveillance (PMS) system review and Australian standard operating procedure setup",
+    "Complaint triage and adverse-event reportability assessment",
+    "Medical Device Incident Reporting (MDIR) submission via the TGA IRIS database",
+    "48-hour serious public health threat reporting management",
+    "10-day death or serious deterioration reporting assessment and lodgement",
+    "30-day potential recurrence / serious deterioration reporting management",
+    "Follow-up investigation coordination and final regulatory report drafting",
+    "Statistical trend analysis, signal detection, and risk mitigation review",
+    "Manufacturer root-cause investigation and CAPA linkage",
+    "Market action / Recall action / PRAC communication and TGA strategy alignment",
+    "Overseas regulatory action assessment and mandatory Australian notification",
+    "Annual reports authoring for implantable Class IIb, Class III and Class 4 IVDs",
+    "Risk management file (ISO 14971) and labelling updates following post-market findings",
+    "Response drafting for TGA post-market reviews and regulatory inquiries",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Adverse event reportability decision not documented in a defensible audit trail",
+    "Manufacturer overseas investigation and Sponsor TGA report contain conflicting conclusions",
+    "Overseas recall or safety notice not assessed for impact on Australian ARTG supply",
+    "CAPA investigations not closed back into risk management and design history files",
+    "Annual report unit-distribution data cannot be reconciled with complaint records",
+    "Field corrective action initiated in Australia before Sponsor and TGA strategy is aligned",
   ];
 
   return (
@@ -105,7 +109,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Post-Market Surveillance</span>
           </div>
 
           <Link
@@ -117,20 +121,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              IRIS Vigilance &amp; MDIR
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Post-Market Surveillance, MDIR Reporting, Annual Reports &amp; Market Actions
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              ARTG inclusion creates continuing obligations. Sponsors must monitor device safety and performance, manage complaints, report adverse events within the prescribed timeframes, coordinate investigations and market actions, maintain records and respond to TGA post-market requests.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Strengthen Your Australia Post-Market System <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -167,6 +171,27 @@ function AustraliaARTGInclusionPage() {
             </div>
           </div>
 
+          {/* Reporting Timelines Callout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-slate-50 border border-gray-200 text-center">
+              <span className="text-2xl font-black text-[#0b7261] block mb-1">48 Hours</span>
+              <p className="text-xs font-bold text-navy mb-1">Public Health Threat</p>
+              <p className="text-[11px] text-gray-500">Serious threat to public health requires initial reporting within 48 hours.</p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-gray-200 text-center">
+              <span className="text-2xl font-black text-[#0b7261] block mb-1">10 Days</span>
+              <p className="text-xs font-bold text-navy mb-1">Death or Serious Deterioration</p>
+              <p className="text-[11px] text-gray-500">Events leading to patient death or severe injury reportable within 10 calendar days.</p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-gray-200 text-center">
+              <span className="text-2xl font-black text-navy block mb-1">30 Days</span>
+              <p className="text-xs font-bold text-navy mb-1">Potential Recurrence</p>
+              <p className="text-[11px] text-gray-500">Malfunctions that could cause death/injury on recurrence reportable within 30 days.</p>
+            </div>
+          </div>
+
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
             <h2 className="text-xl font-extrabold text-navy mb-6">Our Support Includes</h2>
@@ -182,7 +207,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Can the Sponsor show a complete evidence trail from the first complaint to the final regulatory and corrective-action decision?
               </p>
             </div>
           </div>
@@ -190,8 +215,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Maintain Rigorous TGA Post-Market Vigilance and MDIR Compliance"
+        description="Our vigilance experts evaluate reportability, lodge MDIR records in IRIS, and manage TGA recall communications."
       />
     </>
   );

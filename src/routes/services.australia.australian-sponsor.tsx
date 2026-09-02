@@ -44,54 +44,56 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/australian-sponsor")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australian Sponsor Services & Regulatory Governance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "Professional Australian Sponsor representation for foreign medical device and IVD manufacturers. ARTG inclusion holder, TGA liaison, vigilance & MDIR incident reporting, recall coordination, and UDI data maintenance.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/australian-sponsor" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaSponsorPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaSponsorPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Foreign manufacturer without an Australian legal entity",
+    "Existing commercial distributor acting as Sponsor but lacking regulatory governance and independence",
+    "Transfer of ARTG inclusions from one Sponsor to another",
+    "New device launch requiring a clear manufacturer–Sponsor quality and regulatory interface",
+    "Post-market issue, recall, safety signal or overseas regulatory action affecting Australian supply",
+    "Certificate, manufacturing site, labelling or product change requiring Sponsor regulatory assessment",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Pre-market Sponsor readiness and ARTG inclusion coordination",
+    "Manufacturer–Sponsor regulatory responsibilities and formal Quality/Regulatory Agreement",
+    "Access to technical, clinical, performance and safety information systems",
+    "Conditions of inclusion monitoring and compliance governance",
+    "TGA official information and sample request coordination",
+    "Complaint and adverse-event escalation protocols",
+    "Medical Device Incident Reporting (MDIR) in the TGA IRIS database",
+    "Recall / product alert / product correction support under Australian market-action procedures (PRAC)",
+    "Overseas regulatory action impact assessment",
+    "Manufacturer Evidence and ARTG change monitoring",
+    "UDI / AusUDID responsibilities and data record maintenance",
+    "Record retention and traceability compliance support",
+    "Importer and distributor communication pathways",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Manufacturer informs the Sponsor only after a change has already been implemented",
+    "Sponsor cannot access current technical or post-market records upon TGA request",
+    "Complaints reach local commercial distributors but are never escalated to the Sponsor",
+    "Overseas recall or regulator action is not assessed for Australian ARTG impact",
+    "UDI, ARTG, labelling and technical-file changes are managed in separate, disconnected silos",
   ];
 
   return (
@@ -105,7 +107,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Australian Sponsor</span>
           </div>
 
           <Link
@@ -117,20 +119,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              Legal Representation &amp; Governance
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Australian Sponsor Services &amp; Regulatory Governance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              A foreign manufacturer needs an Australian-based Sponsor to interface with the TGA and hold the ARTG inclusion. The Sponsor role is regulatory and ongoing: it requires access to technical and safety information, control of regulatory communications, vigilance readiness and the ability to act when the manufacturer changes the device or a safety issue emerges.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Discuss Australian Sponsor Support <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +184,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Could the Sponsor independently demonstrate to TGA why the device remains compliant, what changed, what incidents occurred and what corrective actions were taken?
               </p>
             </div>
           </div>
@@ -190,8 +192,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Appoint a Dedicated Australian Sponsor with Full Regulatory Integrity"
+        description="Our Australian team provides independent Sponsor representation, manages TGA inquiries, and maintains post-market compliance."
       />
     </>
   );

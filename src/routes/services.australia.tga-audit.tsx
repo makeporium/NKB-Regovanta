@@ -40,58 +40,60 @@ import {
   ShieldAlert,
   Handshake,
   ShieldCheck,
+  Search,
   ArrowRight,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/tga-audit")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "TGA Application Audit, Regulatory Engagement & Information Requests | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "TGA Level 1 and Level 2 application audit defense, Section 41JA information request responses, mock audit assessments, and clinical evidence justifications for ARTG inclusions.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/tga-audit" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaTGAAuditPage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaTGAAuditPage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "Application category is subject to mandatory or discretionary TGA application audit",
+    "High-risk, novel, implantable, or complex medical device / IVD submission",
+    "Using comparable overseas evidence (CE MDR, FDA) and needing to demonstrate equivalence of scope and evidence",
+    "TGA requests additional information (Section 41JA) or clarification during dossier screening",
+    "Existing submission has inconsistent evidence, outdated testing, or unclear clinical rationale",
+    "Manufacturer seeks pre-submission regulatory engagement or formal meetings on a novel technology",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Pre-audit application readiness assessment and mock audit review",
+    "Likely audit evidence mapping and question vulnerability analysis",
+    "Technical dossier gap assessment against Essential Principles",
+    "Clinical evidence readiness and Clinical Evaluation Report (CER) defense",
+    "IVD performance evidence readiness and analytical study review",
+    "Essential Principles evidence cross-referencing and verification",
+    "Risk-management traceability and ISO 14971 consistency check",
+    "Labelling, IFU, and promotional claim harmonization",
+    "Technical justification and regulatory rationale development",
+    "Response package drafting and cross-reference control",
+    "Management of formal Requests for Information (RFI / Section 41JA)",
+    "Preparation for regulatory engagement discussions and TGA teleconferences",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Answering only the literal wording of the question without resolving the underlying regulatory concern",
+    "Providing voluminous additional documents without a clear roadmap or executive justification",
+    "Introducing new inconsistencies across the dossier while revising individual response files",
+    "Defending a classification, GMDN, or kind-of-device choice without rule-based rationale",
+    "Using overseas regulatory approval as a substitute for demonstrating direct Australian applicability",
   ];
 
   return (
@@ -105,7 +107,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">TGA Application Audit</span>
           </div>
 
           <Link
@@ -117,20 +119,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              Application Audit &amp; RFI Defense
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              TGA Application Audit, Regulatory Engagement &amp; Information Requests
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              TGA may select an ARTG application for audit depending on the device and application pathway. Audit questions can probe far beyond administrative data and may examine the regulatory basis for classification, conformity assessment, clinical / performance evidence, Essential Principles, labelling and risk controls.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Prepare for TGA Review <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -155,7 +157,7 @@ function AustraliaARTGInclusionPage() {
 
             {/* What We Challenge */}
             <div className="p-7 rounded-3xl bg-slate-50 border border-gray-200/80">
-              <h2 className="text-lg font-extrabold text-navy mb-4">What We Challenge Before Submission</h2>
+              <h2 className="text-lg font-extrabold text-navy mb-4">What We Challenge in Response Filings</h2>
               <div className="space-y-2.5">
                 {challenges.map((item, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-white border border-gray-200 flex items-start gap-2.5">
@@ -182,7 +184,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                What regulatory conclusion is TGA unable to reach from the current dossier, and what evidence or rationale will allow that conclusion to be reached?
               </p>
             </div>
           </div>
@@ -190,8 +192,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Defend Your ARTG Application Against TGA Audit Scrutiny"
+        description="Our senior regulatory strategists deconstruct TGA queries, compile clinical justifications, and formulate rigorous response packages."
       />
     </>
   );

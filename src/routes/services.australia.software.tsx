@@ -44,54 +44,57 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/australia/artg-inclusion")({
+export const Route = createFileRoute("/services/australia/software")({
   head: () => ({
     meta: [
       {
         title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+          "Australia SaMD, AI & Cybersecurity Regulatory Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "TGA Software as a Medical Device (SaMD) regulatory status, exclusions/exemptions, IEC 62304 software lifecycle, ISO 27001, cybersecurity risk management, and AI/ML clinical evidence.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/software" }],
   }),
-  component: AustraliaARTGInclusionPage,
+  component: AustraliaSoftwarePage,
 });
 
-function AustraliaARTGInclusionPage() {
+function AustraliaSoftwarePage() {
   const triggers = [
-    "First ARTG inclusion for a manufacturer",
-    "Adding new models, families or variants to an existing product line",
-    "Assessing whether multiple products can sit under one ARTG inclusion",
-    "Correcting an existing ARTG entry that no longer matches the supplied product",
-    "Changing Sponsor or manufacturer information on the register",
-    "Preparing for application audit or preliminary-assessment questions",
+    "New SaMD, digital health platform, or medical mobile application launch",
+    "AI / machine-learning algorithms with diagnostic or therapeutic medical purposes",
+    "Software update or algorithmic modification that may change clinical function or risk profile",
+    "Connected medical device with cloud infrastructure and cybersecurity exposure",
+    "Software previously classified as non-device or wellness tool in another jurisdiction",
+    "Integration of third-party software, open-source libraries, or SOUP into a medical device",
   ];
 
   const supportItems = [
-    "ARTG inclusion pathway assessment (Class I to III & IVD Class 1 to 4)",
-    "Kind-of-device and grouping strategy to optimize ARTG entries",
-    "GMDN term assessment and precision code selection",
-    "Manufacturer and Sponsor data alignment across all systems",
-    "Manufacturer Evidence linkage review and verification",
-    "Declaration of Conformity review and harmonization",
-    "Intended purpose and classification consistency review",
-    "Supporting documentation package compilation",
-    "TGA Business Services (TBS) application preparation and lodgement",
-    "Application audit / Request for Information (RFI) response support",
-    "ARTG entry quality check and certificate validation after inclusion",
+    "Software regulatory-status assessment (Therapeutic Goods Medical Devices Regulations)",
+    "Intended purpose, clinical algorithm, and marketing claims review",
+    "Classification rules application for software-based medical devices",
+    "Exclusion and exemption assessment under Australian digital health reforms",
+    "Essential Principles evidence strategy for software",
+    "IEC 62304-oriented lifecycle documentation review (architecture, unit, integration, system testing)",
+    "Software risk management and hazard analysis (ISO 14971)",
+    "Cybersecurity risk management, threat modelling, and SBOM documentation",
+    "System architecture, cloud interfaces, and data-flow documentation",
+    "SOUP / third-party software controls and vulnerability tracking",
+    "Software verification and validation (V&V) test report review",
+    "Clinical and analytical performance evidence for software-driven diagnostic claims",
+    "UDI implications for downloadable and cloud-hosted software",
+    "Software change control, patch management, and lifecycle versioning strategy",
   ];
 
   const challenges = [
-    "Grouping products that do not meet the same kind-of-device criteria",
-    "GMDN term that does not accurately represent intended purpose or technology",
-    "Mismatch between ARTG application and Declaration of Conformity",
-    "Manufacturer Evidence identifier that does not cover the proposed class / scope",
-    "Claims or model information in Australian labelling that exceed the ARTG regulatory basis",
+    "Clinical claims added through routine software sprint releases without regulatory impact assessment",
+    "Cybersecurity treated separately from patient safety and device risk management",
+    "Software Bill of Materials (SBOM) disconnected from QMS configuration control",
+    "Verification and validation testing performed on non-production-equivalent build environments",
+    "Machine learning / AI model parameter adjustments implemented without assessing ARTG, labelling, or evidence impact",
   ];
 
   return (
@@ -105,7 +108,7 @@ function AustraliaARTGInclusionPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/australia" className="hover:text-navy transition-colors">Australia</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">ARTG Inclusion</span>
+            <span className="text-navy">Software &amp; SaMD</span>
           </div>
 
           <Link
@@ -117,20 +120,20 @@ function AustraliaARTGInclusionPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Australian Register of Therapeutic Goods
+              SaMD, AI &amp; Cybersecurity
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              Software, SaMD, AI &amp; Cybersecurity Regulatory Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.
+              Australian software regulation begins with regulatory-status assessment. Some software meets the medical-device definition and requires ARTG inclusion; other software may be excluded or exempt. For regulated software, the intended medical function drives classification, evidence and lifecycle obligations.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Prepare Your ARTG Inclusion <ArrowRight className="h-4 w-4" />
+                Review Your Australian Software Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -182,7 +185,7 @@ function AustraliaARTGInclusionPage() {
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
               <p className="text-xs font-bold text-navy">Senior Regulatory Question:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                If TGA asks for the Declaration of Conformity, conformity evidence and technical dossier today, will every document support the same device scope represented by the ARTG application?
+                Does the software change alter the intended medical function, performance claim or risk profile in a way that affects classification, evidence or the ARTG basis?
               </p>
             </div>
           </div>
@@ -190,8 +193,8 @@ function AustraliaARTGInclusionPage() {
       </section>
 
       <CTABand
-        title="Submit Your ARTG Inclusion with Full Regulatory Defensibility"
-        description="Our Australian regulatory consultants prepare TBS submissions, link Manufacturer Evidence, and manage TGA application reviews."
+        title="Authorize Your Digital Health and SaMD Innovation in Australia"
+        description="Our software regulatory engineers structure IEC 62304 lifecycles, prepare cybersecurity threat files, and assess TGA software exemptions."
       />
     </>
   );
