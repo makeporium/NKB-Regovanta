@@ -44,51 +44,51 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/classification")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "ANVISA risk classification for Medical Devices (Class I-IV under RDC 751/2022) and IVDs (RDC 830/2023). Technical name selection, family grouping, and Notificação vs Cadastro determination.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/classification" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilClassificationPage,
 });
 
-function BrazilBRHPage() {
+function BrazilClassificationPage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "A new medical device or IVD is being introduced in the Brazilian market",
+    "The intended use or clinical claims differ from an existing US/EU global registration",
+    "The manufacturer is uncertain whether the product is a medical device, accessory, SaMD or IVD",
+    "A product family needs to be grouped appropriately for Brazilian regularization",
+    "An existing classification may be affected by a design, software or intended-use change",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Product qualification and Brazilian regulatory status assessment",
+    "Intended purpose, clinical indications and marketing claims review",
+    "Class I, II, III, and IV risk classification under RDC 751/2022",
+    "IVD risk classification under RDC 830/2023",
+    "Accessory, system and family grouping considerations",
+    "Brazilian technical-name (nome técnico) and grouping strategy",
+    "Notificação versus Cadastro / Registro pathway assessment",
+    "Initial BGMP / CBPF applicability and timeline assessment",
+    "Regulatory evidence roadmap and technical dossier gap analysis",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Does the intended use support the proposed risk class?",
+    "Does the Brazilian technical name align with the device actually being marketed?",
+    "Are all models legitimately grouped under the same family or notification/registration?",
+    "Will a planned claim or feature move the device into a higher-risk rule?",
+    "Does the current global evidence actually support the Brazilian configuration?",
   ];
 
   return (
@@ -102,7 +102,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Product Classification</span>
           </div>
 
           <Link
@@ -114,20 +114,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              RDC 751/2022 &amp; RDC 830/2023
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              ANVISA Regulatory Strategy &amp; Product Classification
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              Correct classification is the foundation of the Brazilian submission. Under RDC 751/2022, medical devices are classified from Class I to IV according to risk. The classification determines whether the product follows notification or registration, the level of evidence expected, BGMP implications and the way changes will be controlled after market entry.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Define Your ANVISA Regulatory Pathway <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +166,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Our Support Includes</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +177,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">ANVISA Classification Principle:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We do not treat classification as a checkbox. We trace the classification decision into the entire Brazilian pathway: registration regime, dossier depth, manufacturing certification (CBPF), labeling, post-market controls and change obligations.
               </p>
             </div>
           </div>
@@ -187,8 +187,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Establish Your ANVISA Risk Classification and Pathway"
+        description="Our Brazilian regulatory specialists classify your devices under RDC 751/2022, map nome técnico codes, and determine Notificação vs Registro."
       />
     </>
   );

@@ -44,51 +44,55 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/software")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "Software as a Medical Device (SaMD) regularization under RDC 657/2022 in Brazil. IEC 62304 software lifecycles, cybersecurity risk management, AI/ML clinical evidence, and algorithmic change control.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/software" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilSoftwarePage,
 });
 
-function BrazilBRHPage() {
+function BrazilSoftwarePage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "Standalone software (SaMD), digital health platform, or software-enabled medical device entering Brazil",
+    "Artificial intelligence (AI) / Machine Learning (ML) functionality is being incorporated for clinical use",
+    "A software update or patch alters clinical diagnostic functionality, output metrics, or risk controls",
+    "Cybersecurity risk evidence and SBOM documentation must be strengthened for ANVISA dossier submission",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "SaMD qualification and regulatory-status assessment under RDC 657/2022",
+    "Intended clinical use, algorithmic purpose, and marketing claims review",
+    "Risk classification strategy for software-based medical devices",
+    "RDC 657/2022 regularization pathway determination (Notificação vs Cadastro)",
+    "Software architecture, data-flow diagrams, and system description compilation",
+    "IEC 62304-oriented software lifecycle documentation review (architecture, unit, integration, system testing)",
+    "Software hazard analysis and risk management (ISO 14971)",
+    "SOUP, third-party component, and open-source library vulnerability management",
+    "Software verification and validation (V&V) test report review",
+    "Cybersecurity risk-management evidence and threat modelling documentation",
+    "Clinical and analytical performance evidence for software-driven diagnostic or treatment claims",
+    "Version numbering and software configuration control governance",
+    "Software change impact assessment for updates, patches, and AI model retraining",
+    "Post-market software vigilance and defect tracking systems setup",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Does the claimed software function create a regulated medical-device intended purpose under ANVISA rules?",
+    "Is the software risk class properly aligned to the clinical consequence of an erroneous output?",
+    "Are software requirements fully traceable to verification tests and risk mitigation controls?",
+    "Is the released software build version clearly identified in the submission forms and technical evidence?",
+    "Could an algorithm parameter adjustment or cybersecurity update trigger a mandatory regulatory variation?",
   ];
 
   return (
@@ -102,7 +106,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Software &amp; SaMD</span>
           </div>
 
           <Link
@@ -114,20 +118,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              RDC 657/2022 Digital Health
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              SaMD, Software, AI &amp; Cybersecurity Regulatory Support (Brazil)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              Software as a Medical Device is specifically regulated under RDC 657/2022. The first regulatory question is whether the software is a medical device and, if so, how its intended medical purpose, risk and functionality determine classification and regularization. Software changes also require disciplined lifecycle assessment because a new algorithm, claim or risk-control function can affect the approved regulatory basis.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Review Your Brazil Software Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +170,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Our Software &amp; Cybersecurity Support Scope</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +181,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">SaMD Assessment Philosophy:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We assess the software as a regulated medical function, not just an IT product. We connect clinical purpose, classification, risk controls, software architecture, V&V, cybersecurity and post-market change management.
               </p>
             </div>
           </div>
@@ -187,8 +191,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Regularize Your SaMD and AI Medical Software in Brazil"
+        description="Our software regulatory experts structure IEC 62304 lifecycles, prepare cybersecurity documentation, and navigate RDC 657/2022 requirements."
       />
     </>
   );

@@ -40,55 +40,60 @@ import {
   ShieldAlert,
   Handshake,
   ShieldCheck,
+  BookOpen,
   ArrowRight,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/technical-documentation")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "ANVISA technical file compilation, Essential Safety and Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, clinical evaluation, and pre-market dossier defense.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technical-documentation" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilTechnicalDocPage,
 });
 
-function BrazilBRHPage() {
+function BrazilTechnicalDocPage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "A Class III or IV registration dossier is being prepared for ANVISA submission",
+    "A Class I or II notification technical file needs to be verified and made defensible for post-market audit",
+    "ANVISA has issued an official exigência requesting technical performance or safety evidence",
+    "Existing global technical documentation (EU MDR/IVDR STED or FDA 510(k)) must be adapted to Brazil",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Device description, principles of operation, and intended use specification",
+    "Design, material specifications, and manufacturing process flow information",
+    "Essential Safety and Performance Requirements (RDC 848/2024) evidence mapping",
+    "Risk-management documentation and benefit-risk evaluation (ISO 14971)",
+    "Bench, functional, and mechanical performance test report integration",
+    "Biological evaluation and biocompatibility testing evidence (ISO 10993)",
+    "Sterilization validation and microbiological barrier documentation",
+    "Packaging integrity, transportation transit, and real-time/accelerated shelf-life evidence",
+    "Electrical safety and EMC testing evidence (IEC 60601 series & INMETRO where applicable)",
+    "Software lifecycle documentation and cybersecurity evidence (IEC 62304 / RDC 657/2022)",
+    "Usability and human factors engineering documentation (IEC 62366-1)",
+    "Clinical evaluation report (CER) and clinical evidence review",
+    "IVD analytical and clinical performance evaluation mapping",
+    "Portuguese labeling, IFU, and promotional claims consistency review",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Is the tested configuration the exact same as the finished commercial device submitted to ANVISA?",
+    "Do pre-clinical laboratory reports support the exact clinical claims made in the Portuguese IFU?",
+    "Are test standards and version dates current and acceptable to ANVISA technical assessors?",
+    "Are worst-case sample selection and testing rationales scientifically defensible?",
+    "Do risk mitigation controls in the risk management file have corresponding verification evidence?",
   ];
 
   return (
@@ -102,7 +107,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Technical Documentation</span>
           </div>
 
           <Link
@@ -114,20 +119,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              RDC 848/2024 &amp; RDC 751/2022
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              Technical Documentation &amp; Safety/Performance Evidence
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              ANVISA expects the technical dossier to demonstrate that the device is safe, performs as intended and meets the applicable Brazilian essential safety and performance requirements. RDC 848/2024 updated the essential safety and performance framework and extends it to IVDs. A dossier built for the EU, US or Canada can often be leveraged, but it must be mapped to the Brazilian product, classification and regulatory route.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Review Your Brazil Technical Dossier <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +171,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Technical Dossier Components We Review</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +182,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">Traceability Principle:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We review traceability across Intended Use → Risk → Safety/Performance Requirement → Verification/Validation → Clinical/Performance Evidence → Labeling. The dossier must tell one consistent regulatory story.
               </p>
             </div>
           </div>
@@ -187,8 +192,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Harmonize Your Technical Dossier for ANVISA Acceptance"
+        description="Our regulatory writers map overseas dossiers to RDC 848/2024 Essential Principles, review pre-clinical data, and compile submission files."
       />
     </>
   );

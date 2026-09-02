@@ -76,11 +76,21 @@ import { Route as ServicesAustraliaTechnicalDocumentationRouteImport } from './r
 import { Route as ServicesAustraliaTestingStrategyRouteImport } from './routes/services.australia.testing-strategy'
 import { Route as ServicesAustraliaTgaAuditRouteImport } from './routes/services.australia.tga-audit'
 import { Route as ServicesBrazilIndexRouteImport } from './routes/services.brazil.index'
+import { Route as ServicesBrazilAnvisaQueriesRouteImport } from './routes/services.brazil.anvisa-queries'
 import { Route as ServicesBrazilBgmpRouteImport } from './routes/services.brazil.bgmp'
 import { Route as ServicesBrazilBrhRouteImport } from './routes/services.brazil.brh'
+import { Route as ServicesBrazilChangeManagementRouteImport } from './routes/services.brazil.change-management'
+import { Route as ServicesBrazilClassificationRouteImport } from './routes/services.brazil.classification'
+import { Route as ServicesBrazilIvdRouteImport } from './routes/services.brazil.ivd'
+import { Route as ServicesBrazilLabelingRouteImport } from './routes/services.brazil.labeling'
 import { Route as ServicesBrazilNotificacaoRouteImport } from './routes/services.brazil.notificacao'
+import { Route as ServicesBrazilRegistrationRouteImport } from './routes/services.brazil.registration'
 import { Route as ServicesBrazilRegistroRouteImport } from './routes/services.brazil.registro'
+import { Route as ServicesBrazilSoftwareRouteImport } from './routes/services.brazil.software'
+import { Route as ServicesBrazilTechnicalDocumentationRouteImport } from './routes/services.brazil.technical-documentation'
 import { Route as ServicesBrazilTechnovigilanceRouteImport } from './routes/services.brazil.technovigilance'
+import { Route as ServicesBrazilTecnovigilanceRouteImport } from './routes/services.brazil.tecnovigilance'
+import { Route as ServicesBrazilTestingStrategyRouteImport } from './routes/services.brazil.testing-strategy'
 import { Route as ServicesCanadaIndexRouteImport } from './routes/services.canada.index'
 import { Route as ServicesCanadaChangeManagementRouteImport } from './routes/services.canada.change-management'
 import { Route as ServicesCanadaClassificationRouteImport } from './routes/services.canada.classification'
@@ -542,6 +552,12 @@ const ServicesBrazilIndexRoute = ServicesBrazilIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesBrazilRoute,
 } as any)
+const ServicesBrazilAnvisaQueriesRoute =
+  ServicesBrazilAnvisaQueriesRouteImport.update({
+    id: '/anvisa-queries',
+    path: '/anvisa-queries',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
 const ServicesBrazilBgmpRoute = ServicesBrazilBgmpRouteImport.update({
   id: '/bgmp',
   path: '/bgmp',
@@ -552,10 +568,38 @@ const ServicesBrazilBrhRoute = ServicesBrazilBrhRouteImport.update({
   path: '/brh',
   getParentRoute: () => ServicesBrazilRoute,
 } as any)
+const ServicesBrazilChangeManagementRoute =
+  ServicesBrazilChangeManagementRouteImport.update({
+    id: '/change-management',
+    path: '/change-management',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilClassificationRoute =
+  ServicesBrazilClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilIvdRoute = ServicesBrazilIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilLabelingRoute = ServicesBrazilLabelingRouteImport.update({
+  id: '/labeling',
+  path: '/labeling',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
 const ServicesBrazilNotificacaoRoute =
   ServicesBrazilNotificacaoRouteImport.update({
     id: '/notificacao',
     path: '/notificacao',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilRegistrationRoute =
+  ServicesBrazilRegistrationRouteImport.update({
+    id: '/registration',
+    path: '/registration',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
 const ServicesBrazilRegistroRoute = ServicesBrazilRegistroRouteImport.update({
@@ -563,10 +607,33 @@ const ServicesBrazilRegistroRoute = ServicesBrazilRegistroRouteImport.update({
   path: '/registro',
   getParentRoute: () => ServicesBrazilRoute,
 } as any)
+const ServicesBrazilSoftwareRoute = ServicesBrazilSoftwareRouteImport.update({
+  id: '/software',
+  path: '/software',
+  getParentRoute: () => ServicesBrazilRoute,
+} as any)
+const ServicesBrazilTechnicalDocumentationRoute =
+  ServicesBrazilTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
 const ServicesBrazilTechnovigilanceRoute =
   ServicesBrazilTechnovigilanceRouteImport.update({
     id: '/technovigilance',
     path: '/technovigilance',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilTecnovigilanceRoute =
+  ServicesBrazilTecnovigilanceRouteImport.update({
+    id: '/tecnovigilance',
+    path: '/tecnovigilance',
+    getParentRoute: () => ServicesBrazilRoute,
+  } as any)
+const ServicesBrazilTestingStrategyRoute =
+  ServicesBrazilTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
 const ServicesCanadaIndexRoute = ServicesCanadaIndexRouteImport.update({
@@ -1179,11 +1246,21 @@ export interface FileRoutesByFullPath {
   '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
   '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
   '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
+  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
+  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
+  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
+  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
+  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
+  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
   '/services/canada/classification': typeof ServicesCanadaClassificationRoute
   '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
@@ -1344,11 +1421,21 @@ export interface FileRoutesByTo {
   '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
   '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
   '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
+  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
+  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
+  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
+  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
+  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
+  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
   '/services/canada/classification': typeof ServicesCanadaClassificationRoute
   '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
@@ -1518,11 +1605,21 @@ export interface FileRoutesById {
   '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
   '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
   '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
+  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
   '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
   '/services/brazil/brh': typeof ServicesBrazilBrhRoute
+  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
+  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
+  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
+  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
   '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
+  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
+  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
+  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
+  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
+  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
   '/services/canada/classification': typeof ServicesCanadaClassificationRoute
   '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
@@ -1693,11 +1790,21 @@ export interface FileRouteTypes {
     | '/services/australia/technical-documentation'
     | '/services/australia/testing-strategy'
     | '/services/australia/tga-audit'
+    | '/services/brazil/anvisa-queries'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
+    | '/services/brazil/change-management'
+    | '/services/brazil/classification'
+    | '/services/brazil/ivd'
+    | '/services/brazil/labeling'
     | '/services/brazil/notificacao'
+    | '/services/brazil/registration'
     | '/services/brazil/registro'
+    | '/services/brazil/software'
+    | '/services/brazil/technical-documentation'
     | '/services/brazil/technovigilance'
+    | '/services/brazil/tecnovigilance'
+    | '/services/brazil/testing-strategy'
     | '/services/canada/change-management'
     | '/services/canada/classification'
     | '/services/canada/inspection'
@@ -1858,11 +1965,21 @@ export interface FileRouteTypes {
     | '/services/australia/technical-documentation'
     | '/services/australia/testing-strategy'
     | '/services/australia/tga-audit'
+    | '/services/brazil/anvisa-queries'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
+    | '/services/brazil/change-management'
+    | '/services/brazil/classification'
+    | '/services/brazil/ivd'
+    | '/services/brazil/labeling'
     | '/services/brazil/notificacao'
+    | '/services/brazil/registration'
     | '/services/brazil/registro'
+    | '/services/brazil/software'
+    | '/services/brazil/technical-documentation'
     | '/services/brazil/technovigilance'
+    | '/services/brazil/tecnovigilance'
+    | '/services/brazil/testing-strategy'
     | '/services/canada/change-management'
     | '/services/canada/classification'
     | '/services/canada/inspection'
@@ -2031,11 +2148,21 @@ export interface FileRouteTypes {
     | '/services/australia/technical-documentation'
     | '/services/australia/testing-strategy'
     | '/services/australia/tga-audit'
+    | '/services/brazil/anvisa-queries'
     | '/services/brazil/bgmp'
     | '/services/brazil/brh'
+    | '/services/brazil/change-management'
+    | '/services/brazil/classification'
+    | '/services/brazil/ivd'
+    | '/services/brazil/labeling'
     | '/services/brazil/notificacao'
+    | '/services/brazil/registration'
     | '/services/brazil/registro'
+    | '/services/brazil/software'
+    | '/services/brazil/technical-documentation'
     | '/services/brazil/technovigilance'
+    | '/services/brazil/tecnovigilance'
+    | '/services/brazil/testing-strategy'
     | '/services/canada/change-management'
     | '/services/canada/classification'
     | '/services/canada/inspection'
@@ -2659,6 +2786,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBrazilIndexRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
+    '/services/brazil/anvisa-queries': {
+      id: '/services/brazil/anvisa-queries'
+      path: '/anvisa-queries'
+      fullPath: '/services/brazil/anvisa-queries'
+      preLoaderRoute: typeof ServicesBrazilAnvisaQueriesRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
     '/services/brazil/bgmp': {
       id: '/services/brazil/bgmp'
       path: '/bgmp'
@@ -2673,11 +2807,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBrazilBrhRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
+    '/services/brazil/change-management': {
+      id: '/services/brazil/change-management'
+      path: '/change-management'
+      fullPath: '/services/brazil/change-management'
+      preLoaderRoute: typeof ServicesBrazilChangeManagementRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/classification': {
+      id: '/services/brazil/classification'
+      path: '/classification'
+      fullPath: '/services/brazil/classification'
+      preLoaderRoute: typeof ServicesBrazilClassificationRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/ivd': {
+      id: '/services/brazil/ivd'
+      path: '/ivd'
+      fullPath: '/services/brazil/ivd'
+      preLoaderRoute: typeof ServicesBrazilIvdRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/labeling': {
+      id: '/services/brazil/labeling'
+      path: '/labeling'
+      fullPath: '/services/brazil/labeling'
+      preLoaderRoute: typeof ServicesBrazilLabelingRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
     '/services/brazil/notificacao': {
       id: '/services/brazil/notificacao'
       path: '/notificacao'
       fullPath: '/services/brazil/notificacao'
       preLoaderRoute: typeof ServicesBrazilNotificacaoRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/registration': {
+      id: '/services/brazil/registration'
+      path: '/registration'
+      fullPath: '/services/brazil/registration'
+      preLoaderRoute: typeof ServicesBrazilRegistrationRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
     '/services/brazil/registro': {
@@ -2687,11 +2856,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBrazilRegistroRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
+    '/services/brazil/software': {
+      id: '/services/brazil/software'
+      path: '/software'
+      fullPath: '/services/brazil/software'
+      preLoaderRoute: typeof ServicesBrazilSoftwareRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/technical-documentation': {
+      id: '/services/brazil/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/brazil/technical-documentation'
+      preLoaderRoute: typeof ServicesBrazilTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
     '/services/brazil/technovigilance': {
       id: '/services/brazil/technovigilance'
       path: '/technovigilance'
       fullPath: '/services/brazil/technovigilance'
       preLoaderRoute: typeof ServicesBrazilTechnovigilanceRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/tecnovigilance': {
+      id: '/services/brazil/tecnovigilance'
+      path: '/tecnovigilance'
+      fullPath: '/services/brazil/tecnovigilance'
+      preLoaderRoute: typeof ServicesBrazilTecnovigilanceRouteImport
+      parentRoute: typeof ServicesBrazilRoute
+    }
+    '/services/brazil/testing-strategy': {
+      id: '/services/brazil/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/brazil/testing-strategy'
+      preLoaderRoute: typeof ServicesBrazilTestingStrategyRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
     '/services/canada/': {
@@ -3466,20 +3663,41 @@ const ServicesAustraliaRouteWithChildren =
   ServicesAustraliaRoute._addFileChildren(ServicesAustraliaRouteChildren)
 
 interface ServicesBrazilRouteChildren {
+  ServicesBrazilAnvisaQueriesRoute: typeof ServicesBrazilAnvisaQueriesRoute
   ServicesBrazilBgmpRoute: typeof ServicesBrazilBgmpRoute
   ServicesBrazilBrhRoute: typeof ServicesBrazilBrhRoute
+  ServicesBrazilChangeManagementRoute: typeof ServicesBrazilChangeManagementRoute
+  ServicesBrazilClassificationRoute: typeof ServicesBrazilClassificationRoute
+  ServicesBrazilIvdRoute: typeof ServicesBrazilIvdRoute
+  ServicesBrazilLabelingRoute: typeof ServicesBrazilLabelingRoute
   ServicesBrazilNotificacaoRoute: typeof ServicesBrazilNotificacaoRoute
+  ServicesBrazilRegistrationRoute: typeof ServicesBrazilRegistrationRoute
   ServicesBrazilRegistroRoute: typeof ServicesBrazilRegistroRoute
+  ServicesBrazilSoftwareRoute: typeof ServicesBrazilSoftwareRoute
+  ServicesBrazilTechnicalDocumentationRoute: typeof ServicesBrazilTechnicalDocumentationRoute
   ServicesBrazilTechnovigilanceRoute: typeof ServicesBrazilTechnovigilanceRoute
+  ServicesBrazilTecnovigilanceRoute: typeof ServicesBrazilTecnovigilanceRoute
+  ServicesBrazilTestingStrategyRoute: typeof ServicesBrazilTestingStrategyRoute
   ServicesBrazilIndexRoute: typeof ServicesBrazilIndexRoute
 }
 
 const ServicesBrazilRouteChildren: ServicesBrazilRouteChildren = {
+  ServicesBrazilAnvisaQueriesRoute: ServicesBrazilAnvisaQueriesRoute,
   ServicesBrazilBgmpRoute: ServicesBrazilBgmpRoute,
   ServicesBrazilBrhRoute: ServicesBrazilBrhRoute,
+  ServicesBrazilChangeManagementRoute: ServicesBrazilChangeManagementRoute,
+  ServicesBrazilClassificationRoute: ServicesBrazilClassificationRoute,
+  ServicesBrazilIvdRoute: ServicesBrazilIvdRoute,
+  ServicesBrazilLabelingRoute: ServicesBrazilLabelingRoute,
   ServicesBrazilNotificacaoRoute: ServicesBrazilNotificacaoRoute,
+  ServicesBrazilRegistrationRoute: ServicesBrazilRegistrationRoute,
   ServicesBrazilRegistroRoute: ServicesBrazilRegistroRoute,
+  ServicesBrazilSoftwareRoute: ServicesBrazilSoftwareRoute,
+  ServicesBrazilTechnicalDocumentationRoute:
+    ServicesBrazilTechnicalDocumentationRoute,
   ServicesBrazilTechnovigilanceRoute: ServicesBrazilTechnovigilanceRoute,
+  ServicesBrazilTecnovigilanceRoute: ServicesBrazilTecnovigilanceRoute,
+  ServicesBrazilTestingStrategyRoute: ServicesBrazilTestingStrategyRoute,
   ServicesBrazilIndexRoute: ServicesBrazilIndexRoute,
 }
 

@@ -44,51 +44,57 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/testing-strategy")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "Pre-clinical testing strategy for ANVISA registrations, INMETRO electrical safety coordination, biocompatibility, sterilization, and ANVISA-recognized / ILAC-accredited laboratory management.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/testing-strategy" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilTestingStrategyPage,
 });
 
-function BrazilBRHPage() {
+function BrazilTestingStrategyPage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "Existing global test reports do not fully cover the Brazilian marketed device configuration",
+    "ANVISA has raised a specific testing or pre-clinical validation exigência during technical review",
+    "A new device family or complex grouping requires scientifically justified worst-case model selection",
+    "IVD analytical or clinical performance evaluation studies are required under RDC 830/2023",
+    "A design, raw material, manufacturing site, or sterilization change creates new testing requirements",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Testing gap assessment against Brazilian and international recognized standards",
+    "Applicable standard and test method review (ISO, IEC, ASTM, CLSI, Pharmacopoeia)",
+    "Worst-case device and configuration rationale documentation",
+    "Sample-size, lot selection, and statistical power rationale development",
+    "Protocol and acceptance-criteria review prior to study initiation",
+    "Laboratory coordination with ANVISA-recognized and ILAC/RBC-accredited facilities",
+    "Biocompatibility and chemical characterization testing (ISO 10993)",
+    "Sterilization validation, packaging seal integrity, and shelf-life ageing studies",
+    "Electrical safety and EMC testing (IEC 60601 series & INMETRO certification interface)",
+    "Bench, mechanical, durability, and functional performance testing",
+    "Software verification and validation (IEC 62304)",
+    "Cybersecurity penetration and vulnerability assessment evidence",
+    "Human factors and usability engineering testing (IEC 62366-1)",
+    "IVD analytical and clinical performance studies",
+    "Final laboratory report regulatory adequacy review before dossier insertion",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Does the study protocol test the actual commercial device or an appropriate, justified worst case?",
+    "Are acceptance criteria linked directly to design inputs, risk controls, or clinical relevance?",
+    "Does the final lab report identify models, lot numbers, software versions, and configurations clearly?",
+    "Can the test evidence bridge minor engineering differences between global and Brazilian variants?",
+    "Will ANVISA assessors be able to cleanly trace the test outcome to the claimed clinical performance?",
   ];
 
   return (
@@ -102,7 +108,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Testing Strategy</span>
           </div>
 
           <Link
@@ -114,20 +120,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              ILAC &amp; ANVISA Lab Coordination
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              Testing Strategy &amp; Laboratory Coordination
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              Testing should be planned from the regulatory decision backward. NKB Regovanta helps manufacturers identify what evidence is needed for Brazil, whether existing global reports can be leveraged, and where new studies are required. Where third-party testing is needed, we can coordinate with established laboratories and review protocols and reports before they enter the ANVISA dossier.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Build Your Brazil Testing Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +172,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Testing Areas We Support &amp; Coordinate</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +183,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">Regulatory Testing Philosophy:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We do not simply send a test list to a laboratory. We define the regulatory question the study must answer, challenge the configuration and acceptance criteria, and make sure the resulting report can be used directly in the Brazilian technical dossier.
               </p>
             </div>
           </div>
@@ -187,8 +193,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Design and Coordinate Your Pre-Clinical Testing for ANVISA Approval"
+        description="Our team structures test plans, justifies worst-case articles, and manages accredited testing laboratories."
       />
     </>
   );

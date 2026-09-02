@@ -44,51 +44,53 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/tecnovigilance")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "Brazil tecnovigilância post-market surveillance systems, ANVISA adverse event reporting (Notivisa / Formulário de Tecnovigilância), complaint triage, field safety corrective actions (FSCA), and recall coordination.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/tecnovigilance" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilTecnovigilancePage,
 });
 
-function BrazilBRHPage() {
+function BrazilTecnovigilancePage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "Medical devices or IVDs are actively commercialized in Brazil requiring formal post-market oversight",
+    "A serious adverse event, patient injury, or critical technical complaint has occurred in Brazil or globally",
+    "A global recall, field safety corrective action (FSCA), or safety alert affects Brazilian distributed units",
+    "ANVISA issues an official post-market audit notice or requests complaint investigation data",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Post-market surveillance (PMS) system review and Brazilian standard operating procedure setup",
+    "Customer complaint intake, triage, and technical defect classification",
+    "Adverse-event and technical-complaint reportability assessment under ANVISA regulations",
+    "Manufacturer-to-Brazilian-Holder (BRH) escalation and communication workflow implementation",
+    "Investigation, root-cause analysis, and engineering evidence review",
+    "Risk-management file feedback and ISO 14971 residual risk re-evaluation",
+    "CAPA linkage, corrective action execution, and effectiveness verification",
+    "ANVISA electronic notification via NOTIVISA and Formulário de Tecnovigilância",
+    "Field Safety Corrective Action (FSCA) strategy, customer health alerts, and recall execution",
+    "Global safety signal assessment and Brazilian population risk evaluation",
+    "Corrective labeling, packaging artwork, and IFU warning updates following safety findings",
+    "Annual post-market trend analysis and safety surveillance report authoring",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Is the technical complaint or adverse event reportable under Brazilian tecnovigilância timelines?",
+    "Does a global corrective action or safety notice apply to the Brazilian product population?",
+    "Are investigation conclusions supported by objective pre-clinical and engineering evidence?",
+    "Has the device risk management file been updated with newly detected post-market hazards?",
+    "Are field-action customer communications and affected-lot traceability fully documented for ANVISA?",
   ];
 
   return (
@@ -102,7 +104,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Tecnovigilância &amp; PMS</span>
           </div>
 
           <Link
@@ -114,20 +116,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              NOTIVISA &amp; Post-Market Vigilance
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              Post-Market Surveillance &amp; Tecnovigilância (Brazil)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              Tecnovigilance is ANVISA's post-market surveillance system for adverse events and technical complaints involving medical devices and IVDs. Market authorization does not end the regulatory obligation; the Brazilian holder and manufacturer must be able to detect safety signals, investigate complaints, implement corrective action and execute field actions when necessary.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Strengthen Your Brazil Tecnovigilance System <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +168,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Our Tecnovigilância Support Scope</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +179,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">Connected Vigilance Chain:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We connect the post-market chain rather than treating each complaint as an isolated record: Complaint / Event → Investigation → Risk → CAPA → Field Action / Reporting → Technical Documentation and Labeling Update.
               </p>
             </div>
           </div>
@@ -187,8 +189,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Maintain Rigorous Tecnovigilância and Post-Market Compliance"
+        description="Our vigilance specialists evaluate incident reportability, lodge NOTIVISA notifications, and coordinate recall actions with ANVISA."
       />
     </>
   );

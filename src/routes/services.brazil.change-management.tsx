@@ -44,51 +44,54 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/change-management")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Changes, Variations, Revalidation & Lifecycle Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "ANVISA change categorization (alteração / aditamento), registration revalidation (revalidação), manufacturing site additions, technical file updates, and lifecycle engineering change control in Brazil.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/change-management" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilChangeManagementPage,
 });
 
-function BrazilBRHPage() {
+function BrazilChangeManagementPage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "Design, raw material, or engineering specification changes are planned for a registered device",
+    "Manufacturing site relocation, line expansion, or critical component supplier is changing",
+    "Software algorithms, AI/ML models, firmware, or cybersecurity patches are being released",
+    "Sterilization method, packaging material, or validated shelf-life duration is changing",
+    "Intended clinical use, indications, packaging artwork, or performance claims are changing",
+    "A 5-year registration renewal / revalidation (revalidação de registro) deadline is approaching",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Regulatory change-impact assessment against RDC 751/2022, RDC 830/2023, and ANVISA guidance",
+    "Notification / registration change categorization (alteração de notificação / alteração de registro)",
+    "Technical dossier update strategy and verification/validation gap assessment",
+    "Risk-management file update and benefit-risk re-evaluation (ISO 14971)",
+    "Clinical and analytical performance evidence impact assessment",
+    "BGMP / CBPF certification impact assessment following site transfers or process changes",
+    "Legal manufacturer, manufacturing site, and certificate change petition support",
+    "Portuguese label and IFU revision review and harmonization",
+    "UDI change trigger analysis and SIUD database record updating",
+    "Revalidation planning, petition drafting, and submission prior to statutory deadlines",
+    "Transfer of registration ownership (transferência de titularidade) and cancellation strategy",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Could the planned change alter the device risk classification or approved intended clinical use?",
+    "Does the existing pre-clinical test evidence still represent the modified device configuration?",
+    "Does the change require formal ANVISA approval (deferimento) prior to commercial implementation?",
+    "Do Brazilian public register records, packaging labels, or SIUD data need to be updated simultaneously?",
+    "Does a manufacturing site transfer affect the approved BGMP / CBPF certificate scope?",
   ];
 
   return (
@@ -102,7 +105,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">Change Management</span>
           </div>
 
           <Link
@@ -114,20 +117,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              Alterações &amp; Revalidação
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              Changes, Variations, Revalidation &amp; Lifecycle Support (Brazil)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              Changes to a device after Brazilian regularization can affect the notification/registration, technical dossier, BGMP certification, labeling, UDI/SIUD data and post-market obligations. The correct action depends on the type and significance of the change and should be assessed before implementation whenever possible.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Assess a Brazil Device Change <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +169,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Our Lifecycle Change Management Scope</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +180,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">Lifecycle Evaluation Rule:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We do not ask only whether the product changed. We ask whether the change affects the regulatory basis on which ANVISA accepted the device: classification, intended use, technical evidence, manufacturing controls, safety/performance or product identity.
               </p>
             </div>
           </div>
@@ -187,8 +190,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Manage ANVISA Variations and Revalidation Filings"
+        description="Our regulatory strategists assess change impact, structure alteração petitions in Solicita, and manage revalidação renewals."
       />
     </>
   );

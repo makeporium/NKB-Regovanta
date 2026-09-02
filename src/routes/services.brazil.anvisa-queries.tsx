@@ -40,55 +40,56 @@ import {
   ShieldAlert,
   Handshake,
   ShieldCheck,
+  Search,
   ArrowRight,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/brazil/brh")({
+export const Route = createFileRoute("/services/brazil/anvisa-queries")({
   head: () => ({
     meta: [
       {
         title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+          "ANVISA Queries, Exigências & Inspection Response Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "ANVISA official exigência response formulation, technical query resolution, root-cause analysis, BGMP inspection finding CAPA packages, and submission defense.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/anvisa-queries" }],
   }),
-  component: BrazilBRHPage,
+  component: BrazilAnvisaQueriesPage,
 });
 
-function BrazilBRHPage() {
+function BrazilAnvisaQueriesPage() {
   const triggers = [
-    "The foreign manufacturer has no established commercial or legal entity in Brazil",
-    "A new Brazilian importer or registration holder is being appointed for market entry",
-    "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes",
-    "A transfer of registration ownership (transferência de titularidade) or local partner change is being planned",
+    "An official ANVISA exigência or technical deficiency letter has been received",
+    "A Class III or IV registration dossier has been questioned during pre-market technical review",
+    "BGMP / CBPF on-site inspection non-conformances require root-cause analysis and formal CAPA response",
+    "ANVISA requests clarification on testing, labeling, classification, clinical data, or manufacturing controls",
   ];
 
   const supportItems = [
-    "Brazilian Registration Holder (BRH) readiness assessment and legal qualification",
-    "Manufacturer-Holder Quality and Regulatory Interface Agreement drafting",
-    "Legal authorization documentation, consularization/apostille, and Power of Attorney (Procuração) coordination",
-    "Company Operating Authorization (AFE) and activity-scope alignment checks with ANVISA",
-    "Submission, petition, and variation communication pathway governance",
-    "Technical documentation and dossier access protocol establishment",
-    "Complaint, adverse-event, and tecnovigilância escalation workflows",
-    "Field-action, safety alert, and recall communication pathways under ANVISA rules",
-    "Lifecycle change-notification governance between manufacturer and Brazilian holder",
-    "Import, customs clearance, and distribution regulatory interface support",
+    "Question-by-question regulatory and technical assessment of ANVISA's query",
+    "Root-cause analysis of the underlying regulatory concern",
+    "Evidence-gap determination and scientific justification strategy",
+    "Cross-functional response planning across R&D, clinical, quality, and regulatory teams",
+    "Dossier section revision and document harmonization",
+    "Supplementary test-report and study protocol review",
+    "Portuguese labeling, package artwork, and IFU correction strategy",
+    "Risk-management file and clinical/performance evidence cross-referencing",
+    "CAPA response package support for BGMP inspection observations",
+    "Final response package quality check and electronic submission via Solicita",
   ];
 
   const challenges = [
-    "Who legally and commercially owns the master regulatory data and approved Brazilian labeling?",
-    "How quickly must the manufacturer notify the holder of design, supplier, manufacturing site, or software changes?",
-    "Can the holder independently access investigation and safety information when ANVISA requests it during an audit?",
-    "Are complaint, tecnovigilância, and field-action responsibilities contractually and operationally clear?",
-    "Does the holder legal identity match the Portuguese labeling, packaging artwork, and ANVISA database records?",
+    "Does the response answer the actual regulatory question directly and defensibly?",
+    "Is every technical statement supported by underlying objective study data?",
+    "Do revised documents remain strictly consistent with the remainder of the technical dossier?",
+    "Is new laboratory testing genuinely required or can existing evidence be scientifically justified?",
+    "Does the corrective action address systemic quality root causes rather than only the single observed finding?",
   ];
 
   return (
@@ -102,7 +103,7 @@ function BrazilBRHPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/brazil" className="hover:text-navy transition-colors">Brazil</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Registration Holder (BRH)</span>
+            <span className="text-navy">ANVISA Queries &amp; Exigências</span>
           </div>
 
           <Link
@@ -114,20 +115,20 @@ function BrazilBRHPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 text-[#0b7261] text-xs font-bold uppercase tracking-wider mb-4 border border-teal-200">
-              Detentor do Registro &amp; Governance
+              Exigência &amp; Inspection Defense
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              ANVISA Queries, Technical Requirements &amp; Inspection Response
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.
+              ANVISA questions should be answered by addressing the regulatory concern behind the request, not by simply adding documents. A technically complete but poorly structured response can create additional review cycles if it does not explain why the evidence resolves the specific issue raised.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#0b7261] hover:bg-[#095c4e] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Discuss Brazil Registration Holder Support <ArrowRight className="h-4 w-4" />
+                Plan Your ANVISA Response Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -166,7 +167,7 @@ function BrazilBRHPage() {
 
           {/* Our Support Includes */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-6">Our BRH Support Includes</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-6">Our Response Support Methodology</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {supportItems.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
@@ -177,9 +178,9 @@ function BrazilBRHPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 mt-6">
-              <p className="text-xs font-bold text-navy">Regulatory Governance Model:</p>
+              <p className="text-xs font-bold text-navy">Senior Regulatory Methodology:</p>
               <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-                We establish a governance model between the manufacturer and the Brazilian holder. The key question is not only who submits the dossier, but whether the holder can access the information and decisions needed to meet ANVISA obligations throughout the lifecycle.
+                We first determine why ANVISA is asking the question. Is the issue missing evidence, inconsistent documentation, insufficient testing, weak classification rationale, certificate-scope mismatch, or an actual product/compliance gap? The response strategy is then built around closing that specific concern.
               </p>
             </div>
           </div>
@@ -187,8 +188,8 @@ function BrazilBRHPage() {
       </section>
 
       <CTABand
-        title="Establish Independent Brazil Registration Holder Governance"
-        description="Our Brazilian regulatory consultants coordinate local representative agreements, maintain AFE alignments, and manage ANVISA communications."
+        title="Resolve ANVISA Exigências with Expert Regulatory Justification"
+        description="Our team deconstructs technical queries, prepares evidence-based response packages, and secures timely approvals."
       />
     </>
   );
