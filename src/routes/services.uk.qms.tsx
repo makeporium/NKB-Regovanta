@@ -1,70 +1,99 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import { CTABand } from '@/components/site/Bits'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ChevronRight,
+  ShieldCheck,
+  ArrowRight,
+  Layers,
+  Award,
+} from "lucide-react";
+import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute('/services/uk/qms')({
+export const Route = createFileRoute("/services/uk/qms")({
   head: () => ({
     meta: [
-      { title: 'QMS Implementation Support | UK Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized UK QMS Implementation Support services for medical devices and IVDs.' },
+      { title: "UK MDR 2002 Quality Management System (QMS) | ISO 13485 | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "ISO 13485 Quality Management System implementation, UK MDR 2002 alignment, and UK Approved Body audit readiness.",
+      },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/qms" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/audit-readiness" }],
   }),
-  component: ServicePage,
-})
+  component: UKQMSPage,
+});
 
-function ServicePage() {
+function UKQMSPage() {
+  const qmsItems = [
+    "ISO 13485:2016 quality management system adaptation for UK MDR 2002",
+    "Post-market surveillance and UK vigilance reporting standard operating procedures",
+    "Design control, risk management (ISO 14971) and technical documentation linkages",
+    "Supplier quality management and critical subcontractor control",
+    "Internal quality audits and UK Approved Body audit preparation",
+  ];
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/uk_hero_1786397151597.png')] bg-cover bg-center" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link to="/services/uk" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
-            <ArrowLeft className="h-4 w-4" /> Back to UK Services
-          </Link>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">QMS Implementation Support</h1>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Navigate the complexities of the UK regulatory landscape with our comprehensive QMS Implementation Support support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 bg-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-slate-100 pt-10 pb-12 border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-navy mb-6">Overview & Compliance</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                The United Kingdom maintains strict requirements for QMS Implementation Support under the MHRA frameworks. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the UK market.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Comprehensive regulatory strategy and pathway determination.",
-                  "Meticulous preparation, review, and submission of all required documentation.",
-                  "Ongoing liaison and communication with the MHRA.",
-                  "Post-submission support and proactive compliance monitoring."
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="/assets/brain/uk_compliance_1786397168562.png" alt="UK Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+          <div className="flex items-center gap-1.5 text-[11px] text-navy/55 font-semibold mb-5">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services/uk" className="hover:text-navy transition-colors">United Kingdom</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-navy">QMS Implementation</span>
+          </div>
+
+          <Link
+            to="/services/uk"
+            className="inline-flex items-center gap-2 text-navy/60 hover:text-navy transition-colors mb-6 text-sm font-medium"
+          >
+            <ArrowLeft className="h-4 w-4" /> Back to UK Market Overview
+          </Link>
+
+          <div className="max-w-3xl">
+            <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
+              QMS Implementation &amp; UK MDR Alignment
+            </h1>
+            <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
+              We guide the adaptation of ISO 13485-certified Quality Management Systems to satisfy UK Medical Devices Regulations 2002 and UK Approved Body certification prerequisites.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/services/uk/audit-readiness"
+                className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
+              >
+                View Approved Body Audit Readiness <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <CTABand title="Ready to secure your UKCA mark?" description="Consult our UK regulatory experts" />
+      <section className="py-14 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl space-y-4">
+            <h2 className="text-xl font-extrabold text-navy">QMS Areas Covered</h2>
+            <div className="grid grid-cols-1 gap-2.5">
+              {qmsItems.map((item, idx) => (
+                <div key={idx} className="p-3.5 rounded-xl bg-surface/40 border border-gray-200/80 flex items-start gap-3">
+                  <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] shrink-0 mt-0.5" />
+                  <span className="text-xs font-medium text-navy/90">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABand
+        title="Align Your Quality Management System with UK Regulatory Mandates"
+        description="Connect with our quality assurance specialists to ensure total ISO 13485 and UK MDR compliance."
+      />
     </>
-  )
+  );
 }

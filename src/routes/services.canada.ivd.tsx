@@ -44,49 +44,52 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/canada/change-management")({
+export const Route = createFileRoute("/services/canada/ivd")({
   head: () => ({
     meta: [
       {
         title:
-          "Health Canada Licence Amendments & Significant Changes | NKB Regovanta",
+          "Health Canada IVD Registration & Performance Evidence | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design/material modifications, labelling changes, and annual licence renewals.",
+          "In Vitro Diagnostic (IVD) classification under Schedule 1 Part 2, Class II-IV MDL licensing, analytical performance studies (LoD, precision, cross-reactivity), and clinical performance evaluation for Health Canada.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/change-management" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/ivd" }],
   }),
-  component: CanadaChangeManagementPage,
+  component: CanadaIVDPage,
 });
 
-function CanadaChangeManagementPage() {
-  const changesAssessed = [
-    "Intended use, indications, or contraindication expansions",
-    "Design and functional performance modifications",
-    "Material, chemical formulation, or biocompatibility changes",
-    "Software algorithms, architecture, and cybersecurity updates",
-    "Manufacturing site relocations, additions, or process alterations",
-    "Critical supplier or subcontractor substitutions",
-    "Sterilization method, cycle parameters, or contract sterilizer changes",
-    "Primary/secondary packaging and shelf-life / expiry extensions",
-    "Labelling, IFU, and marketing claim adjustments",
-    "Device family, group, or catalogue identifier additions",
-    "Changes to model numbers or device configurations",
-    "Private label licence amendments and notifications",
+function CanadaIVDPage() {
+  const ivdStrategy = [
+    "IVD qualification and classification under Schedule 1 Part 2",
+    "Intended-use and specimen-type review (serum, plasma, whole blood, urine, swab)",
+    "Analyte and clinical-use assessment",
+    "Near-patient / point-of-care (PoC) considerations",
+    "MDL pathway for Class II, III or IV IVDs",
+    "MDSAP and QMS alignment",
+    "Analytical performance evidence strategy",
+    "Clinical performance evidence strategy",
+    "Reference method/comparator strategy",
+    "Labelling and performance-claim review",
+    "Laboratory study coordination",
+    "IMDRF ToC dossier development for higher-risk IVDs",
+    "Post-market and change-control planning",
   ];
 
-  const lifecycleSteps = [
-    "Determine whether the change affects safety, effectiveness, or licensed indications.",
-    "Determine whether the change qualifies as a Significant Change under Health Canada policy.",
-    "Identify required verification, validation, and pre-clinical testing evidence.",
-    "Assess whether additional clinical or performance data is required.",
-    "Assess impact on risk management documentation (ISO 14971) and labelling.",
-    "Assess MDSAP and QMS documentation impact.",
-    "Determine whether an amendment application, minor-change filing, or annual update is appropriate.",
-    "Update the technical dossier, REP metadata, and regulatory records.",
+  const analyticalStudies = [
+    "Precision, repeatability and reproducibility (within-run, between-run, multi-site)",
+    "Analytical sensitivity / limit of detection (LoD) & limit of quantitation (LoQ)",
+    "Analytical specificity and interference substances",
+    "Linearity and measuring range",
+    "Cross-reactivity with closely related analytes",
+    "Cut-off determination and clinical threshold validation",
+    "Specimen stability and transport/storage handling",
+    "Reagent stability, open-vial and onboard calibration shelf-life",
+    "Clinical sensitivity and specificity relative to reference method",
+    "Comparison with reference method or standard comparator assay",
   ];
 
   return (
@@ -100,7 +103,7 @@ function CanadaChangeManagementPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/canada" className="hover:text-navy transition-colors">Canada</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Licence Amendments &amp; Changes</span>
+            <span className="text-navy">IVD Registration</span>
           </div>
 
           <Link
@@ -112,20 +115,20 @@ function CanadaChangeManagementPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-[#0b3a96] text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200">
-              Significant Change Assessment
+              In Vitro Diagnostics
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Licence Amendments, Significant Changes &amp; Lifecycle Maintenance
+              Health Canada IVD Registration &amp; Performance Evidence
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              A Health Canada licence must remain aligned with the device that is actually manufactured and sold. Certain changes to Class II, III and IV devices require a new or amended MDL, while other changes may be documented internally or handled through a different regulatory mechanism.
+              IVDs are classified under a separate Canadian classification framework because risk is driven not only by the assay technology but by how the result will be used and the consequences of an incorrect result.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Assess a Canadian Device Change <ArrowRight className="h-4 w-4" />
+                Build Your Health Canada IVD Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -135,11 +138,11 @@ function CanadaChangeManagementPage() {
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Changes We Assess */}
+            {/* Our IVD Strategy */}
             <div className="p-7 rounded-3xl bg-slate-50 border border-gray-200/80">
-              <h2 className="text-lg font-extrabold text-navy mb-4">Changes We Assess</h2>
+              <h2 className="text-lg font-extrabold text-navy mb-4">Our IVD Strategy Includes</h2>
               <div className="space-y-2">
-                {changesAssessed.map((item, idx) => (
+                {ivdStrategy.map((item, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-white border border-gray-200 flex items-start gap-2.5">
                     <CheckCircle2 className="h-4 w-4 text-[#0b3a96] shrink-0 mt-0.5" />
                     <span className="text-xs font-medium text-navy/90">{item}</span>
@@ -148,15 +151,13 @@ function CanadaChangeManagementPage() {
               </div>
             </div>
 
-            {/* Our Lifecycle Assessment */}
+            {/* Analytical Performance Studies */}
             <div className="p-7 rounded-3xl bg-slate-50 border border-gray-200/80">
-              <h2 className="text-lg font-extrabold text-navy mb-4">Our Lifecycle Assessment Logic</h2>
+              <h2 className="text-lg font-extrabold text-navy mb-4">Analytical Performance Evidence</h2>
               <div className="space-y-2">
-                {lifecycleSteps.map((step, idx) => (
+                {analyticalStudies.map((step, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-white border border-gray-200 flex items-start gap-2.5">
-                    <div className="w-5 h-5 rounded-full bg-navy text-[#f5c754] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">
-                      {idx + 1}
-                    </div>
+                    <CheckCircle2 className="h-4 w-4 text-[#e03131] shrink-0 mt-0.5" />
                     <span className="text-xs font-medium text-navy/90">{step}</span>
                   </div>
                 ))}
@@ -167,15 +168,15 @@ function CanadaChangeManagementPage() {
           <div className="p-5 rounded-2xl bg-blue-50/70 border border-blue-200">
             <p className="text-xs font-bold text-navy">Expert Focus:</p>
             <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
-              The question is not simply “Did the device change?” It is “Does the change alter the basis on which Health Canada accepted the device’s safety, effectiveness, quality or licensed indications?”
+              A performance claim should never be stronger than the study design that supports it. We map intended use and performance claims to the analytical and clinical evidence before the dossier is finalized.
             </p>
           </div>
         </div>
       </section>
 
       <CTABand
-        title="Manage Health Canada Licence Amendments and Lifecycle Changes"
-        description="Our regulatory strategists determine amendment triggers, compile change justifications, and update technical files."
+        title="Prepare Your Health Canada IVD Pre-Market Submission"
+        description="Our diagnostic specialists guide analytical validation studies, comparator assay benchmarking, and bilingual package inserts."
       />
     </>
   );

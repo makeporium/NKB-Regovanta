@@ -1,70 +1,99 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import { CTABand } from '@/components/site/Bits'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ChevronRight,
+  FileText,
+  ArrowRight,
+  Barcode,
+  Globe2,
+} from "lucide-react";
+import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute('/services/uk/labeling')({
+export const Route = createFileRoute("/services/uk/labeling")({
   head: () => ({
     meta: [
-      { title: 'Labeling & Artwork Compliance | UK Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized UK Labeling & Artwork Compliance services for medical devices and IVDs.' },
+      { title: "UKCA Labeling, Artwork & UKRP Identification Compliance | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance.",
+      },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/labeling" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/technical-file" }],
   }),
-  component: ServicePage,
-})
+  component: UKLabelingPage,
+});
 
-function ServicePage() {
+function UKLabelingPage() {
+  const labelingItems = [
+    "UKCA marking symbol placement, proportions and legibility on primary/secondary packaging",
+    "UK Responsible Person (UKRP) legal name and address identification requirements",
+    "Instructions for Use (IFU) authoring, contraindications, and risk warning alignment",
+    "Dual-market packaging design (UKCA + CE mark co-existence)",
+    "UDI barcode placement and GMDN / product identifier consistency",
+  ];
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/uk_hero_1786397151597.png')] bg-cover bg-center" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link to="/services/uk" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
-            <ArrowLeft className="h-4 w-4" /> Back to UK Services
-          </Link>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Labeling & Artwork Compliance</h1>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Navigate the complexities of the UK regulatory landscape with our comprehensive Labeling & Artwork Compliance support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 bg-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-slate-100 pt-10 pb-12 border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-navy mb-6">Overview & Compliance</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                The United Kingdom maintains strict requirements for Labeling & Artwork Compliance under the MHRA frameworks. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the UK market.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Comprehensive regulatory strategy and pathway determination.",
-                  "Meticulous preparation, review, and submission of all required documentation.",
-                  "Ongoing liaison and communication with the MHRA.",
-                  "Post-submission support and proactive compliance monitoring."
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="/assets/brain/uk_compliance_1786397168562.png" alt="UK Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+          <div className="flex items-center gap-1.5 text-[11px] text-navy/55 font-semibold mb-5">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services/uk" className="hover:text-navy transition-colors">United Kingdom</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-navy">Labeling &amp; Artwork</span>
+          </div>
+
+          <Link
+            to="/services/uk"
+            className="inline-flex items-center gap-2 text-navy/60 hover:text-navy transition-colors mb-6 text-sm font-medium"
+          >
+            <ArrowLeft className="h-4 w-4" /> Back to UK Market Overview
+          </Link>
+
+          <div className="max-w-3xl">
+            <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
+              UKCA Labeling &amp; Artwork Compliance
+            </h1>
+            <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
+              We audit packaging artwork, sterile barrier labels, and Instructions for Use to verify compliance with UKCA marking rules and mandatory UKRP identification.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/services/uk/technical-file"
+                className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
+              >
+                View Technical File Review <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <CTABand title="Ready to secure your UKCA mark?" description="Consult our UK regulatory experts" />
+      <section className="py-14 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl space-y-4">
+            <h2 className="text-xl font-extrabold text-navy">UK Labeling Rules &amp; Verification</h2>
+            <div className="grid grid-cols-1 gap-2.5">
+              {labelingItems.map((item, idx) => (
+                <div key={idx} className="p-3.5 rounded-xl bg-surface/40 border border-gray-200/80 flex items-start gap-3">
+                  <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] shrink-0 mt-0.5" />
+                  <span className="text-xs font-medium text-navy/90">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABand
+        title="Audit Your Packaging and Labeling for UKCA Compliance"
+        description="Our labeling specialists review artwork and IFUs to ensure full compliance with UK regulations."
+      />
     </>
-  )
+  );
 }

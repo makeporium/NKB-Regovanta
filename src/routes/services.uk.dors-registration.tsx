@@ -1,70 +1,75 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import { CTABand } from '@/components/site/Bits'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ChevronRight,
+  Database,
+  ArrowRight,
+  ShieldCheck,
+  Award,
+} from "lucide-react";
+import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute('/services/uk/dors-registration')({
+export const Route = createFileRoute("/services/uk/dors-registration")({
   head: () => ({
     meta: [
-      { title: 'Device Registration via DORS | UK Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized UK Device Registration via DORS services for medical devices and IVDs.' },
+      { title: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "End-to-end medical device and IVD registration through the MHRA Device Online Registration System (DORS) portal.",
+      },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/dors-registration" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" }],
   }),
-  component: ServicePage,
-})
+  component: DORSPage,
+});
 
-function ServicePage() {
+function DORSPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/uk_hero_1786397151597.png')] bg-cover bg-center" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link to="/services/uk" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
-            <ArrowLeft className="h-4 w-4" /> Back to UK Services
-          </Link>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Device Registration via DORS</h1>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Navigate the complexities of the UK regulatory landscape with our comprehensive Device Registration via DORS support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 bg-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-slate-100 pt-10 pb-12 border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-navy mb-6">Overview & Compliance</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                The United Kingdom maintains strict requirements for Device Registration via DORS under the MHRA frameworks. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the UK market.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Comprehensive regulatory strategy and pathway determination.",
-                  "Meticulous preparation, review, and submission of all required documentation.",
-                  "Ongoing liaison and communication with the MHRA.",
-                  "Post-submission support and proactive compliance monitoring."
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="/assets/brain/uk_compliance_1786397168562.png" alt="UK Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+          <div className="flex items-center gap-1.5 text-[11px] text-navy/55 font-semibold mb-5">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services/uk" className="hover:text-navy transition-colors">United Kingdom</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-navy">DORS Registration</span>
+          </div>
+
+          <Link
+            to="/services/uk"
+            className="inline-flex items-center gap-2 text-navy/60 hover:text-navy transition-colors mb-6 text-sm font-medium"
+          >
+            <ArrowLeft className="h-4 w-4" /> Back to UK Market Overview
+          </Link>
+
+          <div className="max-w-3xl">
+            <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
+              Device Online Registration System (DORS)
+            </h1>
+            <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
+              We manage your complete MHRA registration dataset in DORS, verifying product classification, GMDN nomenclature, and UKRP authorization.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/services/uk/mhra-registration"
+                className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
+              >
+                View Full MHRA Registration Service <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <CTABand title="Ready to secure your UKCA mark?" description="Consult our UK regulatory experts" />
+      <CTABand
+        title="Register Your Medical Devices on the MHRA Public Register"
+        description="Connect with our UK regulatory team to file your DORS application."
+      />
     </>
-  )
+  );
 }

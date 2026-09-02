@@ -70,10 +70,20 @@ import { Route as ServicesBrazilRegistroRouteImport } from './routes/services.br
 import { Route as ServicesBrazilTechnovigilanceRouteImport } from './routes/services.brazil.technovigilance'
 import { Route as ServicesCanadaIndexRouteImport } from './routes/services.canada.index'
 import { Route as ServicesCanadaChangeManagementRouteImport } from './routes/services.canada.change-management'
+import { Route as ServicesCanadaClassificationRouteImport } from './routes/services.canada.classification'
+import { Route as ServicesCanadaInspectionRouteImport } from './routes/services.canada.inspection'
+import { Route as ServicesCanadaIvdRouteImport } from './routes/services.canada.ivd'
+import { Route as ServicesCanadaLabelingRouteImport } from './routes/services.canada.labeling'
 import { Route as ServicesCanadaLiaisonRouteImport } from './routes/services.canada.liaison'
 import { Route as ServicesCanadaMdelRouteImport } from './routes/services.canada.mdel'
 import { Route as ServicesCanadaMdlRouteImport } from './routes/services.canada.mdl'
+import { Route as ServicesCanadaMdsapRouteImport } from './routes/services.canada.mdsap'
+import { Route as ServicesCanadaPmsRouteImport } from './routes/services.canada.pms'
 import { Route as ServicesCanadaRenewalsRouteImport } from './routes/services.canada.renewals'
+import { Route as ServicesCanadaSoftwareRouteImport } from './routes/services.canada.software'
+import { Route as ServicesCanadaSupplyChainRouteImport } from './routes/services.canada.supply-chain'
+import { Route as ServicesCanadaTechnicalDocumentationRouteImport } from './routes/services.canada.technical-documentation'
+import { Route as ServicesCanadaTestingStrategyRouteImport } from './routes/services.canada.testing-strategy'
 import { Route as ServicesEuIndexRouteImport } from './routes/services.eu.index'
 import { Route as ServicesEuArticle117RouteImport } from './routes/services.eu.article-117'
 import { Route as ServicesEuCeMarkingRouteImport } from './routes/services.eu.ce-marking'
@@ -480,6 +490,28 @@ const ServicesCanadaChangeManagementRoute =
     path: '/change-management',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
+const ServicesCanadaClassificationRoute =
+  ServicesCanadaClassificationRouteImport.update({
+    id: '/classification',
+    path: '/classification',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
+const ServicesCanadaInspectionRoute =
+  ServicesCanadaInspectionRouteImport.update({
+    id: '/inspection',
+    path: '/inspection',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
+const ServicesCanadaIvdRoute = ServicesCanadaIvdRouteImport.update({
+  id: '/ivd',
+  path: '/ivd',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaLabelingRoute = ServicesCanadaLabelingRouteImport.update({
+  id: '/labeling',
+  path: '/labeling',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
 const ServicesCanadaLiaisonRoute = ServicesCanadaLiaisonRouteImport.update({
   id: '/liaison',
   path: '/liaison',
@@ -495,11 +527,44 @@ const ServicesCanadaMdlRoute = ServicesCanadaMdlRouteImport.update({
   path: '/mdl',
   getParentRoute: () => ServicesCanadaRoute,
 } as any)
+const ServicesCanadaMdsapRoute = ServicesCanadaMdsapRouteImport.update({
+  id: '/mdsap',
+  path: '/mdsap',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaPmsRoute = ServicesCanadaPmsRouteImport.update({
+  id: '/pms',
+  path: '/pms',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
 const ServicesCanadaRenewalsRoute = ServicesCanadaRenewalsRouteImport.update({
   id: '/renewals',
   path: '/renewals',
   getParentRoute: () => ServicesCanadaRoute,
 } as any)
+const ServicesCanadaSoftwareRoute = ServicesCanadaSoftwareRouteImport.update({
+  id: '/software',
+  path: '/software',
+  getParentRoute: () => ServicesCanadaRoute,
+} as any)
+const ServicesCanadaSupplyChainRoute =
+  ServicesCanadaSupplyChainRouteImport.update({
+    id: '/supply-chain',
+    path: '/supply-chain',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
+const ServicesCanadaTechnicalDocumentationRoute =
+  ServicesCanadaTechnicalDocumentationRouteImport.update({
+    id: '/technical-documentation',
+    path: '/technical-documentation',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
+const ServicesCanadaTestingStrategyRoute =
+  ServicesCanadaTestingStrategyRouteImport.update({
+    id: '/testing-strategy',
+    path: '/testing-strategy',
+    getParentRoute: () => ServicesCanadaRoute,
+  } as any)
 const ServicesEuIndexRoute = ServicesEuIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -1017,10 +1082,20 @@ export interface FileRoutesByFullPath {
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
+  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
+  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
+  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
   '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
+  '/services/canada/pms': typeof ServicesCanadaPmsRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
+  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
+  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
+  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
@@ -1159,10 +1234,20 @@ export interface FileRoutesByTo {
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
+  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
+  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
+  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
   '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
+  '/services/canada/pms': typeof ServicesCanadaPmsRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
+  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
+  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
+  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
@@ -1310,10 +1395,20 @@ export interface FileRoutesById {
   '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
   '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
   '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
+  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
+  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
+  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
+  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
   '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
   '/services/canada/mdel': typeof ServicesCanadaMdelRoute
   '/services/canada/mdl': typeof ServicesCanadaMdlRoute
+  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
+  '/services/canada/pms': typeof ServicesCanadaPmsRoute
   '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
+  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
+  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
+  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
+  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
@@ -1462,10 +1557,20 @@ export interface FileRouteTypes {
     | '/services/brazil/registro'
     | '/services/brazil/technovigilance'
     | '/services/canada/change-management'
+    | '/services/canada/classification'
+    | '/services/canada/inspection'
+    | '/services/canada/ivd'
+    | '/services/canada/labeling'
     | '/services/canada/liaison'
     | '/services/canada/mdel'
     | '/services/canada/mdl'
+    | '/services/canada/mdsap'
+    | '/services/canada/pms'
     | '/services/canada/renewals'
+    | '/services/canada/software'
+    | '/services/canada/supply-chain'
+    | '/services/canada/technical-documentation'
+    | '/services/canada/testing-strategy'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
@@ -1604,10 +1709,20 @@ export interface FileRouteTypes {
     | '/services/brazil/registro'
     | '/services/brazil/technovigilance'
     | '/services/canada/change-management'
+    | '/services/canada/classification'
+    | '/services/canada/inspection'
+    | '/services/canada/ivd'
+    | '/services/canada/labeling'
     | '/services/canada/liaison'
     | '/services/canada/mdel'
     | '/services/canada/mdl'
+    | '/services/canada/mdsap'
+    | '/services/canada/pms'
     | '/services/canada/renewals'
+    | '/services/canada/software'
+    | '/services/canada/supply-chain'
+    | '/services/canada/technical-documentation'
+    | '/services/canada/testing-strategy'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
@@ -1754,10 +1869,20 @@ export interface FileRouteTypes {
     | '/services/brazil/registro'
     | '/services/brazil/technovigilance'
     | '/services/canada/change-management'
+    | '/services/canada/classification'
+    | '/services/canada/inspection'
+    | '/services/canada/ivd'
+    | '/services/canada/labeling'
     | '/services/canada/liaison'
     | '/services/canada/mdel'
     | '/services/canada/mdl'
+    | '/services/canada/mdsap'
+    | '/services/canada/pms'
     | '/services/canada/renewals'
+    | '/services/canada/software'
+    | '/services/canada/supply-chain'
+    | '/services/canada/technical-documentation'
+    | '/services/canada/testing-strategy'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
@@ -2324,6 +2449,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaChangeManagementRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
+    '/services/canada/classification': {
+      id: '/services/canada/classification'
+      path: '/classification'
+      fullPath: '/services/canada/classification'
+      preLoaderRoute: typeof ServicesCanadaClassificationRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/inspection': {
+      id: '/services/canada/inspection'
+      path: '/inspection'
+      fullPath: '/services/canada/inspection'
+      preLoaderRoute: typeof ServicesCanadaInspectionRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/ivd': {
+      id: '/services/canada/ivd'
+      path: '/ivd'
+      fullPath: '/services/canada/ivd'
+      preLoaderRoute: typeof ServicesCanadaIvdRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/labeling': {
+      id: '/services/canada/labeling'
+      path: '/labeling'
+      fullPath: '/services/canada/labeling'
+      preLoaderRoute: typeof ServicesCanadaLabelingRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
     '/services/canada/liaison': {
       id: '/services/canada/liaison'
       path: '/liaison'
@@ -2345,11 +2498,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaMdlRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
+    '/services/canada/mdsap': {
+      id: '/services/canada/mdsap'
+      path: '/mdsap'
+      fullPath: '/services/canada/mdsap'
+      preLoaderRoute: typeof ServicesCanadaMdsapRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/pms': {
+      id: '/services/canada/pms'
+      path: '/pms'
+      fullPath: '/services/canada/pms'
+      preLoaderRoute: typeof ServicesCanadaPmsRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
     '/services/canada/renewals': {
       id: '/services/canada/renewals'
       path: '/renewals'
       fullPath: '/services/canada/renewals'
       preLoaderRoute: typeof ServicesCanadaRenewalsRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/software': {
+      id: '/services/canada/software'
+      path: '/software'
+      fullPath: '/services/canada/software'
+      preLoaderRoute: typeof ServicesCanadaSoftwareRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/supply-chain': {
+      id: '/services/canada/supply-chain'
+      path: '/supply-chain'
+      fullPath: '/services/canada/supply-chain'
+      preLoaderRoute: typeof ServicesCanadaSupplyChainRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/technical-documentation': {
+      id: '/services/canada/technical-documentation'
+      path: '/technical-documentation'
+      fullPath: '/services/canada/technical-documentation'
+      preLoaderRoute: typeof ServicesCanadaTechnicalDocumentationRouteImport
+      parentRoute: typeof ServicesCanadaRoute
+    }
+    '/services/canada/testing-strategy': {
+      id: '/services/canada/testing-strategy'
+      path: '/testing-strategy'
+      fullPath: '/services/canada/testing-strategy'
+      preLoaderRoute: typeof ServicesCanadaTestingStrategyRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
     '/services/eu/': {
@@ -3004,19 +3199,40 @@ const ServicesBrazilRouteWithChildren = ServicesBrazilRoute._addFileChildren(
 
 interface ServicesCanadaRouteChildren {
   ServicesCanadaChangeManagementRoute: typeof ServicesCanadaChangeManagementRoute
+  ServicesCanadaClassificationRoute: typeof ServicesCanadaClassificationRoute
+  ServicesCanadaInspectionRoute: typeof ServicesCanadaInspectionRoute
+  ServicesCanadaIvdRoute: typeof ServicesCanadaIvdRoute
+  ServicesCanadaLabelingRoute: typeof ServicesCanadaLabelingRoute
   ServicesCanadaLiaisonRoute: typeof ServicesCanadaLiaisonRoute
   ServicesCanadaMdelRoute: typeof ServicesCanadaMdelRoute
   ServicesCanadaMdlRoute: typeof ServicesCanadaMdlRoute
+  ServicesCanadaMdsapRoute: typeof ServicesCanadaMdsapRoute
+  ServicesCanadaPmsRoute: typeof ServicesCanadaPmsRoute
   ServicesCanadaRenewalsRoute: typeof ServicesCanadaRenewalsRoute
+  ServicesCanadaSoftwareRoute: typeof ServicesCanadaSoftwareRoute
+  ServicesCanadaSupplyChainRoute: typeof ServicesCanadaSupplyChainRoute
+  ServicesCanadaTechnicalDocumentationRoute: typeof ServicesCanadaTechnicalDocumentationRoute
+  ServicesCanadaTestingStrategyRoute: typeof ServicesCanadaTestingStrategyRoute
   ServicesCanadaIndexRoute: typeof ServicesCanadaIndexRoute
 }
 
 const ServicesCanadaRouteChildren: ServicesCanadaRouteChildren = {
   ServicesCanadaChangeManagementRoute: ServicesCanadaChangeManagementRoute,
+  ServicesCanadaClassificationRoute: ServicesCanadaClassificationRoute,
+  ServicesCanadaInspectionRoute: ServicesCanadaInspectionRoute,
+  ServicesCanadaIvdRoute: ServicesCanadaIvdRoute,
+  ServicesCanadaLabelingRoute: ServicesCanadaLabelingRoute,
   ServicesCanadaLiaisonRoute: ServicesCanadaLiaisonRoute,
   ServicesCanadaMdelRoute: ServicesCanadaMdelRoute,
   ServicesCanadaMdlRoute: ServicesCanadaMdlRoute,
+  ServicesCanadaMdsapRoute: ServicesCanadaMdsapRoute,
+  ServicesCanadaPmsRoute: ServicesCanadaPmsRoute,
   ServicesCanadaRenewalsRoute: ServicesCanadaRenewalsRoute,
+  ServicesCanadaSoftwareRoute: ServicesCanadaSoftwareRoute,
+  ServicesCanadaSupplyChainRoute: ServicesCanadaSupplyChainRoute,
+  ServicesCanadaTechnicalDocumentationRoute:
+    ServicesCanadaTechnicalDocumentationRoute,
+  ServicesCanadaTestingStrategyRoute: ServicesCanadaTestingStrategyRoute,
   ServicesCanadaIndexRoute: ServicesCanadaIndexRoute,
 }
 

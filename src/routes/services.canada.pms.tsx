@@ -44,36 +44,38 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/canada/mdel")({
+export const Route = createFileRoute("/services/canada/pms")({
   head: () => ({
     meta: [
       {
         title:
-          "Health Canada Medical Device Establishment Licence (MDEL) | NKB Regovanta",
+          "Health Canada Post-Market Surveillance & Mandatory Problem Reporting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical Device Establishment Licence (MDEL) applications and compliance support for Class I manufacturers, Canadian importers, and distributors. Procedures for distribution records, mandatory problem reporting, and recalls.",
+          "Health Canada Mandatory Problem Reporting (MPR), preliminary and final incident reporting (10-day and 30-day timelines), recall management, and post-market surveillance systems.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdel" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/pms" }],
   }),
-  component: CanadaMDELPage,
+  component: CanadaPMSPage,
 });
 
-function CanadaMDELPage() {
-  const mdelReviewItems = [
-    "Determine whether the establishment requires an MDEL and which activities must be included.",
-    "Confirm establishment name, address and regulatory activity information.",
-    "Identify device classes and categories handled by the establishment.",
-    "Review procedures for distribution records and traceability.",
-    "Review complaint handling and escalation procedures.",
-    "Review mandatory problem reporting procedures.",
-    "Review recall procedures and responsibilities.",
-    "Review storage, handling and distribution controls where relevant.",
-    "Assess importer/distributor responsibilities for verifying device licensing and labelling.",
-    "Support annual licence review requirements and licence amendments/notifications.",
+function CanadaPMSPage() {
+  const pmsSupport = [
+    "Complaint handling procedures and escalation logic",
+    "Reportability assessment under the Medical Devices Regulations (SOR/98-282 Part 1, Div. 2)",
+    "Preliminary and final incident reporting support",
+    "10-day and 30-day mandatory problem reporting assessment",
+    "Foreign incident / corrective-action assessment where applicable",
+    "Trend review and signal assessment",
+    "Recall strategy and Health Canada communication support",
+    "Corrective and preventive action (CAPA) integration",
+    "Risk-management file updates (ISO 14971)",
+    "Labelling and Instructions for Use (IFU) updates",
+    "Licence-impact and change assessment",
+    "Post-market documentation and regulatory record maintenance",
   ];
 
   return (
@@ -87,7 +89,7 @@ function CanadaMDELPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/canada" className="hover:text-navy transition-colors">Canada</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">MDEL Establishment</span>
+            <span className="text-navy">Post-Market Surveillance</span>
           </div>
 
           <Link
@@ -99,20 +101,20 @@ function CanadaMDELPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-[#0b3a96] text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200">
-              Establishment Licence (SOR/98-282)
+              Mandatory Problem Reporting (MPR)
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Medical Device Establishment Licence (MDEL)
+              Post-Market Surveillance, Complaints &amp; Mandatory Problem Reporting
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              An MDEL authorizes an establishment to conduct regulated activities involving medical devices in Canada. It commonly applies to Class I manufacturers and to importers and distributors of medical devices across all classes, subject to regulatory exemptions.
+              Canadian market access continues after licensing. Manufacturers, importers and distributors must maintain complaint, reporting, recall and corrective-action systems capable of identifying and responding to device risks.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Assess Your MDEL Requirements <ArrowRight className="h-4 w-4" />
+                Strengthen Your Canada Post-Market System <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -121,15 +123,11 @@ function CanadaMDELPage() {
 
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* MDEL Is an Operational Compliance Licence */}
+          {/* Post-Market Deliverables */}
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-4">MDEL Is an Operational Compliance Licence</h2>
-            <p className="text-xs sm:text-[13px] text-navy/80 font-medium leading-relaxed mb-6">
-              An MDEL is not simply a company registration. The establishment must have procedures and controls capable of supporting the regulated activities listed on the licence.
-            </p>
-
+            <h2 className="text-xl font-extrabold text-navy mb-4">Our Post-Market Support Includes</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {mdelReviewItems.map((item, idx) => (
+              {pmsSupport.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
                   <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] shrink-0 mt-0.5" />
                   <span className="text-xs font-medium text-navy/90 leading-relaxed">{item}</span>
@@ -137,19 +135,28 @@ function CanadaMDELPage() {
               ))}
             </div>
 
-            <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 mt-6">
-              <p className="text-xs font-bold text-amber-900">Inspection-Readiness Perspective:</p>
-              <p className="text-xs text-amber-900/80 font-medium leading-relaxed mt-1">
-                For an MDEL holder, Health Canada may look beyond the existence of procedures and examine whether the establishment can demonstrate effective implementation through records, complaint files, distribution data, recall capability and licensing controls.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200">
+                <p className="text-xs font-bold text-amber-900">Reporting Timelines:</p>
+                <p className="text-xs text-amber-900/80 font-medium leading-relaxed mt-1">
+                  For incidents occurring in Canada, a preliminary report is generally due within <strong>10 calendar days</strong> when death or serious deterioration in health has occurred, and within <strong>30 calendar days</strong> when such an outcome did not occur but could occur if the incident recurred.
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-blue-50/70 border border-blue-200">
+                <p className="text-xs font-bold text-navy">Expert Focus:</p>
+                <p className="text-xs text-navy/80 font-medium leading-relaxed mt-1">
+                  We do not treat complaints as isolated quality records. We connect complaint data to reportability, risk, CAPA, recall decisions, licence impact and the technical evidence supporting the device.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <CTABand
-        title="Establish and Maintain Your Health Canada MDEL Licence"
-        description="Our quality and compliance consultants draft standard operating procedures, prepare initial MDEL filings, and manage annual licence reviews."
+        title="Maintain Rigorous Health Canada Vigilance and Post-Market Compliance"
+        description="Our post-market specialists assess incident reportability, lodge MPR notifications, and manage recall communications."
       />
     </>
   );

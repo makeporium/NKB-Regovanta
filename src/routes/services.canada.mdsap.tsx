@@ -44,36 +44,38 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/canada/mdel")({
+export const Route = createFileRoute("/services/canada/mdsap")({
   head: () => ({
     meta: [
       {
         title:
-          "Health Canada Medical Device Establishment Licence (MDEL) | NKB Regovanta",
+          "MDSAP Canada & ISO 13485 Quality-System Readiness | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical Device Establishment Licence (MDEL) applications and compliance support for Class I manufacturers, Canadian importers, and distributors. Procedures for distribution records, mandatory problem reporting, and recalls.",
+          "Full MDSAP (Medical Device Single Audit Program) QMS readiness, ISO 13485 compliance alignment for Health Canada Class II, III and IV Medical Device Licences (MDL), audit defense, and nonconformity remediation.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdel" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdsap" }],
   }),
-  component: CanadaMDELPage,
+  component: CanadaMDSAPPage,
 });
 
-function CanadaMDELPage() {
-  const mdelReviewItems = [
-    "Determine whether the establishment requires an MDEL and which activities must be included.",
-    "Confirm establishment name, address and regulatory activity information.",
-    "Identify device classes and categories handled by the establishment.",
-    "Review procedures for distribution records and traceability.",
-    "Review complaint handling and escalation procedures.",
-    "Review mandatory problem reporting procedures.",
-    "Review recall procedures and responsibilities.",
-    "Review storage, handling and distribution controls where relevant.",
-    "Assess importer/distributor responsibilities for verifying device licensing and labelling.",
-    "Support annual licence review requirements and licence amendments/notifications.",
+function CanadaMDSAPPage() {
+  const mdsapCapabilities = [
+    "MDSAP gap assessment against ISO 13485 and Health Canada regulatory requirements (SOR/98-282)",
+    "QMS scope and certificate alignment with the legal manufacturer and licensed devices",
+    "Design and development controls for applicable device classes",
+    "Risk-management integration (ISO 14971:2019)",
+    "Supplier and outsourced-process controls",
+    "Complaint handling and Mandatory Problem Reporting (MPR) interfaces",
+    "Recall and advisory notice processes",
+    "CAPA and nonconformity controls",
+    "Change control and licence-impact assessment",
+    "Post-market surveillance and regulatory reporting interfaces",
+    "MDSAP audit preparation and response to audit nonconformities",
+    "Coordination of regulatory evidence with the QMS and technical dossier",
   ];
 
   return (
@@ -87,7 +89,7 @@ function CanadaMDELPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/canada" className="hover:text-navy transition-colors">Canada</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">MDEL Establishment</span>
+            <span className="text-navy">MDSAP Certification</span>
           </div>
 
           <Link
@@ -99,20 +101,20 @@ function CanadaMDELPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 text-[#0b3a96] text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200">
-              Establishment Licence (SOR/98-282)
+              Mandatory for Class II, III &amp; IV
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Medical Device Establishment Licence (MDEL)
+              MDSAP Canada &amp; ISO 13485 Quality-System Readiness
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
-              An MDEL authorizes an establishment to conduct regulated activities involving medical devices in Canada. It commonly applies to Class I manufacturers and to importers and distributors of medical devices across all classes, subject to regulatory exemptions.
+              For manufacturers of Class II, III and IV devices, quality-system certification is a core part of the Canadian licensing framework. Health Canada relies on ISO 13485 certification issued through a recognized Medical Device Single Audit Program (MDSAP) auditing organization.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[13px] font-semibold px-6 py-3 rounded-md transition-all shadow-sm"
               >
-                Assess Your MDEL Requirements <ArrowRight className="h-4 w-4" />
+                Assess Your MDSAP Canada Readiness <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -120,36 +122,28 @@ function CanadaMDELPage() {
       </section>
 
       <section className="py-14 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* MDEL Is an Operational Compliance Licence */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="p-8 rounded-3xl bg-slate-50 border border-gray-200/80">
-            <h2 className="text-xl font-extrabold text-navy mb-4">MDEL Is an Operational Compliance Licence</h2>
+            <h2 className="text-xl font-extrabold text-navy mb-3">Our MDSAP Support Goes Beyond Certificate Collection</h2>
             <p className="text-xs sm:text-[13px] text-navy/80 font-medium leading-relaxed mb-6">
-              An MDEL is not simply a company registration. The establishment must have procedures and controls capable of supporting the regulated activities listed on the licence.
+              The MDSAP certificate, the technical dossier and the Health Canada licence should not tell three different stories. The legal manufacturer, device scope, manufacturing controls, design responsibilities and post-market processes must remain aligned.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {mdelReviewItems.map((item, idx) => (
+              {mdsapCapabilities.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs flex items-start gap-3">
-                  <CheckCircle2 className="h-4.5 w-4.5 text-[#0b3a96] shrink-0 mt-0.5" />
+                  <ShieldCheck className="h-4.5 w-4.5 text-[#0b3a96] shrink-0 mt-0.5" />
                   <span className="text-xs font-medium text-navy/90 leading-relaxed">{item}</span>
                 </div>
               ))}
-            </div>
-
-            <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 mt-6">
-              <p className="text-xs font-bold text-amber-900">Inspection-Readiness Perspective:</p>
-              <p className="text-xs text-amber-900/80 font-medium leading-relaxed mt-1">
-                For an MDEL holder, Health Canada may look beyond the existence of procedures and examine whether the establishment can demonstrate effective implementation through records, complaint files, distribution data, recall capability and licensing controls.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       <CTABand
-        title="Establish and Maintain Your Health Canada MDEL Licence"
-        description="Our quality and compliance consultants draft standard operating procedures, prepare initial MDEL filings, and manage annual licence reviews."
+        title="Prepare Your Quality System for MDSAP Canada Audit"
+        description="Our quality engineers audit QMS procedures, align MDSAP scopes, and coordinate with recognized auditing organizations."
       />
     </>
   );
