@@ -112,7 +112,7 @@ function RegulatoryAffairs() {
                         <div className="flex items-center justify-center md:justify-start gap-4">
                             <User className="h-8 w-8 text-white opacity-80" />
                             <div>
-                                <div className="text-xl font-extrabold text-white">20+</div>
+                                <div className="text-xl font-extrabold text-white">8+</div>
                                 <div className="text-xs text-navy-foreground/70">Years of Regulatory<br />Excellence</div>
                             </div>
                         </div>
