@@ -22,6 +22,7 @@ import {
     BadgeCheck,
     LayoutList,
 } from "lucide-react";
+import usaHeroImg from "@/assets/usa-fda-hero-statue.jpg";
 
 /* ── Route ── */
 
@@ -47,12 +48,6 @@ export const Route = createFileRoute("/services/usa/")({
 });
 
 /* ── Static Data ── */
-
-const quickStats = [
-    { label: "510(k) Clearance", desc: "No routine expiration; ongoing compliance and change assessment apply." },
-    { label: "Establishment Registration", desc: "Annual renewal required." },
-    { label: "QMS Requirement", desc: "FDA QMSR – 21 CFR Part 820, incorporating ISO 13485:2016" },
-];
 
 const regulatoryServices = [
     { icon: LayoutList, label: "Medical Device\nClassification\nUSA", to: "/services/usa/classification" },
@@ -218,21 +213,13 @@ function USAMarket() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-4 lg:pt-4">
-                            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900 h-44 flex items-end">
-                                <img src="https://flagcdn.com/w1280/us.png" alt="United States Flag" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-                                <div className="relative z-10 p-5">
-                                    <p className="text-white font-extrabold text-lg leading-tight">US FDA Regulatory &amp; Market Access</p>
-                                    <p className="text-white/70 text-xs font-medium">CDRH · 21 CFR · eSTAR · FURLS</p>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                {quickStats.map((s) => (
-                                    <div key={s.label} className="bg-white rounded-xl border border-gray-200/80 p-4 shadow-xs">
-                                        <p className="text-[12px] font-extrabold text-navy leading-snug mb-1">{s.label}</p>
-                                        <p className="text-[11px] text-navy/60 leading-snug">{s.desc}</p>
-                                    </div>
-                                ))}
+                        <div className="flex justify-center lg:justify-end items-center mt-4 lg:mt-0">
+                            <div className="w-full max-w-[560px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80 bg-white hover:shadow-xl transition-all duration-300">
+                                <img
+                                    src={usaHeroImg}
+                                    alt="US FDA Medical Device Clearance, Establishment Registration & QMSR Compliance"
+                                    className="w-full h-auto object-contain"
+                                />
                             </div>
                         </div>
                     </div>
