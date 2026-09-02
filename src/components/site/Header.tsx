@@ -1,24 +1,39 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, ChevronDown, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, ArrowRight, Mail, Phone, Linkedin, Twitter } from "lucide-react";
 import { Logo } from "./Logo";
 
+const serviceCategories = [
+  {
+    category: "Regulatory & Market Access",
+    items: [
+      { to: "/services/regulatory-affairs", label: "Global Medical Device & IVD Registration" },
+      { to: "/services/drug-device-combination-products", label: "Drug-Device Combination Product Consulting" },
+      { to: "/services/regulatory-due-diligence", label: "Regulatory Due Diligence for Devices & IVDs" },
+      { to: "/industries/cosmetics", label: "Cosmetics Regulatory & Market Access" },
+      { to: "/services/drug-licenses-for-importers", label: "Drug Licenses for Importers (Form 41/10)" },
+      { to: "/services/market-access", label: "Market Access Strategy" },
+      { to: "/services/manufacturing", label: "Manufacturing & Facilities" },
+    ],
+  },
+  {
+    category: "Quality, Technical & Special Approvals",
+    items: [
+      { to: "/services/iso-13485", label: "ISO 13485 & QMS" },
+      { to: "/services/mdsap", label: "MDSAP Audit Readiness" },
+      { to: "/services/technical-documentation", label: "Technical Documentation & DHF" },
+      { to: "/services/audit-compliance", label: "Audit & Compliance Support" },
+      { to: "/services/wpc-wireless-medical-devices", label: "WPC Wireless Device Approval" },
+      { to: "/services/pc-pndt-certificate", label: "PC-PNDT Certificate" },
+      { to: "/services/iec-ad-code", label: "IEC & AD Code Registration" },
+    ],
+  },
+];
+
 const services = [
-  { to: "/services/regulatory-affairs", label: "Global Medical Device & IVD Registration" },
-  { to: "/services/drug-device-combination-products", label: "Drug-Device Combination Product Consulting" },
-  { to: "/services/regulatory-due-diligence", label: "Regulatory Due Diligence for Medical Devices & IVDs" },
-  { to: "/industries/cosmetics", label: "Cosmetics Regulatory & Market Access" },
-  { to: "/services/drug-licenses-for-importers", label: "Drug Licenses for Importers" },
-  { to: "/services/wpc-wireless-medical-devices", label: "WPC Wireless Device Approval" },
-  { to: "/services/pc-pndt-certificate", label: "PC-PNDT Certificate" },
-  { to: "/services/iec-ad-code", label: "IEC & AD Code Registration" },
-  { to: "/services/iso-13485", label: "ISO 13485 & QMS" },
-  { to: "/services/mdsap", label: "MDSAP" },
-  { to: "/services/technical-documentation", label: "Technical Documentation" },
-  { to: "/services/market-access", label: "Market Access" },
-  { to: "/services/manufacturing", label: "Manufacturing" },
-  { to: "/services/audit-compliance", label: "Audit & Compliance Support" },
-  { to: "/services", label: "All Services" },
+  ...serviceCategories[0].items,
+  ...serviceCategories[1].items,
+  { to: "/services", label: "All Services Directory" },
 ];
 
 const nav = [
@@ -39,20 +54,20 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-navy text-white text-[11px] font-medium tracking-wide">
-        <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="bg-navy-deep text-white text-xs py-2 border-b border-white/10 hidden md:block">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+            <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Mail className="h-3.5 w-3.5" />
-              contact@nkbregovanta.com
+              <span>contact@nkbregovanta.com</span>
             </a>
-            <div className="hidden sm:flex items-center gap-1.5 text-white/90">
+            <a href="tel:+918400039062" className="flex items-center gap-2 hover:text-white/80 transition-colors">
               <Phone className="h-3.5 w-3.5" />
-              <a href="tel:+918400039062" className="hover:text-white transition-colors">+91 84000 39062</a>
-            </div>
+              <span>+91 84000 39062</span>
+            </a>
           </div>
-          <div className="flex items-center gap-6">
-            <span className="hidden md:inline-block">India Based. Globally Connected.</span>
+          <div className="flex items-center gap-4">
+            <span className="text-white/60">India Based. Globally Connected.</span>
             <div className="flex items-center gap-3">
               <a href="https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/?viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-white/80 transition-colors">
                 <Linkedin className="h-3.5 w-3.5 fill-current" />
@@ -82,19 +97,43 @@ export function Header() {
                 activeProps={{ className: "text-navy font-semibold" }}
                 activeOptions={{ exact: false }}
               >
-                Services <ChevronDown className="h-3.5 w-3.5" />
+                Services <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
               </Link>
-              <div className="invisible absolute left-0 top-full w-60 translate-y-1 pt-3 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="card-elevated overflow-hidden py-1">
-                  {services.map((s) => (
+              
+              <div className="invisible absolute -left-12 top-full w-[640px] translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 z-50">
+                <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl overscroll-contain max-h-[calc(100vh-95px)] overflow-y-auto">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+                    {serviceCategories.map((cat, i) => (
+                      <div key={i} className="flex flex-col">
+                        <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#0b3a96] pb-2 mb-1.5 border-b border-gray-100 flex items-center gap-1.5">
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#0b3a96]" />
+                          {cat.category}
+                        </div>
+                        <div className="space-y-0.5">
+                          {cat.items.map((s) => (
+                            <Link
+                              key={s.to}
+                              to={s.to}
+                              className="group/item flex items-center justify-between rounded-lg px-2.5 py-1.5 text-[12.5px] font-medium text-foreground/80 transition-all hover:bg-blue-50/70 hover:text-navy"
+                            >
+                              <span className="leading-snug">{s.label}</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-gray-300 opacity-0 group-hover/item:opacity-100 group-hover/item:text-[#0b3a96] group-hover/item:translate-x-0.5 transition-all shrink-0 ml-1" />
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between bg-slate-50 -mx-5 -mb-5 p-3 px-5 rounded-b-2xl">
+                    <span className="text-[11px] text-navy/70 font-medium">Full regulatory and market access suite</span>
                     <Link
-                      key={s.to}
-                      to={s.to}
-                      className="block px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-surface hover:text-navy"
+                      to="/services"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3a96] hover:text-[#082b70] transition-colors"
                     >
-                      {s.label}
+                      View All Services Directory <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
