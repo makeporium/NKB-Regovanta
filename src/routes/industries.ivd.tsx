@@ -184,33 +184,46 @@ function IVD() {
             <div className="w-12 h-0.5 bg-[#dca85b] mx-auto mt-4"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Link to="/industries/ivd/india" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
-              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇮🇳</span>
-              <div>
-                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">India</h3>
-                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">CDSCO Under MDR 2017</p>
-              </div>
-              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </Link>
-            
-            <Link to="/industries/ivd/eu" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
-              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇪🇺</span>
-              <div>
-                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">European Union</h3>
-                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">IVDR 2017/746</p>
-              </div>
-              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </Link>
-            
-            <Link to="/industries/ivd/usa" className="group flex items-center gap-4 p-6 rounded-xl border border-border/50 bg-[#f8f9fc] hover:bg-navy hover:text-white transition-all shadow-sm">
-              <span className="text-4xl shadow-sm rounded-sm overflow-hidden leading-none shrink-0" style={{lineHeight: 1}}>🇺🇸</span>
-              <div>
-                <h3 className="font-bold text-lg leading-tight group-hover:text-white transition-colors text-navy">USA</h3>
-                <p className="text-sm font-medium opacity-80 mt-1 line-clamp-1">US FDA Framework</p>
-              </div>
-              <ChevronRight className="h-5 w-5 ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </Link>
+          {/* Unified 10-Market Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-14">
+            {[
+              { code: "in", name: "India", auth: "CDSCO Under MDR 2017", route: "/industries/ivd/india" },
+              { code: "eu", name: "European Union", auth: "IVDR 2017/746", route: "/industries/ivd/eu" },
+              { code: "us", name: "United States", auth: "US FDA 510(k) & De Novo", route: "/industries/ivd/usa" },
+              { code: "gb", name: "United Kingdom", auth: "MHRA & UKCA IVD", route: "/services/uk" },
+              { code: "ca", name: "Canada", auth: "Health Canada Class II–IV", route: "/services/canada" },
+              { code: "au", name: "Australia", auth: "TGA IVD Inclusions", route: "/services/australia" },
+              { code: "br", name: "Brazil", auth: "ANVISA & BGMP", route: "/services/brazil" },
+              { code: "sa", name: "Saudi Arabia", auth: "SFDA MDMA Approvals", route: "/services/saudi-arabia" },
+              { code: "ae", name: "UAE", auth: "MOHAP IVD Registration", route: "/services/uae" },
+              { code: "nz", name: "New Zealand", auth: "Medsafe WAND", route: "/services/new-zealand" },
+            ].map((m) => (
+              <Link
+                key={m.code}
+                to={m.route}
+                className="group p-5 rounded-xl border border-gray-200/80 bg-[#f8f9fc] hover:bg-white hover:border-[#0b3a96]/40 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="flex items-center gap-3.5 mb-3">
+                  <img
+                    src={`https://flagcdn.com/w40/${m.code}.png`}
+                    srcSet={`https://flagcdn.com/w80/${m.code}.png 2x`}
+                    alt={`${m.name} Flag`}
+                    className="w-8 h-5.5 object-cover rounded-xs shadow-2xs border border-gray-200 group-hover:scale-105 transition-transform shrink-0"
+                    loading="lazy"
+                  />
+                  <h3 className="font-extrabold text-[14px] text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
+                    {m.name}
+                  </h3>
+                </div>
+                
+                <div className="flex items-center justify-between pt-2 border-t border-gray-200/60 mt-auto">
+                  <span className="text-[11px] font-semibold text-navy/70 group-hover:text-[#0b3a96] transition-colors line-clamp-1">
+                    {m.auth}
+                  </span>
+                  <ArrowRight className="h-3.5 w-3.5 text-navy/40 group-hover:text-[#0b3a96] group-hover:translate-x-1 transition-all shrink-0 ml-2" />
+                </div>
+              </Link>
+            ))}
           </div>
 
           <div className="bg-[#f8f9fc] rounded-xl p-8 border border-border/50 shadow-sm overflow-x-auto">

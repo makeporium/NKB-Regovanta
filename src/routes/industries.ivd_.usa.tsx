@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale } from "lucide-react";
+import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
 import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.png";
@@ -169,6 +169,31 @@ function IVDUsa() {
                                 <p className="text-sm text-navy/70 leading-relaxed">{s.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Link to Main USA Regulatory Services Hub */}
+            <section className="py-12 bg-slate-50 border-t border-border">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="rounded-2xl bg-white border border-blue-100 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div>
+                            <div className="flex items-center gap-2 mb-1.5">
+                                <span className="h-2 w-2 rounded-full bg-[#0b3a96]" />
+                                <span className="text-[11px] font-bold uppercase tracking-widest text-[#0b3a96]">For More Details</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-navy">Looking for Full US FDA Medical Device &amp; IVD Services?</h3>
+                            <p className="text-sm text-navy/70 mt-1.5 max-w-2xl leading-relaxed">
+                                Access our dedicated US regulatory services including official US Agent representation, 510(k) clearances, De Novo petitions, Q-Submissions, 513(g) requests, and 21 CFR 820 QMSR compliance services.
+                            </p>
+                        </div>
+                        <Link
+                            to="/services/usa"
+                            className="shrink-0 inline-flex items-center gap-2 bg-[#0b3a96] hover:bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-all shadow-xs hover:shadow-md group"
+                        >
+                            <span>Explore US FDA Regulatory Services</span>
+                            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
                     </div>
                 </div>
             </section>
