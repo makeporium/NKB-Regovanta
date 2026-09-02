@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, Mail, Phone, Linkedin, Twitter } from "lucide-rea
 import { Logo } from "./Logo";
 
 const services = [
-  { to: "/services/regulatory-affairs", label: "Regulatory Affairs" },
+  { to: "/services/regulatory-affairs", label: "Global Medical Device & IVD Regulatory Registration" },
   { to: "/services/drug-licenses-for-importers", label: "Drug Licenses for Importers" },
   { to: "/services/wpc-wireless-medical-devices", label: "WPC Wireless Device Approval" },
   { to: "/services/pc-pndt-certificate", label: "PC-PNDT Certificate" },

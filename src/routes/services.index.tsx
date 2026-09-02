@@ -34,7 +34,7 @@ export const Route = createFileRoute("/services/")({
 const services = [
   {
     icon: ShieldCheck,
-    title: "Regulatory Affairs",
+    title: "Global Medical Device & IVD Regulatory Registration",
     text: "Regulatory strategy, submission support and licensing across global markets.",
     to: "/services/regulatory-affairs",
   },
