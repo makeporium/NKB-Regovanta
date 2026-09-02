@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill, Factory, Syringe } from "lucide-react";
+import { BadgeCheck, FileCheck, FileSearch, Globe2, ShieldCheck, Zap, Building2, Radio, Activity, Landmark, Pill, Factory, Syringe, Sparkles } from "lucide-react";
 import { CTABand, PageHero } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/")({
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/services/")({
 const services = [
   {
     icon: ShieldCheck,
-    title: "Global Medical Device & IVD Regulatory Registration",
+    title: "Global Medical Device & IVD Registration",
     text: "Regulatory strategy, submission support and licensing across global markets.",
     to: "/services/regulatory-affairs",
   },
@@ -49,6 +49,12 @@ const services = [
     title: "Regulatory Due Diligence for Medical Devices & IVDs",
     text: "Decision-grade regulatory audits for M&A, private equity investments, QMS maturity, FDA 483 assessments, and valuation risk modeling.",
     to: "/services/regulatory-due-diligence",
+  },
+  {
+    icon: Sparkles,
+    title: "Cosmetics Regulatory & Global Market Access",
+    text: "CDSCO COS-1/COS-2 import registration, US FDA MoCRA compliance, EU/UK Responsible Person (RP), CPSR, and international notifications.",
+    to: "/industries/cosmetics",
   },
   {
     icon: Pill,

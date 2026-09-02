@@ -4,9 +4,10 @@ import { Menu, X, ChevronDown, Mail, Phone, Linkedin, Twitter } from "lucide-rea
 import { Logo } from "./Logo";
 
 const services = [
-  { to: "/services/regulatory-affairs", label: "Global Medical Device & IVD Regulatory Registration" },
+  { to: "/services/regulatory-affairs", label: "Global Medical Device & IVD Registration" },
   { to: "/services/drug-device-combination-products", label: "Drug-Device Combination Product Consulting" },
   { to: "/services/regulatory-due-diligence", label: "Regulatory Due Diligence for Medical Devices & IVDs" },
+  { to: "/industries/cosmetics", label: "Cosmetics Regulatory & Market Access" },
   { to: "/services/drug-licenses-for-importers", label: "Drug Licenses for Importers" },
   { to: "/services/wpc-wireless-medical-devices", label: "WPC Wireless Device Approval" },
   { to: "/services/pc-pndt-certificate", label: "PC-PNDT Certificate" },

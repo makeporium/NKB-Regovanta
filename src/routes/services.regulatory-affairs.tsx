@@ -6,7 +6,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/regulatory-affairs")({
     head: () => ({
         meta: [
-            { title: "Global Medical Device & IVD Regulatory Registration | NKB Regovanta" },
+            { title: "Global Medical Device & IVD Registration | NKB Regovanta" },
             {
                 name: "description",
                 content:
@@ -50,7 +50,7 @@ function RegulatoryAffairs() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start pt-0 h-full">
                         <div className="max-w-xl pt-6 lg:pt-10 flex flex-col h-full">
-                            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">Global Medical Device &amp; IVD Regulatory Registration</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">Global Medical Device &amp; IVD Registration</p>
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy">
                                 <span className="block" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
                                     Navigate the Regulatory
