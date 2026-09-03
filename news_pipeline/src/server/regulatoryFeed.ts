@@ -1,15 +1,14 @@
 "use server";
 import { createServerFn } from "@tanstack/react-start";
 import { XMLParser } from "fast-xml-parser";
+import { z } from "zod";
+import {
+    AIItemSchema,
+    type RegulatoryItem,
+    type SourceAgency,
+} from "~/lib/regulatorySchema";
 
-export type SourceAgency = "CDSCO" | "USFDA" | "EU_MDR" | "MDSAP" | "OTHER";
-
-export interface RegulatoryItem {
-    title: string;
-    source_agency: SourceAgency;
-    summary: string;
-    source_url: string;
-}
+// ── Feed Sources ───────────────────────────────────────────────────────────────
 
 const FEEDS = [
     {
@@ -27,21 +26,18 @@ const FEEDS = [
     {
         url: "https://news.google.com/rss/search?q=%22notified+body%22+OR+%22MDSAP%22+OR+%22IVDR%22+OR+%22CE+mark%22+device&hl=en-IN&gl=IN&ceid=IN:en",
         label: "Google News Regulatory",
-    }
+    },
 ];
 
+// ── Keyword pre-filter (cheap local filter before AI) ──────────────────────────
+
 const KEYWORDS = [
-    "Cdsco",
-    "Medical device",
-    "Ivd",
-    "MDR 2017",
-    "USFDA 510k",
-    "estar",
-    "eumdr",
-    "euivdr",
-    "mdsap",
-    "notified body",
+    "cdsco", "medical device", "ivd", "mdr 2017", "usfda", "510k", "510(k)",
+    "estar", "eumdr", "euivdr", "mdsap", "notified body", "fda", "recall",
+    "ce mark", "ivdr", "mdcg", "de novo", "pma", "guidance", "clearance",
 ];
+
+// ── Raw RSS item type ──────────────────────────────────────────────────────────
 
 interface RawItem {
     title: string;
@@ -51,12 +47,14 @@ interface RawItem {
     feed_source: string;
 }
 
+// ── URL decoding (Google News wraps real URLs in Base64) ────────────────────────
+
 function decodeGoogleNewsUrl(url: string): string {
     if (!url.includes("articles/CBMi") && !url.includes("articles/CAAq")) return url;
     try {
         let b64 = url.split("articles/")[1].split("?")[0];
-        b64 = b64.replace(/-/g, '+').replace(/_/g, '/');
-        while (b64.length % 4 !== 0) b64 += '=';
+        b64 = b64.replace(/-/g, "+").replace(/_/g, "/");
+        while (b64.length % 4 !== 0) b64 += "=";
         const decoded = atob(b64);
         const match = decoded.match(/https?:\/\/[^\s\x00-\x1F\x7F"\\]+/);
         return match ? match[0] : url;
@@ -65,24 +63,21 @@ function decodeGoogleNewsUrl(url: string): string {
     }
 }
 
+// ── RSS XML Parser ─────────────────────────────────────────────────────────────
+
 function parseRssFeed(xml: string, label: string): RawItem[] {
     try {
         const parser = new XMLParser({ ignoreAttributes: false });
         const result = parser.parse(xml);
-
-        const channel =
-            result?.rss?.channel ?? result?.feed ?? result?.["rdf:RDF"]?.channel;
+        const channel = result?.rss?.channel ?? result?.feed ?? result?.["rdf:RDF"]?.channel;
         if (!channel) return [];
 
         const items: unknown[] = Array.isArray(channel.item)
             ? channel.item
-            : channel.item
-                ? [channel.item]
-                : Array.isArray(channel.entry)
-                    ? channel.entry
-                    : channel.entry
-                        ? [channel.entry]
-                        : [];
+            : channel.item ? [channel.item]
+            : Array.isArray(channel.entry) ? channel.entry
+            : channel.entry ? [channel.entry]
+            : [];
 
         return items
             .map((item: unknown) => {
@@ -91,8 +86,7 @@ function parseRssFeed(xml: string, label: string): RawItem[] {
                     i["link"] ??
                     (typeof i["link"] === "object"
                         ? (i["link"] as Record<string, unknown>)["@_href"]
-                        : "") ??
-                    ""
+                        : "") ?? ""
                 );
                 return {
                     title: String(i["title"] ?? ""),
@@ -108,17 +102,22 @@ function parseRssFeed(xml: string, label: string): RawItem[] {
     }
 }
 
+// ── Keyword pre-filter ─────────────────────────────────────────────────────────
+
 function keywordMatch(item: RawItem): boolean {
-    if (item.feed_source === 'FDA CDRH' || item.feed_source === 'EU MDCG') return true;
+    if (item.feed_source === "FDA CDRH" || item.feed_source === "EU MDCG") return true;
     const haystack = `${item.title} ${item.description ?? ""}`.toLowerCase();
-    return KEYWORDS.some((kw) => haystack.includes(kw.toLowerCase()));
+    return KEYWORDS.some((kw) => haystack.includes(kw));
 }
+
+// ── Fetch a single RSS feed ────────────────────────────────────────────────────
 
 async function fetchFeed(url: string, label: string): Promise<RawItem[]> {
     try {
         const res = await fetch(url, {
-            headers: { 
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" 
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
             },
             signal: AbortSignal.timeout(10_000),
         });
@@ -130,34 +129,62 @@ async function fetchFeed(url: string, label: string): Promise<RawItem[]> {
     }
 }
 
-function feedSourceToAgency(feedSource: string): RegulatoryItem["source_agency"] {
-    if (feedSource === "FDA CDRH") return "USFDA";
-    if (feedSource === "EU MDCG") return "EU_MDR";
-    return "OTHER";
+// ── Agency classification from feed source ─────────────────────────────────────
+
+function classifyAgency(item: RawItem): SourceAgency {
+    if (item.feed_source === "FDA CDRH") return "USFDA";
+    if (item.feed_source === "EU MDCG") return "EU_MDR";
+    if (item.feed_source.includes("Google")) {
+        const lower = (item.title + " " + (item.description ?? "")).toLowerCase();
+        if (lower.includes("cdsco") || lower.includes("dcgi") || lower.includes("india")) return "CDSCO";
+        if (lower.includes("fda") || lower.includes("510k") || lower.includes("recall")) return "USFDA";
+        if (lower.includes("mdr") || lower.includes("ivdr") || lower.includes("ce mark") || lower.includes("eu ")) return "EU_MDR";
+        if (lower.includes("mdsap")) return "MDSAP";
+    }
+    return "OTHER"; // STEP 5: default is OTHER, not CDSCO
 }
+
+// ── AI Prompt Builder ──────────────────────────────────────────────────────────
 
 function buildPrompt(items: RawItem[]): string {
     const itemList = items
-        .map((it, i) => `[${i + 1}] TITLE: ${it.title}`)
-        .join("\n");
+        .map(
+            (it, i) =>
+                `[${i + 1}] TITLE: ${it.title}\nSNIPPET: ${(it.description ?? "").slice(0, 120)}`
+        )
+        .join("\n\n");
 
-    return `You are a regulatory intelligence specialist.
+    return `You are a regulatory intelligence analyst for the medical devices industry.
 
-For each feed item below, write a one-sentence summary of <=10 words.
-Return ONLY a valid JSON array of objects with keys:
-- "summary": your <=10 word summary
-- "source_url": leave this as an empty string ""
+For EACH item below, analyze and return a JSON object with these fields:
 
-Rules: Raw JSON array only, no markdown.
+- "is_relevant": boolean — true if this is a genuine regulatory/compliance update for the medical device industry. false if it's a general business article, stock market news, or unrelated content.
+- "update_type": one of "Guidance" | "Recall" | "Final Rule" | "Warning Letter" | "Draft Guidance" | "Safety Alert" | "Notification" | "Standard Update" | "Other"
+- "impact": one of "High" | "Medium" | "Low"
+- "jurisdiction": string — e.g. "USA", "India", "EU", "Global", "Canada", "Australia"
+- "device_types": array of strings — e.g. ["IVD", "Class III Implant"], or ["General"] if not specific
+- "summary": string — 1 to 3 sentences, max 50 words. A concise professional summary of the regulatory significance.
+- "effective_date": string — ISO date if mentioned, otherwise ""
+- "deadline": string — ISO date if mentioned, otherwise ""
+- "action_required": string — brief action manufacturers must take, or "" if none mentioned
+- "source_agency": one of "CDSCO" | "USFDA" | "EU_MDR" | "MDSAP" | "OTHER"
+
+Return ONLY a raw JSON array. No markdown. No explanation. No wrapping object.
 
 ITEMS:
 ${itemList}`;
 }
 
-async function callAI(prompt: string): Promise<RegulatoryItem[]> {
+// ── Groq AI Caller ─────────────────────────────────────────────────────────────
+
+async function callAI(
+    prompt: string,
+    items: RawItem[]
+): Promise<RegulatoryItem[]> {
     const apiKey = process.env.GROQ_API_KEY ?? "";
     if (!apiKey) {
-        return [{ title: "API KEY ERROR: GROQ_API_KEY not found. Check .env.local.", source_agency: "OTHER", summary: "Add GROQ_API_KEY to .env.local and restart the dev server.", source_url: "#" }];
+        console.error("[RegulatoryFeed] GROQ_API_KEY not found in environment.");
+        return [];
     }
 
     try {
@@ -177,12 +204,16 @@ async function callAI(prompt: string): Promise<RegulatoryItem[]> {
 
         if (!res.ok) {
             const errText = await res.text();
-            return [{ title: `GROQ API ERROR ${res.status}`, source_agency: "OTHER", summary: errText.slice(0, 150), source_url: "#" }];
+            console.error(`[RegulatoryFeed] Groq API error ${res.status}:`, errText.slice(0, 200));
+            return [];
         }
 
-        const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+        const json = (await res.json()) as {
+            choices?: { message?: { content?: string } }[];
+        };
         const raw = json.choices?.[0]?.message?.content ?? "[]";
 
+        // Strip <think> tags, markdown fences, and extract JSON array
         let cleanJson = raw;
         const arrayMatch = raw.match(/\[\s*\{[\s\S]*\}\s*\]/);
         if (arrayMatch) {
@@ -192,95 +223,92 @@ async function callAI(prompt: string): Promise<RegulatoryItem[]> {
             cleanJson = cleanJson.replace(/```json/g, "").replace(/```/g, "").trim();
         }
 
-        const parsed = JSON.parse(cleanJson) as RegulatoryItem[];
-        return Array.isArray(parsed) ? parsed : [];
+        const parsed = JSON.parse(cleanJson);
+        if (!Array.isArray(parsed)) {
+            console.error("[RegulatoryFeed] AI did not return an array.");
+            return [];
+        }
+
+        // Validate each item with Zod, filter by is_relevant, merge source data
+        const results: RegulatoryItem[] = [];
+        for (let idx = 0; idx < parsed.length; idx++) {
+            const validation = AIItemSchema.safeParse(parsed[idx]);
+            if (!validation.success) {
+                console.warn(`[RegulatoryFeed] Item ${idx + 1} failed Zod validation:`, validation.error.issues[0]?.message);
+                continue;
+            }
+
+            const aiItem = validation.data;
+
+            // STEP: AI relevance filtering — drop irrelevant items
+            if (!aiItem.is_relevant) {
+                continue;
+            }
+
+            const originalItem = items[idx];
+            if (!originalItem) continue;
+
+            // Merge AI output with original RSS data (source_url & published_date from RSS, NOT AI)
+            const { is_relevant: _, ...aiFields } = aiItem;
+            results.push({
+                title: originalItem.title,
+                source_url: originalItem.link, // STEP 4: always from RSS
+                published_date: originalItem.pubDate ?? "",
+                ...aiFields,
+            });
+        }
+
+        return results;
     } catch (err) {
         console.error("[RegulatoryFeed] AI call failed:", err);
         return [];
     }
 }
 
-const MOCK_ITEMS: RegulatoryItem[] = [
-    {
-        title: "CDSCO Issues Revised IVD Import Licensing Guidelines 2024",
-        source_agency: "CDSCO",
-        summary: "CDSCO has updated IVD import licensing rules requiring all manufacturers to resubmit documentation under the revised framework by March 2025.",
-        source_url: "https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/",
-    },
-    {
-        title: "FDA Finalizes eSTAR Electronic Submission Template v3.2",
-        source_agency: "USFDA",
-        summary: "FDA mandates eSTAR v3.2 for all 510(k) and De Novo submissions. Paper format will no longer be accepted after the 90-day transition window.",
-        source_url: "https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar",
-    },
-    {
-        title: "EU MDR Notified Body Audit Capacity Update Q4 2024",
-        source_agency: "EU_MDR",
-        summary: "EU Commission warns of continued Notified Body capacity constraints, urging manufacturers to book MDR conformity assessment audits well in advance of 2027 deadlines.",
-        source_url: "https://health.ec.europa.eu/medical-devices-topics-interest/notified-bodies-and-eudamed_en",
-    },
-    {
-        title: "MDSAP Audit Approach Document Updated for 2025 Cycle",
-        source_agency: "MDSAP",
-        summary: "The MDSAP consortium released revised audit approach documents covering grading methodology changes effective for all 2025 surveillance and certification audits.",
-        source_url: "https://www.who.int/teams/regulation-prequalification/regulation-and-safety/medical-devices/mdsap",
-    },
-    {
-        title: "FDA 510(k) Substantial Equivalence Decision Making Guidance Finalized",
-        source_agency: "USFDA",
-        summary: "FDA finalizes guidance clarifying the step-by-step decision-making process for determining substantial equivalence, particularly for combination products and novel technologies.",
-        source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
-    },
-];
+// ── Main Export ─────────────────────────────────────────────────────────────────
 
 export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
+    console.log("[RegulatoryFeed] Pipeline started.");
+
+    // 1. Fetch all feeds in parallel
     const rawArrays = await Promise.all(FEEDS.map((f) => fetchFeed(f.url, f.label)));
     const allItems = rawArrays.flat();
-    const filtered = allItems.filter(keywordMatch);
+    console.log(`[RegulatoryFeed] Fetched ${allItems.length} raw items.`);
 
+    // 2. Keyword pre-filter (cheap, saves AI tokens)
+    const filtered = allItems.filter(keywordMatch);
+    console.log(`[RegulatoryFeed] ${filtered.length} items passed keyword filter.`);
+
+    if (filtered.length === 0) {
+        return []; // STEP 7: no mock fallback — just empty
+    }
+
+    // 3. Sort by date (newest first)
     const sorted = filtered.sort((a, b) => {
         const dateA = a.pubDate ? new Date(a.pubDate).getTime() : 0;
         const dateB = b.pubDate ? new Date(b.pubDate).getTime() : 0;
         return dateB - dateA;
     });
 
-    if (sorted.length === 0) {
-        return MOCK_ITEMS;
-    }
-
-    const fdaItems = sorted.filter(i => i.feed_source === "FDA CDRH").slice(0, 2);
-    const euItems = sorted.filter(i => i.feed_source === "EU MDCG").slice(0, 2);
-    const googleItems = sorted.filter(i => i.feed_source.includes("Google")).slice(0, 2);
+    // 4. Pick top 2 per category
+    const fdaItems = sorted.filter((i) => i.feed_source === "FDA CDRH").slice(0, 2);
+    const euItems = sorted.filter((i) => i.feed_source === "EU MDCG").slice(0, 2);
+    const googleItems = sorted.filter((i) => i.feed_source.includes("Google")).slice(0, 2);
     const topItems = [...fdaItems, ...euItems, ...googleItems];
+    console.log(`[RegulatoryFeed] Selected ${topItems.length} top items for AI processing.`);
 
-    const preClassified: RegulatoryItem[] = topItems.map(item => {
-        let agency = feedSourceToAgency(item.feed_source);
-        if (item.feed_source.includes("Google")) {
-            const lower = (item.title + " " + (item.description ?? "")).toLowerCase();
-            if (lower.includes("cdsco") || lower.includes("dcgi") || lower.includes("india")) agency = "CDSCO";
-            else if (lower.includes("fda") || lower.includes("510k") || lower.includes("recall")) agency = "USFDA";
-            else if (lower.includes("mdr") || lower.includes("ivdr") || lower.includes("ce mark") || lower.includes("eu ")) agency = "EU_MDR";
-            else if (lower.includes("mdsap")) agency = "MDSAP";
-            else agency = "CDSCO";
-        }
-        return { title: item.title, source_agency: agency, summary: "", source_url: item.link };
-    });
+    // 5. Send to AI for relevance + classification + metadata extraction
+    const prompt = buildPrompt(topItems);
+    const results = await callAI(prompt, topItems);
+    console.log(`[RegulatoryFeed] AI returned ${results.length} relevant items.`);
 
-    try {
-        const summaryRes = await callAI(buildPrompt(topItems));
-        return preClassified.map((item, idx) => {
-            const aiSummary = summaryRes[idx]?.summary ?? "";
-            const cleanSummary = aiSummary && !aiSummary.startsWith("{") ? aiSummary : item.title.slice(0, 80);
-            return { ...item, summary: cleanSummary };
-        });
-    } catch {
-        return preClassified.map(item => ({ ...item, summary: item.title.slice(0, 80) }));
-    }
+    return results;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Guarantees server-side-only execution (process.env, Node fetch) on both
-// initial SSR and client-side navigations via the TanStack Start RPC layer.
+// ── Server Function Wrapper ────────────────────────────────────────────────────
 export const fetchRegulatoryFeedFn = createServerFn({ method: "GET" }).handler(
     fetchRegulatoryFeed,
 );
+
+// Re-export types for the frontend
+export type { RegulatoryItem, SourceAgency } from "~/lib/regulatorySchema";

@@ -12,6 +12,8 @@ import { RegulatoryDashboard } from "~/components/RegulatoryDashboard";
 
 export const Route = createFileRoute("/regulatory-updates")({
     // ── Loader runs server-side (SSR) ──────────────────────────────────────────
+    // shouldReload: always refetch fresh data on every page visit
+    shouldReload: true,
     loader: async () => {
         const items = await fetchRegulatoryFeedFn();
         return {
