@@ -355,19 +355,19 @@ function Index() {
     const updateScrollState = () => {
         if (!scrollRef.current) return;
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-        setCanScrollLeft(scrollLeft > 15);
+        setCanScrollLeft(scrollLeft > 10);
         setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 15);
 
-        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
-        const gap = 24;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
         const newIndex = Math.round(scrollLeft / (cardWidth + gap));
         setActiveIndex(Math.min(Math.max(newIndex, 0), clientTestimonials.length - 1));
     };
 
     const scrollToIndex = (index: number) => {
         if (!scrollRef.current) return;
-        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
-        const gap = 24;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
         scrollRef.current.scrollTo({
             left: index * (cardWidth + gap),
             behavior: "smooth",
@@ -377,8 +377,8 @@ function Index() {
 
     const scroll = (direction: "left" | "right") => {
         if (!scrollRef.current) return;
-        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
-        const gap = 24;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
         const offset = cardWidth + gap;
         scrollRef.current.scrollBy({
             left: direction === "left" ? -offset : offset,
@@ -816,6 +816,9 @@ function Index() {
 
                         {/* Navigation Arrows & Counter */}
                         <div className="flex items-center gap-3 self-start md:self-end shrink-0">
+                            <span className="text-[11px] font-bold text-gray-400 sm:hidden">
+                                Swipe →
+                            </span>
                             <span className="text-xs font-black text-gray-500 bg-white border border-gray-200/90 px-3.5 py-2 rounded-xl shadow-2xs select-none">
                                 <span className="text-[#0b3a96] font-extrabold">{activeIndex + 1}</span> of {clientTestimonials.length}
                             </span>
@@ -852,12 +855,12 @@ function Index() {
                             onScroll={updateScrollState}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
-                            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                            className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 scrollbar-none [-webkit-overflow-scrolling:touch] touch-pan-x overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                         >
                             {clientTestimonials.map((t) => (
                                 <div
                                     key={t.id}
-                                    className="w-[88vw] sm:w-[500px] lg:w-[560px] shrink-0 snap-start relative bg-white rounded-3xl border border-gray-200/90 p-7 sm:p-8 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
+                                    className="w-[84vw] sm:w-[480px] lg:w-[540px] shrink-0 snap-start relative bg-white rounded-3xl border border-gray-200/90 p-6 sm:p-8 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
                                 >
                                     {/* Top Gradient Accent Line */}
                                     <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b]" />
