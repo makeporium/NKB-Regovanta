@@ -50,6 +50,7 @@ import logoPfizer from "@/assets/clients/pfizer.png";
 import logoIimIndore from "@/assets/clients/iim-indore.png";
 import logoRoche from "@/assets/clients/roche.png";
 import logoAbbott from "@/assets/clients/abbott.png";
+import logoKusum from "@/assets/clients/kusum.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -250,6 +251,7 @@ const clientPartners = [
     { name: "SYMBIOTEC PHARMALAB (P) LIMITED", subtitle: "Symbiotec Pharmalab", badge: "Steroid APIs", logo: logoSymbiotec },
     { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
+    { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
 ];
 
 const supportedCountries = [
@@ -267,14 +269,14 @@ const supportedCountries = [
 
 const clientTestimonials = [
     {
-        id: "dr-reddys",
-        name: "N. C. Shekhar",
-        title: "Executive Leadership",
-        company: "Dr. Reddy’s Laboratories",
+        id: "kusum",
+        name: "N. CHANDRA SHEKHAR",
+        title: "Executive Vice President",
+        company: "Kusum Healthcare Pvt Ltd",
         sector: "Global Pharmaceuticals",
         location: "India & International Markets",
-        initials: "NS",
-        logo: logoDrReddys,
+        initials: "CS",
+        logo: logoKusum,
         quote:
             "What stands out about NKB Regovanta is their structured and solution-oriented approach to regulatory challenges. They bring clarity to complex requirements, maintain strong attention to compliance detail, and work with a high level of ownership and responsiveness throughout the engagement.",
         keyStrengths: ["Structured Approach", "Solution-Oriented", "High Ownership & Detail"],
@@ -726,8 +728,8 @@ function Index() {
                                 <Quote className="absolute -bottom-4 -right-4 h-36 w-36 text-blue-50/80 group-hover:text-blue-100/70 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none -z-0 select-none" />
 
                                 <div className="relative z-10">
-                                    {/* Rating & Verified Badge */}
-                                    <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
+                                    {/* Rating & Category Tag */}
+                                    <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
                                         <div className="flex items-center gap-1">
                                             {[...Array(5)].map((_, i) => (
                                                 <Star
@@ -737,15 +739,20 @@ function Index() {
                                                 />
                                             ))}
                                         </div>
-                                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full shadow-2xs">
-                                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                                            Verified Executive Endorsement
+                                        <span className="text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 shadow-2xs">
+                                            {t.tag}
                                         </span>
                                     </div>
 
-                                    {/* Quote Icon */}
-                                    <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] mb-5 group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
-                                        <Quote className="h-5 w-5 fill-current" />
+                                    {/* Quote Icon & Verified Badge */}
+                                    <div className="flex items-center justify-between gap-3 mb-5">
+                                        <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
+                                            <Quote className="h-5 w-5 fill-current" />
+                                        </div>
+                                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
+                                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                                            Verified Executive Endorsement
+                                        </span>
                                     </div>
 
                                     {/* Main Quote Text */}
@@ -766,48 +773,40 @@ function Index() {
                                     </div>
                                 </div>
 
-                                {/* Author Profile Info */}
-                                <div className="relative z-10 pt-5 border-t border-gray-100/90 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
-                                    <div className="flex items-center gap-3.5">
-                                        {t.logo ? (
-                                            <div className="h-13 w-13 rounded-2xl bg-white border border-gray-200 shadow-2xs p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
-                                                <img
-                                                    src={t.logo}
-                                                    alt={t.company}
-                                                    className="max-h-8 max-w-[90%] object-contain"
-                                                />
-                                            </div>
-                                        ) : (
-                                            <div className="h-13 w-13 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
-                                                {t.initials}
-                                            </div>
-                                        )}
-                                        <div>
-                                            <div className="flex items-center gap-1.5">
-                                                <h4 className="text-base sm:text-[17px] font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
-                                                    {t.name}
-                                                </h4>
-                                                {t.countryCode && (
-                                                    <img
-                                                        src={`https://flagcdn.com/w40/${t.countryCode}.png`}
-                                                        alt="Lithuania / EU"
-                                                        title="Lithuania (EU)"
-                                                        className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
-                                                    />
-                                                )}
-                                            </div>
-                                            <p className="text-xs sm:text-[13px] font-bold text-gray-700 mt-0.5">
-                                                {t.title ? `${t.title}, ` : ""}{t.company}
-                                            </p>
-                                            <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
-                                                {t.sector} · {t.location}
-                                            </span>
+                                {/* Author Profile Info — Full Width */}
+                                <div className="relative z-10 pt-5 border-t border-gray-100/90 flex items-center gap-4 mt-auto">
+                                    {t.logo ? (
+                                        <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
+                                            <img
+                                                src={t.logo}
+                                                alt={t.company}
+                                                className="max-h-10 max-w-full object-contain"
+                                            />
                                         </div>
-                                    </div>
-
-                                    <div className="self-start sm:self-auto">
-                                        <span className="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 whitespace-nowrap">
-                                            {t.tag}
+                                    ) : (
+                                        <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
+                                            {t.initials}
+                                        </div>
+                                    )}
+                                    <div className="min-w-0 flex-1">
+                                        <div className="flex items-center gap-2">
+                                            <h4 className="text-base sm:text-lg font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
+                                                {t.name}
+                                            </h4>
+                                            {t.countryCode && (
+                                                <img
+                                                    src={`https://flagcdn.com/w40/${t.countryCode}.png`}
+                                                    alt="Lithuania / EU"
+                                                    title="Lithuania (EU)"
+                                                    className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
+                                                />
+                                            )}
+                                        </div>
+                                        <p className="text-xs sm:text-[13.5px] font-bold text-gray-700 mt-1 leading-snug">
+                                            {t.title ? `${t.title}, ` : ""}{t.company}
+                                        </p>
+                                        <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
+                                            {t.sector} · {t.location}
                                         </span>
                                     </div>
                                 </div>
