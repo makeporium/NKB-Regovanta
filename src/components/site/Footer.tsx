@@ -1035,9 +1035,9 @@ export function Footer() {
                 <div className="flex items-start gap-3 text-sm text-navy-foreground/70">
                   <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
                   <span>
-                    Block-B, High Street, Plot No 8, Sector 129,
+                    Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,
                     <br />
-                    Noida, Uttar Pradesh, 201304, India
+                    Lucknow, Uttar Pradesh, 226015, India
                   </span>
                 </div>
               </div>

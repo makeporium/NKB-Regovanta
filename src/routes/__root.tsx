@@ -195,8 +195,10 @@ const structuredDataGraph = {
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Noida",
+        "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
+        "addressLocality": "Lucknow",
         "addressRegion": "Uttar Pradesh",
+        "postalCode": "226015",
         "addressCountry": "IN"
       },
       "areaServed": [
