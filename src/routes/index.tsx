@@ -20,6 +20,10 @@ import {
     Headphones,
     Building2,
     Sparkles,
+    Quote,
+    Star,
+    CheckCircle2,
+    MessageSquareQuote,
 } from "lucide-react";
 import heroImage from "@/assets/hero-global.png";
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
@@ -259,6 +263,37 @@ const supportedCountries = [
     { name: "Saudi Arabia", code: "sa", auth: "SFDA", to: "/services/saudi-arabia" },
     { name: "UAE", code: "ae", auth: "MOHAP", to: "/services/uae" },
     { name: "New Zealand", code: "nz", auth: "Medsafe", to: "/services/new-zealand" },
+];
+
+const clientTestimonials = [
+    {
+        id: "dr-reddys",
+        name: "N. C. Shekhar",
+        title: "Executive Leadership",
+        company: "Dr. Reddy’s Laboratories",
+        sector: "Global Pharmaceuticals",
+        location: "India & International Markets",
+        initials: "NS",
+        logo: logoDrReddys,
+        quote:
+            "What stands out about NKB Regovanta is their structured and solution-oriented approach to regulatory challenges. They bring clarity to complex requirements, maintain strong attention to compliance detail, and work with a high level of ownership and responsiveness throughout the engagement.",
+        keyStrengths: ["Structured Approach", "Solution-Oriented", "High Ownership & Detail"],
+        tag: "Pharmaceutical Regulatory Strategy",
+    },
+    {
+        id: "vitacon",
+        name: "Rolandas Ragaisis",
+        title: "Managing Director",
+        company: "UAB Vitacon LT",
+        sector: "Ultrasound & Medical Devices",
+        location: "Lithuania, European Union",
+        countryCode: "lt",
+        initials: "RR",
+        quote:
+            "NKB Regovanta has demonstrated strong regulatory and quality expertise, combined with a highly practical and responsive working style. Their structured approach to gap assessment, documentation, compliance readiness and regulatory strategy has helped us manage complex requirements with greater clarity and confidence.",
+        keyStrengths: ["Regulatory & Quality Expertise", "Gap Assessment & QMS", "Practical & Responsive"],
+        tag: "Medical Devices & EU MDR",
+    },
 ];
 
 function Index() {
@@ -649,6 +684,175 @@ function Index() {
                         <div className="inline-flex items-center gap-2.5 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3 rounded-full border border-gray-200 shadow-2xs">
                             <Sparkles className="h-4 w-4 text-[#dca85b] shrink-0" />
                             <span>Growing alongside leaders in healthcare, diagnostics and life sciences.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── CLIENT TESTIMONIALS & ENDORSEMENTS ── */}
+            <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-slate-50 via-[#f5f8fd] to-white border-b border-gray-200 relative overflow-hidden">
+                {/* Background Ambient Glow Orbs */}
+                <div className="absolute top-12 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
+                <div className="absolute bottom-12 right-10 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
+                <Quote className="absolute top-10 right-10 h-72 w-72 text-blue-900/[0.02] pointer-events-none -rotate-12 select-none" />
+
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
+                            <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+                            Client Testimonials &amp; Endorsements
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                            What Industry Leaders Say About Us
+                        </h2>
+                        <p className="mt-3 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                            Direct feedback from pharmaceutical leadership and medical device executives who trust NKB Regovanta for their compliance readiness, CDSCO licensing, and global market clearances.
+                        </p>
+
+                    </div>
+
+                    {/* Testimonials Grid — Both displayed side-by-side */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+                        {clientTestimonials.map((t) => (
+                            <div
+                                key={t.id}
+                                className="relative bg-white rounded-3xl border border-gray-200/90 p-7 sm:p-9 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
+                            >
+                                {/* Top Gradient Accent Line */}
+                                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b]" />
+
+                                {/* Background Watermark Quote */}
+                                <Quote className="absolute -bottom-4 -right-4 h-36 w-36 text-blue-50/80 group-hover:text-blue-100/70 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none -z-0 select-none" />
+
+                                <div className="relative z-10">
+                                    {/* Rating & Verified Badge */}
+                                    <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
+                                        <div className="flex items-center gap-1">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star
+                                                    key={i}
+                                                    className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-2xs transition-transform duration-300 group-hover:scale-110"
+                                                    style={{ transitionDelay: `${i * 50}ms` }}
+                                                />
+                                            ))}
+                                        </div>
+                                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full shadow-2xs">
+                                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                                            Verified Executive Endorsement
+                                        </span>
+                                    </div>
+
+                                    {/* Quote Icon */}
+                                    <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] mb-5 group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
+                                        <Quote className="h-5 w-5 fill-current" />
+                                    </div>
+
+                                    {/* Main Quote Text */}
+                                    <blockquote className="text-[15px] sm:text-[16px] text-navy/90 font-normal leading-relaxed italic mb-6 relative z-10 font-serif">
+                                        &ldquo;{t.quote}&rdquo;
+                                    </blockquote>
+
+                                    {/* Key Highlights Tags */}
+                                    <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-gray-100">
+                                        {t.keyStrengths.map((str) => (
+                                            <span
+                                                key={str}
+                                                className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-slate-50 text-navy border border-gray-200/80 group-hover:border-[#0b3a96]/30 group-hover:bg-blue-50/50 transition-colors"
+                                            >
+                                                ✓ {str}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Author Profile Info */}
+                                <div className="relative z-10 pt-5 border-t border-gray-100/90 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+                                    <div className="flex items-center gap-3.5">
+                                        {t.logo ? (
+                                            <div className="h-13 w-13 rounded-2xl bg-white border border-gray-200 shadow-2xs p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
+                                                <img
+                                                    src={t.logo}
+                                                    alt={t.company}
+                                                    className="max-h-8 max-w-[90%] object-contain"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="h-13 w-13 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
+                                                {t.initials}
+                                            </div>
+                                        )}
+                                        <div>
+                                            <div className="flex items-center gap-1.5">
+                                                <h4 className="text-base sm:text-[17px] font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
+                                                    {t.name}
+                                                </h4>
+                                                {t.countryCode && (
+                                                    <img
+                                                        src={`https://flagcdn.com/w40/${t.countryCode}.png`}
+                                                        alt="Lithuania / EU"
+                                                        title="Lithuania (EU)"
+                                                        className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
+                                                    />
+                                                )}
+                                            </div>
+                                            <p className="text-xs sm:text-[13px] font-bold text-gray-700 mt-0.5">
+                                                {t.title ? `${t.title}, ` : ""}{t.company}
+                                            </p>
+                                            <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
+                                                {t.sector} · {t.location}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="self-start sm:self-auto">
+                                        <span className="text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 whitespace-nowrap">
+                                            {t.tag}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Animated Gradient Underline Bar */}
+                                <div className="w-0 group-hover:w-full transition-all duration-700 h-0.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b] mt-5" />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Bottom Trust Action Strip */}
+                    <div className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-br from-navy via-[#0d2857] to-navy-deep text-white p-7 sm:p-9 shadow-xl relative overflow-hidden border border-blue-900/50">
+                        {/* Decorative glow */}
+                        <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#dca85b]/10 rounded-full blur-2xl pointer-events-none" />
+                        <div className="absolute -left-10 -top-10 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
+
+                        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+                            <div className="text-center lg:text-left">
+                                <div className="inline-flex items-center gap-2 text-[#dca85b] text-xs font-black uppercase tracking-wider mb-2">
+                                    <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                                    <span>Experience Since 2018 · 151+ Projects Completed</span>
+                                </div>
+                                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                                    Ready to Experience the Same High Standard of Regulatory Support?
+                                </h3>
+                                <p className="text-xs sm:text-sm text-white/75 mt-1.5 max-w-2xl leading-relaxed">
+                                    Whether you need CDSCO registration in India, US FDA 510(k) clearances, EU MDR/IVDR compliance, or integrated cleanroom manufacturing solutions, our specialists ensure structured, responsive execution.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center gap-2 bg-[#dca85b] hover:bg-[#c9954a] text-navy px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
+                                >
+                                    <span>Schedule a Consultation</span>
+                                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                                <Link
+                                    to="/case-studies"
+                                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300"
+                                >
+                                    <span>View Case Studies</span>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
