@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
     Globe2,
@@ -12,6 +13,7 @@ import {
     Pill,
     Users,
     Layers,
+    ChevronLeft,
     ChevronRight,
     Search,
     SlidersHorizontal,
@@ -51,6 +53,9 @@ import logoIimIndore from "@/assets/clients/iim-indore.png";
 import logoRoche from "@/assets/clients/roche.png";
 import logoAbbott from "@/assets/clients/abbott.png";
 import logoKusum from "@/assets/clients/kusum.png";
+import logoTcs from "@/assets/clients/tcs.png";
+import logoGenpact from "@/assets/clients/genpact.svg";
+import logoWipro from "@/assets/clients/wipro.svg";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -296,9 +301,104 @@ const clientTestimonials = [
         keyStrengths: ["Regulatory & Quality Expertise", "Gap Assessment & QMS", "Practical & Responsive"],
         tag: "Medical Devices & EU MDR",
     },
+    {
+        id: "tcs",
+        name: "Prashant Singh",
+        title: "Lead Consultant",
+        company: "TCS",
+        sector: "Life Sciences & Digital Health",
+        location: "India & Global",
+        initials: "PS",
+        logo: logoTcs,
+        quote:
+            "NKB Regovanta has a good understanding of the regulatory requirements applicable to medical devices and IVD products. I have appreciated their practical approach, attention to detail, and the way they keep the process clear and well coordinated. They are a dependable team for regulatory and compliance support.",
+        keyStrengths: ["Medical Device & IVD", "Process Clarity", "Dependable Support"],
+        tag: "Medical Devices & IVD Compliance",
+    },
+    {
+        id: "genpact",
+        name: "Mohd Farrukh Khan",
+        title: "Senior Manager",
+        company: "Genpact",
+        sector: "Healthcare & Life Sciences Regulatory",
+        location: "Global Operations",
+        initials: "FK",
+        logo: logoGenpact,
+        quote:
+            "My experience with NKB Regovanta has been positive, particularly in the area of EU IVDR requirements. Their team has been responsive and clear in explaining the regulatory expectations and documentation requirements. They bring a practical approach to IVDR projects and are easy to work with.",
+        keyStrengths: ["EU IVDR Requirements", "Clear Documentation", "Practical & Responsive"],
+        tag: "EU IVDR Compliance",
+    },
+    {
+        id: "wipro",
+        name: "Parag Giri",
+        title: "Senior Project Manager",
+        company: "Wipro",
+        sector: "Medical Device Engineering",
+        location: "India & Global",
+        initials: "PG",
+        logo: logoWipro,
+        quote:
+            "I worked with NKB Regovanta in connection with regulatory consultancy support for medical device projects. The team was approachable and willing to work through the details with the project team. Their inputs were useful in understanding the regulatory aspects and planning the next steps.",
+        keyStrengths: ["Approachable Team", "Actionable Guidance", "Strategic Project Planning"],
+        tag: "Medical Device Strategy",
+    },
 ];
 
 function Index() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const updateScrollState = () => {
+        if (!scrollRef.current) return;
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        setCanScrollLeft(scrollLeft > 15);
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 15);
+
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
+        const gap = 24;
+        const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+        setActiveIndex(Math.min(Math.max(newIndex, 0), clientTestimonials.length - 1));
+    };
+
+    const scrollToIndex = (index: number) => {
+        if (!scrollRef.current) return;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
+        const gap = 24;
+        scrollRef.current.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: "smooth",
+        });
+        setActiveIndex(index);
+    };
+
+    const scroll = (direction: "left" | "right") => {
+        if (!scrollRef.current) return;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 500;
+        const gap = 24;
+        const offset = cardWidth + gap;
+        scrollRef.current.scrollBy({
+            left: direction === "left" ? -offset : offset,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        if (isHovered) return;
+        const timer = setInterval(() => {
+            if (!scrollRef.current) return;
+            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+            if (scrollLeft >= scrollWidth - clientWidth - 25) {
+                scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                scroll("right");
+            }
+        }, 5500);
+        return () => clearInterval(timer);
+    }, [isHovered]);
     return (
         <>
             {/* ── HERO ── */}
@@ -699,121 +799,176 @@ function Index() {
                 <Quote className="absolute top-10 right-10 h-72 w-72 text-blue-900/[0.02] pointer-events-none -rotate-12 select-none" />
 
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-                    {/* Section Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
-                            <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
-                            Client Testimonials &amp; Endorsements
-                        </span>
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
-                            What Industry Leaders Say About Us
-                        </h2>
-                        <p className="mt-3 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
-                            Direct feedback from pharmaceutical leadership and medical device executives who trust NKB Regovanta for their compliance readiness, CDSCO licensing, and global market clearances.
-                        </p>
+                    {/* Section Header with Navigation Controls */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+                        <div className="max-w-2xl">
+                            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
+                                <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+                                Client Testimonials &amp; Endorsements
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                                What Industry Leaders Say About Us
+                            </h2>
+                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                                Direct feedback from pharmaceutical executives, enterprise life-science leaders, and medical device innovators who trust NKB Regovanta for regulatory clearance, QMS readiness, and market access.
+                            </p>
+                        </div>
 
+                        {/* Navigation Arrows & Counter */}
+                        <div className="flex items-center gap-3 self-start md:self-end shrink-0">
+                            <span className="text-xs font-black text-gray-500 bg-white border border-gray-200/90 px-3.5 py-2 rounded-xl shadow-2xs select-none">
+                                <span className="text-[#0b3a96] font-extrabold">{activeIndex + 1}</span> of {clientTestimonials.length}
+                            </span>
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => scroll("left")}
+                                    disabled={!canScrollLeft}
+                                    aria-label="Previous Testimonials"
+                                    className="w-11 h-11 rounded-2xl border border-gray-200 bg-white text-navy flex items-center justify-center shadow-2xs hover:bg-[#0b3a96] hover:text-white hover:border-[#0b3a96] disabled:opacity-35 disabled:pointer-events-none transition-all duration-300 active:scale-95 cursor-pointer"
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </button>
+                                <button
+                                    onClick={() => scroll("right")}
+                                    disabled={!canScrollRight}
+                                    aria-label="Next Testimonials"
+                                    className="w-11 h-11 rounded-2xl border border-gray-200 bg-white text-navy flex items-center justify-center shadow-2xs hover:bg-[#0b3a96] hover:text-white hover:border-[#0b3a96] disabled:opacity-35 disabled:pointer-events-none transition-all duration-300 active:scale-95 cursor-pointer"
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Testimonials Grid — Both displayed side-by-side */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-                        {clientTestimonials.map((t) => (
-                            <div
-                                key={t.id}
-                                className="relative bg-white rounded-3xl border border-gray-200/90 p-7 sm:p-9 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
-                            >
-                                {/* Top Gradient Accent Line */}
-                                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b]" />
+                    {/* Left/Right Scrollable Track with Edge Masks */}
+                    <div className="relative">
+                        {/* Gradient Edge Fade Overlays */}
+                        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-r from-slate-50 via-slate-50/60 to-transparent hidden xl:block" />
+                        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-l from-slate-50 via-slate-50/60 to-transparent hidden xl:block" />
 
-                                {/* Background Watermark Quote */}
-                                <Quote className="absolute -bottom-4 -right-4 h-36 w-36 text-blue-50/80 group-hover:text-blue-100/70 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none -z-0 select-none" />
+                        {/* Scrollable Track */}
+                        <div
+                            ref={scrollRef}
+                            onScroll={updateScrollState}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        >
+                            {clientTestimonials.map((t) => (
+                                <div
+                                    key={t.id}
+                                    className="w-[88vw] sm:w-[500px] lg:w-[560px] shrink-0 snap-start relative bg-white rounded-3xl border border-gray-200/90 p-7 sm:p-8 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
+                                >
+                                    {/* Top Gradient Accent Line */}
+                                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b]" />
 
-                                <div className="relative z-10">
-                                    {/* Rating & Category Tag */}
-                                    <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
-                                        <div className="flex items-center gap-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star
-                                                    key={i}
-                                                    className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-2xs transition-transform duration-300 group-hover:scale-110"
-                                                    style={{ transitionDelay: `${i * 50}ms` }}
-                                                />
+                                    {/* Background Watermark Quote */}
+                                    <Quote className="absolute -bottom-4 -right-4 h-36 w-36 text-blue-50/80 group-hover:text-blue-100/70 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none -z-0 select-none" />
+
+                                    <div className="relative z-10">
+                                        {/* Rating & Category Tag */}
+                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
+                                            <div className="flex items-center gap-1">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star
+                                                        key={i}
+                                                        className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-2xs transition-transform duration-300 group-hover:scale-110"
+                                                        style={{ transitionDelay: `${i * 50}ms` }}
+                                                    />
+                                                ))}
+                                            </div>
+                                            <span className="text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 shadow-2xs">
+                                                {t.tag}
+                                            </span>
+                                        </div>
+
+                                        {/* Quote Icon & Verified Badge */}
+                                        <div className="flex items-center justify-between gap-3 mb-5">
+                                            <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
+                                                <Quote className="h-5 w-5 fill-current" />
+                                            </div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
+                                                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                                                Verified Executive Endorsement
+                                            </span>
+                                        </div>
+
+                                        {/* Main Quote Text */}
+                                        <blockquote className="text-[15px] sm:text-[16px] text-navy/90 font-normal leading-relaxed italic mb-6 relative z-10 font-serif">
+                                            &ldquo;{t.quote}&rdquo;
+                                        </blockquote>
+
+                                        {/* Key Highlights Tags */}
+                                        <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-gray-100">
+                                            {t.keyStrengths.map((str) => (
+                                                <span
+                                                    key={str}
+                                                    className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-slate-50 text-navy border border-gray-200/80 group-hover:border-[#0b3a96]/30 group-hover:bg-blue-50/50 transition-colors"
+                                                >
+                                                    ✓ {str}
+                                                </span>
                                             ))}
                                         </div>
-                                        <span className="text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 shadow-2xs">
-                                            {t.tag}
-                                        </span>
                                     </div>
 
-                                    {/* Quote Icon & Verified Badge */}
-                                    <div className="flex items-center justify-between gap-3 mb-5">
-                                        <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
-                                            <Quote className="h-5 w-5 fill-current" />
-                                        </div>
-                                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
-                                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                                            Verified Executive Endorsement
-                                        </span>
-                                    </div>
-
-                                    {/* Main Quote Text */}
-                                    <blockquote className="text-[15px] sm:text-[16px] text-navy/90 font-normal leading-relaxed italic mb-6 relative z-10 font-serif">
-                                        &ldquo;{t.quote}&rdquo;
-                                    </blockquote>
-
-                                    {/* Key Highlights Tags */}
-                                    <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-gray-100">
-                                        {t.keyStrengths.map((str) => (
-                                            <span
-                                                key={str}
-                                                className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-slate-50 text-navy border border-gray-200/80 group-hover:border-[#0b3a96]/30 group-hover:bg-blue-50/50 transition-colors"
-                                            >
-                                                ✓ {str}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Author Profile Info — Full Width */}
-                                <div className="relative z-10 pt-5 border-t border-gray-100/90 flex items-center gap-4 mt-auto">
-                                    {t.logo ? (
-                                        <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
-                                            <img
-                                                src={t.logo}
-                                                alt={t.company}
-                                                className="max-h-10 max-w-full object-contain"
-                                            />
-                                        </div>
-                                    ) : (
-                                        <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
-                                            {t.initials}
-                                        </div>
-                                    )}
-                                    <div className="min-w-0 flex-1">
-                                        <div className="flex items-center gap-2">
-                                            <h4 className="text-base sm:text-lg font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
-                                                {t.name}
-                                            </h4>
-                                            {t.countryCode && (
+                                    {/* Author Profile Info — Full Width */}
+                                    <div className="relative z-10 pt-5 border-t border-gray-100/90 flex items-center gap-4 mt-auto">
+                                        {t.logo ? (
+                                            <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
                                                 <img
-                                                    src={`https://flagcdn.com/w40/${t.countryCode}.png`}
-                                                    alt="Lithuania / EU"
-                                                    title="Lithuania (EU)"
-                                                    className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
+                                                    src={t.logo}
+                                                    alt={t.company}
+                                                    className="max-h-10 max-w-full object-contain"
                                                 />
-                                            )}
+                                            </div>
+                                        ) : (
+                                            <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
+                                                {t.initials}
+                                            </div>
+                                        )}
+                                        <div className="min-w-0 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <h4 className="text-base sm:text-lg font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
+                                                    {t.name}
+                                                </h4>
+                                                {t.countryCode && (
+                                                    <img
+                                                        src={`https://flagcdn.com/w40/${t.countryCode}.png`}
+                                                        alt="Lithuania / EU"
+                                                        title="Lithuania (EU)"
+                                                        className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
+                                                    />
+                                                )}
+                                            </div>
+                                            <p className="text-xs sm:text-[13.5px] font-bold text-gray-700 mt-1 leading-snug">
+                                                {t.title ? `${t.title}, ` : ""}{t.company}
+                                            </p>
+                                            <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
+                                                {t.sector} · {t.location}
+                                            </span>
                                         </div>
-                                        <p className="text-xs sm:text-[13.5px] font-bold text-gray-700 mt-1 leading-snug">
-                                            {t.title ? `${t.title}, ` : ""}{t.company}
-                                        </p>
-                                        <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
-                                            {t.sector} · {t.location}
-                                        </span>
                                     </div>
-                                </div>
 
-                                {/* Animated Gradient Underline Bar */}
-                                <div className="w-0 group-hover:w-full transition-all duration-700 h-0.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b] mt-5" />
-                            </div>
+                                    {/* Animated Gradient Underline Bar */}
+                                    <div className="w-0 group-hover:w-full transition-all duration-700 h-0.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b] mt-5" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Interactive Pagination Indicators */}
+                    <div className="flex items-center justify-center gap-2.5 mt-8">
+                        {clientTestimonials.map((t, idx) => (
+                            <button
+                                key={t.id}
+                                onClick={() => scrollToIndex(idx)}
+                                aria-label={`Go to testimonial from ${t.name}`}
+                                className={`transition-all duration-500 rounded-full cursor-pointer ${
+                                    activeIndex === idx
+                                        ? "w-9 h-2.5 bg-gradient-to-r from-[#0b3a96] to-blue-500 shadow-2xs"
+                                        : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
+                                }`}
+                            />
                         ))}
                     </div>
 
