@@ -7,7 +7,17 @@ export const Route = createFileRoute("/industries/cosmetics_/india/")({
   head: () => ({
     meta: [
       { title: "India Cosmetics Regulatory Services | NKB Regovanta" },
-      { name: "description", content: "Comprehensive regulatory strategy, CDSCO registration, and compliance services for cosmetics in India." },
+      { name: "description", content: "India cosmetics regulatory services: CDSCO import registration (COS-1, COS-2), manufacturing licence (COS-5, COS-8), labelling compliance under Drugs & Cosmetics Act, and GMP inspection preparation for domestic and imported cosmetics." },
+      { name: "keywords", content: "India Cosmetics Regulatory Services, industries cosmetics india, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "India Cosmetics Regulatory Services | NKB Regovanta" },
+      { property: "og:description", content: "India cosmetics regulatory services: CDSCO import registration (COS-1, COS-2), manufacturing licence (COS-5, COS-8), labelling compliance under Drugs & Cosmetics Act, and GMP inspection preparation for domestic and im..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/india" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "India Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "India cosmetics regulatory services: CDSCO import registration (COS-1, COS-2), manufacturing licence (COS-5, COS-8), labelling compliance under Drugs & Cosmetics Act, and GMP inspection preparation for domestic and im..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india" },

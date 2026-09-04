@@ -24,6 +24,11 @@ export const Route = createFileRoute("/contact")({
           "Get in touch with NKB Regovanta to accelerate your medical device, pharma, or cosmetic regulatory approvals.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/contact" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact NKB Regovanta | Book a Regulatory & Compliance Consultation" },
+      { name: "twitter:description", content: "Contact NKB Regovanta for expert medical device regulatory consulting. Get a free initial consultation for FDA 510(k), EU MDR, CDSCO India, MDSAP, TGA Australia, UK MHRA, or any global market access challenge. Respons..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/contact" },

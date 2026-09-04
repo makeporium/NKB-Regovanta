@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/canada/liaison')({
     meta: [
       { title: 'Health Canada Liaison Support | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada Health Canada Liaison Support services for medical devices and IVDs.' },
+      { name: "keywords", content: "Health Canada Liaison Support, Canada Services, services canada liaison, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Health Canada Liaison Support | Canada Services | NKB Regovanta" },
+      { property: "og:description", content: "Health Canada Medical Device regulatory liaison consulting. Pre-submission meeting requests, clarification queries, regulatory correspondence, Health Canada engagement strategy, and SAP (Special Access Program) suppor..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/liaison" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Health Canada Liaison Support | Canada Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Health Canada Medical Device regulatory liaison consulting. Pre-submission meeting requests, clarification queries, regulatory correspondence, Health Canada engagement strategy, and SAP (Special Access Program) suppor..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/liaison" },

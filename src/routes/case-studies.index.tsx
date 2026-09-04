@@ -27,6 +27,11 @@ export const Route = createFileRoute("/case-studies/")({
         content: "Proven track record in global regulatory approvals, ISO 13485 compliance, and market expansion.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
+      { name: "twitter:description", content: "Explore real-world case studies of medical device, IVD, and pharma companies achieving FDA 510(k) clearances, EU MDR certifications, and TGA approvals with NKB Regovanta." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies" },

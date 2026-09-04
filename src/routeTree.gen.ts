@@ -11,8 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AiNewsRouteImport } from './routes/ai-news'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as RegulatoryUpdatesRouteImport } from './routes/regulatory-updates'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesAlgorithmClaimRouteImport } from './routes/case-studies.algorithm-claim'
 import { Route as CaseStudiesAustraliaTgaRouteImport } from './routes/case-studies.australia-tga'
@@ -259,6 +261,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiNewsRoute = AiNewsRouteImport.update({
+  id: '/ai-news',
+  path: '/ai-news',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
   id: '/case-studies',
   path: '/case-studies',
@@ -267,6 +274,11 @@ const CaseStudiesRoute = CaseStudiesRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegulatoryUpdatesRoute = RegulatoryUpdatesRouteImport.update({
+  id: '/regulatory-updates',
+  path: '/regulatory-updates',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -1575,8 +1587,10 @@ const IndustriesMedicalDevicesIndiaForManufacturerRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-news': typeof AiNewsRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/regulatory-updates': typeof RegulatoryUpdatesRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -1816,7 +1830,9 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-news': typeof AiNewsRoute
   '/contact': typeof ContactRoute
+  '/regulatory-updates': typeof RegulatoryUpdatesRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -2046,8 +2062,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-news': typeof AiNewsRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/regulatory-updates': typeof RegulatoryUpdatesRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -2289,8 +2307,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/ai-news'
     | '/case-studies'
     | '/contact'
+    | '/regulatory-updates'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -2530,7 +2550,9 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/ai-news'
     | '/contact'
+    | '/regulatory-updates'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -2759,8 +2781,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/ai-news'
     | '/case-studies'
     | '/contact'
+    | '/regulatory-updates'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -3001,8 +3025,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AiNewsRoute: typeof AiNewsRoute
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
+  RegulatoryUpdatesRoute: typeof RegulatoryUpdatesRoute
   IndustriesCosmeticsRoute: typeof IndustriesCosmeticsRoute
   IndustriesIvdRoute: typeof IndustriesIvdRoute
   IndustriesMedicalDevicesRoute: typeof IndustriesMedicalDevicesRoute
@@ -3065,6 +3091,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-news': {
+      id: '/ai-news'
+      path: '/ai-news'
+      fullPath: '/ai-news'
+      preLoaderRoute: typeof AiNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies': {
       id: '/case-studies'
       path: '/case-studies'
@@ -3077,6 +3110,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/regulatory-updates': {
+      id: '/regulatory-updates'
+      path: '/regulatory-updates'
+      fullPath: '/regulatory-updates'
+      preLoaderRoute: typeof RegulatoryUpdatesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -5257,8 +5297,10 @@ const ServicesUsaRouteWithChildren = ServicesUsaRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AiNewsRoute: AiNewsRoute,
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
+  RegulatoryUpdatesRoute: RegulatoryUpdatesRoute,
   IndustriesCosmeticsRoute: IndustriesCosmeticsRoute,
   IndustriesIvdRoute: IndustriesIvdRoute,
   IndustriesMedicalDevicesRoute: IndustriesMedicalDevicesRoute,

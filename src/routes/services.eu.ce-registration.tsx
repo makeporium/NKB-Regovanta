@@ -15,10 +15,18 @@ export const Route = createFileRoute("/services/eu/ce-registration")({
     meta: [
       { title: "CE Device Registration Pathway Europe | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "CE marking and device registration services for medical devices and IVDs in the European Union.",
+        name: "description", content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. Complete documentation strategy, Notified Body selection, EUDAMED SRN registration, and CE certificate maintenance for medical device manufacturers entering the European market.",
       },
+      { name: "keywords", content: "CE Device Registration Pathway Europe, services eu ce marking, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "CE Device Registration Pathway Europe | NKB Regovanta" },
+      { property: "og:description", content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. Complete documentation strategy, Notified Body selection, EUDAMED SRN registration, and CE certificate maintenance for medical device ma..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ce-marking" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CE Device Registration Pathway Europe | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. Complete documentation strategy, Notified Body selection, EUDAMED SRN registration, and CE certificate maintenance for medical device ma..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-marking" }],
   }),

@@ -7,7 +7,17 @@ export const Route = createFileRoute("/services/india/novel-ivds")({
   head: () => ({
     meta: [
 { title: "Import Authorization for Novel IVDs India | MD-26 & MD-27 | NKB Regovanta" },
-      { name: "description", content: "Secure CDSCO permissions (MD-26 and MD-27) to import or manufacture new In Vitro Diagnostic (IVD) medical devices in India." },
+      { name: "description", content: "CDSCO import authorization under Forms MD-26 and MD-27 for novel and breakthrough IVD diagnostics not yet notified under MDR 2017. End-to-end Expert Committee support and SUGAM application for new diagnostic technologies from NKB Regovanta." },
+{ name: "keywords", content: "novel IVD India approval, MD-26 application CDSCO, MD-27 novel in vitro diagnostic, breakthrough diagnostic CDSCO" },
+      { property: "og:title", content: "Import Authorization for Novel IVDs India | MD-26 & MD-27 | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO import authorization under Forms MD-26 and MD-27 for novel and breakthrough IVD diagnostics not yet notified under MDR 2017. End-to-end Expert Committee support and SUGAM application for new diagnostic technolog..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/novel-ivds" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Import Authorization for Novel IVDs India | MD-26 & MD-27 | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO import authorization under Forms MD-26 and MD-27 for novel and breakthrough IVD diagnostics not yet notified under MDR 2017. End-to-end Expert Committee support and SUGAM application for new diagnostic technolog..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/novel-ivds" },
@@ -77,9 +87,9 @@ function NovelIVDsPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Import</span> Authorization for <br/> Novel IVDs (MD-26 & MD-27)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

@@ -7,7 +7,17 @@ export const Route = createFileRoute("/industries/cosmetics_/eu")({
   head: () => ({
     meta: [
       { title: "EU Cosmetic Regulation & Registration Services | NKB Regovanta" },
-      { name: "description", content: "End-to-end EU cosmetics compliance, Responsible Person (RP) services, PIF, CPSR, and CPNP notification." },
+      { name: "description", content: "EU Cosmetics Regulation (EC) No 1223/2009 compliance consulting. Cosmetic Product Safety Report (CPSR), EU Responsible Person, CPNP notification, prohibited substance review, and label compliance for European markets from NKB Regovanta." },
+      { name: "keywords", content: "EU Cosmetic Regulation & Registration Services, industries cosmetics eu, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "EU Cosmetic Regulation & Registration Services | NKB Regovanta" },
+      { property: "og:description", content: "EU Cosmetics Regulation (EC) No 1223/2009 compliance consulting. Cosmetic Product Safety Report (CPSR), EU Responsible Person, CPNP notification, prohibited substance review, and label compliance for European markets ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/eu" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU Cosmetic Regulation & Registration Services | NKB Regovanta" },
+      { name: "twitter:description", content: "EU Cosmetics Regulation (EC) No 1223/2009 compliance consulting. Cosmetic Product Safety Report (CPSR), EU Responsible Person, CPNP notification, prohibited substance review, and label compliance for European markets ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/eu" },

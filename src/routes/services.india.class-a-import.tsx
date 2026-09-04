@@ -7,7 +7,17 @@ export const Route = createFileRoute("/services/india/class-a-import")({
   head: () => ({
     meta: [
       { title: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
-      { name: "description", content: "Simplified CDSCO registration for low-risk, Class A (non-sterile & non-measuring) medical devices in India." },
+      { name: "description", content: "Expert CDSCO consulting for Class A medical device import registration under GSR 777(E). Simplified online intimation for non-sterile, non-measuring, low-risk devices. Fast-track document preparation, SLA portal submission, and SUGAM support from NKB Regovanta." },
+      { name: "keywords", content: "Class A medical device import India, GSR 777(E) registration, non-sterile non-measuring device CDSCO, CDSCO online intimation Class A, Form 27D, low risk medical device India" },
+      { property: "og:title", content: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
+      { property: "og:description", content: "Expert CDSCO consulting for Class A medical device import registration under GSR 777(E). Simplified online intimation for non-sterile, non-measuring, low-risk devices. Fast-track document preparation, SLA portal submi..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/class-a-import" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert CDSCO consulting for Class A medical device import registration under GSR 777(E). Simplified online intimation for non-sterile, non-measuring, low-risk devices. Fast-track document preparation, SLA portal submi..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/class-a-import" },
@@ -77,9 +87,9 @@ function ClassAImportPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Class</span> A Import Registration <br/> as per GSR 777(E)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

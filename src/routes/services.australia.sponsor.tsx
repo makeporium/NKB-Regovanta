@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/australia/sponsor')({
     meta: [
       { title: 'Australian Sponsor Services | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia Australian Sponsor Services services for medical devices and IVDs.' },
+      { name: "keywords", content: "Australian Sponsor Services, Australia Services, services australia sponsor, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Australian Sponsor Services | Australia Services | NKB Regovanta" },
+      { property: "og:description", content: "Australian Sponsor services for foreign medical device manufacturers seeking TGA ARTG inclusion. Legal sponsor appointment, device lifecycle compliance, post-market obligations, label compliance, and adverse event rep..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/sponsor" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Australian Sponsor Services | Australia Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Australian Sponsor services for foreign medical device manufacturers seeking TGA ARTG inclusion. Legal sponsor appointment, device lifecycle compliance, post-market obligations, label compliance, and adverse event rep..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/sponsor" },

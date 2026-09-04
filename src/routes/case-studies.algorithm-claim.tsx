@@ -7,7 +7,17 @@ export const Route = createFileRoute("/case-studies/algorithm-claim")({
   head: () => ({
     meta: [
       { title: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
-      { name: "description", content: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose." },
+      { name: "description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy case study." },
+      { name: "keywords", content: "The Algorithm Can Do More. Should the Label?, Case Studies, case studies algorithm claim, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
+      { property: "og:description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy ca..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy ca..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },

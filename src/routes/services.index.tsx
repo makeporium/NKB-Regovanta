@@ -23,6 +23,11 @@ export const Route = createFileRoute("/services/")({
           "Comprehensive regulatory, quality & market access solutions tailored to Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Comprehensive medical device regulatory services: US FDA 510(k)/De Novo/PMA, EU MDR/IVDR CE marking, India CDSCO import/manufacturing licences, UK MHRA/UKCA, TGA Australia ARTG, ISO 13485, MDSAP, and clinical evaluati..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services" },

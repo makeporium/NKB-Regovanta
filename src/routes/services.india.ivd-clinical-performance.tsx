@@ -8,6 +8,16 @@ export const Route = createFileRoute("/services/india/ivd-clinical-performance")
     meta: [
 { title: "IVD Clinical Performance Evaluation India | MD-24 & MD-25 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO permissions (MD-24, MD-25) to conduct Clinical Performance Evaluations for new IVD medical devices in India." },
+{ name: "keywords", content: "MD-24 IVD clinical performance CDSCO, MD-25 evaluation, IVD diagnostic kit India regulatory, clinical performance study CDSCO" },
+      { property: "og:title", content: "IVD Clinical Performance Evaluation India | MD-24 & MD-25 | NKB Regovanta" },
+      { property: "og:description", content: "Expert consulting for CDSCO Forms MD-24 and MD-25 — clinical performance evaluation permissions for IVD kits and reagents in India. Protocol review, ethics committee coordination, and SUGAM portal application support ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/ivd-clinical-performance" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "IVD Clinical Performance Evaluation India | MD-24 & MD-25 | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert consulting for CDSCO Forms MD-24 and MD-25 — clinical performance evaluation permissions for IVD kits and reagents in India. Protocol review, ethics committee coordination, and SUGAM portal application support ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd-clinical-performance" },
@@ -77,9 +87,9 @@ function IVDClinicalPerformancePage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">IVD</span> Clinical Performance Evaluations <br/> (Forms MD-24, MD-25)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

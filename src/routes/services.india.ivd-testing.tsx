@@ -8,6 +8,16 @@ export const Route = createFileRoute("/services/india/ivd-testing")({
     meta: [
 { title: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
       { name: "description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
+{ name: "keywords", content: "MD-16 test licence IVD India, MD-17 test licence CDSCO, IVD testing laboratory India, diagnostic device test licence" },
+      { property: "og:title", content: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO test licence consulting for Forms MD-16 and MD-17 for IVD diagnostic device evaluation and testing in India. Full documentation, laboratory coordination, and SLA/CLA submission support from NKB Regovanta expert ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/ivd-testing" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO test licence consulting for Forms MD-16 and MD-17 for IVD diagnostic device evaluation and testing in India. Full documentation, laboratory coordination, and SLA/CLA submission support from NKB Regovanta expert ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd-testing" },
@@ -77,9 +87,9 @@ function IVDTestingPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Test</span> License for IVD Devices <br/> (Forms MD-16, MD-17)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

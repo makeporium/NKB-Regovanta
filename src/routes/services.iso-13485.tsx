@@ -23,6 +23,11 @@ export const Route = createFileRoute("/services/iso-13485")({
           "Comprehensive ISO 13485:2016 design, internal audits, FDA QMSR alignment, and certification audit readiness for medical device manufacturers.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/iso-13485" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ISO 13485:2016 Implementation Consultant & Certification | NKB Regovanta" },
+      { name: "twitter:description", content: "ISO 13485:2016 quality management system consulting for medical device manufacturers. Gap assessment, QMS documentation, internal audit support, MDSAP alignment, and certification readiness across US FDA, EU MDR, TGA,..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/iso-13485" },
@@ -51,6 +56,10 @@ const trusted = [
 function Iso13485() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is ISO 13485:2016 and who needs it?","acceptedAnswer":{"@type":"Answer","text":"ISO 13485:2016 is the international quality management system standard for organizations involved in the design, development, production, storage, distribution, and servicing of medical devices. Most major regulatory bodies (FDA, EU MDR, CDSCO, TGA, Health Canada) require or accept ISO 13485 certification."}},{"@type":"Question","name":"Is ISO 13485 certification mandatory for FDA 510(k) submissions?","acceptedAnswer":{"@type":"Answer","text":"ISO 13485 is not directly mandatory for 510(k) submissions, but it helps demonstrate QMS compliance. Foreign manufacturers must register their facility with FDA (FURLS) and comply with 21 CFR Part 820 (QMSR), which is now harmonized with ISO 13485:2016."}},{"@type":"Question","name":"How long does ISO 13485 certification take?","acceptedAnswer":{"@type":"Answer","text":"The timeline depends on your QMS maturity. From initial gap assessment to receiving the certificate typically takes 6–18 months. This includes QMS documentation, implementation, internal audit, management review, and the certification audit (Stage 1 + Stage 2) by an accredited CB."}}]}) }}
+      />
       {/* ── Hero ── */}
       <section className="bg-white overflow-hidden" style={{ maxHeight: 280 }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 items-stretch h-[280px]">

@@ -20,29 +20,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/design-controls")({
   head: () => ({
     meta: [
-      {
-        title: "Design & Development Control Readiness | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Ensure design controls, user needs, V&V, transfer, software lifecycles, and Design History Files (DHF) are audit-ready and evidence-rich under MDSAP.",
-      },
-      {
-        property: "og:title",
-        content: "Design & Development Control Readiness | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "Design controls must demonstrate a controlled chain from user need to released product. DHF completeness and traceability under MDSAP.",
-      },
+      { title: "Design & Development Control Readiness | MDSAP | NKB Regovanta" },
+      { name: "description", content: "Ensure design controls, user needs, V&V, transfer, software lifecycles, and Design History Files (DHF) are audit-ready and evidence-backed." },
+      { name: "keywords", content: "MDSAP design controls, Design History File DHF audit, medical device V&V evidence, design change control MDSAP, IEC 62304 software lifecycle" },
+      { property: "og:title", content: "Design & Development Control Readiness | NKB Regovanta" },
+      { property: "og:description", content: "Design controls are often where the deepest nonconformities arise. Build defensible DHF, V&V, and design transfer records." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/design-controls" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Design & Development Control Readiness | MDSAP | NKB Regovanta" },
+      { name: "twitter:description", content: "Ensure design controls, user needs, V&V, transfer, software lifecycles, and Design History Files (DHF) are audit-ready and evidence-backed." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/design-controls",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/design-controls" },
     ],
   }),
   component: DesignControlsPage,

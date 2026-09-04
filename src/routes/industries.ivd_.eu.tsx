@@ -8,7 +8,17 @@ export const Route = createFileRoute("/industries/ivd_/eu")({
     head: () => ({
         meta: [
             { title: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-            { name: "description", content: "Navigate the EU's In Vitro Diagnostic Medical Devices Regulation (IVDR). Expert support for Notified Body conformity, EUDAMED registration, and clinical evidence." },
+            { name: "description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
+          { name: "keywords", content: "IVD Regulation in the EU, IVDR 2017/746, industries ivd eu, NKB Regovanta, regulatory consultant, medical device" },
+          { property: "og:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
+          { property: "og:description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/eu" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
+          { name: "twitter:description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/eu" },

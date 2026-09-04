@@ -47,6 +47,11 @@ export const Route = createFileRoute("/services/drug-licenses-for-importers")({
           "CDSCO pharmaceutical registration, overseas site inspection, Form 41 RC, Form 10 Import License, and DMF/PMF dossier filing in India.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Drug Import Licence Registration CDSCO India | Form 41, Form 10/10-A, DMF & PMF" },
+      { name: "twitter:description", content: "Drug licence consulting for medical device importers in India. Wholesale drug licence (Form 20B), retail drug licence, CDSCO import authorization, and regulatory compliance for companies importing both drugs and medic..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },

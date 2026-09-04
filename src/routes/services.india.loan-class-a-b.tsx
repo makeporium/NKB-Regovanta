@@ -7,7 +7,17 @@ export const Route = createFileRoute("/services/india/loan-class-a-b")({
   head: () => ({
     meta: [
 { title: "Loan Licenses for Class A & B Medical Devices India | MD-4 & MD-6 | NKB Regovanta" },
-      { name: "description", content: "Learn how to obtain SLA MD-6 loan licenses to manufacture Class A and B medical devices in existing licensed facilities in India." },
+      { name: "description", content: "Obtain CDSCO MD-4 and MD-6 loan manufacturing licences for Class A and B medical devices in India. Operate in a licensed manufacturing facility without owning a plant. Complete document checklist and SLA application guidance from NKB Regovanta." },
+{ name: "keywords", content: "MD-4 loan licence CDSCO, MD-6 loan manufacturing India, Class A B loan licence medical device, contract manufacturing India" },
+      { property: "og:title", content: "Loan Licenses for Class A & B Medical Devices India | MD-4 & MD-6 | NKB Regovanta" },
+      { property: "og:description", content: "Obtain CDSCO MD-4 and MD-6 loan manufacturing licences for Class A and B medical devices in India. Operate in a licensed manufacturing facility without owning a plant. Complete document checklist and SLA application g..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/loan-class-a-b" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Loan Licenses for Class A & B Medical Devices India | MD-4 & MD-6 | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain CDSCO MD-4 and MD-6 loan manufacturing licences for Class A and B medical devices in India. Operate in a licensed manufacturing facility without owning a plant. Complete document checklist and SLA application g..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/loan-class-a-b" },
@@ -77,9 +87,9 @@ function LoanClassABPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Loan</span> Licenses for Class A & B <br/> (Forms MD-4 & MD-6)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

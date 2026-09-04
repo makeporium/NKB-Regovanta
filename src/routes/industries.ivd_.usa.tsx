@@ -8,7 +8,17 @@ export const Route = createFileRoute("/industries/ivd_/usa")({
     head: () => ({
         meta: [
             { title: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
-            { name: "description", content: "Expert assistance with US FDA regulations for IVD devices, including 510(k), De Novo, PMA submissions, and CLIA waivers for Point-of-Care testing." },
+            { name: "description", content: "US FDA IVD regulatory consulting. FDA 510(k) clearance, De Novo classification, PMA for Class III IVDs, EUA submissions, laboratory developed test (LDT) policy guidance, and eSTAR dossier preparation from NKB Regovanta." },
+          { name: "keywords", content: "IVD Regulation in the USA, US FDA Framework, industries ivd usa, NKB Regovanta, regulatory consultant, medical device" },
+          { property: "og:title", content: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
+          { property: "og:description", content: "US FDA IVD regulatory consulting. FDA 510(k) clearance, De Novo classification, PMA for Class III IVDs, EUA submissions, laboratory developed test (LDT) policy guidance, and eSTAR dossier preparation from NKB Regovanta." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/usa" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
+          { name: "twitter:description", content: "US FDA IVD regulatory consulting. FDA 510(k) clearance, De Novo classification, PMA for Class III IVDs, EUA submissions, laboratory developed test (LDT) policy guidance, and eSTAR dossier preparation from NKB Regovanta." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/usa" },

@@ -65,6 +65,28 @@ export const Route = createFileRoute("/services/mdsap/")({
         property: "og:url",
         content: "https://www.nkbregovanta.com/services/mdsap",
       },
+      {
+        property: "og:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "MDSAP Audit Readiness & Consulting | 5 Jurisdictions | NKB Regovanta",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Prepared for 5 Jurisdictions. Trusted for Quality. One single QMS audit across US, Canada, Brazil, Japan, and Australia.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
     ],
     links: [
       {
@@ -787,7 +809,12 @@ function MdsapHubPage() {
           <p className="text-xs text-navy/60 leading-relaxed font-medium">
             <strong>Regulatory Basis:</strong> Structured around ISO 13485:2016, the current MDSAP Audit Approach and associated MDSAP audit-program documents, together with the applicable medical-device regulatory requirements of Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (MHLW/PMDA), and the United States (FDA).
           </p>
-        </div>
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is MDSAP and which countries participate?","acceptedAnswer":{"@type":"Answer","text":"MDSAP (Medical Device Single Audit Program) is a program that allows one audit to satisfy the regulatory requirements of five jurisdictions: US FDA (21 CFR Part 820/QMSR), Health Canada (CMDR), ANVISA Brazil (RDC 665), MHLW/PMDA Japan, and TGA Australia (MDSAP). Japan and Brazil mandate MDSAP; it is accepted but not required in the US, Canada, and Australia."}},{"@type":"Question","name":"Is MDSAP mandatory for medical device companies?","acceptedAnswer":{"@type":"Answer","text":"MDSAP is mandatory for Japan (required for PMDA registration) and Brazil (required for ANVISA registration). In Canada, Health Canada accepts MDSAP as an alternative to domestic QMS inspections. In the US and Australia, MDSAP is accepted but not required."}},{"@type":"Question","name":"What is an MDSAP gap assessment?","acceptedAnswer":{"@type":"Answer","text":"An MDSAP gap assessment is a pre-audit evaluation of your QMS against all five MDSAP jurisdictional requirements. It identifies non-conformities before the official audit, allowing time for CAPA remediation to achieve a clean first-time audit result."}},{"@type":"Question","name":"How long does it take to prepare for an MDSAP audit?","acceptedAnswer":{"@type":"Answer","text":"For companies with a mature ISO 13485 QMS, MDSAP readiness typically takes 3–9 months. Companies starting from scratch may need 12–18 months. Key activities include gap assessment, CAPA remediation, process documentation, and at least one successful internal audit cycle."}}]}) }}
+        />
+</div>
       </section>
 
       <CTABand

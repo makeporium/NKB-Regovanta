@@ -8,9 +8,19 @@ export const Route = createFileRoute("/services/audit-compliance")({
     meta: [
       { title: "Audit & Compliance Support | Services | NKB Regovanta" },
       {
-        name: "description",
-        content: "Internal audits, supplier audits, compliance & regulatory intelligence.",
+        name: "description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA remediation support.",
       },
+      { name: "keywords", content: "medical device audit compliance, MDSAP audit readiness, ISO 13485 audit, FDA inspection preparation, EU MDR Notified Body audit" },
+      { property: "og:title", content: "Audit & Compliance Support | Services | NKB Regovanta" },
+      { property: "og:description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA reme..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/audit-compliance" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Audit & Compliance Support | Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA reme..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "keywords", content: "medical device audit compliance, MDSAP audit readiness, ISO 13485 audit, FDA inspection preparation, EU MDR Notified Body audit" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/audit-compliance" },

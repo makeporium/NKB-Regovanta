@@ -7,7 +7,17 @@ export const Route = createFileRoute("/case-studies/australia-tga")({
   head: () => ({
     meta: [
       { title: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
-      { name: "description", content: "Leveraging existing overseas regulatory approvals and evidence to support Australian ARTG inclusion." },
+      { name: "description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ARTG submission." },
+      { name: "keywords", content: "AUSTRALIA TGA, ARTG Inclusion, Case Studies, case studies australia tga, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
+      { property: "og:description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ART..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/australia-tga" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ART..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/australia-tga" },

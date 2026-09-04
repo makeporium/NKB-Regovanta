@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/brazil/technovigilance')({
     meta: [
       { title: 'Technovigilance Services | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Technovigilance Services services for medical devices and IVDs.' },
+      { name: "keywords", content: "Technovigilance Services, Brazil Services, services brazil technovigilance, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Technovigilance Services | Brazil Services | NKB Regovanta" },
+      { property: "og:description", content: "ANVISA technovigilance consulting for medical device adverse event monitoring and post-market surveillance in Brazil. Queixa Técnica (QT) management, NOTIVISA reporting, MDSAP alignment, and technovigilance system imp..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/technovigilance" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Technovigilance Services | Brazil Services | NKB Regovanta" },
+      { name: "twitter:description", content: "ANVISA technovigilance consulting for medical device adverse event monitoring and post-market surveillance in Brazil. Queixa Técnica (QT) management, NOTIVISA reporting, MDSAP alignment, and technovigilance system imp..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technovigilance" },

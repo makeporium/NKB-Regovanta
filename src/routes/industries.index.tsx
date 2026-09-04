@@ -11,10 +11,18 @@ export const Route = createFileRoute("/industries/")({
         meta: [
             { title: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
             {
-                name: "description",
-                content:
-                    "Specialized regulatory, quality and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
+                name: "description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking market authorization across multiple jurisdictions.",
             },
+          { name: "keywords", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory, industries, NKB Regovanta, regulatory consultant, medical device" },
+          { property: "og:title", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
+          { property: "og:description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking ma..." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/industries" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
+          { name: "twitter:description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking ma..." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/industries" },

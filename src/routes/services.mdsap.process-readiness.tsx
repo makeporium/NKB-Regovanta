@@ -21,29 +21,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/process-readiness")({
   head: () => ({
     meta: [
-      {
-        title: "MDSAP Process-Based Audit Readiness | Trace Simulations | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Prepare for MDSAP audits the way auditors follow evidence: cross-process linkages across the 7 MDSAP process areas, record retrieval, and process-owner interview drills.",
-      },
-      {
-        property: "og:title",
-        content: "MDSAP Process-Based Audit Readiness | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "Prepare the way an auditor follows evidence. Cross-functional audit trail simulations and process-owner readiness drills.",
-      },
+      { title: "MDSAP Process-Based Audit Readiness | Trace Simulations | NKB Regovanta" },
+      { name: "description", content: "Prepare for MDSAP audits the way auditors follow evidence: cross-process linkages across the 7 MDSAP process areas, record retrieval, and process-owner interview drills." },
+      { name: "keywords", content: "MDSAP process audit readiness, audit trail simulation, cross process linkages, 7 process areas MDSAP, process owner interview drills" },
+      { property: "og:title", content: "MDSAP Process-Based Audit Readiness | NKB Regovanta" },
+      { property: "og:description", content: "Prepare the way an auditor follows evidence. Cross-functional audit trail simulations and process-owner readiness drills." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/process-readiness" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP Process-Based Audit Readiness | Trace Simulations | NKB Regovanta" },
+      { name: "twitter:description", content: "Prepare for MDSAP audits the way auditors follow evidence: cross-process linkages across the 7 MDSAP process areas, record retrieval, and process-owner interview drills." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/process-readiness",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/process-readiness" },
     ],
   }),
   component: ProcessReadinessPage,

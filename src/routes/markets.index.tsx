@@ -7,10 +7,19 @@ export const Route = createFileRoute("/markets/")({
         meta: [
             { title: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
             {
-                name: "description",
-                content:
-                    "We help you navigate regulatory requirements and market-access pathways across key international markets.",
+                name: "description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Saudi Arabia (SFDA), and New Zealand (Medsafe).",
             },
+          { name: "keywords", content: "medical device global market access, regulatory markets USA EU India UK Australia Canada Brazil UAE, NKB Regovanta markets" },
+          { property: "og:title", content: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
+          { property: "og:description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Sau..." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/markets" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
+          { name: "twitter:description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Sau..." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "keywords", content: "medical device global market access, regulatory markets USA EU India UK Australia Canada Brazil UAE, NKB Regovanta markets" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/markets" },

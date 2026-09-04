@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/australia/conformity-assessment'
     meta: [
       { title: 'Conformity Assessment Support | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia Conformity Assessment Support services for medical devices and IVDs.' },
+      { name: "keywords", content: "Conformity Assessment Support, Australia Services, services australia conformity assessment, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Conformity Assessment Support | Australia Services | NKB Regovanta" },
+      { property: "og:description", content: "TGA conformity assessment consulting for medical device ARTG inclusion in Australia. MDSAP-recognized audit pathway, Annex II/III technical documentation preparation, conformity assessment body selection, and regulato..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/conformity-assessment" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Conformity Assessment Support | Australia Services | NKB Regovanta" },
+      { name: "twitter:description", content: "TGA conformity assessment consulting for medical device ARTG inclusion in Australia. MDSAP-recognized audit pathway, Annex II/III technical documentation preparation, conformity assessment body selection, and regulato..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/conformity-assessment" },

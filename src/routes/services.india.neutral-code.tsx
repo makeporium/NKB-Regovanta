@@ -19,6 +19,11 @@ export const Route = createFileRoute("/services/india/neutral-code")({
       { property: "og:title", content: "Neutral / Special Code Certificate CDSCO | NKB Regovanta" },
       { property: "og:description", content: "CDSCO Neutral Code and Special Code certificate allocation services for merchant exporters and medical device OEMs." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/neutral-code" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Neutral / Special Code Certificate CDSCO India | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a Neutral Code or Special Code Certificate from CDSCO India for export packaging and third-country labelling compliance. Required for OEM exporters under SCOMET and contract manufacturing agreements. Expert con..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/neutral-code" },
@@ -90,9 +95,9 @@ function NeutralCodePage() {
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to India CDSCO Services
                     </Link>
-                    <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+                    <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
                         <span className="text-[#0b3a96]">Neutral Code</span> Certificate (Special Code)
-                    </h1>
+                    </p>
                     <div className="mt-5 flex items-center gap-1.5">
                         <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
                         <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

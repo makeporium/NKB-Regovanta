@@ -7,7 +7,17 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
   head: () => ({
     meta: [
 { title: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
-      { name: "description", content: "Fast-track CDSCO manufacturing registration for non-sterile and non-measuring Class A medical devices under GSR 777(E) in India." },
+      { name: "description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records from NKB Regovanta regulatory experts." },
+{ name: "keywords", content: "Manufacturing Registration Class A Medical Devices India, GSR 777(E), services india mfg class a gsr, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
+      { property: "og:description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/mfg-class-a-gsr" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
+      { name: "twitter:description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-a-gsr" },
@@ -77,9 +87,9 @@ function MfgClassAGsrPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Class</span> A Manufacturing <br/> Registration (GSR 777(E))
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

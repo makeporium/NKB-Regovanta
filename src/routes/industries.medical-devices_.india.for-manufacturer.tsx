@@ -20,10 +20,18 @@ export const Route = createFileRoute("/industries/medical-devices_/india/for-man
     meta: [
       { title: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "End-to-end CDSCO and State FDA regulatory consulting for domestic medical device manufacturing. Form MD-5, MD-6, MD-9, MD-10, and ISO 13485 certification.",
+        name: "description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from NKB Regovanta.",
       },
+      { name: "keywords", content: "Medical Device Manufacturing Licenses in India, industries medical devices india for manufacturer, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
+      { property: "og:description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
+      { name: "twitter:description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer" },

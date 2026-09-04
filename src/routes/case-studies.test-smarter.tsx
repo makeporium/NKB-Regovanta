@@ -7,7 +7,17 @@ export const Route = createFileRoute("/case-studies/test-smarter")({
   head: () => ({
     meta: [
       { title: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
-      { name: "description", content: "A hypodermic syringe family included multiple syringe sizes and needle gauges. Testing every possible configuration could have meant unnecessary duplication." },
+      { name: "description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by 40%." },
+      { name: "keywords", content: "Test Smarter. Cover More., Case Studies, case studies test smarter, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
+      { property: "og:description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/test-smarter" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/test-smarter" },

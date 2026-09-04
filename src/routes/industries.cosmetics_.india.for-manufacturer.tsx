@@ -6,7 +6,17 @@ export const Route = createFileRoute("/industries/cosmetics_/india/for-manufactu
   head: () => ({
     meta: [
       { title: "Cosmetics Manufacturing License in India | NKB Regovanta" },
-      { name: "description", content: "Expert guidance for cosmetic manufacturers in India to obtain Form COS-8 and Form COS-9 licenses." },
+      { name: "description", content: "Obtain CDSCO cosmetic manufacturing licence (Forms COS-5 and COS-8) in India. Complete guidance for GMP inspection preparation, plant master file, SLA/CLA application, and annual manufacturing compliance from NKB Regovanta." },
+      { name: "keywords", content: "Cosmetics Manufacturing License in India, industries cosmetics india for manufacturer, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Cosmetics Manufacturing License in India | NKB Regovanta" },
+      { property: "og:description", content: "Obtain CDSCO cosmetic manufacturing licence (Forms COS-5 and COS-8) in India. Complete guidance for GMP inspection preparation, plant master file, SLA/CLA application, and annual manufacturing compliance from NKB Rego..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/india/for-manufacturer" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cosmetics Manufacturing License in India | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain CDSCO cosmetic manufacturing licence (Forms COS-5 and COS-8) in India. Complete guidance for GMP inspection preparation, plant master file, SLA/CLA application, and annual manufacturing compliance from NKB Rego..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india/for-manufacturer" },

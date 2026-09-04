@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/canada/renewals')({
     meta: [
       { title: 'License Maintenance & Renewals | Canada Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Canada License Maintenance & Renewals services for medical devices and IVDs.' },
+      { name: "keywords", content: "License Maintenance & Renewals, Canada Services, services canada renewals, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "License Maintenance & Renewals | Canada Services | NKB Regovanta" },
+      { property: "og:description", content: "Health Canada Medical Device Licence (MDL) renewal consulting. Annual renewal filing, Class II–IV device licence maintenance, establishment licence renewal, MDSAP audit equivalence documentation, and regulatory compli..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/renewals" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "License Maintenance & Renewals | Canada Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Health Canada Medical Device Licence (MDL) renewal consulting. Annual renewal filing, Class II–IV device licence maintenance, establishment licence renewal, MDSAP audit equivalence documentation, and regulatory compli..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/renewals" },

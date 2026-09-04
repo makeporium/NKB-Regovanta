@@ -6,8 +6,18 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
-{ title: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
-      { name: "description", content: "Get your MD-15 CDSCO import license for Class A, B, C, or D predicate medical devices in India." },
+      { title: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
+      { name: "description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
+      { name: "keywords", content: "MD-14 application India, MD-15 import licence, CDSCO predicate device, Indian Authorized Agent IAA, SUGAM portal, medical device import consultant India, Class B C D import licence" },
+      { property: "og:title", content: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
+      { property: "og:description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/predicate-devices" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
+      { name: "twitter:description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/predicate-devices" },
@@ -18,7 +28,7 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
 function PredicateDevicesPage() {
   return (
     <div className="bg-white">
-            {/* HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
@@ -77,9 +87,9 @@ function PredicateDevicesPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p role="heading" aria-level={1} aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Import</span> License for Predicate Medical Devices <br/> (Forms MD-14, MD-15)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />
@@ -202,11 +212,23 @@ function PredicateDevicesPage() {
           </div>
         </div>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is the difference between Form MD-14 and Form MD-15?", "acceptedAnswer": { "@type": "Answer", "text": "Form MD-14 is the application submitted on CDSCO's SUGAM portal to apply for a medical device import licence. Form MD-15 is the actual import licence document granted by CDSCO after the application is reviewed and approved." } },
+            { "@type": "Question", "name": "Who can apply for a CDSCO MD-14 import licence in India?", "acceptedAnswer": { "@type": "Answer", "text": "Only an Indian entity — either an Indian Authorized Agent (IAA) or Authorized Indian Representative (AIR) — holding a valid wholesale drug licence and appointed by the foreign manufacturer via notarized Power of Attorney can file the MD-14 application on SUGAM." } },
+            { "@type": "Question", "name": "How long does CDSCO MD-15 import licence approval take?", "acceptedAnswer": { "@type": "Answer", "text": "For Class A devices: 15–60 days. For Class B, C, D devices with predicates: 3–6 months. Novel devices requiring Expert Committee evaluation: 9–18 months." } },
+            { "@type": "Question", "name": "What documents are required for CDSCO medical device import registration?", "acceptedAnswer": { "@type": "Answer", "text": "Key documents include: SUGAM application, device technical specifications, performance testing reports, ISO 13485 manufacturing certificate, CE or FDA clearance if applicable, predicate device details, Declaration of Conformity, and a notarized Power of Attorney for the Indian agent." } },
+            { "@type": "Question", "name": "Can a foreign company directly apply for an MD-14 licence?", "acceptedAnswer": { "@type": "Answer", "text": "No. CDSCO regulations require all import licence applications to be filed by an Indian Authorized Agent (IAA) or Authorized Indian Representative (AIR) appointed by the foreign manufacturer." } }
+          ]
+        }) }}
+      />
     </div>
   );
 }
-
-
 
 const heroBadges = [
   { icon: ShieldCheck, lines: ["Regulatory", "Approvals"], x: 56.4, y: 22.8, side: "bottom" },

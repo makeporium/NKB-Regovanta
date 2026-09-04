@@ -7,7 +7,17 @@ export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
   head: () => ({
     meta: [
       { title: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
-      { name: "description", content: "Converting a Legacy Technical File to MDR Without Rebuilding Everything From Zero" },
+      { name: "description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory outcome case study." },
+      { name: "keywords", content: "EU MDR, Technical Documentation Remediation, Case Studies, case studies eu mdr remediation, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
+      { property: "og:description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory o..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory o..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },

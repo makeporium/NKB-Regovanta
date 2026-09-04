@@ -6,7 +6,17 @@ export const Route = createFileRoute("/industries/cosmetics_/india/for-importer"
   head: () => ({
     meta: [
       { title: "Cosmetics Registration for Importers in India | NKB Regovanta" },
-      { name: "description", content: "Expert guidance for foreign cosmetic brands to obtain Form COS-2 Import Registration Certificate in India." },
+      { name: "description", content: "Import cosmetics into India with CDSCO registration Forms COS-1 and COS-2. Expert documentation for wholesale drug licence, cosmetic safety data, and SUGAM portal submission for foreign cosmetic brands entering the Indian market." },
+      { name: "keywords", content: "Cosmetics Registration for Importers in India, industries cosmetics india for importer, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Cosmetics Registration for Importers in India | NKB Regovanta" },
+      { property: "og:description", content: "Import cosmetics into India with CDSCO registration Forms COS-1 and COS-2. Expert documentation for wholesale drug licence, cosmetic safety data, and SUGAM portal submission for foreign cosmetic brands entering the In..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/india/for-importer" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cosmetics Registration for Importers in India | NKB Regovanta" },
+      { name: "twitter:description", content: "Import cosmetics into India with CDSCO registration Forms COS-1 and COS-2. Expert documentation for wholesale drug licence, cosmetic safety data, and SUGAM portal submission for foreign cosmetic brands entering the In..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india/for-importer" },

@@ -7,7 +7,17 @@ export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
   head: () => ({
     meta: [
       { title: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
-      { name: "description", content: "Using Predicate and Material Equivalence to Avoid Repeating Biocompatibility Testing Without Regulatory Need" },
+      { name: "description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding Using Predicate and Material Equivalence to Avoid Repeating Biocompatibility Testing Without Regulatory Need20,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study.20,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
+      { name: "keywords", content: "US FDA 510(k), Biocompatibility Equivalence, Case Studies, case studies fda biocompatibility, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
+      { property: "og:description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding $120,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding $120,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },

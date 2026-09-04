@@ -46,6 +46,11 @@ export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
           "WPC ETA approval, Saral Sanchar import permissions, and DPL licensing for Bluetooth, WiFi, and telemetry medical devices.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "WPC ETA Approval for Wireless Medical Devices India | Saral Sanchar & DPL | NKB Regovanta" },
+      { name: "twitter:description", content: "WPC ETA (Wireless Planning & Coordination Wing Equipment Type Approval) consulting for wireless-enabled medical devices in India. ETA application for Bluetooth, Wi-Fi, and RF-enabled medical devices, DoT compliance, a..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },

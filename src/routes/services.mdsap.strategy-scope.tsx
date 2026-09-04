@@ -19,30 +19,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/strategy-scope")({
   head: () => ({
     meta: [
-      {
-        title:
-          "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Define audit scope, legal manufacturer boundaries, facility mapping, product categories, and regulatory expectations across the 5 MDSAP jurisdictions.",
-      },
-      {
-        property: "og:title",
-        content: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "Start with scope before rewriting procedures. Comprehensive MDSAP audit universe mapping and legal manufacturer boundary determination.",
-      },
+      { title: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta" },
+      { name: "description", content: "Define audit scope, legal manufacturer boundaries, facility mapping, product categories, and regulatory expectations across the 5 MDSAP jurisdictions." },
+      { name: "keywords", content: "MDSAP audit scope assessment, legal manufacturer boundary, facility mapping MDSAP, product category classification" },
+      { property: "og:title", content: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta" },
+      { property: "og:description", content: "Start with scope before rewriting procedures. Comprehensive MDSAP audit universe mapping and legal manufacturer boundary determination." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/strategy-scope" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta" },
+      { name: "twitter:description", content: "Define audit scope, legal manufacturer boundaries, facility mapping, product categories, and regulatory expectations across the 5 MDSAP jurisdictions." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/strategy-scope",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/strategy-scope" },
     ],
   }),
   component: StrategyScopePage,

@@ -7,7 +7,17 @@ export const Route = createFileRoute("/services/india/personal-use")({
   head: () => ({
     meta: [
 { title: "Personal Use Import License India | MD-20 & MD-21 | NKB Regovanta" },
-      { name: "description", content: "Navigate Forms MD-20 and MD-21 for importing specialized medical devices for personal use and treatment in India." },
+      { name: "description", content: "CDSCO Forms MD-20 and MD-21 for importing specialized medical devices for compassionate personal use or patient-specific treatment in India. Fast-track documentation, patient declaration, and emergency import application support from NKB Regovanta." },
+{ name: "keywords", content: "personal use import medical device India, MD-20 MD-21 application, patient device import CDSCO, compassionate use medical device" },
+      { property: "og:title", content: "Personal Use Import License India | MD-20 & MD-21 | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO Forms MD-20 and MD-21 for importing specialized medical devices for compassionate personal use or patient-specific treatment in India. Fast-track documentation, patient declaration, and emergency import applicat..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/personal-use" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Personal Use Import License India | MD-20 & MD-21 | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO Forms MD-20 and MD-21 for importing specialized medical devices for compassionate personal use or patient-specific treatment in India. Fast-track documentation, patient declaration, and emergency import applicat..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/personal-use" },
@@ -77,9 +87,9 @@ function PersonalUsePage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Personal</span> Use Import License <br/> (Forms MD-20, MD-21)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

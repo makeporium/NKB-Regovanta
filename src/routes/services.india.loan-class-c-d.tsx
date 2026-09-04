@@ -8,6 +8,16 @@ export const Route = createFileRoute("/services/india/loan-class-c-d")({
     meta: [
 { title: "Loan Licenses for Class C & D Medical Devices India | MD-8 & MD-10 | NKB Regovanta" },
       { name: "description", content: "Learn how to obtain CDSCO MD-10 loan licenses to manufacture Class C and D high-risk medical devices in existing licensed facilities in India." },
+{ name: "keywords", content: "loan manufacturing licence Class C D, MD-8 application CDSCO, MD-10 loan licence high risk, contract manufacturing India regulatory" },
+      { property: "og:title", content: "Loan Licenses for Class C & D Medical Devices India | MD-8 & MD-10 | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO MD-8 and MD-10 loan manufacturing licences for high-risk Class C and D medical devices in India. Expert consulting for contract manufacturers seeking to utilize licensed facilities without owning a plant from NK..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/loan-class-c-d" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Loan Licenses for Class C & D Medical Devices India | MD-8 & MD-10 | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO MD-8 and MD-10 loan manufacturing licences for high-risk Class C and D medical devices in India. Expert consulting for contract manufacturers seeking to utilize licensed facilities without owning a plant from NK..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/loan-class-c-d" },
@@ -77,9 +87,9 @@ function LoanClassCDPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Loan</span> Licenses for Class C & D <br/> (Forms MD-8 & MD-10)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

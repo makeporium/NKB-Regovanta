@@ -11,6 +11,11 @@ export const Route = createFileRoute("/industries/cosmetics")({
       { property: "og:title", content: "Cosmetics Regulatory Compliance Consulting | NKB Regovanta" },
       { property: "og:description", content: "End-to-end cosmetics regulatory support for India CDSCO, US MoCRA, EU & UK CPNP/SCPN and Responsible Person representation." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cosmetics Regulatory Consultant | CDSCO COS-1/2, MoCRA & EU RP | NKB Regovanta" },
+      { name: "twitter:description", content: "Complete cosmetics regulatory consulting: CDSCO COS-1/COS-2 import registration, COS-5/COS-8 manufacturing licence, MoCRA FDA cosmetic facility registration, EU Cosmetics Responsible Person (EU RP), CPNP notification,..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics" },

@@ -23,31 +23,21 @@ export const Route = createFileRoute(
 )({
   head: () => ({
     meta: [
-      {
-        title:
-          "Production, Supplier & Process Validation Readiness | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Strengthen manufacturing controls, critical supplier governance, cleanliness, sterilization, and process validation evidence for MDSAP audits.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Production, Supplier & Process Validation Readiness | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "The audit moves quickly from procedure to shop floor and supplier records. Rigorous production control, validation, and tier-1 supplier readiness.",
-      },
+      { title: "Production, Supplier & Process Validation Readiness | MDSAP | NKB Regovanta" },
+      { name: "description", content: "Strengthen manufacturing controls, critical supplier governance, cleanliness, sterilization, and process validation evidence for MDSAP audits." },
+      { name: "keywords", content: "MDSAP production controls, supplier evaluation medical devices, process validation IQ OQ PQ, cleanliness sterilization audit" },
+      { property: "og:title", content: "Production, Supplier & Process Validation Readiness | NKB Regovanta" },
+      { property: "og:description", content: "The audit moves quickly from procedure to shop floor and supplier records. Rigorous production control, validation, and tier-1 supplier readiness." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/production-supplier-validation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Production, Supplier & Process Validation Readiness | MDSAP | NKB Regovanta" },
+      { name: "twitter:description", content: "Strengthen manufacturing controls, critical supplier governance, cleanliness, sterilization, and process validation evidence for MDSAP audits." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/production-supplier-validation",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/production-supplier-validation" },
     ],
   }),
   component: ProductionSupplierValidationPage,

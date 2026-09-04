@@ -35,6 +35,12 @@ export const Route = createFileRoute("/services/usa/510k")({
           "We structure the 510(k) around the substantial equivalence decision FDA must make — aligning predicate eligibility, evidence requirements and eSTAR dossier.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/510k" },
+      { name: "keywords", content: "FDA 510k consultant, 510k submission India, eSTAR FDA submission, substantial equivalence predicate, FDA clearance consultant, medical device FDA consultant" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "510(k) Premarket Notification Consultant | US FDA Clearance | NKB Regovanta" },
+      { name: "twitter:description", content: "Complete US FDA 510(k) premarket notification consulting. Substantial equivalence strategy, predicate selection, testing strategy, eSTAR preparation, and FDA deficiency response." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/510k" }],
   }),
@@ -62,6 +68,10 @@ function FiveTenKPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a substantial equivalence predicate in an FDA 510(k) submission?","acceptedAnswer":{"@type":"Answer","text":"A predicate device is a legally marketed device to which the new device is compared for 510(k) clearance. It must share the same intended use and have the same or comparable technological characteristics as the new device."}},{"@type":"Question","name":"Is eSTAR mandatory for all FDA 510(k) submissions?","acceptedAnswer":{"@type":"Answer","text":"Yes. As of October 1, 2023, FDA requires all 510(k) submissions to be filed using the eSTAR (electronic Submission Template and Resource) standardized PDF format. Paper 510(k) submissions are no longer accepted."}},{"@type":"Question","name":"How long does FDA 510(k) clearance take in 2026?","acceptedAnswer":{"@type":"Answer","text":"Under MDUFA V, FDA's performance goal is to issue a decision within 90 days for 90% of 510(k)s. In practice, most routine submissions achieve clearance in 3–6 months, including any Additional Information (AI) request cycles."}},{"@type":"Question","name":"What is the difference between FDA 510(k) clearance and FDA PMA approval?","acceptedAnswer":{"@type":"Answer","text":"510(k) clearance is for Class II devices that demonstrate substantial equivalence to a predicate. PMA (Premarket Approval) is required for Class III devices and requires independent clinical evidence of safety and effectiveness — a much more rigorous process."}},{"@type":"Question","name":"What types of devices require a 510(k) submission?","acceptedAnswer":{"@type":"Answer","text":"Class II medical devices typically require a 510(k) unless they are 510(k)-exempt. Class I devices are usually exempt. Class III devices require PMA unless a De Novo has been granted. Some devices may qualify for the De Novo pathway to create a new device category."}}]}) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

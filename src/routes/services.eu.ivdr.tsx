@@ -64,6 +64,11 @@ export const Route = createFileRoute("/services/eu/ivdr")({
           "Senior IVDR regulatory consultants connecting scientific validity, analytical performance, clinical performance, and Notified Body defense for Class A, B, C, and D assays.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU IVDR 2017/746 Regulatory Consulting for In Vitro Diagnostic Devices | PER & CE Marking | ..." },
+      { name: "twitter:description", content: "Specialized EU IVDR 2017/746 regulatory consultants. Performance Evaluation Plan & Report (PEP / PER), Scientific Validity, Analytical & Clinical Performance studies, Class D EURL strategy, Notified Body review, and C..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr" }],
   }),
@@ -289,6 +294,10 @@ const ivdTechExpertise = [
 function EUIVDRPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is EU IVDR and who does it affect?","acceptedAnswer":{"@type":"Answer","text":"EU IVDR 2017/746 is the In Vitro Diagnostic Regulation that applies to all in vitro diagnostic medical devices sold in Europe, replacing EU IVDD 98/79/EC. It significantly expands the scope of devices requiring Notified Body review — from ~20% to ~80% of IVDs."}},{"@type":"Question","name":"What is a Performance Evaluation Report (PER) under EU IVDR?","acceptedAnswer":{"@type":"Answer","text":"A PER is the EU IVDR equivalent of the Clinical Evaluation Report for medical devices. It documents the analytical performance (accuracy, precision, sensitivity, specificity) and clinical performance (diagnostic sensitivity, specificity, predictive values) of an IVD."}},{"@type":"Question","name":"Are there IVDR transition deadlines for legacy IVDD devices?","acceptedAnswer":{"@type":"Answer","text":"Yes. Class D IVDR devices had a deadline of 26 May 2025. Class C devices: 26 May 2026. Class B and Class A sterile devices: 26 May 2027. Legacy IVDD certificates remain valid only if specific eligibility conditions (MDCG 2022-18) are met."}}]}) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

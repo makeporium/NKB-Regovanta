@@ -60,6 +60,12 @@ export const Route = createFileRoute("/services/eu/mdr")({
           "End-to-end EU MDR 2017/745 compliance support from classification and testing to Notified Body defense and CE certification.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/mdr" },
+      { name: "keywords", content: "EU MDR consultant, CE marking medical devices, EU MDR 2017/745, clinical evaluation EU, Notified Body EU, technical documentation MDR" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR 2017/745 Regulatory Consulting for Medical Devices | CE Marking & CER | NKB Regovanta" },
+      { name: "twitter:description", content: "Specialized EU MDR 2017/745 regulatory consulting for Medical Devices across Class I, IIa, IIb, and III. Technical Documentation (Annex II/III), GSPR, Clinical Evaluation (CER), PMCF, Notified Body review defense, and..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/mdr" }],
   }),
@@ -247,6 +253,10 @@ const techExpertise = [
 function EUMDRPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between EU MDR and the old EU MDD?","acceptedAnswer":{"@type":"Answer","text":"EU MDR 2017/745 replaced EU MDD 93/42/EEC with significantly more stringent requirements including mandatory clinical evidence, PMCF studies, EUDAMED registration, UDI labelling, QMS certification, and enhanced Notified Body scrutiny for high-risk devices."}},{"@type":"Question","name":"What clinical evidence is required for EU MDR CE marking?","acceptedAnswer":{"@type":"Answer","text":"EU MDR requires a Clinical Evaluation Report (CER) following MEDDEV 2.7/1 Rev 4 or MDCG guidance demonstrating clinical safety and performance. Class IIb and III devices often require direct clinical investigation data rather than literature equivalence alone."}},{"@type":"Question","name":"When must all legacy MDD-marked devices comply with EU MDR?","acceptedAnswer":{"@type":"Answer","text":"Under EU Regulation 2023/607, Class III and implantable Class IIb devices must comply by 31 December 2027. Other Class IIb, IIa, and Is/Im/Ir devices have a deadline of 31 December 2028, subject to meeting specific eligibility conditions."}},{"@type":"Question","name":"Do I need EUDAMED registration for CE marking?","acceptedAnswer":{"@type":"Answer","text":"Yes. EU MDR requires manufacturers to register in EUDAMED and obtain a Single Registration Number (SRN) before applying for CE certification. EUDAMED registration is mandatory for Notified Body submission and ongoing market surveillance reporting."}},{"@type":"Question","name":"What is the General Safety and Performance Requirements (GSPR) in EU MDR?","acceptedAnswer":{"@type":"Answer","text":"GSPR (Annex I of EU MDR) lists all safety and performance requirements a device must meet to obtain CE marking. Manufacturers must create a GSPR checklist demonstrating compliance with each applicable requirement, with supporting evidence."}}]}) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -12,6 +12,16 @@ export const Route = createFileRoute("/insights/fda-inspections-2026")({
         content:
           "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices.",
       },
+      { name: "keywords", content: "FDA Inspections 2026, Insights, insights fda inspections 2026, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "FDA Inspections 2026 | Insights | NKB Regovanta" },
+      { property: "og:description", content: "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-inspections-2026" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FDA Inspections 2026 | Insights | NKB Regovanta" },
+      { name: "twitter:description", content: "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-inspections-2026" },

@@ -73,6 +73,28 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
         property: "og:url",
         content: "https://www.nkbregovanta.com/services/regulatory-due-diligence",
       },
+      {
+        property: "og:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Regulatory Due Diligence for Medical Devices & IVDs | NKB Regovanta",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Uncover hidden regulatory risks, approval dependencies, and compliance liabilities before you acquire, invest, or partner. Decision-grade intelligence from NKB Regovanta.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
     ],
     links: [
       {

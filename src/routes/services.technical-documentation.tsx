@@ -7,9 +7,18 @@ export const Route = createFileRoute("/services/technical-documentation")({
     meta: [
       { title: "Technical Documentation | Services | NKB Regovanta" },
       {
-        name: "description",
-        content: "End-to-end technical file writing (STED), risk management & compliance support.",
+        name: "description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation across all regulatory pathways.",
       },
+      { name: "keywords", content: "technical documentation medical devices, EU MDR technical file, FDA 510k documentation, TGA ARTG technical documentation, medical device dossier" },
+      { property: "og:title", content: "Technical Documentation | Services | NKB Regovanta" },
+      { property: "og:description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation acro..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/technical-documentation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Technical Documentation | Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation acro..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/technical-documentation" },

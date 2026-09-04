@@ -44,6 +44,11 @@ export const Route = createFileRoute("/services/india/medical-devices")({
                 content: "Complete CDSCO medical device licensing support: MD-14/15 import licences, MD-3 to MD-9 manufacturing, Class A GSR 777(E), and Indian Authorized Agent services.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com/services/india/medical-devices" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CDSCO Medical Device Import & Manufacturing Licence India | MD-14, MD-15, MD-3 to MD-9" },
+      { name: "twitter:description", content: "Expert CDSCO medical device regulatory consulting in India. Import Licences (MD-14/MD-15), Class A GSR 777(E) registration, Manufacturing Licences (MD-3/5/7/9), Loan Licences (MD-4/6/8/10), Investigational Devices (MD..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/medical-devices" },

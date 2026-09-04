@@ -18,9 +18,7 @@ export const Route = createFileRoute("/services/eu/pms-pmcf")({
     meta: [
       { title: "EU MDR PMCF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "Senior EU MDR 2017/745 Post-Market Surveillance (PMS) Plans, Periodic Safety Update Reports (PSUR), PMCF studies, vigilance reporting, and FSCA support.",
+        name: "description", content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting. PMCF plan and report preparation per MEDDEV 2.12/2, clinical data gap analysis, registry study design, literature surveillance protocol, and PSUR compilation for EU MDR-compliant devices.",
       },
       {
         name: "keywords",
@@ -34,6 +32,11 @@ export const Route = createFileRoute("/services/eu/pms-pmcf")({
           "Post-market is an active evidence system, not an annual documentation exercise. We connect complaints, trends, risk, and CER updates.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/pms-pmcf" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR PMCF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting. PMCF plan and report preparation per MEDDEV 2.12/2, clinical data gap analysis, registry study design, literature surveillance protocol, and PSUR compilation fo..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/pms-pmcf" }],
   }),

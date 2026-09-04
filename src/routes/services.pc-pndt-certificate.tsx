@@ -46,6 +46,11 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
           "End-to-end statutory PC-PNDT registration, Form A & Form B licensing for ultrasound and imaging equipment manufacturers, importers, and dealers in India.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "PC-PNDT Certificate & Ultrasound Registration India | Form A & Form B | NKB Regovanta" },
+      { name: "twitter:description", content: "PC-PNDT (Pre-Conception and Pre-Natal Diagnostic Techniques) certificate consulting for ultrasound equipment dealers, importers, and manufacturers in India. PNDT Form A/B registration, state health authority approval,..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },

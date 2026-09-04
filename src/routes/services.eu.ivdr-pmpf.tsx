@@ -18,9 +18,7 @@ export const Route = createFileRoute("/services/eu/ivdr-pmpf")({
     meta: [
       { title: "EU IVDR PMPF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "Senior EU IVDR 2017/746 Post-Market Performance Follow-up (PMPF), PMS Plans, Periodic Safety Update Reports (PSUR), vigilance reporting, and PER lifecycle maintenance.",
+        name: "description", content: "EU IVDR Post-Market Performance Follow-Up (PMPF) consulting. PMPF plan and report preparation, performance data gap analysis, proficiency testing program design, and IVD surveillance strategy for IVDR-compliant in vitro diagnostic devices in Europe.",
       },
       {
         name: "keywords",
@@ -34,6 +32,11 @@ export const Route = createFileRoute("/services/eu/ivdr-pmpf")({
           "Performance evaluation continues after CE marking. PMPF should be designed to confirm specific residual performance questions.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr-pmpf" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU IVDR PMPF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "EU IVDR Post-Market Performance Follow-Up (PMPF) consulting. PMPF plan and report preparation, performance data gap analysis, proficiency testing program design, and IVD surveillance strategy for IVDR-compliant in vit..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr-pmpf" }],
   }),

@@ -66,6 +66,28 @@ export const Route = createFileRoute("/services/drug-device-combination-products
         property: "og:url",
         content: "https://www.nkbregovanta.com/services/drug-device-combination-products",
       },
+      {
+        property: "og:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Drug-Device Combination Product Consulting | FDA, EU MDR & Article 117 | NKB Regovanta",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Comprehensive regulatory strategy, design controls, risk management, and submission-ready technical documentation for drug-device combination products worldwide.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://www.nkbregovanta.com/og-image.png",
+      },
     ],
     links: [
       {

@@ -7,7 +7,17 @@ export const Route = createFileRoute("/industries/cosmetics_/uk")({
   head: () => ({
     meta: [
       { title: "UK Cosmetics Regulatory Services | NKB Regovanta" },
-      { name: "description", content: "Post-Brexit UK cosmetics compliance, UK Responsible Person (RP), SCPN notification, and OPSS regulations." },
+      { name: "description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and Northern Ireland." },
+      { name: "keywords", content: "UK Cosmetics Regulatory Services, industries cosmetics uk, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },
+      { property: "og:description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and N..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/uk" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and N..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/uk" },

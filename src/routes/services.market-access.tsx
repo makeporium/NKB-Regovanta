@@ -8,9 +8,18 @@ export const Route = createFileRoute("/services/market-access")({
     meta: [
       { title: "Market Access | Services | NKB Regovanta" },
       {
-        name: "description",
-        content: "Market entry strategy, pricing, reimbursement & post-market compliance.",
+        name: "description", content: "Comprehensive global market access strategy for medical devices across US FDA, EU MDR/IVDR, UK MHRA, TGA Australia, CDSCO India, Health Canada, and SFDA Saudi Arabia. Multi-regulatory pathway planning and market entry consulting from NKB Regovanta.",
       },
+      { name: "keywords", content: "global market access medical devices, multi-market regulatory strategy, international medical device registration, FDA EU India TGA market access" },
+      { property: "og:title", content: "Market Access | Services | NKB Regovanta" },
+      { property: "og:description", content: "Comprehensive global market access strategy for medical devices across US FDA, EU MDR/IVDR, UK MHRA, TGA Australia, CDSCO India, Health Canada, and SFDA Saudi Arabia. Multi-regulatory pathway planning and market entry..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/market-access" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Market Access | Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Comprehensive global market access strategy for medical devices across US FDA, EU MDR/IVDR, UK MHRA, TGA Australia, CDSCO India, Health Canada, and SFDA Saudi Arabia. Multi-regulatory pathway planning and market entry..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/market-access" },

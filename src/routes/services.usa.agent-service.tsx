@@ -44,6 +44,11 @@ export const Route = createFileRoute("/services/usa/agent-service")({
           "Official FDA US Agent representation, annual establishment registration, and device listings on FDA FURLS / CDRH portal.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/agent-service" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "US FDA US Agent Services for Foreign Facilities & FURLS Registration | NKB Regovanta" },
+      { name: "twitter:description", content: "US FDA Agent services for foreign medical device facilities. Official FDA Correspondent, US Agent appointment, FDA 510(k) correspondence, establishment registration (FURLS), and FDA regulatory liaison for non-US medic..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/agent-service" },

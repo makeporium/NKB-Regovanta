@@ -12,6 +12,11 @@ export const Route = createFileRoute("/services/india/market-standing")({
       { property: "og:title", content: "Market Standing Certificate (MSC) CDSCO | NKB Regovanta" },
       { property: "og:description", content: "CDSCO Market Standing Certificate (MSC) filing and verification support for Indian manufacturers." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/market-standing" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Market Standing Certificate (MSC) CDSCO India | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a Market Standing Certificate (MSC) from CDSCO confirming 2+ years of continuous legal medical device sales in India. Essential for government tender bids, overseas registrations, and institutional procurement...." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/market-standing" },
@@ -81,9 +86,9 @@ function MarketStandingPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Market</span> Standing Certificate <br/> (MSC)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

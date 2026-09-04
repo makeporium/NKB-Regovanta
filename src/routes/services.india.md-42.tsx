@@ -12,6 +12,11 @@ export const Route = createFileRoute("/services/india/md-42")({
       { property: "og:title", content: "MD-42 Certificate (Medical Device Registration) | NKB Regovanta" },
       { property: "og:description", content: "End-to-end support for obtaining MD-42 medical device registration certificates from State Licensing Authorities in India." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/md-42" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MD-42 Certificate (Medical Device Registration) CDSCO | NKB Regovanta" },
+      { name: "twitter:description", content: "Full support for CDSCO Form MD-42 registration certificate required for wholesale distribution of medical devices in India. State-level SLA application, complete documentation preparation, and inspection readiness for..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/md-42" },
@@ -81,9 +86,9 @@ function MD42Page() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">MD-42</span> Medical Device <br/> Registration Certificate
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

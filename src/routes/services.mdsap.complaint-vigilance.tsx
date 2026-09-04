@@ -21,30 +21,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/complaint-vigilance")({
   head: () => ({
     meta: [
-      {
-        title: "Complaint, Vigilance & Post-Market Readiness | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Build systems for complaint handling, adverse-event reporting across 5 jurisdictions, trend analysis, and FSCA advisory notice readiness under MDSAP.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Complaint, Vigilance & Post-Market Readiness | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "A complaint file can expose the entire QMS. Strengthen vigilance reportability decisions and field safety corrective actions under MDSAP.",
-      },
+      { title: "Complaint, Vigilance & Post-Market Readiness | MDSAP | NKB Regovanta" },
+      { name: "description", content: "Build systems for complaint handling, adverse-event reporting across 5 jurisdictions, trend analysis, and FSCA advisory notices." },
+      { name: "keywords", content: "MDSAP complaint handling, post-market vigilance MDSAP, adverse event reporting 5 jurisdictions, medical device FSCA, field safety corrective action" },
+      { property: "og:title", content: "Complaint, Vigilance & Post-Market Readiness | NKB Regovanta" },
+      { property: "og:description", content: "One complaint file, five jurisdictions to report to. Harmonized post-market surveillance with jurisdiction-specific reporting rules." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Complaint, Vigilance & Post-Market Readiness | MDSAP | NKB Regovanta" },
+      { name: "twitter:description", content: "Build systems for complaint handling, adverse-event reporting across 5 jurisdictions, trend analysis, and FSCA advisory notices." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance" },
     ],
   }),
   component: ComplaintVigilancePage,

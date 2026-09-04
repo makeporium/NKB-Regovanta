@@ -26,6 +26,11 @@ export const Route = createFileRoute("/insights/")({
         content: "Latest regulatory news, updates, and best practices for the medical device and IVD industry from NKB Regovanta.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Regulatory Insights & Industry Intelligence | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert insights, regulatory updates, and compliance guides on US FDA, EU MDR, CDSCO, and global medical device regulations from NKB Regovanta." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights" },

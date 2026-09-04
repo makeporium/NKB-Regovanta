@@ -57,6 +57,11 @@ export const Route = createFileRoute("/about")({
                 content: "Learn about NKB Regovanta's mission, leadership team, and global regulatory affairs capabilities spanning India, USA, Europe, UK, and APAC.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com/about" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About NKB Regovanta | Medical Device & Regulatory Consulting Leaders" },
+      { name: "twitter:description", content: "NKB Regovanta is a premier global medical device regulatory affairs consultancy. Our senior team has deep expertise across US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, TGA Australia, MDSAP, and ISO 13485 quality systems..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com/about" },

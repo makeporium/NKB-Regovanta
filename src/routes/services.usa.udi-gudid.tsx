@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/usa/udi-gudid')({
     meta: [
       { title: 'UDI & GUDID Solutions | US FDA Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized US FDA UDI & GUDID Solutions services.' },
+      { name: "keywords", content: "UDI & GUDID Solutions, US FDA Services, services usa udi gudid, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "UDI & GUDID Solutions | US FDA Services | NKB Regovanta" },
+      { property: "og:description", content: "US FDA UDI (Unique Device Identification) and GUDID (Global UDI Database) compliance consulting. Device Identifier (DI) assignment, GUDID data submission, labelling compliance, and UDI system implementation for all FD..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/udi-gudid" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "UDI & GUDID Solutions | US FDA Services | NKB Regovanta" },
+      { name: "twitter:description", content: "US FDA UDI (Unique Device Identification) and GUDID (Global UDI Database) compliance consulting. Device Identifier (DI) assignment, GUDID data submission, labelling compliance, and UDI system implementation for all FD..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/udi-gudid" },

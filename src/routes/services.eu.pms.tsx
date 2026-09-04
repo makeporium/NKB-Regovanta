@@ -15,10 +15,18 @@ export const Route = createFileRoute("/services/eu/pms")({
     meta: [
       { title: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "Comprehensive Post-Market Surveillance (PMS) Plans, PSUR reporting, PMCF execution, and vigilance support under EU MDR 2017/745 and IVDR 2017/746.",
+        name: "description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices under EU MDR 2017/745.",
       },
+      { name: "keywords", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance, services eu pms pmcf, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
+      { property: "og:description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices und..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/pms-pmcf" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices und..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/pms-pmcf" }],
   }),

@@ -12,6 +12,11 @@ export const Route = createFileRoute("/services/india/free-sale")({
       { property: "og:title", content: "Free Sale Certificate (FSC) CDSCO | NKB Regovanta" },
       { property: "og:description", content: "Expert assistance in obtaining Free Sale Certificates from CDSCO for medical devices and pharmaceuticals." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/free-sale" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Free Sale Certificate (FSC) CDSCO India | Certificate of Export | NKB Regovanta" },
+      { name: "twitter:description", content: "Free Sale Certificate (FSC) and Certificate to Foreign Government for medical devices in India. CDSCO application support, export certificate documentation, and state licensing authority coordination. Required for ove..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/free-sale" },
@@ -81,9 +86,9 @@ function FreeSalePage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Free</span> Sale Certificate <br/> (FSC)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

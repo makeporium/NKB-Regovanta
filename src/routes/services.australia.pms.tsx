@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/australia/pms')({
     meta: [
       { title: 'Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Australia Post-Market Surveillance (PMS) services for medical devices and IVDs.' },
+      { name: "keywords", content: "Post-Market Surveillance (PMS), Australia Services, services australia pms, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta" },
+      { property: "og:description", content: "TGA post-market surveillance consulting for ARTG-included medical devices in Australia. PMS plan preparation, adverse event reporting, mandatory incident reporting (MIR), post-market review strategy, and TGA complianc..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/pms" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta" },
+      { name: "twitter:description", content: "TGA post-market surveillance consulting for ARTG-included medical devices in Australia. PMS plan preparation, adverse event reporting, mandatory incident reporting (MIR), post-market review strategy, and TGA complianc..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/pms" },

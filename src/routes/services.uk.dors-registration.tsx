@@ -15,10 +15,18 @@ export const Route = createFileRoute("/services/uk/dors-registration")({
     meta: [
       { title: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
       {
-        name: "description",
-        content:
-          "End-to-end medical device and IVD registration through the MHRA Device Online Registration System (DORS) portal.",
+        name: "description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance strategy, and UKCA marking guidance.",
       },
+      { name: "keywords", content: "Device Registration via MHRA DORS Portal, services uk mhra registration, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
+      { property: "og:description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance str..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/mhra-registration" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
+      { name: "twitter:description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance str..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" }],
   }),

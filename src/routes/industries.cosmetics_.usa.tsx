@@ -7,7 +7,17 @@ export const Route = createFileRoute("/industries/cosmetics_/usa")({
   head: () => ({
     meta: [
       { title: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
-      { name: "description", content: "Expert guidance on FDA cosmetic product listing, facility registration, MoCRA compliance, and labeling requirements in the USA." },
+      { name: "description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in the United States." },
+      { name: "keywords", content: "USA Cosmetics Regulatory Services & MoCRA Compliance, industries cosmetics usa, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
+      { property: "og:description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
+      { name: "twitter:description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/usa" },

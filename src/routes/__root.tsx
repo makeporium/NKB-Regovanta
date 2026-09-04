@@ -140,7 +140,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image:alt", content: "NKB Regovanta Logo & Brand Banner" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

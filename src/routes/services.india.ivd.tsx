@@ -54,6 +54,11 @@ export const Route = createFileRoute("/services/india/ivd")({
           "CDSCO IVD licensing, import approvals (MD-14/15), test licences (MD-16/17), and manufacturing registration for IVD kits & reagents in India.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/ivd" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "In-Vitro Diagnostic (IVD) Regulatory Services in India | CDSCO IVD Licensing | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO regulatory consulting for in vitro diagnostic (IVD) devices in India. Import licences (MD-14/15), test licences (MD-16/17), clinical performance evaluation (MD-24/25), novel IVD approvals (MD-26/27), and SUGAM p..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd" },

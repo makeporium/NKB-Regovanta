@@ -8,10 +8,18 @@ export const Route = createFileRoute("/services/regulatory-affairs")({
         meta: [
             { title: "Global Medical Device & IVD Registration | NKB Regovanta" },
             {
-                name: "description",
-                content:
-                    "From early regulatory strategy to market authorization and post-market support, we help you move forward with a clear, compliant plan.",
+                name: "description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australia, Canada, UAE, and Saudi Arabia.",
             },
+          { name: "keywords", content: "regulatory affairs medical devices, regulatory strategy consultant, global regulatory submissions, medical device regulatory consulting" },
+          { property: "og:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
+          { property: "og:description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australi..." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
+          { name: "twitter:description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australi..." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/services/regulatory-affairs" },

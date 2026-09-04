@@ -20,31 +20,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/capa-remediation")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Nonconformity, CAPA & Remediation Support | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Root cause analysis, effective systemic CAPA, trend prevention, and remediation packages for recognized Auditing Organizations under MDSAP.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Nonconformity, CAPA & Remediation Support | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "Closing the finding is not the same as correcting the system. Build defensible CAPA responses and extent-of-condition evaluations under MDSAP.",
-      },
+      { title: "Nonconformity, CAPA & Remediation Support | MDSAP | NKB Regovanta" },
+      { name: "description", content: "Root cause analysis, effective systemic CAPA, trend prevention, and remediation packages for recognized Auditing Organizations." },
+      { name: "keywords", content: "MDSAP CAPA remediation, nonconformity closure MDSAP, grade 4 nonconformity, root cause analysis medical devices, Auditing Organization CAPA response" },
+      { property: "og:title", content: "Nonconformity, CAPA & Remediation Support | NKB Regovanta" },
+      { property: "og:description", content: "Audit findings are manageable; recurring nonconformities are dangerous. Robust root-cause investigation and CAPA closure." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/capa-remediation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Nonconformity, CAPA & Remediation Support | MDSAP | NKB Regovanta" },
+      { name: "twitter:description", content: "Root cause analysis, effective systemic CAPA, trend prevention, and remediation packages for recognized Auditing Organizations." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/capa-remediation",
-      },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/capa-remediation" },
     ],
   }),
   component: CapaRemediationPage,

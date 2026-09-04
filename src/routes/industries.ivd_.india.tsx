@@ -8,7 +8,17 @@ export const Route = createFileRoute("/industries/ivd_/india")({
     head: () => ({
         meta: [
             { title: "IVD Regulation in India | CDSCO Under MDR 2017 | NKB Regovanta" },
-            { name: "description", content: "Expert guidance on India's IVD regulations under the Medical Devices Rules (MDR) 2017, CDSCO pathways, classification, and mandatory clinical performance evaluation." },
+            { name: "description", content: "India IVD regulatory consulting under MDR 2017. CDSCO test licences (MD-16/17), import licences for IVD kits (MD-14/15), clinical performance evaluation (MD-24/25), and novel IVD approvals (MD-26/27) from NKB Regovanta." },
+          { name: "keywords", content: "IVD Regulation in India, CDSCO Under MDR 2017, industries ivd india, NKB Regovanta, regulatory consultant, medical device" },
+          { property: "og:title", content: "IVD Regulation in India | CDSCO Under MDR 2017 | NKB Regovanta" },
+          { property: "og:description", content: "India IVD regulatory consulting under MDR 2017. CDSCO test licences (MD-16/17), import licences for IVD kits (MD-14/15), clinical performance evaluation (MD-24/25), and novel IVD approvals (MD-26/27) from NKB Regovanta." },
+          { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/india" },
+          { property: "og:type", content: "website" },
+          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: "IVD Regulation in India | CDSCO Under MDR 2017 | NKB Regovanta" },
+          { name: "twitter:description", content: "India IVD regulatory consulting under MDR 2017. CDSCO test licences (MD-16/17), import licences for IVD kits (MD-14/15), clinical performance evaluation (MD-24/25), and novel IVD approvals (MD-26/27) from NKB Regovanta." },
+          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/india" },

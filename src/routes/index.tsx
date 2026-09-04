@@ -78,6 +78,11 @@ export const Route = createFileRoute("/")({
                     "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants" },
+      { name: "twitter:description", content: "NKB Regovanta — Premier global medical device regulatory affairs consulting firm. Expert services for US FDA 510(k), EU MDR/IVDR CE marking, India CDSCO licensing, UK MHRA/UKCA, TGA Australia ARTG, ISO 13485, MDSAP, a..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com" },

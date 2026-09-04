@@ -12,6 +12,11 @@ export const Route = createFileRoute("/services/india/non-conviction")({
       { property: "og:title", content: "Non-Conviction Certificate (NCC) CDSCO | NKB Regovanta" },
       { property: "og:description", content: "Non-Conviction Certificate (NCC) licensing assistance for medical device & pharmaceutical manufacturers in India." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/non-conviction" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Non-Conviction Certificate (NCC) CDSCO India | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a Non-Conviction Certificate (NCC) from CDSCO or State Licensing Authority confirming no prior criminal or regulatory convictions. Required for government tenders, licence renewals, and overseas regulatory subm..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/non-conviction" },
@@ -81,9 +86,9 @@ function NonConvictionPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Non-Conviction</span> Certificate <br/> (NCC)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

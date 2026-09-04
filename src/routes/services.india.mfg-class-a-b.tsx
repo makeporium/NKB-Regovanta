@@ -8,6 +8,16 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
     meta: [
 { title: "Manufacturing License Class A & B Medical Devices India | MD-3 & MD-5 | NKB Regovanta" },
       { name: "description", content: "Expert assistance for acquiring CDSCO MD-5 manufacturing licenses for low-to-moderate risk Class A and B medical devices in India." },
+{ name: "keywords", content: "MD-3 manufacturing licence India, MD-5 SLA manufacturing, Class A B medical device manufacturing India, State Licensing Authority SLA consultant" },
+      { property: "og:title", content: "Manufacturing License Class A & B Medical Devices India | MD-3 & MD-5 | NKB Regovanta" },
+      { property: "og:description", content: "Expert guidance for obtaining CDSCO MD-3 and MD-5 manufacturing licences for Class A and B medical devices in India. Full plant master file preparation, State Licensing Authority (SLA) audit readiness, documentation, ..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india/mfg-class-a-b" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Manufacturing License Class A & B Medical Devices India | MD-3 & MD-5 | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert guidance for obtaining CDSCO MD-3 and MD-5 manufacturing licences for Class A and B medical devices in India. Full plant master file preparation, State Licensing Authority (SLA) audit readiness, documentation, ..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-a-b" },
@@ -77,9 +87,9 @@ function MfgClassABPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Class</span> A & B Manufacturing <br/> (Forms MD-3 & MD-5)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

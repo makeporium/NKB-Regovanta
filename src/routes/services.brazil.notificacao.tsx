@@ -7,6 +7,16 @@ export const Route = createFileRoute('/services/brazil/notificacao')({
     meta: [
       { title: 'Notificação Pathway | Brazil Services | NKB Regovanta' },
       { name: 'description', content: 'Explore our specialized Brazil Notificação Pathway services for medical devices and IVDs.' },
+      { name: "keywords", content: "Notificação Pathway, Brazil Services, services brazil notificacao, NKB Regovanta, regulatory consultant, medical device" },
+      { property: "og:title", content: "Notificação Pathway | Brazil Services | NKB Regovanta" },
+      { property: "og:description", content: "ANVISA Notificação (product notification) consulting for Class I and II medical devices in Brazil. Complete ANVISA regulatory pathway selection, Notificação filing strategy, documentation preparation, and RBPFAB/BPF c..." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/notificacao" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Notificação Pathway | Brazil Services | NKB Regovanta" },
+      { name: "twitter:description", content: "ANVISA Notificação (product notification) consulting for Class I and II medical devices in Brazil. Complete ANVISA regulatory pathway selection, Notificação filing strategy, documentation preparation, and RBPFAB/BPF c..." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/notificacao" },
