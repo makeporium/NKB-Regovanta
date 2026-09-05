@@ -29,23 +29,23 @@ import usaHeroImg from "@/assets/usa-fda-hero-statue.jpg";
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
         meta: [
-            { title: "US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent | NKB Regovanta" },
+            { title: "USFDA Medical Device Consultant | 510(k), 510 k, De Novo, PMA | NKB Regovanta" },
             {
                 name: "description",
-                content: "US FDA 510k submission consultant & medical device regulatory services. End-to-end guidance for FDA 510(k) clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval, US FDA US Agent services for foreign facilities, FDA Establishment Registration & Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, and Q-Submission / Pre-Sub.",
+                content: "Leading USFDA medical device consultant & regulatory consultancy. End-to-end guidance for USFDA 510(k) and 510 k clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA, US Agent services for foreign facilities, and FURLS registration.",
             },
             {
                 name: "keywords",
-                content: "US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, NKB Regovanta",
+                content: "USFDA, USFDA consultant, USFDA medical device consultant, 510 k, 510 k consultant, USFDA 510 k, 510k submission consultant, FDA 510(k) clearance medical devices, medical device consultant, medical device consultancy, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services, NKB Regovanta",
             },
-            { property: "og:title", content: "US FDA 510(k) Clearance & US Agent Consulting | NKB Regovanta" },
-            { property: "og:description", content: "Complete FDA regulatory strategy, eSTAR dossier compilation, 510(k) clearance, US Agent representation, and FURLS registration." },
+            { property: "og:title", content: "USFDA Medical Device Consultant & 510(k) Clearance | NKB Regovanta" },
+            { property: "og:description", content: "Complete USFDA regulatory strategy, eSTAR dossier compilation, 510(k) / 510 k clearance, US Agent representation, and FURLS registration." },
             { property: "og:url", content: "https://www.nkbregovanta.com/services/usa" },
-          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: "US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent | NKB Regovanta" },
-          { name: "twitter:description", content: "US FDA 510k submission consultant & medical device regulatory services. End-to-end guidance for FDA 510(k) clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval, US FDA US Agent ..." },
-          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "USFDA Medical Device Consultant | 510(k), 510 k & US Agent | NKB Regovanta" },
+            { name: "twitter:description", content: "Leading USFDA medical device consultant & regulatory consultancy. End-to-end guidance for USFDA 510(k) / 510 k clearance, eSTAR dossier, and US Agent representation." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" }],
     }),
@@ -180,7 +180,7 @@ const homeStats = [
 function USAMarket() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Service", "name": "US FDA 510(k) Regulatory Consulting", "url": "https://www.nkbregovanta.com/services/usa", "description": "FDA 510(k), De Novo, PMA, Q-Submission, and US Agent services for medical device companies seeking US market access.", "provider": { "@type": "ProfessionalService", "name": "NKB Regovanta Solutions Pvt. Ltd.", "url": "https://www.nkbregovanta.com" } }, { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nkbregovanta.com/services" }, { "@type": "ListItem", "position": 3, "name": "USA FDA", "item": "https://www.nkbregovanta.com/services/usa" }] }]) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Service", "name": "USFDA Medical Device Consultant & 510(k) Regulatory Consulting", "alternateName": ["USFDA Consultant", "510 k Clearance Consultancy", "US FDA 510(k) Consultant"], "url": "https://www.nkbregovanta.com/services/usa", "description": "Expert USFDA medical device consultant services including 510(k) and 510 k clearance, eSTAR dossier compilation, De Novo, PMA, Q-Submission, and US Agent representation.", "provider": { "@type": "ProfessionalService", "name": "NKB Regovanta Solutions Pvt. Ltd.", "url": "https://www.nkbregovanta.com" } }, { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nkbregovanta.com/services" }, { "@type": "ListItem", "position": 3, "name": "USA FDA", "item": "https://www.nkbregovanta.com/services/usa" }] }]) }} />
 
             {/* ── HERO ── */}
             <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/50 to-slate-100">
@@ -192,16 +192,16 @@ function USAMarket() {
                         <ChevronRight className="h-3 w-3" />
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e02020]">United States</span>
                         <span className="text-navy/40 mx-1">|</span>
-                        <span className="text-navy/70">US FDA Regulatory &amp; Market Access</span>
+                        <span className="text-navy/70">USFDA &amp; US FDA Regulatory Market Access</span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                         <div className="max-w-xl">
                             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4" style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}>
-                                US FDA 510(k), De Novo,<br />PMA &amp; Regulatory Consulting<br />for Medical Devices and IVDs
+                                USFDA Medical Device Consultant &amp;<br />510(k) / 510 k Regulatory Consultancy
                             </h1>
                             <p className="text-[14px] leading-relaxed text-navy/70 font-medium mb-7 max-w-lg">
-                                From regulatory strategy and predicate analysis to testing, eSTAR dossier preparation, FDA submission and deficiency response – we provide end-to-end support to help you achieve US market authorization.
+                                As a premier medical device consultancy, we provide end-to-end USFDA (US FDA) market access support — from 510(k) and 510 k substantial equivalence strategy and predicate analysis to testing coordination, eSTAR dossier preparation, FDA submission, and deficiency response.
                             </p>
                             <div className="flex flex-wrap gap-3 mb-8">
                                 <Link to="/contact" className="inline-flex items-center gap-2 bg-navy text-white text-[12.5px] font-semibold px-5 py-2.5 rounded-sm hover:bg-navy/90 transition-all shadow-sm">

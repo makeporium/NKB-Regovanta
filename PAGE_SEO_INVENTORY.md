@@ -30,15 +30,15 @@
 
 ## Home
 
-### 1. NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants
+### 1. Medical Device Consultant & Consultancy
 
 - **Route URL:** [`https://www.nkbregovanta.com`](https://www.nkbregovanta.com)
 - **File:** `src/routes/index.tsx`
-- **Page Title (`<title>`):** `NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants`
-- **H1 Heading:** `Medical Device & IVD Regulatory Consulting`
-- **Meta Keywords:** `CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6, Indian Authorized Agent AIR IAA, Medical device regulatory consultant India, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, Plant Master File PMF, Drug Master File DMF, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, EC REP European Authorized Representative, UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP, NKB Regovanta, NKB Regovanta Solutions`
-- **Meta Description:** NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), EU MDR/IVDR, and Cosmetics compliance consulting firm.
-- **OG Title:** `NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Consultants`
+- **Page Title (`<title>`):** `Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta`
+- **H1 Heading:** `Medical Device Consultant & Regulatory Consultancy`
+- **Meta Keywords:** `medical device consultant, medical device consultancy, USFDA, USFDA consultant, USFDA medical device, 510 k, 510 k consultant, 510k submission consultant, FDA 510(k) clearance medical devices, medical device regulatory consultant, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Indian Authorized Agent AIR IAA, eSTAR FDA dossier, EU MDR 2017/745 regulatory consultant, CE Marking Europe, ISO 13485 implementation consultant, MDSAP audit readiness, NKB Regovanta`
+- **Meta Description:** NKB Regovanta is a leading global medical device consultant and regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS compliance.
+- **OG Title:** `Medical Device Consultant & Regulatory Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com`
 
 ---
@@ -244,15 +244,15 @@
 
 ---
 
-### 17. CDSCO Medical Device Import & Manufacturing Licence India
+### 17. Medical Device Consultant & Regulatory Consultancy India
 
 - **Route URL:** [`https://www.nkbregovanta.com/services/india/medical-devices`](https://www.nkbregovanta.com/services/india/medical-devices)
 - **File:** `src/routes/services.india.medical-devices.tsx`
-- **Page Title (`<title>`):** `CDSCO Medical Device Import & Manufacturing Licence India | MD-14, MD-15, MD-3 to MD-9`
-- **H1 Heading:** `Medical Device Regulatory Services in India`
-- **Meta Keywords:** `CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Clinical evaluation import permission MD-24 MD-25, Novel medical device import MD-26 MD-27, IVD test licence MD-16 MD-17, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6 / MD-8 MD-10, Test licence for manufacturing MD-12 MD-13, Indian Authorized Agent (AIR / IAA), SUGAM portal registration support, CDSCO product classification & predicate strategy, Medical device regulatory consultant India, NKB Regovanta`
-- **Meta Description:** Expert CDSCO medical device regulatory consulting in India. Import Licence (MD-14/MD-15), Class A GSR 777(E), Manufacturing Licences (MD-3/5, MD-7/9), Loan Licences (MD-4/6, MD-8/10), Test Licences (MD-12/13, MD-16/17), Investigational Import (MD-18/19, MD-24/25, MD-26/27), Indian Authorized Agent (AIR/IAA), SUGAM portal support and predicate strategy.
-- **OG Title:** `CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta`
+- **Page Title (`<title>`):** `Medical Device Consultant & Regulatory Consultancy India | CDSCO Licensing | NKB Regovanta`
+- **H1 Heading:** `Medical Device Consultant & Consultancy in India`
+- **Meta Keywords:** `medical device consultant, medical device consultancy, medical device consultant India, medical device consultancy India, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, manufacturing licence MD-3 MD-5 MD-7 MD-9, Indian Authorized Agent, SUGAM portal registration support, NKB Regovanta`
+- **Meta Description:** Leading medical device consultant and regulatory consultancy in India. CDSCO import licence (MD-14/MD-15), Class A GSR 777(E), manufacturing licences (MD-3 to MD-9), loan licences, test licences, Indian Authorized Agent (AIR/IAA), and SUGAM portal strategy.
+- **OG Title:** `Medical Device Consultant & Regulatory Consultancy India | CDSCO | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com/services/india/medical-devices`
 
 ---
@@ -361,30 +361,30 @@
 
 ---
 
-### 26. CDSCO Medical Device Consultant India
+### 26. Medical Device Consultant & Regulatory Consultancy India
 
 - **Route URL:** [`https://www.nkbregovanta.com/services/india`](https://www.nkbregovanta.com/services/india)
 - **File:** `src/routes/services.india.tsx`
-- **Page Title (`<title>`):** `CDSCO Medical Device Consultant India | NKB Regovanta | NKB Regovanta`
+- **Page Title (`<title>`):** `Medical Device Consultant & Regulatory Consultancy India | CDSCO | NKB Regovanta`
 - **H1 Heading:** `[Layout Route — renders <Outlet />]`
-- **Meta Keywords:** `CDSCO Medical Device Consultant India, NKB Regovanta, services india, NKB Regovanta, regulatory consultant, medical device`
-- **Meta Description:** India's expert CDSCO medical device regulatory consulting firm. Import licences (MD-14/15), manufacturing licences (MD-3 to MD-9), loan licences, and SUGAM portal support.
-- **OG Title:** `CDSCO Medical Device Consultant India | NKB Regovanta`
+- **Meta Keywords:** `medical device consultant, medical device consultancy, medical device consultant India, medical device consultancy India, CDSCO Medical Device Consultant, CDSCO regulatory consultancy, MD-14, MD-15, MD-3, MD-5, MD-9, NKB Regovanta`
+- **Meta Description:** Premier medical device consultant and regulatory consultancy in India. Expert CDSCO licensing, import permissions (MD-14/MD-15), manufacturing licenses (MD-3 to MD-9), Class A GSR 777(E), and Indian Authorized Agent (AIR) representation.
+- **OG Title:** `Medical Device Consultant & Regulatory Consultancy India | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com/services/india`
 
 ---
 
 ## US FDA Regulatory Services
 
-### 27. 510(k) Premarket Notification Consultant
+### 27. 510(k) / 510 k Consultant
 
 - **Route URL:** [`https://www.nkbregovanta.com/services/usa/510k`](https://www.nkbregovanta.com/services/usa/510k)
 - **File:** `src/routes/services.usa.510k.tsx`
-- **Page Title (`<title>`):** `510(k) Premarket Notification Consultant | US FDA Clearance | NKB Regovanta`
-- **H1 Heading:** `510(k) Premarket Notification Support`
-- **Meta Keywords:** `510k submission consultant, FDA 510k clearance, substantial equivalence, eSTAR 510k, predicate device research, CDRH portal, NKB Regovanta`
-- **Meta Description:** Complete US FDA 510(k) premarket notification consulting. Substantial equivalence strategy, predicate selection, testing strategy, eSTAR preparation, and FDA deficiency response.
-- **OG Title:** `510(k) Premarket Notification Support | NKB Regovanta`
+- **Page Title (`<title>`):** `510(k) / 510 k Consultant | USFDA 510k Clearance & eSTAR Dossier | NKB Regovanta`
+- **H1 Heading:** `USFDA 510(k) & 510 k Premarket Notification Consultant`
+- **Meta Keywords:** `510 k, 510 k consultant, 510 k clearance, 510 k submission, USFDA, USFDA consultant, USFDA 510 k, 510k submission consultant, FDA 510(k) clearance, substantial equivalence, eSTAR 510k, predicate device research, medical device consultant, medical device consultancy, CDRH portal, NKB Regovanta`
+- **Meta Description:** Leading USFDA 510(k) and 510 k premarket notification consultant & medical device consultancy. Substantial equivalence strategy, predicate selection, eSTAR preparation, and FDA deficiency response.
+- **OG Title:** `USFDA 510(k) & 510 k Premarket Notification Consultant | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com/services/usa/510k`
 
 ---
@@ -493,15 +493,15 @@
 
 ---
 
-### 36. US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent
+### 36. USFDA Medical Device Consultant
 
 - **Route URL:** [`https://www.nkbregovanta.com/services/usa`](https://www.nkbregovanta.com/services/usa)
 - **File:** `src/routes/services.usa.index.tsx`
-- **Page Title (`<title>`):** `US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent | NKB Regovanta`
-- **H1 Heading:** `US FDA 510(k), De Novo, PMA & Regulatory Consulting for Medical Devices and IVDs`
-- **Meta Keywords:** `US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, NKB Regovanta`
-- **Meta Description:** US FDA 510k submission consultant & medical device regulatory services. End-to-end guidance for FDA 510(k) clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval, US FDA US Agent services for foreign facilities, FDA Establishment Registration & Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, and Q-Submission / Pre-Sub.
-- **OG Title:** `US FDA 510(k) Clearance & US Agent Consulting | NKB Regovanta`
+- **Page Title (`<title>`):** `USFDA Medical Device Consultant | 510(k), 510 k, De Novo, PMA | NKB Regovanta`
+- **H1 Heading:** `USFDA Medical Device Consultant & 510(k) / 510 k Regulatory Consultancy`
+- **Meta Keywords:** `USFDA, USFDA consultant, USFDA medical device consultant, 510 k, 510 k consultant, USFDA 510 k, 510k submission consultant, FDA 510(k) clearance medical devices, medical device consultant, medical device consultancy, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services, NKB Regovanta`
+- **Meta Description:** Leading USFDA medical device consultant & regulatory consultancy. End-to-end guidance for USFDA 510(k) and 510 k clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA, US Agent services for foreign facilities, and FURLS registration.
+- **OG Title:** `USFDA Medical Device Consultant & 510(k) Clearance | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com/services/usa`
 
 ---

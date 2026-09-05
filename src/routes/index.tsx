@@ -60,29 +60,29 @@ import logoWipro from "@/assets/clients/wipro.svg";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants" },
+            { title: "Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
             {
                 name: "description",
                 content:
-                    "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), EU MDR/IVDR, and Cosmetics compliance consulting firm.",
+                    "NKB Regovanta is a leading global medical device consultant and regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS compliance.",
             },
             {
                 name: "keywords",
                 content:
-                    "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6, Indian Authorized Agent AIR IAA, Medical device regulatory consultant India, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, Plant Master File PMF, Drug Master File DMF, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, EC REP European Authorized Representative, UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP, NKB Regovanta, NKB Regovanta Solutions",
+                    "medical device consultant, medical device consultancy, USFDA, USFDA consultant, USFDA medical device, 510 k, 510 k consultant, 510k submission consultant, FDA 510(k) clearance medical devices, medical device regulatory consultant, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Indian Authorized Agent AIR IAA, eSTAR FDA dossier, EU MDR 2017/745 regulatory consultant, CE Marking Europe, ISO 13485 implementation consultant, MDSAP audit readiness, NKB Regovanta",
             },
-            { property: "og:title", content: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Consultants" },
+            { property: "og:title", content: "Medical Device Consultant & Regulatory Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
             {
                 property: "og:description",
                 content:
-                    "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
+                    "Leading global medical device consultant & regulatory consultancy. Comprehensive USFDA 510(k) / 510 k, CDSCO licensing, and EU MDR/IVDR market access.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants" },
-      { name: "twitter:description", content: "NKB Regovanta — Premier global medical device regulatory affairs consulting firm. Expert services for US FDA 510(k), EU MDR/IVDR CE marking, India CDSCO licensing, UK MHRA/UKCA, TGA Australia ARTG, ISO 13485, MDSAP, a..." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
+            { name: "twitter:description", content: "NKB Regovanta — Leading global medical device consultant & regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing, and EU MDR/IVDR compliance." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com" },
@@ -406,6 +406,45 @@ function Index() {
     }, [isHovered]);
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ProfessionalService",
+                        "name": "NKB Regovanta — Medical Device Consultant & Regulatory Consultancy",
+                        "alternateName": ["NKB Regovanta Solutions", "NKB Medical Device Consultancy"],
+                        "url": "https://www.nkbregovanta.com",
+                        "logo": "https://www.nkbregovanta.com/og-image.png",
+                        "image": "https://www.nkbregovanta.com/og-image.png",
+                        "description": "Premier global medical device consultant and regulatory consultancy specializing in USFDA 510(k) / 510 k clearance, CDSCO licensing, EU MDR/IVDR, and ISO 13485 quality systems.",
+                        "serviceType": [
+                            "Medical Device Consultant",
+                            "Medical Device Consultancy",
+                            "USFDA 510(k) Clearance",
+                            "510 k Premarket Notification",
+                            "CDSCO Medical Device Licensing",
+                            "EU MDR CE Marking",
+                            "ISO 13485 QMS Implementation"
+                        ],
+                        "areaServed": ["India", "United States", "European Union", "United Kingdom", "Global"],
+                        "knowsAbout": [
+                            "Medical Device Consultant",
+                            "Medical Device Consultancy",
+                            "USFDA",
+                            "USFDA 510 k",
+                            "510 k Premarket Notification",
+                            "CDSCO Medical Device Rules 2017",
+                            "EU MDR 2017/745",
+                            "ISO 13485:2016"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressCountry": "IN"
+                        }
+                    })
+                }}
+            />
             {/* ── HERO ── */}
             <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-2 lg:pb-2 pt-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -418,22 +457,22 @@ function Index() {
                             </p>
 
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
-                                Medical Device &amp; IVD Regulatory Consulting
+                                Medical Device Consultant &amp; Regulatory Consultancy
                             </h1>
                             <p className="mt-2 text-[17px] sm:text-[18px] font-semibold text-blue-700 leading-snug">
-                                From First Idea to Global Market Access
+                                Global USFDA 510(k), CDSCO India &amp; EU MDR/IVDR Market Access
                             </p>
 
                             <p className="mt-4 text-[14px] sm:text-[14.5px] font-medium text-navy/80 leading-relaxed">
-                                Boutique regulatory, quality, testing, manufacturing and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics across India and global markets.
+                                NKB Regovanta is a premier global <strong>medical device consultant</strong> and regulatory affairs <strong>consultancy</strong>. We provide end-to-end regulatory strategy, testing coordination, technical documentation, and market access for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics across India (CDSCO), the United States (USFDA 510 k / 510k), and international markets.
                             </p>
                             <p className="mt-3 text-[13px] leading-relaxed text-navy/65 font-medium">
-                                We support manufacturers with regulatory strategy, product registration, technical documentation, QMS readiness, testing strategy, manufacturing solutions and market entry across CDSCO, US FDA, EU MDR/IVDR, Brazil ANVISA and other international regulatory pathways.
+                                As a trusted medical device consultancy, our senior consultants support manufacturers with USFDA 510(k) clearances, eSTAR submissions, CDSCO manufacturing &amp; import licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS certification.
                             </p>
 
                             {/* Regulatory Authorities Strip */}
                             <div className="mt-4 flex flex-wrap gap-x-2 gap-y-1 items-center">
-                                {["CDSCO", "US FDA 510(k), De Novo & PMA", "EU MDR", "EU IVDR", "UK MHRA", "Health Canada", "TGA", "ANVISA", "SFDA", "MOHAP"].map((auth, i, arr) => (
+                                {["CDSCO India", "USFDA (510 k / 510k)", "US FDA De Novo & PMA", "EU MDR", "EU IVDR", "UK MHRA", "Health Canada", "TGA", "ANVISA", "SFDA", "MOHAP"].map((auth, i, arr) => (
                                     <span key={auth} className="flex items-center gap-x-2">
                                         <span className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{auth}</span>
                                         {i < arr.length - 1 && <span className="text-navy/25 text-[10px]">|</span>}
