@@ -27,9 +27,45 @@ import { Route as IndustriesCosmeticsRouteImport } from './routes/industries.cos
 import { Route as IndustriesIvdRouteImport } from './routes/industries.ivd'
 import { Route as IndustriesMedicalDevicesRouteImport } from './routes/industries.medical-devices'
 import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsBiologicalEvaluationTestingMedicalDevicesIso10993RouteImport } from './routes/insights.biological-evaluation-testing-medical-devices-iso-10993'
+import { Route as InsightsBorderlineMedicalDeviceClassificationStrategyRouteImport } from './routes/insights.borderline-medical-device-classification-strategy'
+import { Route as InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRouteImport } from './routes/insights.cdsco-medical-device-manufacturing-license-india'
+import { Route as InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRouteImport } from './routes/insights.cdsco-medical-device-registration-guidelines-india'
+import { Route as InsightsCeMarkingCardiovascularMedicalDevicesRouteImport } from './routes/insights.ce-marking-cardiovascular-medical-devices'
+import { Route as InsightsCeMarkingDigitalHealthTechnologiesRouteImport } from './routes/insights.ce-marking-digital-health-technologies'
+import { Route as InsightsCeMarkingProcessMedicalDevicesEuMdrRouteImport } from './routes/insights.ce-marking-process-medical-devices-eu-mdr'
+import { Route as InsightsClassIiiMedicalDeviceClassificationStrategyRouteImport } from './routes/insights.class-iii-medical-device-classification-strategy'
+import { Route as InsightsClinicalEvaluationEquivalenceMedicalDevicesRouteImport } from './routes/insights.clinical-evaluation-equivalence-medical-devices'
+import { Route as InsightsCoreRegulationsMedicalDeviceGlobalComplianceRouteImport } from './routes/insights.core-regulations-medical-device-global-compliance'
+import { Route as InsightsDentalScannersManufacturingRegulatoryStandardsRouteImport } from './routes/insights.dental-scanners-manufacturing-regulatory-standards'
+import { Route as InsightsDynamicRiskManagementSoftwareMedicalDevicesRouteImport } from './routes/insights.dynamic-risk-management-software-medical-devices'
+import { Route as InsightsEffectiveCapaSystemMedicalDevicesRouteImport } from './routes/insights.effective-capa-system-medical-devices'
+import { Route as InsightsEuAiActMedicalDevicesRouteImport } from './routes/insights.eu-ai-act-medical-devices'
 import { Route as InsightsEuMdr2026RouteImport } from './routes/insights.eu-mdr-2026'
+import { Route as InsightsEuMdrComplianceChallengesRouteImport } from './routes/insights.eu-mdr-compliance-challenges'
+import { Route as InsightsFda510kProgramModernizationSafetyStandardsRouteImport } from './routes/insights.fda-510k-program-modernization-safety-standards'
 import { Route as InsightsFdaInspections2026RouteImport } from './routes/insights.fda-inspections-2026'
+import { Route as InsightsFdaQSubPreSubmissionMeetingGuideRouteImport } from './routes/insights.fda-q-sub-pre-submission-meeting-guide'
 import { Route as InsightsFdaQmsr2026RouteImport } from './routes/insights.fda-qmsr-2026'
+import { Route as InsightsFdaQmsrComplianceGuideRouteImport } from './routes/insights.fda-qmsr-compliance-guide'
+import { Route as InsightsGsprComplianceEuMdrIvdrRouteImport } from './routes/insights.gspr-compliance-eu-mdr-ivdr'
+import { Route as InsightsGsprFoundationMedicalDeviceDevelopmentRouteImport } from './routes/insights.gspr-foundation-medical-device-development'
+import { Route as InsightsHumanFactorsEngineeringMedicalDeviceDesignRouteImport } from './routes/insights.human-factors-engineering-medical-device-design'
+import { Route as InsightsIec62304MedicalDeviceSoftwareLifecycleRouteImport } from './routes/insights.iec-62304-medical-device-software-lifecycle'
+import { Route as InsightsIndiaMdr2026Rule63RouteImport } from './routes/insights.india-mdr-2026-rule-63'
+import { Route as InsightsIvdrClassDVerificationNotifiedBodiesRouteImport } from './routes/insights.ivdr-class-d-verification-notified-bodies'
+import { Route as InsightsMedicalDeviceDocumentationComplianceToEvidenceRouteImport } from './routes/insights.medical-device-documentation-compliance-to-evidence'
+import { Route as InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRouteImport } from './routes/insights.notified-body-expectations-eu-mdr-technical-documentation'
+import { Route as InsightsNotifiedBodySelectionConformityAssessmentGuideRouteImport } from './routes/insights.notified-body-selection-conformity-assessment-guide'
+import { Route as InsightsOptimalTimingUsfda510kSubmissionRouteImport } from './routes/insights.optimal-timing-usfda-510k-submission'
+import { Route as InsightsOvercomingFda510kClearanceBarriersRouteImport } from './routes/insights.overcoming-fda-510k-clearance-barriers'
+import { Route as InsightsQmsDocumentationIso13485ComplianceRouteImport } from './routes/insights.qms-documentation-iso-13485-compliance'
+import { Route as InsightsRegulationEu20241860MdrIvdrTransitionRouteImport } from './routes/insights.regulation-eu-2024-1860-mdr-ivdr-transition'
+import { Route as InsightsRegulatoryComplianceStrategyGlobalMedtechRouteImport } from './routes/insights.regulatory-compliance-strategy-global-medtech'
+import { Route as InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRouteImport } from './routes/insights.remote-patient-monitoring-devices-regulatory-framework'
+import { Route as InsightsSamdClassificationSubmissionUsfdaRouteImport } from './routes/insights.samd-classification-submission-usfda'
+import { Route as InsightsUnderstandingPrrcEuMdrIvdrRouteImport } from './routes/insights.understanding-prrc-eu-mdr-ivdr'
+import { Route as InsightsUsabilityTestingMedicalDevicesIec62366RouteImport } from './routes/insights.usability-testing-medical-devices-iec-62366'
 import { Route as MarketsIndexRouteImport } from './routes/markets.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesAuditComplianceRouteImport } from './routes/services.audit-compliance'
@@ -346,15 +382,117 @@ const InsightsIndexRoute = InsightsIndexRouteImport.update({
   path: '/insights/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route =
+  InsightsBiologicalEvaluationTestingMedicalDevicesIso10993RouteImport.update({
+    id: '/insights/biological-evaluation-testing-medical-devices-iso-10993',
+    path: '/insights/biological-evaluation-testing-medical-devices-iso-10993',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsBorderlineMedicalDeviceClassificationStrategyRoute =
+  InsightsBorderlineMedicalDeviceClassificationStrategyRouteImport.update({
+    id: '/insights/borderline-medical-device-classification-strategy',
+    path: '/insights/borderline-medical-device-classification-strategy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute =
+  InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRouteImport.update({
+    id: '/insights/cdsco-medical-device-manufacturing-license-india',
+    path: '/insights/cdsco-medical-device-manufacturing-license-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute =
+  InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRouteImport.update({
+    id: '/insights/cdsco-medical-device-registration-guidelines-india',
+    path: '/insights/cdsco-medical-device-registration-guidelines-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCeMarkingCardiovascularMedicalDevicesRoute =
+  InsightsCeMarkingCardiovascularMedicalDevicesRouteImport.update({
+    id: '/insights/ce-marking-cardiovascular-medical-devices',
+    path: '/insights/ce-marking-cardiovascular-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCeMarkingDigitalHealthTechnologiesRoute =
+  InsightsCeMarkingDigitalHealthTechnologiesRouteImport.update({
+    id: '/insights/ce-marking-digital-health-technologies',
+    path: '/insights/ce-marking-digital-health-technologies',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCeMarkingProcessMedicalDevicesEuMdrRoute =
+  InsightsCeMarkingProcessMedicalDevicesEuMdrRouteImport.update({
+    id: '/insights/ce-marking-process-medical-devices-eu-mdr',
+    path: '/insights/ce-marking-process-medical-devices-eu-mdr',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsClassIiiMedicalDeviceClassificationStrategyRoute =
+  InsightsClassIiiMedicalDeviceClassificationStrategyRouteImport.update({
+    id: '/insights/class-iii-medical-device-classification-strategy',
+    path: '/insights/class-iii-medical-device-classification-strategy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute =
+  InsightsClinicalEvaluationEquivalenceMedicalDevicesRouteImport.update({
+    id: '/insights/clinical-evaluation-equivalence-medical-devices',
+    path: '/insights/clinical-evaluation-equivalence-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute =
+  InsightsCoreRegulationsMedicalDeviceGlobalComplianceRouteImport.update({
+    id: '/insights/core-regulations-medical-device-global-compliance',
+    path: '/insights/core-regulations-medical-device-global-compliance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsDentalScannersManufacturingRegulatoryStandardsRoute =
+  InsightsDentalScannersManufacturingRegulatoryStandardsRouteImport.update({
+    id: '/insights/dental-scanners-manufacturing-regulatory-standards',
+    path: '/insights/dental-scanners-manufacturing-regulatory-standards',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute =
+  InsightsDynamicRiskManagementSoftwareMedicalDevicesRouteImport.update({
+    id: '/insights/dynamic-risk-management-software-medical-devices',
+    path: '/insights/dynamic-risk-management-software-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsEffectiveCapaSystemMedicalDevicesRoute =
+  InsightsEffectiveCapaSystemMedicalDevicesRouteImport.update({
+    id: '/insights/effective-capa-system-medical-devices',
+    path: '/insights/effective-capa-system-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsEuAiActMedicalDevicesRoute =
+  InsightsEuAiActMedicalDevicesRouteImport.update({
+    id: '/insights/eu-ai-act-medical-devices',
+    path: '/insights/eu-ai-act-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const InsightsEuMdr2026Route = InsightsEuMdr2026RouteImport.update({
   id: '/insights/eu-mdr-2026',
   path: '/insights/eu-mdr-2026',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsEuMdrComplianceChallengesRoute =
+  InsightsEuMdrComplianceChallengesRouteImport.update({
+    id: '/insights/eu-mdr-compliance-challenges',
+    path: '/insights/eu-mdr-compliance-challenges',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsFda510kProgramModernizationSafetyStandardsRoute =
+  InsightsFda510kProgramModernizationSafetyStandardsRouteImport.update({
+    id: '/insights/fda-510k-program-modernization-safety-standards',
+    path: '/insights/fda-510k-program-modernization-safety-standards',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const InsightsFdaInspections2026Route =
   InsightsFdaInspections2026RouteImport.update({
     id: '/insights/fda-inspections-2026',
     path: '/insights/fda-inspections-2026',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsFdaQSubPreSubmissionMeetingGuideRoute =
+  InsightsFdaQSubPreSubmissionMeetingGuideRouteImport.update({
+    id: '/insights/fda-q-sub-pre-submission-meeting-guide',
+    path: '/insights/fda-q-sub-pre-submission-meeting-guide',
     getParentRoute: () => rootRouteImport,
   } as any)
 const InsightsFdaQmsr2026Route = InsightsFdaQmsr2026RouteImport.update({
@@ -362,6 +500,122 @@ const InsightsFdaQmsr2026Route = InsightsFdaQmsr2026RouteImport.update({
   path: '/insights/fda-qmsr-2026',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsFdaQmsrComplianceGuideRoute =
+  InsightsFdaQmsrComplianceGuideRouteImport.update({
+    id: '/insights/fda-qmsr-compliance-guide',
+    path: '/insights/fda-qmsr-compliance-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsGsprComplianceEuMdrIvdrRoute =
+  InsightsGsprComplianceEuMdrIvdrRouteImport.update({
+    id: '/insights/gspr-compliance-eu-mdr-ivdr',
+    path: '/insights/gspr-compliance-eu-mdr-ivdr',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsGsprFoundationMedicalDeviceDevelopmentRoute =
+  InsightsGsprFoundationMedicalDeviceDevelopmentRouteImport.update({
+    id: '/insights/gspr-foundation-medical-device-development',
+    path: '/insights/gspr-foundation-medical-device-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute =
+  InsightsHumanFactorsEngineeringMedicalDeviceDesignRouteImport.update({
+    id: '/insights/human-factors-engineering-medical-device-design',
+    path: '/insights/human-factors-engineering-medical-device-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsIec62304MedicalDeviceSoftwareLifecycleRoute =
+  InsightsIec62304MedicalDeviceSoftwareLifecycleRouteImport.update({
+    id: '/insights/iec-62304-medical-device-software-lifecycle',
+    path: '/insights/iec-62304-medical-device-software-lifecycle',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsIndiaMdr2026Rule63Route =
+  InsightsIndiaMdr2026Rule63RouteImport.update({
+    id: '/insights/india-mdr-2026-rule-63',
+    path: '/insights/india-mdr-2026-rule-63',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsIvdrClassDVerificationNotifiedBodiesRoute =
+  InsightsIvdrClassDVerificationNotifiedBodiesRouteImport.update({
+    id: '/insights/ivdr-class-d-verification-notified-bodies',
+    path: '/insights/ivdr-class-d-verification-notified-bodies',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute =
+  InsightsMedicalDeviceDocumentationComplianceToEvidenceRouteImport.update({
+    id: '/insights/medical-device-documentation-compliance-to-evidence',
+    path: '/insights/medical-device-documentation-compliance-to-evidence',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute =
+  InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRouteImport.update(
+    {
+      id: '/insights/notified-body-expectations-eu-mdr-technical-documentation',
+      path: '/insights/notified-body-expectations-eu-mdr-technical-documentation',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const InsightsNotifiedBodySelectionConformityAssessmentGuideRoute =
+  InsightsNotifiedBodySelectionConformityAssessmentGuideRouteImport.update({
+    id: '/insights/notified-body-selection-conformity-assessment-guide',
+    path: '/insights/notified-body-selection-conformity-assessment-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsOptimalTimingUsfda510kSubmissionRoute =
+  InsightsOptimalTimingUsfda510kSubmissionRouteImport.update({
+    id: '/insights/optimal-timing-usfda-510k-submission',
+    path: '/insights/optimal-timing-usfda-510k-submission',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsOvercomingFda510kClearanceBarriersRoute =
+  InsightsOvercomingFda510kClearanceBarriersRouteImport.update({
+    id: '/insights/overcoming-fda-510k-clearance-barriers',
+    path: '/insights/overcoming-fda-510k-clearance-barriers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsQmsDocumentationIso13485ComplianceRoute =
+  InsightsQmsDocumentationIso13485ComplianceRouteImport.update({
+    id: '/insights/qms-documentation-iso-13485-compliance',
+    path: '/insights/qms-documentation-iso-13485-compliance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsRegulationEu20241860MdrIvdrTransitionRoute =
+  InsightsRegulationEu20241860MdrIvdrTransitionRouteImport.update({
+    id: '/insights/regulation-eu-2024-1860-mdr-ivdr-transition',
+    path: '/insights/regulation-eu-2024-1860-mdr-ivdr-transition',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsRegulatoryComplianceStrategyGlobalMedtechRoute =
+  InsightsRegulatoryComplianceStrategyGlobalMedtechRouteImport.update({
+    id: '/insights/regulatory-compliance-strategy-global-medtech',
+    path: '/insights/regulatory-compliance-strategy-global-medtech',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute =
+  InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRouteImport.update({
+    id: '/insights/remote-patient-monitoring-devices-regulatory-framework',
+    path: '/insights/remote-patient-monitoring-devices-regulatory-framework',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsSamdClassificationSubmissionUsfdaRoute =
+  InsightsSamdClassificationSubmissionUsfdaRouteImport.update({
+    id: '/insights/samd-classification-submission-usfda',
+    path: '/insights/samd-classification-submission-usfda',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsUnderstandingPrrcEuMdrIvdrRoute =
+  InsightsUnderstandingPrrcEuMdrIvdrRouteImport.update({
+    id: '/insights/understanding-prrc-eu-mdr-ivdr',
+    path: '/insights/understanding-prrc-eu-mdr-ivdr',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InsightsUsabilityTestingMedicalDevicesIec62366Route =
+  InsightsUsabilityTestingMedicalDevicesIec62366RouteImport.update({
+    id: '/insights/usability-testing-medical-devices-iec-62366',
+    path: '/insights/usability-testing-medical-devices-iec-62366',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MarketsIndexRoute = MarketsIndexRouteImport.update({
   id: '/markets/',
   path: '/markets/',
@@ -1600,9 +1854,45 @@ export interface FileRoutesByFullPath {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
+  '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
+  '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
+  '/insights/cdsco-medical-device-registration-guidelines-india': typeof InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute
+  '/insights/ce-marking-cardiovascular-medical-devices': typeof InsightsCeMarkingCardiovascularMedicalDevicesRoute
+  '/insights/ce-marking-digital-health-technologies': typeof InsightsCeMarkingDigitalHealthTechnologiesRoute
+  '/insights/ce-marking-process-medical-devices-eu-mdr': typeof InsightsCeMarkingProcessMedicalDevicesEuMdrRoute
+  '/insights/class-iii-medical-device-classification-strategy': typeof InsightsClassIiiMedicalDeviceClassificationStrategyRoute
+  '/insights/clinical-evaluation-equivalence-medical-devices': typeof InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute
+  '/insights/core-regulations-medical-device-global-compliance': typeof InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute
+  '/insights/dental-scanners-manufacturing-regulatory-standards': typeof InsightsDentalScannersManufacturingRegulatoryStandardsRoute
+  '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
+  '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
+  '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
+  '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
+  '/insights/gspr-compliance-eu-mdr-ivdr': typeof InsightsGsprComplianceEuMdrIvdrRoute
+  '/insights/gspr-foundation-medical-device-development': typeof InsightsGsprFoundationMedicalDeviceDevelopmentRoute
+  '/insights/human-factors-engineering-medical-device-design': typeof InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute
+  '/insights/iec-62304-medical-device-software-lifecycle': typeof InsightsIec62304MedicalDeviceSoftwareLifecycleRoute
+  '/insights/india-mdr-2026-rule-63': typeof InsightsIndiaMdr2026Rule63Route
+  '/insights/ivdr-class-d-verification-notified-bodies': typeof InsightsIvdrClassDVerificationNotifiedBodiesRoute
+  '/insights/medical-device-documentation-compliance-to-evidence': typeof InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute
+  '/insights/notified-body-expectations-eu-mdr-technical-documentation': typeof InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute
+  '/insights/notified-body-selection-conformity-assessment-guide': typeof InsightsNotifiedBodySelectionConformityAssessmentGuideRoute
+  '/insights/optimal-timing-usfda-510k-submission': typeof InsightsOptimalTimingUsfda510kSubmissionRoute
+  '/insights/overcoming-fda-510k-clearance-barriers': typeof InsightsOvercomingFda510kClearanceBarriersRoute
+  '/insights/qms-documentation-iso-13485-compliance': typeof InsightsQmsDocumentationIso13485ComplianceRoute
+  '/insights/regulation-eu-2024-1860-mdr-ivdr-transition': typeof InsightsRegulationEu20241860MdrIvdrTransitionRoute
+  '/insights/regulatory-compliance-strategy-global-medtech': typeof InsightsRegulatoryComplianceStrategyGlobalMedtechRoute
+  '/insights/remote-patient-monitoring-devices-regulatory-framework': typeof InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute
+  '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
+  '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
+  '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
   '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
@@ -1842,9 +2132,45 @@ export interface FileRoutesByTo {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
+  '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
+  '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
+  '/insights/cdsco-medical-device-registration-guidelines-india': typeof InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute
+  '/insights/ce-marking-cardiovascular-medical-devices': typeof InsightsCeMarkingCardiovascularMedicalDevicesRoute
+  '/insights/ce-marking-digital-health-technologies': typeof InsightsCeMarkingDigitalHealthTechnologiesRoute
+  '/insights/ce-marking-process-medical-devices-eu-mdr': typeof InsightsCeMarkingProcessMedicalDevicesEuMdrRoute
+  '/insights/class-iii-medical-device-classification-strategy': typeof InsightsClassIiiMedicalDeviceClassificationStrategyRoute
+  '/insights/clinical-evaluation-equivalence-medical-devices': typeof InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute
+  '/insights/core-regulations-medical-device-global-compliance': typeof InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute
+  '/insights/dental-scanners-manufacturing-regulatory-standards': typeof InsightsDentalScannersManufacturingRegulatoryStandardsRoute
+  '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
+  '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
+  '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
+  '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
+  '/insights/gspr-compliance-eu-mdr-ivdr': typeof InsightsGsprComplianceEuMdrIvdrRoute
+  '/insights/gspr-foundation-medical-device-development': typeof InsightsGsprFoundationMedicalDeviceDevelopmentRoute
+  '/insights/human-factors-engineering-medical-device-design': typeof InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute
+  '/insights/iec-62304-medical-device-software-lifecycle': typeof InsightsIec62304MedicalDeviceSoftwareLifecycleRoute
+  '/insights/india-mdr-2026-rule-63': typeof InsightsIndiaMdr2026Rule63Route
+  '/insights/ivdr-class-d-verification-notified-bodies': typeof InsightsIvdrClassDVerificationNotifiedBodiesRoute
+  '/insights/medical-device-documentation-compliance-to-evidence': typeof InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute
+  '/insights/notified-body-expectations-eu-mdr-technical-documentation': typeof InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute
+  '/insights/notified-body-selection-conformity-assessment-guide': typeof InsightsNotifiedBodySelectionConformityAssessmentGuideRoute
+  '/insights/optimal-timing-usfda-510k-submission': typeof InsightsOptimalTimingUsfda510kSubmissionRoute
+  '/insights/overcoming-fda-510k-clearance-barriers': typeof InsightsOvercomingFda510kClearanceBarriersRoute
+  '/insights/qms-documentation-iso-13485-compliance': typeof InsightsQmsDocumentationIso13485ComplianceRoute
+  '/insights/regulation-eu-2024-1860-mdr-ivdr-transition': typeof InsightsRegulationEu20241860MdrIvdrTransitionRoute
+  '/insights/regulatory-compliance-strategy-global-medtech': typeof InsightsRegulatoryComplianceStrategyGlobalMedtechRoute
+  '/insights/remote-patient-monitoring-devices-regulatory-framework': typeof InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute
+  '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
+  '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
+  '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
   '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
   '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
@@ -2075,9 +2401,45 @@ export interface FileRoutesById {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
+  '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
+  '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
+  '/insights/cdsco-medical-device-registration-guidelines-india': typeof InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute
+  '/insights/ce-marking-cardiovascular-medical-devices': typeof InsightsCeMarkingCardiovascularMedicalDevicesRoute
+  '/insights/ce-marking-digital-health-technologies': typeof InsightsCeMarkingDigitalHealthTechnologiesRoute
+  '/insights/ce-marking-process-medical-devices-eu-mdr': typeof InsightsCeMarkingProcessMedicalDevicesEuMdrRoute
+  '/insights/class-iii-medical-device-classification-strategy': typeof InsightsClassIiiMedicalDeviceClassificationStrategyRoute
+  '/insights/clinical-evaluation-equivalence-medical-devices': typeof InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute
+  '/insights/core-regulations-medical-device-global-compliance': typeof InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute
+  '/insights/dental-scanners-manufacturing-regulatory-standards': typeof InsightsDentalScannersManufacturingRegulatoryStandardsRoute
+  '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
+  '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
+  '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
   '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
+  '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
   '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
+  '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
+  '/insights/gspr-compliance-eu-mdr-ivdr': typeof InsightsGsprComplianceEuMdrIvdrRoute
+  '/insights/gspr-foundation-medical-device-development': typeof InsightsGsprFoundationMedicalDeviceDevelopmentRoute
+  '/insights/human-factors-engineering-medical-device-design': typeof InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute
+  '/insights/iec-62304-medical-device-software-lifecycle': typeof InsightsIec62304MedicalDeviceSoftwareLifecycleRoute
+  '/insights/india-mdr-2026-rule-63': typeof InsightsIndiaMdr2026Rule63Route
+  '/insights/ivdr-class-d-verification-notified-bodies': typeof InsightsIvdrClassDVerificationNotifiedBodiesRoute
+  '/insights/medical-device-documentation-compliance-to-evidence': typeof InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute
+  '/insights/notified-body-expectations-eu-mdr-technical-documentation': typeof InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute
+  '/insights/notified-body-selection-conformity-assessment-guide': typeof InsightsNotifiedBodySelectionConformityAssessmentGuideRoute
+  '/insights/optimal-timing-usfda-510k-submission': typeof InsightsOptimalTimingUsfda510kSubmissionRoute
+  '/insights/overcoming-fda-510k-clearance-barriers': typeof InsightsOvercomingFda510kClearanceBarriersRoute
+  '/insights/qms-documentation-iso-13485-compliance': typeof InsightsQmsDocumentationIso13485ComplianceRoute
+  '/insights/regulation-eu-2024-1860-mdr-ivdr-transition': typeof InsightsRegulationEu20241860MdrIvdrTransitionRoute
+  '/insights/regulatory-compliance-strategy-global-medtech': typeof InsightsRegulatoryComplianceStrategyGlobalMedtechRoute
+  '/insights/remote-patient-monitoring-devices-regulatory-framework': typeof InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute
+  '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
+  '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
+  '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
   '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
@@ -2320,9 +2682,45 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+    | '/insights/borderline-medical-device-classification-strategy'
+    | '/insights/cdsco-medical-device-manufacturing-license-india'
+    | '/insights/cdsco-medical-device-registration-guidelines-india'
+    | '/insights/ce-marking-cardiovascular-medical-devices'
+    | '/insights/ce-marking-digital-health-technologies'
+    | '/insights/ce-marking-process-medical-devices-eu-mdr'
+    | '/insights/class-iii-medical-device-classification-strategy'
+    | '/insights/clinical-evaluation-equivalence-medical-devices'
+    | '/insights/core-regulations-medical-device-global-compliance'
+    | '/insights/dental-scanners-manufacturing-regulatory-standards'
+    | '/insights/dynamic-risk-management-software-medical-devices'
+    | '/insights/effective-capa-system-medical-devices'
+    | '/insights/eu-ai-act-medical-devices'
     | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-compliance-challenges'
+    | '/insights/fda-510k-program-modernization-safety-standards'
     | '/insights/fda-inspections-2026'
+    | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
+    | '/insights/fda-qmsr-compliance-guide'
+    | '/insights/gspr-compliance-eu-mdr-ivdr'
+    | '/insights/gspr-foundation-medical-device-development'
+    | '/insights/human-factors-engineering-medical-device-design'
+    | '/insights/iec-62304-medical-device-software-lifecycle'
+    | '/insights/india-mdr-2026-rule-63'
+    | '/insights/ivdr-class-d-verification-notified-bodies'
+    | '/insights/medical-device-documentation-compliance-to-evidence'
+    | '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+    | '/insights/notified-body-selection-conformity-assessment-guide'
+    | '/insights/optimal-timing-usfda-510k-submission'
+    | '/insights/overcoming-fda-510k-clearance-barriers'
+    | '/insights/qms-documentation-iso-13485-compliance'
+    | '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+    | '/insights/regulatory-compliance-strategy-global-medtech'
+    | '/insights/remote-patient-monitoring-devices-regulatory-framework'
+    | '/insights/samd-classification-submission-usfda'
+    | '/insights/understanding-prrc-eu-mdr-ivdr'
+    | '/insights/usability-testing-medical-devices-iec-62366'
     | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
@@ -2562,9 +2960,45 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+    | '/insights/borderline-medical-device-classification-strategy'
+    | '/insights/cdsco-medical-device-manufacturing-license-india'
+    | '/insights/cdsco-medical-device-registration-guidelines-india'
+    | '/insights/ce-marking-cardiovascular-medical-devices'
+    | '/insights/ce-marking-digital-health-technologies'
+    | '/insights/ce-marking-process-medical-devices-eu-mdr'
+    | '/insights/class-iii-medical-device-classification-strategy'
+    | '/insights/clinical-evaluation-equivalence-medical-devices'
+    | '/insights/core-regulations-medical-device-global-compliance'
+    | '/insights/dental-scanners-manufacturing-regulatory-standards'
+    | '/insights/dynamic-risk-management-software-medical-devices'
+    | '/insights/effective-capa-system-medical-devices'
+    | '/insights/eu-ai-act-medical-devices'
     | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-compliance-challenges'
+    | '/insights/fda-510k-program-modernization-safety-standards'
     | '/insights/fda-inspections-2026'
+    | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
+    | '/insights/fda-qmsr-compliance-guide'
+    | '/insights/gspr-compliance-eu-mdr-ivdr'
+    | '/insights/gspr-foundation-medical-device-development'
+    | '/insights/human-factors-engineering-medical-device-design'
+    | '/insights/iec-62304-medical-device-software-lifecycle'
+    | '/insights/india-mdr-2026-rule-63'
+    | '/insights/ivdr-class-d-verification-notified-bodies'
+    | '/insights/medical-device-documentation-compliance-to-evidence'
+    | '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+    | '/insights/notified-body-selection-conformity-assessment-guide'
+    | '/insights/optimal-timing-usfda-510k-submission'
+    | '/insights/overcoming-fda-510k-clearance-barriers'
+    | '/insights/qms-documentation-iso-13485-compliance'
+    | '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+    | '/insights/regulatory-compliance-strategy-global-medtech'
+    | '/insights/remote-patient-monitoring-devices-regulatory-framework'
+    | '/insights/samd-classification-submission-usfda'
+    | '/insights/understanding-prrc-eu-mdr-ivdr'
+    | '/insights/usability-testing-medical-devices-iec-62366'
     | '/services/audit-compliance'
     | '/services/drug-device-combination-products'
     | '/services/drug-licenses-for-importers'
@@ -2794,9 +3228,45 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+    | '/insights/borderline-medical-device-classification-strategy'
+    | '/insights/cdsco-medical-device-manufacturing-license-india'
+    | '/insights/cdsco-medical-device-registration-guidelines-india'
+    | '/insights/ce-marking-cardiovascular-medical-devices'
+    | '/insights/ce-marking-digital-health-technologies'
+    | '/insights/ce-marking-process-medical-devices-eu-mdr'
+    | '/insights/class-iii-medical-device-classification-strategy'
+    | '/insights/clinical-evaluation-equivalence-medical-devices'
+    | '/insights/core-regulations-medical-device-global-compliance'
+    | '/insights/dental-scanners-manufacturing-regulatory-standards'
+    | '/insights/dynamic-risk-management-software-medical-devices'
+    | '/insights/effective-capa-system-medical-devices'
+    | '/insights/eu-ai-act-medical-devices'
     | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-compliance-challenges'
+    | '/insights/fda-510k-program-modernization-safety-standards'
     | '/insights/fda-inspections-2026'
+    | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
+    | '/insights/fda-qmsr-compliance-guide'
+    | '/insights/gspr-compliance-eu-mdr-ivdr'
+    | '/insights/gspr-foundation-medical-device-development'
+    | '/insights/human-factors-engineering-medical-device-design'
+    | '/insights/iec-62304-medical-device-software-lifecycle'
+    | '/insights/india-mdr-2026-rule-63'
+    | '/insights/ivdr-class-d-verification-notified-bodies'
+    | '/insights/medical-device-documentation-compliance-to-evidence'
+    | '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+    | '/insights/notified-body-selection-conformity-assessment-guide'
+    | '/insights/optimal-timing-usfda-510k-submission'
+    | '/insights/overcoming-fda-510k-clearance-barriers'
+    | '/insights/qms-documentation-iso-13485-compliance'
+    | '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+    | '/insights/regulatory-compliance-strategy-global-medtech'
+    | '/insights/remote-patient-monitoring-devices-regulatory-framework'
+    | '/insights/samd-classification-submission-usfda'
+    | '/insights/understanding-prrc-eu-mdr-ivdr'
+    | '/insights/usability-testing-medical-devices-iec-62366'
     | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
@@ -3032,9 +3502,45 @@ export interface RootRouteChildren {
   IndustriesCosmeticsRoute: typeof IndustriesCosmeticsRoute
   IndustriesIvdRoute: typeof IndustriesIvdRoute
   IndustriesMedicalDevicesRoute: typeof IndustriesMedicalDevicesRoute
+  InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route: typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
+  InsightsBorderlineMedicalDeviceClassificationStrategyRoute: typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
+  InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute: typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
+  InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute: typeof InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute
+  InsightsCeMarkingCardiovascularMedicalDevicesRoute: typeof InsightsCeMarkingCardiovascularMedicalDevicesRoute
+  InsightsCeMarkingDigitalHealthTechnologiesRoute: typeof InsightsCeMarkingDigitalHealthTechnologiesRoute
+  InsightsCeMarkingProcessMedicalDevicesEuMdrRoute: typeof InsightsCeMarkingProcessMedicalDevicesEuMdrRoute
+  InsightsClassIiiMedicalDeviceClassificationStrategyRoute: typeof InsightsClassIiiMedicalDeviceClassificationStrategyRoute
+  InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute: typeof InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute
+  InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute: typeof InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute
+  InsightsDentalScannersManufacturingRegulatoryStandardsRoute: typeof InsightsDentalScannersManufacturingRegulatoryStandardsRoute
+  InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute: typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
+  InsightsEffectiveCapaSystemMedicalDevicesRoute: typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
+  InsightsEuAiActMedicalDevicesRoute: typeof InsightsEuAiActMedicalDevicesRoute
   InsightsEuMdr2026Route: typeof InsightsEuMdr2026Route
+  InsightsEuMdrComplianceChallengesRoute: typeof InsightsEuMdrComplianceChallengesRoute
+  InsightsFda510kProgramModernizationSafetyStandardsRoute: typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
   InsightsFdaInspections2026Route: typeof InsightsFdaInspections2026Route
+  InsightsFdaQSubPreSubmissionMeetingGuideRoute: typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   InsightsFdaQmsr2026Route: typeof InsightsFdaQmsr2026Route
+  InsightsFdaQmsrComplianceGuideRoute: typeof InsightsFdaQmsrComplianceGuideRoute
+  InsightsGsprComplianceEuMdrIvdrRoute: typeof InsightsGsprComplianceEuMdrIvdrRoute
+  InsightsGsprFoundationMedicalDeviceDevelopmentRoute: typeof InsightsGsprFoundationMedicalDeviceDevelopmentRoute
+  InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute: typeof InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute
+  InsightsIec62304MedicalDeviceSoftwareLifecycleRoute: typeof InsightsIec62304MedicalDeviceSoftwareLifecycleRoute
+  InsightsIndiaMdr2026Rule63Route: typeof InsightsIndiaMdr2026Rule63Route
+  InsightsIvdrClassDVerificationNotifiedBodiesRoute: typeof InsightsIvdrClassDVerificationNotifiedBodiesRoute
+  InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute: typeof InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute
+  InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute: typeof InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute
+  InsightsNotifiedBodySelectionConformityAssessmentGuideRoute: typeof InsightsNotifiedBodySelectionConformityAssessmentGuideRoute
+  InsightsOptimalTimingUsfda510kSubmissionRoute: typeof InsightsOptimalTimingUsfda510kSubmissionRoute
+  InsightsOvercomingFda510kClearanceBarriersRoute: typeof InsightsOvercomingFda510kClearanceBarriersRoute
+  InsightsQmsDocumentationIso13485ComplianceRoute: typeof InsightsQmsDocumentationIso13485ComplianceRoute
+  InsightsRegulationEu20241860MdrIvdrTransitionRoute: typeof InsightsRegulationEu20241860MdrIvdrTransitionRoute
+  InsightsRegulatoryComplianceStrategyGlobalMedtechRoute: typeof InsightsRegulatoryComplianceStrategyGlobalMedtechRoute
+  InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute: typeof InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute
+  InsightsSamdClassificationSubmissionUsfdaRoute: typeof InsightsSamdClassificationSubmissionUsfdaRoute
+  InsightsUnderstandingPrrcEuMdrIvdrRoute: typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
+  InsightsUsabilityTestingMedicalDevicesIec62366Route: typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
   ServicesAuditComplianceRoute: typeof ServicesAuditComplianceRoute
   ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
   ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
@@ -3203,11 +3709,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/insights/biological-evaluation-testing-medical-devices-iso-10993': {
+      id: '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+      path: '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+      fullPath: '/insights/biological-evaluation-testing-medical-devices-iso-10993'
+      preLoaderRoute: typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/borderline-medical-device-classification-strategy': {
+      id: '/insights/borderline-medical-device-classification-strategy'
+      path: '/insights/borderline-medical-device-classification-strategy'
+      fullPath: '/insights/borderline-medical-device-classification-strategy'
+      preLoaderRoute: typeof InsightsBorderlineMedicalDeviceClassificationStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/cdsco-medical-device-manufacturing-license-india': {
+      id: '/insights/cdsco-medical-device-manufacturing-license-india'
+      path: '/insights/cdsco-medical-device-manufacturing-license-india'
+      fullPath: '/insights/cdsco-medical-device-manufacturing-license-india'
+      preLoaderRoute: typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/cdsco-medical-device-registration-guidelines-india': {
+      id: '/insights/cdsco-medical-device-registration-guidelines-india'
+      path: '/insights/cdsco-medical-device-registration-guidelines-india'
+      fullPath: '/insights/cdsco-medical-device-registration-guidelines-india'
+      preLoaderRoute: typeof InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/ce-marking-cardiovascular-medical-devices': {
+      id: '/insights/ce-marking-cardiovascular-medical-devices'
+      path: '/insights/ce-marking-cardiovascular-medical-devices'
+      fullPath: '/insights/ce-marking-cardiovascular-medical-devices'
+      preLoaderRoute: typeof InsightsCeMarkingCardiovascularMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/ce-marking-digital-health-technologies': {
+      id: '/insights/ce-marking-digital-health-technologies'
+      path: '/insights/ce-marking-digital-health-technologies'
+      fullPath: '/insights/ce-marking-digital-health-technologies'
+      preLoaderRoute: typeof InsightsCeMarkingDigitalHealthTechnologiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/ce-marking-process-medical-devices-eu-mdr': {
+      id: '/insights/ce-marking-process-medical-devices-eu-mdr'
+      path: '/insights/ce-marking-process-medical-devices-eu-mdr'
+      fullPath: '/insights/ce-marking-process-medical-devices-eu-mdr'
+      preLoaderRoute: typeof InsightsCeMarkingProcessMedicalDevicesEuMdrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/class-iii-medical-device-classification-strategy': {
+      id: '/insights/class-iii-medical-device-classification-strategy'
+      path: '/insights/class-iii-medical-device-classification-strategy'
+      fullPath: '/insights/class-iii-medical-device-classification-strategy'
+      preLoaderRoute: typeof InsightsClassIiiMedicalDeviceClassificationStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/clinical-evaluation-equivalence-medical-devices': {
+      id: '/insights/clinical-evaluation-equivalence-medical-devices'
+      path: '/insights/clinical-evaluation-equivalence-medical-devices'
+      fullPath: '/insights/clinical-evaluation-equivalence-medical-devices'
+      preLoaderRoute: typeof InsightsClinicalEvaluationEquivalenceMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/core-regulations-medical-device-global-compliance': {
+      id: '/insights/core-regulations-medical-device-global-compliance'
+      path: '/insights/core-regulations-medical-device-global-compliance'
+      fullPath: '/insights/core-regulations-medical-device-global-compliance'
+      preLoaderRoute: typeof InsightsCoreRegulationsMedicalDeviceGlobalComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/dental-scanners-manufacturing-regulatory-standards': {
+      id: '/insights/dental-scanners-manufacturing-regulatory-standards'
+      path: '/insights/dental-scanners-manufacturing-regulatory-standards'
+      fullPath: '/insights/dental-scanners-manufacturing-regulatory-standards'
+      preLoaderRoute: typeof InsightsDentalScannersManufacturingRegulatoryStandardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/dynamic-risk-management-software-medical-devices': {
+      id: '/insights/dynamic-risk-management-software-medical-devices'
+      path: '/insights/dynamic-risk-management-software-medical-devices'
+      fullPath: '/insights/dynamic-risk-management-software-medical-devices'
+      preLoaderRoute: typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/effective-capa-system-medical-devices': {
+      id: '/insights/effective-capa-system-medical-devices'
+      path: '/insights/effective-capa-system-medical-devices'
+      fullPath: '/insights/effective-capa-system-medical-devices'
+      preLoaderRoute: typeof InsightsEffectiveCapaSystemMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/eu-ai-act-medical-devices': {
+      id: '/insights/eu-ai-act-medical-devices'
+      path: '/insights/eu-ai-act-medical-devices'
+      fullPath: '/insights/eu-ai-act-medical-devices'
+      preLoaderRoute: typeof InsightsEuAiActMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/insights/eu-mdr-2026': {
       id: '/insights/eu-mdr-2026'
       path: '/insights/eu-mdr-2026'
       fullPath: '/insights/eu-mdr-2026'
       preLoaderRoute: typeof InsightsEuMdr2026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/eu-mdr-compliance-challenges': {
+      id: '/insights/eu-mdr-compliance-challenges'
+      path: '/insights/eu-mdr-compliance-challenges'
+      fullPath: '/insights/eu-mdr-compliance-challenges'
+      preLoaderRoute: typeof InsightsEuMdrComplianceChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/fda-510k-program-modernization-safety-standards': {
+      id: '/insights/fda-510k-program-modernization-safety-standards'
+      path: '/insights/fda-510k-program-modernization-safety-standards'
+      fullPath: '/insights/fda-510k-program-modernization-safety-standards'
+      preLoaderRoute: typeof InsightsFda510kProgramModernizationSafetyStandardsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights/fda-inspections-2026': {
@@ -3217,11 +3835,151 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsFdaInspections2026RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/insights/fda-q-sub-pre-submission-meeting-guide': {
+      id: '/insights/fda-q-sub-pre-submission-meeting-guide'
+      path: '/insights/fda-q-sub-pre-submission-meeting-guide'
+      fullPath: '/insights/fda-q-sub-pre-submission-meeting-guide'
+      preLoaderRoute: typeof InsightsFdaQSubPreSubmissionMeetingGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/insights/fda-qmsr-2026': {
       id: '/insights/fda-qmsr-2026'
       path: '/insights/fda-qmsr-2026'
       fullPath: '/insights/fda-qmsr-2026'
       preLoaderRoute: typeof InsightsFdaQmsr2026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/fda-qmsr-compliance-guide': {
+      id: '/insights/fda-qmsr-compliance-guide'
+      path: '/insights/fda-qmsr-compliance-guide'
+      fullPath: '/insights/fda-qmsr-compliance-guide'
+      preLoaderRoute: typeof InsightsFdaQmsrComplianceGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/gspr-compliance-eu-mdr-ivdr': {
+      id: '/insights/gspr-compliance-eu-mdr-ivdr'
+      path: '/insights/gspr-compliance-eu-mdr-ivdr'
+      fullPath: '/insights/gspr-compliance-eu-mdr-ivdr'
+      preLoaderRoute: typeof InsightsGsprComplianceEuMdrIvdrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/gspr-foundation-medical-device-development': {
+      id: '/insights/gspr-foundation-medical-device-development'
+      path: '/insights/gspr-foundation-medical-device-development'
+      fullPath: '/insights/gspr-foundation-medical-device-development'
+      preLoaderRoute: typeof InsightsGsprFoundationMedicalDeviceDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/human-factors-engineering-medical-device-design': {
+      id: '/insights/human-factors-engineering-medical-device-design'
+      path: '/insights/human-factors-engineering-medical-device-design'
+      fullPath: '/insights/human-factors-engineering-medical-device-design'
+      preLoaderRoute: typeof InsightsHumanFactorsEngineeringMedicalDeviceDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/iec-62304-medical-device-software-lifecycle': {
+      id: '/insights/iec-62304-medical-device-software-lifecycle'
+      path: '/insights/iec-62304-medical-device-software-lifecycle'
+      fullPath: '/insights/iec-62304-medical-device-software-lifecycle'
+      preLoaderRoute: typeof InsightsIec62304MedicalDeviceSoftwareLifecycleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/india-mdr-2026-rule-63': {
+      id: '/insights/india-mdr-2026-rule-63'
+      path: '/insights/india-mdr-2026-rule-63'
+      fullPath: '/insights/india-mdr-2026-rule-63'
+      preLoaderRoute: typeof InsightsIndiaMdr2026Rule63RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/ivdr-class-d-verification-notified-bodies': {
+      id: '/insights/ivdr-class-d-verification-notified-bodies'
+      path: '/insights/ivdr-class-d-verification-notified-bodies'
+      fullPath: '/insights/ivdr-class-d-verification-notified-bodies'
+      preLoaderRoute: typeof InsightsIvdrClassDVerificationNotifiedBodiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/medical-device-documentation-compliance-to-evidence': {
+      id: '/insights/medical-device-documentation-compliance-to-evidence'
+      path: '/insights/medical-device-documentation-compliance-to-evidence'
+      fullPath: '/insights/medical-device-documentation-compliance-to-evidence'
+      preLoaderRoute: typeof InsightsMedicalDeviceDocumentationComplianceToEvidenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/notified-body-expectations-eu-mdr-technical-documentation': {
+      id: '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+      path: '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+      fullPath: '/insights/notified-body-expectations-eu-mdr-technical-documentation'
+      preLoaderRoute: typeof InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/notified-body-selection-conformity-assessment-guide': {
+      id: '/insights/notified-body-selection-conformity-assessment-guide'
+      path: '/insights/notified-body-selection-conformity-assessment-guide'
+      fullPath: '/insights/notified-body-selection-conformity-assessment-guide'
+      preLoaderRoute: typeof InsightsNotifiedBodySelectionConformityAssessmentGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/optimal-timing-usfda-510k-submission': {
+      id: '/insights/optimal-timing-usfda-510k-submission'
+      path: '/insights/optimal-timing-usfda-510k-submission'
+      fullPath: '/insights/optimal-timing-usfda-510k-submission'
+      preLoaderRoute: typeof InsightsOptimalTimingUsfda510kSubmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/overcoming-fda-510k-clearance-barriers': {
+      id: '/insights/overcoming-fda-510k-clearance-barriers'
+      path: '/insights/overcoming-fda-510k-clearance-barriers'
+      fullPath: '/insights/overcoming-fda-510k-clearance-barriers'
+      preLoaderRoute: typeof InsightsOvercomingFda510kClearanceBarriersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/qms-documentation-iso-13485-compliance': {
+      id: '/insights/qms-documentation-iso-13485-compliance'
+      path: '/insights/qms-documentation-iso-13485-compliance'
+      fullPath: '/insights/qms-documentation-iso-13485-compliance'
+      preLoaderRoute: typeof InsightsQmsDocumentationIso13485ComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/regulation-eu-2024-1860-mdr-ivdr-transition': {
+      id: '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+      path: '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+      fullPath: '/insights/regulation-eu-2024-1860-mdr-ivdr-transition'
+      preLoaderRoute: typeof InsightsRegulationEu20241860MdrIvdrTransitionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/regulatory-compliance-strategy-global-medtech': {
+      id: '/insights/regulatory-compliance-strategy-global-medtech'
+      path: '/insights/regulatory-compliance-strategy-global-medtech'
+      fullPath: '/insights/regulatory-compliance-strategy-global-medtech'
+      preLoaderRoute: typeof InsightsRegulatoryComplianceStrategyGlobalMedtechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/remote-patient-monitoring-devices-regulatory-framework': {
+      id: '/insights/remote-patient-monitoring-devices-regulatory-framework'
+      path: '/insights/remote-patient-monitoring-devices-regulatory-framework'
+      fullPath: '/insights/remote-patient-monitoring-devices-regulatory-framework'
+      preLoaderRoute: typeof InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/samd-classification-submission-usfda': {
+      id: '/insights/samd-classification-submission-usfda'
+      path: '/insights/samd-classification-submission-usfda'
+      fullPath: '/insights/samd-classification-submission-usfda'
+      preLoaderRoute: typeof InsightsSamdClassificationSubmissionUsfdaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/understanding-prrc-eu-mdr-ivdr': {
+      id: '/insights/understanding-prrc-eu-mdr-ivdr'
+      path: '/insights/understanding-prrc-eu-mdr-ivdr'
+      fullPath: '/insights/understanding-prrc-eu-mdr-ivdr'
+      preLoaderRoute: typeof InsightsUnderstandingPrrcEuMdrIvdrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/usability-testing-medical-devices-iec-62366': {
+      id: '/insights/usability-testing-medical-devices-iec-62366'
+      path: '/insights/usability-testing-medical-devices-iec-62366'
+      fullPath: '/insights/usability-testing-medical-devices-iec-62366'
+      preLoaderRoute: typeof InsightsUsabilityTestingMedicalDevicesIec62366RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/markets/': {
@@ -5304,9 +6062,77 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesCosmeticsRoute: IndustriesCosmeticsRoute,
   IndustriesIvdRoute: IndustriesIvdRoute,
   IndustriesMedicalDevicesRoute: IndustriesMedicalDevicesRoute,
+  InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route:
+    InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route,
+  InsightsBorderlineMedicalDeviceClassificationStrategyRoute:
+    InsightsBorderlineMedicalDeviceClassificationStrategyRoute,
+  InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute:
+    InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute,
+  InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute:
+    InsightsCdscoMedicalDeviceRegistrationGuidelinesIndiaRoute,
+  InsightsCeMarkingCardiovascularMedicalDevicesRoute:
+    InsightsCeMarkingCardiovascularMedicalDevicesRoute,
+  InsightsCeMarkingDigitalHealthTechnologiesRoute:
+    InsightsCeMarkingDigitalHealthTechnologiesRoute,
+  InsightsCeMarkingProcessMedicalDevicesEuMdrRoute:
+    InsightsCeMarkingProcessMedicalDevicesEuMdrRoute,
+  InsightsClassIiiMedicalDeviceClassificationStrategyRoute:
+    InsightsClassIiiMedicalDeviceClassificationStrategyRoute,
+  InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute:
+    InsightsClinicalEvaluationEquivalenceMedicalDevicesRoute,
+  InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute:
+    InsightsCoreRegulationsMedicalDeviceGlobalComplianceRoute,
+  InsightsDentalScannersManufacturingRegulatoryStandardsRoute:
+    InsightsDentalScannersManufacturingRegulatoryStandardsRoute,
+  InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute:
+    InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute,
+  InsightsEffectiveCapaSystemMedicalDevicesRoute:
+    InsightsEffectiveCapaSystemMedicalDevicesRoute,
+  InsightsEuAiActMedicalDevicesRoute: InsightsEuAiActMedicalDevicesRoute,
   InsightsEuMdr2026Route: InsightsEuMdr2026Route,
+  InsightsEuMdrComplianceChallengesRoute:
+    InsightsEuMdrComplianceChallengesRoute,
+  InsightsFda510kProgramModernizationSafetyStandardsRoute:
+    InsightsFda510kProgramModernizationSafetyStandardsRoute,
   InsightsFdaInspections2026Route: InsightsFdaInspections2026Route,
+  InsightsFdaQSubPreSubmissionMeetingGuideRoute:
+    InsightsFdaQSubPreSubmissionMeetingGuideRoute,
   InsightsFdaQmsr2026Route: InsightsFdaQmsr2026Route,
+  InsightsFdaQmsrComplianceGuideRoute: InsightsFdaQmsrComplianceGuideRoute,
+  InsightsGsprComplianceEuMdrIvdrRoute: InsightsGsprComplianceEuMdrIvdrRoute,
+  InsightsGsprFoundationMedicalDeviceDevelopmentRoute:
+    InsightsGsprFoundationMedicalDeviceDevelopmentRoute,
+  InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute:
+    InsightsHumanFactorsEngineeringMedicalDeviceDesignRoute,
+  InsightsIec62304MedicalDeviceSoftwareLifecycleRoute:
+    InsightsIec62304MedicalDeviceSoftwareLifecycleRoute,
+  InsightsIndiaMdr2026Rule63Route: InsightsIndiaMdr2026Rule63Route,
+  InsightsIvdrClassDVerificationNotifiedBodiesRoute:
+    InsightsIvdrClassDVerificationNotifiedBodiesRoute,
+  InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute:
+    InsightsMedicalDeviceDocumentationComplianceToEvidenceRoute,
+  InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute:
+    InsightsNotifiedBodyExpectationsEuMdrTechnicalDocumentationRoute,
+  InsightsNotifiedBodySelectionConformityAssessmentGuideRoute:
+    InsightsNotifiedBodySelectionConformityAssessmentGuideRoute,
+  InsightsOptimalTimingUsfda510kSubmissionRoute:
+    InsightsOptimalTimingUsfda510kSubmissionRoute,
+  InsightsOvercomingFda510kClearanceBarriersRoute:
+    InsightsOvercomingFda510kClearanceBarriersRoute,
+  InsightsQmsDocumentationIso13485ComplianceRoute:
+    InsightsQmsDocumentationIso13485ComplianceRoute,
+  InsightsRegulationEu20241860MdrIvdrTransitionRoute:
+    InsightsRegulationEu20241860MdrIvdrTransitionRoute,
+  InsightsRegulatoryComplianceStrategyGlobalMedtechRoute:
+    InsightsRegulatoryComplianceStrategyGlobalMedtechRoute,
+  InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute:
+    InsightsRemotePatientMonitoringDevicesRegulatoryFrameworkRoute,
+  InsightsSamdClassificationSubmissionUsfdaRoute:
+    InsightsSamdClassificationSubmissionUsfdaRoute,
+  InsightsUnderstandingPrrcEuMdrIvdrRoute:
+    InsightsUnderstandingPrrcEuMdrIvdrRoute,
+  InsightsUsabilityTestingMedicalDevicesIec62366Route:
+    InsightsUsabilityTestingMedicalDevicesIec62366Route,
   ServicesAuditComplianceRoute: ServicesAuditComplianceRoute,
   ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
   ServicesBrazilRoute: ServicesBrazilRouteWithChildren,

@@ -451,16 +451,19 @@ function Index() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start pt-0">
 
                         {/* Left column — content, restoring top padding since it was fine */}
-                        <div className="max-w-xl pt-6 lg:pt-10">
+                        <div className="max-w-2xl pt-6 lg:pt-10">
                             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">
                                 Regulatory. Quality. Manufacturing. Market Access.
                             </p>
 
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
-                                Medical Device Consultant &amp; Regulatory Consultancy
+                                Global Regulatory &amp; Market Access Consulting
                             </h1>
-                            <p className="mt-2 text-[17px] sm:text-[18px] font-semibold text-blue-700 leading-snug">
-                                Global USFDA 510(k), CDSCO India &amp; EU MDR/IVDR Market Access
+                            <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal whitespace-nowrap">
+                                Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing
+                            </p>
+                            <p className="mt-1.5 text-[13px] sm:text-[14.5px] md:text-[15.5px] lg:text-[14.5px] xl:text-[16px] font-bold text-blue-700 leading-snug">
+                                From First Idea to Global Market Access.
                             </p>
 
                             <p className="mt-4 text-[14px] sm:text-[14.5px] font-medium text-navy/80 leading-relaxed">

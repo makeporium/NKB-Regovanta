@@ -972,12 +972,26 @@ function ManufacturingPage() {
                 >
                   Request Technical Quotation / Catalog <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a
-                  href="tel:+918400039062"
-                  className="inline-flex items-center gap-2 border border-navy/30 bg-white hover:bg-slate-50 text-navy font-bold text-sm px-5 py-3 rounded-lg shadow-2xs transition-colors"
-                >
-                  <Phone className="h-4 w-4 text-[#0b3a96]" /> +91 84000 39062
-                </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="tel:+919513699000"
+                    className="inline-flex items-center gap-2 border border-navy/30 bg-white hover:bg-slate-50 text-navy font-bold text-sm px-4 py-3 rounded-lg shadow-2xs transition-colors"
+                  >
+                    <Phone className="h-4 w-4 text-[#0b3a96]" /> +91 95136 99000
+                  </a>
+                  <a
+                    href="tel:+919180351425"
+                    className="inline-flex items-center gap-2 border border-navy/30 bg-white hover:bg-slate-50 text-navy font-bold text-sm px-4 py-3 rounded-lg shadow-2xs transition-colors"
+                  >
+                    <Phone className="h-4 w-4 text-[#0b3a96]" /> +91 91803 51425
+                  </a>
+                  <a
+                    href="tel:+918400039062"
+                    className="inline-flex items-center gap-2 border border-navy/30 bg-white hover:bg-slate-50 text-navy font-bold text-sm px-4 py-3 rounded-lg shadow-2xs transition-colors"
+                  >
+                    <Phone className="h-4 w-4 text-[#0b3a96]" /> +91 84000 39062
+                  </a>
+                </div>
               </div>
             </div>
 

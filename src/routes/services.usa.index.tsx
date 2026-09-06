@@ -334,9 +334,16 @@ function USAMarket() {
                             <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-navy text-[13px] font-bold px-6 py-3 rounded-sm hover:bg-blue-50 transition-all shadow-sm">
                                 Talk to a Regulatory Expert <ArrowRight className="h-4 w-4" />
                             </Link>
-                            <div className="mt-5 pt-5 border-t border-white/20 text-[12px] text-white/60 space-y-1">
+                            <div className="mt-5 pt-5 border-t border-white/20 text-[12px] text-white/60 space-y-1.5">
                                 <p>Email: <a href="mailto:info@nkbregovanta.com" className="text-white/80 hover:text-white transition-colors">info@nkbregovanta.com</a></p>
-                                <p>Phone: <a href="tel:+911141005051" className="text-white/80 hover:text-white transition-colors">+91 11 4100 5051</a></p>
+                                <div>
+                                    <p className="text-white/60 mb-1">Phone:</p>
+                                    <div className="flex flex-col gap-1 pl-2 text-white/80">
+                                        <a href="tel:+919513699000" className="hover:text-white transition-colors">+91 95136 99000</a>
+                                        <a href="tel:+919180351425" className="hover:text-white transition-colors">+91 91803 51425</a>
+                                        <a href="tel:+918400039062" className="hover:text-white transition-colors">+91 84000 39062</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

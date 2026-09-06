@@ -1,0 +1,47 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## Regulation (EU) 2024/1860: Extension of IVDR Transitional Period and New Provisions
+
+					Extension of IVDR Transitional Period
+
+The Regulation (EU) 2024/1860, which amends Regulations (EU) 2017/745 (MDR) and (EU) 2017/746 (IVDR), has been published in the Official Journal of the European Union (OJEU). This legislation aims to ensure the continuity of supply for in vitro diagnostic devices on the European market. It also revises provisions related to the mandatory use of EUDAMED for devices that comply with one of the regulations or were placed on the market under previous directives (legacy devices). Additionally, the regulation introduces a requirement for manufacturers and all economic operators in the supply chain to declare any supply disruptions or risks of such disruptions.
+
+## Looking for Consultant?
+
+Get CE Mark for Your Medical Devices
+
+									Click here
+
+Key Points:
+
+* Mandatory Reporting of Supply Interruptions: Manufacturers must notify relevant authorities and healthcare providers of any anticipated interruptions or discontinuations in a device’s supply that could impact patient safety.
+* Extended Transitional Periods for IVDs: To address delays in Eudamed’s clinical investigation system development and limited notified body capacity, the transition period for certain IVDs has been extended. This extension aims to prevent shortages of critical medical devices.
+* Phased Rollout of Eudamed: The European database on medical devices (Eudamed) will be introduced in stages as its electronic systems become operational. This phased approach will minimize disruption for manufacturers and notified bodies.								
+				
+					Do You Need Help Understanding This New Amendment and Its Details or Support in Implementing the New Regulation?
+
+NKB Regovanta is poised to assist manufacturers in navigating the latest regulatory updates introduced by the European Commission. With the extension of compliance deadlines for legacy in vitro diagnostic (IVD) devices and the phased rollout of EUDAMED, our expert consultants will provide comprehensive support to ensure your products meet the updated IVDR requirements. We will help you apply with a designated notified body, secure necessary agreements well in advance, and manage the timely submission of compliance documentation. Additionally, our team will guide you through the new notification requirements to prevent device shortages, ensuring smooth communication with relevant authorities. By partnering with NKB Regovanta, manufacturers can confidently adapt to the new regulatory landscape, maintaining compliance and market access in the European Union.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

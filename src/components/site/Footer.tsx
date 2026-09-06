@@ -1028,10 +1028,20 @@ export function Footer() {
                   <Mail className="h-4 w-4 shrink-0" />
                   contact@nkbregovanta.com
                 </a>
-                <a href="tel:+918800662283" className="flex items-center gap-3 text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors">
-                  <Phone className="h-4 w-4 shrink-0" />
-                  +91 8800662283
-                </a>
+                <div className="flex items-start gap-3 text-sm text-navy-foreground/70">
+                  <Phone className="h-4 w-4 shrink-0 mt-1" />
+                  <div className="flex flex-col gap-1.5">
+                    <a href="tel:+919513699000" className="hover:text-navy-foreground transition-colors">
+                      +91 95136 99000
+                    </a>
+                    <a href="tel:+919180351425" className="hover:text-navy-foreground transition-colors">
+                      +91 91803 51425
+                    </a>
+                    <a href="tel:+918400039062" className="hover:text-navy-foreground transition-colors">
+                      +91 84000 39062
+                    </a>
+                  </div>
+                </div>
                 <div className="flex items-start gap-3 text-sm text-navy-foreground/70">
                   <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
                   <span>

@@ -69,15 +69,25 @@ export function Header() {
     <>
       <div className="bg-navy-deep text-white text-xs py-2 border-b border-white/10 hidden md:block">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+          <div className="flex items-center gap-4 lg:gap-6">
+            <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
               <Mail className="h-3.5 w-3.5" />
               <span>contact@nkbregovanta.com</span>
             </a>
-            <a href="tel:+918400039062" className="flex items-center gap-2 hover:text-white/80 transition-colors">
-              <Phone className="h-3.5 w-3.5" />
-              <span>+91 84000 39062</span>
-            </a>
+            <div className="flex items-center gap-2">
+              <Phone className="h-3.5 w-3.5 text-white/70" />
+              <a href="tel:+919513699000" className="hover:text-white/80 transition-colors">
+                +91 95136 99000
+              </a>
+              <span className="text-white/30">|</span>
+              <a href="tel:+919180351425" className="hover:text-white/80 transition-colors">
+                +91 91803 51425
+              </a>
+              <span className="text-white/30">|</span>
+              <a href="tel:+918400039062" className="hover:text-white/80 transition-colors">
+                +91 84000 39062
+              </a>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-white/60">India Based. Globally Connected.</span>
@@ -327,11 +337,26 @@ export function Header() {
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}
-                className="py-3 text-sm font-medium mt-1 text-foreground/80"
+                className="py-3 text-sm font-medium mt-1 text-foreground/80 border-b border-border"
                 activeProps={{ className: "text-navy font-bold" }}
               >
                 Book a Consultation / Contact
               </Link>
+
+              <div className="pt-4 pb-2 space-y-2">
+                <div className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">Direct Call</div>
+                <div className="flex flex-col gap-2 text-xs font-semibold text-navy">
+                  <a href="tel:+919513699000" className="flex items-center gap-2 hover:text-[#0b3a96]">
+                    <Phone className="h-3.5 w-3.5 text-[#0b3a96]" /> +91 95136 99000
+                  </a>
+                  <a href="tel:+919180351425" className="flex items-center gap-2 hover:text-[#0b3a96]">
+                    <Phone className="h-3.5 w-3.5 text-[#0b3a96]" /> +91 91803 51425
+                  </a>
+                  <a href="tel:+918400039062" className="flex items-center gap-2 hover:text-[#0b3a96]">
+                    <Phone className="h-3.5 w-3.5 text-[#0b3a96]" /> +91 84000 39062
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         )}

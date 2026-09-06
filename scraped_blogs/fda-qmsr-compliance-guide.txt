@@ -1,0 +1,169 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## FDA QMSR Compliance: What Investigators Look For in 2026 &#038; Beyond
+
+With the U.S. FDA’s Quality Management System Regulation (QMSR) now in active enforcement (effective February 2, 2026), the medical device industry has officially transitioned from the legacy Quality System Regulation (QSR) under 21 CFR Part 820 to an harmonized, global standard.
+
+By incorporating ISO 13485:2016 by reference, the FDA has streamlined global compliance while introducing heightened expectations for risk management, record transparency, and subsystem integration.
+
+Understanding how FDA investigators evaluate your FDA QMSR compliance under the updated inspection manual (CP 7382.850) is vital to maintaining market access and achieving operational excellence.
+
+Under the QMSR framework, FDA inspections have evolved from isolated, subsystem checklist reviews to holistic, risk-based process audits. To review the full regulatory text and transition timeline, visit the official FDA Quality Management System Regulation (QMSR) portal.
+
+## Contact Our QMSR Specialist Today
+
+## Key Changes: Moving Beyond Checklist Compliance
+
+Under the QMSR framework, FDA inspections have evolved from isolated, subsystem checklist reviews to holistic, risk-based process audits. Investigators evaluate how smoothly your quality subsystems connect to protect patient safety.
+
+## QMSR vs. Legacy QSR: What Has Shifted?
+
+Feature / AreaLegacy QSR (Pre-2026)QMSR Framework (Active)Primary StandardStandalone 21 CFR Part 820ISO 13485:2016 + FDA-Specific Clause AmendmentsInspection MethodologyQuality System Inspection Technique (QSIT)Updated Compliance Program CP 7382.850Record ExemptionsInternal audits & management review exempt (§ 820.180(c))No Exemptions — Internal audits, supplier audits, & management review fully reviewableRisk Management ScopePrimary emphasis on Design ControlsIntegrated across the entire product lifecycle
+
+## Core Inspection Priorities
+
+* 
+
+Full Record Accessibility: Internal audit reports, supplier evaluations, and top management reviews are now fully inspection-ready.
+
+* 
+
+Data-Driven, Risk-Based Sampling: Investigators pull records across multiple subsystems (e.g., linking a customer complaint to a CAPA and subsequent supplier audit) to test overall system integrity.
+
+* 
+
+Living QMS Culture: Compliance requires traceable, real-time data integration—not static procedures.
+
+## Need help identifying gaps in your current QMS?
+
+Schedule an FDA QMSR Gap Assessment with NKB Regovanta today.
+
+									Contact Us
+
+## Complaint Handling Under QMSR
+
+Complaint management remains anchored in 21 CFR Part 820.198 and ISO 13485 Clause 8.2.2, but the expectations around risk linkage have intensified.
+
+Complaints can no longer be handled as static, isolated customer service tickets. Under FDA QMSR compliance audits, investigators inspect complaints as post-market feedback indicators:
+
+* 
+
+Documented Justification: If a complaint is evaluated and deemed not to require an investigation, a documented, risk-based rationale must be formally logged.
+
+* 
+
+Closed-Loop Integration: High-risk complaint trends must automatically trigger risk reassessments, design changes, or corrective actions (CAPA).
+
+* 
+
+Vigilance Alignment: Timely linkage to Medical Device Reporting (MDR under 21 CFR 803) remains strictly enforced.
+
+## Lifecycle Risk Management (ISO 14971 Integration)
+
+Risk management is no longer a design phase checkbox—it is the operational backbone of your QMS.
+
+FDA investigators expect manufacturers to demonstrate active, lifecycle risk management:
+
+* 
+
+Risk-Based Process Controls: Validated manufacturing and supplier monitoring proportionate to product risk.
+
+* 
+
+Dynamic Risk Files: Living risk management files that reflect real-world post-market performance data, complaint trends, and non-conformances.
+
+* 
+
+Traceability: Complete bi-directional links connecting risk evaluations, design controls, process changes, and post-market surveillance.
+
+## 3 Action Steps to Ensure QMSR Inspection Readiness
+
+To future-proof your quality operations and maintain continuous inspection readiness:
+
+* 
+
+Perform an In-Depth QMSR Gap Analysis: Map existing processes against ISO 13485:2016 and FDA-specific requirements (such as UDI, labeling, and MDR reporting).
+
+* 
+
+Establish Standardized Data Traceability: Implement unique identifiers and centralized tracking to link complaints, risk records, change controls, and CAPAs.
+
+* 
+
+Simulate ISO-Style Regulatory Audits: Conduct mock FDA inspections using risk-based process auditing methods rather than surface-level checklist reviews.
+
+## How NKB Regovanta Can Help You Achieve QMSR Compliance
+
+Achieving and maintaining FDA QMSR compliance requires specialized technical guidance and a clear regulatory strategy. NKB Regovanta provides complete medical device QMS consulting services tailored to your market goals:
+
+* 
+
+QMSR Gap Analysis & Remediation: Thorough evaluation of existing QSR/ISO 13485 systems to identify compliance gaps, streamline SOPs, and eliminate inspection vulnerabilities.
+
+* 
+
+eQMS Selection & Implementation: Technical support in adopting and validating digital electronic Quality Management Systems (eQMS) compliant with 21 CFR Part 11.
+
+* 
+
+Mock FDA Audits & Inspection Readiness: Simulated regulatory audits under CP 7382.850 to prepare staff, verify documentation traceability, and test real-time audit performance.
+
+* 
+
+Integrated CAPA & Complaint Handling Systems: Development of risk-linked post-market surveillance workflows that satisfy both FDA and international regulatory expectations.
+
+* 
+
+End-to-End Regulatory Pathway Support: Turnkey integration connecting QMSR compliance with FDA 510(k) clearance, ISO 13485 certification, MDSAP, and global approvals.
+
+## Ensure your QMS is fully audit-ready
+
+Consult our FDA regulatory experts or explore our US FDA 510(k) and QMSR consulting services.
+
+									Contact Us
+
+## FAQ's
+
+					 What is FDA QMSR? 
+
+QMSR (Quality Management System Regulation) is the FDA’s updated 21 CFR Part 820 standard that incorporates ISO 13485:2016 by reference to harmonize U.S. device manufacturing requirements globally.
+
+					 Is legacy QSR still valid in 2026? 
+
+No, the FDA officially retired legacy QSR on February 2, 2026, making QMSR compliance mandatory for all finished medical device manufacturers.
+
+					 Can FDA inspectors review internal audit records under QMSR? 
+
+Yes, the previous QS regulation exemption (§ 820.180(c)) was removed, allowing FDA inspectors to review internal audit, management review, and supplier audit reports.
+
+					 Does QMSR replace ISO 13485 certification? 
+
+No, QMSR aligns FDA rules with ISO 13485:2016, but manufacturers must still meet FDA-specific requirements like 21 CFR Part 803 (MDR) and Part 830 (UDI).
+
+					 How does QMSR impact risk management requirements? 
+
+QMSR mandates proactive, risk-based decision-making across the entire product lifecycle—from design and supplier management to post-market complaint handling.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

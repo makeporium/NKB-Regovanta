@@ -1,0 +1,149 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## Borderline Device Classification: A Guide to the Updated EU MDR &#038; IVDR Manual
+
+Determining the exact regulatory framework for a healthcare product can be one of the most complex challenges for manufacturers. In recent updates, the Borderline and Classification Working Group (BCWG)—an advisory group to the European Commission—published Revision 4 of the Manual on Classification and Borderline Products.
+
+This updated manual aligns with the Medical Device Regulation (MDR) (EU) 2017/745 and In Vitro Diagnostic Regulation (IVDR) (EU) 2017/746, providing vital clarity for borderline device classification.
+
+Below, we break down what manufacturers need to know about qualifying and classifying borderline products, distinguishing mechanisms of action, and navigating the latest European guidelines.
+
+## Speak with our experts
+
+## What is a Borderline Device?
+
+Borderline products are items that do not clearly fall into a single, specific regulatory category. A product becomes "borderline" when its intended use or its Mechanism of Action (MOA) places it in a grey area between different regulatory frameworks, such as medical devices, medicinal products (drugs), cosmetics, biocides, or personal protective equipment (PPE).
+
+To successfully navigate borderline device classification, the correct qualification fundamentally depends on the product’s principal intended action, as defined in Article 2 of the MDR.
+
+## Medical Device vs. Medicinal Product: The Mechanism of Action
+
+The most common point of confusion in borderline device classification is whether a product containing active substances is a medical device or a medicinal product.
+
+The BCWG manual, aligning with the MDCG 2022-5 guidance, clarifies this distinction based on the primary mode of action:
+
+* 
+
+Medical Device (MD): The principal intended action is achieved by physical or mechanical means (e.g., a physical barrier, support, or absorption effect).
+
+* 
+
+Medicinal Product: The principal intended action is achieved by pharmacological, immunological, or metabolic means (e.g., interacting with receptors in the body or cellular processes).
+
+If a product relies primarily on pharmacological, immunological, or metabolic actions to achieve its primary medical purpose, it cannot be qualified as a medical device, regardless of the manufacturer's claims.
+
+## Key Updates in the BCWG Manual Revision 4
+
+The updated manual is divided into two primary sections that reflect the logical regulatory process for both MDR and IVDR.
+
+## Section 1: MDR Regulation (EU) 2017/745
+
+This section focuses on the qualification and classification of devices under the MDR framework.
+
+* 
+
+Boundaries with other sectors: It analyzes the strict borders between medical devices and medicinal products, cosmetics, biocidal products, and PPE.
+
+* 
+
+Classification Rules Application: It provides practical interpretations of MDR Annex VIII classification rules for Class I, IIa, IIb, and III devices.
+
+* 
+
+Case Studies: Revision 4 features extensive, solved case studies—such as root canal irrigation solutions, nasal sprays, and rescue bags—explaining the BCWG’s interpretative reasoning to help manufacturers apply the logic to their own products.
+
+## Section 2: IVDR Regulation (EU) 2017/746
+
+This section handles the complex qualification and classification of in vitro diagnostic devices.
+
+* 
+
+Risk Classifications: It covers the spectrum from low-risk (Class A) to high-risk (Class D) diagnostics.
+
+* 
+
+IVDR Borderline Cases: It highlights practical cases for test kits containing active chemical components or combined products, clarifying exactly when they fall under IVDR jurisdiction.
+
+## Streamline your manufacturing
+
+Talk to an expert.
+
+									Contact Us
+
+## Why Scientific Evidence Matters
+
+The manual emphasizes that the determination of a pharmacological or metabolic action is scientifically objective. It does not depend on the manufacturer’s intention. If your device incorporates a substance that could be considered a medicinal product (like sodium hypochlorite in root canal solutions or adenine in red blood cell storage), the burden of proof is on the manufacturer to provide robust scientific evidence proving the substance only has an ancillary action, not a primary one.
+
+Failing to properly justify the MOA can result in the product being rejected for CE Marking as a medical device or being up-classified to a Class III device under Rule 14.
+
+## How NKB Regovanta Can Help
+
+Navigating the complexities of borderline device classification requires deep regulatory expertise. Here is how our consultants ensure your products reach the market smoothly:
+
+* 
+
+Product Qualification: We evaluate your product’s Mechanism of Action (MOA) and scientific data to accurately determine if it qualifies as a Medical Device, IVD, or Medicinal Product.
+
+* 
+
+Regulatory Pathway Strategy: We map out the most efficient route to CE Marking under EU MDR or IVDR based on current BCWG and MDCG guidelines.
+
+* 
+
+Technical Documentation & Justification: We assist in compiling robust scientific evidence and drafting the necessary rationales to defend your product's classification to Notified Bodies.
+
+* 
+
+Global Compliance Expansion: Beyond Europe, we help align your classification strategies with FDA, CDSCO, and MDSAP requirements for global market access.
+
+## Fast-track your regulatory approvals
+
+Get Your Medical Device Market-Ready with Expert Regulatory Support
+
+									Contact Us
+
+## FAQ's
+
+					 What is a borderline medical device? 
+
+A product that sits in a regulatory grey area between a medical device and another category (like a drug, cosmetic, or biocide) based on its mechanism of action.
+
+					 How is a medical device different from a medicinal product? 
+
+Medical devices act primarily through physical or mechanical means, while medicinal products act through pharmacological, metabolic, or immunological means.
+
+					 What is the BCWG Manual Revision 4? 
+
+It is an updated European Commission guide providing practical cases and rules for qualifying and classifying borderline products under MDR and IVDR.
+
+					 Who decides if my product is a medical device? 
+
+While manufacturers propose the classification based on intended use, the final competence lies with the Notified Bodies and Competent Authorities of EU Member States.
+
+					 What is MDCG 2022-5? 
+
+It is a crucial guidance document that defines the specific boundaries and definitions between medical devices and medicinal products under the EU MDR.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

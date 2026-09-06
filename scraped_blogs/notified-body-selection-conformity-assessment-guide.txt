@@ -1,0 +1,87 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## Selection of a Notified Body and Their Process for your new device authority
+
+					Notified Bodies an overview: 
+
+You must have your device CE marked before you may market it in the European Union. Additionally, medical device manufacturers must submit to a conformity assessment conducted by a Notified Body for all but for the lowest risk products (Class I) (NB). 
+
+A Notified Body is a third-party organization that has been approved by an EU member state to judge whether manufacturers adhere to the relevant legislation. With such a crucial role, choosing a Notified Body and your partnership’s working relationship are crucial to getting your CE marking. As CE marking medical device consultant, we know the criticality of selecting the Notified body and hence we work with right notified bodies to get the compliance. 
+
+There are a lot of things you can do to make sure your working relationship with a Notified Body is excellent and your device is on track for its CE marking, regardless of whether you are just beginning the selection process or deeply into audit preparation.
+
+					Regulatory Excellence for Global Medical Device Markets
+
+					Selection of a Notified Body and their Process: 
+
+Not only medical device manufacturers have had to adapt to the new European Union In Vitro Diagnostic Regulation and the European Union Medical Device Regulation (EU MDR) (IVDR). Only 30 NBs have been recognized under EU MDR as a result of the new regulations’ need that Notified Bodies go through a new designation and notification process. And the EU IVDR has only designated seven NBs. Because there are fewer NBs, those who are designated under MDR and IVDR will only be able to handle a certain number of new conformity assessment applications. 
+
+You must assign the proper codes to your device when you apply to an NB for a conformity evaluation, and your NB must certify that those codes are accurate. These codes may initially appear challenging, but becoming familiar with them in advance will help you select the correct codes and an NB that is appropriate for your particular device type.
+
+## Understanding Your Notified Body’s Process
+
+Although capacity and designation may restrict the number of Notified Bodies you have at your disposal, it is also true that you shouldn’t pick at random from the options you have. 
+
+Annex VII, 4.1 of MDR states that Notified Bodies: 
+
+Shall have in place documented processes and sufficiently detailed procedures for the conduct of each conformity assessment activity for which it is designated, comprising the individual steps from pre-application activities up to decision making and surveillance and taking into account, when necessary, the respective specificities of the devices. 
+
+It’s critical to realize that different NBs will have different methods. This does not imply that all NBs adhere to MDR and IVDR to a greater or lesser extent. It simply implies that depending on several variables including the NB’s size, capacity, and pricing plan, there may be changes in the way they communicate, provide their services, and collaborate with your organization. 
+
+The reporting structure of NBs is a good illustration of how they might vary. Your NB will have a recommended format or layout for accepting that submission if you obtain findings or are required to submit a substantial modification notification.  
+
+Decide if this is really the greatest fit for your business before you begin an application or any contractual engagement with an NB by learning more about their established processes.
+
+					Your Quality Plan to address New MDR Requirements in MDR 
+
+Two audits will be performed by your Notified Body during the conformity assessment procedure. The Stage One audit is where the NB determines whether or not to move forward with your application by determining your organization’s readiness. The Notified Body wants to know how prepared you are, therefore their purpose throughout this audit is to comprehend your quality system and quality management strategy. 
+
+They’ll be checking to examine how you’ve handled the MDR obligations during this audit. They will be interested in learning about your strategy for transitioning from the now-outdated Medical Device Directives (MDD) to MDR if you are a manufacturer with products already on the market. 
+
+Recently, Notified Bodies have brought up non-conformances with producers in this area. Frequently, what the manufacturer has done to fulfil the new MDR standards lacks either clarity or specificity. 
+
+## Role of Notified body: 
+
+Show your notified body you understand your obligations under MDR- 
+
+The general obligations of manufacturers are covered by Article 10 of the MDR. The NB will carefully examine how you’re handling these requirements during an audit. 
+
+They will want to ensure that you are adhering to the MDR criteria when they examine your QMS structure. For instance, are your risk management, clinical evaluation report (CER), post-market surveillance (PMS), and technical documentation all related?  
+
+The NB will also examine how you’ve implemented your contractual agreements with different Economic Operators (EOs). How did you handle the MDR requirements for your EOs? This entails demonstrating to them your communication, procedures, supplier audits, and other compliance-related activities. 
+
+This is not a comprehensive list of questions or things your NB will want to see, but it should make you consider how prepared you are for these types of queries.
+
+Keep your website and marketing efforts in compliance with regulation
+
+The requirements for MDR can be found in Article7, however manufacturers occasionally are unaware that everything on their website and in their marketing materials is also subject to its rules. 
+
+Your NB will want to confirm that all claims you make about your product are backed up by data. 
+
+As medical device regulatory consultants we help our client in maintaining data and making files of necessary documents needed for the certification. False statements of any kind are obviously prohibited, but so are deceptive pictures that provide the wrong idea about the product or imply a use for it other than what is explicitly intended. 
+
+The NB will want to know how you intend to guarantee that the content of your website, social media accounts, and other online platforms is accurate and complies with MDR. They’ll ask to examine the procedures you’ve set up to monitor these outside communications. 
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

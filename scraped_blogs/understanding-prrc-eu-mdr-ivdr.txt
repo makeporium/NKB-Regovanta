@@ -1,0 +1,85 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## Understanding The PRRC Under EU MDR and IVDR
+
+					Introduction to PRRC under EU MDR
+
+The EU Medical Device Regulation (MDR 2017/745) and In Vitro Diagnostic Regulation (IVDR 2017/746) have dramatically transformed the regulatory framework for medical devices and IVDs in Europe. Among the major changes is the introduction of a crucial new role the Person Responsible for Regulatory Compliance (PRRC).In this blog, we delve into the importance of the PRRC, their key responsibilities, and why this role is essential for ensuring regulatory compliance under EU MDR and IVDR.
+
+Read more about Understanding the Responsibilities of Economic Operators Under the EU MDR 2017/745
+
+					Regulatory Excellence for Global Medical Device Markets
+
+					Who Needs a PRRC?
+
+Article 15 of the EU MDR and IVDR mandates that manufacturers and non-EEA manufacturers’ EU-authorized representatives appoint a Person Responsible for Regulatory Compliance (PRRC). While legacy devices are exempt from this requirement, many manufacturers include them under PRRC oversight for simplicity.  
+
+Non-EEA manufacturers must confirm their EU authorized representative appoints a qualified PRRC, but the same individual cannot serve as PRRC for both parties. Companies with multiple legal manufacturers must assign a PRRC for each entity. 
+
+					12 Things You Need to Know About the PRRC under EU MDR and IVDR
+
+* Legal Mandate: The PRRC role is mandated under EU MDR (EU 2017/745) and IVDR (EU 2017/746) as per Article 15. 
+* Qualifications: A PRRC must possess a relevant university degree or equivalent certification or have at least four years of professional experience in regulatory affairs or quality management. 
+* Availability: The PRRC must be permanently and continuously available to manufacturers and authorized representatives, ensuring access to all relevant documents and records necessary for fulfilling their duties. 
+* Responsibilities: The PRRC verifies that technical documentation and EU declarations of conformity are up to date. They also oversee compliance with Post-Market Surveillance (PMS) systems, reporting obligations (Articles 87–91 for MDR, 82–86 for IVDR), and investigational device conformity statements (Annex XV). 
+* Micro and Small Manufacturers: Micro and small manufacturers may subcontract the PRRC role if the designated individual meets the necessary qualifications and is permanently available, as outlined in MDCG 2019-7. 
+* Authorized Representatives: For authorized representatives, the PRRC ensures manufacturer compliance, verifies the completeness of technical documentation, and registers required information in EUDAMED as per Article 11(3). 
+* Documentation: PRRC responsibilities and tasks must be clearly documented and accepted by the individual. Senior management must support the PRRC with the necessary authority and resources. 
+* Independence: The PRRC must maintain independence to ensure impartial oversight. A single PRRC cannot serve as both the manufacturer’s and the authorized representative’s PRRC simultaneously. 
+* Parent Companies and Virtual Manufacturers: Each legal manufacturer under a parent company must have its own PRRC. For virtual manufacturers, the PRRC must ensure that the OEM complies with MDR/IVDR requirements. 
+* Risk-Based Approach: The PRRC’s duties should align with the risk class of the devices, ensuring a proportional and risk-based oversight. 
+* Liability: The PRRC is not personally liable for compliance failures; their role is to ensure that regulatory activities are performed in accordance with requirements. 
+* Registration: PRRC details, including name and contact information, must be registered in EUDA-MED to ensure traceability and accountability. 								
+
+## Key Responsibilities of the PRRC
+
+The PRRC is entrusted with several critical responsibilities, ensuring the compliance and safety of medical devices and in vitro diagnostics. These include: 
+
+* Device ConformityEnsuring that the conformity of devices is checked appropriately in accordance with the quality management system before the devices are released. (Art. 10(9)) 
+* Technical Documentation and Declaration of Conformity
+
+Ensuring the preparation and maintenance of the Technical Documentation and the EU Declaration of Conformity. (Art. 10(6)) 
+
+* Post-Market Surveillance (PMS)
+
+Ensuring compliance with PMS obligations in accordance with Article 10(10). This includes the implementation and continuous updating of the PMS system as outlined in Article 83 and Annex III. 
+
+* Reporting Obligations
+
+Ensuring the proper functioning of systems for recording and reporting incidents and field safety corrective actions, as required by Articles 87 to 91. 
+
+* Investigational Devices
+
+In the case of investigational devices, the PRRC must confirm compliance with General Safety and Performance Requirements (GSPR) and ensure that all health and safety precautions for subjects are in place. (Section 4.1 of Chapter II of Annex XV). 
+
+					Role of NKB Regovanta
+
+NKB Regovanta helps manufacturers and stakeholders navigate EU MDR and IVDR requirements, including PRRC responsibilities, ensuring smooth compliance. With deep regulatory expertise and a commitment to excellence, they enable clients to confidently manage global medical device regulations. 
+
+NKB Regovanta provides end-to-end support for regulatory approvals like European CE marking, FDA 510(k), Indian CDSCO import registration, SFDA and UKCA compliance. They assist in setting up manufacturing units with Facility layout designing, cleanroom design, machine validation and facility compliance as per all regulatory norms, ensuring quality through ISO 13485, FDA QSR, and MDSAP compliance and all regulatory approvals.  
+
+Our expertise extends to design and development, including technical documentation and risk management, while also offering tailored training and consultation for regulatory and licensing needs. 
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

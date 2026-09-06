@@ -1,6 +1,6 @@
 # NKB Regovanta — Complete Page-by-Page SEO Inventory
 
-> **Total Pages Audited:** 241  
+> **Total Pages Audited:** 277  
 > **Purpose:** Comprehensive catalog of all on-page SEO assets (**Page Title**, **H1 Heading**, **Meta Keywords**, **Meta Description**, **OpenGraph Title**, and **Canonical URL**) across all active routes.  
 > **Instructions for Review:** Review the target keywords, titles, and H1 tags below. If you want to change any specific keyword, title, or description, simply reference the **Route URL** or **File Name** and specify your desired adjustment.
 
@@ -24,7 +24,7 @@
 - [Specialized Regulatory & Quality Services (13 pages)](#specialized-regulatory-quality-services)
 - [Industry Verticals (15 pages)](#industry-verticals)
 - [Case Studies (8 pages)](#case-studies)
-- [Other Pages (5 pages)](#other-pages)
+- [Other Pages (41 pages)](#other-pages)
 
 ---
 
@@ -35,7 +35,7 @@
 - **Route URL:** [`https://www.nkbregovanta.com`](https://www.nkbregovanta.com)
 - **File:** `src/routes/index.tsx`
 - **Page Title (`<title>`):** `Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta`
-- **H1 Heading:** `Medical Device Consultant & Regulatory Consultancy`
+- **H1 Heading:** `Global Regulatory & Market Access Consulting`
 - **Meta Keywords:** `medical device consultant, medical device consultancy, USFDA, USFDA consultant, USFDA medical device, 510 k, 510 k consultant, 510k submission consultant, FDA 510(k) clearance medical devices, medical device regulatory consultant, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Indian Authorized Agent AIR IAA, eSTAR FDA dossier, EU MDR 2017/745 regulatory consultant, CE Marking Europe, ISO 13485 implementation consultant, MDSAP audit readiness, NKB Regovanta`
 - **Meta Description:** NKB Regovanta is a leading global medical device consultant and regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS compliance.
 - **OG Title:** `Medical Device Consultant & Regulatory Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta`
@@ -3132,7 +3132,189 @@
 
 ## Other Pages
 
-### 237. EU MDR 2026: EUDAMED & Priorities
+### 237. Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993`](https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993)
+- **File:** `src/routes/insights.biological-evaluation-testing-medical-devices-iso-10993.tsx`
+- **Page Title (`<title>`):** `Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018 | NKB Regovanta`
+- **H1 Heading:** `Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018`
+- **Meta Keywords:** `biological evaluation and biocompatibility testing under iso 10993-1:2018, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Chemical characterization, toxicological risk assessment, and non-animal testing strategies to satisfy FDA and EU MDR requirements.
+- **OG Title:** `Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993`
+
+---
+
+### 238. Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy`](https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy)
+- **File:** `src/routes/insights.borderline-medical-device-classification-strategy.tsx`
+- **Page Title (`<title>`):** `Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide | NKB Regovanta`
+- **H1 Heading:** `Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide`
+- **Meta Keywords:** `navigating borderline products: medical device vs drug vs cosmetic vs biocide, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** How to interpret the EU Borderline Manual and FDA Pre-RFD mechanisms to prevent regulatory misclassification and project delays.
+- **OG Title:** `Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy`
+
+---
+
+### 239. Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india`](https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india)
+- **File:** `src/routes/insights.cdsco-medical-device-manufacturing-license-india.tsx`
+- **Page Title (`<title>`):** `Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9 | NKB Regovanta`
+- **H1 Heading:** `Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9`
+- **Meta Keywords:** `securing cdsco medical device manufacturing licenses in india: form md-5 to md-9, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Step-by-step guidance on SUGAM portal submissions, state vs central licensing, plant audits, and MDR 2017 conformity.
+- **OG Title:** `Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india`
+
+---
+
+### 240. Complete Guide to CDSCO Medical Device Registration and Import Licensing in India
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india`](https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india)
+- **File:** `src/routes/insights.cdsco-medical-device-registration-guidelines-india.tsx`
+- **Page Title (`<title>`):** `Complete Guide to CDSCO Medical Device Registration and Import Licensing in India | NKB Regovanta`
+- **H1 Heading:** `Complete Guide to CDSCO Medical Device Registration and Import Licensing in India`
+- **Meta Keywords:** `complete guide to cdsco medical device registration and import licensing in india, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Classification rules, Form MD-14 import licensing, SUGAM digital submissions, Authorized Agent responsibilities, and timeline forecasts.
+- **OG Title:** `Complete Guide to CDSCO Medical Device Registration and Import Licensing in India | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india`
+
+---
+
+### 241. CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices`](https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices)
+- **File:** `src/routes/insights.ce-marking-cardiovascular-medical-devices.tsx`
+- **Page Title (`<title>`):** `CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR | NKB Regovanta`
+- **H1 Heading:** `CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR`
+- **Meta Keywords:** `ce marking roadmap for cardiovascular medical devices under eu mdr, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Specialized clinical evaluation, biocompatibility, hemocompatibility, and Notified Body expectations for cardiovascular implants and delivery systems.
+- **OG Title:** `CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices`
+
+---
+
+### 242. Navigating CE Marking for Digital Health Technologies Under EU MDR 2017/745
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies`](https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies)
+- **File:** `src/routes/insights.ce-marking-digital-health-technologies.tsx`
+- **Page Title (`<title>`):** `Navigating CE Marking for Digital Health Technologies Under EU MDR 2017/745 | NKB Regovanta`
+- **H1 Heading:** `Navigating CE Marking for Digital Health Technologies Under EU MDR 2017/745`
+- **Meta Keywords:** `navigating ce marking for digital health technologies under eu mdr 2017/745, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** A comprehensive regulatory pathway for software as a medical device (SaMD), AI diagnostics, and mobile health apps in the European Union.
+- **OG Title:** `Navigating CE Marking for Digital Health Technologies Under EU MDR 2017/745 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies`
+
+---
+
+### 243. The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr`](https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr)
+- **File:** `src/routes/insights.ce-marking-process-medical-devices-eu-mdr.tsx`
+- **Page Title (`<title>`):** `The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745 | NKB Regovanta`
+- **H1 Heading:** `The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745`
+- **Meta Keywords:** `the step-by-step ce marking process for medical devices under eu mdr 2017/745, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** From intended purpose definition to Notified Body certification and Declaration of Conformity: an actionable implementation roadmap.
+- **OG Title:** `The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr`
+
+---
+
+### 244. Strategic Classification and Pathway Selection for Class III Medical Devices
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy`](https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy)
+- **File:** `src/routes/insights.class-iii-medical-device-classification-strategy.tsx`
+- **Page Title (`<title>`):** `Strategic Classification and Pathway Selection for Class III Medical Devices | NKB Regovanta`
+- **H1 Heading:** `Strategic Classification and Pathway Selection for Class III Medical Devices`
+- **Meta Keywords:** `strategic classification and pathway selection for class iii medical devices, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Navigating high-risk device regulatory requirements, premarket approval (PMA) thresholds, and clinical dossier substantiation.
+- **OG Title:** `Strategic Classification and Pathway Selection for Class III Medical Devices | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy`
+
+---
+
+### 245. Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices`](https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices)
+- **File:** `src/routes/insights.clinical-evaluation-equivalence-medical-devices.tsx`
+- **Page Title (`<title>`):** `Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls | NKB Regovanta`
+- **H1 Heading:** `Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls`
+- **Meta Keywords:** `establishing clinical equivalence under eu mdr: methodologies and pitfalls, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Demonstrating technical, biological, and clinical equivalence under MDCG guidelines to justify reliance on predicate clinical data.
+- **OG Title:** `Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices`
+
+---
+
+### 246. Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance`](https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance)
+- **File:** `src/routes/insights.core-regulations-medical-device-global-compliance.tsx`
+- **Page Title (`<title>`):** `Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance | NKB Regovanta`
+- **H1 Heading:** `Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance`
+- **Meta Keywords:** `beyond mdr and fda: core global regulations shaping modern medtech compliance, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Essential requirements spanning ISO 14971, IEC 60601-1, IEC 62366-1, ISO 10993, RoHS/REACH, and cybersecurity standards.
+- **OG Title:** `Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance`
+
+---
+
+### 247. Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards`](https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards)
+- **File:** `src/routes/insights.dental-scanners-manufacturing-regulatory-standards.tsx`
+- **Page Title (`<title>`):** `Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners | NKB Regovanta`
+- **H1 Heading:** `Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners`
+- **Meta Keywords:** `manufacturing and global compliance requirements for intraoral dental scanners, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Optical safety, IEC 60601-1 electrical validation, CAD/CAM software integration, and worldwide licensing pathways.
+- **OG Title:** `Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards`
+
+---
+
+### 248. Dynamic Risk Management Frameworks for Software-Enabled Medical Devices
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices`](https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices)
+- **File:** `src/routes/insights.dynamic-risk-management-software-medical-devices.tsx`
+- **Page Title (`<title>`):** `Dynamic Risk Management Frameworks for Software-Enabled Medical Devices | NKB Regovanta`
+- **H1 Heading:** `Dynamic Risk Management Frameworks for Software-Enabled Medical Devices`
+- **Meta Keywords:** `dynamic risk management frameworks for software-enabled medical devices, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Integrating ISO 14971, IEC 62304, and post-market anomaly tracking into an evolving software risk governance system.
+- **OG Title:** `Dynamic Risk Management Frameworks for Software-Enabled Medical Devices | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices`
+
+---
+
+### 249. Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices`](https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices)
+- **File:** `src/routes/insights.effective-capa-system-medical-devices.tsx`
+- **Page Title (`<title>`):** `Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits | NKB Regovanta`
+- **H1 Heading:** `Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits`
+- **Meta Keywords:** `designing a defensible capa system for iso 13485 and fda qmsr audits, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** The 5 pillars of effective root cause analysis, corrective action verification, statistical trending, and audit resistance.
+- **OG Title:** `Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices`
+
+---
+
+### 250. EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices`](https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices)
+- **File:** `src/routes/insights.eu-ai-act-medical-devices.tsx`
+- **Page Title (`<title>`):** `EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right | NKB Regovanta`
+- **H1 Heading:** `EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right`
+- **Meta Keywords:** `EU AI Act medical devices, AI Act MDR alignment, SaMD AI regulation, high-risk AI medical software, ISO 13485 AI QMS, ISO 14971 AI risk management, NKB Regovanta`
+- **Meta Description:** A practical regulatory perspective for manufacturers developing AI-enabled medical devices and medical software for the European market under the EU AI Act and EU MDR/IVDR.
+- **OG Title:** `EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices`
+
+---
+
+### 251. EU MDR 2026: EUDAMED & Priorities
 
 - **Route URL:** [`https://www.nkbregovanta.com/insights/eu-mdr-2026`](https://www.nkbregovanta.com/insights/eu-mdr-2026)
 - **File:** `src/routes/insights.eu-mdr-2026.tsx`
@@ -3145,7 +3327,33 @@
 
 ---
 
-### 238. FDA Inspections 2026
+### 252. EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges`](https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges)
+- **File:** `src/routes/insights.eu-mdr-compliance-challenges.tsx`
+- **Page Title (`<title>`):** `EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck | NKB Regovanta`
+- **H1 Heading:** `EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck`
+- **Meta Keywords:** `EU MDR compliance challenges, CE marking delays, Notified Body review findings, MDR clinical evaluation CER, MDR PMCF plan, ISO 14971 MDR risk management, NKB Regovanta`
+- **Meta Description:** A practical regulatory perspective on the critical issues that delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR).
+- **OG Title:** `EU MDR Compliance: Where Manufacturers Commonly Get Stuck | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges`
+
+---
+
+### 253. FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards`](https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards)
+- **File:** `src/routes/insights.fda-510k-program-modernization-safety-standards.tsx`
+- **Page Title (`<title>`):** `FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks | NKB Regovanta`
+- **H1 Heading:** `FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks`
+- **Meta Keywords:** `fda 510(k) modernization: predicate age policies and contemporary safety benchmarks, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** How CDRH is driving manufacturers away from outdated predicate devices toward contemporary safety and performance standards.
+- **OG Title:** `FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards`
+
+---
+
+### 254. FDA Inspections 2026
 
 - **Route URL:** [`https://www.nkbregovanta.com/insights/fda-inspections-2026`](https://www.nkbregovanta.com/insights/fda-inspections-2026)
 - **File:** `src/routes/insights.fda-inspections-2026.tsx`
@@ -3158,7 +3366,20 @@
 
 ---
 
-### 239. FDA QMSR 2026
+### 255. Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide`](https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide)
+- **File:** `src/routes/insights.fda-q-sub-pre-submission-meeting-guide.tsx`
+- **Page Title (`<title>`):** `Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol | NKB Regovanta`
+- **H1 Heading:** `Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol`
+- **Meta Keywords:** `maximizing the value of fda q-submission (pre-sub) meetings: strategy and protocol, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Drafting targeted questions, preparing submission packages, and engaging CDRH reviewers to derisk complex medical device applications.
+- **OG Title:** `Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide`
+
+---
+
+### 256. FDA QMSR 2026
 
 - **Route URL:** [`https://www.nkbregovanta.com/insights/fda-qmsr-2026`](https://www.nkbregovanta.com/insights/fda-qmsr-2026)
 - **File:** `src/routes/insights.fda-qmsr-2026.tsx`
@@ -3171,20 +3392,267 @@
 
 ---
 
-### 240. Regulatory Insights & Industry Intelligence
+### 257. Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide`](https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide)
+- **File:** `src/routes/insights.fda-qmsr-compliance-guide.tsx`
+- **Page Title (`<title>`):** `Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016 | NKB Regovanta`
+- **H1 Heading:** `Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016`
+- **Meta Keywords:** `mastering fda qmsr compliance: strategic alignment with iso 13485:2016, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Key expectations, inspection priorities, and practical quality system transitions for medical device manufacturers under 21 CFR Part 820.
+- **OG Title:** `Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide`
+
+---
+
+### 258. Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr`](https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr)
+- **File:** `src/routes/insights.gspr-compliance-eu-mdr-ivdr.tsx`
+- **Page Title (`<title>`):** `Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR | NKB Regovanta`
+- **H1 Heading:** `Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR`
+- **Meta Keywords:** `achieving gspr compliance: navigating annex i of eu mdr and ivdr, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Practical guidance for establishing objective regulatory evidence, state-of-the-art standards alignment, and checklist traceability.
+- **OG Title:** `Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr`
+
+---
+
+### 259. Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/gspr-foundation-medical-device-development`](https://www.nkbregovanta.com/insights/gspr-foundation-medical-device-development)
+- **File:** `src/routes/insights.gspr-foundation-medical-device-development.tsx`
+- **Page Title (`<title>`):** `Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D | NKB Regovanta`
+- **H1 Heading:** `Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D`
+- **Meta Keywords:** `why gspr should be the architectural foundation of your medical device r&d, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Embedding European General Safety and Performance Requirements early into product conceptualization to prevent costly redesigns.
+- **OG Title:** `Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/gspr-foundation-medical-device-development`
+
+---
+
+### 260. Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design`](https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design)
+- **File:** `src/routes/insights.human-factors-engineering-medical-device-design.tsx`
+- **Page Title (`<title>`):** `Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles | NKB Regovanta`
+- **H1 Heading:** `Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles`
+- **Meta Keywords:** `human factors engineering under eu mdr: essential user-centric design principles, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Fulfilling Annex I GSPR 5 user-interface mandates through structured usability engineering files and risk mitigation.
+- **OG Title:** `Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design`
+
+---
+
+### 261. Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle`](https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle)
+- **File:** `src/routes/insights.iec-62304-medical-device-software-lifecycle.tsx`
+- **Page Title (`<title>`):** `Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained | NKB Regovanta`
+- **H1 Heading:** `Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained`
+- **Meta Keywords:** `implementing iec 62304: medical device software lifecycle processes explained, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Software safety classification (Class A, B, C), verification & validation, change management, and architectural documentation.
+- **OG Title:** `Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle`
+
+---
+
+### 262. Regulatory Insights, MedTech Articles & Intelligence
 
 - **Route URL:** [`https://www.nkbregovanta.com/insights`](https://www.nkbregovanta.com/insights)
 - **File:** `src/routes/insights.index.tsx`
-- **Page Title (`<title>`):** `Regulatory Insights & Industry Intelligence | NKB Regovanta`
-- **H1 Heading:** `Regulatory News & Best Practices`
-- **Meta Keywords:** `medical device insights, EU MDR 2026, FDA QMSR, FDA inspections, CDSCO updates, regulatory consulting intelligence, NKB Regovanta`
-- **Meta Description:** Expert insights, regulatory updates, and compliance guides on US FDA, EU MDR, CDSCO, and global medical device regulations from NKB Regovanta.
+- **Page Title (`<title>`):** `Regulatory Insights, MedTech Articles & Intelligence | NKB Regovanta`
+- **H1 Heading:** `Global Regulatory Knowledge Hub`
+- **Meta Keywords:** `medical device insights, EU AI Act, EU MDR 2026, Rule 63 CDSCO, FDA QMSR, 510(k), GSPR, IEC 62304, regulatory consulting intelligence, NKB Regovanta`
+- **Meta Description:** Comprehensive library of expert regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, IVDR, CDSCO, ISO 13485, and SaMD.
 - **OG Title:** `Regulatory Insights & Industry Intelligence | NKB Regovanta`
 - **Canonical Link:** `https://www.nkbregovanta.com/insights`
 
 ---
 
-### 241. Global Medical Device Regulatory Markets
+### 263. India Medical Device Rules 2026: EU-Approved Devices & Rule 63
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63`](https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63)
+- **File:** `src/routes/insights.india-mdr-2026-rule-63.tsx`
+- **Page Title (`<title>`):** `India Medical Device Rules 2026: EU-Approved Devices & Rule 63 | NKB Regovanta`
+- **H1 Heading:** `India Medical Device Rules 2026: EU-Approved Devices Gain Recognition Under Rule 63`
+- **Meta Keywords:** `India Medical Device Rules 2026, Rule 63 CDSCO, G.S.R. 744(E) amendment, CDSCO EU recognition, Class A device QMS India, CDSCO medical device consultant, NKB Regovanta`
+- **Meta Description:** What the latest Indian MDR amendment (G.S.R. 744(E)) means for medical device manufacturers, EU companies and Indian importers under Rule 63 and Class A QMS requirements.
+- **OG Title:** `India Medical Device Rules 2026: EU Devices Gain Recognition | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63`
+
+---
+
+### 264. EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies`](https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies)
+- **File:** `src/routes/insights.ivdr-class-d-verification-notified-bodies.tsx`
+- **Page Title (`<title>`):** `EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles | NKB Regovanta`
+- **H1 Heading:** `EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles`
+- **Meta Keywords:** `eu ivdr class d verification: overcoming reference laboratories and notified body hurdles, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** The rigorous regulatory verification route for high-risk infectious disease and blood group diagnostics under Regulation (EU) 2017/746.
+- **OG Title:** `EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies`
+
+---
+
+### 265. Medical Device Documentation: From Compliance Records to Regulatory Evidence
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence`](https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence)
+- **File:** `src/routes/insights.medical-device-documentation-compliance-to-evidence.tsx`
+- **Page Title (`<title>`):** `Medical Device Documentation: From Compliance Records to Regulatory Evidence | NKB Regovanta`
+- **H1 Heading:** `Medical Device Documentation: From Compliance Records to Regulatory Evidence`
+- **Meta Keywords:** `medical device documentation, regulatory evidence, technical file traceability, FDA inspection readiness, ISO 13485 QMS audit, risk management ISO 14971, NKB Regovanta`
+- **Meta Description:** For medical device manufacturers, documentation is objective evidence of quality control. Discover how to avoid audit disconnects across design, risk management, validation, and PMS.
+- **OG Title:** `Medical Device Documentation: From Compliance Records to Regulatory Evidence | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence`
+
+---
+
+### 266. What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III)
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/notified-body-expectations-eu-mdr-technical-documentation`](https://www.nkbregovanta.com/insights/notified-body-expectations-eu-mdr-technical-documentation)
+- **File:** `src/routes/insights.notified-body-expectations-eu-mdr-technical-documentation.tsx`
+- **Page Title (`<title>`):** `What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III) | NKB Regovanta`
+- **H1 Heading:** `What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III)`
+- **Meta Keywords:** `what notified bodies look for in eu mdr technical documentation (annex ii & iii), medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Audit checklists, common non-conformities, and how to construct robust, traceable evidence files that pass first-round review.
+- **OG Title:** `What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III) | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/notified-body-expectations-eu-mdr-technical-documentation`
+
+---
+
+### 267. Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide`](https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide)
+- **File:** `src/routes/insights.notified-body-selection-conformity-assessment-guide.tsx`
+- **Page Title (`<title>`):** `Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment | NKB Regovanta`
+- **H1 Heading:** `Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment`
+- **Meta Keywords:** `selecting the right notified body for eu mdr & ivdr conformity assessment, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Evaluating NANDO designated scopes, audit capacity, review timelines, fee structures, and building long-term partnership success.
+- **OG Title:** `Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide`
+
+---
+
+### 268. Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission`](https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission)
+- **File:** `src/routes/insights.optimal-timing-usfda-510k-submission.tsx`
+- **Page Title (`<title>`):** `Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification | NKB Regovanta`
+- **H1 Heading:** `Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification`
+- **Meta Keywords:** `determining the optimal timing for your us fda 510(k) premarket notification, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Design freeze milestones, testing lead times, predicate stability, and the cost-benefit analysis of early vs mature submission timing.
+- **OG Title:** `Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission`
+
+---
+
+### 269. Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers`](https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers)
+- **File:** `src/routes/insights.overcoming-fda-510k-clearance-barriers.tsx`
+- **Page Title (`<title>`):** `Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds | NKB Regovanta`
+- **H1 Heading:** `Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds`
+- **Meta Keywords:** `overcoming critical fda 510(k) clearance barriers: proven solutions to rta and ai holds, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Strategies to resolve Refusal to Accept notices, Additional Information letters, and substantial equivalence challenges with CDRH.
+- **OG Title:** `Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers`
+
+---
+
+### 270. Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance`](https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance)
+- **File:** `src/routes/insights.qms-documentation-iso-13485-compliance.tsx`
+- **Page Title (`<title>`):** `Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification | NKB Regovanta`
+- **H1 Heading:** `Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification`
+- **Meta Keywords:** `structuring defensible qms documentation for seamless iso 13485:2016 certification, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Best practices for building compliant standard operating procedures, design history files, device master records, and CAPA logs.
+- **OG Title:** `Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance`
+
+---
+
+### 271. Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition`](https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition)
+- **File:** `src/routes/insights.regulation-eu-2024-1860-mdr-ivdr-transition.tsx`
+- **Page Title (`<title>`):** `Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities | NKB Regovanta`
+- **H1 Heading:** `Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities`
+- **Meta Keywords:** `regulation (eu) 2024/1860: transitional extensions and eudamed rollout priorities, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Strategic implications of extended legacy device deadlines, mandatory supply interruption notifications, and IVD timeline relief.
+- **OG Title:** `Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition`
+
+---
+
+### 272. Building an Integrated Global Regulatory Strategy for Medical Technologies
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/regulatory-compliance-strategy-global-medtech`](https://www.nkbregovanta.com/insights/regulatory-compliance-strategy-global-medtech)
+- **File:** `src/routes/insights.regulatory-compliance-strategy-global-medtech.tsx`
+- **Page Title (`<title>`):** `Building an Integrated Global Regulatory Strategy for Medical Technologies | NKB Regovanta`
+- **H1 Heading:** `Building an Integrated Global Regulatory Strategy for Medical Technologies`
+- **Meta Keywords:** `building an integrated global regulatory strategy for medical technologies, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Harmonizing testing dossiers, clinical registries, and submission timing across the US, EU, India, UK, and Asia-Pacific markets.
+- **OG Title:** `Building an Integrated Global Regulatory Strategy for Medical Technologies | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/regulatory-compliance-strategy-global-medtech`
+
+---
+
+### 273. Regulatory Strategies for Remote Patient Monitoring (RPM) Systems
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework`](https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework)
+- **File:** `src/routes/insights.remote-patient-monitoring-devices-regulatory-framework.tsx`
+- **Page Title (`<title>`):** `Regulatory Strategies for Remote Patient Monitoring (RPM) Systems | NKB Regovanta`
+- **H1 Heading:** `Regulatory Strategies for Remote Patient Monitoring (RPM) Systems`
+- **Meta Keywords:** `regulatory strategies for remote patient monitoring (rpm) systems, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Navigating FDA 510(k), HIPAA, cybersecurity, and EU MDR compliance for connected diagnostic sensors and telehealth platforms.
+- **OG Title:** `Regulatory Strategies for Remote Patient Monitoring (RPM) Systems | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework`
+
+---
+
+### 274. SaMD Classification and Submission Strategies Under US FDA Guidance
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/samd-classification-submission-usfda`](https://www.nkbregovanta.com/insights/samd-classification-submission-usfda)
+- **File:** `src/routes/insights.samd-classification-submission-usfda.tsx`
+- **Page Title (`<title>`):** `SaMD Classification and Submission Strategies Under US FDA Guidance | NKB Regovanta`
+- **H1 Heading:** `SaMD Classification and Submission Strategies Under US FDA Guidance`
+- **Meta Keywords:** `samd classification and submission strategies under us fda guidance, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** IMDRF risk categorizations, cybersecurity controls, clinical validation, and premarket submission frameworks for medical software.
+- **OG Title:** `SaMD Classification and Submission Strategies Under US FDA Guidance | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/samd-classification-submission-usfda`
+
+---
+
+### 275. Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15)
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr`](https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr)
+- **File:** `src/routes/insights.understanding-prrc-eu-mdr-ivdr.tsx`
+- **Page Title (`<title>`):** `Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15) | NKB Regovanta`
+- **H1 Heading:** `Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15)`
+- **Meta Keywords:** `demystifying the role of prrc under eu mdr and eu ivdr (article 15), medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Legal responsibilities, qualification standards, outsourcing limits, and liability considerations for Person Responsible for Regulatory Compliance.
+- **OG Title:** `Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15) | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr`
+
+---
+
+### 276. Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1
+
+- **Route URL:** [`https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366`](https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366)
+- **File:** `src/routes/insights.usability-testing-medical-devices-iec-62366.tsx`
+- **Page Title (`<title>`):** `Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1 | NKB Regovanta`
+- **H1 Heading:** `Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1`
+- **Meta Keywords:** `usability testing and human factors engineering for medical devices: iec 62366-1, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance`
+- **Meta Description:** Conducting formative and summative usability evaluations to eliminate use errors and meet FDA and European design standards.
+- **OG Title:** `Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1 | NKB Regovanta`
+- **Canonical Link:** `https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366`
+
+---
+
+### 277. Global Medical Device Regulatory Markets
 
 - **Route URL:** [`https://www.nkbregovanta.com/markets`](https://www.nkbregovanta.com/markets)
 - **File:** `src/routes/markets.index.tsx`

@@ -190,7 +190,7 @@ const structuredDataGraph = {
       "image": "https://www.nkbregovanta.com/og-image.png",
       "description": "NKB Regovanta Solutions Pvt. Ltd. is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
       "email": "contact@nkbregovanta.com",
-      "telephone": "+918400039062",
+      "telephone": ["+919513699000", "+919180351425", "+918400039062"],
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
