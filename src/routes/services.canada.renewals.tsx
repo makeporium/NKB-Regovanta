@@ -5,22 +5,50 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/canada/renewals')({
   head: () => ({
     meta: [
-      { title: 'License Maintenance & Renewals | Canada Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Canada License Maintenance & Renewals services for medical devices and IVDs.' },
-      { name: "keywords", content: "License Maintenance & Renewals, Canada Services, services canada renewals, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "License Maintenance & Renewals | Canada Services | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada Medical Device Licence (MDL) renewal consulting. Annual renewal filing, Class II–IV device licence maintenance, establishment licence renewal, MDSAP audit equivalence documentation, and regulatory compli..." },
+      { title: "Health Canada MDL Annual Renewals | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Health Canada Medical Device Licence annual renewal filing, MDL and MDEL maintenance, MDSAP equivalence documentation, and compliance monitoring.",
+      },
+      { property: "og:title", content: "Health Canada MDL Annual Renewals | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada Medical Device Licence annual renewal filing, MDL and MDEL maintenance, MDSAP equivalence documentation, and compliance monitoring.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/renewals" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "License Maintenance & Renewals | Canada Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada Medical Device Licence (MDL) renewal consulting. Annual renewal filing, Class II–IV device licence maintenance, establishment licence renewal, MDSAP audit equivalence documentation, and regulatory compli..." },
+      { name: "twitter:title", content: "Health Canada MDL Annual Renewals | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada Medical Device Licence annual renewal filing, MDL and MDEL maintenance, MDSAP equivalence documentation, and compliance monitoring.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/renewals" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Medical Device Licence Maintenance & Renewals",
+          description: "Annual MDL renewal filing, MDEL licence maintenance, and MDSAP equivalence compliance in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +64,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Canada Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">License Maintenance & Renewals</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Canada MDL &amp; MDEL Annual Renewals</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Canada regulatory landscape with our comprehensive License Maintenance & Renewals support.
             </p>

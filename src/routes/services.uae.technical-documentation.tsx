@@ -49,26 +49,45 @@ export const Route = createFileRoute("/services/uae/technical-documentation")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Technical Documentation & Safety / Performance Evidence | NKB Regovanta",
+        title: "MOHAP Technical Documentation (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Technical file compilation and review for UAE MOHAP medical equipment registration. Essential principles verification, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence mapping.",
+          "MOHAP medical equipment technical file compilation in UAE. Essential principles, ISO 14971 risk files, clinical evaluation, and pre-clinical evidence.",
       },
-      { name: "keywords", content: "UAE MOHAP Technical Documentation & Safety / Performance Evidence, services uae technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Technical Documentation & Safety / Performance Evidence | NKB Regovanta" },
-      { property: "og:description", content: "Technical file compilation and review for UAE MOHAP medical equipment registration. Essential principles verification, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence mapping." },
+      { property: "og:title", content: "MOHAP Technical Documentation (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP medical equipment technical file compilation in UAE. Essential principles, ISO 14971 risk files, clinical evaluation, and pre-clinical evidence.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Technical Documentation & Safety / Performance Evidence | NKB Regovanta" },
-      { name: "twitter:description", content: "Technical file compilation and review for UAE MOHAP medical equipment registration. Essential principles verification, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence mapping." },
+      { name: "twitter:title", content: "MOHAP Technical Documentation (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP medical equipment technical file compilation in UAE. Essential principles, ISO 14971 risk files, clinical evaluation, and pre-clinical evidence.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/technical-documentation" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Technical Documentation (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Technical documentation and dossier preparation for MOHAP medical device registrations in the UAE - design dossier, ISO 14971 risk management, and clinical evidence.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAETechnicalDocPage,
 });
@@ -133,7 +152,7 @@ function UAETechnicalDocPage() {
               Safety &amp; Efficacy Evidence
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Technical Documentation &amp; Safety / Performance Evidence
+              Technical Documentation &amp; Safety / Performance Evidence (UAE MOHAP)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Technical Documentation Must Substantiate the Product Being Registered. MOHAP may review the evidence supporting the device's safety, efficacy/performance and conformity. The dossier should therefore tell one consistent story from intended purpose and risk through verification, validation, clinical/performance evidence and labeling.

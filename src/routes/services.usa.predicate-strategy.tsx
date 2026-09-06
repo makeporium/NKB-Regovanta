@@ -17,28 +17,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/predicate-strategy")({
   head: () => ({
     meta: [
-      { title: "Predicate & Substantial Equivalence Strategy | FDA 510(k) | NKB Regovanta" },
+      { title: "FDA Predicate Device Strategy | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Expert FDA predicate device selection and substantial equivalence strategy. Bridge technological differences with robust performance evidence to withstand FDA review.",
+        content: "Expert FDA predicate device selection and substantial equivalence strategy. Bridge technological differences with robust performance evidence for 510(k).",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA predicate device, substantial equivalence strategy, 510k predicate selection, technological differences FDA, predicate comparison table, NKB Regovanta",
-      },
-      { property: "og:title", content: "Predicate & Substantial Equivalence Strategy | NKB Regovanta" },
+      { property: "og:title", content: "FDA Predicate Device Strategy | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We evaluate whether a proposed predicate can withstand FDA's substantial equivalence analysis and build the evidence required to bridge differences.",
+        content: "Expert FDA predicate device selection and substantial equivalence strategy. Bridge technological differences with robust performance evidence for 510(k).",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/predicate-strategy" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Predicate & Substantial Equivalence Strategy | FDA 510(k) | NKB Regovanta" },
-      { name: "twitter:description", content: "Expert FDA predicate device selection and substantial equivalence strategy. Bridge technological differences with robust performance evidence to withstand FDA review." },
+      { name: "twitter:title", content: "FDA Predicate Device Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert FDA predicate device selection and substantial equivalence strategy. Bridge technological differences with robust performance evidence for 510(k)." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/predicate-strategy" }],
@@ -76,7 +69,7 @@ function PredicateStrategyPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Predicate & Substantial Equivalence Strategy",
+              name: "FDA Predicate & Substantial Equivalence Strategy",
               url: "https://www.nkbregovanta.com/services/usa/predicate-strategy",
               description:
                 "FDA 510(k) predicate device evaluation, substantial equivalence justification, and performance evidence bridging.",
@@ -128,7 +121,7 @@ function PredicateStrategyPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Predicate &amp; Substantial Equivalence Strategy
+              FDA Predicate &amp; Substantial Equivalence Strategy
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We evaluate whether a proposed predicate can withstand FDA's substantial equivalence analysis, then trace every meaningful technological difference into the evidence needed to support it.

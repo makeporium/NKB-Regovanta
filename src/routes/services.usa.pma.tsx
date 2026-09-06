@@ -14,31 +14,44 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/pma")({
   head: () => ({
     meta: [
-      { title: "PMA Premarket Approval & De Novo Support Consultant | US FDA | NKB Regovanta" },
+      { title: "US FDA Premarket Approval (PMA) | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "End-to-end consulting for US FDA Premarket Approval (PMA) applications and De Novo classification requests for novel and Class III medical devices.",
+        content: "Consulting for US FDA Premarket Approval (PMA) applications for high-risk Class III medical devices. Clinical data, QMSR, and advisory committee support.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA PMA Premarket Approval, Class III medical device FDA, De Novo classification, clinical evidence FDA, NKB Regovanta",
-      },
-      { property: "og:title", content: "FDA PMA Premarket Approval & De Novo Support | NKB Regovanta" },
+      { property: "og:title", content: "US FDA Premarket Approval (PMA) | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision.",
+        content: "Consulting for US FDA Premarket Approval (PMA) applications for high-risk Class III medical devices. Clinical data, QMSR, and advisory committee support.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/pma" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "PMA Premarket Approval & De Novo Support Consultant | US FDA | NKB Regovanta" },
-      { name: "twitter:description", content: "End-to-end consulting for US FDA Premarket Approval (PMA) applications and De Novo classification requests for novel and Class III medical devices." },
+      { name: "twitter:title", content: "US FDA Premarket Approval (PMA) | NKB Regovanta" },
+      { name: "twitter:description", content: "Consulting for US FDA Premarket Approval (PMA) applications for high-risk Class III medical devices. Clinical data, QMSR, and advisory committee support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/pma" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "US FDA Premarket Approval (PMA) Support",
+          description: "End-to-end consulting for US FDA Premarket Approval (PMA) applications for novel and Class III medical devices.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "United States",
+          },
+        }),
+      },
+    ],
   }),
   component: PMAPage,
 });
@@ -82,7 +95,7 @@ function PMAPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/usa" className="hover:text-navy transition-colors">USA FDA</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">De Novo &amp; PMA Support</span>
+            <span className="text-navy">Premarket Approval (PMA) Support</span>
           </div>
 
           <Link
@@ -94,23 +107,23 @@ function PMAPage() {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
-              <Layers className="h-3.5 w-3.5" /> Class III &amp; Novel Devices
+              <Layers className="h-3.5 w-3.5" /> Class III Medical Devices
             </div>
             <h1
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              De Novo &amp; PMA Support
+              US FDA Premarket Approval (PMA) Support
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
-              For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision, integrating risk, controls, non-clinical evidence, clinical evidence and FDA interaction.
+              For high-risk Class III devices, we build the regulatory strategy around the robust clinical and non-clinical evidence FDA requires to demonstrate reasonable assurance of safety and effectiveness.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
               >
-                Discuss De Novo / PMA Strategy <ArrowRight className="h-4 w-4" />
+                Discuss PMA Strategy <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

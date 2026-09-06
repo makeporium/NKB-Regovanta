@@ -49,26 +49,52 @@ export const Route = createFileRoute("/services/australia/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia Labelling, IFU, Advertising & UDI / AusUDID Compliance | NKB Regovanta",
+        title: "TGA Labelling & AusUDID Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Australian medical device labelling review under Essential Principle 13, Sponsor/Manufacturer identification, TGA Advertising Code compliance, and phased UDI / AusUDID database submission.",
+          "Australian medical device labelling review under Essential Principle 13, Sponsor identification, TGA Advertising Code, and AusUDID database submission.",
       },
-      { name: "keywords", content: "Australia Labelling, IFU, Advertising & UDI / AusUDID Compliance, services australia labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia Labelling, IFU, Advertising & UDI / AusUDID Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Australian medical device labelling review under Essential Principle 13, Sponsor/Manufacturer identification, TGA Advertising Code compliance, and phased UDI / AusUDID database submission." },
+      { property: "og:title", content: "TGA Labelling & AusUDID Compliance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Australian medical device labelling review under Essential Principle 13, Sponsor identification, TGA Advertising Code, and AusUDID database submission.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia Labelling, IFU, Advertising & UDI / AusUDID Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Australian medical device labelling review under Essential Principle 13, Sponsor/Manufacturer identification, TGA Advertising Code compliance, and phased UDI / AusUDID database submission." },
+      { name: "twitter:title", content: "TGA Labelling & AusUDID Compliance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Australian medical device labelling review under Essential Principle 13, Sponsor identification, TGA Advertising Code, and AusUDID database submission.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/labeling" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australian Medical Device Labelling & AusUDID Compliance",
+          description: "Essential Principle 13 compliance, artwork audit, and AusUDID database management in Australia.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaLabelingPage,
 });
@@ -134,7 +160,7 @@ function AustraliaLabelingPage() {
               EP 13 &amp; AusUDID System
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Australian Labelling, IFU, Advertising &amp; UDI / AusUDID Compliance
+              Australian Labelling, IFU &amp; AusUDID Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Australian labelling must remain consistent with the intended purpose, technical evidence, Manufacturer Evidence and ARTG inclusion. Australia is also implementing UDI on a phased basis, with mandatory requirements already commencing for higher-risk devices from 1 July 2026.

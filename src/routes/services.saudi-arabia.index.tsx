@@ -47,23 +47,21 @@ export const Route = createFileRoute("/services/saudi-arabia/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Saudi Arabia SFDA Medical Device Registration & MDMA Consultant | NKB Regovanta",
+        title: "Saudi Arabia SFDA Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "SFDA Medical Device Marketing Authorization (MDMA) consulting in Saudi Arabia. Classification (Class A-D), Saudi Authorized Representative (AR), MDS-REQ 1 technical files, establishment licensing, and post-market vigilance.",
+          "Expert Saudi Arabia SFDA regulatory consulting: MDMA marketing authorization, Saudi Authorized Representative (AR), MDS-REQ 1, and licensing.",
       },
-      { name: "keywords", content: "Saudi Arabia SFDA Medical Device Registration & MDMA Consultant, services saudi arabia, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Saudi Arabia SFDA Medical Device Registration & MDMA Consultant | NKB Regovanta" },
-      { property: "og:description", content: "SFDA Medical Device Marketing Authorization (MDMA) consulting in Saudi Arabia. Classification (Class A-D), Saudi Authorized Representative (AR), MDS-REQ 1 technical files, establishment licensing, and post-market vigi..." },
+      { property: "og:title", content: "Saudi Arabia SFDA Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert Saudi Arabia SFDA regulatory consulting: MDMA marketing authorization, Saudi Authorized Representative (AR), MDS-REQ 1, and licensing." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Saudi Arabia SFDA Medical Device Registration & MDMA Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "SFDA Medical Device Marketing Authorization (MDMA) consulting in Saudi Arabia. Classification (Class A-D), Saudi Authorized Representative (AR), MDS-REQ 1 technical files, establishment licensing, and post-market vigi..." },
+      { name: "twitter:title", content: "Saudi Arabia SFDA Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert Saudi Arabia SFDA regulatory consulting: MDMA marketing authorization, Saudi Authorized Representative (AR), MDS-REQ 1, and licensing." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia" }],
@@ -360,6 +358,24 @@ const faqs = [
 function SaudiArabiaHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Saudi Arabia SFDA Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "SFDA MDMA Registration & Authorized Representative Consulting",
+            "description": "Comprehensive Saudi Arabia SFDA consulting for Medical Devices and IVDs including MDMA applications and Saudi Authorized Representative services.",
+            "areaServed": "Saudi Arabia"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Riyadh Graphic)
       ══════════════════════════════════════════════════════════════════ */}

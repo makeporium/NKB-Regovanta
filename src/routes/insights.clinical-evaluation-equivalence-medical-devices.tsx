@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
 export const Route = createFileRoute("/insights/clinical-evaluation-equivalence-medical-devices")({
   head: () => ({
     meta: [
-      { title: "Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls | NKB Regovanta" },
+      { title: "EU MDR Clinical Equivalence Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Demonstrating technical, biological, and clinical equivalence under MDCG guidelines to justify reliance on predicate clinical data.",
       },
-      {
-        name: "keywords",
-        content: "establishing clinical equivalence under eu mdr: methodologies and pitfalls, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Clinical Equivalence Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Demonstrating technical, biological, and clinical equivalence under MDCG guidelines to justify reliance on predicate clinical data.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/clinical-evaluation-equivalence-
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_eu_mdr_remediation_1786441191745.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Establishing Clinical Equivalence Under EU MDR: Methodologies and Pitfalls" },
+      { name: "twitter:title", content: "EU MDR Clinical Equivalence Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Demonstrating technical, biological, and clinical equivalence under MDCG guidelines to justify reliance on predicate clinical data." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_eu_mdr_remediation_1786441191745.png" },
     ],

@@ -13,22 +13,48 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/dors-registration")({
   head: () => ({
     meta: [
-      { title: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
+      { title: "MHRA DORS Device Registration | NKB Regovanta" },
       {
-        name: "description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance strategy, and UKCA marking guidance.",
+        name: "description",
+        content: "MHRA DORS device registration consulting: account setup, device listing, UK Responsible Person (UKRP) registration, and Northern Ireland compliance.",
       },
-      { name: "keywords", content: "Device Registration via MHRA DORS Portal, services uk mhra registration, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
-      { property: "og:description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance str..." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/mhra-registration" },
+      { property: "og:title", content: "MHRA DORS Device Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "MHRA DORS device registration consulting: account setup, device listing, UK Responsible Person (UKRP) registration, and Northern Ireland compliance.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/dors-registration" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Device Registration via MHRA DORS Portal | NKB Regovanta" },
-      { name: "twitter:description", content: "MHRA DORS (Device Online Registration System) portal registration consulting for UK medical devices. Step-by-step DORS account setup, device listing, UK Responsible Person registration, Northern Ireland compliance str..." },
+      { name: "twitter:title", content: "MHRA DORS Device Registration | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "MHRA DORS device registration consulting: account setup, device listing, UK Responsible Person (UKRP) registration, and Northern Ireland compliance.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/dors-registration" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MHRA DORS Device Registration Consulting",
+          description: "MHRA DORS device listing and UK Responsible Person registration services.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
+    ],
   }),
   component: DORSPage,
 });
@@ -57,7 +83,7 @@ function DORSPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
-              Device Online Registration System (DORS)
+              MHRA DORS Device Registration System
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               We manage your complete MHRA registration dataset in DORS, verifying product classification, GMDN nomenclature, and UKRP authorization.

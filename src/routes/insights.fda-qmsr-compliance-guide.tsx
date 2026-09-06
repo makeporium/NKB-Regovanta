@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 export const Route = createFileRoute("/insights/fda-qmsr-compliance-guide")({
   head: () => ({
     meta: [
-      { title: "Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016 | NKB Regovanta" },
+      { title: "FDA QMSR & ISO 13485 Compliance Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Key expectations, inspection priorities, and practical quality system transitions for medical device manufacturers under 21 CFR Part 820.",
       },
-      {
-        name: "keywords",
-        content: "mastering fda qmsr compliance: strategic alignment with iso 13485:2016, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016 | NKB Regovanta" },
+      { property: "og:title", content: "FDA QMSR & ISO 13485 Compliance Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Key expectations, inspection priorities, and practical quality system transitions for medical device manufacturers under 21 CFR Part 820.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/fda-qmsr-compliance-guide")({
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Mastering FDA QMSR Compliance: Strategic Alignment with ISO 13485:2016" },
+      { name: "twitter:title", content: "FDA QMSR & ISO 13485 Compliance Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Key expectations, inspection priorities, and practical quality system transitions for medical device manufacturers under 21 CFR Part 820." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
     ],

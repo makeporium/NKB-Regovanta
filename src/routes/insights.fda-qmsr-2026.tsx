@@ -6,26 +6,25 @@ const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
     meta: [
-      { title: "FDA QMSR 2026 | Insights | NKB Regovanta" },
+      { title: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
       {
         name: "description",
         content:
-          "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations and actions medical device manufacturers should take to maintain compliance.",
+          "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance.",
       },
-      { name: "keywords", content: "FDA QMSR 2026, Insights, insights fda qmsr 2026, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "FDA QMSR 2026 | Insights | NKB Regovanta" },
-      { property: "og:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations and actions medical device manufacturers should take to maintain compliance." },
+      { property: "og:title", content: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
+      { property: "og:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA QMSR 2026 | Insights | NKB Regovanta" },
-      { name: "twitter:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations and actions medical device manufacturers should take to maintain compliance." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:title", content: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
-  ],
+    ],
   }),
   component: Article,
 });
@@ -33,6 +32,33 @@ export const Route = createFileRoute("/insights/fda-qmsr-2026")({
 function Article() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "FDA QMSR 2026: What Medical Device Manufacturers Need to Know",
+            "description": "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance.",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png",
+            "author": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.nkbregovanta.com/favicon.png"
+              }
+            },
+            "datePublished": "2026-05-15",
+            "mainEntityOfPage": "https://www.nkbregovanta.com/insights/fda-qmsr-2026"
+          })
+        }}
+      />
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           

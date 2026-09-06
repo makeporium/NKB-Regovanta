@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/tecnovigilance")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance | NKB Regovanta",
+        title: "ANVISA Tecnovigilância (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil tecnovigilância post-market surveillance systems, ANVISA adverse event reporting (Notivisa / Formulário de Tecnovigilância), complaint triage, field safety corrective actions (FSCA), and recall coordination.",
+          "Brazil tecnovigilância PMS systems, ANVISA adverse event reporting (NOTIVISA), complaint triage, field safety actions, and recalls for medical devices.",
       },
-      { name: "keywords", content: "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance, services brazil tecnovigilance, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance | NKB Regovanta" },
-      { property: "og:description", content: "Brazil tecnovigilância post-market surveillance systems, ANVISA adverse event reporting (Notivisa / Formulário de Tecnovigilância), complaint triage, field safety corrective actions (FSCA), and recall coordination." },
+      { property: "og:title", content: "ANVISA Tecnovigilância (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Brazil tecnovigilância PMS systems, ANVISA adverse event reporting (NOTIVISA), complaint triage, field safety actions, and recalls for medical devices.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/tecnovigilance" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance | NKB Regovanta" },
-      { name: "twitter:description", content: "Brazil tecnovigilância post-market surveillance systems, ANVISA adverse event reporting (Notivisa / Formulário de Tecnovigilância), complaint triage, field safety corrective actions (FSCA), and recall coordination." },
+      { name: "twitter:title", content: "ANVISA Tecnovigilância (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Brazil tecnovigilância PMS systems, ANVISA adverse event reporting (NOTIVISA), complaint triage, field safety actions, and recalls for medical devices.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/tecnovigilance" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Tecnovigilância, Adverse Event Reporting & Post-Market Surveillance",
+          description: "Post-market surveillance, NOTIVISA adverse event reporting, FSCA execution, and recall coordination for medical devices in Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilTecnovigilancePage,
 });
@@ -129,7 +152,7 @@ function BrazilTecnovigilancePage() {
               NOTIVISA &amp; Post-Market Vigilance
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Post-Market Surveillance &amp; Tecnovigilância (Brazil)
+              ANVISA Tecnovigilância &amp; Post-Market Surveillance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Tecnovigilance is ANVISA's post-market surveillance system for adverse events and technical complaints involving medical devices and IVDs. Market authorization does not end the regulatory obligation; the Brazilian holder and manufacturer must be able to detect safety signals, investigate complaints, implement corrective action and execute field actions when necessary.

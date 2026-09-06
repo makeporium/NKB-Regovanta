@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/testing-strategy")({
   head: () => ({
     meta: [
       {
-        title:
-          "Medical Device Testing Strategy & Laboratory Coordination (Canada) | NKB Regovanta",
+        title: "Health Canada Device Testing Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Strategic pre-clinical testing protocol design, worst-case rationale development, and GLP/ISO 17025 accredited laboratory coordination for Health Canada MDL submissions.",
+          "Pre-clinical testing protocol design, worst-case rationale, and ISO 17025 lab coordination for Health Canada MDL submissions.",
       },
-      { name: "keywords", content: "Medical Device Testing Strategy & Laboratory Coordination (Canada), services canada testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Medical Device Testing Strategy & Laboratory Coordination (Canada) | NKB Regovanta" },
-      { property: "og:description", content: "Strategic pre-clinical testing protocol design, worst-case rationale development, and GLP/ISO 17025 accredited laboratory coordination for Health Canada MDL submissions." },
+      { property: "og:title", content: "Health Canada Device Testing Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Pre-clinical testing protocol design, worst-case rationale, and ISO 17025 lab coordination for Health Canada MDL submissions.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Testing Strategy & Laboratory Coordination (Canada) | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic pre-clinical testing protocol design, worst-case rationale development, and GLP/ISO 17025 accredited laboratory coordination for Health Canada MDL submissions." },
+      { name: "twitter:title", content: "Health Canada Device Testing Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Pre-clinical testing protocol design, worst-case rationale, and ISO 17025 lab coordination for Health Canada MDL submissions.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/testing-strategy" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medical Device Testing Strategy & Laboratory Coordination (Canada)",
+          description: "Pre-clinical testing protocol design, worst-case rationale, and accredited lab coordination for Health Canada MDL submissions.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaTestingStrategyPage,
 });
@@ -128,7 +151,7 @@ function CanadaTestingStrategyPage() {
               Lab Coordination &amp; Protocol Review
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Testing Strategy &amp; Laboratory Coordination
+              Health Canada Testing Strategy &amp; Laboratory Coordination
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Testing should be designed around the regulatory question the evidence must answer. NKB Regovanta helps manufacturers define the evidence strategy before studies are initiated and can coordinate testing with established laboratories where external testing is required.

@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/deficiency-response")({
   head: () => ({
     meta: [
-      { title: "FDA Deficiency Response & Additional Information (AI) Support | NKB Regovanta" },
+      { title: "FDA Deficiency Response Consulting | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Strategic response preparation for FDA 510(k), De Novo, and PMA Additional Information (AI) requests, hold letters, and interactive review deficiency queries.",
+        content: "Strategic response preparation for FDA 510(k), De Novo, and PMA Additional Information (AI) requests, hold letters, and deficiency queries.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA deficiency letter response, FDA AI hold letter, 510k deficiency response, CDRH interactive review questions, FDA response consultant, NKB Regovanta",
-      },
-      { property: "og:title", content: "FDA Deficiency Response & AI Support | NKB Regovanta" },
+      { property: "og:title", content: "FDA Deficiency Response Consulting | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We deconstruct each FDA deficiency to fix the root regulatory argument — transforming hold letters into cleared medical devices.",
+        content: "Strategic response preparation for FDA 510(k), De Novo, and PMA Additional Information (AI) requests, hold letters, and deficiency queries.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/deficiency-response" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA Deficiency Response & Additional Information (AI) Support | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic response preparation for FDA 510(k), De Novo, and PMA Additional Information (AI) requests, hold letters, and interactive review deficiency queries." },
+      { name: "twitter:title", content: "FDA Deficiency Response Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Strategic response preparation for FDA 510(k), De Novo, and PMA Additional Information (AI) requests, hold letters, and deficiency queries." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/deficiency-response" }],

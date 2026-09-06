@@ -247,9 +247,10 @@ function FeedCard({ item }: { item: RegulatoryItem }) {
 interface RegulatoryDashboardProps {
     items: RegulatoryItem[];
     cachedAt?: string;
+    title?: string;
 }
 
-export function RegulatoryDashboard({ items, cachedAt }: RegulatoryDashboardProps) {
+export function RegulatoryDashboard({ items, cachedAt, title }: RegulatoryDashboardProps) {
     const [search, setSearch] = useState("");
     const [agency, setAgency] = useState<SourceAgency | "ALL">("ALL");
     const [updateType, setUpdateType] = useState<UpdateType | "ALL">("ALL");
@@ -301,7 +302,7 @@ export function RegulatoryDashboard({ items, cachedAt }: RegulatoryDashboardProp
                                 </div>
 
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight font-display">
-                                    Global Regulatory Intelligence Feed
+                                    {title || "Global Regulatory Intelligence Feed"}
                                 </h1>
 
                                 <p className="mt-4 text-sm sm:text-base text-blue-100/90 leading-relaxed font-medium">

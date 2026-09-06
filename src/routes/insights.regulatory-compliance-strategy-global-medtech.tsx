@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/media__1786282925761.png";
 export const Route = createFileRoute("/insights/regulatory-compliance-strategy-global-medtech")({
   head: () => ({
     meta: [
-      { title: "Building an Integrated Global Regulatory Strategy for Medical Technologies | NKB Regovanta" },
+      { title: "Global MedTech Regulatory Strategy Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Harmonizing testing dossiers, clinical registries, and submission timing across the US, EU, India, UK, and Asia-Pacific markets.",
       },
-      {
-        name: "keywords",
-        content: "building an integrated global regulatory strategy for medical technologies, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Building an Integrated Global Regulatory Strategy for Medical Technologies | NKB Regovanta" },
+      { property: "og:title", content: "Global MedTech Regulatory Strategy Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Harmonizing testing dossiers, clinical registries, and submission timing across the US, EU, India, UK, and Asia-Pacific markets.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/regulatory-compliance-strategy-g
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Building an Integrated Global Regulatory Strategy for Medical Technologies" },
+      { name: "twitter:title", content: "Global MedTech Regulatory Strategy Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Harmonizing testing dossiers, clinical registries, and submission timing across the US, EU, India, UK, and Asia-Pacific markets." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Effective Regulatory Compliance Strategy for Medical Devices (Importance and Process)</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Why Is the Regulatory Compliance Strategy for Medical Devices Important?</p>

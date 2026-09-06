@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/mhra-registration")({
   head: () => ({
     meta: [
-      { title: "MHRA Medical Device Registration & DORS Readiness | NKB Regovanta" },
+      { title: "MHRA Medical Device Registration | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior UK MHRA medical device and IVD registration consulting via the Device Online Registration System (DORS). DORS data quality audits, UKRP linkage, and registration maintenance.",
+        content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance.",
       },
-      {
-        name: "keywords",
-        content:
-          "MHRA device registration, DORS registration MHRA, UK medical device register, UKRP MHRA registration, UKCA registration, IVD registration UK, NKB Regovanta",
-      },
-      { property: "og:title", content: "MHRA Medical Device Registration & DORS Readiness | NKB Regovanta" },
+      { property: "og:title", content: "MHRA Medical Device Registration | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "MHRA registration should be the final expression of an already-established regulatory pathway. We quality-check your registration dataset against underlying evidence before filing.",
+        content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/mhra-registration" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MHRA Medical Device Registration & DORS Readiness | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior UK MHRA medical device and IVD registration consulting via the Device Online Registration System (DORS). DORS data quality audits, UKRP linkage, and registration maintenance." },
+      { name: "twitter:title", content: "MHRA Medical Device Registration | NKB Regovanta" },
+      { name: "twitter:description", content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" }],

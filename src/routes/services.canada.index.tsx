@@ -54,33 +54,27 @@ export const Route = createFileRoute("/services/canada/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada MDL & MDEL Registration Consultant | MDSAP Canada | NKB Regovanta",
+        title: "Health Canada Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Senior Health Canada regulatory consulting: Medical Device Licence (MDL Class II-IV), Medical Device Establishment Licence (MDEL), MDSAP ISO 13485 QMS readiness, IMDRF Table of Contents dossiers, and bilingual French/English labelling.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Health Canada Medical Device Licence MDL, Medical Device Establishment Licence MDEL, MDSAP Canada consultant, SOR 98-282, Health Canada IVD registration, bilingual labelling Canada medical devices, NKB Regovanta",
+          "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling.",
       },
       {
         property: "og:title",
-        content: "Health Canada MDL & MDEL Registration Consultant | MDSAP Canada | NKB Regovanta",
+        content: "Health Canada Medical Device Consultant | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Your Partner for Canadian Market Access. End-to-end regulatory, quality and compliance support for Medical Devices, IVDs and Combination Products in Canada.",
+          "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada MDL & MDEL Registration Consultant | MDSAP Canada | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior Health Canada regulatory consulting: Medical Device Licence (MDL Class II-IV), Medical Device Establishment Licence (MDEL), MDSAP ISO 13485 QMS readiness, IMDRF Table of Contents dossiers, and bilingual French/..." },
+      { name: "twitter:title", content: "Health Canada Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada" }],
@@ -384,11 +378,12 @@ function CanadaMarketCompletePage() {
             {/* Left Col */}
             <div className="lg:col-span-7">
               <h1 className="font-display font-extrabold text-white text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] leading-[1.12] mb-2 tracking-tight">
-                Health Canada MDL &amp; MDEL<br />
-                Registration Consultant<br />
-                <span className="text-[#e03131]">MDSAP Canada</span> | Your Partner for<br className="hidden sm:inline" />
-                Canadian Market Access
+                Health Canada Medical Device<br />
+                Regulatory Consultant
               </h1>
+              <p className="text-sm sm:text-base font-bold text-[#e03131] mb-2">
+                MDL &amp; MDEL Registration • MDSAP Canada Certification
+              </p>
               <p className="text-xs sm:text-[13.5px] text-blue-100/90 font-medium mb-6 leading-relaxed max-w-2xl">
                 End-to-end regulatory, quality and compliance support for Medical Devices, IVDs and Combination Products in Canada.
               </p>

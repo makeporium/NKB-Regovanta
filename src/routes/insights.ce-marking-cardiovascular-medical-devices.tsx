@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/medtech_reg_lab.jpg";
 export const Route = createFileRoute("/insights/ce-marking-cardiovascular-medical-devices")({
   head: () => ({
     meta: [
-      { title: "CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR | NKB Regovanta" },
+      { title: "CE Marking for Cardiovascular Devices | NKB Regovanta" },
       {
         name: "description",
         content: "Specialized clinical evaluation, biocompatibility, hemocompatibility, and Notified Body expectations for cardiovascular implants and delivery systems.",
       },
-      {
-        name: "keywords",
-        content: "ce marking roadmap for cardiovascular medical devices under eu mdr, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR | NKB Regovanta" },
+      { property: "og:title", content: "CE Marking for Cardiovascular Devices | NKB Regovanta" },
       {
         property: "og:description",
         content: "Specialized clinical evaluation, biocompatibility, hemocompatibility, and Notified Body expectations for cardiovascular implants and delivery systems.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/ce-marking-cardiovascular-medica
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_fda_simulated_use_1786441155542.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "CE Marking Roadmap for Cardiovascular Medical Devices Under EU MDR" },
+      { name: "twitter:title", content: "CE Marking for Cardiovascular Devices | NKB Regovanta" },
       { name: "twitter:description", content: "Specialized clinical evaluation, biocompatibility, hemocompatibility, and Notified Body expectations for cardiovascular implants and delivery systems." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_fda_simulated_use_1786441155542.png" },
     ],

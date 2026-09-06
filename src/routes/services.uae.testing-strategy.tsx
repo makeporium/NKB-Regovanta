@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/testing-strategy")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
+        title: "MOHAP Device Testing Strategy (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Pre-clinical testing strategy for UAE MOHAP medical equipment registration. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, sterilization, and accredited laboratory coordination.",
+          "Pre-clinical testing strategy for UAE MOHAP registration. ISO 10993 biocompatibility, IEC 60601 electrical safety, EMC, and lab coordination.",
       },
-      { name: "keywords", content: "UAE Medical Device Testing Strategy & Laboratory Coordination, services uae testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { property: "og:description", content: "Pre-clinical testing strategy for UAE MOHAP medical equipment registration. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, sterilization, and accredited laboratory coordination." },
+      { property: "og:title", content: "MOHAP Device Testing Strategy (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Pre-clinical testing strategy for UAE MOHAP registration. ISO 10993 biocompatibility, IEC 60601 electrical safety, EMC, and lab coordination.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { name: "twitter:description", content: "Pre-clinical testing strategy for UAE MOHAP medical equipment registration. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, sterilization, and accredited laboratory coordination." },
+      { name: "twitter:title", content: "MOHAP Device Testing Strategy (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Pre-clinical testing strategy for UAE MOHAP registration. ISO 10993 biocompatibility, IEC 60601 electrical safety, EMC, and lab coordination.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/testing-strategy" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Testing Strategy (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Pre-clinical testing strategy and laboratory coordination for medical devices seeking MOHAP registration in the UAE - biocompatibility, electrical safety, and EMC.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAETestingStrategyPage,
 });

@@ -39,60 +39,50 @@ export const Route = createFileRoute("/services/drug-device-combination-products
   head: () => ({
     meta: [
       {
-        title:
-          "Drug-Device Combination Product Consulting for Global Regulatory Compliance | NKB Regovanta",
+        title: "Drug-Device Combination Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "End-to-end regulatory consulting for Drug-Device Combination Products. FDA 21 CFR Part 4, 21 CFR Part 820/QMSR, EU MDR Article 117, Notified Body Opinion (NBOp), DHF, ISO 14971, and usability engineering.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Drug-device combination product, combination product regulatory consulting, FDA 21 CFR Part 4, EU MDR Article 117, Notified Body Opinion NBOp, prefilled syringe regulatory, autoinjector DHF, drug-eluting stent, PMOA, ISO 14971 combination products, IEC 62366 usability, GSPR checklist",
+          "Drug-device combination consulting: FDA 21 CFR Part 4, QMSR, EU MDR Article 117, Notified Body Opinions (NBOp), ISO 14971 risk management, and DHF.",
       },
       {
         property: "og:title",
-        content:
-          "Drug-Device Combination Product Consulting | FDA, EU MDR & Article 117 | NKB Regovanta",
+        content: "Drug-Device Combination Consulting | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Comprehensive regulatory strategy, design controls, risk management, and submission-ready technical documentation for drug-device combination products worldwide.",
+          "Drug-device combination consulting: FDA 21 CFR Part 4, QMSR, EU MDR Article 117, Notified Body Opinions (NBOp), ISO 14971 risk management, and DHF.",
       },
-      {
-        property: "og:url",
-        content: "https://www.nkbregovanta.com/services/drug-device-combination-products",
-      },
-      {
-        property: "og:image",
-        content: "https://www.nkbregovanta.com/og-image.png",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-device-combination-products" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content:
-          "Drug-Device Combination Product Consulting | FDA, EU MDR & Article 117 | NKB Regovanta",
+        content: "Drug-Device Combination Consulting | NKB Regovanta",
       },
       {
         name: "twitter:description",
         content:
-          "Comprehensive regulatory strategy, design controls, risk management, and submission-ready technical documentation for drug-device combination products worldwide.",
+          "Drug-device combination consulting: FDA 21 CFR Part 4, QMSR, EU MDR Article 117, Notified Body Opinions (NBOp), ISO 14971 risk management, and DHF.",
       },
-      {
-        name: "twitter:image",
-        content: "https://www.nkbregovanta.com/og-image.png",
-      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-device-combination-products" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/drug-device-combination-products",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Drug-Device Combination Product Regulatory Consulting",
+          description: "Regulatory strategy, design controls, ISO 14971 risk management, and submission-ready technical documentation for drug-device combination products worldwide.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

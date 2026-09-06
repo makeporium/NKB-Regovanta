@@ -16,26 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/pms-pmcf")({
   head: () => ({
     meta: [
-      { title: "EU MDR PMCF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
+      { title: "Post-Market Clinical Follow-Up PMCF | NKB Regovanta" },
       {
-        name: "description", content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting. PMCF plan and report preparation per MEDDEV 2.12/2, clinical data gap analysis, registry study design, literature surveillance protocol, and PSUR compilation for EU MDR-compliant devices.",
+        name: "description",
+        content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting: PMCF plans, clinical data gap analysis, registry studies, literature protocols, and PSURs.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR PMS plan, MDR PSUR periodic safety update report, PMCF plan evaluation report, MDR vigilance serious incidents, FSCA field safety corrective action, NKB Regovanta",
-      },
-      { property: "og:title", content: "MDR PMCF, PMS, PSUR & Vigilance | NKB Regovanta" },
+      { property: "og:title", content: "Post-Market Clinical Follow-Up PMCF | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Post-market is an active evidence system, not an annual documentation exercise. We connect complaints, trends, risk, and CER updates.",
+        content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting: PMCF plans, clinical data gap analysis, registry studies, literature protocols, and PSURs.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/pms-pmcf" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR PMCF, PMS, PSUR & Vigilance Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting. PMCF plan and report preparation per MEDDEV 2.12/2, clinical data gap analysis, registry study design, literature surveillance protocol, and PSUR compilation fo..." },
+      { name: "twitter:title", content: "Post-Market Clinical Follow-Up PMCF | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Post-Market Clinical Follow-Up (PMCF) consulting: PMCF plans, clinical data gap analysis, registry studies, literature protocols, and PSURs." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/pms-pmcf" }],
@@ -129,7 +124,7 @@ function EUPMSPMCFPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDR PMCF, PMS, PSUR &amp; Vigilance
+              Post-Market Clinical Follow-up (PMCF) Strategy &amp; Execution
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Post-market is an active evidence system, not an annual documentation exercise. We connect post-market clinical data to risk management, CAPA, CER and technical file maintenance.

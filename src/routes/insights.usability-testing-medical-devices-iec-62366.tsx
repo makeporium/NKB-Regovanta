@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
 export const Route = createFileRoute("/insights/usability-testing-medical-devices-iec-62366")({
   head: () => ({
     meta: [
-      { title: "Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1 | NKB Regovanta" },
+      { title: "IEC 62366 Usability Testing Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Conducting formative and summative usability evaluations to eliminate use errors and meet FDA and European design standards.",
       },
-      {
-        name: "keywords",
-        content: "usability testing and human factors engineering for medical devices: iec 62366-1, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1 | NKB Regovanta" },
+      { property: "og:title", content: "IEC 62366 Usability Testing Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Conducting formative and summative usability evaluations to eliminate use errors and meet FDA and European design standards.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/usability-testing-medical-device
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Usability Testing and Human Factors Engineering for Medical Devices: IEC 62366-1" },
+      { name: "twitter:title", content: "IEC 62366 Usability Testing Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Conducting formative and summative usability evaluations to eliminate use errors and meet FDA and European design standards." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Usability Testing for Medical Devices: Comprehensive IEC 62366 &amp;#038; FDA Compliance Guide</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Performing rigorous usability testing for medical devices is a core regulatory requirement under global standards like IEC 62366-1:2015+AMD1:2020 and FDA Human Factors Guidance. Whether designing a complex surgical console, a digital health application, or a simple infusion pump, ensuring that healthcare providers and patients can operate the device safely without use errors is essential for global market authorization.</p>

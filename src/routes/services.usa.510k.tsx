@@ -17,28 +17,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/510k")({
   head: () => ({
     meta: [
-      { title: "510(k) / 510 k Consultant | USFDA 510k Clearance & eSTAR Dossier | NKB Regovanta" },
+      { title: "FDA 510(k) Clearance Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Leading USFDA 510(k) and 510 k premarket notification consultant & medical device consultancy. Substantial equivalence strategy, predicate selection, eSTAR preparation, and FDA deficiency response.",
+        content: "FDA 510(k) clearance consulting for medical devices. Substantial equivalence strategy, predicate selection, eSTAR dossier filing, and FDA response.",
       },
-      {
-        name: "keywords",
-        content:
-          "510 k, 510 k consultant, 510 k clearance, 510 k submission, USFDA, USFDA consultant, USFDA 510 k, 510k submission consultant, FDA 510(k) clearance, substantial equivalence, eSTAR 510k, predicate device research, medical device consultant, medical device consultancy, CDRH portal, NKB Regovanta",
-      },
-      { property: "og:title", content: "USFDA 510(k) & 510 k Premarket Notification Consultant | NKB Regovanta" },
+      { property: "og:title", content: "FDA 510(k) Clearance Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Leading USFDA medical device consultancy. We structure your 510(k) / 510 k around substantial equivalence, predicate eligibility, and eSTAR dossier compilation.",
+        content: "FDA 510(k) clearance consulting for medical devices. Substantial equivalence strategy, predicate selection, eSTAR dossier filing, and FDA response.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/510k" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "510(k) / 510 k Consultant | USFDA 510k Clearance | NKB Regovanta" },
-      { name: "twitter:description", content: "Complete USFDA 510(k) / 510 k premarket notification consulting. Substantial equivalence strategy, predicate selection, and eSTAR preparation." },
+      { name: "twitter:title", content: "FDA 510(k) Clearance Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "FDA 510(k) clearance consulting for medical devices. Substantial equivalence strategy, predicate selection, eSTAR dossier filing, and FDA response." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/510k" }],
@@ -161,7 +154,7 @@ function FiveTenKPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              USFDA 510(k) &amp; 510 k Premarket Notification Consultant
+              FDA 510(k) Premarket Notification &amp; Clearance Consulting
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               As a dedicated medical device consultancy, we structure your USFDA 510(k) (510 k) around the substantial equivalence decision FDA must make. Classification, predicate eligibility, technological differences, testing evidence, and labeling are aligned before the eSTAR submission is built.

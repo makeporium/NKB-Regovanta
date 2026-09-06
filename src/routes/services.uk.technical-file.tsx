@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/technical-file")({
   head: () => ({
     meta: [
-      { title: "UK MDR Technical Documentation & Gap Assessment | NKB Regovanta" },
+      { title: "UK MDR Technical Documentation | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior UK MDR 2002 technical documentation compilation, GSPR / Essential Requirements mapping, clinical evaluation, risk management, and technical gap assessment for UKCA marking.",
+        content: "UK MDR 2002 technical documentation compilation, Essential Requirements mapping, clinical evaluation, and technical gap assessments for UKCA marking.",
       },
-      {
-        name: "keywords",
-        content:
-          "UK MDR technical file, UKCA technical documentation, UK MDR 2002 essential requirements, medical device technical file UK, NKB Regovanta",
-      },
-      { property: "og:title", content: "UK MDR Technical Documentation & Gap Assessment | NKB Regovanta" },
+      { property: "og:title", content: "UK MDR Technical Documentation | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "A registration record does not replace technical evidence. We trace the complete regulatory story across your technical dossier for UK Approved Body and MHRA scrutiny.",
+        content: "UK MDR 2002 technical documentation compilation, Essential Requirements mapping, clinical evaluation, and technical gap assessments for UKCA marking.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/technical-file" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK MDR Technical Documentation & Gap Assessment | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior UK MDR 2002 technical documentation compilation, GSPR / Essential Requirements mapping, clinical evaluation, risk management, and technical gap assessment for UKCA marking." },
+      { name: "twitter:title", content: "UK MDR Technical Documentation | NKB Regovanta" },
+      { name: "twitter:description", content: "UK MDR 2002 technical documentation compilation, Essential Requirements mapping, clinical evaluation, and technical gap assessments for UKCA marking." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/technical-file" }],
@@ -151,7 +144,7 @@ function UKTechnicalFilePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Technical Documentation &amp; UK MDR Gap Assessment
+              UK MDR Technical Documentation &amp; Gap Assessment
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               A registration record does not replace the technical evidence supporting the product. The manufacturer must maintain documentation demonstrating that the device meets the applicable regulatory requirements under the route being used to access Great Britain.

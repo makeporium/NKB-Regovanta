@@ -5,22 +5,53 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/canada/liaison')({
   head: () => ({
     meta: [
-      { title: 'Health Canada Liaison Support | Canada Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Canada Health Canada Liaison Support services for medical devices and IVDs.' },
-      { name: "keywords", content: "Health Canada Liaison Support, Canada Services, services canada liaison, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Liaison Support | Canada Services | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada Medical Device regulatory liaison consulting. Pre-submission meeting requests, clarification queries, regulatory correspondence, Health Canada engagement strategy, and SAP (Special Access Program) suppor..." },
+      { title: "Health Canada Regulatory Liaison | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Expert Health Canada regulatory liaison services: pre-submission meetings, clarification queries, screening responses, and Special Access Programme (SAP).",
+      },
+      { property: "og:title", content: "Health Canada Regulatory Liaison | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Expert Health Canada regulatory liaison services: pre-submission meetings, clarification queries, screening responses, and Special Access Programme (SAP).",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/liaison" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Liaison Support | Canada Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada Medical Device regulatory liaison consulting. Pre-submission meeting requests, clarification queries, regulatory correspondence, Health Canada engagement strategy, and SAP (Special Access Program) suppor..." },
+      { name: "twitter:title", content: "Health Canada Regulatory Liaison | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Expert Health Canada regulatory liaison services: pre-submission meetings, clarification queries, screening responses, and Special Access Programme (SAP).",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/liaison" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Regulatory Liaison Support",
+          description: "Pre-submission meeting requests, regulatory correspondence, and Health Canada engagement strategy.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +67,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Canada Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Canada Liaison Support</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Canada Regulatory Liaison Support</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Canada regulatory landscape with our comprehensive Health Canada Liaison Support support.
             </p>

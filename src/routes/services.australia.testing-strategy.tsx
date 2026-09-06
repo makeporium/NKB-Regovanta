@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/testing-strategy")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
+        title: "Australia TGA Testing Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Strategic pre-clinical testing protocol design, NATA-accredited and ISO 17025 laboratory coordination, biocompatibility, electrical safety EMC, and IVD performance studies for TGA.",
+          "Strategic pre-clinical testing protocol design, ISO 17025/NATA lab coordination, biocompatibility, electrical safety EMC, and IVD studies for TGA.",
       },
-      { name: "keywords", content: "Australia Medical Device Testing Strategy & Laboratory Coordination, services australia testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { property: "og:description", content: "Strategic pre-clinical testing protocol design, NATA-accredited and ISO 17025 laboratory coordination, biocompatibility, electrical safety EMC, and IVD performance studies for TGA." },
+      { property: "og:title", content: "Australia TGA Testing Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Strategic pre-clinical testing protocol design, ISO 17025/NATA lab coordination, biocompatibility, electrical safety EMC, and IVD studies for TGA.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic pre-clinical testing protocol design, NATA-accredited and ISO 17025 laboratory coordination, biocompatibility, electrical safety EMC, and IVD performance studies for TGA." },
+      { name: "twitter:title", content: "Australia TGA Testing Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Strategic pre-clinical testing protocol design, ISO 17025/NATA lab coordination, biocompatibility, electrical safety EMC, and IVD studies for TGA.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/testing-strategy" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australia Medical Device Testing Strategy & Laboratory Coordination",
+          description: "Pre-clinical testing design, ISO 17025 and NATA laboratory coordination, and Essential Principles compliance.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaTestingStrategyPage,
 });
@@ -135,7 +161,7 @@ function AustraliaTestingStrategyPage() {
               NATA &amp; ISO 17025 Lab Coordination
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Testing Strategy &amp; Laboratory Coordination
+              TGA Testing Strategy &amp; Laboratory Coordination (Australia)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Testing should be designed around the regulatory question it needs to answer. NKB Regovanta defines the testing strategy from classification, risks, Essential Principles, device claims and conformity evidence, then coordinates with established laboratories where external testing is required.

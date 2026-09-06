@@ -24,32 +24,44 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/iec-ad-code")({
   head: () => ({
     meta: [
-      { title: "IEC Code DGFT & AD Code ICEGATE Registration Services | NKB Regovanta" },
+      { title: "DGFT IEC & ICEGATE AD Code Registration | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Professional IEC Code registration DGFT, AD Code registration ICEGATE customs profile, and Bank authority letter AD Code generation services in India by NKB Regovanta.",
+          "DGFT IEC Code and ICEGATE AD Code customs registration in India. Bank authority letters, port registrations, and fast-track clearance setup.",
       },
-      {
-        name: "keywords",
-        content:
-          "IEC Code registration DGFT, AD Code registration ICEGATE customs profile, Bank authority letter AD Code, DGFT import export code, customs port registration India, NKB Regovanta",
-      },
-      { property: "og:title", content: "IEC Code DGFT & AD Code ICEGATE Customs Registration | NKB Regovanta" },
+      { property: "og:title", content: "DGFT IEC & ICEGATE AD Code Registration | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Fast-track DGFT IEC registration and ICEGATE AD Code customs portal profile setup for medical device, pharma & cosmetics importers.",
+          "DGFT IEC Code and ICEGATE AD Code customs registration in India. Bank authority letters, port registrations, and fast-track clearance setup.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/iec-ad-code" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IEC Code DGFT & AD Code ICEGATE Registration Services | NKB Regovanta" },
-      { name: "twitter:description", content: "IEC (Importer Exporter Code) and AD Code registration consulting for medical device import and export from India. End-to-end DGFT IEC application, AD Code bank registration, customs documentation, and DGFT compliance ..." },
+      { name: "twitter:title", content: "DGFT IEC & ICEGATE AD Code Registration | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "DGFT IEC Code and ICEGATE AD Code customs registration in India. Bank authority letters, port registrations, and fast-track clearance setup.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/iec-ad-code" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "IEC Code DGFT and AD Code ICEGATE Registration (India)",
+          areaServed: { "@type": "Country", name: "India" },
+          description: "Professional IEC Code registration with DGFT and AD Code registration with ICEGATE customs profile setup for importers and exporters in India.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
     ],
   }),
   component: IecAdCodePage,

@@ -17,24 +17,41 @@ import {
 export const Route = createFileRoute("/industries/medical-devices_/india/for-importer")({
   head: () => ({
     meta: [
-      { title: "Medical Device Registration for Importers in India | NKB Regovanta" },
+      { title: "Medical Device Import Registration India | NKB Regovanta" },
       {
-        name: "description", content: "Import medical devices into India with CDSCO MD-14/15 import licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), predicate strategy, SUGAM portal, and Class A–D device import licences from NKB Regovanta.",
+        name: "description",
+        content: "Import medical devices into India with CDSCO MD-14/15 licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), and SUGAM filings.",
       },
-      { name: "keywords", content: "Medical Device Registration for Importers in India, industries medical devices india for importer, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Medical Device Registration for Importers in India | NKB Regovanta" },
-      { property: "og:description", content: "Import medical devices into India with CDSCO MD-14/15 import licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), predicate strategy, SUGAM portal, and Class A–D device import licences fro..." },
+      { property: "og:title", content: "Medical Device Import Registration India | NKB Regovanta" },
+      { property: "og:description", content: "Import medical devices into India with CDSCO MD-14/15 licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), and SUGAM filings." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/medical-devices/india/for-importer" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Registration for Importers in India | NKB Regovanta" },
-      { name: "twitter:description", content: "Import medical devices into India with CDSCO MD-14/15 import licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), predicate strategy, SUGAM portal, and Class A–D device import licences fro..." },
+      { name: "twitter:title", content: "Medical Device Import Registration India | NKB Regovanta" },
+      { name: "twitter:description", content: "Import medical devices into India with CDSCO MD-14/15 licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), and SUGAM filings." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices/india/for-importer" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Medical Device Import Registration India",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "Import medical devices into India with CDSCO MD-14/15 licences. Expert guidance for foreign manufacturers, authorized agents (IAA/AIR), and SUGAM filings.",
+          "serviceType": "Medical Device Import Registration"
+        })
+      }
+    ],
   }),
   component: MedicalDeviceForImporterPage,
 });

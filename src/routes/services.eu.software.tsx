@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/software")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR Medical Device Software (SaMD) & Cybersecurity Consultant | NKB Regovanta" },
+      { title: "EU SaMD & Cybersecurity Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU MDR Rule 11 & IVDR Software as a Medical Device (SaMD) regulatory consulting, IEC 62304 lifecycle documentation, MDCG 2019-16 cybersecurity, and clinical validation.",
+        content: "EU MDR Rule 11 & IVDR SaMD regulatory consulting: IEC 62304 lifecycle documentation, MDCG 2019-16 cybersecurity, and clinical software validation.",
       },
-      {
-        name: "keywords",
-        content:
-          "MDR Rule 11 software classification, SaMD Europe EU MDR, IEC 62304 software lifecycle, MDCG 2019-16 cybersecurity medical devices, AI in medical devices Europe, NKB Regovanta",
-      },
-      { property: "og:title", content: "Medical Device Software (SaMD) & Cybersecurity | NKB Regovanta" },
+      { property: "og:title", content: "EU SaMD & Cybersecurity Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We trace medical function into classification, risk, IEC 62304 lifecycle V&V, MDCG 2019-16 cybersecurity, and clinical evidence.",
+        content: "EU MDR Rule 11 & IVDR SaMD regulatory consulting: IEC 62304 lifecycle documentation, MDCG 2019-16 cybersecurity, and clinical software validation.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/software" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR Medical Device Software (SaMD) & Cybersecurity Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU MDR Rule 11 & IVDR Software as a Medical Device (SaMD) regulatory consulting, IEC 62304 lifecycle documentation, MDCG 2019-16 cybersecurity, and clinical validation." },
+      { name: "twitter:title", content: "EU SaMD & Cybersecurity Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Rule 11 & IVDR SaMD regulatory consulting: IEC 62304 lifecycle documentation, MDCG 2019-16 cybersecurity, and clinical software validation." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/software" }],
@@ -119,7 +112,7 @@ function EUSoftwarePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Medical Device Software, SaMD &amp; Cybersecurity
+              EU MDR Software &amp; SaMD Regulatory Consulting
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Under MDR Rule 11 and IVDR, standalone software frequently up-classifies to Class IIa, IIb or Class C. We build the complete technical file connecting medical function, software architecture, risk controls and clinical evaluation.

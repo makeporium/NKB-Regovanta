@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/local-applicant")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE Local Applicant, Marketing Authorization Holder (MAH) & AR Services | NKB Regovanta",
+        title: "UAE Local Applicant & MAH Services | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Licensed UAE medical warehouse and marketing office representation for MOHAP medical device registration. MAH corporate setup, regulatory agreements, MOHAP liaison, and lifecycle governance.",
+          "Licensed UAE medical warehouse and marketing office representation for MOHAP registration. MAH setup, regulatory agreements, and lifecycle governance.",
       },
-      { name: "keywords", content: "UAE Local Applicant, Marketing Authorization Holder (MAH) & AR Services, services uae local applicant, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE Local Applicant, Marketing Authorization Holder (MAH) & AR Services | NKB Regovanta" },
-      { property: "og:description", content: "Licensed UAE medical warehouse and marketing office representation for MOHAP medical device registration. MAH corporate setup, regulatory agreements, MOHAP liaison, and lifecycle governance." },
+      { property: "og:title", content: "UAE Local Applicant & MAH Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Licensed UAE medical warehouse and marketing office representation for MOHAP registration. MAH setup, regulatory agreements, and lifecycle governance.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/local-applicant" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE Local Applicant, Marketing Authorization Holder (MAH) & AR Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Licensed UAE medical warehouse and marketing office representation for MOHAP medical device registration. MAH corporate setup, regulatory agreements, MOHAP liaison, and lifecycle governance." },
+      { name: "twitter:title", content: "UAE Local Applicant & MAH Services | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Licensed UAE medical warehouse and marketing office representation for MOHAP registration. MAH setup, regulatory agreements, and lifecycle governance.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/local-applicant" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Local Authorized Applicant Services (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP Local Authorized Applicant (LAA) services for medical device market access in the UAE - legal representation, registration filing, and license management.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAELocalApplicantPage,
 });

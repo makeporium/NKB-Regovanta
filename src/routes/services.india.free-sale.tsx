@@ -6,20 +6,39 @@ export const Route = createFileRoute("/services/india/free-sale")({
   component: FreeSalePage,
   head: () => ({
     meta: [
-      { title: "Free Sale Certificate (FSC) CDSCO India | Certificate of Export | NKB Regovanta" },
-      { name: "description", content: "Apply for a Free Sale Certificate (FSC) CDSCO to seamlessly export your Indian-manufactured medical devices and IVDs to international markets." },
-      { name: "keywords", content: "Free Sale Certificate (FSC) CDSCO, Certificate of Export India, CDSCO FSC application, medical device export licence India, NKB Regovanta" },
-      { property: "og:title", content: "Free Sale Certificate (FSC) CDSCO | NKB Regovanta" },
-      { property: "og:description", content: "Expert assistance in obtaining Free Sale Certificates from CDSCO for medical devices and pharmaceuticals." },
+      { title: "CDSCO Free Sale Certificate (FSC) | NKB Regovanta" },
+      { name: "description", content: "Obtain a CDSCO Free Sale Certificate (FSC) for exporting medical devices and IVDs manufactured in India. Expert regulatory support from NKB Regovanta." },
+      { property: "og:title", content: "CDSCO Free Sale Certificate (FSC) | NKB Regovanta" },
+      { property: "og:description", content: "Obtain a CDSCO Free Sale Certificate (FSC) for exporting medical devices and IVDs manufactured in India. Expert regulatory support from NKB Regovanta." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/free-sale" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Free Sale Certificate (FSC) CDSCO India | Certificate of Export | NKB Regovanta" },
-      { name: "twitter:description", content: "Free Sale Certificate (FSC) and Certificate to Foreign Government for medical devices in India. CDSCO application support, export certificate documentation, and state licensing authority coordination. Required for ove..." },
+      { name: "twitter:title", content: "CDSCO Free Sale Certificate (FSC) | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a CDSCO Free Sale Certificate (FSC) for exporting medical devices and IVDs manufactured in India. Expert regulatory support from NKB Regovanta." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/free-sale" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO Free Sale Certificate (FSC)",
+          description: "Obtain a CDSCO Free Sale Certificate (FSC) for exporting medical devices and IVDs manufactured in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -86,9 +105,9 @@ function FreeSalePage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Free</span> Sale Certificate <br/> (FSC)
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/saudi-arabia/testing-strategy")(
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
+        title: "SFDA Device Testing Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Pre-clinical testing strategy for SFDA MDMA submissions, electrical safety (IEC 60601), EMC, biocompatibility (ISO 10993), sterilization, and SFDA-recognized laboratory coordination.",
+          "Pre-clinical testing strategy for SFDA MDMA. IEC 60601 electrical safety, EMC, ISO 10993 biocompatibility, and accredited laboratory coordination.",
       },
-      { name: "keywords", content: "SFDA Medical Device Testing Strategy & Laboratory Coordination, services saudi arabia testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { property: "og:description", content: "Pre-clinical testing strategy for SFDA MDMA submissions, electrical safety (IEC 60601), EMC, biocompatibility (ISO 10993), sterilization, and SFDA-recognized laboratory coordination." },
+      { property: "og:title", content: "SFDA Device Testing Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Pre-clinical testing strategy for SFDA MDMA. IEC 60601 electrical safety, EMC, ISO 10993 biocompatibility, and accredited laboratory coordination.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { name: "twitter:description", content: "Pre-clinical testing strategy for SFDA MDMA submissions, electrical safety (IEC 60601), EMC, biocompatibility (ISO 10993), sterilization, and SFDA-recognized laboratory coordination." },
+      { name: "twitter:title", content: "SFDA Device Testing Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Pre-clinical testing strategy for SFDA MDMA. IEC 60601 electrical safety, EMC, ISO 10993 biocompatibility, and accredited laboratory coordination.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/testing-strategy" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Testing Strategy (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "Pre-clinical testing strategy and laboratory coordination for medical devices seeking SFDA registration in Saudi Arabia - biocompatibility, electrical safety, and EMC.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiTestingStrategyPage,
 });

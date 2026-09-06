@@ -5,25 +5,27 @@ import mapImage from "@/assets/map2.png";
 export const Route = createFileRoute("/markets/")({
     head: () => ({
         meta: [
-            { title: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
+            { title: "Global Medical Device Regulatory Markets | NKB Regovanta" },
             {
-                name: "description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Saudi Arabia (SFDA), and New Zealand (Medsafe).",
+                name: "description",
+                content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC.",
             },
-          { name: "keywords", content: "medical device global market access, regulatory markets USA EU India UK Australia Canada Brazil UAE, NKB Regovanta markets" },
-          { property: "og:title", content: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
-          { property: "og:description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Sau..." },
-          { property: "og:url", content: "https://www.nkbregovanta.com/markets" },
-          { property: "og:type", content: "website" },
-          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: "Global Medical Device Regulatory Markets | CDSCO FDA CE TGA MHRA | NKB Regovanta" },
-          { name: "twitter:description", content: "NKB Regovanta provides expert medical device regulatory consulting across 15+ global markets including USA (FDA), European Union (MDR/IVDR), UK (MHRA), India (CDSCO), Australia (TGA), Canada, Brazil (ANVISA), UAE, Sau..." },
-          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "keywords", content: "medical device global market access, regulatory markets USA EU India UK Australia Canada Brazil UAE, NKB Regovanta markets" },
+            { property: "og:title", content: "Global Medical Device Regulatory Markets | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/markets" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Global Medical Device Regulatory Markets | NKB Regovanta" },
+            { name: "twitter:description", content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/markets" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/markets" },
+        ],
     }),
     component: Markets,
 });
@@ -73,8 +75,11 @@ function Markets() {
                     <div className="flex flex-col justify-start py-6 shrink-0 w-full lg:w-[42%]">
                         <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">Global Markets</p>
                         <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 6vw, 40px)" }}>
-                            Access Multiple Global Markets.
+                            Global Medical Device Regulatory Markets
                         </h1>
+                        <p className="mt-2 text-sm font-bold text-accent">
+                            Access Multiple Global Healthcare Markets
+                        </p>
                         <p className="mt-3 text-[13.5px] text-navy/70 leading-relaxed max-w-sm">
                             We help you expand your global footprint with regulatory expertise and local knowledge.
                         </p>

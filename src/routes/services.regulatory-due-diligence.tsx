@@ -46,28 +46,21 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
   head: () => ({
     meta: [
       {
-        title:
-          "Regulatory Due Diligence for Medical Devices & IVDs | M&A and Investment Audits | NKB Regovanta",
+        title: "Medical Device Regulatory Due Diligence | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Decision-grade Regulatory Due Diligence for Medical Device and IVD mergers, acquisitions, private equity investments, and licensing deals. Risk classification, QMS maturity, FDA 483 audits, MDR/IVDR readiness, and valuation impact analysis.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Regulatory due diligence medical devices, IVD due diligence, medical device M&A regulatory audit, private equity medical device compliance, FDA 483 audit due diligence, EU MDR due diligence, ISO 13485 compliance audit, medical technology valuation risk",
+          "Regulatory due diligence for medical device and IVD M&A, private equity, and licensing deals. Risk classification, QMS audits, and valuation impact analysis.",
       },
       {
         property: "og:title",
-        content:
-          "Regulatory Due Diligence for Medical Devices & IVDs | NKB Regovanta",
+        content: "Medical Device Regulatory Due Diligence | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Uncover hidden regulatory risks, approval dependencies, and compliance liabilities before you acquire, invest, or partner. Decision-grade intelligence from NKB Regovanta.",
+          "Regulatory due diligence for medical device and IVD M&A, private equity, and licensing deals. Risk classification, QMS audits, and valuation impact analysis.",
       },
       {
         property: "og:url",
@@ -83,13 +76,12 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
       },
       {
         name: "twitter:title",
-        content:
-          "Regulatory Due Diligence for Medical Devices & IVDs | NKB Regovanta",
+        content: "Medical Device Regulatory Due Diligence | NKB Regovanta",
       },
       {
         name: "twitter:description",
         content:
-          "Uncover hidden regulatory risks, approval dependencies, and compliance liabilities before you acquire, invest, or partner. Decision-grade intelligence from NKB Regovanta.",
+          "Regulatory due diligence for medical device and IVD M&A, private equity, and licensing deals. Risk classification, QMS audits, and valuation impact analysis.",
       },
       {
         name: "twitter:image",
@@ -100,6 +92,18 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
       {
         rel: "canonical",
         href: "https://www.nkbregovanta.com/services/regulatory-due-diligence",
+      },
+    ],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medical Device Regulatory Due Diligence Consulting",
+          description: "Regulatory due diligence consulting for medical device M and A, licensing deals, and market entry - gap analysis, compliance risk assessment, and regulatory status review.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

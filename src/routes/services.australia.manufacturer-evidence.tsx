@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/manufacturer-evidence"
   head: () => ({
     meta: [
       {
-        title:
-          "TGA Manufacturer Evidence & Conformity Assessment | NKB Regovanta",
+        title: "TGA Manufacturer Evidence Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA Manufacturer Evidence application, certificate alignment, comparable overseas regulator evidence (EU MDR/IVDR, US FDA 510k/PMA, Health Canada MDSAP, Japan PMDA), and Declaration of Conformity review.",
+          "TGA Manufacturer Evidence consulting: overseas evidence (EU MDR/IVDR, FDA, MDSAP), certificate alignment, and Declaration of Conformity review.",
       },
-      { name: "keywords", content: "TGA Manufacturer Evidence & Conformity Assessment, services australia manufacturer evidence, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "TGA Manufacturer Evidence & Conformity Assessment | NKB Regovanta" },
-      { property: "og:description", content: "TGA Manufacturer Evidence application, certificate alignment, comparable overseas regulator evidence (EU MDR/IVDR, US FDA 510k/PMA, Health Canada MDSAP, Japan PMDA), and Declaration of Conformity review." },
+      { property: "og:title", content: "TGA Manufacturer Evidence Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA Manufacturer Evidence consulting: overseas evidence (EU MDR/IVDR, FDA, MDSAP), certificate alignment, and Declaration of Conformity review.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/manufacturer-evidence" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TGA Manufacturer Evidence & Conformity Assessment | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA Manufacturer Evidence application, certificate alignment, comparable overseas regulator evidence (EU MDR/IVDR, US FDA 510k/PMA, Health Canada MDSAP, Japan PMDA), and Declaration of Conformity review." },
+      { name: "twitter:title", content: "TGA Manufacturer Evidence Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA Manufacturer Evidence consulting: overseas evidence (EU MDR/IVDR, FDA, MDSAP), certificate alignment, and Declaration of Conformity review.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/manufacturer-evidence" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Manufacturer Evidence Strategy & Conformity Assessment",
+          description: "TGA Manufacturer Evidence application, comparable overseas regulator evidence review, and conformity assessment.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaManufacturerEvidencePage,
 });
@@ -129,7 +155,7 @@ function AustraliaManufacturerEvidencePage() {
               Conformity Assessment &amp; Overseas Evidence
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Manufacturer Evidence &amp; Conformity Assessment Strategy
+              TGA Manufacturer Evidence &amp; Conformity Assessment
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Manufacturer Evidence is a core gate in the Australian pathway. For most device and IVD applications, the Sponsor must hold an accepted Manufacturer Evidence identifier before the ARTG application can proceed. The evidence must be current, applicable to the manufacturer and appropriate for the risk class and product scope.

@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/de-novo")({
   head: () => ({
     meta: [
-      { title: "De Novo Classification & PMA Support Consultant | US FDA | NKB Regovanta" },
+      { title: "US FDA De Novo Classification | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "End-to-end consulting for US FDA De Novo classification requests and Premarket Approval (PMA) applications for novel and high-risk medical devices.",
+        content: "Expert consulting for US FDA De Novo classification requests for novel medical devices without predicates. Special controls and eSTAR support.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA De Novo classification, Premarket Approval PMA, novel medical device FDA, Class III medical device, special controls FDA, NKB Regovanta",
-      },
-      { property: "og:title", content: "De Novo & PMA Support | NKB Regovanta" },
+      { property: "og:title", content: "US FDA De Novo Classification | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision.",
+        content: "Expert consulting for US FDA De Novo classification requests for novel medical devices without predicates. Special controls and eSTAR support.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/de-novo" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "De Novo Classification & PMA Support Consultant | US FDA | NKB Regovanta" },
-      { name: "twitter:description", content: "End-to-end consulting for US FDA De Novo classification requests and Premarket Approval (PMA) applications for novel and high-risk medical devices." },
+      { name: "twitter:title", content: "US FDA De Novo Classification | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert consulting for US FDA De Novo classification requests for novel medical devices without predicates. Special controls and eSTAR support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/de-novo" }],
@@ -80,10 +73,10 @@ function DeNovoPMAPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "De Novo & PMA Support",
+              name: "US FDA De Novo Classification Pathway",
               url: "https://www.nkbregovanta.com/services/usa/de-novo",
               description:
-                "US FDA De Novo classification requests and Premarket Approval (PMA) dossier preparation and regulatory strategy.",
+                "US FDA De Novo classification requests, special controls, and regulatory strategy for novel medical devices.",
               provider: {
                 "@type": "ProfessionalService",
                 name: "NKB Regovanta Solutions Pvt. Ltd.",
@@ -97,7 +90,7 @@ function DeNovoPMAPage() {
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nkbregovanta.com" },
                 { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
                 { "@type": "ListItem", position: 3, name: "USA FDA", item: "https://www.nkbregovanta.com/services/usa" },
-                { "@type": "ListItem", position: 4, name: "De Novo & PMA", item: "https://www.nkbregovanta.com/services/usa/de-novo" },
+                { "@type": "ListItem", position: 4, name: "De Novo Classification", item: "https://www.nkbregovanta.com/services/usa/de-novo" },
               ],
             },
           ]),
@@ -114,7 +107,7 @@ function DeNovoPMAPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/usa" className="hover:text-navy transition-colors">USA FDA</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">De Novo &amp; PMA Support</span>
+            <span className="text-navy">De Novo Classification Pathway</span>
           </div>
 
           <Link
@@ -132,7 +125,7 @@ function DeNovoPMAPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              De Novo &amp; PMA Support
+              US FDA De Novo Classification Pathway
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision, integrating risk, controls, non-clinical evidence, clinical evidence and FDA interaction.

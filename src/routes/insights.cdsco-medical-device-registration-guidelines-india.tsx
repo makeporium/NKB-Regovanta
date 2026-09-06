@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 export const Route = createFileRoute("/insights/cdsco-medical-device-registration-guidelines-india")({
   head: () => ({
     meta: [
-      { title: "Complete Guide to CDSCO Medical Device Registration and Import Licensing in India | NKB Regovanta" },
+      { title: "CDSCO Device Registration Guide India | NKB Regovanta" },
       {
         name: "description",
         content: "Classification rules, Form MD-14 import licensing, SUGAM digital submissions, Authorized Agent responsibilities, and timeline forecasts.",
       },
-      {
-        name: "keywords",
-        content: "complete guide to cdsco medical device registration and import licensing in india, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Complete Guide to CDSCO Medical Device Registration and Import Licensing in India | NKB Regovanta" },
+      { property: "og:title", content: "CDSCO Device Registration Guide India | NKB Regovanta" },
       {
         property: "og:description",
         content: "Classification rules, Form MD-14 import licensing, SUGAM digital submissions, Authorized Agent responsibilities, and timeline forecasts.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/cdsco-medical-device-registratio
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Complete Guide to CDSCO Medical Device Registration and Import Licensing in India" },
+      { name: "twitter:title", content: "CDSCO Device Registration Guide India | NKB Regovanta" },
       { name: "twitter:description", content: "Classification rules, Form MD-14 import licensing, SUGAM digital submissions, Authorized Agent responsibilities, and timeline forecasts." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" },
     ],

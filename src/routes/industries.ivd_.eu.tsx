@@ -8,21 +8,37 @@ export const Route = createFileRoute("/industries/ivd_/eu")({
     head: () => ({
         meta: [
             { title: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-            { name: "description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
-          { name: "keywords", content: "IVD Regulation in the EU, IVDR 2017/746, industries ivd eu, NKB Regovanta, regulatory consultant, medical device" },
-          { property: "og:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-          { property: "og:description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
-          { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/eu" },
-          { property: "og:type", content: "website" },
-          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-          { name: "twitter:description", content: "EU IVDR 2017/746 regulatory consulting for in vitro diagnostic manufacturers. Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Common Specifications compliance from NKB Regovanta." },
-          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { property: "og:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
+            { property: "og:description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/eu" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
+            { name: "twitter:description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/eu" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/eu" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "IVD Regulation in the EU (IVDR 2017/746)",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "NKB Regovanta",
+                        "url": "https://www.nkbregovanta.com"
+                    },
+                    "description": "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance.",
+                    "serviceType": "In Vitro Diagnostics Regulatory Affairs"
+                })
+            }
+        ],
     }),
     component: IVDEu,
 });

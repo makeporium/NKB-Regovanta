@@ -47,26 +47,52 @@ export const Route = createFileRoute("/services/canada/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Medical Device & IVD Classification (SOR/98-282) | NKB Regovanta",
+        title: "Health Canada Device Classification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Definitive Health Canada risk classification for Medical Devices and IVDs under Schedule 1 of the Medical Devices Regulations (SOR/98-282). Class I, II, III, and IV regulatory determination.",
+          "Health Canada risk classification for medical devices and IVDs under SOR/98-282 Schedule 1. Class I, II, III, and IV licensing determination.",
       },
-      { name: "keywords", content: "Health Canada Medical Device & IVD Classification (SOR/98-282), services canada classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Medical Device & IVD Classification (SOR/98-282) | NKB Regovanta" },
-      { property: "og:description", content: "Definitive Health Canada risk classification for Medical Devices and IVDs under Schedule 1 of the Medical Devices Regulations (SOR/98-282). Class I, II, III, and IV regulatory determination." },
+      { property: "og:title", content: "Health Canada Device Classification | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada risk classification for medical devices and IVDs under SOR/98-282 Schedule 1. Class I, II, III, and IV licensing determination.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Medical Device & IVD Classification (SOR/98-282) | NKB Regovanta" },
-      { name: "twitter:description", content: "Definitive Health Canada risk classification for Medical Devices and IVDs under Schedule 1 of the Medical Devices Regulations (SOR/98-282). Class I, II, III, and IV regulatory determination." },
+      { name: "twitter:title", content: "Health Canada Device Classification | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada risk classification for medical devices and IVDs under SOR/98-282 Schedule 1. Class I, II, III, and IV licensing determination.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/classification" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Medical Device & IVD Classification",
+          description: "Definitive device qualification and classification under Schedule 1 of the Canadian Medical Devices Regulations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaClassificationPage,
 });
@@ -125,7 +151,7 @@ function CanadaClassificationPage() {
               SOR/98-282 Schedule 1 Rules
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Regulatory Strategy &amp; Product Classification (Canada)
+              Health Canada Medical Device &amp; IVD Classification
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Classification is the first regulatory decision because it determines the licensing route, submission depth, quality-system expectations and the level of evidence Health Canada will review.

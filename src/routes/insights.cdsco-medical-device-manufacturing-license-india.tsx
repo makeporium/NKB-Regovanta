@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 export const Route = createFileRoute("/insights/cdsco-medical-device-manufacturing-license-india")({
   head: () => ({
     meta: [
-      { title: "Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9 | NKB Regovanta" },
+      { title: "CDSCO Device Manufacturing License Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Step-by-step guidance on SUGAM portal submissions, state vs central licensing, plant audits, and MDR 2017 conformity.",
       },
-      {
-        name: "keywords",
-        content: "securing cdsco medical device manufacturing licenses in india: form md-5 to md-9, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9 | NKB Regovanta" },
+      { property: "og:title", content: "CDSCO Device Manufacturing License Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Step-by-step guidance on SUGAM portal submissions, state vs central licensing, plant audits, and MDR 2017 conformity.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/cdsco-medical-device-manufacturi
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Securing CDSCO Medical Device Manufacturing Licenses in India: Form MD-5 to MD-9" },
+      { name: "twitter:title", content: "CDSCO Device Manufacturing License Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Step-by-step guidance on SUGAM portal submissions, state vs central licensing, plant audits, and MDR 2017 conformity." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" },
     ],

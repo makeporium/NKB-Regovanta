@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
 export const Route = createFileRoute("/insights/biological-evaluation-testing-medical-devices-iso-10993")({
   head: () => ({
     meta: [
-      { title: "Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018 | NKB Regovanta" },
+      { title: "ISO 10993 Biocompatibility Testing | NKB Regovanta" },
       {
         name: "description",
         content: "Chemical characterization, toxicological risk assessment, and non-animal testing strategies to satisfy FDA and EU MDR requirements.",
       },
-      {
-        name: "keywords",
-        content: "biological evaluation and biocompatibility testing under iso 10993-1:2018, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018 | NKB Regovanta" },
+      { property: "og:title", content: "ISO 10993 Biocompatibility Testing | NKB Regovanta" },
       {
         property: "og:description",
         content: "Chemical characterization, toxicological risk assessment, and non-animal testing strategies to satisfy FDA and EU MDR requirements.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/biological-evaluation-testing-me
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_fda_biocompatibility_1786441176273.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Biological Evaluation and Biocompatibility Testing Under ISO 10993-1:2018" },
+      { name: "twitter:title", content: "ISO 10993 Biocompatibility Testing | NKB Regovanta" },
       { name: "twitter:description", content: "Chemical characterization, toxicological risk assessment, and non-animal testing strategies to satisfy FDA and EU MDR requirements." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_fda_biocompatibility_1786441176273.png" },
     ],

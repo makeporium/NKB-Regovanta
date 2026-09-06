@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta",
+        title: "MOHAP SaMD & AI Software (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Software as a Medical Device (SaMD) and AI/ML regulation in the UAE. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and MOHAP medical equipment registration.",
+          "SaMD and AI/ML medical software regulation in UAE. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MOHAP registration.",
       },
-      { name: "keywords", content: "UAE MOHAP SaMD, Software, AI & Cybersecurity Regulatory Consulting, services uae software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { property: "og:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in the UAE. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and MOHAP medical equipment registration." },
+      { property: "og:title", content: "MOHAP SaMD & AI Software (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "SaMD and AI/ML medical software regulation in UAE. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MOHAP registration.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { name: "twitter:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in the UAE. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and MOHAP medical equipment registration." },
+      { name: "twitter:title", content: "MOHAP SaMD & AI Software (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SaMD and AI/ML medical software regulation in UAE. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MOHAP registration.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/software" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Software as a Medical Device (SaMD) Registration (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP regulatory consulting for Software as a Medical Device in the UAE - classification, technical documentation, cybersecurity, and registration.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAESoftwarePage,
 });

@@ -49,26 +49,45 @@ export const Route = createFileRoute("/services/uae/mohap-queries")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Queries, Deficiency Response & Technical Review Support | NKB Regovanta",
+        title: "MOHAP Queries & Deficiency Response (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Strategic response formulation for UAE MOHAP technical queries, registration deficiency letters, and scientific review objections. Root-cause analysis, dossier revisions, and time-bound closure.",
+          "Strategic response formulation for UAE MOHAP technical queries and deficiency letters. Root-cause analysis, dossier revisions, and time-bound closure.",
       },
-      { name: "keywords", content: "UAE MOHAP Queries, Deficiency Response & Technical Review Support, services uae mohap queries, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Queries, Deficiency Response & Technical Review Support | NKB Regovanta" },
-      { property: "og:description", content: "Strategic response formulation for UAE MOHAP technical queries, registration deficiency letters, and scientific review objections. Root-cause analysis, dossier revisions, and time-bound closure." },
+      { property: "og:title", content: "MOHAP Queries & Deficiency Response (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Strategic response formulation for UAE MOHAP technical queries and deficiency letters. Root-cause analysis, dossier revisions, and time-bound closure.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/mohap-queries" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Queries, Deficiency Response & Technical Review Support | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic response formulation for UAE MOHAP technical queries, registration deficiency letters, and scientific review objections. Root-cause analysis, dossier revisions, and time-bound closure." },
+      { name: "twitter:title", content: "MOHAP Queries & Deficiency Response (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Strategic response formulation for UAE MOHAP technical queries and deficiency letters. Root-cause analysis, dossier revisions, and time-bound closure.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/mohap-queries" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Query and Deficiency Response (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP query and deficiency response consulting for medical device registrations in the UAE - technical response formulation, root-cause analysis, and CAPA packages.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEMohapQueriesPage,
 });

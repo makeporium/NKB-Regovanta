@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/post-market")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Post-Market Surveillance, Adverse Events & Recall Support | NKB Regovanta",
+        title: "NZ Post-Market & Recall Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Post-market surveillance (PMS), adverse incident reporting, and recall management under Medsafe guidelines in New Zealand. 10-day serious incident reporting and Recall Code compliance.",
+          "Post-market surveillance, incident reporting, and recall management under Medsafe guidelines in New Zealand — 10-day reporting and Recall Code compliance.",
       },
-      { name: "keywords", content: "New Zealand Post-Market Surveillance, Adverse Events & Recall Support, services new zealand post market, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Post-Market Surveillance, Adverse Events & Recall Support | NKB Regovanta" },
-      { property: "og:description", content: "Post-market surveillance (PMS), adverse incident reporting, and recall management under Medsafe guidelines in New Zealand. 10-day serious incident reporting and Recall Code compliance." },
+      { property: "og:title", content: "NZ Post-Market & Recall Support | NKB Regovanta" },
+      { property: "og:description", content: "Post-market surveillance, incident reporting, and recall management under Medsafe guidelines in New Zealand — 10-day reporting and Recall Code compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/post-market" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Post-Market Surveillance, Adverse Events & Recall Support | NKB Regovanta" },
-      { name: "twitter:description", content: "Post-market surveillance (PMS), adverse incident reporting, and recall management under Medsafe guidelines in New Zealand. 10-day serious incident reporting and Recall Code compliance." },
+      { name: "twitter:title", content: "NZ Post-Market & Recall Support | NKB Regovanta" },
+      { name: "twitter:description", content: "Post-market surveillance, incident reporting, and recall management under Medsafe guidelines in New Zealand — 10-day reporting and Recall Code compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/post-market" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Post-Market Surveillance, Adverse Events & Recall Support",
+          description: "PMS system setup, adverse incident reporting, and recall management under Medsafe and the New Zealand Recall Code for medical device sponsors.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZPostMarketPage,
 });
@@ -128,7 +139,7 @@ function NZPostMarketPage() {
               Medsafe Vigilance &amp; Recall Code
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Post-Market Surveillance, Adverse Events &amp; Recall Support
+              Post-Market Surveillance, Adverse Events &amp; Recall Support (New Zealand)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               New Zealand Sponsor Responsibilities Continue After Supply. Medsafe expects sponsors to identify and manage safety issues associated with medical devices supplied in New Zealand. The sponsor should have effective complaint, investigation, adverse-event, distribution-record and recall/corrective-action processes that can operate quickly when a safety concern emerges.

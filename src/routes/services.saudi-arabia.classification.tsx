@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/saudi-arabia/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Medical Device & IVD Classification (Class A-D) | NKB Regovanta",
+        title: "SFDA Device & IVD Classification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "SFDA risk classification for Medical Devices (Class A, B, C, D) and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence roadmap.",
+          "SFDA risk classification for Medical Devices and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence.",
       },
-      { name: "keywords", content: "SFDA Medical Device & IVD Classification (Class A-D), services saudi arabia classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Medical Device & IVD Classification (Class A-D) | NKB Regovanta" },
-      { property: "og:description", content: "SFDA risk classification for Medical Devices (Class A, B, C, D) and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence roadmap." },
+      { property: "og:title", content: "SFDA Device & IVD Classification | NKB Regovanta" },
+      { property: "og:description", content: "SFDA risk classification for Medical Devices and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Medical Device & IVD Classification (Class A-D) | NKB Regovanta" },
-      { name: "twitter:description", content: "SFDA risk classification for Medical Devices (Class A, B, C, D) and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence roadmap." },
+      { name: "twitter:title", content: "SFDA Device & IVD Classification | NKB Regovanta" },
+      { name: "twitter:description", content: "SFDA risk classification for Medical Devices and IVDs in Saudi Arabia. Intended purpose justification, software SaMD rules, and MDMA evidence." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/classification" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Classification (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "Medical device classification consulting under SFDA regulations in Saudi Arabia - risk-based class determination, GMDN coding, and classification queries.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiClassificationPage,
 });

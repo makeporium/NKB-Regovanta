@@ -16,31 +16,45 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/technical-documentation")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR Technical Documentation & GSPR Consultant | NKB Regovanta" },
+      { title: "EU MDR Technical Documentation | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Expert EU MDR & IVDR Annex II and Annex III Technical Documentation compilation, GSPR evidence mapping, and Notified Body audit defense.",
+        content: "Expert EU MDR & IVDR Annex II and Annex III Technical Documentation compilation, GSPR evidence mapping, and Notified Body audit defense.",
       },
-      {
-        name: "keywords",
-        content:
-          "MDR technical documentation Annex II Annex III, GSPR checklist Europe, General Safety and Performance Requirements, IVDR technical file, Notified Body review technical file, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU Technical Documentation & GSPR Compliance | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Technical Documentation | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We build and review Annex II / III technical documentation as one connected regulatory argument, mapping GSPR to objective testing and clinical evidence.",
+        content: "Expert EU MDR & IVDR Annex II and Annex III Technical Documentation compilation, GSPR evidence mapping, and Notified Body audit defense.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/technical-documentation" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR Technical Documentation & GSPR Consultant | NKB Regovanta" },
+      { name: "twitter:title", content: "EU MDR Technical Documentation | NKB Regovanta" },
       { name: "twitter:description", content: "Expert EU MDR & IVDR Annex II and Annex III Technical Documentation compilation, GSPR evidence mapping, and Notified Body audit defense." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/technical-documentation" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "EU MDR & IVDR Technical Documentation & GSPR",
+          description: "Expert EU MDR & IVDR Annex II and Annex III Technical Documentation compilation, GSPR evidence mapping, and Notified Body audit defense.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "European Union",
+          },
+          serviceType: "Medical Device Regulatory Affairs",
+        }),
+      },
+    ],
   }),
   component: EUTechnicalDocumentationPage,
 });
@@ -127,7 +141,7 @@ function EUTechnicalDocumentationPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Technical Documentation &amp; GSPR Compliance
+              EU MDR &amp; IVDR Technical Documentation &amp; GSPR
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We build and review Annex II / III technical documentation as one connected regulatory argument. Each major claim is traced to the risk controls, verification/validation evidence, clinical or performance evidence and labeling that support it.

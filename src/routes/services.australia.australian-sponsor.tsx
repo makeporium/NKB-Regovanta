@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/australian-sponsor")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australian Sponsor Services & Regulatory Governance | NKB Regovanta",
+        title: "TGA Australian Sponsor Services | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Professional Australian Sponsor representation for foreign medical device and IVD manufacturers. ARTG inclusion holder, TGA liaison, vigilance & MDIR incident reporting, recall coordination, and UDI data maintenance.",
+          "Professional Australian Sponsor representation for medical device and IVD manufacturers: ARTG inclusion holder, TGA liaison, MDIR vigilance, and recalls.",
       },
-      { name: "keywords", content: "Australian Sponsor Services & Regulatory Governance, services australia australian sponsor, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australian Sponsor Services & Regulatory Governance | NKB Regovanta" },
-      { property: "og:description", content: "Professional Australian Sponsor representation for foreign medical device and IVD manufacturers. ARTG inclusion holder, TGA liaison, vigilance & MDIR incident reporting, recall coordination, and UDI data maintenance." },
+      { property: "og:title", content: "TGA Australian Sponsor Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Professional Australian Sponsor representation for medical device and IVD manufacturers: ARTG inclusion holder, TGA liaison, MDIR vigilance, and recalls.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/australian-sponsor" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australian Sponsor Services & Regulatory Governance | NKB Regovanta" },
-      { name: "twitter:description", content: "Professional Australian Sponsor representation for foreign medical device and IVD manufacturers. ARTG inclusion holder, TGA liaison, vigilance & MDIR incident reporting, recall coordination, and UDI data maintenance." },
+      { name: "twitter:title", content: "TGA Australian Sponsor Services | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Professional Australian Sponsor representation for medical device and IVD manufacturers: ARTG inclusion holder, TGA liaison, MDIR vigilance, and recalls.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/australian-sponsor" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australian Sponsor Representation Services",
+          description: "Professional Australian Sponsor services, ARTG inclusion holding, and TGA regulatory liaison.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaSponsorPage,
 });
@@ -132,7 +158,7 @@ function AustraliaSponsorPage() {
               Legal Representation &amp; Governance
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Australian Sponsor Services &amp; Regulatory Governance
+              TGA Australian Sponsor Services &amp; Governance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               A foreign manufacturer needs an Australian-based Sponsor to interface with the TGA and hold the ARTG inclusion. The Sponsor role is regulatory and ongoing: it requires access to technical and safety information, control of regulatory communications, vigilance readiness and the ability to act when the manufacturer changes the device or a safety issue emerges.

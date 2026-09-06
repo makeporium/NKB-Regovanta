@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta",
+        title: "NZ SaMD, AI & Cybersecurity Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Software as a Medical Device (SaMD) and AI/ML regulation in New Zealand. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and WAND database notification.",
+          "SaMD and AI/ML regulation in New Zealand — IEC 62304 lifecycles, cybersecurity risk, SBOM, algorithmic validation, and WAND notification support.",
       },
-      { name: "keywords", content: "New Zealand SaMD, Software, AI & Cybersecurity Regulatory Consulting, services new zealand software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { property: "og:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in New Zealand. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and WAND database notification." },
+      { property: "og:title", content: "NZ SaMD, AI & Cybersecurity Consulting | NKB Regovanta" },
+      { property: "og:description", content: "SaMD and AI/ML regulation in New Zealand — IEC 62304 lifecycles, cybersecurity risk, SBOM, algorithmic validation, and WAND notification support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { name: "twitter:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in New Zealand. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and WAND database notification." },
+      { name: "twitter:title", content: "NZ SaMD, AI & Cybersecurity Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "SaMD and AI/ML regulation in New Zealand — IEC 62304 lifecycles, cybersecurity risk, SBOM, algorithmic validation, and WAND notification support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/software" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand SaMD, Software, AI & Cybersecurity Regulatory Consulting",
+          description: "SaMD classification, IEC 62304 lifecycle support, AI/ML validation, and cybersecurity risk management for software medical devices entering the New Zealand market.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZSoftwarePage,
 });

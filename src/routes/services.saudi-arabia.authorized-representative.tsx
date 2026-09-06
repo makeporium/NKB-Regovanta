@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/saudi-arabia/authorized-represen
   head: () => ({
     meta: [
       {
-        title:
-          "Saudi Authorized Representative (AR) Services | SFDA Compliance | NKB Regovanta",
+        title: "Saudi AR Services & SFDA Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal management, regulatory mandate governance, vigilance reporting, and SFDA liaison.",
+          "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal, vigilance, and SFDA liaison.",
       },
-      { name: "keywords", content: "Saudi Authorized Representative (AR) Services, SFDA Compliance, services saudi arabia authorized representative, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Saudi Authorized Representative (AR) Services | SFDA Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal management, regulatory mandate governance, vigilance reporting, and SFDA liaison." },
+      { property: "og:title", content: "Saudi AR Services & SFDA Compliance | NKB Regovanta" },
+      { property: "og:description", content: "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal, vigilance, and SFDA liaison." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/authorized-representative" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Saudi Authorized Representative (AR) Services | SFDA Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal management, regulatory mandate governance, vigilance reporting, and SFDA liaison." },
+      { name: "twitter:title", content: "Saudi AR Services & SFDA Compliance | NKB Regovanta" },
+      { name: "twitter:description", content: "Licensed Saudi Authorized Representative (AR) representation for medical device and IVD manufacturers. GHAD portal, vigilance, and SFDA liaison." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/authorized-representative" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Authorized Representative and Local License Holder (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA Authorized Representative and Local License Holder (LLH) services for medical device market access in Saudi Arabia.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiARPage,
 });

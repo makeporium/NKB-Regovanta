@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/vigilance")({
   head: () => ({
     meta: [
-      { title: "UK MHRA Vigilance & Field Safety Corrective Action (FSCA) | NKB Regovanta" },
+      { title: "UK MHRA Vigilance & FSCA Consulting | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior regulatory vigilance support for medical devices and IVDs in the UK. Adverse incident triage, MHRA MORE portal reporting, Field Safety Notices (FSN), and FSCA root-cause investigations.",
+        content: "UK MHRA regulatory vigilance consulting: adverse incident triage, MORE portal reporting, Field Safety Notices (FSN), and FSCA root-cause investigations.",
       },
-      {
-        name: "keywords",
-        content:
-          "UK MHRA vigilance reporting, MORE portal medical device incident, FSCA Field Safety Corrective Action UK, Field Safety Notice FSN, UKRP vigilance coordination, NKB Regovanta",
-      },
-      { property: "og:title", content: "UK MHRA Vigilance & FSCA Support | NKB Regovanta" },
+      { property: "og:title", content: "UK MHRA Vigilance & FSCA Consulting | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "When a safety issue arises, we triage reportability, author Field Safety Notices, interface with MHRA, and link findings directly to CAPA and risk management.",
+        content: "UK MHRA regulatory vigilance consulting: adverse incident triage, MORE portal reporting, Field Safety Notices (FSN), and FSCA root-cause investigations.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/vigilance" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK MHRA Vigilance & Field Safety Corrective Action (FSCA) | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior regulatory vigilance support for medical devices and IVDs in the UK. Adverse incident triage, MHRA MORE portal reporting, Field Safety Notices (FSN), and FSCA root-cause investigations." },
+      { name: "twitter:title", content: "UK MHRA Vigilance & FSCA Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "UK MHRA regulatory vigilance consulting: adverse incident triage, MORE portal reporting, Field Safety Notices (FSN), and FSCA root-cause investigations." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/vigilance" }],

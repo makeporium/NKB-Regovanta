@@ -7,29 +7,24 @@ const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
 export const Route = createFileRoute("/insights/eu-mdr-compliance-challenges")({
   head: () => ({
     meta: [
-      { title: "EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck | NKB Regovanta" },
+      { title: "EU MDR Medical Device Compliance Guide | NKB Regovanta" },
       {
         name: "description",
         content:
           "A practical regulatory perspective on the critical issues that delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR).",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR compliance challenges, CE marking delays, Notified Body review findings, MDR clinical evaluation CER, MDR PMCF plan, ISO 14971 MDR risk management, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU MDR Compliance: Where Manufacturers Commonly Get Stuck | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Medical Device Compliance Guide | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Practical regulatory guide to identifying and resolving EU MDR compliance bottlenecks before Notified Body review.",
+          "A practical regulatory perspective on the critical issues that delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR).",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges" },
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR Compliance Challenges & Pitfalls | NKB Regovanta" },
-      { name: "twitter:description", content: "Learn why manufacturers run into trouble during EU MDR conformity assessment and how to build a defensible regulatory dossier." },
+      { name: "twitter:title", content: "EU MDR Medical Device Compliance Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "A practical regulatory perspective on the critical issues that delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR)." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [

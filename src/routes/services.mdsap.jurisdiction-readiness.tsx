@@ -19,21 +19,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/jurisdiction-readiness")({
   head: () => ({
     meta: [
-      { title: "Jurisdiction-Specific Regulatory Readiness | 5 MDSAP Countries | NKB Regovanta" },
-      { name: "description", content: "Address country-specific regulatory overlays for Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (MHLW/PMDA), and the USA (FDA)." },
-      { name: "keywords", content: "MDSAP country specific requirements, FDA TGA ANVISA Health Canada PMDA, 5 jurisdictions MDSAP readiness, regulatory overlays QMS" },
-      { property: "og:title", content: "Jurisdiction-Specific Regulatory Readiness | NKB Regovanta" },
-      { property: "og:description", content: "One audit model with five regulatory overlays. Build jurisdiction-to-process maps and embed country-specific triggers into your QMS." },
+      { title: "MDSAP Country Regulatory Readiness | NKB Regovanta" },
+      { name: "description", content: "Regulatory overlays for the 5 MDSAP jurisdictions: Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (PMDA), and USA (FDA)." },
+      { property: "og:title", content: "MDSAP Country Regulatory Readiness | NKB Regovanta" },
+      { property: "og:description", content: "Regulatory overlays for the 5 MDSAP jurisdictions: Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (PMDA), and USA (FDA)." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/jurisdiction-readiness" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Jurisdiction-Specific Regulatory Readiness | 5 MDSAP Countries | NKB Regovanta" },
-      { name: "twitter:description", content: "Address country-specific regulatory overlays for Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (MHLW/PMDA), and the USA (FDA)." },
+      { name: "twitter:title", content: "MDSAP Country Regulatory Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "Regulatory overlays for the 5 MDSAP jurisdictions: Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (PMDA), and USA (FDA)." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/jurisdiction-readiness" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Jurisdiction-Specific Regulatory Readiness (5 Countries)",
+          description: "QMS and regulatory overlay mapping for Australia, Brazil, Canada, Japan, and USA as required under MDSAP certification.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
     ],
   }),
   component: JurisdictionReadinessPage,

@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/classification")({
   head: () => ({
     meta: [
-      { title: "Product Classification & Regulatory Pathway Assessment | US FDA Services | NKB Regovanta" },
+      { title: "FDA Device Classification Assessment | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Establish your medical device's FDA regulatory identity: classification, regulation number, product code, 510(k) exemption status, and premarket pathway assessment before testing begins.",
+        content: "Determine your medical device FDA classification, regulation number, product code, 510(k) exemption status, and premarket pathway with expert consultants.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA product classification, regulatory pathway assessment, 510k exemption, FDA regulation number, 3-letter product code, medical device classification USA, NKB Regovanta",
-      },
-      { property: "og:title", content: "Product Classification & Regulatory Pathway Assessment | NKB Regovanta" },
+      { property: "og:title", content: "FDA Device Classification Assessment | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Determine device classification, product code, applicable controls, and strategic submission pathway before committing to testing or dossier preparation.",
+        content: "Determine your medical device FDA classification, regulation number, product code, 510(k) exemption status, and premarket pathway with expert consultants.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/classification" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Product Classification & Regulatory Pathway Assessment | US FDA Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Establish your medical device's FDA regulatory identity: classification, regulation number, product code, 510(k) exemption status, and premarket pathway assessment before testing begins." },
+      { name: "twitter:title", content: "FDA Device Classification Assessment | NKB Regovanta" },
+      { name: "twitter:description", content: "Determine your medical device FDA classification, regulation number, product code, 510(k) exemption status, and premarket pathway with expert consultants." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/classification" }],
@@ -71,7 +64,7 @@ function ClassificationServicePage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Product Classification & Regulatory Pathway Assessment",
+              name: "FDA Medical Device Classification & Regulatory Pathway Assessment",
               url: "https://www.nkbregovanta.com/services/usa/classification",
               description:
                 "FDA medical device product classification, regulation number, product code, and premarket regulatory pathway determination.",
@@ -124,7 +117,7 @@ function ClassificationServicePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Product Classification &amp; Regulatory Pathway Assessment
+              FDA Medical Device Classification &amp; Pathway Assessment
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Before testing begins or a dossier is drafted, we establish the device's regulatory identity: classification, regulation number, product code, applicable controls, exemption status and likely premarket pathway. This early assessment prevents costly work from being built around the wrong FDA route.

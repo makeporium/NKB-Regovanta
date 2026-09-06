@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/audit-readiness")({
   head: () => ({
     meta: [
-      { title: "UK Approved Body & Conformity Assessment Readiness | NKB Regovanta" },
+      { title: "UK Approved Body Audit Readiness | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior UK Approved Body audit preparation, mock interviews, ISO 13485 QMS review, technical file pre-assessment, and nonconformity resolution under UK MDR 2002.",
+        content: "UK Approved Body audit preparation, mock interviews, ISO 13485 QMS review, technical file pre-assessment, and nonconformity resolution under UK MDR.",
       },
-      {
-        name: "keywords",
-        content:
-          "UK Approved Body readiness, UKCA audit preparation, UK MDR conformity assessment, Approved Body deficiency response, mock audit medical device UK, NKB Regovanta",
-      },
-      { property: "og:title", content: "UK Approved Body & Conformity Assessment Readiness | NKB Regovanta" },
+      { property: "og:title", content: "UK Approved Body Audit Readiness | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Approved Body readiness is an evidence and implementation exercise. We prepare your team, pre-assess technical files, and defend nonconformity responses.",
+        content: "UK Approved Body audit preparation, mock interviews, ISO 13485 QMS review, technical file pre-assessment, and nonconformity resolution under UK MDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/audit-readiness" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK Approved Body & Conformity Assessment Readiness | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior UK Approved Body audit preparation, mock interviews, ISO 13485 QMS review, technical file pre-assessment, and nonconformity resolution under UK MDR 2002." },
+      { name: "twitter:title", content: "UK Approved Body Audit Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "UK Approved Body audit preparation, mock interviews, ISO 13485 QMS review, technical file pre-assessment, and nonconformity resolution under UK MDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/audit-readiness" }],

@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
 export const Route = createFileRoute("/insights/regulation-eu-2024-1860-mdr-ivdr-transition")({
   head: () => ({
     meta: [
-      { title: "Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities | NKB Regovanta" },
+      { title: "Regulation EU 2024/1860 MDR Transition | NKB Regovanta" },
       {
         name: "description",
         content: "Strategic implications of extended legacy device deadlines, mandatory supply interruption notifications, and IVD timeline relief.",
       },
-      {
-        name: "keywords",
-        content: "regulation (eu) 2024/1860: transitional extensions and eudamed rollout priorities, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities | NKB Regovanta" },
+      { property: "og:title", content: "Regulation EU 2024/1860 MDR Transition | NKB Regovanta" },
       {
         property: "og:description",
         content: "Strategic implications of extended legacy device deadlines, mandatory supply interruption notifications, and IVD timeline relief.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/regulation-eu-2024-1860-mdr-ivdr
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Regulation (EU) 2024/1860: Transitional Extensions and EUDAMED Rollout Priorities" },
+      { name: "twitter:title", content: "Regulation EU 2024/1860 MDR Transition | NKB Regovanta" },
       { name: "twitter:description", content: "Strategic implications of extended legacy device deadlines, mandatory supply interruption notifications, and IVD timeline relief." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Regulation (EU) 2024/1860: Extension of IVDR Transitional Period and New Provisions</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Extension of IVDR Transitional Period</p>

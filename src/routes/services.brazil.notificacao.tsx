@@ -5,22 +5,32 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/brazil/notificacao')({
   head: () => ({
     meta: [
-      { title: 'Notificação Pathway | Brazil Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Brazil Notificação Pathway services for medical devices and IVDs.' },
-      { name: "keywords", content: "Notificação Pathway, Brazil Services, services brazil notificacao, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Notificação Pathway | Brazil Services | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA Notificação (product notification) consulting for Class I and II medical devices in Brazil. Complete ANVISA regulatory pathway selection, Notificação filing strategy, documentation preparation, and RBPFAB/BPF c..." },
+      { title: 'ANVISA Notificação Pathway (Brazil) | NKB Regovanta' },
+      { name: 'description', content: 'ANVISA Notificação consulting for Class I/II devices in Brazil — pathway selection, filing strategy, documentation, and BGMP compliance support.' },
+      { property: "og:title", content: "ANVISA Notificação Pathway (Brazil) | NKB Regovanta" },
+      { property: "og:description", content: "ANVISA Notificação consulting for Class I/II devices in Brazil — pathway selection, filing strategy, documentation, and BGMP compliance support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/notificacao" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Notificação Pathway | Brazil Services | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA Notificação (product notification) consulting for Class I and II medical devices in Brazil. Complete ANVISA regulatory pathway selection, Notificação filing strategy, documentation preparation, and RBPFAB/BPF c..." },
+      { name: "twitter:title", content: "ANVISA Notificação Pathway (Brazil) | NKB Regovanta" },
+      { name: "twitter:description", content: "ANVISA Notificação consulting for Class I/II devices in Brazil — pathway selection, filing strategy, documentation, and BGMP compliance support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/notificacao" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/notificacao" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Notificação Pathway",
+          description: "ANVISA Notificação pathway consulting for Class I and II medical device market entry in Brazil.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +46,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Brazil Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Notificação Pathway</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">ANVISA Notificação Pathway (Brazil)</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Brazil regulatory landscape with our comprehensive Notificação Pathway support.
             </p>

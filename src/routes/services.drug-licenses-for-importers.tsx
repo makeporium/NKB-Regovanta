@@ -29,32 +29,45 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/drug-licenses-for-importers")({
   head: () => ({
     meta: [
-      { title: "Drug Import Licence Registration CDSCO India | Form 41, Form 10/10-A, DMF & PMF" },
+      { title: "Drug Licenses for Importers in India | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Comprehensive pharmaceutical regulatory consulting for drug import in India. End-to-end support for Form 41 Registration Certificate, Form 10/10-A Import Licence, Form 40, Form 8/8-A, Form 11 Test Licence, Plant Master File (PMF), Drug Master File (DMF open part), API import and biologics registration.",
+          "CDSCO pharmaceutical import licensing in India: Form 41 RC, Form 10/10-A licence, Form 40, Plant Master Files (PMF), Drug Master Files (DMF), and APIs.",
       },
-      {
-        name: "keywords",
-        content:
-          "Drug Import Licence India, Registration Certificate Form 41 CDSCO, Import Licence Form 10 / 10-A, Form 40 application support, Form 8 / 8-A support, Test Licence Form 11, Foreign manufacturer registration India, Overseas manufacturing site registration, Plant Master File (PMF) CDSCO, Drug Master File (DMF) open part, API import registration India, Phytopharmaceutical & biologics regulatory support, NKB Regovanta",
-      },
-      { property: "og:title", content: "Drug Import Licence Registration CDSCO India | Form 41, Form 10 | NKB Regovanta" },
+      { property: "og:title", content: "Drug Licenses for Importers in India | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "CDSCO pharmaceutical registration, overseas site inspection, Form 41 RC, Form 10 Import License, and DMF/PMF dossier filing in India.",
+          "CDSCO pharmaceutical import licensing in India: Form 41 RC, Form 10/10-A licence, Form 40, Plant Master Files (PMF), Drug Master Files (DMF), and APIs.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Drug Import Licence Registration CDSCO India | Form 41, Form 10/10-A, DMF & PMF" },
-      { name: "twitter:description", content: "Drug licence consulting for medical device importers in India. Wholesale drug licence (Form 20B), retail drug licence, CDSCO import authorization, and regulatory compliance for companies importing both drugs and medic..." },
+      { name: "twitter:title", content: "Drug Licenses for Importers in India | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "CDSCO pharmaceutical import licensing in India: Form 41 RC, Form 10/10-A licence, Form 40, Plant Master Files (PMF), Drug Master Files (DMF), and APIs.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Drug Import Licence & CDSCO Registration Consulting (India)",
+          description: "End-to-end support for Form 41 RC, Form 10/10-A Import Licence, PMF/DMF dossiers, and overseas manufacturing site registration with CDSCO India.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "India" },
+        }),
+      },
     ],
   }),
   component: DrugLicensesForImportersPage,

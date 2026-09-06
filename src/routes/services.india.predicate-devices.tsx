@@ -6,21 +6,40 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
-      { title: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
-      { name: "description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
-      { name: "keywords", content: "MD-14 application India, MD-15 import licence, CDSCO predicate device, Indian Authorized Agent IAA, SUGAM portal, medical device import consultant India, Class B C D import licence" },
-      { property: "og:title", content: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
-      { property: "og:description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
+      { title: "Predicate Device Import License (MD-15) | NKB Regovanta" },
+      { name: "description", content: "CDSCO MD-14 & MD-15 import license consulting for Class A-D predicate medical devices in India. Indian Authorized Agent, SUGAM filing, and dossier support." },
+      { property: "og:title", content: "Predicate Device Import License (MD-15) | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO MD-14 & MD-15 import license consulting for Class A-D predicate medical devices in India. Indian Authorized Agent, SUGAM filing, and dossier support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/predicate-devices" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Import License for Predicate Medical Devices India | MD-14 & MD-15 | NKB Regovanta" },
-      { name: "twitter:description", content: "End-to-end CDSCO consulting for MD-14 import licence applications and MD-15 import licence grant for Class A, B, C & D predicate medical devices. IAA/AIR appointment, SUGAM portal submission, dossier preparation, and deficiency response. NKB Regovanta India." },
+      { name: "twitter:title", content: "Predicate Device Import License (MD-15) | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO MD-14 & MD-15 import license consulting for Class A-D predicate medical devices in India. Indian Authorized Agent, SUGAM filing, and dossier support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/predicate-devices" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO Predicate Medical Device Import License (MD-14 & MD-15)",
+          description: "CDSCO consulting for MD-14 import license applications and MD-15 import license grant for predicate medical devices in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -87,9 +106,9 @@ function PredicateDevicesPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <p role="heading" aria-level={1} aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Import</span> License for Predicate Medical Devices <br/> (Forms MD-14, MD-15)
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

@@ -18,24 +18,41 @@ import {
 export const Route = createFileRoute("/industries/medical-devices_/india/for-manufacturer")({
   head: () => ({
     meta: [
-      { title: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
+      { title: "Medical Device Manufacturing India | NKB Regovanta" },
       {
-        name: "description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from NKB Regovanta.",
+        name: "description",
+        content: "CDSCO medical device manufacturing licenses in India (MD-3/5/7/9). Complete SLA/CLA support, plant inspection readiness, and Class A–D compliance.",
       },
-      { name: "keywords", content: "Medical Device Manufacturing Licenses in India, industries medical devices india for manufacturer, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
-      { property: "og:description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from..." },
+      { property: "og:title", content: "Medical Device Manufacturing India | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO medical device manufacturing licenses in India (MD-3/5/7/9). Complete SLA/CLA support, plant inspection readiness, and Class A–D compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Manufacturing Licenses in India | NKB Regovanta" },
-      { name: "twitter:description", content: "Manufacture medical devices in India with CDSCO MD-3/5/7/9 manufacturing licences. Complete SLA/CLA application support, plant inspection preparation, technical file, and Class A–D device manufacturing compliance from..." },
+      { name: "twitter:title", content: "Medical Device Manufacturing India | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO medical device manufacturing licenses in India (MD-3/5/7/9). Complete SLA/CLA support, plant inspection readiness, and Class A–D compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Medical Device Manufacturing India",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "CDSCO medical device manufacturing licenses in India (MD-3/5/7/9). Complete SLA/CLA support, plant inspection readiness, and Class A–D compliance.",
+          "serviceType": "Medical Device Manufacturing Licensing"
+        })
+      }
+    ],
   }),
   component: MedicalDeviceForManufacturerPage,
 });

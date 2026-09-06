@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand IVD Regulatory & Performance Evidence Support | NKB Regovanta",
+        title: "New Zealand IVD Regulatory Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "In Vitro Diagnostic (IVD) regulatory compliance and voluntary WAND notification in New Zealand. Analytical and clinical performance evidence, stability studies, and Medsafe compliance.",
+          "IVD regulatory compliance, voluntary WAND notification, performance evidence, and Medsafe compliance for in vitro diagnostics in New Zealand.",
       },
-      { name: "keywords", content: "New Zealand IVD Regulatory & Performance Evidence Support, services new zealand ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand IVD Regulatory & Performance Evidence Support | NKB Regovanta" },
-      { property: "og:description", content: "In Vitro Diagnostic (IVD) regulatory compliance and voluntary WAND notification in New Zealand. Analytical and clinical performance evidence, stability studies, and Medsafe compliance." },
+      { property: "og:title", content: "New Zealand IVD Regulatory Support | NKB Regovanta" },
+      { property: "og:description", content: "IVD regulatory compliance, voluntary WAND notification, performance evidence, and Medsafe compliance for in vitro diagnostics in New Zealand." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand IVD Regulatory & Performance Evidence Support | NKB Regovanta" },
-      { name: "twitter:description", content: "In Vitro Diagnostic (IVD) regulatory compliance and voluntary WAND notification in New Zealand. Analytical and clinical performance evidence, stability studies, and Medsafe compliance." },
+      { name: "twitter:title", content: "New Zealand IVD Regulatory Support | NKB Regovanta" },
+      { name: "twitter:description", content: "IVD regulatory compliance, voluntary WAND notification, performance evidence, and Medsafe compliance for in vitro diagnostics in New Zealand." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/ivd" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand IVD Regulatory & Performance Evidence Support",
+          description: "IVD regulatory compliance, voluntary WAND notification, and analytical/clinical performance evidence support for in vitro diagnostic manufacturers in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZIVDPage,
 });

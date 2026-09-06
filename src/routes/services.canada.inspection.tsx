@@ -49,26 +49,52 @@ export const Route = createFileRoute("/services/canada/inspection")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Inspection & Compliance Readiness | NKB Regovanta",
+        title: "Health Canada Inspection Defense | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Health Canada inspection preparation, MDEL audit readiness, mock inspection simulation, complaint file reviews, recall drills, and deficiency response strategy.",
+          "Health Canada inspection defense: MDEL audit readiness, mock inspection simulations, complaint file audits, recall drills, and CAPA remediation.",
       },
-      { name: "keywords", content: "Health Canada Inspection & Compliance Readiness, services canada inspection, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Inspection & Compliance Readiness | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada inspection preparation, MDEL audit readiness, mock inspection simulation, complaint file reviews, recall drills, and deficiency response strategy." },
+      { property: "og:title", content: "Health Canada Inspection Defense | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada inspection defense: MDEL audit readiness, mock inspection simulations, complaint file audits, recall drills, and CAPA remediation.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/inspection" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Inspection & Compliance Readiness | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada inspection preparation, MDEL audit readiness, mock inspection simulation, complaint file reviews, recall drills, and deficiency response strategy." },
+      { name: "twitter:title", content: "Health Canada Inspection Defense | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada inspection defense: MDEL audit readiness, mock inspection simulations, complaint file audits, recall drills, and CAPA remediation.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/inspection" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Inspection & Compliance Readiness",
+          description: "MDEL audit preparation, mock inspection simulation, and regulatory observation response in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaInspectionPage,
 });
@@ -113,7 +139,7 @@ function CanadaInspectionPage() {
               Audit &amp; Inspection Defense
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Health Canada Inspection &amp; Compliance Readiness
+              Health Canada Inspection Readiness &amp; Defense
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Health Canada inspections focus on the activities an establishment actually performs. A mature compliance system must demonstrate implementation through records, not only the existence of procedures.

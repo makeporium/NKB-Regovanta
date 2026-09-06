@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
 export const Route = createFileRoute("/insights/gspr-compliance-eu-mdr-ivdr")({
   head: () => ({
     meta: [
-      { title: "Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR | NKB Regovanta" },
+      { title: "GSPR Compliance for EU MDR & IVDR | NKB Regovanta" },
       {
         name: "description",
         content: "Practical guidance for establishing objective regulatory evidence, state-of-the-art standards alignment, and checklist traceability.",
       },
-      {
-        name: "keywords",
-        content: "achieving gspr compliance: navigating annex i of eu mdr and ivdr, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR | NKB Regovanta" },
+      { property: "og:title", content: "GSPR Compliance for EU MDR & IVDR | NKB Regovanta" },
       {
         property: "og:description",
         content: "Practical guidance for establishing objective regulatory evidence, state-of-the-art standards alignment, and checklist traceability.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/gspr-compliance-eu-mdr-ivdr")({
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Achieving GSPR Compliance: Navigating Annex I of EU MDR and IVDR" },
+      { name: "twitter:title", content: "GSPR Compliance for EU MDR & IVDR | NKB Regovanta" },
       { name: "twitter:description", content: "Practical guidance for establishing objective regulatory evidence, state-of-the-art standards alignment, and checklist traceability." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
     ],

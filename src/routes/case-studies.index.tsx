@@ -15,22 +15,23 @@ export const Route = createFileRoute("/case-studies/")({
       {
         name: "description",
         content:
-          "Explore real-world case studies of medical device, IVD, and pharma companies achieving FDA 510(k) clearances, EU MDR certifications, and TGA approvals with NKB Regovanta.",
-      },
-      {
-        name: "keywords",
-        content: "regulatory case studies, FDA 510k success, EU MDR remediation, TGA approval case study, medical device consulting results, NKB Regovanta",
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
       },
       { property: "og:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
       {
         property: "og:description",
-        content: "Proven track record in global regulatory approvals, ISO 13485 compliance, and market expansion.",
+        content:
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
-      { name: "twitter:description", content: "Explore real-world case studies of medical device, IVD, and pharma companies achieving FDA 510(k) clearances, EU MDR certifications, and TGA approvals with NKB Regovanta." },
+      {
+        name: "twitter:description",
+        content:
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
@@ -130,9 +131,12 @@ function CaseStudies() {
           <div className="flex flex-col justify-center pr-6 pt-8 pb-10 lg:pt-10 lg:pb-12">
             <p className="text-[13px] font-bold text-navy mb-4 tracking-wide">Proven Results</p>
             <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(32px, 4vw, 52px)" }}>
-              Real Challenges.<br />Measurable Success.
+              Client Case Studies &amp; Success Stories
             </h1>
-            <p className="mt-5 text-[15px] text-navy/75 leading-relaxed max-w-md">
+            <p className="mt-2 text-lg font-bold text-accent">
+              Real Challenges. Measurable Success.
+            </p>
+            <p className="mt-4 text-[15px] text-navy/75 leading-relaxed max-w-md">
               Explore how we've helped medical device companies achieve compliance, accelerate approvals, and grow their global presence.
             </p>
           </div>

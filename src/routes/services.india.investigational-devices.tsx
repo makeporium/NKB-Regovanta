@@ -6,21 +6,40 @@ export const Route = createFileRoute("/services/india/investigational-devices")(
   component: InvestigationalDevicesPage,
   head: () => ({
     meta: [
-      { title: "Import Authorization for Investigational Devices | NKB Regovanta" },
-      { name: "description", content: "CDSCO import authorization for investigational medical devices under Forms MD-18 and MD-19. End-to-end support for CROs, sponsors, and manufacturers seeking clinical investigation approvals in India. Protocol review, ethics committee liaison, and SUGAM submission." },
-      { name: "keywords", content: "MD-18 investigational device import, MD-19 clinical trial device India, CDSCO clinical investigation permission, clinical trial medical device CDSCO" },
-      { property: "og:title", content: "Import Authorization for Investigational Devices | NKB Regovanta" },
-      { property: "og:description", content: "CDSCO import authorization for investigational medical devices under Forms MD-18 and MD-19. End-to-end support for CROs, sponsors, and manufacturers seeking clinical investigation approvals in India. Protocol review, ..." },
+      { title: "Investigational Device Import CDSCO | NKB Regovanta" },
+      { name: "description", content: "Obtain CDSCO import authorization for investigational medical devices (MD-18 & MD-19) in India. End-to-end clinical trial & hospital import support." },
+      { property: "og:title", content: "Investigational Device Import CDSCO | NKB Regovanta" },
+      { property: "og:description", content: "Obtain CDSCO import authorization for investigational medical devices (MD-18 & MD-19) in India. End-to-end clinical trial & hospital import support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/investigational-devices" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Import Authorization for Investigational Devices | NKB Regovanta" },
-      { name: "twitter:description", content: "CDSCO import authorization for investigational medical devices under Forms MD-18 and MD-19. End-to-end support for CROs, sponsors, and manufacturers seeking clinical investigation approvals in India. Protocol review, ..." },
+      { name: "twitter:title", content: "Investigational Device Import CDSCO | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain CDSCO import authorization for investigational medical devices (MD-18 & MD-19) in India. End-to-end clinical trial & hospital import support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/investigational-devices" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO Investigational Device Import Authorization",
+          description: "CDSCO import authorization for investigational medical devices under Forms MD-18 and MD-19 in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -87,9 +106,9 @@ function InvestigationalDevicesPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Investigational</span> Devices in Govt. Hospitals <br/> (Forms MD-18, MD-19)
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

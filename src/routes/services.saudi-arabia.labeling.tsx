@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/saudi-arabia/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Labeling, IFU, UDI & Advertising Compliance (MDS-REQ 8) | NKB Regovanta",
+        title: "SFDA Device Labeling & UDI Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Saudi FDA medical device and IVD labeling compliance. Arabic and English IFU translation review, Saudi-DI UDI database submission, packaging requirements, and promotional marketing approval under MDS-REQ 8.",
+          "Saudi FDA medical device & IVD labeling compliance: Arabic and English IFU review, Saudi-DI UDI database submission, and MDS-REQ 8 packaging approval.",
       },
-      { name: "keywords", content: "SFDA Labeling, IFU, UDI & Advertising Compliance (MDS-REQ 8), services saudi arabia labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Labeling, IFU, UDI & Advertising Compliance (MDS-REQ 8) | NKB Regovanta" },
-      { property: "og:description", content: "Saudi FDA medical device and IVD labeling compliance. Arabic and English IFU translation review, Saudi-DI UDI database submission, packaging requirements, and promotional marketing approval under MDS-REQ 8." },
+      { property: "og:title", content: "SFDA Device Labeling & UDI Compliance | NKB Regovanta" },
+      { property: "og:description", content: "Saudi FDA medical device & IVD labeling compliance: Arabic and English IFU review, Saudi-DI UDI database submission, and MDS-REQ 8 packaging approval." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Labeling, IFU, UDI & Advertising Compliance (MDS-REQ 8) | NKB Regovanta" },
-      { name: "twitter:description", content: "Saudi FDA medical device and IVD labeling compliance. Arabic and English IFU translation review, Saudi-DI UDI database submission, packaging requirements, and promotional marketing approval under MDS-REQ 8." },
+      { name: "twitter:title", content: "SFDA Device Labeling & UDI Compliance | NKB Regovanta" },
+      { name: "twitter:description", content: "Saudi FDA medical device & IVD labeling compliance: Arabic and English IFU review, Saudi-DI UDI database submission, and MDS-REQ 8 packaging approval." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/labeling" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Labeling Compliance (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "Medical device labeling compliance consulting for the Saudi Arabia SFDA - Arabic language requirements, IFU review, and SFDA labeling standards.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiLabelingPage,
 });

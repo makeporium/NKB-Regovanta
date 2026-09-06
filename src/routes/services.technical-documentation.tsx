@@ -5,24 +5,45 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/technical-documentation")({
   head: () => ({
     meta: [
-      { title: "Technical Documentation | Services | NKB Regovanta" },
+      { title: "Medical Device Technical Documentation | NKB Regovanta" },
       {
-        name: "description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation across all regulatory pathways.",
+        name: "description",
+        content:
+          "Medical device technical documentation consulting: EU MDR Annex II/III files, FDA 510(k) dossiers, ISO 13485 records, and global regulatory submissions.",
       },
-      { name: "keywords", content: "technical documentation medical devices, EU MDR technical file, FDA 510k documentation, TGA ARTG technical documentation, medical device dossier" },
-      { property: "og:title", content: "Technical Documentation | Services | NKB Regovanta" },
-      { property: "og:description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation acro..." },
+      { property: "og:title", content: "Medical Device Technical Documentation | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Medical device technical documentation consulting: EU MDR Annex II/III files, FDA 510(k) dossiers, ISO 13485 records, and global regulatory submissions.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Technical Documentation | Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Expert technical documentation consulting for medical devices globally. EU MDR Annex II/III technical files, FDA 510(k) submissions, TGA ARTG documentation, ISO 13485 QMS records, and complete dossier preparation acro..." },
+      { name: "twitter:title", content: "Medical Device Technical Documentation | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Medical device technical documentation consulting: EU MDR Annex II/III files, FDA 510(k) dossiers, ISO 13485 records, and global regulatory submissions.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/technical-documentation" },
   ],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medical Device Technical Documentation Consulting by NKB Regovanta",
+          description: "Expert technical documentation consulting for global medical device submissions - EU MDR Technical File, FDA 510(k)/PMA, ISO 14971 risk management, clinical evaluation, and IFU.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: TechnicalDocumentationService,
 });
@@ -67,7 +88,7 @@ function TechnicalDocumentationService() {
             <span className="text-navy">Technical Documentation</span>
           </div>
           <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: "clamp(32px, 4vw, 52px)" }}>
-            Technical Documentation
+            Medical Device Technical Documentation
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-navy/70 font-medium max-w-3xl">
             End-to-end technical file writing (STED), risk management & compliance support.

@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia SaMD, AI & Cybersecurity Regulatory Consulting | NKB Regovanta",
+        title: "Australia TGA SaMD & AI Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA Software as a Medical Device (SaMD) regulatory status, exclusions/exemptions, IEC 62304 software lifecycle, ISO 27001, cybersecurity risk management, and AI/ML clinical evidence.",
+          "TGA SaMD consulting: exclusions, IEC 62304 lifecycle, cybersecurity risk management, and AI/ML clinical evidence in Australia.",
       },
-      { name: "keywords", content: "Australia SaMD, AI & Cybersecurity Regulatory Consulting, services australia software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia SaMD, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { property: "og:description", content: "TGA Software as a Medical Device (SaMD) regulatory status, exclusions/exemptions, IEC 62304 software lifecycle, ISO 27001, cybersecurity risk management, and AI/ML clinical evidence." },
+      { property: "og:title", content: "Australia TGA SaMD & AI Consultant | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA SaMD consulting: exclusions, IEC 62304 lifecycle, cybersecurity risk management, and AI/ML clinical evidence in Australia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia SaMD, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA Software as a Medical Device (SaMD) regulatory status, exclusions/exemptions, IEC 62304 software lifecycle, ISO 27001, cybersecurity risk management, and AI/ML clinical evidence." },
+      { name: "twitter:title", content: "Australia TGA SaMD & AI Consultant | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA SaMD consulting: exclusions, IEC 62304 lifecycle, cybersecurity risk management, and AI/ML clinical evidence in Australia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/software" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australia TGA SaMD, AI & Cybersecurity Consulting",
+          description: "Software as a Medical Device qualification, IEC 62304 lifecycle compliance, and cybersecurity risk management in Australia.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaSoftwarePage,
 });
@@ -133,7 +159,7 @@ function AustraliaSoftwarePage() {
               SaMD, AI &amp; Cybersecurity
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Software, SaMD, AI &amp; Cybersecurity Regulatory Support
+              Australia TGA SaMD, AI &amp; Cybersecurity Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Australian software regulation begins with regulatory-status assessment. Some software meets the medical-device definition and requires ARTG inclusion; other software may be excluded or exempt. For regulated software, the intended medical function drives classification, evidence and lifecycle obligations.

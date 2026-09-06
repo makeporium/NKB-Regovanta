@@ -47,23 +47,21 @@ export const Route = createFileRoute("/services/new-zealand/")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand WAND Notification & Medsafe Compliance Consultant | NKB Regovanta",
+        title: "New Zealand Medsafe Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "New Zealand Medsafe regulatory compliance and WAND notification services for Medical Devices, IVDs and SaMD. NZ Sponsor representation, Schedule 2 risk classification, technical file defense, and post-market vigilance.",
+          "Expert New Zealand Medsafe regulatory consulting: WAND notifications, NZ Sponsor representation, risk classification, and post-market compliance.",
       },
-      { name: "keywords", content: "New Zealand WAND Notification & Medsafe Compliance Consultant, services new zealand, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand WAND Notification & Medsafe Compliance Consultant | NKB Regovanta" },
-      { property: "og:description", content: "New Zealand Medsafe regulatory compliance and WAND notification services for Medical Devices, IVDs and SaMD. NZ Sponsor representation, Schedule 2 risk classification, technical file defense, and post-market vigilance." },
+      { property: "og:title", content: "New Zealand Medsafe Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert New Zealand Medsafe regulatory consulting: WAND notifications, NZ Sponsor representation, risk classification, and post-market compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand WAND Notification & Medsafe Compliance Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "New Zealand Medsafe regulatory compliance and WAND notification services for Medical Devices, IVDs and SaMD. NZ Sponsor representation, Schedule 2 risk classification, technical file defense, and post-market vigilance." },
+      { name: "twitter:title", content: "New Zealand Medsafe Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert New Zealand Medsafe regulatory consulting: WAND notifications, NZ Sponsor representation, risk classification, and post-market compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand" }],
@@ -372,6 +370,24 @@ const faqs = [
 function NZHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "New Zealand Medsafe Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "Medsafe Registration & WAND Notification Consulting",
+            "description": "Comprehensive New Zealand Medsafe consulting for Medical Devices and IVDs including WAND notification and NZ Sponsor representation.",
+            "areaServed": "New Zealand"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Auckland Graphic)
       ══════════════════════════════════════════════════════════════════ */}

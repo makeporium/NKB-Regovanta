@@ -7,29 +7,24 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/eu-ai-act-medical-devices")({
   head: () => ({
     meta: [
-      { title: "EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right | NKB Regovanta" },
+      { title: "EU AI Act for Medical Devices Guide | NKB Regovanta" },
       {
         name: "description",
         content:
-          "A practical regulatory perspective for manufacturers developing AI-enabled medical devices and medical software for the European market under the EU AI Act and EU MDR/IVDR.",
+          "A practical regulatory guide for manufacturers developing AI-enabled medical devices and software under the EU AI Act and EU MDR/IVDR.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU AI Act medical devices, AI Act MDR alignment, SaMD AI regulation, high-risk AI medical software, ISO 13485 AI QMS, ISO 14971 AI risk management, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right | NKB Regovanta" },
+      { property: "og:title", content: "EU AI Act for Medical Devices Guide | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Comprehensive guide for MedTech manufacturers navigating the EU AI Act alongside EU MDR and IVDR.",
+          "A practical regulatory guide for manufacturers developing AI-enabled medical devices and software under the EU AI Act and EU MDR/IVDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices" },
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU AI Act and Medical Devices: Regulatory Guide | NKB Regovanta" },
-      { name: "twitter:description", content: "What MedTech manufacturers need to get right when deploying AI-enabled medical devices and SaMD in the European Union." },
+      { name: "twitter:title", content: "EU AI Act for Medical Devices Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "A practical regulatory guide for manufacturers developing AI-enabled medical devices and software under the EU AI Act and EU MDR/IVDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [

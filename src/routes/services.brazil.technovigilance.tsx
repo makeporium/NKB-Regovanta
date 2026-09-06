@@ -5,22 +5,32 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/brazil/technovigilance')({
   head: () => ({
     meta: [
-      { title: 'Technovigilance Services | Brazil Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Brazil Technovigilance Services services for medical devices and IVDs.' },
-      { name: "keywords", content: "Technovigilance Services, Brazil Services, services brazil technovigilance, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Technovigilance Services | Brazil Services | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA technovigilance consulting for medical device adverse event monitoring and post-market surveillance in Brazil. Queixa Técnica (QT) management, NOTIVISA reporting, MDSAP alignment, and technovigilance system imp..." },
+      { title: 'ANVISA Technovigilance (Brazil) | NKB Regovanta' },
+      { name: 'description', content: 'ANVISA tecnovigilância consulting: adverse event monitoring, Queixa Técnica (QT), NOTIVISA reporting, and post-market surveillance for medical devices.' },
+      { property: "og:title", content: "ANVISA Technovigilance (Brazil) | NKB Regovanta" },
+      { property: "og:description", content: "ANVISA tecnovigilância consulting: adverse event monitoring, Queixa Técnica (QT), NOTIVISA reporting, and post-market surveillance for medical devices." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/technovigilance" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Technovigilance Services | Brazil Services | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA technovigilance consulting for medical device adverse event monitoring and post-market surveillance in Brazil. Queixa Técnica (QT) management, NOTIVISA reporting, MDSAP alignment, and technovigilance system imp..." },
+      { name: "twitter:title", content: "ANVISA Technovigilance (Brazil) | NKB Regovanta" },
+      { name: "twitter:description", content: "ANVISA tecnovigilância consulting: adverse event monitoring, Queixa Técnica (QT), NOTIVISA reporting, and post-market surveillance for medical devices." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technovigilance" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technovigilance" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Tecnovigilância & Post-Market Surveillance",
+          description: "Adverse event monitoring, NOTIVISA reporting, and tecnovigilância system implementation for medical devices in Brazil.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +46,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Brazil Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Technovigilance Services</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">ANVISA Technovigilance Services (Brazil)</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Brazil regulatory landscape with our comprehensive Technovigilance Services support.
             </p>

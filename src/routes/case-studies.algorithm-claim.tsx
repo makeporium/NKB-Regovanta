@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/case-studies/algorithm-claim")({
   head: () => ({
     meta: [
-      { title: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
-      { name: "description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy case study." },
-      { name: "keywords", content: "The Algorithm Can Do More. Should the Label?, Case Studies, case studies algorithm claim, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy ca..." },
+      { title: "AI Algorithm Label Expansion Case Study | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: Expanding an AI medical software label through validation, PCCP change protocols, and clinical evidence under FDA and EU MDR frameworks.",
+      },
+      { property: "og:title", content: "AI Algorithm Label Expansion Case Study | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: Expanding an AI medical software label through validation, PCCP change protocols, and clinical evidence under FDA and EU MDR frameworks.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The Algorithm Can Do More. Should the Label? | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "How NKB Regovanta helped expand a cleared AI diagnostic device label through post-market algorithm validation aligned with FDA AI/ML action plan and predetermined change control protocol. A real regulatory strategy ca..." },
+      { name: "twitter:title", content: "AI Algorithm Label Expansion Case Study | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: Expanding an AI medical software label through validation, PCCP change protocols, and clinical evidence under FDA and EU MDR frameworks.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "AI Medical Device Algorithm Claim & Label Expansion Case Study",
+          description:
+            "Case study: Expanding an AI medical software label through validation, PCCP change protocols, and clinical evidence under FDA and EU MDR frameworks.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });

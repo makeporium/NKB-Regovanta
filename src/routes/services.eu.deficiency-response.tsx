@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/deficiency-response")({
   head: () => ({
     meta: [
-      { title: "EU Notified Body Deficiency Response & Technical Review Defense | NKB Regovanta" },
+      { title: "EU Notified Body Deficiency Response | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior regulatory defense against Notified Body nonconformities, technical file deficiencies, clinical evaluation (CER) pushbacks, and audit findings under EU MDR & IVDR.",
+        content: "Senior regulatory defense against Notified Body nonconformities, technical file deficiencies, CER pushbacks, and audit findings under EU MDR & IVDR.",
       },
-      {
-        name: "keywords",
-        content:
-          "Notified Body deficiency response, MDR nonconformity response matrix, Notified Body audit findings resolution, CER deficiency response, IVDR review questions, NKB Regovanta",
-      },
-      { property: "og:title", content: "Notified Body Technical Review & Deficiency Response | NKB Regovanta" },
+      { property: "og:title", content: "EU Notified Body Deficiency Response | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We do not answer audit findings in isolation. We trace reviewer questions to their root regulatory cause and deliver an unassailable response package.",
+        content: "Senior regulatory defense against Notified Body nonconformities, technical file deficiencies, CER pushbacks, and audit findings under EU MDR & IVDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/deficiency-response" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU Notified Body Deficiency Response & Technical Review Defense | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior regulatory defense against Notified Body nonconformities, technical file deficiencies, clinical evaluation (CER) pushbacks, and audit findings under EU MDR & IVDR." },
+      { name: "twitter:title", content: "EU Notified Body Deficiency Response | NKB Regovanta" },
+      { name: "twitter:description", content: "Senior regulatory defense against Notified Body nonconformities, technical file deficiencies, CER pushbacks, and audit findings under EU MDR & IVDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/deficiency-response" }],
@@ -140,7 +133,7 @@ function EUDeficiencyResponsePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Notified Body Technical Review &amp; Deficiency Response
+              EU Notified Body Technical Review &amp; Deficiency Response
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We position deficiency resolution as active regulatory defense. We diagnose the root cause of Notified Body questions, author comment-by-comment response matrices, and remediate technical files to protect your certification timeline.

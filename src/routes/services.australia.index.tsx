@@ -48,23 +48,21 @@ export const Route = createFileRoute("/services/australia/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia TGA ARTG Consultant | Australian Sponsor & Medical Device Registration | NKB Regovanta",
+        title: "Australia TGA ARTG Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Australia TGA regulatory consulting for Medical Devices, IVDs and SaMD. ARTG inclusion, Australian Sponsor, Manufacturer Evidence, testing, TGA audit, UDI and post-market support.",
+          "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance.",
       },
-      { name: "keywords", content: "Australia TGA ARTG Consultant, Australian Sponsor & Medical Device Registration, services australia, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia TGA ARTG Consultant | Australian Sponsor & Medical Device Registration | NKB Regov..." },
-      { property: "og:description", content: "Australia TGA regulatory consulting for Medical Devices, IVDs and SaMD. ARTG inclusion, Australian Sponsor, Manufacturer Evidence, testing, TGA audit, UDI and post-market support." },
+      { property: "og:title", content: "Australia TGA ARTG Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia TGA ARTG Consultant | Australian Sponsor & Medical Device Registration | NKB Regov..." },
-      { name: "twitter:description", content: "Australia TGA regulatory consulting for Medical Devices, IVDs and SaMD. ARTG inclusion, Australian Sponsor, Manufacturer Evidence, testing, TGA audit, UDI and post-market support." },
+      { name: "twitter:title", content: "Australia TGA ARTG Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia" }],
@@ -330,6 +328,24 @@ const faqs = [
 function AustraliaHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Australia TGA ARTG Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "TGA Medical Device Registration & Australian Sponsor Services",
+            "description": "Comprehensive TGA consulting for Medical Devices, IVDs and SaMD including ARTG inclusion and Australian Sponsor representation.",
+            "areaServed": "Australia"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Sydney Graphic)
       ══════════════════════════════════════════════════════════════════ */}

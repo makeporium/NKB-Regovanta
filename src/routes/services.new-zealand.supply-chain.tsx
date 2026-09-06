@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/supply-chain")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Importer, Distributor & Local Supply Chain Compliance | NKB Regovanta",
+        title: "NZ Importer & Supply Chain Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Regulatory supply chain governance for New Zealand medical device importers and distributors. Multi-importer WAND strategies, distribution traceability records, and recall readiness.",
+          "Supply chain governance for NZ medical device importers — multi-importer WAND strategies, distribution traceability records, and recall readiness.",
       },
-      { name: "keywords", content: "New Zealand Importer, Distributor & Local Supply Chain Compliance, services new zealand supply chain, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Importer, Distributor & Local Supply Chain Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Regulatory supply chain governance for New Zealand medical device importers and distributors. Multi-importer WAND strategies, distribution traceability records, and recall readiness." },
+      { property: "og:title", content: "NZ Importer & Supply Chain Compliance | NKB Regovanta" },
+      { property: "og:description", content: "Supply chain governance for NZ medical device importers — multi-importer WAND strategies, distribution traceability records, and recall readiness." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/supply-chain" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Importer, Distributor & Local Supply Chain Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Regulatory supply chain governance for New Zealand medical device importers and distributors. Multi-importer WAND strategies, distribution traceability records, and recall readiness." },
+      { name: "twitter:title", content: "NZ Importer & Supply Chain Compliance | NKB Regovanta" },
+      { name: "twitter:description", content: "Supply chain governance for NZ medical device importers — multi-importer WAND strategies, distribution traceability records, and recall readiness." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/supply-chain" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Importer, Distributor & Local Supply Chain Compliance",
+          description: "Regulatory supply chain governance for NZ medical device importers and distributors — WAND management, traceability, and recall readiness under Medsafe requirements.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZSupplyChainPage,
 });
@@ -127,7 +138,7 @@ function NZSupplyChainPage() {
               Supply Chain &amp; Traceability
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Importer, Distributor &amp; Local Supply Chain Compliance
+              Importer, Distributor &amp; Supply Chain Compliance (New Zealand)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Each New Zealand Importer Can Carry Its Own Sponsor Obligations. Importers and distributors are central to the New Zealand medical-device framework. Where more than one importer supplies the same device, each importer may have its own WAND notification obligations because a notification is specific to the sponsor-device combination.

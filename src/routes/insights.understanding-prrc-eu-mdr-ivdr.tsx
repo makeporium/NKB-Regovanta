@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_compliance_1786396542227.png";
 export const Route = createFileRoute("/insights/understanding-prrc-eu-mdr-ivdr")({
   head: () => ({
     meta: [
-      { title: "Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15) | NKB Regovanta" },
+      { title: "PRRC Role Under EU MDR & EU IVDR | NKB Regovanta" },
       {
         name: "description",
         content: "Legal responsibilities, qualification standards, outsourcing limits, and liability considerations for Person Responsible for Regulatory Compliance.",
       },
-      {
-        name: "keywords",
-        content: "demystifying the role of prrc under eu mdr and eu ivdr (article 15), medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15) | NKB Regovanta" },
+      { property: "og:title", content: "PRRC Role Under EU MDR & EU IVDR | NKB Regovanta" },
       {
         property: "og:description",
         content: "Legal responsibilities, qualification standards, outsourcing limits, and liability considerations for Person Responsible for Regulatory Compliance.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/understanding-prrc-eu-mdr-ivdr")
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Demystifying the Role of PRRC Under EU MDR and EU IVDR (Article 15)" },
+      { name: "twitter:title", content: "PRRC Role Under EU MDR & EU IVDR | NKB Regovanta" },
       { name: "twitter:description", content: "Legal responsibilities, qualification standards, outsourcing limits, and liability considerations for Person Responsible for Regulatory Compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Understanding The PRRC Under EU MDR and IVDR</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Introduction to PRRC under EU MDR</p>

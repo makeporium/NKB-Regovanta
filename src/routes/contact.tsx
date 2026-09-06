@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/Bits";
 import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
@@ -6,28 +6,23 @@ import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact NKB Regovanta | Book a Regulatory & Compliance Consultation" },
+      { title: "Contact NKB Regovanta | Regulatory Consulting Enquiry" },
       {
         name: "description",
         content:
-          "Schedule a consultation with NKB Regovanta's global regulatory specialists for CDSCO licensing, US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, and Cosmetics compliance.",
+          "Contact NKB Regovanta to book a consultation with our global medical device regulatory specialists for US FDA, CDSCO, EU MDR/IVDR, and ISO 13485.",
       },
-      {
-        name: "keywords",
-        content:
-          "Medical device regulatory consultant India, CDSCO medical device consultation, FDA 510k consultant contact, EU MDR regulatory consultant, NKB Regovanta contact",
-      },
-      { property: "og:title", content: "Contact NKB Regovanta — Regulatory Affairs & Compliance Experts" },
+      { property: "og:title", content: "Contact NKB Regovanta | Regulatory Consulting Enquiry" },
       {
         property: "og:description",
         content:
-          "Get in touch with NKB Regovanta to accelerate your medical device, pharma, or cosmetic regulatory approvals.",
+          "Contact NKB Regovanta to book a consultation with our global medical device regulatory specialists for US FDA, CDSCO, EU MDR/IVDR, and ISO 13485.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/contact" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact NKB Regovanta | Book a Regulatory & Compliance Consultation" },
-      { name: "twitter:description", content: "Contact NKB Regovanta for expert medical device regulatory consulting. Get a free initial consultation for FDA 510(k), EU MDR, CDSCO India, MDSAP, TGA Australia, UK MHRA, or any global market access challenge. Respons..." },
+      { name: "twitter:title", content: "Contact NKB Regovanta | Regulatory Consulting Enquiry" },
+      { name: "twitter:description", content: "Contact NKB Regovanta to book a consultation with our global medical device regulatory specialists for US FDA, CDSCO, EU MDR/IVDR, and ISO 13485." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
@@ -40,13 +35,39 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact NKB Regovanta",
+            "url": "https://www.nkbregovanta.com/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "regulatory consulting customer support",
+                "email": "contact@nkbregovanta.com",
+                "telephone": "+91-9513699000",
+                "availableLanguage": ["English", "Hindi"]
+              }
+            }
+          })
+        }}
+      />
       <section className="bg-surface pt-8 pb-6 lg:pt-12 lg:pb-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Contact Us</p>
           <h1 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl lg:text-5xl">
-            Let's Discuss Your Regulatory Journey
+            Contact NKB Regovanta — Regulatory Consulting Enquiry
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-2 text-lg font-bold text-accent">
+            Let's Discuss Your Regulatory Journey
+          </p>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             Tell us what you are working on and where you need support. We’ll help you identify a practical next step.
           </p>
         </div>
@@ -144,6 +165,24 @@ function Contact() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div className="card-elevated p-6 bg-surface-raised border border-border">
+                <h3 className="text-sm font-bold text-navy uppercase tracking-wider mb-3">Explore NKB Regovanta</h3>
+                <div className="flex flex-wrap gap-2 text-xs font-semibold">
+                  <Link to="/services" className="rounded-md bg-white px-3 py-1.5 text-navy border border-border hover:border-accent hover:text-accent transition-colors">
+                    Regulatory Services
+                  </Link>
+                  <Link to="/markets" className="rounded-md bg-white px-3 py-1.5 text-navy border border-border hover:border-accent hover:text-accent transition-colors">
+                    Global Markets
+                  </Link>
+                  <Link to="/about" className="rounded-md bg-white px-3 py-1.5 text-navy border border-border hover:border-accent hover:text-accent transition-colors">
+                    About Our Team
+                  </Link>
+                  <Link to="/case-studies" className="rounded-md bg-white px-3 py-1.5 text-navy border border-border hover:border-accent hover:text-accent transition-colors">
+                    Case Studies
+                  </Link>
                 </div>
               </div>
             </div>

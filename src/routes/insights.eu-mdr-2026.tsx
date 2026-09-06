@@ -6,26 +6,25 @@ const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
 export const Route = createFileRoute("/insights/eu-mdr-2026")({
   head: () => ({
     meta: [
-      { title: "EU MDR 2026: EUDAMED & Priorities | Insights | NKB Regovanta" },
+      { title: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       {
         name: "description",
         content:
           "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities.",
       },
-      { name: "keywords", content: "EU MDR 2026: EUDAMED & Priorities, Insights, insights eu mdr 2026, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "EU MDR 2026: EUDAMED & Priorities | Insights | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       { property: "og:description", content: "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-mdr-2026" },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR 2026: EUDAMED & Priorities | Insights | NKB Regovanta" },
+      { name: "twitter:title", content: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       { name: "twitter:description", content: "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/eu-mdr-2026" },
-  ],
+    ],
   }),
   component: Article,
 });
@@ -33,6 +32,33 @@ export const Route = createFileRoute("/insights/eu-mdr-2026")({
 function Article() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
+            "description": "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities.",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png",
+            "author": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.nkbregovanta.com/favicon.png"
+              }
+            },
+            "datePublished": "2026-05-28",
+            "mainEntityOfPage": "https://www.nkbregovanta.com/insights/eu-mdr-2026"
+          })
+        }}
+      />
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           

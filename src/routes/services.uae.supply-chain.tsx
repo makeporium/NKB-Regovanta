@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/supply-chain")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE Medical Warehouse, Local Supply Chain & Commercial Readiness | NKB Regovanta",
+        title: "UAE Medical Warehouse & Supply Chain | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Post-registration supply-chain compliance, batch traceability, and commercial launch readiness.",
+          "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Batch traceability and commercial readiness.",
       },
-      { name: "keywords", content: "UAE Medical Warehouse, Local Supply Chain & Commercial Readiness, services uae supply chain, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE Medical Warehouse, Local Supply Chain & Commercial Readiness | NKB Regovanta" },
-      { property: "og:description", content: "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Post-registration supply-chain compliance, batch traceability, and commercial launch readiness." },
+      { property: "og:title", content: "UAE Medical Warehouse & Supply Chain | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Batch traceability and commercial readiness.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/supply-chain" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE Medical Warehouse, Local Supply Chain & Commercial Readiness | NKB Regovanta" },
-      { name: "twitter:description", content: "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Post-registration supply-chain compliance, batch traceability, and commercial launch readiness." },
+      { name: "twitter:title", content: "UAE Medical Warehouse & Supply Chain | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Licensed UAE medical warehouse setup, importation permits, storage and distribution governance under MOHAP. Batch traceability and commercial readiness.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/supply-chain" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Supply Chain and Distribution (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Medical device supply chain, distribution, and import compliance consulting for the UAE MOHAP - importation, storage, and distribution licensing.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAESupplyChainPage,
 });

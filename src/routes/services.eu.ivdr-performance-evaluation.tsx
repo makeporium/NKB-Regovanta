@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ivdr-performance-evaluation")({
   head: () => ({
     meta: [
-      { title: "EU IVDR Performance Evaluation Plan & Report (PEP / PER) Consultant | NKB Regovanta" },
+      { title: "IVDR Performance Evaluation PER | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Authoring and defense of IVDR Performance Evaluation Plans (PEP), Performance Evaluation Reports (PER), Annex XIII evidence architecture, and continuous PMPF.",
+        content: "Authoring and defense of IVDR Performance Evaluation Plans (PEP), Performance Evaluation Reports (PER), Annex XIII evidence architecture, and PMPF.",
       },
-      {
-        name: "keywords",
-        content:
-          "IVDR Performance Evaluation Report PER, IVDR PEP plan, Annex XIII IVDR performance evaluation, scientific validity report, analytical performance clinical performance, NKB Regovanta",
-      },
-      { property: "og:title", content: "IVDR Performance Evaluation & PER Evidence Architecture | NKB Regovanta" },
+      { property: "og:title", content: "IVDR Performance Evaluation PER | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We build the 3-pillar evidence matrix linking scientific validity, analytical performance and clinical performance directly to your PER and PMPF.",
+        content: "Authoring and defense of IVDR Performance Evaluation Plans (PEP), Performance Evaluation Reports (PER), Annex XIII evidence architecture, and PMPF.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr-performance-evaluation" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR Performance Evaluation Plan & Report (PEP / PER) Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Authoring and defense of IVDR Performance Evaluation Plans (PEP), Performance Evaluation Reports (PER), Annex XIII evidence architecture, and continuous PMPF." },
+      { name: "twitter:title", content: "IVDR Performance Evaluation PER | NKB Regovanta" },
+      { name: "twitter:description", content: "Authoring and defense of IVDR Performance Evaluation Plans (PEP), Performance Evaluation Reports (PER), Annex XIII evidence architecture, and PMPF." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr-performance-evaluation" }],
@@ -132,7 +125,7 @@ function EUIVDRPerformanceEvaluationPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              IVDR Performance Evaluation — Evidence Architecture
+              EU IVDR Performance Evaluation (PER) Architecture
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Under Annex XIII, the Performance Evaluation Report (PER) integrates Scientific Validity, Analytical Performance and Clinical Performance into one definitive conclusion on whether clinical evidence supports safety, diagnostic accuracy and GSPR conformity.

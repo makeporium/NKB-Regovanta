@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022) | NKB Regovanta",
+        title: "ANVISA Device Classification (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA risk classification for Medical Devices (Class I-IV under RDC 751/2022) and IVDs (RDC 830/2023). Technical name selection, family grouping, and Notificação vs Cadastro determination.",
+          "ANVISA risk classification for medical devices and IVDs (RDC 751/2022 & 830/2023), technical names, and Notificação vs Registro pathways in Brazil.",
       },
-      { name: "keywords", content: "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022), services brazil classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022) | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA risk classification for Medical Devices (Class I-IV under RDC 751/2022) and IVDs (RDC 830/2023). Technical name selection, family grouping, and Notificação vs Cadastro determination." },
+      { property: "og:title", content: "ANVISA Device Classification (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA risk classification for medical devices and IVDs (RDC 751/2022 & 830/2023), technical names, and Notificação vs Registro pathways in Brazil.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022) | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA risk classification for Medical Devices (Class I-IV under RDC 751/2022) and IVDs (RDC 830/2023). Technical name selection, family grouping, and Notificação vs Cadastro determination." },
+      { name: "twitter:title", content: "ANVISA Device Classification (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA risk classification for medical devices and IVDs (RDC 751/2022 & 830/2023), technical names, and Notificação vs Registro pathways in Brazil.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/classification" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Brazil Medical Device & IVD Classification (RDC 751/2022)",
+          description: "Risk classification, technical name strategy, and Notificação vs Cadastro/Registro pathway assessment for Brazil medical devices and IVDs.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilClassificationPage,
 });
@@ -127,7 +150,7 @@ function BrazilClassificationPage() {
               RDC 751/2022 &amp; RDC 830/2023
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ANVISA Regulatory Strategy &amp; Product Classification
+              ANVISA Medical Device &amp; IVD Classification (Brazil)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Correct classification is the foundation of the Brazilian submission. Under RDC 751/2022, medical devices are classified from Class I to IV according to risk. The classification determines whether the product follows notification or registration, the level of evidence expected, BGMP implications and the way changes will be controlled after market entry.

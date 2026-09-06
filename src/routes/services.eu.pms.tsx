@@ -13,22 +13,48 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/pms")({
   head: () => ({
     meta: [
-      { title: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
+      { title: "EU Post-Market Surveillance PMS | NKB Regovanta" },
       {
-        name: "description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices under EU MDR 2017/745.",
+        name: "description",
+        content: "EU MDR post-market surveillance (PMS) consulting: PMS plans, PSUR reports, vigilance reporting, and CE-marked medical device compliance under EU MDR.",
       },
-      { name: "keywords", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance, services eu pms pmcf, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
-      { property: "og:description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices und..." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/pms-pmcf" },
+      { property: "og:title", content: "EU Post-Market Surveillance PMS | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "EU MDR post-market surveillance (PMS) consulting: PMS plans, PSUR reports, vigilance reporting, and CE-marked medical device compliance under EU MDR.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/pms" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR Post-Market Surveillance (PMS) & Vigilance | NKB Regovanta" },
-      { name: "twitter:description", content: "EU MDR post-market surveillance (PMS) consulting including PMCF planning, Periodic Safety Update Reports (PSUR), Post-Market Clinical Follow-Up (PMCF), PMS plan and report preparation for CE-marked medical devices und..." },
+      { name: "twitter:title", content: "EU Post-Market Surveillance PMS | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "EU MDR post-market surveillance (PMS) consulting: PMS plans, PSUR reports, vigilance reporting, and CE-marked medical device compliance under EU MDR.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/pms-pmcf" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/pms" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "EU Post-Market Surveillance (PMS) & Vigilance Support",
+          description: "EU MDR post-market surveillance (PMS) consulting, PSUR reports, and vigilance reporting for CE-marked medical devices.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "European Union",
+          },
+        }),
+      },
+    ],
   }),
   component: EUPMSLegacyPage,
 });
@@ -57,7 +83,7 @@ function EUPMSLegacyPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
-              Post-Market Surveillance, PMCF &amp; Vigilance
+              EU Post-Market Surveillance (PMS) &amp; Vigilance Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Post-market compliance is an active clinical and quality evidence system. We connect complaints, safety signals, risk management updates, and clinical evaluations into one unified lifecycle process.

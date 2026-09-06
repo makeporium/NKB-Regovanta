@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/qms")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR QMS Integration, Article 10 & PRRC Consultant | NKB Regovanta" },
+      { title: "EU MDR & IVDR QMS Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Integrate EU MDR 2017/745 Article 10 & IVDR 2017/746 Quality Management System requirements, ISO 13485 alignment, PRRC governance, and Notified Body audit readiness.",
+        content: "Integrate EU MDR Article 10 & IVDR Article 10 QMS requirements: ISO 13485 alignment, Article 15 PRRC governance, and Notified Body audit readiness.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR QMS integration, Article 10 MDR QMS, Article 15 PRRC Person Responsible for Regulatory Compliance, ISO 13485 MDR alignment, IVDR QMS, Notified Body QMS audit, NKB Regovanta",
-      },
-      { property: "og:title", content: "MDR / IVDR QMS Integration, Article 10 & PRRC | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR & IVDR QMS Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We embed EU MDR/IVDR mandates into ISO 13485 quality systems, establishing robust PRRC governance and audit-proven implementation.",
+        content: "Integrate EU MDR Article 10 & IVDR Article 10 QMS requirements: ISO 13485 alignment, Article 15 PRRC governance, and Notified Body audit readiness.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/qms" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR QMS Integration, Article 10 & PRRC Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Integrate EU MDR 2017/745 Article 10 & IVDR 2017/746 Quality Management System requirements, ISO 13485 alignment, PRRC governance, and Notified Body audit readiness." },
+      { name: "twitter:title", content: "EU MDR & IVDR QMS Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Integrate EU MDR Article 10 & IVDR Article 10 QMS requirements: ISO 13485 alignment, Article 15 PRRC governance, and Notified Body audit readiness." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/qms" }],
@@ -122,7 +115,7 @@ function EUQMSPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDR / IVDR QMS Integration, Article 10 &amp; PRRC
+              EU MDR &amp; IVDR QMS Integration &amp; PRRC
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Regulatory compliance cannot be sustained through technical documentation alone. NKB Regovanta reviews how MDR/IVDR obligations are embedded into the manufacturer’s quality system so that procedures, records and implementation remain aligned with the certified device and its lifecycle.

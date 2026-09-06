@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Medical Device Software, SaMD & Cybersecurity | NKB Regovanta",
+        title: "Health Canada SaMD & Cybersecurity | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Software as a Medical Device (SaMD) classification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML predetermined change control plans for Health Canada.",
+          "Health Canada SaMD qualification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML change control plans.",
       },
-      { name: "keywords", content: "Health Canada Medical Device Software, SaMD & Cybersecurity, services canada software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Medical Device Software, SaMD & Cybersecurity | NKB Regovanta" },
-      { property: "og:description", content: "Software as a Medical Device (SaMD) classification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML predetermined change control plans for Health Canada." },
+      { property: "og:title", content: "Health Canada SaMD & Cybersecurity | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada SaMD qualification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML change control plans.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Medical Device Software, SaMD & Cybersecurity | NKB Regovanta" },
-      { name: "twitter:description", content: "Software as a Medical Device (SaMD) classification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML predetermined change control plans for Health Canada." },
+      { name: "twitter:title", content: "Health Canada SaMD & Cybersecurity | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada SaMD qualification, IEC 62304 lifecycle documentation, cybersecurity threat modelling, and AI/ML change control plans.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/software" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Medical Device Software, SaMD & Cybersecurity Consulting",
+          description: "SaMD qualification, IEC 62304 lifecycle, cybersecurity risk management, and AI/ML predetermined change control in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaSoftwarePage,
 });
@@ -114,7 +137,7 @@ function CanadaSoftwarePage() {
               SaMD &amp; IEC 62304
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Medical Device Software, SaMD &amp; Cybersecurity
+              Health Canada SaMD &amp; Cybersecurity Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Software-enabled medical devices and standalone software require a regulatory strategy that connects intended use, classification, software functions, risk controls, verification and validation, cybersecurity and lifecycle change management.

@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
 export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
   head: () => ({
     meta: [
-      { title: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
-      { name: "description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory outcome case study." },
-      { name: "keywords", content: "EU MDR, Technical Documentation Remediation, Case Studies, case studies eu mdr remediation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory o..." },
+      { title: "EU MDR Technical File Remediation | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: How NKB Regovanta remediated a rejected EU MDR technical dossier, closing GSPR and clinical gaps for successful Notified Body approval.",
+      },
+      { property: "og:title", content: "EU MDR Technical File Remediation | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: How NKB Regovanta remediated a rejected EU MDR technical dossier, closing GSPR and clinical gaps for successful Notified Body approval.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR | Technical Documentation Remediation | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "How NKB Regovanta remediated a failing EU MDR technical documentation dossier rejected by a Notified Body — including GSPR gap closure, clinical evaluation restructuring, and fast-track resubmission. Real regulatory o..." },
+      { name: "twitter:title", content: "EU MDR Technical File Remediation | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: How NKB Regovanta remediated a rejected EU MDR technical dossier, closing GSPR and clinical gaps for successful Notified Body approval.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "EU MDR Technical File Remediation",
+          description:
+            "Case study: How NKB Regovanta remediated a rejected EU MDR technical dossier, closing GSPR and clinical gaps for successful Notified Body approval.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });

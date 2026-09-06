@@ -13,24 +13,51 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/labeling")({
   head: () => ({
     meta: [
-      { title: "UKCA Labeling, Artwork & UKRP Identification Compliance | NKB Regovanta" },
+      { title: "UKCA Labeling & UKRP Identification | NKB Regovanta" },
       {
         name: "description",
         content:
           "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance.",
       },
-      { name: "keywords", content: "UKCA Labeling, Artwork & UKRP Identification Compliance, services uk technical file, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UKCA Labeling, Artwork & UKRP Identification Compliance | NKB Regovanta" },
-      { property: "og:description", content: "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/technical-file" },
+      { property: "og:title", content: "UKCA Labeling & UKRP Identification | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UKCA Labeling, Artwork & UKRP Identification Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance." },
+      { name: "twitter:title", content: "UKCA Labeling & UKRP Identification | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "UKCA marking labeling requirements, Instructions for Use (IFU), UK Responsible Person (UKRP) identification on packaging, and symbology compliance.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/technical-file" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/labeling" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "UKCA Labeling & Artwork Compliance Consulting",
+          description: "UKCA marking labeling requirements, Instructions for Use (IFU), and UKRP packaging identification.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
+    ],
   }),
   component: UKLabelingPage,
 });

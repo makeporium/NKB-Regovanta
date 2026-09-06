@@ -7,21 +7,37 @@ export const Route = createFileRoute("/industries/cosmetics_/uk")({
   head: () => ({
     meta: [
       { title: "UK Cosmetics Regulatory Services | NKB Regovanta" },
-      { name: "description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and Northern Ireland." },
-      { name: "keywords", content: "UK Cosmetics Regulatory Services, industries cosmetics uk, NKB Regovanta, regulatory consultant, medical device" },
+      { name: "description", content: "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling." },
       { property: "og:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },
-      { property: "og:description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and N..." },
+      { property: "og:description", content: "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/uk" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },
-      { name: "twitter:description", content: "UK Cosmetics Regulation (UK SCPN) compliance consulting. UK Responsible Person appointment, Safety Assessment, Cosmetic Notification Form, and post-Brexit labelling compliance for cosmetics sold in Great Britain and N..." },
+      { name: "twitter:description", content: "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/uk" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "UK Cosmetics Regulatory Services",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling.",
+          "serviceType": "Cosmetics Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: UKCosmetics,
 });

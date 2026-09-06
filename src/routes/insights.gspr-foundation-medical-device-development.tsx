@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_compliance_1786396542227.png";
 export const Route = createFileRoute("/insights/gspr-foundation-medical-device-development")({
   head: () => ({
     meta: [
-      { title: "Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D | NKB Regovanta" },
+      { title: "GSPR in Medical Device R&D | NKB Regovanta" },
       {
         name: "description",
         content: "Embedding European General Safety and Performance Requirements early into product conceptualization to prevent costly redesigns.",
       },
-      {
-        name: "keywords",
-        content: "why gspr should be the architectural foundation of your medical device r&d, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D | NKB Regovanta" },
+      { property: "og:title", content: "GSPR in Medical Device R&D | NKB Regovanta" },
       {
         property: "og:description",
         content: "Embedding European General Safety and Performance Requirements early into product conceptualization to prevent costly redesigns.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/gspr-foundation-medical-device-d
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Why GSPR Should Be the Architectural Foundation of Your Medical Device R&D" },
+      { name: "twitter:title", content: "GSPR in Medical Device R&D | NKB Regovanta" },
       { name: "twitter:description", content: "Embedding European General Safety and Performance Requirements early into product conceptualization to prevent costly redesigns." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
     ],

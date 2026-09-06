@@ -29,22 +29,18 @@ import usaHeroImg from "@/assets/usa-fda-hero-statue.jpg";
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
         meta: [
-            { title: "USFDA Medical Device Consultant | 510(k), 510 k, De Novo, PMA | NKB Regovanta" },
+            { title: "US FDA Medical Device Consultant | NKB Regovanta" },
             {
                 name: "description",
-                content: "Leading USFDA medical device consultant & regulatory consultancy. End-to-end guidance for USFDA 510(k) and 510 k clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA, US Agent services for foreign facilities, and FURLS registration.",
+                content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation.",
             },
-            {
-                name: "keywords",
-                content: "USFDA, USFDA consultant, USFDA medical device consultant, 510 k, 510 k consultant, USFDA 510 k, 510k submission consultant, FDA 510(k) clearance medical devices, medical device consultant, medical device consultancy, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services, NKB Regovanta",
-            },
-            { property: "og:title", content: "USFDA Medical Device Consultant & 510(k) Clearance | NKB Regovanta" },
-            { property: "og:description", content: "Complete USFDA regulatory strategy, eSTAR dossier compilation, 510(k) / 510 k clearance, US Agent representation, and FURLS registration." },
+            { property: "og:title", content: "US FDA Medical Device Consultant | NKB Regovanta" },
+            { property: "og:description", content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation." },
             { property: "og:url", content: "https://www.nkbregovanta.com/services/usa" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
-            { name: "twitter:title", content: "USFDA Medical Device Consultant | 510(k), 510 k & US Agent | NKB Regovanta" },
-            { name: "twitter:description", content: "Leading USFDA medical device consultant & regulatory consultancy. End-to-end guidance for USFDA 510(k) / 510 k clearance, eSTAR dossier, and US Agent representation." },
+            { name: "twitter:title", content: "US FDA Medical Device Consultant | NKB Regovanta" },
+            { name: "twitter:description", content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation." },
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" }],
@@ -198,7 +194,7 @@ function USAMarket() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                         <div className="max-w-xl">
                             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4" style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}>
-                                USFDA Medical Device Consultant &amp;<br />510(k) / 510 k Regulatory Consultancy
+                                US FDA Medical Device Consultant &amp;<br />510(k) Premarket Notification
                             </h1>
                             <p className="text-[14px] leading-relaxed text-navy/70 font-medium mb-7 max-w-lg">
                                 As a premier medical device consultancy, we provide end-to-end USFDA (US FDA) market access support — from 510(k) and 510 k substantial equivalence strategy and predicate analysis to testing coordination, eSTAR dossier preparation, FDA submission, and deficiency response.

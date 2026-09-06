@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_compliance_1786396542227.png";
 export const Route = createFileRoute("/insights/notified-body-selection-conformity-assessment-guide")({
   head: () => ({
     meta: [
-      { title: "Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment | NKB Regovanta" },
+      { title: "Notified Body Selection Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Evaluating NANDO designated scopes, audit capacity, review timelines, fee structures, and building long-term partnership success.",
       },
-      {
-        name: "keywords",
-        content: "selecting the right notified body for eu mdr & ivdr conformity assessment, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment | NKB Regovanta" },
+      { property: "og:title", content: "Notified Body Selection Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Evaluating NANDO designated scopes, audit capacity, review timelines, fee structures, and building long-term partnership success.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/notified-body-selection-conformi
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Selecting the Right Notified Body for EU MDR & IVDR Conformity Assessment" },
+      { name: "twitter:title", content: "Notified Body Selection Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Evaluating NANDO designated scopes, audit capacity, review timelines, fee structures, and building long-term partnership success." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],

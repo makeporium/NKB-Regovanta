@@ -54,33 +54,27 @@ export const Route = createFileRoute("/services/uk/")({
   head: () => ({
     meta: [
       {
-        title:
-          "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | CE Recognition & UKCA | NKB Regovanta",
+        title: "UK MHRA Registration & UKRP | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Senior UK MHRA regulatory consulting, UK Responsible Person (UKRP) representation, Great Britain & Northern Ireland pathways, CE recognition up to 2030, UKCA marking, DORS registration, and PMS compliance.",
-      },
-      {
-        name: "keywords",
-        content:
-          "UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002, Northern Ireland medical devices, CE recognition UK, NKB Regovanta",
+          "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance.",
       },
       {
         property: "og:title",
-        content: "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | NKB Regovanta",
+        content: "UK MHRA Registration & UKRP | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Your Partner for UK Market Access. UKRP services, MHRA DORS registration, UKCA conformity, CE recognition strategy, and GB post-market compliance.",
+          "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | CE Recognition & UKCA |..." },
-      { name: "twitter:description", content: "Senior UK MHRA regulatory consulting, UK Responsible Person (UKRP) representation, Great Britain & Northern Ireland pathways, CE recognition up to 2030, UKCA marking, DORS registration, and PMS compliance." },
+      { name: "twitter:title", content: "UK MHRA Registration & UKRP | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk" }],

@@ -49,26 +49,49 @@ export const Route = createFileRoute("/services/brazil/anvisa-queries")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Queries, Exigências & Inspection Response Strategy | NKB Regovanta",
+        title: "ANVISA Exigência & Inspection Response | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA official exigência response formulation, technical query resolution, root-cause analysis, BGMP inspection finding CAPA packages, and submission defense.",
+          "ANVISA exigência response formulation, root-cause analysis, BGMP inspection CAPA packages, and technical query resolution for Brazil device submissions.",
       },
-      { name: "keywords", content: "ANVISA Queries, Exigências & Inspection Response Strategy, services brazil anvisa queries, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Queries, Exigências & Inspection Response Strategy | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA official exigência response formulation, technical query resolution, root-cause analysis, BGMP inspection finding CAPA packages, and submission defense." },
+      { property: "og:title", content: "ANVISA Exigência & Inspection Response | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA exigência response formulation, root-cause analysis, BGMP inspection CAPA packages, and technical query resolution for Brazil device submissions.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/anvisa-queries" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Queries, Exigências & Inspection Response Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA official exigência response formulation, technical query resolution, root-cause analysis, BGMP inspection finding CAPA packages, and submission defense." },
+      { name: "twitter:title", content: "ANVISA Exigência & Inspection Response | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA exigência response formulation, root-cause analysis, BGMP inspection CAPA packages, and technical query resolution for Brazil device submissions.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/anvisa-queries" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Queries, Exigências & Inspection Response Strategy",
+          description: "ANVISA exigência response, BGMP inspection CAPA, and technical query resolution for Brazil medical device registrations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilAnvisaQueriesPage,
 });
@@ -128,7 +151,7 @@ function BrazilAnvisaQueriesPage() {
               Exigência &amp; Inspection Defense
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ANVISA Queries, Technical Requirements &amp; Inspection Response
+              ANVISA Exigência &amp; Inspection Response Strategy
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               ANVISA questions should be answered by addressing the regulatory concern behind the request, not by simply adding documents. A technically complete but poorly structured response can create additional review cycles if it does not explain why the evidence resolves the specific issue raised.

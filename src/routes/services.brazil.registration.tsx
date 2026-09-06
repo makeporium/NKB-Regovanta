@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/registration")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Medical Device Notification & Registration (Cadastro/Registro) | NKB Regovanta",
+        title: "ANVISA Device Registration (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA pre-market submissions for Medical Devices and IVDs via the Solicita system. Class I-II Notificação, Class III-IV Registro, technical dossier compilation, and exigência defense.",
+          "ANVISA Notificação and Registro submissions via Solicita — dossier compilation, legal manufacturer alignment, and exigência defense for Brazil.",
       },
-      { name: "keywords", content: "ANVISA Medical Device Notification & Registration (Cadastro/Registro), services brazil registration, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Medical Device Notification & Registration (Cadastro/Registro) | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA pre-market submissions for Medical Devices and IVDs via the Solicita system. Class I-II Notificação, Class III-IV Registro, technical dossier compilation, and exigência defense." },
+      { property: "og:title", content: "ANVISA Device Registration (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA Notificação and Registro submissions via Solicita — dossier compilation, legal manufacturer alignment, and exigência defense for Brazil.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/registration" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Medical Device Notification & Registration (Cadastro/Registro) | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA pre-market submissions for Medical Devices and IVDs via the Solicita system. Class I-II Notificação, Class III-IV Registro, technical dossier compilation, and exigência defense." },
+      { name: "twitter:title", content: "ANVISA Device Registration (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA Notificação and Registro submissions via Solicita — dossier compilation, legal manufacturer alignment, and exigência defense for Brazil.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/registration" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Medical Device Notification & Registration (Cadastro/Registro)",
+          description: "Class I-II Notificação and Class III-IV Registro pre-market submission support for medical devices and IVDs in Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilRegistrationPage,
 });

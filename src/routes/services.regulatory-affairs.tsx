@@ -8,21 +8,42 @@ export const Route = createFileRoute("/services/regulatory-affairs")({
         meta: [
             { title: "Global Medical Device & IVD Registration | NKB Regovanta" },
             {
-                name: "description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australia, Canada, UAE, and Saudi Arabia.",
+                name: "description",
+                content:
+                    "Strategic regulatory affairs consulting for medical devices and IVDs: submission strategy, dossier compilation, and global market approvals worldwide.",
             },
-          { name: "keywords", content: "regulatory affairs medical devices, regulatory strategy consultant, global regulatory submissions, medical device regulatory consulting" },
-          { property: "og:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
-          { property: "og:description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australi..." },
-          { property: "og:url", content: "https://www.nkbregovanta.com/services/regulatory-affairs" },
-          { property: "og:type", content: "website" },
-          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
-          { name: "twitter:description", content: "Strategic regulatory affairs consulting for medical devices, IVDs, and cosmetics. Regulatory pathway selection, submission strategy, dossier compilation, and lifecycle management across US FDA, EU, UK, India, Australi..." },
-          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { property: "og:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
+            {
+                property: "og:description",
+                content:
+                    "Strategic regulatory affairs consulting for medical devices and IVDs: submission strategy, dossier compilation, and global market approvals worldwide.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Global Medical Device & IVD Registration | NKB Regovanta" },
+            {
+                name: "twitter:description",
+                content:
+                    "Strategic regulatory affairs consulting for medical devices and IVDs: submission strategy, dossier compilation, and global market approvals worldwide.",
+            },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
         { rel: "canonical", href: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+    ],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medical Device Regulatory Affairs Consulting by NKB Regovanta",
+          description: "Comprehensive regulatory affairs consulting for medical devices - global strategy, dossier preparation, submission management, and ongoing regulatory compliance support.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
     ],
     }),
     component: RegulatoryAffairs,
@@ -61,10 +82,10 @@ function RegulatoryAffairs() {
                             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">Global Medical Device &amp; IVD Registration</p>
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy">
                                 <span className="block" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    Navigate the Regulatory
+                                    Global Medical Device &amp; IVD
                                 </span>
                                 <span className="block" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    Pathway with Confidence
+                                    Regulatory Affairs Consulting
                                 </span>
                             </h1>
                             <p className="mt-4 text-[13.5px] leading-relaxed text-navy/70 font-medium">

@@ -5,22 +5,53 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/australia/conformity-assessment')({
   head: () => ({
     meta: [
-      { title: 'Conformity Assessment Support | Australia Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Australia Conformity Assessment Support services for medical devices and IVDs.' },
-      { name: "keywords", content: "Conformity Assessment Support, Australia Services, services australia conformity assessment, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Conformity Assessment Support | Australia Services | NKB Regovanta" },
-      { property: "og:description", content: "TGA conformity assessment consulting for medical device ARTG inclusion in Australia. MDSAP-recognized audit pathway, Annex II/III technical documentation preparation, conformity assessment body selection, and regulato..." },
+      { title: "TGA Conformity Assessment Support | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "TGA conformity assessment consulting: MDSAP audit pathways, technical documentation preparation, body selection, and Australian market access.",
+      },
+      { property: "og:title", content: "TGA Conformity Assessment Support | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA conformity assessment consulting: MDSAP audit pathways, technical documentation preparation, body selection, and Australian market access.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/conformity-assessment" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Conformity Assessment Support | Australia Services | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA conformity assessment consulting for medical device ARTG inclusion in Australia. MDSAP-recognized audit pathway, Annex II/III technical documentation preparation, conformity assessment body selection, and regulato..." },
+      { name: "twitter:title", content: "TGA Conformity Assessment Support | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA conformity assessment consulting: MDSAP audit pathways, technical documentation preparation, body selection, and Australian market access.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/conformity-assessment" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Conformity Assessment Support",
+          description: "MDSAP pathways, technical documentation preparation, and conformity assessment body selection for Australia.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +67,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Australia Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Conformity Assessment Support</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">TGA Conformity Assessment Support</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Australia regulatory landscape with our comprehensive Conformity Assessment Support support.
             </p>

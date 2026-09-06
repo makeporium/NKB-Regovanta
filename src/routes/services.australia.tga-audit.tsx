@@ -49,26 +49,52 @@ export const Route = createFileRoute("/services/australia/tga-audit")({
   head: () => ({
     meta: [
       {
-        title:
-          "TGA Application Audit, Regulatory Engagement & Information Requests | NKB Regovanta",
+        title: "TGA Application Audit Defense | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA Level 1 and Level 2 application audit defense, Section 41JA information request responses, mock audit assessments, and clinical evidence justifications for ARTG inclusions.",
+          "TGA Level 1 & 2 application audit defense, Section 41JA request responses, mock audits, and clinical justifications for ARTG inclusion in Australia.",
       },
-      { name: "keywords", content: "TGA Application Audit, Regulatory Engagement & Information Requests, services australia tga audit, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "TGA Application Audit, Regulatory Engagement & Information Requests | NKB Regovanta" },
-      { property: "og:description", content: "TGA Level 1 and Level 2 application audit defense, Section 41JA information request responses, mock audit assessments, and clinical evidence justifications for ARTG inclusions." },
+      { property: "og:title", content: "TGA Application Audit Defense | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA Level 1 & 2 application audit defense, Section 41JA request responses, mock audits, and clinical justifications for ARTG inclusion in Australia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/tga-audit" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TGA Application Audit, Regulatory Engagement & Information Requests | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA Level 1 and Level 2 application audit defense, Section 41JA information request responses, mock audit assessments, and clinical evidence justifications for ARTG inclusions." },
+      { name: "twitter:title", content: "TGA Application Audit Defense | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA Level 1 & 2 application audit defense, Section 41JA request responses, mock audits, and clinical justifications for ARTG inclusion in Australia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/tga-audit" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Application Audit & Section 41JA Defense",
+          description: "Level 1/2 application audit defense, mock audit assessments, and formal RFI response preparation.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaTGAAuditPage,
 });
@@ -132,7 +158,7 @@ function AustraliaTGAAuditPage() {
               Application Audit &amp; RFI Defense
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              TGA Application Audit, Regulatory Engagement &amp; Information Requests
+              TGA Application Audit Defense &amp; RFI Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               TGA may select an ARTG application for audit depending on the device and application pathway. Audit questions can probe far beyond administrative data and may examine the regulatory basis for classification, conformity assessment, clinical / performance evidence, Essential Principles, labelling and risk controls.

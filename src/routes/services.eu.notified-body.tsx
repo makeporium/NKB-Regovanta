@@ -17,28 +17,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/notified-body")({
   head: () => ({
     meta: [
-      { title: "EU Notified Body Strategy, Audit Readiness & Review Defense | NKB Regovanta" },
+      { title: "EU Notified Body Audit Readiness | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity CAPA resolution under EU MDR and IVDR.",
+        content: "Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity resolution under EU MDR and IVDR.",
       },
-      {
-        name: "keywords",
-        content:
-          "Notified Body selection Europe, MDR Notified Body audit readiness, Stage 1 Stage 2 audit preparation, Notified Body deficiency response, CE mark technical review, NKB Regovanta",
-      },
-      { property: "og:title", content: "Notified Body Strategy & Audit Readiness | NKB Regovanta" },
+      { property: "og:title", content: "EU Notified Body Audit Readiness | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We prepare manufacturers to defend their technical files and QMS before Notified Bodies, tracing audit findings to their regulatory root cause.",
+        content: "Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity resolution under EU MDR and IVDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/notified-body" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU Notified Body Strategy, Audit Readiness & Review Defense | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity CAPA resolution under EU MDR and IVDR." },
+      { name: "twitter:title", content: "EU Notified Body Audit Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "Notified Body selection, application scope, pre-assessment audits, technical file review defense, and nonconformity resolution under EU MDR and IVDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/notified-body" }],
@@ -130,7 +123,7 @@ function EUNotifiedBodyPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDR &amp; IVDR Notified Body Strategy &amp; Audit Readiness
+              EU Notified Body Strategy &amp; Audit Readiness
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We prepare manufacturers to defend their files and quality systems — not just submit paperwork. We review evidence rationale, conduct mock audits, and draft root-cause deficiency responses.

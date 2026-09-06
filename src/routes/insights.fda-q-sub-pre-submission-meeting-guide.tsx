@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/usa_fda_regulatory_1786305043898.png";
 export const Route = createFileRoute("/insights/fda-q-sub-pre-submission-meeting-guide")({
   head: () => ({
     meta: [
-      { title: "Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol | NKB Regovanta" },
+      { title: "FDA Q-Submission (Pre-Sub) Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Drafting targeted questions, preparing submission packages, and engaging CDRH reviewers to derisk complex medical device applications.",
       },
-      {
-        name: "keywords",
-        content: "maximizing the value of fda q-submission (pre-sub) meetings: strategy and protocol, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol | NKB Regovanta" },
+      { property: "og:title", content: "FDA Q-Submission (Pre-Sub) Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Drafting targeted questions, preparing submission packages, and engaging CDRH reviewers to derisk complex medical device applications.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/fda-q-sub-pre-submission-meeting
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Maximizing the Value of FDA Q-Submission (Pre-Sub) Meetings: Strategy and Protocol" },
+      { name: "twitter:title", content: "FDA Q-Submission (Pre-Sub) Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Drafting targeted questions, preparing submission packages, and engaging CDRH reviewers to derisk complex medical device applications." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
     ],

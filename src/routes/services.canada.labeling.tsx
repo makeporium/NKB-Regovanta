@@ -49,26 +49,52 @@ export const Route = createFileRoute("/services/canada/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "Canadian Labelling, French/English & IFU Compliance | NKB Regovanta",
+        title: "Health Canada Labelling Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Health Canada bilingual labelling compliance under Part 21 of the Medical Devices Regulations (SOR/98-282). Primary and secondary packaging, Instructions for Use (IFU), and electronic labelling.",
+          "Health Canada bilingual labelling compliance under SOR/98-282 Part 21: French/English translation, packaging artwork, IFUs, and electronic labelling.",
       },
-      { name: "keywords", content: "Canadian Labelling, French/English & IFU Compliance, services canada labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Canadian Labelling, French/English & IFU Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada bilingual labelling compliance under Part 21 of the Medical Devices Regulations (SOR/98-282). Primary and secondary packaging, Instructions for Use (IFU), and electronic labelling." },
+      { property: "og:title", content: "Health Canada Labelling Compliance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada bilingual labelling compliance under SOR/98-282 Part 21: French/English translation, packaging artwork, IFUs, and electronic labelling.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Canadian Labelling, French/English & IFU Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada bilingual labelling compliance under Part 21 of the Medical Devices Regulations (SOR/98-282). Primary and secondary packaging, Instructions for Use (IFU), and electronic labelling." },
+      { name: "twitter:title", content: "Health Canada Labelling Compliance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada bilingual labelling compliance under SOR/98-282 Part 21: French/English translation, packaging artwork, IFUs, and electronic labelling.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/labeling" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Labelling & Bilingual Compliance",
+          description: "Bilingual English and French medical device labelling, packaging artwork, and IFU compliance review in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaLabelingPage,
 });
@@ -115,7 +141,7 @@ function CanadaLabelingPage() {
               SOR/98-282 Part 21 Rules
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Canadian Labelling, French/English &amp; IFU Compliance
+              Health Canada Labelling &amp; Bilingual IFU Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Canadian labelling requirements are not a translation exercise. The label, package, instructions for use and promotional claims must remain consistent with the licensed device, intended use and performance evidence.

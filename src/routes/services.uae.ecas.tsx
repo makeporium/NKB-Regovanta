@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/ecas")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOIAT / ECAS Conformity Assessment & Certificate of Conformity | NKB Regovanta",
+        title: "UAE MOIAT ECAS Certification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Emirates Conformity Assessment Scheme (ECAS) under MOIAT for regulated medical device components, electrical modules, power adapters, and wireless units. Certificate of Conformity (CoC) consulting.",
+          "UAE MOIAT ECAS conformity assessment for medical device electrical modules, power units, and wireless systems. Certificate of Conformity (CoC) guidance.",
       },
-      { name: "keywords", content: "UAE MOIAT / ECAS Conformity Assessment & Certificate of Conformity, services uae ecas, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOIAT / ECAS Conformity Assessment & Certificate of Conformity | NKB Regovanta" },
-      { property: "og:description", content: "Emirates Conformity Assessment Scheme (ECAS) under MOIAT for regulated medical device components, electrical modules, power adapters, and wireless units. Certificate of Conformity (CoC) consulting." },
+      { property: "og:title", content: "UAE MOIAT ECAS Certification | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "UAE MOIAT ECAS conformity assessment for medical device electrical modules, power units, and wireless systems. Certificate of Conformity (CoC) guidance.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/ecas" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOIAT / ECAS Conformity Assessment & Certificate of Conformity | NKB Regovanta" },
-      { name: "twitter:description", content: "Emirates Conformity Assessment Scheme (ECAS) under MOIAT for regulated medical device components, electrical modules, power adapters, and wireless units. Certificate of Conformity (CoC) consulting." },
+      { name: "twitter:title", content: "UAE MOIAT ECAS Certification | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "UAE MOIAT ECAS conformity assessment for medical device electrical modules, power units, and wireless systems. Certificate of Conformity (CoC) guidance.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/ecas" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP ECAS Online Portal Filing (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP ECAS (Emirates Conformity Assessment Scheme) online portal filing and registration support for medical devices in the UAE.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEECASPage,
 });

@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/samd-classification-submission-usfda")({
   head: () => ({
     meta: [
-      { title: "SaMD Classification and Submission Strategies Under US FDA Guidance | NKB Regovanta" },
+      { title: "US FDA SaMD Classification Guide | NKB Regovanta" },
       {
         name: "description",
         content: "IMDRF risk categorizations, cybersecurity controls, clinical validation, and premarket submission frameworks for medical software.",
       },
-      {
-        name: "keywords",
-        content: "samd classification and submission strategies under us fda guidance, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "SaMD Classification and Submission Strategies Under US FDA Guidance | NKB Regovanta" },
+      { property: "og:title", content: "US FDA SaMD Classification Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "IMDRF risk categorizations, cybersecurity controls, clinical validation, and premarket submission frameworks for medical software.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/samd-classification-submission-u
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SaMD Classification and Submission Strategies Under US FDA Guidance" },
+      { name: "twitter:title", content: "US FDA SaMD Classification Guide | NKB Regovanta" },
       { name: "twitter:description", content: "IMDRF risk categorizations, cybersecurity controls, clinical validation, and premarket submission frameworks for medical software." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">SaMD Classification and Submission as per US FDA: Get Expert Regulatory Assistance</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">SaMD refers to software applications designed to perform medical functions, transforming the way we diagnose, treat, and monitor patients. To ensure the safety and effectiveness of these digital tools, regulatory bodies like the U.S. Food and Drug Administration (FDA) have established a framework for their classification and submission.</p>

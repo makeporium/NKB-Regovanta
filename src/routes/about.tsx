@@ -42,29 +42,39 @@ import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
 export const Route = createFileRoute("/about")({
     head: () => ({
         meta: [
-            { title: "About NKB Regovanta | Medical Device & Regulatory Consulting Leaders" },
+            { title: "About NKB Regovanta | Medical Device Regulatory Consultants" },
             {
                 name: "description",
-                content: "Learn about NKB Regovanta's global regulatory affairs leadership, scientific rigor, ISO 13485 quality systems, CDSCO licensing, US FDA 510(k), and EU MDR expertise.",
+                content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
             },
-            {
-                name: "keywords",
-                content: "NKB Regovanta, NKB Regovanta Solutions, Medical device regulatory consultant India, CDSCO medical device consultant, FDA 510k consultant, EU MDR consultant, ISO 13485 implementation consultant, regulatory affairs leadership",
-            },
-            { property: "og:title", content: "About NKB Regovanta — Global Regulatory & Quality Leaders" },
+            { property: "og:title", content: "About NKB Regovanta | Medical Device Regulatory Consultants" },
             {
                 property: "og:description",
-                content: "Learn about NKB Regovanta's mission, leadership team, and global regulatory affairs capabilities spanning India, USA, Europe, UK, and APAC.",
+                content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com/about" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About NKB Regovanta | Medical Device & Regulatory Consulting Leaders" },
-      { name: "twitter:description", content: "NKB Regovanta is a premier global medical device regulatory affairs consultancy. Our senior team has deep expertise across US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, TGA Australia, MDSAP, and ISO 13485 quality systems..." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "About NKB Regovanta | Medical Device Regulatory Consultants" },
+            { name: "twitter:description", content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com/about" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    name: "NKB Regovanta",
+                    url: "https://www.nkbregovanta.com",
+                    logo: "https://www.nkbregovanta.com/logo.png",
+                    description: "Global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+                    sameAs: [],
+                }),
+            },
         ],
     }),
     component: About,
@@ -112,6 +122,23 @@ function About() {
     const [selectedExpert, setSelectedExpert] = useState<typeof experts[0] | null>(null);
     return (
         <div className="bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "NKB Regovanta",
+                        "url": "https://www.nkbregovanta.com",
+                        "logo": "https://www.nkbregovanta.com/og-image.png",
+                        "description": "Global medical device regulatory affairs and quality management consulting firm specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Usha S."
+                        }
+                    })
+                }}
+            />
             {/* 1. HERO SECTION */}
             <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
                 <img
@@ -126,11 +153,12 @@ function About() {
                         <p className="text-[#dca85b] font-bold tracking-widest text-sm mb-4 uppercase">
                             About NKB Regovanta
                         </p>
-                        <h1 className="text-white text-4xl sm:text-5xl lg:text-[44px] font-extrabold leading-[1.15] mb-6">
-                            GLOBAL EXPERTISE.<br />
-                            STRATEGIC EXECUTION.<br />
-                            <span className="sm:whitespace-nowrap">HEALTHCARE <span className="text-cyan-400">WITHOUT BORDERS.</span></span>
+                        <h1 className="text-white text-3xl sm:text-4xl lg:text-[40px] font-extrabold leading-[1.15] mb-4">
+                            About NKB Regovanta — Global Medical Device Regulatory Consultants
                         </h1>
+                        <p className="text-lg sm:text-xl font-bold tracking-tight text-cyan-400 mb-6">
+                            GLOBAL EXPERTISE. STRATEGIC EXECUTION. HEALTHCARE WITHOUT BORDERS.
+                        </p>
                         <p className="text-white/80 text-[16px] leading-relaxed mb-8 max-w-2xl">
                             A global regulatory, quality and market access partner helping organizations navigate complexity and advance healthcare innovation.
                         </p>

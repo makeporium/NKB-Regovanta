@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/mdsap")({
   head: () => ({
     meta: [
       {
-        title:
-          "MDSAP Canada & ISO 13485 Quality-System Readiness | NKB Regovanta",
+        title: "MDSAP & ISO 13485 for Health Canada | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Full MDSAP (Medical Device Single Audit Program) QMS readiness, ISO 13485 compliance alignment for Health Canada Class II, III and IV Medical Device Licences (MDL), audit defense, and nonconformity remediation.",
+          "MDSAP QMS readiness and ISO 13485 alignment for Health Canada MDL licences: gap assessment, audit prep, and nonconformity remediation.",
       },
-      { name: "keywords", content: "MDSAP Canada & ISO 13485 Quality-System Readiness, services canada mdsap, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "MDSAP Canada & ISO 13485 Quality-System Readiness | NKB Regovanta" },
-      { property: "og:description", content: "Full MDSAP (Medical Device Single Audit Program) QMS readiness, ISO 13485 compliance alignment for Health Canada Class II, III and IV Medical Device Licences (MDL), audit defense, and nonconformity remediation." },
+      { property: "og:title", content: "MDSAP & ISO 13485 for Health Canada | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MDSAP QMS readiness and ISO 13485 alignment for Health Canada MDL licences: gap assessment, audit prep, and nonconformity remediation.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/mdsap" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MDSAP Canada & ISO 13485 Quality-System Readiness | NKB Regovanta" },
-      { name: "twitter:description", content: "Full MDSAP (Medical Device Single Audit Program) QMS readiness, ISO 13485 compliance alignment for Health Canada Class II, III and IV Medical Device Licences (MDL), audit defense, and nonconformity remediation." },
+      { name: "twitter:title", content: "MDSAP & ISO 13485 for Health Canada | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MDSAP QMS readiness and ISO 13485 alignment for Health Canada MDL licences: gap assessment, audit prep, and nonconformity remediation.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdsap" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Canada & ISO 13485 Quality-System Readiness",
+          description: "Medical Device Single Audit Program (MDSAP) QMS gap assessment, audit preparation, and ISO 13485 compliance alignment.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaMDSAPPage,
 });
@@ -114,7 +137,7 @@ function CanadaMDSAPPage() {
               Mandatory for Class II, III &amp; IV
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              MDSAP Canada &amp; ISO 13485 Quality-System Readiness
+              MDSAP Canada &amp; ISO 13485 Quality System Readiness
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               For manufacturers of Class II, III and IV devices, quality-system certification is a core part of the Canadian licensing framework. Health Canada relies on ISO 13485 certification issued through a recognized Medical Device Single Audit Program (MDSAP) auditing organization.

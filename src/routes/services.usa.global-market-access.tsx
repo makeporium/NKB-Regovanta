@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/global-market-access")({
   head: () => ({
     meta: [
-      { title: "Planning for Global Market Access | Harmonized Regulatory Strategy | NKB Regovanta" },
+      { title: "Global Market Access Strategy | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Harmonized global regulatory planning for US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, and Health Canada. One aligned evidence and testing plan.",
+        content: "Harmonized global regulatory planning for US FDA, EU MDR, CDSCO, UK MHRA, TGA, and Health Canada. One aligned multi-market evidence plan.",
       },
-      {
-        name: "keywords",
-        content:
-          "global market access medical devices, regulatory harmonization, FDA and EU MDR strategy, CDSCO and TGA alignment, multi-market regulatory roadmap, NKB Regovanta",
-      },
-      { property: "og:title", content: "Planning for Global Market Access | NKB Regovanta" },
+      { property: "og:title", content: "Global Market Access Strategy | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We plan regulatory evidence across target markets so common testing and technical documentation can be leveraged strategically across US, EU, India and APAC.",
+        content: "Harmonized global regulatory planning for US FDA, EU MDR, CDSCO, UK MHRA, TGA, and Health Canada. One aligned multi-market evidence plan.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/global-market-access" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Planning for Global Market Access | Harmonized Regulatory Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "Harmonized global regulatory planning for US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, and Health Canada. One aligned evidence and testing plan." },
+      { name: "twitter:title", content: "Global Market Access Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Harmonized global regulatory planning for US FDA, EU MDR, CDSCO, UK MHRA, TGA, and Health Canada. One aligned multi-market evidence plan." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/global-market-access" }],
@@ -78,7 +71,7 @@ function GlobalMarketAccessPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Planning for Global Market Access",
+              name: "Global Market Access & Regulatory Harmonization",
               url: "https://www.nkbregovanta.com/services/usa/global-market-access",
               description:
                 "Harmonized multi-market regulatory strategy and evidence alignment across US FDA, EU MDR, CDSCO, and international health authorities.",
@@ -130,7 +123,7 @@ function GlobalMarketAccessPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Planning for Global Market Access
+              Global Market Access &amp; Regulatory Harmonization
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We plan regulatory evidence across target markets so common testing and technical documentation can be leveraged where scientifically and regulatorily appropriate, while market-specific gaps are identified early.

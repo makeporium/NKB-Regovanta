@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/mdl")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Medical Device Licence (MDL) - Class II, III & IV | NKB Regovanta",
+        title: "Health Canada MDL Application | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Pre-market Medical Device Licence (MDL) preparation and submission for Class II, III, and IV devices in Canada. IMDRF Table of Contents dossier compilation, REP filing, and Health Canada review management.",
+          "Health Canada Medical Device Licence (MDL) for Class II, III & IV devices: IMDRF ToC dossier, REP filing, and screening deficiency response.",
       },
-      { name: "keywords", content: "Health Canada Medical Device Licence (MDL) - Class II, III & IV, services canada mdl, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Medical Device Licence (MDL) - Class II, III & IV | NKB Regovanta" },
-      { property: "og:description", content: "Pre-market Medical Device Licence (MDL) preparation and submission for Class II, III, and IV devices in Canada. IMDRF Table of Contents dossier compilation, REP filing, and Health Canada review management." },
+      { property: "og:title", content: "Health Canada MDL Application | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada Medical Device Licence (MDL) for Class II, III & IV devices: IMDRF ToC dossier, REP filing, and screening deficiency response.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/mdl" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Medical Device Licence (MDL) - Class II, III & IV | NKB Regovanta" },
-      { name: "twitter:description", content: "Pre-market Medical Device Licence (MDL) preparation and submission for Class II, III, and IV devices in Canada. IMDRF Table of Contents dossier compilation, REP filing, and Health Canada review management." },
+      { name: "twitter:title", content: "Health Canada MDL Application | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada Medical Device Licence (MDL) for Class II, III & IV devices: IMDRF ToC dossier, REP filing, and screening deficiency response.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdl" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Medical Device Licence (MDL) – Class II, III & IV",
+          description: "Pre-market MDL preparation, IMDRF Table of Contents dossier, and Health Canada review management.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaMDLPage,
 });
@@ -113,7 +136,7 @@ function CanadaMDLPage() {
               Class II, III &amp; IV Devices
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Medical Device Licence (MDL) - Class II, III &amp; IV
+              Health Canada Medical Device Licence (MDL) Application
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               A Medical Device Licence is required for Class II, III and IV medical devices before they may be imported or sold in Canada. The licence is issued to the manufacturer and is tied to the licensed device or device family/grouping.

@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP IVD Registration & Performance Evidence | NKB Regovanta",
+        title: "MOHAP IVD Registration Services (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "In Vitro Diagnostic (IVD) registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, bilingual labeling, and MOHAP dossier submission.",
+          "IVD registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, and dossier submission.",
       },
-      { name: "keywords", content: "UAE MOHAP IVD Registration & Performance Evidence, services uae ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP IVD Registration & Performance Evidence | NKB Regovanta" },
-      { property: "og:description", content: "In Vitro Diagnostic (IVD) registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, bilingual labeling, and MOHAP dossier submission." },
+      { property: "og:title", content: "MOHAP IVD Registration Services (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "IVD registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, and dossier submission.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP IVD Registration & Performance Evidence | NKB Regovanta" },
-      { name: "twitter:description", content: "In Vitro Diagnostic (IVD) registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, bilingual labeling, and MOHAP dossier submission." },
+      { name: "twitter:title", content: "MOHAP IVD Registration Services (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "IVD registration with UAE MOHAP. Analytical and clinical performance evidence, stability studies, calibrator traceability, and dossier submission.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/ivd" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP IVD Registration and Licensing (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP regulatory consulting for in vitro diagnostic devices in the UAE - IVD registration, technical documentation, GMDN coding, and post-market compliance.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEIVDPage,
 });

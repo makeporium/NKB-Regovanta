@@ -6,22 +6,38 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/usa")({
   head: () => ({
     meta: [
-      { title: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
-      { name: "description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in the United States." },
-      { name: "keywords", content: "USA Cosmetics Regulatory Services & MoCRA Compliance, industries cosmetics usa, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
-      { property: "og:description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in..." },
+      { title: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
+      { property: "og:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { property: "og:description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "USA MoCRA cosmetics compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL format), safety substantiation documentation, and labelling compliance for cosmetics and personal care products sold in..." },
+      { name: "twitter:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "USA Cosmetics Regulatory Services & MoCRA Compliance",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance.",
+          "serviceType": "Cosmetics Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: USACosmetics,
 });

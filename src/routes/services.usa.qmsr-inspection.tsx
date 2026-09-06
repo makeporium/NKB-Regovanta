@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/qmsr-inspection")({
   head: () => ({
     meta: [
-      { title: "FDA QMSR & FDA Inspection Preparation Consultant | 21 CFR 820 | NKB Regovanta" },
+      { title: "FDA QMSR & Inspection Preparation | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "FDA Quality Management System Regulation (QMSR 21 CFR 820 / ISO 13485:2016) compliance, mock FDA inspections, QSIT audits, and FDA 483 remediation support.",
+        content: "FDA QMSR (21 CFR 820 / ISO 13485) compliance, mock FDA inspections, QSIT audits, and FDA 483 remediation consulting with regulatory specialists.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA QMSR compliance, 21 CFR Part 820, FDA mock audit, QSIT inspection, FDA 483 response, FDA inspection preparation, NKB Regovanta",
-      },
-      { property: "og:title", content: "QMSR & FDA Inspection Preparation | NKB Regovanta" },
+      { property: "og:title", content: "FDA QMSR & Inspection Preparation | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We test whether your quality system can produce objective evidence when an FDA investigator follows a real transaction through the organization.",
+        content: "FDA QMSR (21 CFR 820 / ISO 13485) compliance, mock FDA inspections, QSIT audits, and FDA 483 remediation consulting with regulatory specialists.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/qmsr-inspection" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA QMSR & FDA Inspection Preparation Consultant | 21 CFR 820 | NKB Regovanta" },
-      { name: "twitter:description", content: "FDA Quality Management System Regulation (QMSR 21 CFR 820 / ISO 13485:2016) compliance, mock FDA inspections, QSIT audits, and FDA 483 remediation support." },
+      { name: "twitter:title", content: "FDA QMSR & Inspection Preparation | NKB Regovanta" },
+      { name: "twitter:description", content: "FDA QMSR (21 CFR 820 / ISO 13485) compliance, mock FDA inspections, QSIT audits, and FDA 483 remediation consulting with regulatory specialists." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/qmsr-inspection" }],
@@ -80,7 +73,7 @@ function QMSRInspectionPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "QMSR & FDA Inspection Preparation",
+              name: "FDA QMSR & Inspection Preparation",
               url: "https://www.nkbregovanta.com/services/usa/qmsr-inspection",
               description:
                 "US FDA Quality Management System Regulation (QMSR / 21 CFR Part 820) audit readiness, mock inspections, and compliance consulting.",
@@ -132,7 +125,7 @@ function QMSRInspectionPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              QMSR &amp; FDA Inspection Preparation
+              FDA QMSR &amp; Inspection Preparation
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We test whether the quality system can produce objective evidence when an FDA investigator follows a real transaction through the organization — not merely whether the required SOPs exist.

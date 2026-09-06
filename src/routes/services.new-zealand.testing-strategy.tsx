@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/testing-strategy")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
+        title: "NZ Device Testing Strategy & Lab Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Pre-clinical testing strategy for medical devices and IVDs in New Zealand. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, mechanical testing, and accredited laboratory coordination.",
+          "Pre-clinical testing strategy for devices and IVDs in New Zealand — ISO 10993 biocompatibility, IEC 60601 electrical safety, and lab coordination.",
       },
-      { name: "keywords", content: "New Zealand Medical Device Testing Strategy & Laboratory Coordination, services new zealand testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { property: "og:description", content: "Pre-clinical testing strategy for medical devices and IVDs in New Zealand. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, mechanical testing, and accredited laboratory coordination." },
+      { property: "og:title", content: "NZ Device Testing Strategy & Lab Support | NKB Regovanta" },
+      { property: "og:description", content: "Pre-clinical testing strategy for devices and IVDs in New Zealand — ISO 10993 biocompatibility, IEC 60601 electrical safety, and lab coordination." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { name: "twitter:description", content: "Pre-clinical testing strategy for medical devices and IVDs in New Zealand. Biocompatibility (ISO 10993), electrical safety (IEC 60601), EMC, mechanical testing, and accredited laboratory coordination." },
+      { name: "twitter:title", content: "NZ Device Testing Strategy & Lab Support | NKB Regovanta" },
+      { name: "twitter:description", content: "Pre-clinical testing strategy for devices and IVDs in New Zealand — ISO 10993 biocompatibility, IEC 60601 electrical safety, and lab coordination." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/testing-strategy" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Medical Device Testing Strategy & Laboratory Coordination",
+          description: "Pre-clinical testing strategy, accredited laboratory coordination, and test gap analysis for medical devices and IVDs entering the New Zealand market.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZTestingStrategyPage,
 });

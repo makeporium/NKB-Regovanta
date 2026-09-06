@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/saudi-arabia/mdma")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA MDMA Application & Technical File Strategy (GHAD) | NKB Regovanta",
+        title: "SFDA MDMA Application Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical Devices Marketing Authorization (MDMA) submissions via SFDA GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense.",
+          "SFDA MDMA submissions via GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense in Saudi Arabia.",
       },
-      { name: "keywords", content: "SFDA MDMA Application & Technical File Strategy (GHAD), services saudi arabia mdma, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA MDMA Application & Technical File Strategy (GHAD) | NKB Regovanta" },
-      { property: "og:description", content: "Medical Devices Marketing Authorization (MDMA) submissions via SFDA GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense." },
+      { property: "og:title", content: "SFDA MDMA Application Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "SFDA MDMA submissions via GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense in Saudi Arabia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/mdma" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA MDMA Application & Technical File Strategy (GHAD) | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical Devices Marketing Authorization (MDMA) submissions via SFDA GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense." },
+      { name: "twitter:title", content: "SFDA MDMA Application Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SFDA MDMA submissions via GHAD portal under MDS-REQ 1. Technical file compilation, Essential Principles mapping, and deficiency defense in Saudi Arabia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/mdma" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Market Authorization (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA Medical Device Market Authorization (MDMA) consulting for Saudi Arabia - registration strategy, dossier preparation, and SFDA submission management.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiMDMAPage,
 });

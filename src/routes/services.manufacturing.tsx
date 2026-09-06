@@ -35,27 +35,47 @@ function getProductImage(relPath: string): string {
 export const Route = createFileRoute("/services/manufacturing")({
   head: () => ({
     meta: [
-      { title: "OUR PRODUCTS (MANUFACTURING) | NKB Regovanta" },
+      { title: "Pharmaceutical & Cleanroom Equipment | NKB Regovanta" },
       {
         name: "description",
         content:
-          "High-grade SS 304/316 Machinery, Blenders, Conveyor Belts, Change Room Accessories, Clean Room Furniture, Trolley Division, Lifting Devices, Ancillaries, Storage Containers, and Canteen Furniture.",
+          "SS 304/316 machinery, cleanroom furniture, blenders, trolleys, lifting devices, and ancillary equipment for pharma and healthcare manufacturing.",
       },
-      { property: "og:title", content: "OUR PRODUCTS (MANUFACTURING) | NKB Regovanta" },
+      { property: "og:title", content: "Pharmaceutical & Cleanroom Equipment | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Integrated product, equipment and manufacturing solutions for pharmaceutical, healthcare and life-sciences organizations.",
+          "SS 304/316 machinery, cleanroom furniture, blenders, trolleys, lifting devices, and ancillary equipment for pharma and healthcare manufacturing.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/manufacturing" },
-{ name: "keywords", content: "OUR PRODUCTS (MANUFACTURING), services manufacturing, NKB Regovanta, regulatory consultant, medical device" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "OUR PRODUCTS (MANUFACTURING) | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical device contract manufacturing regulatory consulting. GMP compliance, manufacturing site assessment, supplier qualification, process validation, design controls, and regulatory submissions for manufacturers see..." },
+      { name: "twitter:title", content: "Pharmaceutical & Cleanroom Equipment | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SS 304/316 machinery, cleanroom furniture, blenders, trolleys, lifting devices, and ancillary equipment for pharma and healthcare manufacturing.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/manufacturing" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Pharmaceutical & Cleanroom Equipment Manufacturing",
+          description:
+            "SS 304/316 machinery, cleanroom furniture, blenders, trolleys, lifting devices, and ancillary equipment for pharma and healthcare manufacturing.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: ManufacturingPage,
 });
@@ -959,7 +979,7 @@ function ManufacturingPage() {
                 </span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy tracking-tight leading-tight">
-                OUR PRODUCTS (MANUFACTURING)
+                Pharmaceutical &amp; Cleanroom Manufacturing Equipment
               </h1>
               <p className="mt-4 text-base sm:text-lg text-gray-700 font-medium leading-relaxed">
                 Precision pharmaceutical machinery, sanitary stainless steel (SS 304 / SS 316L) cleanroom furniture,

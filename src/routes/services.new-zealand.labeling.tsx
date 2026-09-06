@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/new-zealand/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Labeling, IFU & Advertising Compliance | NKB Regovanta",
+        title: "Medical Device Labelling New Zealand | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical device and IVD labeling compliance under New Zealand Medicines Regulations. Instructions for Use (IFU), packaging artwork, sponsor details, and advertising review under Medsafe guidelines.",
+          "Medical device labeling compliance in New Zealand — IFU, packaging artwork, sponsor details, and advertising review under Medsafe guidelines.",
       },
-      { name: "keywords", content: "New Zealand Labeling, IFU & Advertising Compliance, services new zealand labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Labeling, IFU & Advertising Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Medical device and IVD labeling compliance under New Zealand Medicines Regulations. Instructions for Use (IFU), packaging artwork, sponsor details, and advertising review under Medsafe guidelines." },
+      { property: "og:title", content: "Medical Device Labelling New Zealand | NKB Regovanta" },
+      { property: "og:description", content: "Medical device labeling compliance in New Zealand — IFU, packaging artwork, sponsor details, and advertising review under Medsafe guidelines." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Labeling, IFU & Advertising Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical device and IVD labeling compliance under New Zealand Medicines Regulations. Instructions for Use (IFU), packaging artwork, sponsor details, and advertising review under Medsafe guidelines." },
+      { name: "twitter:title", content: "Medical Device Labelling New Zealand | NKB Regovanta" },
+      { name: "twitter:description", content: "Medical device labeling compliance in New Zealand — IFU, packaging artwork, sponsor details, and advertising review under Medsafe guidelines." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/labeling" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Medical Device Labeling, IFU & Advertising Compliance",
+          description: "Labeling, IFU, packaging artwork, and advertising compliance support for medical device and IVD sponsors operating under New Zealand Medsafe regulations.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZLabelingPage,
 });

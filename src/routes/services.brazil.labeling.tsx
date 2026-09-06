@@ -49,26 +49,49 @@ export const Route = createFileRoute("/services/brazil/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "Portuguese Labeling, IFU, UDI & SIUD Compliance (Brazil) | NKB Regovanta",
+        title: "ANVISA Labeling, UDI & SIUD Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA medical device and IVD Portuguese labeling review under RDC 751/2022, electronic IFU compliance, UDI requirements (RDC 591/2021), and SIUD database management under IN 426/2026.",
+          "ANVISA Portuguese labeling review (RDC 751/2022), IFU compliance, UDI requirements, and SIUD database management for Brazil medical devices and IVDs.",
       },
-      { name: "keywords", content: "Portuguese Labeling, IFU, UDI & SIUD Compliance (Brazil), services brazil labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Portuguese Labeling, IFU, UDI & SIUD Compliance (Brazil) | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA medical device and IVD Portuguese labeling review under RDC 751/2022, electronic IFU compliance, UDI requirements (RDC 591/2021), and SIUD database management under IN 426/2026." },
+      { property: "og:title", content: "ANVISA Labeling, UDI & SIUD Compliance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA Portuguese labeling review (RDC 751/2022), IFU compliance, UDI requirements, and SIUD database management for Brazil medical devices and IVDs.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Portuguese Labeling, IFU, UDI & SIUD Compliance (Brazil) | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA medical device and IVD Portuguese labeling review under RDC 751/2022, electronic IFU compliance, UDI requirements (RDC 591/2021), and SIUD database management under IN 426/2026." },
+      { name: "twitter:title", content: "ANVISA Labeling, UDI & SIUD Compliance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA Portuguese labeling review (RDC 751/2022), IFU compliance, UDI requirements, and SIUD database management for Brazil medical devices and IVDs.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/labeling" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Portuguese Labeling, IFU, UDI & SIUD Compliance (Brazil)",
+          description: "Portuguese labeling compliance, UDI implementation, and SIUD database management for ANVISA medical device and IVD registrations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilLabelingPage,
 });
@@ -131,7 +154,7 @@ function BrazilLabelingPage() {
               RDC 751/2022 &amp; SIUD Database
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Portuguese Labeling, IFU, UDI &amp; SIUD Compliance
+              ANVISA Portuguese Labeling, UDI &amp; SIUD Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Brazilian market access requires labeling and instructions for use to remain consistent with the ANVISA regularization, intended purpose, manufacturer/holder information and technical evidence. UDI requirements under RDC 591/2021 are being implemented by risk class, and ANVISA's SIUD database has been operational since March 2026 under IN 426/2026.

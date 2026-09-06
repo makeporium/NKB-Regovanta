@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA IVD Registration & Performance Evidence (RDC 830/2023) | NKB Regovanta",
+        title: "ANVISA IVD Registration Services | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "In Vitro Diagnostic (IVD) classification (Class I-IV under RDC 830/2023), analytical and clinical performance evidence, Portuguese package inserts, and ANVISA Notificação/Registro submissions.",
+          "IVD classification (RDC 830/2023), analytical/clinical performance evidence, package inserts, and ANVISA submissions for diagnostic devices in Brazil.",
       },
-      { name: "keywords", content: "ANVISA IVD Registration & Performance Evidence (RDC 830/2023), services brazil ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA IVD Registration & Performance Evidence (RDC 830/2023) | NKB Regovanta" },
-      { property: "og:description", content: "In Vitro Diagnostic (IVD) classification (Class I-IV under RDC 830/2023), analytical and clinical performance evidence, Portuguese package inserts, and ANVISA Notificação/Registro submissions." },
+      { property: "og:title", content: "ANVISA IVD Registration Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "IVD classification (RDC 830/2023), analytical/clinical performance evidence, package inserts, and ANVISA submissions for diagnostic devices in Brazil.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA IVD Registration & Performance Evidence (RDC 830/2023) | NKB Regovanta" },
-      { name: "twitter:description", content: "In Vitro Diagnostic (IVD) classification (Class I-IV under RDC 830/2023), analytical and clinical performance evidence, Portuguese package inserts, and ANVISA Notificação/Registro submissions." },
+      { name: "twitter:title", content: "ANVISA IVD Registration Services | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "IVD classification (RDC 830/2023), analytical/clinical performance evidence, package inserts, and ANVISA submissions for diagnostic devices in Brazil.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/ivd" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA IVD Registration & Performance Evidence (RDC 830/2023)",
+          description: "IVD classification, analytical and clinical performance evidence, and ANVISA registration support for in vitro diagnostics in Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilIVDPage,
 });
@@ -140,7 +163,7 @@ function BrazilIVDPage() {
               RDC 830/2023 IVD Framework
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              IVD Registration &amp; Performance Evidence (Brazil)
+              ANVISA IVD Registration &amp; Performance Evidence (RDC 830/2023)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               IVDs in Brazil are regulated under RDC 830/2023, which updated risk classification, notification/registration procedures, changes, revalidation, cancellation, labeling and instructions for use. The regulatory pathway must connect the intended use, analyte, specimen, target population, risk class and performance claims to the analytical and clinical evidence available.

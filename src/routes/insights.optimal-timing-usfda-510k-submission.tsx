@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/usa_fda_regulatory_1786305043898.png";
 export const Route = createFileRoute("/insights/optimal-timing-usfda-510k-submission")({
   head: () => ({
     meta: [
-      { title: "Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification | NKB Regovanta" },
+      { title: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
       {
         name: "description",
         content: "Design freeze milestones, testing lead times, predicate stability, and the cost-benefit analysis of early vs mature submission timing.",
       },
-      {
-        name: "keywords",
-        content: "determining the optimal timing for your us fda 510(k) premarket notification, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification | NKB Regovanta" },
+      { property: "og:title", content: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
       {
         property: "og:description",
         content: "Design freeze milestones, testing lead times, predicate stability, and the cost-benefit analysis of early vs mature submission timing.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/optimal-timing-usfda-510k-submis
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Determining the Optimal Timing for Your US FDA 510(k) Premarket Notification" },
+      { name: "twitter:title", content: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
       { name: "twitter:description", content: "Design freeze milestones, testing lead times, predicate stability, and the cost-benefit analysis of early vs mature submission timing." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
     ],

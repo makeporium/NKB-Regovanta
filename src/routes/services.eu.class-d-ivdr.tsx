@@ -17,28 +17,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/class-d-ivdr")({
   head: () => ({
     meta: [
-      { title: "Class D High-Risk IVD Strategy, EURL & Common Specifications | NKB Regovanta" },
+      { title: "EU IVDR Class D Consulting | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU IVDR 2017/746 Class D regulatory consulting. EU Reference Laboratory (EURL) verification, Common Specifications (CS), batch release, and Notified Body high-risk conformity assessment.",
+        content: "EU IVDR Class D regulatory consulting. EU Reference Laboratory (EURL) verification, Common Specifications (CS), batch release, and Notified Body audit.",
       },
-      {
-        name: "keywords",
-        content:
-          "Class D IVDR Europe, EU Reference Laboratory EURL IVD, Common Specifications IVDR, Rule 1 Rule 2 IVDR, high risk IVD certification, NKB Regovanta",
-      },
-      { property: "og:title", content: "Class D IVD Strategy, EURL & Higher-Risk Scrutiny | NKB Regovanta" },
+      { property: "og:title", content: "EU IVDR Class D Consulting | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "For Class D IVDs, we sequence analytical and clinical evidence, Common Specifications, Notified Body review and designated EURL verification early.",
+        content: "EU IVDR Class D regulatory consulting. EU Reference Laboratory (EURL) verification, Common Specifications (CS), batch release, and Notified Body audit.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/class-d-ivdr" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Class D High-Risk IVD Strategy, EURL & Common Specifications | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU IVDR 2017/746 Class D regulatory consulting. EU Reference Laboratory (EURL) verification, Common Specifications (CS), batch release, and Notified Body high-risk conformity assessment." },
+      { name: "twitter:title", content: "EU IVDR Class D Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "EU IVDR Class D regulatory consulting. EU Reference Laboratory (EURL) verification, Common Specifications (CS), batch release, and Notified Body audit." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/class-d-ivdr" }],
@@ -133,7 +126,7 @@ function EUClassDIVDRPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Class D IVD Strategy, EURL &amp; Higher-Risk Scrutiny
+              EU IVDR Class D Strategy &amp; EURL Verification
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Class D IVDs (blood screening assays, life-threatening infectious pathogens) undergo the highest regulatory scrutiny in Europe. We sequence analytical and clinical evidence generation, Common Specifications, Notified Body review and designated EURL verification.

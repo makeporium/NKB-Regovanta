@@ -60,28 +60,23 @@ import logoWipro from "@/assets/clients/wipro.svg";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
+            { title: "Medical Device Regulatory Consultants | NKB Regovanta" },
             {
                 name: "description",
                 content:
-                    "NKB Regovanta is a leading global medical device consultant and regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS compliance.",
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
-            {
-                name: "keywords",
-                content:
-                    "medical device consultant, medical device consultancy, USFDA, USFDA consultant, USFDA medical device, 510 k, 510 k consultant, 510k submission consultant, FDA 510(k) clearance medical devices, medical device regulatory consultant, CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Indian Authorized Agent AIR IAA, eSTAR FDA dossier, EU MDR 2017/745 regulatory consultant, CE Marking Europe, ISO 13485 implementation consultant, MDSAP audit readiness, NKB Regovanta",
-            },
-            { property: "og:title", content: "Medical Device Consultant & Regulatory Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
+            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
             {
                 property: "og:description",
                 content:
-                    "Leading global medical device consultant & regulatory consultancy. Comprehensive USFDA 510(k) / 510 k, CDSCO licensing, and EU MDR/IVDR market access.",
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
-            { name: "twitter:title", content: "Medical Device Consultant & Consultancy | USFDA, 510(k), CDSCO | NKB Regovanta" },
-            { name: "twitter:description", content: "NKB Regovanta — Leading global medical device consultant & regulatory consultancy. Expert USFDA 510(k) / 510 k clearance, CDSCO licensing, and EU MDR/IVDR compliance." },
+            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
+            { name: "twitter:description", content: "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide." },
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
@@ -457,7 +452,7 @@ function Index() {
                             </p>
 
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
-                                Global Regulatory &amp; Market Access Consulting
+                                Global Medical Device Regulatory &amp; Market Access Consulting
                             </h1>
                             <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal whitespace-nowrap">
                                 Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing

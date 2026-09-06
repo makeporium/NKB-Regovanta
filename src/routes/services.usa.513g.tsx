@@ -5,21 +5,40 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/513g')({
   head: () => ({
     meta: [
-      { title: '513(g) Information Request FDA Consulting | Device Classification | NKB Regovanta' },
-      { name: 'description', content: 'FDA 513(g) Request for Information consulting — get a formal written opinion from FDA on the regulatory classification and submission pathway for your medical device before investing in a full 510(k) or De Novo submission. Expert 513(g) preparation from NKB Regovanta.' },
-      { name: 'keywords', content: '513(g) Information Request, FDA product classification request, 513g regulatory pathway, CDRH jurisdiction query, FDA device classification opinion, NKB Regovanta' },
-      { property: 'og:title', content: '513(g) Information Request FDA Consulting | Device Classification | NKB Regovanta' },
-      { property: 'og:description', content: 'Clarify FDA device classification and regulatory requirements with an official 513(g) Information Request. Expert preparation, response strategy, and FDA feedback interpretation from NKB Regovanta.' },
-      { property: 'og:url', content: 'https://www.nkbregovanta.com/services/usa/513g' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'https://www.nkbregovanta.com/og-image.png' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: '513(g) Information Request FDA Consulting | NKB Regovanta' },
-      { name: 'twitter:description', content: 'Get formal written FDA opinion on device classification and regulatory pathway before filing 510(k). Expert 513(g) consulting from NKB Regovanta.' },
-      { name: 'twitter:image', content: 'https://www.nkbregovanta.com/og-image.png' },
+      { title: "FDA 513(g) Information Request | NKB Regovanta" },
+      { name: "description", content: "Obtain a formal FDA written opinion on device classification and regulatory pathway with our 513(g) Information Request consulting services." },
+      { property: "og:title", content: "FDA 513(g) Information Request | NKB Regovanta" },
+      { property: "og:description", content: "Obtain a formal FDA written opinion on device classification and regulatory pathway with our 513(g) Information Request consulting services." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/513g" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FDA 513(g) Information Request | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a formal FDA written opinion on device classification and regulatory pathway with our 513(g) Information Request consulting services." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: 'canonical', href: 'https://www.nkbregovanta.com/services/usa/513g' },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/513g" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "FDA 513(g) Request for Information Consulting",
+          description: "Obtain a formal FDA written opinion on medical device classification and regulatory requirements with a 513(g) Request.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "United States",
+          },
+        }),
+      },
     ],
   }),
   component: ServicePage,
@@ -36,7 +55,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to US FDA Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">513(g) Requests for Information</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">FDA 513(g) Requests for Information</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the US FDA regulatory landscape with our comprehensive 513(g) Requests for Information support.
             </p>

@@ -49,26 +49,49 @@ export const Route = createFileRoute("/services/canada/technical-documentation")
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Technical Documentation & Evidence Strategy | NKB Regovanta",
+        title: "Health Canada IMDRF ToC Technical Dossier | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "IMDRF Table of Contents dossier planning, Essential Principles compliance, pre-clinical testing evidence, biocompatibility, software V&V, and clinical evaluation for Health Canada Class III and IV submissions.",
+          "Health Canada IMDRF ToC dossier: Essential Principles, biocompatibility, software V&V, and clinical evidence for Class III and IV medical device licences.",
       },
-      { name: "keywords", content: "Health Canada Technical Documentation & Evidence Strategy, services canada technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Technical Documentation & Evidence Strategy | NKB Regovanta" },
-      { property: "og:description", content: "IMDRF Table of Contents dossier planning, Essential Principles compliance, pre-clinical testing evidence, biocompatibility, software V&V, and clinical evaluation for Health Canada Class III and IV submissions." },
+      { property: "og:title", content: "Health Canada IMDRF ToC Technical Dossier | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada IMDRF ToC dossier: Essential Principles, biocompatibility, software V&V, and clinical evidence for Class III and IV medical device licences.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Technical Documentation & Evidence Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "IMDRF Table of Contents dossier planning, Essential Principles compliance, pre-clinical testing evidence, biocompatibility, software V&V, and clinical evaluation for Health Canada Class III and IV submissions." },
+      { name: "twitter:title", content: "Health Canada IMDRF ToC Technical Dossier | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada IMDRF ToC dossier: Essential Principles, biocompatibility, software V&V, and clinical evidence for Class III and IV medical device licences.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/technical-documentation" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Technical Documentation & Evidence Strategy",
+          description: "IMDRF ToC dossier planning, Essential Principles compliance, and clinical evaluation for Health Canada Class III and IV device submissions.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaTechnicalDocPage,
 });
@@ -119,7 +142,7 @@ function CanadaTechnicalDocPage() {
               IMDRF ToC Dossier
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Technical Documentation &amp; Health Canada Evidence Strategy
+              Health Canada Technical Documentation &amp; Evidence Strategy
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               The level of technical evidence required increases with device risk. For Class III and IV devices, Health Canada uses a structured application framework based on the IMDRF Table of Contents, together with Canada-specific content requirements.

@@ -35,33 +35,27 @@ export const Route = createFileRoute("/services/eu/")({
   head: () => ({
     meta: [
       {
-        title:
-          "EU MDR 2017/745 & EU IVDR 2017/746 Regulatory Consulting | CE Marking & Technical Documentation | NKB Regovanta",
+        title: "EU MDR & IVDR Regulatory Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Senior EU MDR 2017/745 & EU IVDR 2017/746 regulatory consultants. CE marking, Annex II & III technical documentation, GSPR compliance, Clinical Evaluation (CER), Performance Evaluation (PER), Notified Body strategy, EUDAMED, and PMS compliance.",
-      },
-      {
-        name: "keywords",
-        content:
-          "EU MDR 2017/745 regulatory consultant, EU IVDR 2017/746 consulting, CE Marking medical devices, MDR technical documentation, GSPR compliance, CER clinical evaluation, IVDR PER performance evaluation, Notified Body strategy, EUDAMED UDI, NKB Regovanta",
+          "Expert EU MDR & IVDR regulatory consulting: CE marking, GSPR compliance, technical documentation, CER/PER, and Notified Body submissions.",
       },
       {
         property: "og:title",
-        content: "EU MDR & IVDR Regulatory Consulting | CE Marking & Technical Documentation | NKB Regovanta",
+        content: "EU MDR & IVDR Regulatory Consultant | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Comprehensive European regulatory consulting across Medical Devices (MDR) and In Vitro Diagnostics (IVDR). One unified, defensible conformity package.",
+          "Expert EU MDR & IVDR regulatory consulting: CE marking, GSPR compliance, technical documentation, CER/PER, and Notified Body submissions.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR 2017/745 & EU IVDR 2017/746 Regulatory Consulting | CE Marking & Technical Documentat..." },
-      { name: "twitter:description", content: "Senior EU MDR 2017/745 & EU IVDR 2017/746 regulatory consultants. CE marking, Annex II & III technical documentation, GSPR compliance, Clinical Evaluation (CER), Performance Evaluation (PER), Notified Body strategy, E..." },
+      { name: "twitter:title", content: "EU MDR & IVDR Regulatory Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert EU MDR & IVDR regulatory consulting: CE marking, GSPR compliance, technical documentation, CER/PER, and Notified Body submissions." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu" }],
@@ -261,10 +255,10 @@ function EUMarketHubPage() {
                 className="font-display font-extrabold text-white leading-[1.05] tracking-tight mb-3"
                 style={{ fontSize: "clamp(28px, 3.8vw, 48px)" }}
               >
-                EU MDR 2017/745 &amp;<br />EU IVDR 2017/746
+                EU MDR &amp; IVDR Regulatory Consulting
               </h1>
               <p className="text-sm sm:text-base font-extrabold uppercase tracking-widest text-blue-200 mb-5">
-                Regulatory Consulting
+                EU MDR 2017/745 &amp; EU IVDR 2017/746 CE Marking
               </p>
 
               {/* Trust Badges Bar */}

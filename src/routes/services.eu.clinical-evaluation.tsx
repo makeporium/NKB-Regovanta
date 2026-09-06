@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/clinical-evaluation")({
   head: () => ({
     meta: [
-      { title: "EU MDR Clinical Evaluation & CER Consultant | MEDDEV 2.7/1 & MDCG | NKB Regovanta" },
+      { title: "EU MDR Clinical Evaluation CER | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU MDR 2017/745 Clinical Evaluation Reports (CER), Clinical Evaluation Plans (CEP), equivalence assessment, clinical data gap analysis, and PMCF strategy.",
+        content: "EU MDR Clinical Evaluation Reports (CER), CEP planning, equivalence assessment, clinical gap analysis, and PMCF strategy with regulatory specialists.",
       },
-      {
-        name: "keywords",
-        content:
-          "MDR Clinical Evaluation Report CER, CEP Clinical Evaluation Plan, MEDDEV 2.7/1 Rev 4 MDR, MDCG 2020-6 clinical evidence, equivalence MDR Article 61, PMCF plan, NKB Regovanta",
-      },
-      { property: "og:title", content: "MDR Clinical Evaluation & CER Evidence Strategy | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Clinical Evaluation CER | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "The CER is not a literature report — it is the regulatory conclusion on whether clinical evidence supports safety, performance, and claims.",
+        content: "EU MDR Clinical Evaluation Reports (CER), CEP planning, equivalence assessment, clinical gap analysis, and PMCF strategy with regulatory specialists.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/clinical-evaluation" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR Clinical Evaluation & CER Consultant | MEDDEV 2.7/1 & MDCG | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU MDR 2017/745 Clinical Evaluation Reports (CER), Clinical Evaluation Plans (CEP), equivalence assessment, clinical data gap analysis, and PMCF strategy." },
+      { name: "twitter:title", content: "EU MDR Clinical Evaluation CER | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Clinical Evaluation Reports (CER), CEP planning, equivalence assessment, clinical gap analysis, and PMCF strategy with regulatory specialists." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/clinical-evaluation" }],
@@ -131,7 +124,7 @@ function EUClinicalEvaluationPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDR Clinical Evaluation &amp; CER Evidence Strategy
+              EU MDR Clinical Evaluation &amp; CER Strategy
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               The CER is not a literature report. It is the regulatory conclusion on whether clinical evidence supports safety, performance, clinical benefit and claims under state-of-the-art medical standards.

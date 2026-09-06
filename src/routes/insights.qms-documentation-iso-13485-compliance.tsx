@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/qms_inspection_office.jpg";
 export const Route = createFileRoute("/insights/qms-documentation-iso-13485-compliance")({
   head: () => ({
     meta: [
-      { title: "Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification | NKB Regovanta" },
+      { title: "Defensible QMS Documentation Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Best practices for building compliant standard operating procedures, design history files, device master records, and CAPA logs.",
       },
-      {
-        name: "keywords",
-        content: "structuring defensible qms documentation for seamless iso 13485:2016 certification, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification | NKB Regovanta" },
+      { property: "og:title", content: "Defensible QMS Documentation Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Best practices for building compliant standard operating procedures, design history files, device master records, and CAPA logs.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/qms-documentation-iso-13485-comp
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Structuring Defensible QMS Documentation for Seamless ISO 13485:2016 Certification" },
+      { name: "twitter:title", content: "Defensible QMS Documentation Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Best practices for building compliant standard operating procedures, design history files, device master records, and CAPA logs." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">QMS Documentation to Meet ISO 13485:2016</h2>
 
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Introduction</h2>

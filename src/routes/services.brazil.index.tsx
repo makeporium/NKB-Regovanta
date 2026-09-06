@@ -48,23 +48,21 @@ export const Route = createFileRoute("/services/brazil/")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Brazil Medical Device Registration & BGMP Consultant | NKB Regovanta",
+        title: "ANVISA Brazil Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA regulatory consulting for Medical Devices, IVDs and SaMD in Brazil. Notificação, Registro, BGMP RDC 665/2022, CBPF certification, Brazil Registration Holder (BRH), UDI SIUD, and Tecnovigilância.",
+          "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification.",
       },
-      { name: "keywords", content: "ANVISA Brazil Medical Device Registration & BGMP Consultant, services brazil, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Brazil Medical Device Registration & BGMP Consultant | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA regulatory consulting for Medical Devices, IVDs and SaMD in Brazil. Notificação, Registro, BGMP RDC 665/2022, CBPF certification, Brazil Registration Holder (BRH), UDI SIUD, and Tecnovigilância." },
+      { property: "og:title", content: "ANVISA Brazil Medical Device Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Brazil Medical Device Registration & BGMP Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA regulatory consulting for Medical Devices, IVDs and SaMD in Brazil. Notificação, Registro, BGMP RDC 665/2022, CBPF certification, Brazil Registration Holder (BRH), UDI SIUD, and Tecnovigilância." },
+      { name: "twitter:title", content: "ANVISA Brazil Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil" }],
@@ -331,6 +329,24 @@ const faqs = [
 function BrazilHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "ANVISA Brazil Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "ANVISA Medical Device Registration & BGMP Consulting",
+            "description": "Comprehensive ANVISA consulting for Medical Devices and IVDs: Notificação, Registro, BGMP, and Brazil Registration Holder services.",
+            "areaServed": "Brazil"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Rio Graphic)
       ══════════════════════════════════════════════════════════════════ */}

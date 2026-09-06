@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/testing-strategy")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta",
+        title: "ANVISA Testing Strategy (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Pre-clinical testing strategy for ANVISA registrations, INMETRO electrical safety coordination, biocompatibility, sterilization, and ANVISA-recognized / ILAC-accredited laboratory management.",
+          "Pre-clinical testing strategy for ANVISA registrations — INMETRO safety, biocompatibility, sterilization, and accredited lab coordination for Brazil.",
       },
-      { name: "keywords", content: "ANVISA Medical Device Testing Strategy & Laboratory Coordination, services brazil testing strategy, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { property: "og:description", content: "Pre-clinical testing strategy for ANVISA registrations, INMETRO electrical safety coordination, biocompatibility, sterilization, and ANVISA-recognized / ILAC-accredited laboratory management." },
+      { property: "og:title", content: "ANVISA Testing Strategy (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Pre-clinical testing strategy for ANVISA registrations — INMETRO safety, biocompatibility, sterilization, and accredited lab coordination for Brazil.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/testing-strategy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Medical Device Testing Strategy & Laboratory Coordination | NKB Regovanta" },
-      { name: "twitter:description", content: "Pre-clinical testing strategy for ANVISA registrations, INMETRO electrical safety coordination, biocompatibility, sterilization, and ANVISA-recognized / ILAC-accredited laboratory management." },
+      { name: "twitter:title", content: "ANVISA Testing Strategy (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Pre-clinical testing strategy for ANVISA registrations — INMETRO safety, biocompatibility, sterilization, and accredited lab coordination for Brazil.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/testing-strategy" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Medical Device Testing Strategy & Laboratory Coordination",
+          description: "Pre-clinical testing strategy, INMETRO coordination, biocompatibility, sterilization validation, and ILAC-accredited laboratory management for ANVISA Brazil registrations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilTestingStrategyPage,
 });
@@ -133,7 +156,7 @@ function BrazilTestingStrategyPage() {
               ILAC &amp; ANVISA Lab Coordination
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Testing Strategy &amp; Laboratory Coordination
+              ANVISA Testing Strategy &amp; Laboratory Coordination
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Testing should be planned from the regulatory decision backward. NKB Regovanta helps manufacturers identify what evidence is needed for Brazil, whether existing global reports can be leveraged, and where new studies are required. Where third-party testing is needed, we can coordinate with established laboratories and review protocols and reports before they enter the ANVISA dossier.

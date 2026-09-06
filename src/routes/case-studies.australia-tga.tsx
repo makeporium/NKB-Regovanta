@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_australia_tga_1786441211612.png";
 export const Route = createFileRoute("/case-studies/australia-tga")({
   head: () => ({
     meta: [
-      { title: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
-      { name: "description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ARTG submission." },
-      { name: "keywords", content: "AUSTRALIA TGA, ARTG Inclusion, Case Studies, case studies australia tga, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ART..." },
+      { title: "Australia TGA ARTG Inclusion Case Study | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: How NKB Regovanta secured TGA ARTG Inclusion for a Class IIb device by leveraging overseas approvals and targeted conformity assessment.",
+      },
+      { property: "og:title", content: "Australia TGA ARTG Inclusion Case Study | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: How NKB Regovanta secured TGA ARTG Inclusion for a Class IIb device by leveraging overseas approvals and targeted conformity assessment.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/australia-tga" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "AUSTRALIA TGA | ARTG Inclusion | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "NKB Regovanta assisted a foreign manufacturer in obtaining TGA ARTG Inclusion for a Class IIb device within timeline. A step-by-step breakdown of Australian Sponsor appointment, conformity assessment strategy, and ART..." },
+      { name: "twitter:title", content: "Australia TGA ARTG Inclusion Case Study | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: How NKB Regovanta secured TGA ARTG Inclusion for a Class IIb device by leveraging overseas approvals and targeted conformity assessment.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/australia-tga" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Australia TGA ARTG Inclusion Case Study",
+          description:
+            "Case study: How NKB Regovanta secured TGA ARTG Inclusion for a Class IIb device by leveraging overseas approvals and targeted conformity assessment.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });
@@ -37,9 +65,12 @@ function Article() {
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[11px] font-bold uppercase tracking-widest text-accent">AUSTRALIA TGA | ARTG INCLUSION</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-8">
-            Reuse What’s Accepted. Rebuild Only What’s Needed.
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-4">
+            Australia TGA ARTG Inclusion Case Study
           </h1>
+          <p className="text-lg text-navy/75 font-medium mb-8">
+            Reuse What’s Accepted. Rebuild Only What’s Needed.
+          </p>
           <img src={imgPlaceholder} alt="Australia TGA ARTG Inclusion" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
             

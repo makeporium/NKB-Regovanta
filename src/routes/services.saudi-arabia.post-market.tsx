@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/saudi-arabia/post-market")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Post-Market Surveillance, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta",
+        title: "SFDA Post-Market Surveillance & Vigilance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Post-market surveillance (PMS) and tecnovigilance in Saudi Arabia. SFDA adverse incident reporting, Field Safety Corrective Actions (FSCA), customer safety notices, and periodic safety updates.",
+          "SFDA post-market surveillance (PMS) and vigilance in Saudi Arabia. Adverse incident reporting, FSCAs, safety notices, and periodic safety updates.",
       },
-      { name: "keywords", content: "SFDA Post-Market Surveillance, Vigilance & Field Safety Actions (FSCA), services saudi arabia post market, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Post-Market Surveillance, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta" },
-      { property: "og:description", content: "Post-market surveillance (PMS) and tecnovigilance in Saudi Arabia. SFDA adverse incident reporting, Field Safety Corrective Actions (FSCA), customer safety notices, and periodic safety updates." },
+      { property: "og:title", content: "SFDA Post-Market Surveillance & Vigilance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "SFDA post-market surveillance (PMS) and vigilance in Saudi Arabia. Adverse incident reporting, FSCAs, safety notices, and periodic safety updates.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/post-market" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Post-Market Surveillance, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta" },
-      { name: "twitter:description", content: "Post-market surveillance (PMS) and tecnovigilance in Saudi Arabia. SFDA adverse incident reporting, Field Safety Corrective Actions (FSCA), customer safety notices, and periodic safety updates." },
+      { name: "twitter:title", content: "SFDA Post-Market Surveillance & Vigilance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SFDA post-market surveillance (PMS) and vigilance in Saudi Arabia. Adverse incident reporting, FSCAs, safety notices, and periodic safety updates.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/post-market" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Post-Market Surveillance and Vigilance (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "Post-market surveillance and vigilance consulting for medical devices in Saudi Arabia - SFDA adverse event reporting, field safety corrective actions, and PMS planning.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiPostMarketPage,
 });

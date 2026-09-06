@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/testing-strategy")({
   head: () => ({
     meta: [
-      { title: "Testing Strategy & Laboratory Coordination | FDA Medical Devices | NKB Regovanta" },
+      { title: "US FDA Device Testing Strategy | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Design defensible verification and validation testing strategies for US FDA submissions. Worst-case rationale, biocompatibility, electrical safety, EMC, software, and lab coordination.",
+        content: "Defensible verification & validation testing strategy for US FDA submissions. Biocompatibility, electrical safety, EMC, software, and lab coordination.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA medical device testing, testing strategy, worst case rationale, biocompatibility ISO 10993, electrical safety IEC 60601, lab coordination, NKB Regovanta",
-      },
-      { property: "og:title", content: "Testing Strategy & Laboratory Coordination | NKB Regovanta" },
+      { property: "og:title", content: "US FDA Device Testing Strategy | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We design testing backward from the FDA decision — challenging configuration, worst-case rationale, standards, acceptance criteria, and lab protocols.",
+        content: "Defensible verification & validation testing strategy for US FDA submissions. Biocompatibility, electrical safety, EMC, software, and lab coordination.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/testing-strategy" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Testing Strategy & Laboratory Coordination | FDA Medical Devices | NKB Regovanta" },
-      { name: "twitter:description", content: "Design defensible verification and validation testing strategies for US FDA submissions. Worst-case rationale, biocompatibility, electrical safety, EMC, software, and lab coordination." },
+      { name: "twitter:title", content: "US FDA Device Testing Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Defensible verification & validation testing strategy for US FDA submissions. Biocompatibility, electrical safety, EMC, software, and lab coordination." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/testing-strategy" }],
@@ -86,7 +79,7 @@ function TestingStrategyPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Testing Strategy & Laboratory Coordination",
+              name: "US FDA Medical Device Testing Strategy & Standards Compliance",
               url: "https://www.nkbregovanta.com/services/usa/testing-strategy",
               description:
                 "US FDA medical device testing strategy, worst-case justification, test protocol review, and laboratory coordination.",
@@ -103,7 +96,7 @@ function TestingStrategyPage() {
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nkbregovanta.com" },
                 { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
                 { "@type": "ListItem", position: 3, name: "USA FDA", item: "https://www.nkbregovanta.com/services/usa" },
-                { "@type": "ListItem", position: 4, name: "Testing Strategy", item: "https://www.nkbregovanta.com/services/usa/testing-strategy" },
+                { "@type": "ListItem", position: 4, name: "US FDA Testing Strategy", item: "https://www.nkbregovanta.com/services/usa/testing-strategy" },
               ],
             },
           ]),
@@ -120,7 +113,7 @@ function TestingStrategyPage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services/usa" className="hover:text-navy transition-colors">USA FDA</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-navy">Testing Strategy &amp; Lab Coordination</span>
+            <span className="text-navy">US FDA Testing Strategy</span>
           </div>
 
           <Link
@@ -138,7 +131,7 @@ function TestingStrategyPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Testing Strategy &amp; Laboratory Coordination
+              US FDA Medical Device Testing Strategy &amp; Standards Compliance
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We design the testing plan backward from the FDA decision the evidence must support — challenging configuration, worst-case rationale, standards, acceptance criteria and whether the resulting data will actually answer the regulatory question.

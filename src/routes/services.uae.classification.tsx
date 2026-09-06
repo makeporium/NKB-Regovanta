@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Medical Device Classification & Regulatory Status | NKB Regovanta",
+        title: "MOHAP Device Classification (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "MOHAP product classification service for Medical Equipment and IVDs in the United Arab Emirates. Class I, II, III, IV determination, SaMD qualification, and classification letter applications.",
+          "MOHAP product classification for medical devices and IVDs in UAE. Class I-IV determination, SaMD qualification, and classification letter applications.",
       },
-      { name: "keywords", content: "UAE MOHAP Medical Device Classification & Regulatory Status, services uae classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Medical Device Classification & Regulatory Status | NKB Regovanta" },
-      { property: "og:description", content: "MOHAP product classification service for Medical Equipment and IVDs in the United Arab Emirates. Class I, II, III, IV determination, SaMD qualification, and classification letter applications." },
+      { property: "og:title", content: "MOHAP Device Classification (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP product classification for medical devices and IVDs in UAE. Class I-IV determination, SaMD qualification, and classification letter applications.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Medical Device Classification & Regulatory Status | NKB Regovanta" },
-      { name: "twitter:description", content: "MOHAP product classification service for Medical Equipment and IVDs in the United Arab Emirates. Class I, II, III, IV determination, SaMD qualification, and classification letter applications." },
+      { name: "twitter:title", content: "MOHAP Device Classification (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP product classification for medical devices and IVDs in UAE. Class I-IV determination, SaMD qualification, and classification letter applications.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/classification" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Classification (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Medical device classification consulting under UAE MOHAP regulations - risk-based class determination, GMDN coding, and classification queries for the UAE market.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEClassificationPage,
 });

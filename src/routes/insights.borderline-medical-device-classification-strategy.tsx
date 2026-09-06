@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/industry_cosmetics_1786310589050.png";
 export const Route = createFileRoute("/insights/borderline-medical-device-classification-strategy")({
   head: () => ({
     meta: [
-      { title: "Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide | NKB Regovanta" },
+      { title: "Borderline Medical Device Classification | NKB Regovanta" },
       {
         name: "description",
         content: "How to interpret the EU Borderline Manual and FDA Pre-RFD mechanisms to prevent regulatory misclassification and project delays.",
       },
-      {
-        name: "keywords",
-        content: "navigating borderline products: medical device vs drug vs cosmetic vs biocide, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide | NKB Regovanta" },
+      { property: "og:title", content: "Borderline Medical Device Classification | NKB Regovanta" },
       {
         property: "og:description",
         content: "How to interpret the EU Borderline Manual and FDA Pre-RFD mechanisms to prevent regulatory misclassification and project delays.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/borderline-medical-device-classi
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Navigating Borderline Products: Medical Device vs Drug vs Cosmetic vs Biocide" },
+      { name: "twitter:title", content: "Borderline Medical Device Classification | NKB Regovanta" },
       { name: "twitter:description", content: "How to interpret the EU Borderline Manual and FDA Pre-RFD mechanisms to prevent regulatory misclassification and project delays." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
     ],

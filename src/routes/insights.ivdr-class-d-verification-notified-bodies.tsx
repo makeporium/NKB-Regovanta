@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/industry_ivd_1786310578306.png";
 export const Route = createFileRoute("/insights/ivdr-class-d-verification-notified-bodies")({
   head: () => ({
     meta: [
-      { title: "EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles | NKB Regovanta" },
+      { title: "EU IVDR Class D Verification Guide | NKB Regovanta" },
       {
         name: "description",
         content: "The rigorous regulatory verification route for high-risk infectious disease and blood group diagnostics under Regulation (EU) 2017/746.",
       },
-      {
-        name: "keywords",
-        content: "eu ivdr class d verification: overcoming reference laboratories and notified body hurdles, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles | NKB Regovanta" },
+      { property: "og:title", content: "EU IVDR Class D Verification Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "The rigorous regulatory verification route for high-risk infectious disease and blood group diagnostics under Regulation (EU) 2017/746.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/ivdr-class-d-verification-notifi
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR Class D Verification: Overcoming Reference Laboratories and Notified Body Hurdles" },
+      { name: "twitter:title", content: "EU IVDR Class D Verification Guide | NKB Regovanta" },
       { name: "twitter:description", content: "The rigorous regulatory verification route for high-risk infectious disease and blood group diagnostics under Regulation (EU) 2017/746." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],

@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/q-submission")({
   head: () => ({
     meta: [
-      { title: "FDA Q-Submission & Pre-Submission Meetings Consultant | NKB Regovanta" },
+      { title: "FDA Q-Submission (Pre-Sub) Consulting | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Strategic FDA Q-Submission (Pre-Sub) consulting. Briefing document preparation, targeted questions, meeting rehearsal, and feedback translation into actionable submission roadmaps.",
+        content: "Strategic FDA Q-Submission (Pre-Sub) consulting. Briefing document preparation, targeted questions, meeting support, and actionable feedback roadmaps.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA Q-Submission, FDA Pre-Submission meeting, Q-Sub briefing document, FDA feedback meeting, CDRH pre-sub, NKB Regovanta",
-      },
-      { property: "og:title", content: "FDA Q-Submission & Pre-Submission Support | NKB Regovanta" },
+      { property: "og:title", content: "FDA Q-Submission (Pre-Sub) Consulting | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "De-risk regulatory uncertainty by obtaining targeted, actionable FDA feedback before locking in costly testing or clinical programs.",
+        content: "Strategic FDA Q-Submission (Pre-Sub) consulting. Briefing document preparation, targeted questions, meeting support, and actionable feedback roadmaps.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/q-submission" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA Q-Submission & Pre-Submission Meetings Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic FDA Q-Submission (Pre-Sub) consulting. Briefing document preparation, targeted questions, meeting rehearsal, and feedback translation into actionable submission roadmaps." },
+      { name: "twitter:title", content: "FDA Q-Submission (Pre-Sub) Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Strategic FDA Q-Submission (Pre-Sub) consulting. Briefing document preparation, targeted questions, meeting support, and actionable feedback roadmaps." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/q-submission" }],
@@ -73,7 +66,7 @@ function QSubmissionPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "FDA Q-Submission & Pre-Submission Support",
+              name: "FDA Q-Submission & Pre-Submission Consulting",
               url: "https://www.nkbregovanta.com/services/usa/q-submission",
               description:
                 "US FDA Q-Submission briefing document compilation, meeting preparation, and feedback analysis.",
@@ -125,7 +118,7 @@ function QSubmissionPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              FDA Q-Submission &amp; Pre-Submission
+              FDA Q-Submission &amp; Pre-Submission Consulting
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We determine which uncertainties are worth taking to FDA, frame focused questions and provide enough technical context for FDA feedback to be actionable before major testing or submission decisions are locked.

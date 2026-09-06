@@ -13,24 +13,51 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/regulatory-writing")({
   head: () => ({
     meta: [
-      { title: "UK Regulatory Writing, CER & PMS Documentation | NKB Regovanta" },
+      { title: "UK Regulatory Writing & CER | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Advanced regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols.",
+          "Regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols.",
       },
-      { name: "keywords", content: "UK Regulatory Writing, CER & PMS Documentation, services uk technical file, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UK Regulatory Writing, CER & PMS Documentation | NKB Regovanta" },
-      { property: "og:description", content: "Advanced regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/technical-file" },
+      { property: "og:title", content: "UK Regulatory Writing & CER | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/regulatory-writing" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK Regulatory Writing, CER & PMS Documentation | NKB Regovanta" },
-      { name: "twitter:description", content: "Advanced regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols." },
+      { name: "twitter:title", content: "UK Regulatory Writing & CER | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Regulatory and medical writing for the UK market: Clinical Evaluation Reports (CER), PMSR, PSUR, risk management files, and clinical protocols.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/technical-file" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/regulatory-writing" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "UK Regulatory & Medical Writing Services",
+          description: "Clinical Evaluation Reports (CER), PSUR, and technical file writing for the UK medical device market.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
+    ],
   }),
   component: UKRegulatoryWritingPage,
 });
@@ -67,7 +94,7 @@ function UKRegulatoryWritingPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
-              Advanced Regulatory &amp; Clinical Writing
+              UK Regulatory &amp; Clinical Writing Services
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               We author scientifically defensible clinical evaluation reports, post-market surveillance files, and risk management dossiers for UK Approved Body submission.

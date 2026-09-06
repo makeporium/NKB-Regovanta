@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_test_smarter_1786441137220.png";
 export const Route = createFileRoute("/case-studies/test-smarter")({
   head: () => ({
     meta: [
-      { title: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
-      { name: "description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by 40%." },
-      { name: "keywords", content: "Test Smarter. Cover More., Case Studies, case studies test smarter, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by ..." },
+      { title: "Global Device Testing Strategy Case Study | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: A unified test strategy for FDA 510(k), EU MDR, and TGA ARTG that eliminated duplicate testing and reduced testing budgets by 40%.",
+      },
+      { property: "og:title", content: "Global Device Testing Strategy Case Study | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: A unified test strategy for FDA 510(k), EU MDR, and TGA ARTG that eliminated duplicate testing and reduced testing budgets by 40%.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/test-smarter" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Test Smarter. Cover More. | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "How NKB Regovanta designed a multi-purpose test strategy for FDA 510(k), EU MDR, and TGA ARTG simultaneously — eliminating duplicate testing across three major regulatory pathways and reducing total testing budget by ..." },
+      { name: "twitter:title", content: "Global Device Testing Strategy Case Study | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: A unified test strategy for FDA 510(k), EU MDR, and TGA ARTG that eliminated duplicate testing and reduced testing budgets by 40%.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/test-smarter" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Multi-Market Medical Device Testing Strategy Case Study",
+          description:
+            "Case study: A unified test strategy for FDA 510(k), EU MDR, and TGA ARTG that eliminated duplicate testing and reduced testing budgets by 40%.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });
@@ -38,7 +66,7 @@ function Article() {
             <span className="text-[11px] font-bold uppercase tracking-widest text-accent">Test Strategy</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-8">
-            Test Smarter. Cover More.
+            Medical Device Testing Strategy: Test Smarter, Cover More
           </h1>
           <img src={imgPlaceholder} alt="Test Strategy" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">

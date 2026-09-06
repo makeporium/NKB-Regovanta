@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/e-star")({
   head: () => ({
     meta: [
-      { title: "eSTAR Dossier Preparation Consultant | US FDA 510(k) & De Novo | NKB Regovanta" },
+      { title: "FDA eSTAR Dossier Preparation | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Complete US FDA eSTAR dossier preparation and compilation services. We develop the regulatory content, technical evidence, and cross-section consistency behind the eSTAR template.",
+        content: "Complete US FDA eSTAR dossier preparation and compilation services. Technical evidence integration and cross-section consistency for 510(k) & De Novo.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA eSTAR dossier, eSTAR preparation consultant, eSTAR template 510k, eSTAR De Novo, CDRH portal submission, NKB Regovanta",
-      },
-      { property: "og:title", content: "eSTAR Dossier Preparation Services | NKB Regovanta" },
+      { property: "og:title", content: "FDA eSTAR Dossier Preparation | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We treat eSTAR as the container for the regulatory argument — building comprehensive, cross-checked FDA dossiers that pass technical screening.",
+        content: "Complete US FDA eSTAR dossier preparation and compilation services. Technical evidence integration and cross-section consistency for 510(k) & De Novo.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/e-star" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "eSTAR Dossier Preparation Consultant | US FDA 510(k) & De Novo | NKB Regovanta" },
-      { name: "twitter:description", content: "Complete US FDA eSTAR dossier preparation and compilation services. We develop the regulatory content, technical evidence, and cross-section consistency behind the eSTAR template." },
+      { name: "twitter:title", content: "FDA eSTAR Dossier Preparation | NKB Regovanta" },
+      { name: "twitter:description", content: "Complete US FDA eSTAR dossier preparation and compilation services. Technical evidence integration and cross-section consistency for 510(k) & De Novo." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/e-star" }],
@@ -77,7 +70,7 @@ function EStarPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "eSTAR Dossier Preparation",
+              name: "FDA eSTAR Dossier Preparation & Submission",
               url: "https://www.nkbregovanta.com/services/usa/e-star",
               description:
                 "US FDA eSTAR dossier compilation, technical evidence integration, and cross-section consistency review for 510(k) and De Novo submissions.",
@@ -129,7 +122,7 @@ function EStarPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              eSTAR Dossier Preparation
+              FDA eSTAR Dossier Preparation &amp; Submission
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We treat eSTAR as the container for the regulatory argument — not as the strategy itself. The dossier is built only after pathway, predicate and evidence requirements are clear, then checked for cross-section consistency.

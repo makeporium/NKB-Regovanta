@@ -9,24 +9,50 @@ import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.png";
 export const Route = createFileRoute("/industries/")({
     head: () => ({
         meta: [
-            { title: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
+            { title: "Healthcare & Life Sciences Industries | NKB Regovanta" },
             {
-                name: "description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking market authorization across multiple jurisdictions.",
+                name: "description",
+                content:
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
             },
-          { name: "keywords", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory, industries, NKB Regovanta, regulatory consultant, medical device" },
-          { property: "og:title", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
-          { property: "og:description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking ma..." },
-          { property: "og:url", content: "https://www.nkbregovanta.com/industries" },
-          { property: "og:type", content: "website" },
-          { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: "Medical Devices, IVDs, Pharmaceuticals & Cosmetics Regulatory | NKB Regovanta" },
-          { name: "twitter:description", content: "NKB Regovanta serves medical device, IVD, pharmaceutical, and cosmetics industries with comprehensive regulatory consulting globally. Expert guidance for manufacturers, importers, sponsors, and distributors seeking ma..." },
-          { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { property: "og:title", content: "Healthcare & Life Sciences Industries | NKB Regovanta" },
+            {
+                property: "og:description",
+                content:
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/industries" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Healthcare & Life Sciences Industries | NKB Regovanta" },
+            {
+                name: "twitter:description",
+                content:
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
+            },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
-    links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/industries" },
-    ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/industries" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: "Healthcare & Life Sciences Industries We Serve",
+                    description:
+                        "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics.",
+                    publisher: {
+                        "@type": "Organization",
+                        name: "NKB Regovanta",
+                        url: "https://www.nkbregovanta.com",
+                    },
+                }),
+            },
+        ],
     }),
     component: Industries,
 });
@@ -65,7 +91,7 @@ function Industries() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Industries We Serve</p>
                     <h1 className="mt-4 text-3xl font-extrabold text-navy sm:text-5xl leading-tight">
-                        Tailored Solutions for Every Industry
+                        Healthcare &amp; Life Sciences Regulatory Consulting
                     </h1>
                     <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
                         Specialized regulatory, quality and market-access support for healthcare, diagnostic and pharmaceutical companies.

@@ -6,21 +6,40 @@ export const Route = createFileRoute("/services/india/ivd-testing")({
   component: IVDTestingPage,
   head: () => ({
     meta: [
-{ title: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
+      { title: "CDSCO IVD Test License (MD-16/17) | NKB Regovanta" },
       { name: "description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
-{ name: "keywords", content: "MD-16 test licence IVD India, MD-17 test licence CDSCO, IVD testing laboratory India, diagnostic device test licence" },
-      { property: "og:title", content: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
-      { property: "og:description", content: "CDSCO test licence consulting for Forms MD-16 and MD-17 for IVD diagnostic device evaluation and testing in India. Full documentation, laboratory coordination, and SLA/CLA submission support from NKB Regovanta expert ..." },
+      { property: "og:title", content: "CDSCO IVD Test License (MD-16/17) | NKB Regovanta" },
+      { property: "og:description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/ivd-testing" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Test License for IVD Devices India | MD-16 & MD-17 | NKB Regovanta" },
-      { name: "twitter:description", content: "CDSCO test licence consulting for Forms MD-16 and MD-17 for IVD diagnostic device evaluation and testing in India. Full documentation, laboratory coordination, and SLA/CLA submission support from NKB Regovanta expert ..." },
+      { name: "twitter:title", content: "CDSCO IVD Test License (MD-16/17) | NKB Regovanta" },
+      { name: "twitter:description", content: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/ivd-testing" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO IVD Test License (MD-16 & MD-17)",
+          description: "Apply for CDSCO Forms MD-16 and MD-17 to import limited quantities of IVD medical devices for non-commercial testing, evaluation, or demonstration in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });

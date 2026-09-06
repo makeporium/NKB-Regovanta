@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/change-management")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia ARTG Variations, Significant Changes & Lifecycle Support | NKB Regovanta",
+        title: "TGA ARTG Variations & Changes | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA significant change evaluation, ARTG variation applications under Section 9D, kind-of-device impact analysis, Manufacturer Evidence updates, and lifecycle engineering change control in Australia.",
+          "TGA significant change evaluation, Section 9D variations, kind-of-device impact analysis, and Manufacturer Evidence updates in Australia.",
       },
-      { name: "keywords", content: "Australia ARTG Variations, Significant Changes & Lifecycle Support, services australia change management, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia ARTG Variations, Significant Changes & Lifecycle Support | NKB Regovanta" },
-      { property: "og:description", content: "TGA significant change evaluation, ARTG variation applications under Section 9D, kind-of-device impact analysis, Manufacturer Evidence updates, and lifecycle engineering change control in Australia." },
+      { property: "og:title", content: "TGA ARTG Variations & Changes | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA significant change evaluation, Section 9D variations, kind-of-device impact analysis, and Manufacturer Evidence updates in Australia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/change-management" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia ARTG Variations, Significant Changes & Lifecycle Support | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA significant change evaluation, ARTG variation applications under Section 9D, kind-of-device impact analysis, Manufacturer Evidence updates, and lifecycle engineering change control in Australia." },
+      { name: "twitter:title", content: "TGA ARTG Variations & Changes | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA significant change evaluation, Section 9D variations, kind-of-device impact analysis, and Manufacturer Evidence updates in Australia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/change-management" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA ARTG Variations & Significant Change Consulting",
+          description: "TGA Section 9D variation applications and significant change management for medical devices in Australia.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaChangeManagementPage,
 });
@@ -136,7 +162,7 @@ function AustraliaChangeManagementPage() {
               Section 9D Variations &amp; Changes
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Variations, Significant Changes &amp; Device Lifecycle Support
+              TGA ARTG Variations &amp; Significant Change Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Device changes can affect more than the technical file. A modification may affect conformity assessment evidence, Manufacturer Evidence, ARTG representation, UDI, labelling, Sponsor records or post-market obligations. Changes should therefore be assessed before implementation.

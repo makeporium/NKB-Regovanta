@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/change-assessment")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR Change Assessment & Lifecycle Control Consultant | NKB Regovanta" },
+      { title: "EU MDR Change Assessment Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior regulatory change assessment under EU MDR 2017/745 and IVDR 2017/746. Substantial vs non-substantial change evaluation, Notified Body notification triggers, and technical file updates.",
+        content: "Regulatory change assessment under EU MDR & IVDR. Substantial change evaluation, Notified Body notification triggers, and technical documentation updates.",
       },
-      {
-        name: "keywords",
-        content:
-          "MDR change assessment, significant change MDR Article 120, Notified Body change notification, IVDR change control, technical documentation update, NKB Regovanta",
-      },
-      { property: "og:title", content: "Change Assessment & Lifecycle Control | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Change Assessment Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We assess how design, manufacturing, supplier, software, labeling, and evidence changes impact your CE certificate before implementation.",
+        content: "Regulatory change assessment under EU MDR & IVDR. Substantial change evaluation, Notified Body notification triggers, and technical documentation updates.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/change-assessment" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR Change Assessment & Lifecycle Control Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior regulatory change assessment under EU MDR 2017/745 and IVDR 2017/746. Substantial vs non-substantial change evaluation, Notified Body notification triggers, and technical file updates." },
+      { name: "twitter:title", content: "EU MDR Change Assessment Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Regulatory change assessment under EU MDR & IVDR. Substantial change evaluation, Notified Body notification triggers, and technical documentation updates." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/change-assessment" }],
@@ -128,7 +121,7 @@ function EUChangeAssessmentPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Change Assessment &amp; Lifecycle Control
+              EU MDR &amp; IVDR Change Assessment &amp; Lifecycle Control
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We assess the regulatory impact of engineering, supplier, manufacturing, software and labeling changes before implementation — determining whether a modification requires prior Notified Body approval or internal technical documentation updates.

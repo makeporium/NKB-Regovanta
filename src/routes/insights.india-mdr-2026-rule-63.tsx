@@ -7,29 +7,24 @@ const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
   head: () => ({
     meta: [
-      { title: "India Medical Device Rules 2026: EU-Approved Devices & Rule 63 | NKB Regovanta" },
+      { title: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
       {
         name: "description",
         content:
-          "What the latest Indian MDR amendment (G.S.R. 744(E)) means for medical device manufacturers, EU companies and Indian importers under Rule 63 and Class A QMS requirements.",
+          "What the Indian MDR amendment (G.S.R. 744(E)) means for medical device makers, EU brands, and Indian importers under Rule 63 and Class A QMS.",
       },
-      {
-        name: "keywords",
-        content:
-          "India Medical Device Rules 2026, Rule 63 CDSCO, G.S.R. 744(E) amendment, CDSCO EU recognition, Class A device QMS India, CDSCO medical device consultant, NKB Regovanta",
-      },
-      { property: "og:title", content: "India Medical Device Rules 2026: EU Devices Gain Recognition | NKB Regovanta" },
+      { property: "og:title", content: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Detailed analysis of the Medical Devices (Third Amendment) Rules, 2026 and its impact on clinical evaluation and market entry in India.",
+          "What the Indian MDR amendment (G.S.R. 744(E)) means for medical device makers, EU brands, and Indian importers under Rule 63 and Class A QMS.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63" },
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "India Medical Device Rules 2026: Rule 63 Amendment | NKB Regovanta" },
-      { name: "twitter:description", content: "How the inclusion of EU countries under Rule 63 impacts CDSCO medical device licensing and clinical investigation requirements." },
+      { name: "twitter:title", content: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "What the Indian MDR amendment (G.S.R. 744(E)) means for medical device makers, EU brands, and Indian importers under Rule 63 and Class A QMS." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [

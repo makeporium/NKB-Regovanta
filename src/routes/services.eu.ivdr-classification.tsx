@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ivdr-classification")({
   head: () => ({
     meta: [
-      { title: "EU IVDR Classification & Conformity Assessment Consultant | Rules 1-7 | NKB Regovanta" },
+      { title: "EU IVDR Classification Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU IVDR 2017/746 qualification and risk classification consulting across Class A, B, C, and D under Annex VIII Rules 1–7, companion diagnostics, and conformity assessment pathways.",
+        content: "EU IVDR qualification and risk classification consulting across Class A, B, C, and D under Annex VIII Rules 1–7, CDx, and conformity assessment pathways.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU IVDR classification rules 1 to 7, IVDR Annex VIII, Class A B C D IVD Europe, companion diagnostics CDx IVDR, Notified Body IVDR route, NKB Regovanta",
-      },
-      { property: "og:title", content: "IVDR Classification & Conformity Assessment | NKB Regovanta" },
+      { property: "og:title", content: "EU IVDR Classification Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We establish the defensible reasoning chain from analyte and intended purpose to IVDR Rules 1–7 and evidence burden.",
+        content: "EU IVDR qualification and risk classification consulting across Class A, B, C, and D under Annex VIII Rules 1–7, CDx, and conformity assessment pathways.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr-classification" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR Classification & Conformity Assessment Consultant | Rules 1-7 | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU IVDR 2017/746 qualification and risk classification consulting across Class A, B, C, and D under Annex VIII Rules 1–7, companion diagnostics, and conformity assessment pathways." },
+      { name: "twitter:title", content: "EU IVDR Classification Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "EU IVDR qualification and risk classification consulting across Class A, B, C, and D under Annex VIII Rules 1–7, CDx, and conformity assessment pathways." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr-classification" }],
@@ -121,7 +114,7 @@ function EUIVDRClassificationPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              IVDR Classification &amp; Conformity Assessment
+              EU IVDR Classification &amp; Conformity Assessment
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Under IVDR, over 85% of all in vitro diagnostic assays require Notified Body certification. We establish the exact reasoning chain from analyte, specimen and intended purpose to Annex VIII classification rules and evidence burden.

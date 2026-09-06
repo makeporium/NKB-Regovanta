@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/usa_fda_market_1786305218141.png";
 export const Route = createFileRoute("/insights/overcoming-fda-510k-clearance-barriers")({
   head: () => ({
     meta: [
-      { title: "Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds | NKB Regovanta" },
+      { title: "FDA 510(k) Clearance Barriers Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Strategies to resolve Refusal to Accept notices, Additional Information letters, and substantial equivalence challenges with CDRH.",
       },
-      {
-        name: "keywords",
-        content: "overcoming critical fda 510(k) clearance barriers: proven solutions to rta and ai holds, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds | NKB Regovanta" },
+      { property: "og:title", content: "FDA 510(k) Clearance Barriers Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Strategies to resolve Refusal to Accept notices, Additional Information letters, and substantial equivalence challenges with CDRH.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/overcoming-fda-510k-clearance-ba
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Overcoming Critical FDA 510(k) Clearance Barriers: Proven Solutions to RTA and AI Holds" },
+      { name: "twitter:title", content: "FDA 510(k) Clearance Barriers Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Strategies to resolve Refusal to Accept notices, Additional Information letters, and substantial equivalence challenges with CDRH." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">How to Overcome FDA 510k Clearance Barriers?</h2>
 
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Overview</h2>

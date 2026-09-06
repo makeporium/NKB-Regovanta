@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ear")({
   head: () => ({
     meta: [
-      { title: "European Authorized Representative (EAR / EC REP) Services | NKB Regovanta" },
+      { title: "European Authorized Representative | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Legally mandated European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR Article 11 and IVDR Article 11.",
+        content: "European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR & IVDR Article 11.",
       },
-      {
-        name: "keywords",
-        content:
-          "European Authorized Representative EAR, EC REP services Europe, MDR Article 11 Authorised Representative, Competent Authority liaison, EUDAMED registration, NKB Regovanta",
-      },
-      { property: "og:title", content: "European Authorized Representative (EC REP) | NKB Regovanta" },
+      { property: "og:title", content: "European Authorized Representative | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Fulfill your legal representation mandates across all 27 EU member states with our senior European regulatory representation infrastructure.",
+        content: "European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR & IVDR Article 11.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ear" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "European Authorized Representative (EAR / EC REP) Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Legally mandated European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR Article 11 and IVDR Article 11." },
+      { name: "twitter:title", content: "European Authorized Representative | NKB Regovanta" },
+      { name: "twitter:description", content: "European Authorized Representative (EC REP / EAR) representation in the EU for medical device and IVD manufacturers under MDR & IVDR Article 11." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ear" }],
@@ -129,7 +122,7 @@ function EUEARPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              European Authorized Representative (EAR / EC REP)
+              European Authorized Representative (EC REP / EAR) Services
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               For medical device and IVD manufacturers located outside the EU/EEA, appointing a legally designated European Authorized Representative (EC REP) is a mandatory prerequisite to place products on the Union market.

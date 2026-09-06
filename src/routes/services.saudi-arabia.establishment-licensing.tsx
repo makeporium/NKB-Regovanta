@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/saudi-arabia/establishment-licen
   head: () => ({
     meta: [
       {
-        title:
-          "Medical Device Establishment Licensing (MDEL / MDS-REQ 9) | SFDA Saudi Arabia | NKB Regovanta",
+        title: "SFDA Medical Device Establishment Licensing | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "SFDA establishment licensing for medical device importers, distributors, authorized representatives, and warehouses under MDS-REQ 9. GHAD account setup, QMS procedures, and supply-chain compliance.",
+          "SFDA medical device establishment licensing (MDS-REQ 9): importer, distributor & warehouse licensing, GHAD account setup, and supply-chain QMS compliance.",
       },
-      { name: "keywords", content: "Medical Device Establishment Licensing (MDEL / MDS-REQ 9), SFDA Saudi Arabia, services saudi arabia establishment licensing, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Medical Device Establishment Licensing (MDEL / MDS-REQ 9) | SFDA Saudi Arabia | NKB Regovanta" },
-      { property: "og:description", content: "SFDA establishment licensing for medical device importers, distributors, authorized representatives, and warehouses under MDS-REQ 9. GHAD account setup, QMS procedures, and supply-chain compliance." },
+      { property: "og:title", content: "SFDA Medical Device Establishment Licensing | NKB Regovanta" },
+      { property: "og:description", content: "SFDA medical device establishment licensing (MDS-REQ 9): importer, distributor & warehouse licensing, GHAD account setup, and supply-chain QMS compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/establishment-licensing" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Establishment Licensing (MDEL / MDS-REQ 9) | SFDA Saudi Arabia | NKB Regovanta" },
-      { name: "twitter:description", content: "SFDA establishment licensing for medical device importers, distributors, authorized representatives, and warehouses under MDS-REQ 9. GHAD account setup, QMS procedures, and supply-chain compliance." },
+      { name: "twitter:title", content: "SFDA Medical Device Establishment Licensing | NKB Regovanta" },
+      { name: "twitter:description", content: "SFDA medical device establishment licensing (MDS-REQ 9): importer, distributor & warehouse licensing, GHAD account setup, and supply-chain QMS compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/establishment-licensing" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Establishment Licensing for Medical Devices (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA establishment licensing consulting for manufacturers and importers of medical devices in Saudi Arabia - facility registration, license issuance, and renewal.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiEstablishmentLicensingPage,
 });

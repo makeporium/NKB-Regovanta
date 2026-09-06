@@ -13,22 +13,48 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/qms")({
   head: () => ({
     meta: [
-      { title: "UK MDR 2002 Quality Management System (QMS) | ISO 13485 | NKB Regovanta" },
+      { title: "UK MDR QMS & ISO 13485 Consulting | NKB Regovanta" },
       {
-        name: "description", content: "UK MDR 2002 Quality Management System consulting including ISO 13485:2016 implementation, UK Conformity Assessed (UKCA) technical file preparation, MHRA registration, and QMS compliance for medical devices marketed in Great Britain and Northern Ireland.",
+        name: "description",
+        content: "UK MDR 2002 Quality Management System consulting: ISO 13485:2016 implementation, UKCA technical files, and MHRA QMS compliance in Great Britain.",
       },
-      { name: "keywords", content: "UK MDR 2002 Quality Management System (QMS), ISO 13485, services uk audit readiness, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UK MDR 2002 Quality Management System (QMS) | ISO 13485 | NKB Regovanta" },
-      { property: "og:description", content: "UK MDR 2002 Quality Management System consulting including ISO 13485:2016 implementation, UK Conformity Assessed (UKCA) technical file preparation, MHRA registration, and QMS compliance for medical devices marketed in..." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/audit-readiness" },
+      { property: "og:title", content: "UK MDR QMS & ISO 13485 Consulting | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "UK MDR 2002 Quality Management System consulting: ISO 13485:2016 implementation, UKCA technical files, and MHRA QMS compliance in Great Britain.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/qms" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK MDR 2002 Quality Management System (QMS) | ISO 13485 | NKB Regovanta" },
-      { name: "twitter:description", content: "UK MDR 2002 Quality Management System consulting including ISO 13485:2016 implementation, UK Conformity Assessed (UKCA) technical file preparation, MHRA registration, and QMS compliance for medical devices marketed in..." },
+      { name: "twitter:title", content: "UK MDR QMS & ISO 13485 Consulting | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "UK MDR 2002 Quality Management System consulting: ISO 13485:2016 implementation, UKCA technical files, and MHRA QMS compliance in Great Britain.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/audit-readiness" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/qms" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "UK MDR 2002 Quality Management System (QMS) Consulting",
+          description: "ISO 13485 implementation and UK MDR 2002 QMS compliance for medical device manufacturers.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
+    ],
   }),
   component: UKQMSPage,
 });

@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/medtech_reg_lab.jpg";
 export const Route = createFileRoute("/insights/remote-patient-monitoring-devices-regulatory-framework")({
   head: () => ({
     meta: [
-      { title: "Regulatory Strategies for Remote Patient Monitoring (RPM) Systems | NKB Regovanta" },
+      { title: "Remote Patient Monitoring Regulations | NKB Regovanta" },
       {
         name: "description",
         content: "Navigating FDA 510(k), HIPAA, cybersecurity, and EU MDR compliance for connected diagnostic sensors and telehealth platforms.",
       },
-      {
-        name: "keywords",
-        content: "regulatory strategies for remote patient monitoring (rpm) systems, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Regulatory Strategies for Remote Patient Monitoring (RPM) Systems | NKB Regovanta" },
+      { property: "og:title", content: "Remote Patient Monitoring Regulations | NKB Regovanta" },
       {
         property: "og:description",
         content: "Navigating FDA 510(k), HIPAA, cybersecurity, and EU MDR compliance for connected diagnostic sensors and telehealth platforms.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/remote-patient-monitoring-device
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Regulatory Strategies for Remote Patient Monitoring (RPM) Systems" },
+      { name: "twitter:title", content: "Remote Patient Monitoring Regulations | NKB Regovanta" },
       { name: "twitter:description", content: "Navigating FDA 510(k), HIPAA, cybersecurity, and EU MDR compliance for connected diagnostic sensors and telehealth platforms." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
     ],
@@ -97,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">Guidance on Remote Patient Monitoring Devices</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Remote Patient Monitoring Devices has emerged as the next significant challenge for virtual healthcare and that challenge is creating significant opportunities for many companies largely outside of the traditional healthcare technology marketplace. In an age when nearly everyone is digitally connected in some way – even many senior citizens, who are often characterized as technophobic – it only makes sense that the healthcare industry is seeing a lot of connected health devices.</p>

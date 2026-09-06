@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/establishment-registration")({
   head: () => ({
     meta: [
-      { title: "FDA Establishment Registration & Device Listing (FURLS) | NKB Regovanta" },
+      { title: "FDA Establishment Registration | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Complete FDA Establishment Registration & Device Listing support via FDA FURLS/CDRH portal. Annual renewals, PIN/PCN management, US Agent coordination, and regulatory alignment.",
+        content: "FDA Establishment Registration and Device Listing via FURLS. Annual renewals, MDUFA fee management, and US Agent coordination with expert consultants.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA establishment registration, FDA device listing, FURLS registration, annual FDA renewal, MDUFA user fee, US Agent, NKB Regovanta",
-      },
-      { property: "og:title", content: "FDA Establishment Registration & Device Listing | NKB Regovanta" },
+      { property: "og:title", content: "FDA Establishment Registration | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We support initial registration, device listing and annual maintenance while checking alignment with the device's actual regulatory status and market pathway.",
+        content: "FDA Establishment Registration and Device Listing via FURLS. Annual renewals, MDUFA fee management, and US Agent coordination with expert consultants.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/establishment-registration" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA Establishment Registration & Device Listing (FURLS) | NKB Regovanta" },
-      { name: "twitter:description", content: "Complete FDA Establishment Registration & Device Listing support via FDA FURLS/CDRH portal. Annual renewals, PIN/PCN management, US Agent coordination, and regulatory alignment." },
+      { name: "twitter:title", content: "FDA Establishment Registration | NKB Regovanta" },
+      { name: "twitter:description", content: "FDA Establishment Registration and Device Listing via FURLS. Annual renewals, MDUFA fee management, and US Agent coordination with expert consultants." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/establishment-registration" }],

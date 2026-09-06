@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
 export const Route = createFileRoute("/insights/ce-marking-process-medical-devices-eu-mdr")({
   head: () => ({
     meta: [
-      { title: "The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745 | NKB Regovanta" },
+      { title: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
       {
         name: "description",
         content: "From intended purpose definition to Notified Body certification and Declaration of Conformity: an actionable implementation roadmap.",
       },
-      {
-        name: "keywords",
-        content: "the step-by-step ce marking process for medical devices under eu mdr 2017/745, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745 | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "From intended purpose definition to Notified Body certification and Declaration of Conformity: an actionable implementation roadmap.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/ce-marking-process-medical-devic
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The Step-by-Step CE Marking Process for Medical Devices Under EU MDR 2017/745" },
+      { name: "twitter:title", content: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
       { name: "twitter:description", content: "From intended purpose definition to Notified Body certification and Declaration of Conformity: an actionable implementation roadmap." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
     ],

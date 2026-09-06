@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/mdr-ivdr-transition")({
   head: () => ({
     meta: [
-      { title: "MDD to MDR & IVDD to IVDR Legacy Transition Consultant | NKB Regovanta" },
+      { title: "EU MDR & IVDR Transition Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU MDR Article 120 & IVDR Article 110 legacy transition consulting, gap analysis, technical documentation remediation, CER/PER upgrades, and Notified Body recertification.",
+        content: "EU MDR Article 120 & IVDR Article 110 transition consulting: gap analysis, technical documentation remediation, and Notified Body recertification.",
       },
-      {
-        name: "keywords",
-        content:
-          "MDD to MDR transition, IVDD to IVDR transition, Article 120 MDR extension, legacy medical devices Europe, MDR gap analysis, Notified Body recertification, NKB Regovanta",
-      },
-      { property: "og:title", content: "MDD/AIMDD to MDR & IVDD to IVDR Transition | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR & IVDR Transition Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We distinguish documentation gaps from true evidence and strategy gaps — preventing unnecessary rewriting and focusing remediation on what affects CE conformity.",
+        content: "EU MDR Article 120 & IVDR Article 110 transition consulting: gap analysis, technical documentation remediation, and Notified Body recertification.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/mdr-ivdr-transition" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MDD to MDR & IVDD to IVDR Legacy Transition Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU MDR Article 120 & IVDR Article 110 legacy transition consulting, gap analysis, technical documentation remediation, CER/PER upgrades, and Notified Body recertification." },
+      { name: "twitter:title", content: "EU MDR & IVDR Transition Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Article 120 & IVDR Article 110 transition consulting: gap analysis, technical documentation remediation, and Notified Body recertification." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/mdr-ivdr-transition" }],
@@ -120,7 +113,7 @@ function EULegacyTransitionPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              MDD/AIMDD to MDR &amp; IVDD to IVDR Transition
+              EU MDR &amp; IVDR Legacy Transition Consulting
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Transitioning legacy products to the MDR/IVDR framework requires methodical gap identification across clinical data, risk management and GSPR evidence. We upgrade your legacy files into audit-ready CE packages.

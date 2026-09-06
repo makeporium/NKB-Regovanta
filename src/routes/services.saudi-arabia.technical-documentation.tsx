@@ -49,26 +49,45 @@ export const Route = createFileRoute("/services/saudi-arabia/technical-documenta
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Technical Documentation & Essential Principles (MDS-REQ 1) | NKB Regovanta",
+        title: "SFDA Technical Documentation Services | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Technical documentation compilation for SFDA MDMA submissions under MDS-REQ 1. Essential Principles checklist mapping, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence.",
+          "Technical documentation compilation for SFDA MDMA under MDS-REQ 1. Essential Principles mapping, ISO 14971 risk files, and clinical evaluation evidence.",
       },
-      { name: "keywords", content: "SFDA Technical Documentation & Essential Principles (MDS-REQ 1), services saudi arabia technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Technical Documentation & Essential Principles (MDS-REQ 1) | NKB Regovanta" },
-      { property: "og:description", content: "Technical documentation compilation for SFDA MDMA submissions under MDS-REQ 1. Essential Principles checklist mapping, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence." },
+      { property: "og:title", content: "SFDA Technical Documentation Services | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Technical documentation compilation for SFDA MDMA under MDS-REQ 1. Essential Principles mapping, ISO 14971 risk files, and clinical evaluation evidence.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Technical Documentation & Essential Principles (MDS-REQ 1) | NKB Regovanta" },
-      { name: "twitter:description", content: "Technical documentation compilation for SFDA MDMA submissions under MDS-REQ 1. Essential Principles checklist mapping, ISO 14971 risk management, clinical evaluation, and pre-clinical evidence." },
+      { name: "twitter:title", content: "SFDA Technical Documentation Services | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Technical documentation compilation for SFDA MDMA under MDS-REQ 1. Essential Principles mapping, ISO 14971 risk files, and clinical evaluation evidence.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/technical-documentation" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Technical Documentation (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "Technical documentation and dossier preparation for SFDA medical device registrations in Saudi Arabia - design dossier, ISO 14971 risk management, and clinical evidence.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiTechnicalDocPage,
 });

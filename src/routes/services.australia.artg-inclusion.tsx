@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/artg-inclusion")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia ARTG Inclusion & Application Preparation | NKB Regovanta",
+        title: "TGA ARTG Inclusion Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense.",
+          "TGA ARTG inclusion applications for medical devices & IVDs: kind-of-device grouping, GMDN code alignment, TBS submissions, and application audit defense.",
       },
-      { name: "keywords", content: "Australia ARTG Inclusion & Application Preparation, services australia artg inclusion, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia ARTG Inclusion & Application Preparation | NKB Regovanta" },
-      { property: "og:description", content: "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense." },
+      { property: "og:title", content: "TGA ARTG Inclusion Consultant | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA ARTG inclusion applications for medical devices & IVDs: kind-of-device grouping, GMDN code alignment, TBS submissions, and application audit defense.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/artg-inclusion" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia ARTG Inclusion & Application Preparation | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA ARTG inclusion applications for Medical Devices and IVDs. Kind-of-device grouping, GMDN code alignment, TBS electronic submissions, and application audit defense." },
+      { name: "twitter:title", content: "TGA ARTG Inclusion Consultant | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA ARTG inclusion applications for medical devices & IVDs: kind-of-device grouping, GMDN code alignment, TBS submissions, and application audit defense.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/artg-inclusion" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA ARTG Inclusion & Application Preparation",
+          description: "TGA ARTG inclusion applications, kind-of-device grouping, and TBS electronic lodgement for medical devices.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaARTGInclusionPage,
 });
@@ -130,7 +156,7 @@ function AustraliaARTGInclusionPage() {
               Australian Register of Therapeutic Goods
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              ARTG Inclusion Strategy &amp; Application Preparation
+              TGA ARTG Inclusion Strategy &amp; Application Preparation
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               ARTG inclusion is not a simple product-by-product registration. The application is built around the Australian concept of a “kind of medical device”, with classification, GMDN, manufacturer, conformity assessment evidence and grouping logic determining how devices are represented in the ARTG.

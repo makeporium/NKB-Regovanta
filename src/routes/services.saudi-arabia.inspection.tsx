@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/saudi-arabia/inspection")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Inspection & Quality-System Readiness (MDS-REQ 10 / ISO 13485) | NKB Regovanta",
+        title: "SFDA Inspection & QMS Readiness | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "SFDA on-site audit and inspection preparation for medical device manufacturers and local establishments. QMS gap assessment under MDS-REQ 10, mock audits, and corrective action closure.",
+          "SFDA inspection and audit preparation: MDS-REQ 10 & ISO 13485 quality system gap assessments, mock inspections, and corrective action response closure.",
       },
-      { name: "keywords", content: "SFDA Inspection & Quality-System Readiness (MDS-REQ 10 / ISO 13485), services saudi arabia inspection, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Inspection & Quality-System Readiness (MDS-REQ 10 / ISO 13485) | NKB Regovanta" },
-      { property: "og:description", content: "SFDA on-site audit and inspection preparation for medical device manufacturers and local establishments. QMS gap assessment under MDS-REQ 10, mock audits, and corrective action closure." },
+      { property: "og:title", content: "SFDA Inspection & QMS Readiness | NKB Regovanta" },
+      { property: "og:description", content: "SFDA inspection and audit preparation: MDS-REQ 10 & ISO 13485 quality system gap assessments, mock inspections, and corrective action response closure." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/inspection" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Inspection & Quality-System Readiness (MDS-REQ 10 / ISO 13485) | NKB Regovanta" },
-      { name: "twitter:description", content: "SFDA on-site audit and inspection preparation for medical device manufacturers and local establishments. QMS gap assessment under MDS-REQ 10, mock audits, and corrective action closure." },
+      { name: "twitter:title", content: "SFDA Inspection & QMS Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "SFDA inspection and audit preparation: MDS-REQ 10 & ISO 13485 quality system gap assessments, mock inspections, and corrective action response closure." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/inspection" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Factory Inspection Preparation (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA factory inspection readiness consulting for medical device manufacturers in Saudi Arabia - pre-inspection gap assessment, CAPA support, and audit preparation.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiInspectionPage,
 });

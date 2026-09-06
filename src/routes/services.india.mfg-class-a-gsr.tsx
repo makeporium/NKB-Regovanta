@@ -6,21 +6,40 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
   component: MfgClassAGsrPage,
   head: () => ({
     meta: [
-{ title: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
-      { name: "description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records from NKB Regovanta regulatory experts." },
-{ name: "keywords", content: "Manufacturing Registration Class A Medical Devices India, GSR 777(E), services india mfg class a gsr, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
-      { property: "og:description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records ..." },
+      { title: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },
+      { name: "description", content: "Class A medical device manufacturing registration under GSR 777(E) in India. Fast online intimation, plant layout review, and SLA compliance support." },
+      { property: "og:title", content: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },
+      { property: "og:description", content: "Class A medical device manufacturing registration under GSR 777(E) in India. Fast online intimation, plant layout review, and SLA compliance support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/mfg-class-a-gsr" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Manufacturing Registration Class A Medical Devices India | GSR 777(E) | NKB Regovanta" },
-      { name: "twitter:description", content: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India. Simplified online SLA intimation process. Complete guidance on documentation, plant layout compliance, and production records ..." },
+      { name: "twitter:title", content: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },
+      { name: "twitter:description", content: "Class A medical device manufacturing registration under GSR 777(E) in India. Fast online intimation, plant layout review, and SLA compliance support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/mfg-class-a-gsr" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Class A Manufacturing Registration (GSR 777(E))",
+          description: "Manufacturing registration under GSR 777(E) for Class A low-risk medical devices in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -87,9 +106,9 @@ function MfgClassAGsrPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Class</span> A Manufacturing <br/> Registration (GSR 777(E))
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

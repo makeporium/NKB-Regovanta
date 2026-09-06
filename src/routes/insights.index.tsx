@@ -23,30 +23,44 @@ const imgBrazil = "/assets/brain/brazil_anvisa_market_1786307160850.png";
 export const Route = createFileRoute("/insights/")({
   head: () => ({
     meta: [
-      { title: "Regulatory Insights, MedTech Articles & Intelligence | NKB Regovanta" },
+      { title: "Global Regulatory Knowledge Hub | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Comprehensive library of expert regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, IVDR, CDSCO, ISO 13485, and SaMD.",
+          "Expert medical device regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, CDSCO, ISO 13485, and IVDR.",
       },
-      {
-        name: "keywords",
-        content: "medical device insights, EU AI Act, EU MDR 2026, Rule 63 CDSCO, FDA QMSR, 510(k), GSPR, IEC 62304, regulatory consulting intelligence, NKB Regovanta",
-      },
-      { property: "og:title", content: "Regulatory Insights & Industry Intelligence | NKB Regovanta" },
+      { property: "og:title", content: "Global Regulatory Knowledge Hub | NKB Regovanta" },
       {
         property: "og:description",
-        content: "Industry-leading regulatory news, expert technical analyses, and practical guides for global MedTech and IVD manufacturers.",
+        content: "Expert medical device regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, CDSCO, ISO 13485, and IVDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights" },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Regulatory Insights & Industry Intelligence | NKB Regovanta" },
-      { name: "twitter:description", content: "Expert insights, regulatory updates, and compliance guides on US FDA, EU MDR, CDSCO, and global medical device regulations." },
+      { name: "twitter:title", content: "Global Regulatory Knowledge Hub | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert medical device regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, CDSCO, ISO 13485, and IVDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Global Regulatory Knowledge Hub",
+          url: "https://www.nkbregovanta.com/insights",
+          description: "Expert medical device regulatory insights, compliance guides, and market access intelligence covering US FDA, EU MDR, CDSCO, ISO 13485, and IVDR.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com"
+          }
+        })
+      }
     ],
   }),
   component: Insights,

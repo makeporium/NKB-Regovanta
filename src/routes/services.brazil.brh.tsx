@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/brh")({
   head: () => ({
     meta: [
       {
-        title:
-          "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta",
+        title: "Brazil Registration Holder (BRH) Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination.",
+          "Brazil Registration Holder (BRH) representation, AFE verification, dossier governance, tecnovigilância reporting, and recall coordination with ANVISA.",
       },
-      { name: "keywords", content: "Brazil Registration Holder (BRH) & Local Regulatory Interface, services brazil brh, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta" },
-      { property: "og:description", content: "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination." },
+      { property: "og:title", content: "Brazil Registration Holder (BRH) Support | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Brazil Registration Holder (BRH) representation, AFE verification, dossier governance, tecnovigilância reporting, and recall coordination with ANVISA.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/brh" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Brazil Registration Holder (BRH) & Local Regulatory Interface | NKB Regovanta" },
-      { name: "twitter:description", content: "Brazil Registration Holder (BRH) representation, ANVISA regulatory interface, Operating Authorization (AFE) verification, dossier ownership governance, tecnovigilância reporting, and recall coordination." },
+      { name: "twitter:title", content: "Brazil Registration Holder (BRH) Support | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Brazil Registration Holder (BRH) representation, AFE verification, dossier governance, tecnovigilância reporting, and recall coordination with ANVISA.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/brh" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Brazil Registration Holder (BRH) & Local Regulatory Interface",
+          description: "BRH readiness, manufacturer-holder agreements, AFE compliance, and ANVISA regulatory interface for foreign medical device manufacturers.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilBRHPage,
 });
@@ -127,7 +150,7 @@ function BrazilBRHPage() {
               Detentor do Registro &amp; Governance
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Brazil Registration Holder &amp; Local Regulatory Interface
+              Brazil Registration Holder (BRH) &amp; ANVISA Interface
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Foreign manufacturers require a legally established Brazilian entity to hold the ANVISA notification or registration and interface with the Agency. The local holder is more than an address: it is central to submissions, changes, importation coordination, post-market reporting, field actions and access to the technical documentation that supports the product.

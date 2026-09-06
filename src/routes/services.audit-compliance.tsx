@@ -6,25 +6,45 @@ import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
 export const Route = createFileRoute("/services/audit-compliance")({
   head: () => ({
     meta: [
-      { title: "Audit & Compliance Support | Services | NKB Regovanta" },
+      { title: "Audit & Compliance Support | NKB Regovanta" },
       {
-        name: "description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA remediation support.",
+        name: "description",
+        content:
+          "Medical device audit readiness and compliance consulting: MDSAP, ISO 13485, FDA QMSR, EU MDR Annex IX, authority inspections, and CAPA remediation.",
       },
-      { name: "keywords", content: "medical device audit compliance, MDSAP audit readiness, ISO 13485 audit, FDA inspection preparation, EU MDR Notified Body audit" },
-      { property: "og:title", content: "Audit & Compliance Support | Services | NKB Regovanta" },
-      { property: "og:description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA reme..." },
+      { property: "og:title", content: "Audit & Compliance Support | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Medical device audit readiness and compliance consulting: MDSAP, ISO 13485, FDA QMSR, EU MDR Annex IX, authority inspections, and CAPA remediation.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/audit-compliance" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Audit & Compliance Support | Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Complete audit readiness and compliance consulting for medical device manufacturers. MDSAP, ISO 13485, FDA QSR/QMSR, EU MDR Annex IX, and country-specific authority inspections. Pre-audit gap assessments and CAPA reme..." },
+      { name: "twitter:title", content: "Audit & Compliance Support | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Medical device audit readiness and compliance consulting: MDSAP, ISO 13485, FDA QMSR, EU MDR Annex IX, authority inspections, and CAPA remediation.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "keywords", content: "medical device audit compliance, MDSAP audit readiness, ISO 13485 audit, FDA inspection preparation, EU MDR Notified Body audit" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/audit-compliance" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medical Device Audit & Compliance Support",
+          description: "Pre-audit gap assessments, mock audits, CAPA remediation, and compliance consulting for MDSAP, ISO 13485, FDA QMSR, and EU MDR inspections.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: AuditComplianceService,
 });

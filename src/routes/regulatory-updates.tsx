@@ -29,26 +29,21 @@ export const Route = createFileRoute("/regulatory-updates")({
     head: () => ({
         meta: [
             {
-                title: "Regulatory Updates & Intelligence Feed | NKB Regovanta",
+                title: "Global Regulatory Updates Feed | NKB Regovanta",
             },
             {
                 name: "description",
                 content:
-                    "Real-time AI-structured regulatory updates, alerts, and guidance from US FDA, CDSCO India, European Commission (EU MDR/IVDR), and MDSAP.",
-            },
-            {
-                name: "keywords",
-                content:
-                    "medical device regulatory updates, FDA alerts, CDSCO notices, EU MDR news, IVDR transitions, MDSAP updates, global regulatory compliance feed",
+                    "Comprehensive medical device regulatory updates from FDA, CDSCO, EU MDR, and MDSAP. Track safety alerts, guidance publications, and compliance notices.",
             },
             {
                 property: "og:title",
-                content: "Regulatory Updates & Intelligence Feed | NKB Regovanta",
+                content: "Global Regulatory Updates Feed | NKB Regovanta",
             },
             {
                 property: "og:description",
                 content:
-                    "Real-time AI-structured regulatory updates, alerts, and guidance from US FDA, CDSCO India, European Commission (EU MDR/IVDR), and MDSAP.",
+                    "Comprehensive medical device regulatory updates from FDA, CDSCO, EU MDR, and MDSAP. Track safety alerts, guidance publications, and compliance notices.",
             },
             {
                 property: "og:url",
@@ -68,12 +63,12 @@ export const Route = createFileRoute("/regulatory-updates")({
             },
             {
                 name: "twitter:title",
-                content: "Regulatory Updates & Intelligence Feed | NKB Regovanta",
+                content: "Global Regulatory Updates Feed | NKB Regovanta",
             },
             {
                 name: "twitter:description",
                 content:
-                    "Real-time AI-structured regulatory updates, alerts, and guidance from US FDA, CDSCO India, European Commission (EU MDR/IVDR), and MDSAP.",
+                    "Comprehensive medical device regulatory updates from FDA, CDSCO, EU MDR, and MDSAP. Track safety alerts, guidance publications, and compliance notices.",
             },
             {
                 name: "twitter:image",
@@ -86,11 +81,28 @@ export const Route = createFileRoute("/regulatory-updates")({
                 href: "https://www.nkbregovanta.com/regulatory-updates",
             },
         ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: "Global Medical Device Regulatory Updates Feed",
+                    description:
+                        "Comprehensive medical device regulatory updates from FDA, CDSCO, EU MDR, and MDSAP. Track safety alerts, guidance publications, and compliance notices.",
+                    publisher: {
+                        "@type": "Organization",
+                        name: "NKB Regovanta",
+                        url: "https://www.nkbregovanta.com",
+                    },
+                }),
+            },
+        ],
     }),
     component: RegulatoryUpdatesPage,
 });
 
 function RegulatoryUpdatesPage() {
     const { items, cachedAt } = Route.useLoaderData();
-    return <RegulatoryDashboard items={items} cachedAt={cachedAt} />;
+    return <RegulatoryDashboard items={items} cachedAt={cachedAt} title="Global Regulatory Updates & Intelligence Feed" />;
 }

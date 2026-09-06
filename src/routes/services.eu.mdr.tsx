@@ -37,34 +37,25 @@ export const Route = createFileRoute("/services/eu/mdr")({
   head: () => ({
     meta: [
       {
-        title:
-          "EU MDR 2017/745 Regulatory Consulting for Medical Devices | CE Marking & CER | NKB Regovanta",
+        title: "EU MDR Compliance & CE Marking | NKB Regovanta",
       },
       {
         name: "description",
-        content:
-          "Specialized EU MDR 2017/745 regulatory consulting for Medical Devices across Class I, IIa, IIb, and III. Technical Documentation (Annex II/III), GSPR, Clinical Evaluation (CER), PMCF, Notified Body review defense, and CE marking.",
-      },
-      {
-        name: "keywords",
-        content:
-          "EU MDR 2017/745 consultant, Medical Device Regulation Europe, MDR Technical Documentation, GSPR checklist, Clinical Evaluation Report CER, PMCF plan, Notified Body review, CE marking medical devices, NKB Regovanta",
+        content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking.",
       },
       {
         property: "og:title",
-        content: "EU MDR 2017/745 Regulatory Consulting for Medical Devices | NKB Regovanta",
+        content: "EU MDR Compliance & CE Marking | NKB Regovanta",
       },
       {
         property: "og:description",
-        content:
-          "End-to-end EU MDR 2017/745 compliance support from classification and testing to Notified Body defense and CE certification.",
+        content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/mdr" },
-      { name: "keywords", content: "EU MDR consultant, CE marking medical devices, EU MDR 2017/745, clinical evaluation EU, Notified Body EU, technical documentation MDR" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR 2017/745 Regulatory Consulting for Medical Devices | CE Marking & CER | NKB Regovanta" },
-      { name: "twitter:description", content: "Specialized EU MDR 2017/745 regulatory consulting for Medical Devices across Class I, IIa, IIb, and III. Technical Documentation (Annex II/III), GSPR, Clinical Evaluation (CER), PMCF, Notified Body review defense, and..." },
+      { name: "twitter:title", content: "EU MDR Compliance & CE Marking | NKB Regovanta" },
+      { name: "twitter:description", content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/mdr" }],

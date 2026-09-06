@@ -159,17 +159,16 @@ export const Route = createFileRoute("/services/india/")({
   component: IndiaCDSCOPage,
   head: () => ({
     meta: [
-      { title: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
-      { name: "description", content: "India leading CDSCO medical device regulatory consulting firm. Import licences (MD-14/15), manufacturing licences (MD-3 to MD-9), loan licences, test licences, Indian Authorized Agent (IAA) services, and full SUGAM portal support from NKB Regovanta." },
-{ name: "keywords", content: "CDSCO medical device consultant India, medical device import licence India, MD-14 MD-15 import licence, CDSCO manufacturing licence, Indian Authorized Agent IAA" },
-      { property: "og:title", content: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
-      { property: "og:description", content: "India leading CDSCO medical device regulatory consulting firm. Import licences (MD-14/15), manufacturing licences (MD-3 to MD-9), loan licences, test licences, Indian Authorized Agent (IAA) services, and full SUGAM po..." },
+      { title: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { name: "description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
+      { property: "og:title", content: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { property: "og:description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
-      { name: "twitter:description", content: "India leading CDSCO medical device regulatory consulting firm. Import licences (MD-14/15), manufacturing licences (MD-3 to MD-9), loan licences, test licences, Indian Authorized Agent (IAA) services, and full SUGAM po..." },
+      { name: "twitter:title", content: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { name: "twitter:description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
@@ -250,9 +249,9 @@ function IndiaCDSCOPage() {
 
         {/* Mobile: stacked */}
         <div className="md:hidden px-4 pt-12 pb-8 sm:px-6">
-          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">CDSCO</span> Medical Device Registration in India
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

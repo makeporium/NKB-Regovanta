@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
 export const Route = createFileRoute("/case-studies/fda-simulated-use")({
   head: () => ({
     meta: [
-      { title: "US FDA 510(k) | Avoiding Duplicate Work | Case Studies | NKB Regovanta" },
-      { name: "description", content: "NKB Regovanta designed a single FDA 510(k) test protocol covering three substantial equivalence arguments with one shared simulated-use usability study — saving client time and budget across multiple device classes." },
-      { name: "keywords", content: "US FDA 510(k), Avoiding Duplicate Work, Case Studies, case studies fda simulated use, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "US FDA 510(k) | Avoiding Duplicate Work | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "NKB Regovanta designed a single FDA 510(k) test protocol covering three substantial equivalence arguments with one shared simulated-use usability study — saving client time and budget across multiple device classes." },
+      { title: "FDA Simulated-Use Testing Case Study | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: How NKB Regovanta designed a unified FDA 510(k) simulated-use study covering three equivalence arguments to cut client testing time in half.",
+      },
+      { property: "og:title", content: "FDA Simulated-Use Testing Case Study | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: How NKB Regovanta designed a unified FDA 510(k) simulated-use study covering three equivalence arguments to cut client testing time in half.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/fda-simulated-use" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "US FDA 510(k) | Avoiding Duplicate Work | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "NKB Regovanta designed a single FDA 510(k) test protocol covering three substantial equivalence arguments with one shared simulated-use usability study — saving client time and budget across multiple device classes." },
+      { name: "twitter:title", content: "FDA Simulated-Use Testing Case Study | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: How NKB Regovanta designed a unified FDA 510(k) simulated-use study covering three equivalence arguments to cut client testing time in half.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-simulated-use" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "FDA Simulated-Use Testing Case Study",
+          description:
+            "Case study: How NKB Regovanta designed a unified FDA 510(k) simulated-use study covering three equivalence arguments to cut client testing time in half.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });

@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Medical Device Classification & Schedule 2 Strategy | NKB Regovanta",
+        title: "NZ Medical Device Classification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical device risk classification under Schedule 2 of the Medicines Regulations 2003 in New Zealand. Class I, Is/Im, IIa, IIb, III, AIMD determination, and GMDN coding strategy.",
+          "Medical device classification under Schedule 2 in New Zealand — Class I to III, AIMD, IVD determination, and GMDN coding strategy for Medsafe WAND.",
       },
-      { name: "keywords", content: "New Zealand Medical Device Classification & Schedule 2 Strategy, services new zealand classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Medical Device Classification & Schedule 2 Strategy | NKB Regovanta" },
-      { property: "og:description", content: "Medical device risk classification under Schedule 2 of the Medicines Regulations 2003 in New Zealand. Class I, Is/Im, IIa, IIb, III, AIMD determination, and GMDN coding strategy." },
+      { property: "og:title", content: "NZ Medical Device Classification | NKB Regovanta" },
+      { property: "og:description", content: "Medical device classification under Schedule 2 in New Zealand — Class I to III, AIMD, IVD determination, and GMDN coding strategy for Medsafe WAND." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Medical Device Classification & Schedule 2 Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical device risk classification under Schedule 2 of the Medicines Regulations 2003 in New Zealand. Class I, Is/Im, IIa, IIb, III, AIMD determination, and GMDN coding strategy." },
+      { name: "twitter:title", content: "NZ Medical Device Classification | NKB Regovanta" },
+      { name: "twitter:description", content: "Medical device classification under Schedule 2 in New Zealand — Class I to III, AIMD, IVD determination, and GMDN coding strategy for Medsafe WAND." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/classification" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Medical Device Classification & Schedule 2 Strategy",
+          description: "Risk classification under Schedule 2 of the Medicines Regulations 2003, GMDN coding, and WAND exemption assessment for medical device market entry in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZClassificationPage,
 });

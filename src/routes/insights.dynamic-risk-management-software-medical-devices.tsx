@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/dynamic-risk-management-software-medical-devices")({
   head: () => ({
     meta: [
-      { title: "Dynamic Risk Management Frameworks for Software-Enabled Medical Devices | NKB Regovanta" },
+      { title: "Medical Device Software Risk Management | NKB Regovanta" },
       {
         name: "description",
         content: "Integrating ISO 14971, IEC 62304, and post-market anomaly tracking into an evolving software risk governance system.",
       },
-      {
-        name: "keywords",
-        content: "dynamic risk management frameworks for software-enabled medical devices, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Dynamic Risk Management Frameworks for Software-Enabled Medical Devices | NKB Regovanta" },
+      { property: "og:title", content: "Medical Device Software Risk Management | NKB Regovanta" },
       {
         property: "og:description",
         content: "Integrating ISO 14971, IEC 62304, and post-market anomaly tracking into an evolving software risk governance system.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/dynamic-risk-management-software
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_eu_mdr_remediation_1786441191745.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Dynamic Risk Management Frameworks for Software-Enabled Medical Devices" },
+      { name: "twitter:title", content: "Medical Device Software Risk Management | NKB Regovanta" },
       { name: "twitter:description", content: "Integrating ISO 14971, IEC 62304, and post-market anomaly tracking into an evolving software risk governance system." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_eu_mdr_remediation_1786441191745.png" },
     ],

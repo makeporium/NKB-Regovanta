@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/bgmp")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA BGMP / CBPF Compliance & Inspection Readiness (RDC 665/2022) | NKB Regovanta",
+        title: "ANVISA BGMP & CBPF Compliance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Brazilian Good Manufacturing Practice (BGMP / RDC 665/2022) compliance, CBPF certification under RDC 687/2022, ISO 13485 gap remediation, MDSAP leverage, and ANVISA on-site audit readiness.",
+          "ANVISA BGMP / CBPF compliance, RDC 665/2022 gap assessment, ISO 13485 cross-mapping, and ANVISA inspection readiness for Brazil device registrations.",
       },
-      { name: "keywords", content: "ANVISA BGMP / CBPF Compliance & Inspection Readiness (RDC 665/2022), services brazil bgmp, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA BGMP / CBPF Compliance & Inspection Readiness (RDC 665/2022) | NKB Regovanta" },
-      { property: "og:description", content: "Brazilian Good Manufacturing Practice (BGMP / RDC 665/2022) compliance, CBPF certification under RDC 687/2022, ISO 13485 gap remediation, MDSAP leverage, and ANVISA on-site audit readiness." },
+      { property: "og:title", content: "ANVISA BGMP & CBPF Compliance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA BGMP / CBPF compliance, RDC 665/2022 gap assessment, ISO 13485 cross-mapping, and ANVISA inspection readiness for Brazil device registrations.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/bgmp" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA BGMP / CBPF Compliance & Inspection Readiness (RDC 665/2022) | NKB Regovanta" },
-      { name: "twitter:description", content: "Brazilian Good Manufacturing Practice (BGMP / RDC 665/2022) compliance, CBPF certification under RDC 687/2022, ISO 13485 gap remediation, MDSAP leverage, and ANVISA on-site audit readiness." },
+      { name: "twitter:title", content: "ANVISA BGMP & CBPF Compliance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA BGMP / CBPF compliance, RDC 665/2022 gap assessment, ISO 13485 cross-mapping, and ANVISA inspection readiness for Brazil device registrations.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/bgmp" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA BGMP / CBPF Compliance & Inspection Readiness (RDC 665/2022)",
+          description: "BGMP gap assessment, CBPF certification support, and ANVISA audit preparation for Brazil medical device manufacturers.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilBGMPPage,
 });
@@ -131,7 +154,7 @@ function BrazilBGMPPage() {
               RDC 665/2022 &amp; RDC 687/2022
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              BGMP / CBPF Compliance &amp; ANVISA Inspection Readiness
+              ANVISA BGMP &amp; CBPF Compliance (RDC 665/2022)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Brazilian Good Manufacturing Practice expectations for medical devices and IVDs are consolidated in RDC 665/2022. For manufacturers of Class III and IV devices, ANVISA CBPF certification is governed by RDC 687/2022 and related administrative requirements. The regulatory issue is not simply whether the manufacturer holds ISO 13485 certification; ANVISA expects evidence that the applicable Brazilian GMP requirements are effectively implemented.

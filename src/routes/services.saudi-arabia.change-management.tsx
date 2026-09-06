@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/saudi-arabia/change-management")
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA Changes, Variations, MDMA Renewal & Lifecycle Support | NKB Regovanta",
+        title: "SFDA Variations & MDMA Renewal Support | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, manufacturing site additions, renewal applications, and technical file updates.",
+          "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, site additions, renewals, and technical updates.",
       },
-      { name: "keywords", content: "SFDA Changes, Variations, MDMA Renewal & Lifecycle Support, services saudi arabia change management, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA Changes, Variations, MDMA Renewal & Lifecycle Support | NKB Regovanta" },
-      { property: "og:description", content: "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, manufacturing site additions, renewal applications, and technical file updates." },
+      { property: "og:title", content: "SFDA Variations & MDMA Renewal Support | NKB Regovanta" },
+      { property: "og:description", content: "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, site additions, renewals, and technical updates." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/change-management" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA Changes, Variations, MDMA Renewal & Lifecycle Support | NKB Regovanta" },
-      { name: "twitter:description", content: "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, manufacturing site additions, renewal applications, and technical file updates." },
+      { name: "twitter:title", content: "SFDA Variations & MDMA Renewal Support | NKB Regovanta" },
+      { name: "twitter:description", content: "SFDA change notification and regulatory variation management in Saudi Arabia. MDMA amendments, site additions, renewals, and technical updates." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/change-management" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Medical Device Change Management (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA post-registration change management for medical devices in Saudi Arabia - significant and non-significant changes, notifications, and re-registration.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiChangeManagementPage,
 });

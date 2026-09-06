@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
 export const Route = createFileRoute("/insights/notified-body-expectations-eu-mdr-technical-documentation")({
   head: () => ({
     meta: [
-      { title: "What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III) | NKB Regovanta" },
+      { title: "EU MDR Technical Documentation Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Audit checklists, common non-conformities, and how to construct robust, traceable evidence files that pass first-round review.",
       },
-      {
-        name: "keywords",
-        content: "what notified bodies look for in eu mdr technical documentation (annex ii & iii), medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III) | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Technical Documentation Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Audit checklists, common non-conformities, and how to construct robust, traceable evidence files that pass first-round review.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/notified-body-expectations-eu-md
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "What Notified Bodies Look For in EU MDR Technical Documentation (Annex II & III)" },
+      { name: "twitter:title", content: "EU MDR Technical Documentation Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Audit checklists, common non-conformities, and how to construct robust, traceable evidence files that pass first-round review." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
     ],

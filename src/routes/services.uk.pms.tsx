@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/pms")({
   head: () => ({
     meta: [
-      { title: "Great Britain Post-Market Surveillance (PMS), PMSR / PSUR & Vigilance | NKB Regovanta" },
+      { title: "UK Post-Market Surveillance PMS | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior regulatory compliance for Great Britain's strengthened 2025 PMS requirements, PMSR, Periodic Safety Update Reports (PSUR), vigilance reporting, and UKRP incident coordination.",
+        content: "UK post-market surveillance consulting: GB 2025 PMS requirements, PMSR, PSUR reports, MHRA vigilance reporting, and UKRP incident coordination.",
       },
-      {
-        name: "keywords",
-        content:
-          "UK PMS post-market surveillance 2025, MHRA PMSR PSUR, GB vigilance incident reporting MORE, Field Safety Corrective Action UK, NKB Regovanta",
-      },
-      { property: "og:title", content: "Great Britain Post-Market Surveillance & PSUR | NKB Regovanta" },
+      { property: "og:title", content: "UK Post-Market Surveillance PMS | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Great Britain strengthened its PMS rules from June 2025. We connect post-market complaints, safety signals, and vigilance back into your technical documentation and risk files.",
+        content: "UK post-market surveillance consulting: GB 2025 PMS requirements, PMSR, PSUR reports, MHRA vigilance reporting, and UKRP incident coordination.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/pms" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Great Britain Post-Market Surveillance (PMS), PMSR / PSUR & Vigilance | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior regulatory compliance for Great Britain's strengthened 2025 PMS requirements, PMSR, Periodic Safety Update Reports (PSUR), vigilance reporting, and UKRP incident coordination." },
+      { name: "twitter:title", content: "UK Post-Market Surveillance PMS | NKB Regovanta" },
+      { name: "twitter:description", content: "UK post-market surveillance consulting: GB 2025 PMS requirements, PMSR, PSUR reports, MHRA vigilance reporting, and UKRP incident coordination." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/pms" }],
@@ -145,7 +138,7 @@ function UKPMSPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Great Britain Post-Market Surveillance, PMSR / PSUR &amp; Vigilance
+              UK Post-Market Surveillance (PMS), PMSR &amp; PSUR
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Great Britain strengthened its medical-device post-market surveillance requirements from 16 June 2025. Manufacturers must treat PMS as a structured regulatory system that continuously evaluates safety, performance and emerging risk throughout the product lifecycle.

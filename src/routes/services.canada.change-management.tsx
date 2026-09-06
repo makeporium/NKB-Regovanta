@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/canada/change-management")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Licence Amendments & Significant Changes | NKB Regovanta",
+        title: "Health Canada MDL Licence Amendments | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design/material modifications, labelling changes, and annual licence renewals.",
+          "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design modifications, and regulatory lifecycle maintenance.",
       },
-      { name: "keywords", content: "Health Canada Licence Amendments & Significant Changes, services canada change management, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Licence Amendments & Significant Changes | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design/material modifications, labelling changes, and annual licence renewals." },
+      { property: "og:title", content: "Health Canada MDL Licence Amendments | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design modifications, and regulatory lifecycle maintenance.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/change-management" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Licence Amendments & Significant Changes | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design/material modifications, labelling changes, and annual licence renewals." },
+      { name: "twitter:title", content: "Health Canada MDL Licence Amendments | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada significant change assessment, Medical Device Licence (MDL) amendments, design modifications, and regulatory lifecycle maintenance.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/change-management" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Licence Amendments & Significant Changes",
+          description: "MDL amendment applications, significant change assessments, and device lifecycle maintenance under Health Canada regulations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaChangeManagementPage,
 });
@@ -125,7 +151,7 @@ function CanadaChangeManagementPage() {
               Significant Change Assessment
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Licence Amendments, Significant Changes &amp; Lifecycle Maintenance
+              Health Canada MDL Amendments &amp; Significant Changes
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               A Health Canada licence must remain aligned with the device that is actually manufactured and sold. Certain changes to Class II, III and IV devices require a new or amended MDL, while other changes may be documented internally or handled through a different regulatory mechanism.

@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cleanroom_manufacturing.jpg";
 export const Route = createFileRoute("/insights/dental-scanners-manufacturing-regulatory-standards")({
   head: () => ({
     meta: [
-      { title: "Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners | NKB Regovanta" },
+      { title: "Intraoral Dental Scanner Regulations | NKB Regovanta" },
       {
         name: "description",
         content: "Optical safety, IEC 60601-1 electrical validation, CAD/CAM software integration, and worldwide licensing pathways.",
       },
-      {
-        name: "keywords",
-        content: "manufacturing and global compliance requirements for intraoral dental scanners, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners | NKB Regovanta" },
+      { property: "og:title", content: "Intraoral Dental Scanner Regulations | NKB Regovanta" },
       {
         property: "og:description",
         content: "Optical safety, IEC 60601-1 electrical validation, CAD/CAM software integration, and worldwide licensing pathways.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/dental-scanners-manufacturing-re
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Manufacturing and Global Compliance Requirements for Intraoral Dental Scanners" },
+      { name: "twitter:title", content: "Intraoral Dental Scanner Regulations | NKB Regovanta" },
       { name: "twitter:description", content: "Optical safety, IEC 60601-1 electrical validation, CAD/CAM software integration, and worldwide licensing pathways." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
     ],

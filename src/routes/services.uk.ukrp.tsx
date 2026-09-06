@@ -31,32 +31,45 @@ import {
 export const Route = createFileRoute("/services/uk/ukrp")({
   head: () => ({
     meta: [
-      { title: "UK Responsible Person (UKRP) Services & MHRA Registration | NKB Regovanta" },
+      { title: "UK Responsible Person UKRP Services | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Official UK Responsible Person (UKRP) representation and UK MHRA medical device and IVD registration services under UK MDR 2002. DORS portal registration MHRA and vigilance reporting by NKB Regovanta.",
+        content: "Official UK Responsible Person (UKRP) representation & MHRA registration: DORS portal listing, vigilance management, and UK MDR 2002 compliance.",
       },
-      {
-        name: "keywords",
-        content:
-          "UK Responsible Person (UKRP) services, UK MHRA medical device registration, UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002 compliance, Northern Ireland medical device protocol, NKB Regovanta",
-      },
-      { property: "og:title", content: "UK Responsible Person (UKRP) Services | NKB Regovanta" },
+      { property: "og:title", content: "UK Responsible Person UKRP Services | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Legally mandated UKRP representation and MHRA registration for overseas medical device and IVD manufacturers selling into Great Britain.",
+        content: "Official UK Responsible Person (UKRP) representation & MHRA registration: DORS portal listing, vigilance management, and UK MDR 2002 compliance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/ukrp" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UK Responsible Person (UKRP) Services & MHRA Registration | NKB Regovanta" },
-      { name: "twitter:description", content: "UK Responsible Person (UKRP) services for foreign medical device manufacturers selling in Great Britain. UKRP appointment, MHRA DORS registration, device listing, label compliance, post-market vigilance, and Northern ..." },
+      { name: "twitter:title", content: "UK Responsible Person UKRP Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Official UK Responsible Person (UKRP) representation & MHRA registration: DORS portal listing, vigilance management, and UK MDR 2002 compliance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/ukrp" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "UK Responsible Person (UKRP) Representation & MHRA Registration",
+          description: "Official UK Responsible Person (UKRP) representation, DORS device listing, and vigilance management.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
     ],
   }),
   component: UKRPServicePage,

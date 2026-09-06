@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/supply-chain")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia Importer, Distributor & Supply-Chain Compliance | NKB Regovanta",
+        title: "Australia Medical Device Supply Chain | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Australian Sponsor, importer, and distributor regulatory interfaces, traceability, distribution records, recall readiness, and compliance under the Therapeutic Goods Act 1989.",
+          "Australian device supply-chain compliance: Sponsor and importer agreements, distribution records, traceability, and recall readiness under TGA rules.",
       },
-      { name: "keywords", content: "Australia Importer, Distributor & Supply-Chain Compliance, services australia supply chain, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia Importer, Distributor & Supply-Chain Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Australian Sponsor, importer, and distributor regulatory interfaces, traceability, distribution records, recall readiness, and compliance under the Therapeutic Goods Act 1989." },
+      { property: "og:title", content: "Australia Medical Device Supply Chain | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Australian device supply-chain compliance: Sponsor and importer agreements, distribution records, traceability, and recall readiness under TGA rules.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/supply-chain" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia Importer, Distributor & Supply-Chain Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Australian Sponsor, importer, and distributor regulatory interfaces, traceability, distribution records, recall readiness, and compliance under the Therapeutic Goods Act 1989." },
+      { name: "twitter:title", content: "Australia Medical Device Supply Chain | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Australian device supply-chain compliance: Sponsor and importer agreements, distribution records, traceability, and recall readiness under TGA rules.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/supply-chain" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australian Medical Device Importer & Supply-Chain Compliance",
+          description: "Sponsor-importer agreements, batch tracking, and distribution compliance under the Therapeutic Goods Act 1989.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaSupplyChainPage,
 });
@@ -112,7 +138,7 @@ function AustraliaSupplyChainPage() {
               Supply Chain &amp; Importers
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Importer, Distributor &amp; Supply-Chain Compliance
+              Australia Importer, Distributor &amp; Supply-Chain Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               The Australian Sponsor remains central to regulatory compliance even when importation, warehousing, distribution or customer support is outsourced. The supply chain must preserve traceability, complaint escalation, regulatory information control and market-action readiness.

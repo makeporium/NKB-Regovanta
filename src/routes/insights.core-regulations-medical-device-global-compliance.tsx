@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/media__1786282925761.png";
 export const Route = createFileRoute("/insights/core-regulations-medical-device-global-compliance")({
   head: () => ({
     meta: [
-      { title: "Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance | NKB Regovanta" },
+      { title: "Core Global MedTech Regulations Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Essential requirements spanning ISO 14971, IEC 60601-1, IEC 62366-1, ISO 10993, RoHS/REACH, and cybersecurity standards.",
       },
-      {
-        name: "keywords",
-        content: "beyond mdr and fda: core global regulations shaping modern medtech compliance, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance | NKB Regovanta" },
+      { property: "og:title", content: "Core Global MedTech Regulations Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Essential requirements spanning ISO 14971, IEC 60601-1, IEC 62366-1, ISO 10993, RoHS/REACH, and cybersecurity standards.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/core-regulations-medical-device-
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Beyond MDR and FDA: Core Global Regulations Shaping Modern MedTech Compliance" },
+      { name: "twitter:title", content: "Core Global MedTech Regulations Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Essential requirements spanning ISO 14971, IEC 60601-1, IEC 62366-1, ISO 10993, RoHS/REACH, and cybersecurity standards." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
     ],

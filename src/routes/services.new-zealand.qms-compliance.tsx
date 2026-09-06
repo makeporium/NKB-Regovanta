@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/new-zealand/qms-compliance")({
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand QMS & Sponsor Compliance Readiness (ISO 13485) | NKB Regovanta",
+        title: "NZ QMS & Sponsor Compliance Readiness | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Quality management system and regulatory compliance readiness for New Zealand Sponsors and importers. ISO 13485 alignment, distribution record keeping, and Medsafe inspection support.",
+          "QMS and compliance readiness for New Zealand Sponsors and importers — ISO 13485 alignment, distribution records, and Medsafe inspection support.",
       },
-      { name: "keywords", content: "New Zealand QMS & Sponsor Compliance Readiness (ISO 13485), services new zealand qms compliance, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand QMS & Sponsor Compliance Readiness (ISO 13485) | NKB Regovanta" },
-      { property: "og:description", content: "Quality management system and regulatory compliance readiness for New Zealand Sponsors and importers. ISO 13485 alignment, distribution record keeping, and Medsafe inspection support." },
+      { property: "og:title", content: "NZ QMS & Sponsor Compliance Readiness | NKB Regovanta" },
+      { property: "og:description", content: "QMS and compliance readiness for New Zealand Sponsors and importers — ISO 13485 alignment, distribution records, and Medsafe inspection support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/qms-compliance" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand QMS & Sponsor Compliance Readiness (ISO 13485) | NKB Regovanta" },
-      { name: "twitter:description", content: "Quality management system and regulatory compliance readiness for New Zealand Sponsors and importers. ISO 13485 alignment, distribution record keeping, and Medsafe inspection support." },
+      { name: "twitter:title", content: "NZ QMS & Sponsor Compliance Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "QMS and compliance readiness for New Zealand Sponsors and importers — ISO 13485 alignment, distribution records, and Medsafe inspection support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/qms-compliance" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand QMS & Sponsor Compliance Readiness (ISO 13485)",
+          description: "ISO 13485-aligned QMS setup, Medsafe inspection readiness, and distribution record-keeping support for New Zealand medical device sponsors and importers.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZQMSCompliancePage,
 });

@@ -22,23 +22,38 @@ import imgIvd2 from "@/assets/ivd2.png";
 export const Route = createFileRoute("/industries/ivd")({
   head: () => ({
     meta: [
-      { title: "IVD Regulatory Consultant | EU IVDR CDSCO FDA | NKB Regovanta" },
-      { name: "description", content: "Comprehensive IVD regulatory consulting for EU IVDR 2017/746, CDSCO MD-16/17 test licences, US FDA IVD 510(k), and Performance Evaluation Reports (PER). Expert guidance for diagnostic kit manufacturers seeking global market access." },
-      { name: "keywords", content: "IVD regulatory consultant, EU IVDR consultant, CDSCO IVD India, FDA IVD 510k, in vitro diagnostic regulation global" },
-      { property: "og:title", content: "IVD Regulatory Consultant | EU IVDR CDSCO FDA | NKB Regovanta" },
-      { property: "og:description", content: "Comprehensive IVD regulatory consulting for EU IVDR 2017/746, CDSCO MD-16/17 test licences, US FDA IVD 510(k), and Performance Evaluation Reports (PER). Expert guidance for diagnostic kit manufacturers seeking global ..." },
+      { title: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { name: "description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
+      { property: "og:title", content: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IVD Regulatory Consultant | EU IVDR CDSCO FDA | NKB Regovanta" },
-      { name: "twitter:description", content: "Comprehensive IVD regulatory consulting for EU IVDR 2017/746, CDSCO MD-16/17 test licences, US FDA IVD 510(k), and Performance Evaluation Reports (PER). Expert guidance for diagnostic kit manufacturers seeking global ..." },
+      { name: "twitter:title", content: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "keywords", content: "IVD regulatory consultant, EU IVDR consultant, CDSCO IVD India, FDA IVD 510k, in vitro diagnostic regulation global" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Global IVD Regulatory Consulting",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers.",
+          "serviceType": "In Vitro Diagnostics Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: IVD,
 });

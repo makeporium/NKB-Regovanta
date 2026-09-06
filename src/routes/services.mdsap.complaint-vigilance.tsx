@@ -21,21 +21,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/complaint-vigilance")({
   head: () => ({
     meta: [
-      { title: "Complaint, Vigilance & Post-Market Readiness | MDSAP | NKB Regovanta" },
-      { name: "description", content: "Build systems for complaint handling, adverse-event reporting across 5 jurisdictions, trend analysis, and FSCA advisory notices." },
-      { name: "keywords", content: "MDSAP complaint handling, post-market vigilance MDSAP, adverse event reporting 5 jurisdictions, medical device FSCA, field safety corrective action" },
-      { property: "og:title", content: "Complaint, Vigilance & Post-Market Readiness | NKB Regovanta" },
-      { property: "og:description", content: "One complaint file, five jurisdictions to report to. Harmonized post-market surveillance with jurisdiction-specific reporting rules." },
+      { title: "MDSAP Complaint Handling & Vigilance | NKB Regovanta" },
+      { name: "description", content: "MDSAP complaint handling, vigilance reporting across 5 jurisdictions, adverse event analysis, and FSCA advisory notice support for device manufacturers." },
+      { property: "og:title", content: "MDSAP Complaint Handling & Vigilance | NKB Regovanta" },
+      { property: "og:description", content: "MDSAP complaint handling, vigilance reporting across 5 jurisdictions, adverse event analysis, and FSCA advisory notice support for device manufacturers." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Complaint, Vigilance & Post-Market Readiness | MDSAP | NKB Regovanta" },
-      { name: "twitter:description", content: "Build systems for complaint handling, adverse-event reporting across 5 jurisdictions, trend analysis, and FSCA advisory notices." },
+      { name: "twitter:title", content: "MDSAP Complaint Handling & Vigilance | NKB Regovanta" },
+      { name: "twitter:description", content: "MDSAP complaint handling, vigilance reporting across 5 jurisdictions, adverse event analysis, and FSCA advisory notice support for device manufacturers." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Complaint, Vigilance & Post-Market Readiness",
+          description: "Complaint handling, multi-jurisdiction adverse event reporting, FSCA management, and post-market vigilance support for MDSAP-certified medical device manufacturers.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
     ],
   }),
   component: ComplaintVigilancePage,

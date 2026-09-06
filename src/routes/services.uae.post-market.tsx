@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/post-market")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Post-Market Monitoring, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta",
+        title: "MOHAP Post-Market & Vigilance (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Post-market surveillance (PMS) and vigilance for medical devices and IVDs in the UAE. MOHAP adverse incident reporting, Field Safety Corrective Actions (FSCA), recall coordination, and periodic safety updates.",
+          "MOHAP post-market surveillance and vigilance in UAE. Adverse incident reporting, Field Safety Corrective Actions (FSCA), recalls, and safety updates.",
       },
-      { name: "keywords", content: "UAE MOHAP Post-Market Monitoring, Vigilance & Field Safety Actions (FSCA), services uae post market, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Post-Market Monitoring, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta" },
-      { property: "og:description", content: "Post-market surveillance (PMS) and vigilance for medical devices and IVDs in the UAE. MOHAP adverse incident reporting, Field Safety Corrective Actions (FSCA), recall coordination, and periodic safety updates." },
+      { property: "og:title", content: "MOHAP Post-Market & Vigilance (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP post-market surveillance and vigilance in UAE. Adverse incident reporting, Field Safety Corrective Actions (FSCA), recalls, and safety updates.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/post-market" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Post-Market Monitoring, Vigilance & Field Safety Actions (FSCA) | NKB Regovanta" },
-      { name: "twitter:description", content: "Post-market surveillance (PMS) and vigilance for medical devices and IVDs in the UAE. MOHAP adverse incident reporting, Field Safety Corrective Actions (FSCA), recall coordination, and periodic safety updates." },
+      { name: "twitter:title", content: "MOHAP Post-Market & Vigilance (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP post-market surveillance and vigilance in UAE. Adverse incident reporting, Field Safety Corrective Actions (FSCA), recalls, and safety updates.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/post-market" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Post-Market Surveillance and Vigilance (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Post-market surveillance and vigilance consulting for medical devices in the UAE - MOHAP adverse event reporting, field safety corrective actions, and PMS planning.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEPostMarketPage,
 });

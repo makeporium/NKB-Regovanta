@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ce-marking")({
   head: () => ({
     meta: [
-      { title: "CE Marking & EU Registration Consultant | MDR & IVDR | NKB Regovanta" },
+      { title: "EU CE Marking Certification Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "End-to-end CE Marking consulting for Medical Devices and IVDs. EU Declaration of Conformity, Notified Body CE certificates, UDI compliance, and EUDAMED registration.",
+        content: "End-to-end CE Marking consulting for Medical Devices and IVDs under EU MDR & IVDR. Conformity assessment, Declaration of Conformity, and CE mark audit.",
       },
-      {
-        name: "keywords",
-        content:
-          "CE marking medical devices Europe, EU Declaration of Conformity DoC, CE marking IVD, CE certificate MDR, EU registration, NKB Regovanta",
-      },
-      { property: "og:title", content: "CE Marking & EU Registration | NKB Regovanta" },
+      { property: "og:title", content: "EU CE Marking Certification Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "CE marking managed as the outcome of classification, conformity assessment, evidence, technical documentation, QMS and Notified Body review.",
+        content: "End-to-end CE Marking consulting for Medical Devices and IVDs under EU MDR & IVDR. Conformity assessment, Declaration of Conformity, and CE mark audit.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ce-marking" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "CE Marking & EU Registration Consultant | MDR & IVDR | NKB Regovanta" },
-      { name: "twitter:description", content: "End-to-end CE Marking consulting for Medical Devices and IVDs. EU Declaration of Conformity, Notified Body CE certificates, UDI compliance, and EUDAMED registration." },
+      { name: "twitter:title", content: "EU CE Marking Certification Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "End-to-end CE Marking consulting for Medical Devices and IVDs under EU MDR & IVDR. Conformity assessment, Declaration of Conformity, and CE mark audit." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-marking" }],
@@ -78,7 +71,7 @@ function EUCEMarkingPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "CE Marking & EU Registration Consulting",
+              name: "EU CE Marking Certification Consulting",
               url: "https://www.nkbregovanta.com/services/eu/ce-marking",
               description:
                 "Comprehensive CE marking guidance, Declaration of Conformity preparation, and European market access.",
@@ -130,7 +123,7 @@ function EUCEMarkingPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              CE Marking &amp; EU Device Registration
+              EU CE Marking &amp; Conformity Certification
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We manage CE marking as the defensible outcome of classification, conformity assessment, evidence, technical documentation, QMS and Notified Body review — not as a standalone administrative task.

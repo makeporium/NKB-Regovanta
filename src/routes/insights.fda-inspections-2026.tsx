@@ -6,26 +6,25 @@ const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 export const Route = createFileRoute("/insights/fda-inspections-2026")({
   head: () => ({
     meta: [
-      { title: "FDA Inspections 2026 | Insights | NKB Regovanta" },
+      { title: "FDA Medical Device Inspections 2026 | NKB Regovanta" },
       {
         name: "description",
         content:
-          "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices.",
+          "How to prepare for FDA medical device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits, and readiness.",
       },
-      { name: "keywords", content: "FDA Inspections 2026, Insights, insights fda inspections 2026, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "FDA Inspections 2026 | Insights | NKB Regovanta" },
-      { property: "og:description", content: "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices." },
+      { property: "og:title", content: "FDA Medical Device Inspections 2026 | NKB Regovanta" },
+      { property: "og:description", content: "How to prepare for FDA medical device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits, and readiness." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-inspections-2026" },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA Inspections 2026 | Insights | NKB Regovanta" },
-      { name: "twitter:description", content: "How to prepare for FDA medical-device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits and readiness practices." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:title", content: "FDA Medical Device Inspections 2026 | NKB Regovanta" },
+      { name: "twitter:description", content: "How to prepare for FDA medical device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits, and readiness." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-inspections-2026" },
-  ],
+    ],
   }),
   component: Article,
 });
@@ -33,6 +32,33 @@ export const Route = createFileRoute("/insights/fda-inspections-2026")({
 function Article() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
+            "description": "How to prepare for FDA medical device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits, and readiness.",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png",
+            "author": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.nkbregovanta.com/favicon.png"
+              }
+            },
+            "datePublished": "2026-06-10",
+            "mainEntityOfPage": "https://www.nkbregovanta.com/insights/fda-inspections-2026"
+          })
+        }}
+      />
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           

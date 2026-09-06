@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/classification")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR Qualification & Classification Consultant | NKB Regovanta" },
+      { title: "EU MDR Classification Consultant | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Strategic qualification and risk-based classification under EU MDR 2017/745 (Class I, IIa, IIb, III) and EU IVDR 2017/746 (Class A, B, C, D Rules 1-7).",
+        content: "Strategic qualification and risk-based classification under EU MDR (Class I, IIa, IIb, III) and EU IVDR (Class A, B, C, D) with regulatory specialists.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR classification rules, EU IVDR classification rules 1-7, medical device qualification Europe, IVD qualification, MDR conformity assessment routes, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU MDR & IVDR Qualification & Classification | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Classification Consultant | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We establish the regulatory basis before technical documentation is developed — determining conformity routes, Notified Body involvement, and evidence burden.",
+        content: "Strategic qualification and risk-based classification under EU MDR (Class I, IIa, IIb, III) and EU IVDR (Class A, B, C, D) with regulatory specialists.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/classification" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR Qualification & Classification Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic qualification and risk-based classification under EU MDR 2017/745 (Class I, IIa, IIb, III) and EU IVDR 2017/746 (Class A, B, C, D Rules 1-7)." },
+      { name: "twitter:title", content: "EU MDR Classification Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Strategic qualification and risk-based classification under EU MDR (Class I, IIa, IIb, III) and EU IVDR (Class A, B, C, D) with regulatory specialists." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/classification" }],
@@ -75,7 +68,7 @@ function EUClassificationPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Regulatory Strategy, Qualification & Classification EU MDR & IVDR",
+              name: "EU MDR & IVDR Qualification & Classification",
               url: "https://www.nkbregovanta.com/services/eu/classification",
               description:
                 "Strategic qualification and classification of medical devices and IVDs under EU MDR 2017/745 and EU IVDR 2017/746.",
@@ -127,7 +120,7 @@ function EUClassificationPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Regulatory Strategy, Qualification &amp; Classification
+              EU MDR &amp; IVDR Qualification &amp; Classification
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Correct qualification and classification determine the conformity assessment route, Notified Body involvement, evidence burden, QMS expectations and post-market obligations. NKB Regovanta establishes the regulatory basis before technical documentation is developed.

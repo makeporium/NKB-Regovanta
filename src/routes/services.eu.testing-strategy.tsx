@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/testing-strategy")({
   head: () => ({
     meta: [
-      { title: "EU Testing Strategy & Laboratory Coordination Consultant | NKB Regovanta" },
+      { title: "EU Medical Device Testing Strategy | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Define regulatory testing strategies, protocol design, worst-case rationale, and lab coordination for EU MDR 2017/745 and EU IVDR 2017/746 technical documentation.",
+        content: "Define regulatory testing strategies, protocol design, worst-case rationales, and lab coordination for EU MDR & IVDR technical documentation.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR testing strategy, ISO 10993 biocompatibility Europe, IEC 60601 electrical safety, IEC 62304 software validation, IVD analytical performance testing, lab coordination MDR, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU Testing Strategy & Laboratory Coordination | NKB Regovanta" },
+      { property: "og:title", content: "EU Medical Device Testing Strategy | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We define the study protocol, worst-case device configuration, and acceptance criteria before laboratory execution — ensuring final test reports directly satisfy Notified Body review.",
+        content: "Define regulatory testing strategies, protocol design, worst-case rationales, and lab coordination for EU MDR & IVDR technical documentation.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/testing-strategy" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU Testing Strategy & Laboratory Coordination Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Define regulatory testing strategies, protocol design, worst-case rationale, and lab coordination for EU MDR 2017/745 and EU IVDR 2017/746 technical documentation." },
+      { name: "twitter:title", content: "EU Medical Device Testing Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Define regulatory testing strategies, protocol design, worst-case rationales, and lab coordination for EU MDR & IVDR technical documentation." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/testing-strategy" }],
@@ -132,7 +125,7 @@ function EUTestingStrategyPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Testing Strategy &amp; Laboratory Coordination
+              EU MDR Testing Strategy &amp; Laboratory Coordination
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Testing should be designed around the regulatory decision the evidence must support. NKB Regovanta helps define the required studies before execution and coordinates with established laboratories where external testing is needed.

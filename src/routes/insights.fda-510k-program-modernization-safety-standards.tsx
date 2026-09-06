@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/usa_fda_market_1786305218141.png";
 export const Route = createFileRoute("/insights/fda-510k-program-modernization-safety-standards")({
   head: () => ({
     meta: [
-      { title: "FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks | NKB Regovanta" },
+      { title: "FDA 510(k) Modernization Guide | NKB Regovanta" },
       {
         name: "description",
         content: "How CDRH is driving manufacturers away from outdated predicate devices toward contemporary safety and performance standards.",
       },
-      {
-        name: "keywords",
-        content: "fda 510(k) modernization: predicate age policies and contemporary safety benchmarks, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks | NKB Regovanta" },
+      { property: "og:title", content: "FDA 510(k) Modernization Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "How CDRH is driving manufacturers away from outdated predicate devices toward contemporary safety and performance standards.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/fda-510k-program-modernization-s
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "FDA 510(k) Modernization: Predicate Age Policies and Contemporary Safety Benchmarks" },
+      { name: "twitter:title", content: "FDA 510(k) Modernization Guide | NKB Regovanta" },
       { name: "twitter:description", content: "How CDRH is driving manufacturers away from outdated predicate devices toward contemporary safety and performance standards." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
     ],

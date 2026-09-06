@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
 export const Route = createFileRoute("/insights/human-factors-engineering-medical-device-design")({
   head: () => ({
     meta: [
-      { title: "Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles | NKB Regovanta" },
+      { title: "Human Factors Engineering Under EU MDR | NKB Regovanta" },
       {
         name: "description",
         content: "Fulfilling Annex I GSPR 5 user-interface mandates through structured usability engineering files and risk mitigation.",
       },
-      {
-        name: "keywords",
-        content: "human factors engineering under eu mdr: essential user-centric design principles, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles | NKB Regovanta" },
+      { property: "og:title", content: "Human Factors Engineering Under EU MDR | NKB Regovanta" },
       {
         property: "og:description",
         content: "Fulfilling Annex I GSPR 5 user-interface mandates through structured usability engineering files and risk mitigation.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/human-factors-engineering-medica
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Human Factors Engineering Under EU MDR: Essential User-Centric Design Principles" },
+      { name: "twitter:title", content: "Human Factors Engineering Under EU MDR | NKB Regovanta" },
       { name: "twitter:description", content: "Fulfilling Annex I GSPR 5 user-interface mandates through structured usability engineering files and risk mitigation." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_test_smarter_1786441137220.png" },
     ],

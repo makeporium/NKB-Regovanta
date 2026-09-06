@@ -13,20 +13,39 @@ export const Route = createFileRoute("/services/india/neutral-code")({
     component: NeutralCodePage,
     head: () => ({
     meta: [
-      { title: "Neutral / Special Code Certificate CDSCO India | NKB Regovanta" },
-      { name: "description", content: "Apply for a Neutral / Special Code certificate from CDSCO to export medical devices compliantly while maintaining OEM confidentiality and merchant exporter branding." },
-      { name: "keywords", content: "Neutral / Special Code certificate, CDSCO Neutral Code, Special code certificate India, OEM confidential export license CDSCO, NKB Regovanta" },
-      { property: "og:title", content: "Neutral / Special Code Certificate CDSCO | NKB Regovanta" },
-      { property: "og:description", content: "CDSCO Neutral Code and Special Code certificate allocation services for merchant exporters and medical device OEMs." },
+      { title: "CDSCO Neutral Code Certificate | NKB Regovanta" },
+      { name: "description", content: "Apply for a CDSCO Neutral Code Certificate to export medical devices while preserving OEM confidentiality and custom export branding in India." },
+      { property: "og:title", content: "CDSCO Neutral Code Certificate | NKB Regovanta" },
+      { property: "og:description", content: "Apply for a CDSCO Neutral Code Certificate to export medical devices while preserving OEM confidentiality and custom export branding in India." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/neutral-code" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Neutral / Special Code Certificate CDSCO India | NKB Regovanta" },
-      { name: "twitter:description", content: "Obtain a Neutral Code or Special Code Certificate from CDSCO India for export packaging and third-country labelling compliance. Required for OEM exporters under SCOMET and contract manufacturing agreements. Expert con..." },
+      { name: "twitter:title", content: "CDSCO Neutral Code Certificate | NKB Regovanta" },
+      { name: "twitter:description", content: "Apply for a CDSCO Neutral Code Certificate to export medical devices while preserving OEM confidentiality and custom export branding in India." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/neutral-code" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO Neutral Code Certificate (Special Code)",
+          description: "Apply for a Neutral Code certificate from CDSCO to export medical devices compliantly while maintaining OEM confidentiality.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -95,9 +114,9 @@ function NeutralCodePage() {
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to India CDSCO Services
                     </Link>
-                    <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+                    <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
                         <span className="text-[#0b3a96]">Neutral Code</span> Certificate (Special Code)
-                    </p>
+                    </h1>
                     <div className="mt-5 flex items-center gap-1.5">
                         <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
                         <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/classification")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia TGA Medical Device & IVD Classification | NKB Regovanta",
+        title: "TGA Medical Device Classification | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Strategic TGA classification for Medical Devices (Class I, Is, Im, IIa, IIb, III) and IVDs (Class 1-4) under Australian Therapeutic Goods Regulations. GMDN code determination and kind-of-device assessment.",
+          "TGA classification for medical devices (Class I-III) & IVDs (Class 1-4): Australian regulations, GMDN determination, and kind-of-device assessment.",
       },
-      { name: "keywords", content: "Australia TGA Medical Device & IVD Classification, services australia classification, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia TGA Medical Device & IVD Classification | NKB Regovanta" },
-      { property: "og:description", content: "Strategic TGA classification for Medical Devices (Class I, Is, Im, IIa, IIb, III) and IVDs (Class 1-4) under Australian Therapeutic Goods Regulations. GMDN code determination and kind-of-device assessment." },
+      { property: "og:title", content: "TGA Medical Device Classification | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA classification for medical devices (Class I-III) & IVDs (Class 1-4): Australian regulations, GMDN determination, and kind-of-device assessment.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/classification" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia TGA Medical Device & IVD Classification | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic TGA classification for Medical Devices (Class I, Is, Im, IIa, IIb, III) and IVDs (Class 1-4) under Australian Therapeutic Goods Regulations. GMDN code determination and kind-of-device assessment." },
+      { name: "twitter:title", content: "TGA Medical Device Classification | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA classification for medical devices (Class I-III) & IVDs (Class 1-4): Australian regulations, GMDN determination, and kind-of-device assessment.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/classification" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Medical Device & IVD Classification Consulting",
+          description: "Regulatory classification, GMDN selection, and kind-of-device determination under Australian TGA regulations.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaClassificationPage,
 });
@@ -129,7 +155,7 @@ function AustraliaClassificationPage() {
               Therapeutic Goods Regulations
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Australia Regulatory Strategy &amp; Product Classification
+              TGA Medical Device &amp; IVD Classification
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Classification is not an administrative label. It drives the minimum conformity evidence, ARTG pathway, application-audit exposure, UDI timing and post-market obligations. NKB Regovanta reviews the intended purpose and the device characteristics that actually trigger the Australian classification rules before the market-access plan is fixed.

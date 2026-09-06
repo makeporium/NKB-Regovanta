@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia IVD Regulatory Strategy & ARTG Inclusion | NKB Regovanta",
+        title: "Australia TGA IVD Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Risk-based IVD classification (Class 1-4), analytical and clinical performance evidence, Performance Evaluation Report (PER), Class 4 annual reporting, and ARTG inclusion for in vitro diagnostics in Australia.",
+          "TGA IVD regulatory strategy: Class 1–4 classification, analytical and clinical performance evidence (PER), and ARTG inclusion for in vitro diagnostics.",
       },
-      { name: "keywords", content: "Australia IVD Regulatory Strategy & ARTG Inclusion, services australia ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia IVD Regulatory Strategy & ARTG Inclusion | NKB Regovanta" },
-      { property: "og:description", content: "Risk-based IVD classification (Class 1-4), analytical and clinical performance evidence, Performance Evaluation Report (PER), Class 4 annual reporting, and ARTG inclusion for in vitro diagnostics in Australia." },
+      { property: "og:title", content: "Australia TGA IVD Consultant | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA IVD regulatory strategy: Class 1–4 classification, analytical and clinical performance evidence (PER), and ARTG inclusion for in vitro diagnostics.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia IVD Regulatory Strategy & ARTG Inclusion | NKB Regovanta" },
-      { name: "twitter:description", content: "Risk-based IVD classification (Class 1-4), analytical and clinical performance evidence, Performance Evaluation Report (PER), Class 4 annual reporting, and ARTG inclusion for in vitro diagnostics in Australia." },
+      { name: "twitter:title", content: "Australia TGA IVD Consultant | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA IVD regulatory strategy: Class 1–4 classification, analytical and clinical performance evidence (PER), and ARTG inclusion for in vitro diagnostics.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/ivd" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Australia TGA IVD Regulatory Strategy",
+          description: "IVD classification, analytical and clinical performance evaluations, and ARTG inclusion support.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaIVDPage,
 });
@@ -134,7 +160,7 @@ function AustraliaIVDPage() {
               In Vitro Diagnostics (Class 1–4)
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              IVD Regulatory Strategy, Performance Evidence &amp; ARTG Inclusion
+              TGA IVD Regulatory Strategy &amp; ARTG Inclusion
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Australian IVD regulation is risk-based and classification depends on intended purpose and the potential public-health or personal harm from an incorrect result. IVD market access therefore requires both an ARTG strategy and a performance-evidence strategy that supports the claims made for the assay or system.

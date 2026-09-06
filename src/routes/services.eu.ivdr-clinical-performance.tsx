@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ivdr-clinical-performance")({
   head: () => ({
     meta: [
-      { title: "EU IVDR Clinical Performance Studies & Clinical Evidence Consultant | NKB Regovanta" },
+      { title: "IVDR Clinical Performance Studies | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU IVDR 2017/746 clinical performance study design, diagnostic sensitivity & specificity, clinical protocol planning, competent authority ethics approvals, and PER integration.",
+        content: "EU IVDR clinical performance study design, diagnostic sensitivity & specificity, clinical protocols, ethics approvals, and PER integration.",
       },
-      {
-        name: "keywords",
-        content:
-          "IVDR clinical performance studies, diagnostic sensitivity specificity IVD, clinical performance plan IVDR, MDCG performance studies IVDR, biobank specimens IVDR, NKB Regovanta",
-      },
-      { property: "og:title", content: "IVDR Clinical Performance & Performance Studies | NKB Regovanta" },
+      { property: "og:title", content: "IVDR Clinical Performance Studies | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "The question is whether the study design is capable of supporting the exact clinical performance claim, intended population, and use environment described in the dossier.",
+        content: "EU IVDR clinical performance study design, diagnostic sensitivity & specificity, clinical protocols, ethics approvals, and PER integration.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr-clinical-performance" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR Clinical Performance Studies & Clinical Evidence Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU IVDR 2017/746 clinical performance study design, diagnostic sensitivity & specificity, clinical protocol planning, competent authority ethics approvals, and PER integration." },
+      { name: "twitter:title", content: "IVDR Clinical Performance Studies | NKB Regovanta" },
+      { name: "twitter:description", content: "EU IVDR clinical performance study design, diagnostic sensitivity & specificity, clinical protocols, ethics approvals, and PER integration." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr-clinical-performance" }],
@@ -134,7 +127,7 @@ function EUIVDRClinicalPerformancePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              IVDR Clinical Performance &amp; Performance Studies
+              EU IVDR Clinical Performance Studies &amp; Evidence
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Clinical performance demonstrates the ability of an IVD to yield results correlated with a particular clinical condition or physiological state. We design statistically sound clinical protocols and manage study regulatory compliance.

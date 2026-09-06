@@ -5,22 +5,53 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/australia/sponsor')({
   head: () => ({
     meta: [
-      { title: 'Australian Sponsor Services | Australia Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Australia Australian Sponsor Services services for medical devices and IVDs.' },
-      { name: "keywords", content: "Australian Sponsor Services, Australia Services, services australia sponsor, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australian Sponsor Services | Australia Services | NKB Regovanta" },
-      { property: "og:description", content: "Australian Sponsor services for foreign medical device manufacturers seeking TGA ARTG inclusion. Legal sponsor appointment, device lifecycle compliance, post-market obligations, label compliance, and adverse event rep..." },
+      { title: "Independent TGA Sponsor Representation | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Independent Australian Sponsor representation for device manufacturers: ARTG transfers, distributor management, and TGA regulatory custody in Australia.",
+      },
+      { property: "og:title", content: "Independent TGA Sponsor Representation | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Independent Australian Sponsor representation for device manufacturers: ARTG transfers, distributor management, and TGA regulatory custody in Australia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/sponsor" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australian Sponsor Services | Australia Services | NKB Regovanta" },
-      { name: "twitter:description", content: "Australian Sponsor services for foreign medical device manufacturers seeking TGA ARTG inclusion. Legal sponsor appointment, device lifecycle compliance, post-market obligations, label compliance, and adverse event rep..." },
+      { name: "twitter:title", content: "Independent TGA Sponsor Representation | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Independent Australian Sponsor representation for device manufacturers: ARTG transfers, distributor management, and TGA regulatory custody in Australia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/sponsor" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Independent TGA Sponsor Representation",
+          description: "Third-party Australian Sponsor appointment and representation for foreign medical device companies.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +67,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Australia Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Australian Sponsor Services</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Independent TGA Sponsor Representation</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Australia regulatory landscape with our comprehensive Australian Sponsor Services support.
             </p>

@@ -29,7 +29,7 @@ export const Route = createFileRoute("/ai-news")({
     head: () => ({
         meta: [
             {
-                title: "Live Regulatory Intelligence Feed & AI News | NKB Regovanta",
+                title: "Live AI Regulatory Intelligence Feed | NKB Regovanta",
             },
             {
                 name: "description",
@@ -37,13 +37,8 @@ export const Route = createFileRoute("/ai-news")({
                     "Real-time AI-structured regulatory updates, alerts, and guidance from US FDA, CDSCO India, European Commission (EU MDR/IVDR), and MDSAP.",
             },
             {
-                name: "keywords",
-                content:
-                    "regulatory intelligence, AI medical device regulatory news, FDA updates, CDSCO notifications, EU MDR IVDR alerts, MDSAP changes, regulatory news feed",
-            },
-            {
                 property: "og:title",
-                content: "Live Regulatory Intelligence Feed & AI News | NKB Regovanta",
+                content: "Live AI Regulatory Intelligence Feed | NKB Regovanta",
             },
             {
                 property: "og:description",
@@ -68,7 +63,7 @@ export const Route = createFileRoute("/ai-news")({
             },
             {
                 name: "twitter:title",
-                content: "Live Regulatory Intelligence Feed & AI News | NKB Regovanta",
+                content: "Live AI Regulatory Intelligence Feed | NKB Regovanta",
             },
             {
                 name: "twitter:description",
@@ -86,11 +81,28 @@ export const Route = createFileRoute("/ai-news")({
                 href: "https://www.nkbregovanta.com/ai-news",
             },
         ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: "Live AI Regulatory Intelligence Feed",
+                    description:
+                        "Real-time AI-structured regulatory updates, alerts, and guidance from US FDA, CDSCO India, European Commission (EU MDR/IVDR), and MDSAP.",
+                    publisher: {
+                        "@type": "Organization",
+                        name: "NKB Regovanta",
+                        url: "https://www.nkbregovanta.com",
+                    },
+                }),
+            },
+        ],
     }),
     component: AiNewsPage,
 });
 
 function AiNewsPage() {
     const { items, cachedAt } = Route.useLoaderData();
-    return <RegulatoryDashboard items={items} cachedAt={cachedAt} />;
+    return <RegulatoryDashboard items={items} cachedAt={cachedAt} title="Live AI Regulatory Intelligence Feed" />;
 }

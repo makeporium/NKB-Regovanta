@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/new-zealand/medsafe-queries")({
   head: () => ({
     meta: [
       {
-        title:
-          "Medsafe Queries, Safety Review & Technical Response Support | NKB Regovanta",
+        title: "Medsafe Inquiries & Technical Response | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Strategic response formulation for Medsafe regulatory inquiries, safety reviews, and compliance audits in New Zealand. Root-cause analysis, evidence coordination, and technical rebuttal drafting.",
+          "Strategic response formulation for Medsafe inquiries, safety reviews, and audits in New Zealand — root-cause analysis and evidence coordination.",
       },
-      { name: "keywords", content: "Medsafe Queries, Safety Review & Technical Response Support, services new zealand medsafe queries, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Medsafe Queries, Safety Review & Technical Response Support | NKB Regovanta" },
-      { property: "og:description", content: "Strategic response formulation for Medsafe regulatory inquiries, safety reviews, and compliance audits in New Zealand. Root-cause analysis, evidence coordination, and technical rebuttal drafting." },
+      { property: "og:title", content: "Medsafe Inquiries & Technical Response | NKB Regovanta" },
+      { property: "og:description", content: "Strategic response formulation for Medsafe inquiries, safety reviews, and audits in New Zealand — root-cause analysis and evidence coordination." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/medsafe-queries" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medsafe Queries, Safety Review & Technical Response Support | NKB Regovanta" },
-      { name: "twitter:description", content: "Strategic response formulation for Medsafe regulatory inquiries, safety reviews, and compliance audits in New Zealand. Root-cause analysis, evidence coordination, and technical rebuttal drafting." },
+      { name: "twitter:title", content: "Medsafe Inquiries & Technical Response | NKB Regovanta" },
+      { name: "twitter:description", content: "Strategic response formulation for Medsafe inquiries, safety reviews, and audits in New Zealand — root-cause analysis and evidence coordination." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/medsafe-queries" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Medsafe Queries, Safety Review & Technical Response Support (New Zealand)",
+          description: "Expert support for Medsafe regulatory inquiries, safety reviews, and compliance audit responses for medical device sponsors in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZMedsafeQueriesPage,
 });

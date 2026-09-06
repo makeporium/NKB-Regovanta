@@ -5,23 +5,38 @@ import imgHero from "@/assets/industry-medical.png";
 export const Route = createFileRoute("/industries/medical-devices")({
   head: () => ({
     meta: [
-      { title: "Medical Device Regulatory Consultant India | CDSCO FDA CE Marking | NKB Regovanta" },
-      { name: "description", content: "Medical device regulatory consultant for India (CDSCO), US FDA (510k/PMA/De Novo), EU (MDR/IVDR/CE), UK (MHRA/UKCA), TGA Australia, and global market access. End-to-end regulatory strategy, registration, and QMS consulting." },
-      { name: "keywords", content: "medical device regulatory consultant, CDSCO medical device India, FDA medical device consultant, EU MDR consultant, TGA medical device Australia" },
-      { property: "og:title", content: "Medical Device Regulatory Consultant India | CDSCO FDA CE Marking | NKB Regovanta" },
-      { property: "og:description", content: "Medical device regulatory consultant for India (CDSCO), US FDA (510k/PMA/De Novo), EU (MDR/IVDR/CE), UK (MHRA/UKCA), TGA Australia, and global market access. End-to-end regulatory strategy, registration, and QMS consu..." },
+      { title: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { name: "description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
+      { property: "og:title", content: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/medical-devices" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Regulatory Consultant India | CDSCO FDA CE Marking | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical device regulatory consultant for India (CDSCO), US FDA (510k/PMA/De Novo), EU (MDR/IVDR/CE), UK (MHRA/UKCA), TGA Australia, and global market access. End-to-end regulatory strategy, registration, and QMS consu..." },
+      { name: "twitter:title", content: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "keywords", content: "medical device regulatory consultant, CDSCO medical device India, FDA medical device consultant, EU MDR consultant, TGA medical device Australia" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Medical Device Regulatory Consulting",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS.",
+          "serviceType": "Medical Device Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: MedicalDevices,
 });

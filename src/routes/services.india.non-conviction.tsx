@@ -6,20 +6,39 @@ export const Route = createFileRoute("/services/india/non-conviction")({
   component: NonConvictionPage,
   head: () => ({
     meta: [
-      { title: "Non-Conviction Certificate (NCC) CDSCO India | NKB Regovanta" },
-      { name: "description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to prove total regulatory compliance for medical device tenders, institutional procurement and global market audits." },
-      { name: "keywords", content: "Non-Conviction Certificate (NCC), CDSCO NCC certificate, State Licensing Authority NCC, drug and cosmetic non conviction certificate India, NKB Regovanta" },
-      { property: "og:title", content: "Non-Conviction Certificate (NCC) CDSCO | NKB Regovanta" },
-      { property: "og:description", content: "Non-Conviction Certificate (NCC) licensing assistance for medical device & pharmaceutical manufacturers in India." },
+      { title: "CDSCO Non-Conviction Certificate (NCC) | NKB Regovanta" },
+      { name: "description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to verify regulatory compliance for medical device tenders and institutional procurement in India." },
+      { property: "og:title", content: "CDSCO Non-Conviction Certificate (NCC) | NKB Regovanta" },
+      { property: "og:description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to verify regulatory compliance for medical device tenders and institutional procurement in India." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/non-conviction" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Non-Conviction Certificate (NCC) CDSCO India | NKB Regovanta" },
-      { name: "twitter:description", content: "Obtain a Non-Conviction Certificate (NCC) from CDSCO or State Licensing Authority confirming no prior criminal or regulatory convictions. Required for government tenders, licence renewals, and overseas regulatory subm..." },
+      { name: "twitter:title", content: "CDSCO Non-Conviction Certificate (NCC) | NKB Regovanta" },
+      { name: "twitter:description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to verify regulatory compliance for medical device tenders and institutional procurement in India." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india/non-conviction" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "CDSCO Non-Conviction Certificate (NCC)",
+          description: "Obtain a CDSCO Non-Conviction Certificate (NCC) to verify regulatory compliance for medical device tenders in India.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+        }),
+      },
     ],
   }),
 });
@@ -86,9 +105,9 @@ function NonConvictionPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <p className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Non-Conviction</span> Certificate <br/> (NCC)
-          </p>
+          </h1>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />

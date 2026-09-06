@@ -49,26 +49,45 @@ export const Route = createFileRoute("/services/uae/labeling")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Labeling, IFU, Packaging & Advertising Compliance | NKB Regovanta",
+        title: "MOHAP Device Labeling & IFU (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical device and IVD labeling compliance for UAE MOHAP. Bilingual Arabic and English IFU review, packaging artwork verification, Unique Device Identification (UDI), and promotional marketing compliance.",
+          "MOHAP medical device and IVD labeling in UAE. Arabic/English IFU review, packaging artwork, UDI compliance, and promotional materials.",
       },
-      { name: "keywords", content: "UAE MOHAP Labeling, IFU, Packaging & Advertising Compliance, services uae labeling, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Labeling, IFU, Packaging & Advertising Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Medical device and IVD labeling compliance for UAE MOHAP. Bilingual Arabic and English IFU review, packaging artwork verification, Unique Device Identification (UDI), and promotional marketing compliance." },
+      { property: "og:title", content: "MOHAP Device Labeling & IFU (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP medical device and IVD labeling in UAE. Arabic/English IFU review, packaging artwork, UDI compliance, and promotional materials.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/labeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Labeling, IFU, Packaging & Advertising Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical device and IVD labeling compliance for UAE MOHAP. Bilingual Arabic and English IFU review, packaging artwork verification, Unique Device Identification (UDI), and promotional marketing compliance." },
+      { name: "twitter:title", content: "MOHAP Device Labeling & IFU (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP medical device and IVD labeling in UAE. Arabic/English IFU review, packaging artwork, UDI compliance, and promotional materials.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/labeling" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Labeling Compliance (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "Medical device labeling compliance consulting for the UAE MOHAP - Arabic language requirements, IFU review, and MOHAP labeling standards.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAELabelingPage,
 });

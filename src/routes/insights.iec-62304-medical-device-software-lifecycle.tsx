@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/iec-62304-medical-device-software-lifecycle")({
   head: () => ({
     meta: [
-      { title: "Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained | NKB Regovanta" },
+      { title: "IEC 62304 Software Lifecycle Guide | NKB Regovanta" },
       {
         name: "description",
         content: "Software safety classification (Class A, B, C), verification & validation, change management, and architectural documentation.",
       },
-      {
-        name: "keywords",
-        content: "implementing iec 62304: medical device software lifecycle processes explained, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained | NKB Regovanta" },
+      { property: "og:title", content: "IEC 62304 Software Lifecycle Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "Software safety classification (Class A, B, C), verification & validation, change management, and architectural documentation.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/iec-62304-medical-device-softwar
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Implementing IEC 62304: Medical Device Software Lifecycle Processes Explained" },
+      { name: "twitter:title", content: "IEC 62304 Software Lifecycle Guide | NKB Regovanta" },
       { name: "twitter:description", content: "Software safety classification (Class A, B, C), verification & validation, change management, and architectural documentation." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
     ],

@@ -15,28 +15,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/labeling")({
   head: () => ({
     meta: [
-      { title: "EU MDR & IVDR Labeling, IFU & Multilingual Compliance | NKB Regovanta" },
+      { title: "EU MDR & IVDR Labeling Compliance | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU MDR Annex I Chapter III and IVDR Annex I Chapter III labeling compliance, Instructions for Use (IFU), eIFU Regulation (EU) 2021/2226, ISO 15223-1 symbols, and 24-language translation governance.",
+        content: "EU MDR & IVDR labeling compliance: Instructions for Use (IFU), eIFU (EU) 2021/2226, ISO 15223-1 symbols, and 24-language translation governance.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR labeling requirements, IVDR IFU compliance, ISO 15223-1 medical device symbols, electronic IFU eIFU Europe, multilingual labeling MDR, NKB Regovanta",
-      },
-      { property: "og:title", content: "EU MDR & IVDR Labeling, IFU & Multilingual Compliance | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR & IVDR Labeling Compliance | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We audit and format medical device and IVD packaging, artwork, sterile barrier labels, and Instructions for Use across all 27 EU member states.",
+        content: "EU MDR & IVDR labeling compliance: Instructions for Use (IFU), eIFU (EU) 2021/2226, ISO 15223-1 symbols, and 24-language translation governance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/labeling" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU MDR & IVDR Labeling, IFU & Multilingual Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU MDR Annex I Chapter III and IVDR Annex I Chapter III labeling compliance, Instructions for Use (IFU), eIFU Regulation (EU) 2021/2226, ISO 15223-1 symbols, and 24-language translation governance." },
+      { name: "twitter:title", content: "EU MDR & IVDR Labeling Compliance | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR & IVDR labeling compliance: Instructions for Use (IFU), eIFU (EU) 2021/2226, ISO 15223-1 symbols, and 24-language translation governance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/labeling" }],
@@ -117,7 +110,7 @@ function EULabelingPage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Labeling, IFU &amp; Multilingual Artwork Compliance
+              EU MDR &amp; IVDR Labeling &amp; IFU Compliance
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Labeling is the visible interface of your regulatory compliance. We verify product labels, primary and secondary packaging, UDI placement, sterile barriers and Instructions for Use against stringent MDR/IVDR mandates.

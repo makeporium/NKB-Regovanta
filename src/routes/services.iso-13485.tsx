@@ -5,28 +5,23 @@ import imgISO from "@/assets/iso.png";
 export const Route = createFileRoute("/services/iso-13485")({
   head: () => ({
     meta: [
-      { title: "ISO 13485:2016 Implementation Consultant & Certification | NKB Regovanta" },
+      { title: "ISO 13485 Implementation Consultant | NKB Regovanta" },
       {
         name: "description",
         content:
-          "End-to-end support for ISO 13485:2016 Quality Management System implementation, certification support, FDA Quality Management System Regulation (QMSR 21 CFR Part 820), ISO 14971 Risk Management, and mock audits.",
+          "Expert ISO 13485:2016 QMS implementation, certification consulting, FDA QMSR alignment, ISO 14971 risk management, and mock audits.",
       },
-      {
-        name: "keywords",
-        content:
-          "ISO 13485 implementation consultant, ISO 13485:2016 certification support, FDA Quality Management System Regulation (QMSR 21 CFR Part 820), FDA 21 CFR Part 820 to QMSR transition, Internal audit medical devices ISO 13485, Mock FDA inspection / Notified Body mock audit, ISO 14971 Risk Management for medical devices, CAPA remediation and FDA 483 response consultant, Warning Letter remediation FDA, NKB Regovanta",
-      },
-      { property: "og:title", content: "ISO 13485 QMS Implementation & Certification Support | NKB Regovanta" },
+      { property: "og:title", content: "ISO 13485 Implementation Consultant | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Comprehensive ISO 13485:2016 design, internal audits, FDA QMSR alignment, and certification audit readiness for medical device manufacturers.",
+          "Expert ISO 13485:2016 QMS implementation, certification consulting, FDA QMSR alignment, ISO 14971 risk management, and mock audits.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/iso-13485" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ISO 13485:2016 Implementation Consultant & Certification | NKB Regovanta" },
-      { name: "twitter:description", content: "ISO 13485:2016 quality management system consulting for medical device manufacturers. Gap assessment, QMS documentation, internal audit support, MDSAP alignment, and certification readiness across US FDA, EU MDR, TGA,..." },
+      { name: "twitter:title", content: "ISO 13485 Implementation Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert ISO 13485:2016 QMS implementation, certification consulting, FDA QMSR alignment, ISO 14971 risk management, and mock audits." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
@@ -67,8 +62,11 @@ function Iso13485() {
           <div className="flex flex-col justify-center py-6 pr-8">
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">ISO 13485</p>
             <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 3vw, 38px)" }}>
-              Build a QMS That Works<br />Beyond Certification
+              ISO 13485 Implementation &amp;<br />Certification Consulting
             </h1>
+            <p className="mt-2 text-sm font-bold text-accent">
+              Build a QMS That Works Beyond Certification
+            </p>
             <p className="mt-4 text-[13.5px] text-navy/70 leading-relaxed max-w-sm">
               End-to-end support for ISO 13485 Quality Management System implementation and certification.
             </p>

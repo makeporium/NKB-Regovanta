@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/clinical-evidence")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia TGA Clinical Evidence & Benefit-Risk Strategy | NKB Regovanta",
+        title: "TGA Clinical Evidence & CER | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "TGA Clinical Evaluation Reports (CER), equivalent device justification, clinical literature systematic reviews, benefit-risk determination, and clinical audit readiness for ARTG inclusions.",
+          "TGA Clinical Evaluation Reports (CER), equivalence justifications, systematic literature reviews, benefit-risk analysis, and clinical audit readiness.",
       },
-      { name: "keywords", content: "Australia TGA Clinical Evidence & Benefit-Risk Strategy, services australia clinical evidence, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia TGA Clinical Evidence & Benefit-Risk Strategy | NKB Regovanta" },
-      { property: "og:description", content: "TGA Clinical Evaluation Reports (CER), equivalent device justification, clinical literature systematic reviews, benefit-risk determination, and clinical audit readiness for ARTG inclusions." },
+      { property: "og:title", content: "TGA Clinical Evidence & CER | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA Clinical Evaluation Reports (CER), equivalence justifications, systematic literature reviews, benefit-risk analysis, and clinical audit readiness.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/clinical-evidence" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia TGA Clinical Evidence & Benefit-Risk Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA Clinical Evaluation Reports (CER), equivalent device justification, clinical literature systematic reviews, benefit-risk determination, and clinical audit readiness for ARTG inclusions." },
+      { name: "twitter:title", content: "TGA Clinical Evidence & CER | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA Clinical Evaluation Reports (CER), equivalence justifications, systematic literature reviews, benefit-risk analysis, and clinical audit readiness.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/clinical-evidence" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Clinical Evidence & CER Consulting",
+          description: "Clinical Evaluation Reports (CER) and clinical evidence strategy under Australian TGA guidelines.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaClinicalEvidencePage,
 });
@@ -111,7 +137,7 @@ function AustraliaClinicalEvidencePage() {
               Clinical Evaluation &amp; CER
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Clinical Evidence &amp; Benefit-Risk Strategy
+              TGA Clinical Evidence &amp; Benefit-Risk Strategy
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Clinical evidence should support intended purpose, safety, performance and benefit-risk. The depth of evidence expected depends on device risk, novelty, claims, technology, available comparable evidence and the Australian application pathway.

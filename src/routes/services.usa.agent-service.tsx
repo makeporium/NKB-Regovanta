@@ -26,32 +26,45 @@ import {
 export const Route = createFileRoute("/services/usa/agent-service")({
   head: () => ({
     meta: [
-      { title: "US FDA US Agent Services for Foreign Facilities & FURLS Registration | NKB Regovanta" },
+      { title: "US FDA US Agent Services | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Official US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), and FDA Official Correspondent representation for overseas medical device, pharma, and cosmetic manufacturers under 21 CFR 807.40.",
+        content: "Official US FDA Agent services for foreign establishments under 21 CFR 807.40. FURLS establishment registration, device listing, and liaison support.",
       },
-      {
-        name: "keywords",
-        content:
-          "US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 21 CFR 807.40, US Agent medical devices, NKB Regovanta",
-      },
-      { property: "og:title", content: "US FDA US Agent Services & FURLS Registration | NKB Regovanta" },
+      { property: "og:title", content: "US FDA US Agent Services | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Official FDA US Agent representation, annual establishment registration, and device listings on FDA FURLS / CDRH portal.",
+        content: "Official US FDA Agent services for foreign establishments under 21 CFR 807.40. FURLS establishment registration, device listing, and liaison support.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/agent-service" },
-{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "US FDA US Agent Services for Foreign Facilities & FURLS Registration | NKB Regovanta" },
-      { name: "twitter:description", content: "US FDA Agent services for foreign medical device facilities. Official FDA Correspondent, US Agent appointment, FDA 510(k) correspondence, establishment registration (FURLS), and FDA regulatory liaison for non-US medic..." },
+      { name: "twitter:title", content: "US FDA US Agent Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Official US FDA Agent services for foreign establishments under 21 CFR 807.40. FURLS establishment registration, device listing, and liaison support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/agent-service" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "US FDA US Agent Services for Foreign Establishments",
+          description: "Official US FDA US Agent representation, annual establishment registration, and device listings on FDA FURLS under 21 CFR 807.40.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "United States",
+          },
+        }),
+      },
     ],
   }),
   component: USAgentServicePage,

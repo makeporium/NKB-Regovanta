@@ -5,22 +5,32 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/brazil/registro')({
   head: () => ({
     meta: [
-      { title: 'Registro Pathway | Brazil Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Brazil Registro Pathway services for medical devices and IVDs.' },
-      { name: "keywords", content: "Registro Pathway, Brazil Services, services brazil registro, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Registro Pathway | Brazil Services | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA Registro (product registration) consulting for Class III and IV medical devices in Brazil. Pre-submission strategy, technical dossier (DOSSIER TÉCNICO) preparation, ANVISA query response, and full registration ..." },
+      { title: 'ANVISA Registro Pathway (Brazil) | NKB Regovanta' },
+      { name: 'description', content: 'ANVISA Registro consulting for Class III & IV medical devices in Brazil — pre-submission strategy, technical dossiers, queries, and lifecycle support.' },
+      { property: "og:title", content: "ANVISA Registro Pathway (Brazil) | NKB Regovanta" },
+      { property: "og:description", content: "ANVISA Registro consulting for Class III & IV medical devices in Brazil — pre-submission strategy, technical dossiers, queries, and lifecycle support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/registro" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Registro Pathway | Brazil Services | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA Registro (product registration) consulting for Class III and IV medical devices in Brazil. Pre-submission strategy, technical dossier (DOSSIER TÉCNICO) preparation, ANVISA query response, and full registration ..." },
+      { name: "twitter:title", content: "ANVISA Registro Pathway (Brazil) | NKB Regovanta" },
+      { name: "twitter:description", content: "ANVISA Registro consulting for Class III & IV medical devices in Brazil — pre-submission strategy, technical dossiers, queries, and lifecycle support." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/registro" },
-  ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/registro" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Registro Pathway",
+          description: "ANVISA Registro pathway consulting for Class III and IV medical device registration in Brazil.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +46,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Brazil Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Registro Pathway</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">ANVISA Registro Pathway (Brazil)</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Brazil regulatory landscape with our comprehensive Registro Pathway support.
             </p>

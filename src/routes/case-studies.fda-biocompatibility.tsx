@@ -6,22 +6,50 @@ const imgPlaceholder = "/assets/brain/cs_fda_biocompatibility_1786441176273.png"
 export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
   head: () => ({
     meta: [
-      { title: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
-      { name: "description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding Using Predicate and Material Equivalence to Avoid Repeating Biocompatibility Testing Without Regulatory Need20,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study.20,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
-      { name: "keywords", content: "US FDA 510(k), Biocompatibility Equivalence, Case Studies, case studies fda biocompatibility, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
-      { property: "og:description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding $120,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
+      { title: "FDA 510(k) Biocompatibility Case Study | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Case study: How NKB Regovanta resolved an FDA 510(k) biocompatibility deficiency using material equivalence, saving $120,000 and clearing within 45 days.",
+      },
+      { property: "og:title", content: "FDA 510(k) Biocompatibility Case Study | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Case study: How NKB Regovanta resolved an FDA 510(k) biocompatibility deficiency using material equivalence, saving $120,000 and clearing within 45 days.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "US FDA 510(k) | Biocompatibility Equivalence | Case Studies | NKB Regovanta" },
-      { name: "twitter:description", content: "How NKB Regovanta resolved a critical FDA 510(k) biocompatibility deficiency using literature equivalence — avoiding $120,000 in redundant testing and achieving clearance in 45 days. A strategic US FDA case study." },
+      { name: "twitter:title", content: "FDA 510(k) Biocompatibility Case Study | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Case study: How NKB Regovanta resolved an FDA 510(k) biocompatibility deficiency using material equivalence, saving $120,000 and clearing within 45 days.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "FDA 510(k) Biocompatibility Equivalence Case Study",
+          description:
+            "Case study: How NKB Regovanta resolved an FDA 510(k) biocompatibility deficiency using material equivalence, saving $120,000 and clearing within 45 days.",
+          publisher: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
+    ],
   }),
   component: Article,
 });

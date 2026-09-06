@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/qms_inspection_office.jpg";
 export const Route = createFileRoute("/insights/effective-capa-system-medical-devices")({
   head: () => ({
     meta: [
-      { title: "Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits | NKB Regovanta" },
+      { title: "ISO 13485 & QMSR CAPA System Guide | NKB Regovanta" },
       {
         name: "description",
         content: "The 5 pillars of effective root cause analysis, corrective action verification, statistical trending, and audit resistance.",
       },
-      {
-        name: "keywords",
-        content: "designing a defensible capa system for iso 13485 and fda qmsr audits, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits | NKB Regovanta" },
+      { property: "og:title", content: "ISO 13485 & QMSR CAPA System Guide | NKB Regovanta" },
       {
         property: "og:description",
         content: "The 5 pillars of effective root cause analysis, corrective action verification, statistical trending, and audit resistance.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/effective-capa-system-medical-de
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Designing a Defensible CAPA System for ISO 13485 and FDA QMSR Audits" },
+      { name: "twitter:title", content: "ISO 13485 & QMSR CAPA System Guide | NKB Regovanta" },
       { name: "twitter:description", content: "The 5 pillars of effective root cause analysis, corrective action verification, statistical trending, and audit resistance." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png" },
     ],

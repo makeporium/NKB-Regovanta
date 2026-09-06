@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/eudamed")({
   head: () => ({
     meta: [
-      { title: "EUDAMED Registration, UDI & Economic Operator Compliance | NKB Regovanta" },
+      { title: "EUDAMED Registration & UDI | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior EU MDR & IVDR EUDAMED registration consulting, Single Registration Number (SRN), Basic UDI-DI strategy, UDI-DI / UDI-PI labeling, and EC REP / Importer agreements.",
+        content: "EUDAMED registration consulting, SRN acquisition, Basic UDI-DI strategy, and economic operator compliance under EU MDR & IVDR.",
       },
-      {
-        name: "keywords",
-        content:
-          "EUDAMED registration consultant, SRN Single Registration Number Europe, Basic UDI-DI assignment, UDI-DI UDI-PI MDR, EC REP European Authorised Representative, Importer distributor obligations, NKB Regovanta",
-      },
-      { property: "og:title", content: "EUDAMED, UDI & Economic Operator Compliance | NKB Regovanta" },
+      { property: "og:title", content: "EUDAMED Registration & UDI | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Regulatory data consistency is part of technical compliance. We align technical files, Declaration of Conformity, UDI, and EUDAMED modules into one controlled dataset.",
+        content: "EUDAMED registration consulting, SRN acquisition, Basic UDI-DI strategy, and economic operator compliance under EU MDR & IVDR.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/eudamed" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EUDAMED Registration, UDI & Economic Operator Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Senior EU MDR & IVDR EUDAMED registration consulting, Single Registration Number (SRN), Basic UDI-DI strategy, UDI-DI / UDI-PI labeling, and EC REP / Importer agreements." },
+      { name: "twitter:title", content: "EUDAMED Registration & UDI | NKB Regovanta" },
+      { name: "twitter:description", content: "EUDAMED registration consulting, SRN acquisition, Basic UDI-DI strategy, and economic operator compliance under EU MDR & IVDR." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/eudamed" }],

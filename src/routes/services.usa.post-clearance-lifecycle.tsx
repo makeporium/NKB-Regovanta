@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/post-clearance-lifecycle")({
   head: () => ({
     meta: [
-      { title: "Post-Clearance & Medical Device Lifecycle Support | FDA | NKB Regovanta" },
+      { title: "FDA Device Lifecycle Management | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "FDA post-market regulatory compliance, medical device change assessment, Special 510(k) evaluation, UDI / GUDID updates, and ongoing lifecycle management.",
+        content: "FDA post-market compliance, device change assessment, Special 510(k) evaluation, UDI / GUDID updates, and lifecycle management with expert consultants.",
       },
-      {
-        name: "keywords",
-        content:
-          "FDA post clearance support, device lifecycle management, medical device change control FDA, Special 510k assessment, UDI GUDID compliance, NKB Regovanta",
-      },
-      { property: "og:title", content: "Post-Clearance & Device Lifecycle Support | NKB Regovanta" },
+      { property: "og:title", content: "FDA Device Lifecycle Management | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We assess the regulatory impact of device changes before implementation to safeguard the basis of your existing FDA clearance.",
+        content: "FDA post-market compliance, device change assessment, Special 510(k) evaluation, UDI / GUDID updates, and lifecycle management with expert consultants.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/post-clearance-lifecycle" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Post-Clearance & Medical Device Lifecycle Support | FDA | NKB Regovanta" },
-      { name: "twitter:description", content: "FDA post-market regulatory compliance, medical device change assessment, Special 510(k) evaluation, UDI / GUDID updates, and ongoing lifecycle management." },
+      { name: "twitter:title", content: "FDA Device Lifecycle Management | NKB Regovanta" },
+      { name: "twitter:description", content: "FDA post-market compliance, device change assessment, Special 510(k) evaluation, UDI / GUDID updates, and lifecycle management with expert consultants." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/post-clearance-lifecycle" }],
@@ -87,7 +80,7 @@ function PostClearanceLifecyclePage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Post-Clearance & Device Lifecycle Support",
+              name: "FDA Post-Clearance & Medical Device Lifecycle Support",
               url: "https://www.nkbregovanta.com/services/usa/post-clearance-lifecycle",
               description:
                 "US FDA medical device change control assessment, Special 510(k) determination, and ongoing post-market lifecycle compliance.",
@@ -139,7 +132,7 @@ function PostClearanceLifecyclePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Post-Clearance &amp; Device Lifecycle Support
+              FDA Post-Clearance &amp; Device Lifecycle Support
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               We assess the regulatory impact of device changes before implementation — focusing on whether the modification affects intended use, technological characteristics, safety, effectiveness, performance or the basis of the original clearance.

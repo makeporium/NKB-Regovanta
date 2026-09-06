@@ -16,28 +16,21 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ivdr-analytical-performance")({
   head: () => ({
     meta: [
-      { title: "EU IVDR Analytical Performance Studies & Protocol Strategy | NKB Regovanta" },
+      { title: "IVDR Analytical Performance Strategy | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Define and execute IVDR analytical performance studies: precision, LoD/LoQ, specificity, interference, cross-reactivity, stability, and metrological traceability.",
-      },
-      {
-        name: "keywords",
-        content:
-          "IVDR analytical performance studies, LoD LoQ precision IVD, cross-reactivity interference IVDR, reagent stability testing, metrological traceability ISO 17511, NKB Regovanta",
+        content: "Define and execute IVDR analytical performance studies: precision, LoD/LoQ, specificity, interference, cross-reactivity, and metrological traceability.",
       },
       { property: "og:title", content: "IVDR Analytical Performance Strategy | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "Analytical evidence must be claim-driven, protocol-defined and traceable to the final PER. We design protocols and coordinate laboratory testing.",
+        content: "Define and execute IVDR analytical performance studies: precision, LoD/LoQ, specificity, interference, cross-reactivity, and metrological traceability.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr-analytical-performance" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR Analytical Performance Studies & Protocol Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "Define and execute IVDR analytical performance studies: precision, LoD/LoQ, specificity, interference, cross-reactivity, stability, and metrological traceability." },
+      { name: "twitter:title", content: "IVDR Analytical Performance Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Define and execute IVDR analytical performance studies: precision, LoD/LoQ, specificity, interference, cross-reactivity, and metrological traceability." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr-analytical-performance" }],
@@ -137,7 +130,7 @@ function EUIVDRAnalyticalPerformancePage() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              IVDR Analytical Performance Strategy
+              EU IVDR Analytical Performance Strategy
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
               Analytical evidence must be claim-driven, protocol-defined and traceable to the final PER. We define the study matrix, review protocols before laboratory execution, and verify data integrity against Notified Body expectations.

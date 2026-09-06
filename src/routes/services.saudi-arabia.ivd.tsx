@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/saudi-arabia/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA IVD Registration & Performance Evidence (Class A-D) | NKB Regovanta",
+        title: "SFDA IVD Registration & Performance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "In Vitro Diagnostic (IVD) marketing authorization with SFDA. Class A, B, C, D classification, analytical and clinical performance evidence, stability studies, Arabic labeling, and GHAD submission.",
+          "SFDA IVD registration and performance evidence in Saudi Arabia. Class A-D classification, analytical studies, Arabic labeling, and GHAD portal submissions.",
       },
-      { name: "keywords", content: "SFDA IVD Registration & Performance Evidence (Class A-D), services saudi arabia ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA IVD Registration & Performance Evidence (Class A-D) | NKB Regovanta" },
-      { property: "og:description", content: "In Vitro Diagnostic (IVD) marketing authorization with SFDA. Class A, B, C, D classification, analytical and clinical performance evidence, stability studies, Arabic labeling, and GHAD submission." },
+      { property: "og:title", content: "SFDA IVD Registration & Performance | NKB Regovanta" },
+      { property: "og:description", content: "SFDA IVD registration and performance evidence in Saudi Arabia. Class A-D classification, analytical studies, Arabic labeling, and GHAD portal submissions." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA IVD Registration & Performance Evidence (Class A-D) | NKB Regovanta" },
-      { name: "twitter:description", content: "In Vitro Diagnostic (IVD) marketing authorization with SFDA. Class A, B, C, D classification, analytical and clinical performance evidence, stability studies, Arabic labeling, and GHAD submission." },
+      { name: "twitter:title", content: "SFDA IVD Registration & Performance | NKB Regovanta" },
+      { name: "twitter:description", content: "SFDA IVD registration and performance evidence in Saudi Arabia. Class A-D classification, analytical studies, Arabic labeling, and GHAD portal submissions." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/ivd" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA IVD Registration and Licensing (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA regulatory consulting for in vitro diagnostic devices in Saudi Arabia - IVD registration, GMDN coding, technical documentation, and post-market compliance.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiIVDPage,
 });

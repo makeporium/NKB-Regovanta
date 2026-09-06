@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/pms")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Post-Market Surveillance & Mandatory Problem Reporting | NKB Regovanta",
+        title: "Health Canada Post-Market Surveillance | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Health Canada Mandatory Problem Reporting (MPR), preliminary and final incident reporting (10-day and 30-day timelines), recall management, and post-market surveillance systems.",
+          "Health Canada post-market surveillance: Mandatory Problem Reporting (MPR), 10/30-day incident timelines, recall management, and CAPA integration.",
       },
-      { name: "keywords", content: "Health Canada Post-Market Surveillance & Mandatory Problem Reporting, services canada pms, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Post-Market Surveillance & Mandatory Problem Reporting | NKB Regovanta" },
-      { property: "og:description", content: "Health Canada Mandatory Problem Reporting (MPR), preliminary and final incident reporting (10-day and 30-day timelines), recall management, and post-market surveillance systems." },
+      { property: "og:title", content: "Health Canada Post-Market Surveillance | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada post-market surveillance: Mandatory Problem Reporting (MPR), 10/30-day incident timelines, recall management, and CAPA integration.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/pms" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Post-Market Surveillance & Mandatory Problem Reporting | NKB Regovanta" },
-      { name: "twitter:description", content: "Health Canada Mandatory Problem Reporting (MPR), preliminary and final incident reporting (10-day and 30-day timelines), recall management, and post-market surveillance systems." },
+      { name: "twitter:title", content: "Health Canada Post-Market Surveillance | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada post-market surveillance: Mandatory Problem Reporting (MPR), 10/30-day incident timelines, recall management, and CAPA integration.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/pms" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Post-Market Surveillance & Mandatory Problem Reporting",
+          description: "MPR reportability assessments, preliminary and final incident reports, recall strategy, and post-market system design.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaPMSPage,
 });
@@ -114,7 +137,7 @@ function CanadaPMSPage() {
               Mandatory Problem Reporting (MPR)
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Post-Market Surveillance, Complaints &amp; Mandatory Problem Reporting
+              Health Canada Post-Market Surveillance &amp; MPR
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Canadian market access continues after licensing. Manufacturers, importers and distributors must maintain complaint, reporting, recall and corrective-action systems capable of identifying and responding to device risks.

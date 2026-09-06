@@ -41,33 +41,25 @@ export const Route = createFileRoute("/services/eu/ivdr")({
   head: () => ({
     meta: [
       {
-        title:
-          "EU IVDR 2017/746 Regulatory Consulting for In Vitro Diagnostic Devices | PER & CE Marking | NKB Regovanta",
+        title: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta",
       },
       {
         name: "description",
-        content:
-          "Specialized EU IVDR 2017/746 regulatory consultants. Performance Evaluation Plan & Report (PEP / PER), Scientific Validity, Analytical & Clinical Performance studies, Class D EURL strategy, Notified Body review, and CE marking.",
-      },
-      {
-        name: "keywords",
-        content:
-          "EU IVDR 2017/746 consultant, In Vitro Diagnostic Regulation Europe, IVDR Performance Evaluation Report PER, Scientific Validity, Analytical Performance IVD, Clinical Performance Studies, Class D EURL, IVDR Notified Body, NKB Regovanta",
+        content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification.",
       },
       {
         property: "og:title",
-        content: "EU IVDR 2017/746 Regulatory Consulting for IVDs | NKB Regovanta",
+        content: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta",
       },
       {
         property: "og:description",
-        content:
-          "Senior IVDR regulatory consultants connecting scientific validity, analytical performance, clinical performance, and Notified Body defense for Class A, B, C, and D assays.",
+        content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EU IVDR 2017/746 Regulatory Consulting for In Vitro Diagnostic Devices | PER & CE Marking | ..." },
-      { name: "twitter:description", content: "Specialized EU IVDR 2017/746 regulatory consultants. Performance Evaluation Plan & Report (PEP / PER), Scientific Validity, Analytical & Clinical Performance studies, Class D EURL strategy, Notified Body review, and C..." },
+      { name: "twitter:title", content: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr" }],

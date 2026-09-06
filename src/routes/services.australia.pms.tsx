@@ -5,22 +5,53 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/australia/pms')({
   head: () => ({
     meta: [
-      { title: 'Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized Australia Post-Market Surveillance (PMS) services for medical devices and IVDs.' },
-      { name: "keywords", content: "Post-Market Surveillance (PMS), Australia Services, services australia pms, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta" },
-      { property: "og:description", content: "TGA post-market surveillance consulting for ARTG-included medical devices in Australia. PMS plan preparation, adverse event reporting, mandatory incident reporting (MIR), post-market review strategy, and TGA complianc..." },
+      { title: "TGA Post-Market Surveillance Plans | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "TGA post-market surveillance (PMS) plan consulting: complaint trending, ISO 14971 risk updates, and post-market review compliance for Australia.",
+      },
+      { property: "og:title", content: "TGA Post-Market Surveillance Plans | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA post-market surveillance (PMS) plan consulting: complaint trending, ISO 14971 risk updates, and post-market review compliance for Australia.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/pms" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Post-Market Surveillance (PMS) | Australia Services | NKB Regovanta" },
-      { name: "twitter:description", content: "TGA post-market surveillance consulting for ARTG-included medical devices in Australia. PMS plan preparation, adverse event reporting, mandatory incident reporting (MIR), post-market review strategy, and TGA complianc..." },
+      { name: "twitter:title", content: "TGA Post-Market Surveillance Plans | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA post-market surveillance (PMS) plan consulting: complaint trending, ISO 14971 risk updates, and post-market review compliance for Australia.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/pms" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Post-Market Surveillance (PMS) Plan Consulting",
+          description: "Post-market surveillance plan preparation, risk feedback, and compliance for Australian medical devices.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +67,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Australia Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Post-Market Surveillance (PMS)</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">TGA Post-Market Surveillance (PMS) Plans</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Australia regulatory landscape with our comprehensive Post-Market Surveillance (PMS) support.
             </p>

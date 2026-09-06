@@ -20,21 +20,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/design-controls")({
   head: () => ({
     meta: [
-      { title: "Design & Development Control Readiness | MDSAP | NKB Regovanta" },
-      { name: "description", content: "Ensure design controls, user needs, V&V, transfer, software lifecycles, and Design History Files (DHF) are audit-ready and evidence-backed." },
-      { name: "keywords", content: "MDSAP design controls, Design History File DHF audit, medical device V&V evidence, design change control MDSAP, IEC 62304 software lifecycle" },
-      { property: "og:title", content: "Design & Development Control Readiness | NKB Regovanta" },
-      { property: "og:description", content: "Design controls are often where the deepest nonconformities arise. Build defensible DHF, V&V, and design transfer records." },
+      { title: "MDSAP Design & Development Control Readiness | NKB Regovanta" },
+      { name: "description", content: "Audit-ready design controls, user needs, V&V evidence, design transfer, software lifecycles (IEC 62304), and Design History File (DHF) support for MDSAP audits." },
+      { property: "og:title", content: "MDSAP Design & Development Control Readiness | NKB Regovanta" },
+      { property: "og:description", content: "Audit-ready design controls, user needs, V&V evidence, design transfer, software lifecycles (IEC 62304), and Design History File (DHF) support for MDSAP audits." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/design-controls" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Design & Development Control Readiness | MDSAP | NKB Regovanta" },
-      { name: "twitter:description", content: "Ensure design controls, user needs, V&V, transfer, software lifecycles, and Design History Files (DHF) are audit-ready and evidence-backed." },
+      { name: "twitter:title", content: "MDSAP Design & Development Control Readiness | NKB Regovanta" },
+      { name: "twitter:description", content: "Audit-ready design controls, user needs, V&V evidence, design transfer, software lifecycles (IEC 62304), and Design History File (DHF) support for MDSAP audits." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/design-controls" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Design & Development Control Readiness",
+          description: "Design control audit readiness including DHF, V&V, design transfer, and software lifecycle support for medical device manufacturers seeking MDSAP certification.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
     ],
   }),
   component: DesignControlsPage,

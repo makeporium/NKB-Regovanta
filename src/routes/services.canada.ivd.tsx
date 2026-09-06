@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/canada/ivd")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada IVD Registration & Performance Evidence | NKB Regovanta",
+        title: "Health Canada IVD Regulatory Strategy | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "In Vitro Diagnostic (IVD) classification under Schedule 1 Part 2, Class II-IV MDL licensing, analytical performance studies (LoD, precision, cross-reactivity), and clinical performance evaluation for Health Canada.",
+          "Health Canada IVD regulatory strategy: Class II-IV MDL licensing, analytical performance studies (LoD, precision), and clinical evaluation.",
       },
-      { name: "keywords", content: "Health Canada IVD Registration & Performance Evidence, services canada ivd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada IVD Registration & Performance Evidence | NKB Regovanta" },
-      { property: "og:description", content: "In Vitro Diagnostic (IVD) classification under Schedule 1 Part 2, Class II-IV MDL licensing, analytical performance studies (LoD, precision, cross-reactivity), and clinical performance evaluation for Health Canada." },
+      { property: "og:title", content: "Health Canada IVD Regulatory Strategy | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada IVD regulatory strategy: Class II-IV MDL licensing, analytical performance studies (LoD, precision), and clinical evaluation.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/ivd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada IVD Registration & Performance Evidence | NKB Regovanta" },
-      { name: "twitter:description", content: "In Vitro Diagnostic (IVD) classification under Schedule 1 Part 2, Class II-IV MDL licensing, analytical performance studies (LoD, precision, cross-reactivity), and clinical performance evaluation for Health Canada." },
+      { name: "twitter:title", content: "Health Canada IVD Regulatory Strategy | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada IVD regulatory strategy: Class II-IV MDL licensing, analytical performance studies (LoD, precision), and clinical evaluation.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/ivd" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada IVD Registration & Performance Evidence",
+          description: "IVD classification under Schedule 1 Part 2, Class II-IV MDL licensing, and analytical study design in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaIVDPage,
 });
@@ -128,7 +154,7 @@ function CanadaIVDPage() {
               In Vitro Diagnostics
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Health Canada IVD Registration &amp; Performance Evidence
+              Health Canada IVD Registration &amp; Performance Strategy
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               IVDs are classified under a separate Canadian classification framework because risk is driven not only by the assay technology but by how the result will be used and the consequences of an incorrect result.

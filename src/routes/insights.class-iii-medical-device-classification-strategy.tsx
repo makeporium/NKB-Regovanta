@@ -7,16 +7,12 @@ const imgArticle = "/assets/brain/industry_medical_devices_1786310566137.png";
 export const Route = createFileRoute("/insights/class-iii-medical-device-classification-strategy")({
   head: () => ({
     meta: [
-      { title: "Strategic Classification and Pathway Selection for Class III Medical Devices | NKB Regovanta" },
+      { title: "Class III Medical Device Strategy | NKB Regovanta" },
       {
         name: "description",
         content: "Navigating high-risk device regulatory requirements, premarket approval (PMA) thresholds, and clinical dossier substantiation.",
       },
-      {
-        name: "keywords",
-        content: "strategic classification and pathway selection for class iii medical devices, medical device regulations, NKB Regovanta, regulatory consulting, medtech compliance",
-      },
-      { property: "og:title", content: "Strategic Classification and Pathway Selection for Class III Medical Devices | NKB Regovanta" },
+      { property: "og:title", content: "Class III Medical Device Strategy | NKB Regovanta" },
       {
         property: "og:description",
         content: "Navigating high-risk device regulatory requirements, premarket approval (PMA) thresholds, and clinical dossier substantiation.",
@@ -25,7 +21,7 @@ export const Route = createFileRoute("/insights/class-iii-medical-device-classif
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Strategic Classification and Pathway Selection for Class III Medical Devices" },
+      { name: "twitter:title", content: "Class III Medical Device Strategy | NKB Regovanta" },
       { name: "twitter:description", content: "Navigating high-risk device regulatory requirements, premarket approval (PMA) thresholds, and clinical dossier substantiation." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/us_fda_compliance_1786395357791.png" },
     ],

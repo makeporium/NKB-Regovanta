@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/change-management")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Changes, Variations, Revalidation & Lifecycle Support | NKB Regovanta",
+        title: "ANVISA Changes & Revalidação (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA change categorization (alteração / aditamento), registration revalidation (revalidação), manufacturing site additions, technical file updates, and lifecycle engineering change control in Brazil.",
+          "ANVISA change categorization (alteração), registration revalidação, site changes, and lifecycle change control for Brazil medical devices.",
       },
-      { name: "keywords", content: "ANVISA Changes, Variations, Revalidation & Lifecycle Support, services brazil change management, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Changes, Variations, Revalidation & Lifecycle Support | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA change categorization (alteração / aditamento), registration revalidation (revalidação), manufacturing site additions, technical file updates, and lifecycle engineering change control in Brazil." },
+      { property: "og:title", content: "ANVISA Changes & Revalidação (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA change categorization (alteração), registration revalidação, site changes, and lifecycle change control for Brazil medical devices.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/change-management" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Changes, Variations, Revalidation & Lifecycle Support | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA change categorization (alteração / aditamento), registration revalidation (revalidação), manufacturing site additions, technical file updates, and lifecycle engineering change control in Brazil." },
+      { name: "twitter:title", content: "ANVISA Changes & Revalidação (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA change categorization (alteração), registration revalidação, site changes, and lifecycle change control for Brazil medical devices.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/change-management" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Changes, Variations, Revalidação & Lifecycle Support",
+          description: "ANVISA change impact assessment, alteração categorization, registration revalidação, and lifecycle engineering change control for Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilChangeManagementPage,
 });
@@ -130,7 +153,7 @@ function BrazilChangeManagementPage() {
               Alterações &amp; Revalidação
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Changes, Variations, Revalidation &amp; Lifecycle Support (Brazil)
+              ANVISA Changes, Variations &amp; Revalidação Support
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Changes to a device after Brazilian regularization can affect the notification/registration, technical dossier, BGMP certification, labeling, UDI/SIUD data and post-market obligations. The correct action depends on the type and significance of the change and should be assessed before implementation whenever possible.

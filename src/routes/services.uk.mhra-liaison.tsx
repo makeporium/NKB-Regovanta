@@ -13,24 +13,49 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/mhra-liaison")({
   head: () => ({
     meta: [
-      { title: "MHRA Communication Liaison & Authority Representation | NKB Regovanta" },
+      { title: "MHRA Communication Liaison | NKB Regovanta" },
       {
         name: "description",
         content:
           "Official communication liaison with the UK Medicines and Healthcare products Regulatory Agency (MHRA) for overseas manufacturers.",
       },
-      { name: "keywords", content: "MHRA Communication Liaison & Authority Representation, services uk ukrp, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "MHRA Communication Liaison & Authority Representation | NKB Regovanta" },
-      { property: "og:description", content: "Official communication liaison with the UK Medicines and Healthcare products Regulatory Agency (MHRA) for overseas manufacturers." },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/ukrp" },
+      { property: "og:title", content: "MHRA Communication Liaison | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "Official communication liaison with the UK Medicines and Healthcare products Regulatory Agency (MHRA) for overseas manufacturers.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/mhra-liaison" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MHRA Communication Liaison & Authority Representation | NKB Regovanta" },
-      { name: "twitter:description", content: "Official communication liaison with the UK Medicines and Healthcare products Regulatory Agency (MHRA) for overseas manufacturers." },
+      { name: "twitter:title", content: "MHRA Communication Liaison | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "Official communication liaison with the UK Medicines and Healthcare products Regulatory Agency (MHRA) for overseas manufacturers.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/ukrp" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-liaison" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MHRA Communication Liaison & Representation",
+          description: "Official liaison and regulatory communication with the UK MHRA for medical device manufacturers.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "United Kingdom",
+          },
+        }),
+      },
+    ],
   }),
   component: MHRALiaisonPage,
 });
@@ -59,7 +84,7 @@ function MHRALiaisonPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
-              MHRA Communication Liaison
+              MHRA Communication Liaison &amp; Regulatory Representation
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               As your appointed UK Responsible Person, we act as your definitive point of contact for all regulatory communications, inspections, and inquiries from the MHRA.

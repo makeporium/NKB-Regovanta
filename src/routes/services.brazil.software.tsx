@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/brazil/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022) | NKB Regovanta",
+        title: "ANVISA SaMD & Software Regulatory Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Software as a Medical Device (SaMD) regularization under RDC 657/2022 in Brazil. IEC 62304 software lifecycles, cybersecurity risk management, AI/ML clinical evidence, and algorithmic change control.",
+          "SaMD regularization under RDC 657/2022 in Brazil — IEC 62304 compliance, cybersecurity, AI/ML clinical evidence, and algorithmic change control.",
       },
-      { name: "keywords", content: "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022), services brazil software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022) | NKB Regovanta" },
-      { property: "og:description", content: "Software as a Medical Device (SaMD) regularization under RDC 657/2022 in Brazil. IEC 62304 software lifecycles, cybersecurity risk management, AI/ML clinical evidence, and algorithmic change control." },
+      { property: "og:title", content: "ANVISA SaMD & Software Regulatory Consulting | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "SaMD regularization under RDC 657/2022 in Brazil — IEC 62304 compliance, cybersecurity, AI/ML clinical evidence, and algorithmic change control.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022) | NKB Regovanta" },
-      { name: "twitter:description", content: "Software as a Medical Device (SaMD) regularization under RDC 657/2022 in Brazil. IEC 62304 software lifecycles, cybersecurity risk management, AI/ML clinical evidence, and algorithmic change control." },
+      { name: "twitter:title", content: "ANVISA SaMD & Software Regulatory Consulting | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SaMD regularization under RDC 657/2022 in Brazil — IEC 62304 compliance, cybersecurity, AI/ML clinical evidence, and algorithmic change control.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/software" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA SaMD, Software, AI & Cybersecurity Regulatory Consulting (RDC 657/2022)",
+          description: "Software as a Medical Device regularization, IEC 62304 lifecycle, cybersecurity, and AI/ML clinical evidence support for ANVISA submissions in Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilSoftwarePage,
 });
@@ -131,7 +154,7 @@ function BrazilSoftwarePage() {
               RDC 657/2022 Digital Health
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              SaMD, Software, AI &amp; Cybersecurity Regulatory Support (Brazil)
+              ANVISA SaMD, Software, AI &amp; Cybersecurity Regulatory Consulting
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Software as a Medical Device is specifically regulated under RDC 657/2022. The first regulatory question is whether the software is a medical device and, if so, how its intended medical purpose, risk and functionality determine classification and regularization. Software changes also require disciplined lifecycle assessment because a new algorithm, claim or risk-control function can affect the approved regulatory basis.

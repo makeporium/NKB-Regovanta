@@ -49,26 +49,49 @@ export const Route = createFileRoute("/services/brazil/technical-documentation")
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024) | NKB Regovanta",
+        title: "ANVISA Technical Dossier (Brazil) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA technical file compilation, Essential Safety and Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, clinical evaluation, and pre-market dossier defense.",
+          "ANVISA technical dossier compilation and Safety/Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, and dossier defense in Brazil.",
       },
-      { name: "keywords", content: "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024), services brazil technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024) | NKB Regovanta" },
-      { property: "og:description", content: "ANVISA technical file compilation, Essential Safety and Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, clinical evaluation, and pre-market dossier defense." },
+      { property: "og:title", content: "ANVISA Technical Dossier (Brazil) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "ANVISA technical dossier compilation and Safety/Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, and dossier defense in Brazil.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024) | NKB Regovanta" },
-      { name: "twitter:description", content: "ANVISA technical file compilation, Essential Safety and Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, clinical evaluation, and pre-market dossier defense." },
+      { name: "twitter:title", content: "ANVISA Technical Dossier (Brazil) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "ANVISA technical dossier compilation and Safety/Performance evidence mapping under RDC 848/2024, ISO 14971 risk management, and dossier defense in Brazil.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil/technical-documentation" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ANVISA Technical Documentation & Safety/Performance Evidence (RDC 848/2024)",
+          description: "Technical dossier compilation, Essential Safety and Performance evidence mapping, and pre-market dossier defense for ANVISA medical device registrations in Brazil.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Brazil" },
+        }),
+      },
+    ],
   }),
   component: BrazilTechnicalDocPage,
 });
@@ -132,7 +155,7 @@ function BrazilTechnicalDocPage() {
               RDC 848/2024 &amp; RDC 751/2022
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Technical Documentation &amp; Safety/Performance Evidence
+              ANVISA Technical Dossier &amp; Safety/Performance Evidence
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               ANVISA expects the technical dossier to demonstrate that the device is safe, performs as intended and meets the applicable Brazilian essential safety and performance requirements. RDC 848/2024 updated the essential safety and performance framework and extends it to IVDs. A dossier built for the EU, US or Canada can often be leveraged, but it must be mapped to the Brazilian product, classification and regulatory route.

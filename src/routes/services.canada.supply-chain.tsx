@@ -48,26 +48,49 @@ export const Route = createFileRoute("/services/canada/supply-chain")({
   head: () => ({
     meta: [
       {
-        title:
-          "Canadian Manufacturer, Importer & Supply-Chain Compliance | NKB Regovanta",
+        title: "Canada Medical Device Supply Chain | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Compliance agreements, importer MDEL obligations, distribution record traceability, recall procedures, and regulatory ownership across the Canadian medical device supply chain.",
+          "Importer MDEL obligations, distribution traceability, quality agreements, and recall procedures across the Canadian medical device supply chain.",
       },
-      { name: "keywords", content: "Canadian Manufacturer, Importer & Supply-Chain Compliance, services canada supply chain, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Canadian Manufacturer, Importer & Supply-Chain Compliance | NKB Regovanta" },
-      { property: "og:description", content: "Compliance agreements, importer MDEL obligations, distribution record traceability, recall procedures, and regulatory ownership across the Canadian medical device supply chain." },
+      { property: "og:title", content: "Canada Medical Device Supply Chain | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Importer MDEL obligations, distribution traceability, quality agreements, and recall procedures across the Canadian medical device supply chain.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/supply-chain" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Canadian Manufacturer, Importer & Supply-Chain Compliance | NKB Regovanta" },
-      { name: "twitter:description", content: "Compliance agreements, importer MDEL obligations, distribution record traceability, recall procedures, and regulatory ownership across the Canadian medical device supply chain." },
+      { name: "twitter:title", content: "Canada Medical Device Supply Chain | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Importer MDEL obligations, distribution traceability, quality agreements, and recall procedures across the Canadian medical device supply chain.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/supply-chain" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Canadian Manufacturer, Importer & Supply-Chain Compliance",
+          description: "MDEL importer compliance, distribution traceability, quality agreements, and recall responsibility mapping in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: { "@type": "Country", name: "Canada" },
+        }),
+      },
+    ],
   }),
   component: CanadaSupplyChainPage,
 });
@@ -112,7 +135,7 @@ function CanadaSupplyChainPage() {
               Economic Operators &amp; Importers
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Manufacturer, Importer &amp; Supply-Chain Compliance
+              Canada Medical Device Supply Chain &amp; Importer Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Canadian market access depends on more than the manufacturer’s device licence. The roles of the importer and distributor, MDEL status, traceability, complaint routing and regulatory responsibilities must be clear across the supply chain.

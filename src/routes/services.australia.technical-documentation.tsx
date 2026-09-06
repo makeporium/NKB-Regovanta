@@ -49,26 +49,52 @@ export const Route = createFileRoute("/services/australia/technical-documentatio
   head: () => ({
     meta: [
       {
-        title:
-          "Australia TGA Technical Documentation & Essential Principles | NKB Regovanta",
+        title: "TGA Essential Principles Documentation | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Schedule 3 Essential Principles evidence mapping, IMDRF Table of Contents technical dossier structure, risk management (ISO 14971), clinical evaluation, and TGA audit readiness.",
+          "TGA Essential Principles evidence mapping (Schedule 3), IMDRF Table of Contents dossiers, ISO 14971 risk management, and technical audit readiness.",
       },
-      { name: "keywords", content: "Australia TGA Technical Documentation & Essential Principles, services australia technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Australia TGA Technical Documentation & Essential Principles | NKB Regovanta" },
-      { property: "og:description", content: "Schedule 3 Essential Principles evidence mapping, IMDRF Table of Contents technical dossier structure, risk management (ISO 14971), clinical evaluation, and TGA audit readiness." },
+      { property: "og:title", content: "TGA Essential Principles Documentation | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA Essential Principles evidence mapping (Schedule 3), IMDRF Table of Contents dossiers, ISO 14971 risk management, and technical audit readiness.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Australia TGA Technical Documentation & Essential Principles | NKB Regovanta" },
-      { name: "twitter:description", content: "Schedule 3 Essential Principles evidence mapping, IMDRF Table of Contents technical dossier structure, risk management (ISO 14971), clinical evaluation, and TGA audit readiness." },
+      { name: "twitter:title", content: "TGA Essential Principles Documentation | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA Essential Principles evidence mapping (Schedule 3), IMDRF Table of Contents dossiers, ISO 14971 risk management, and technical audit readiness.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/technical-documentation" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Technical Documentation & Essential Principles Consulting",
+          description: "Schedule 3 Essential Principles mapping, IMDRF technical dossier compilation, and TGA audit preparation.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaTechnicalDocPage,
 });
@@ -135,7 +161,7 @@ function AustraliaTechnicalDocPage() {
               Schedule 3 Essential Principles
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Technical Documentation &amp; Essential Principles Evidence
+              TGA Technical Documentation &amp; Essential Principles
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               Australian market access is supported by evidence demonstrating conformity with the Essential Principles. Technical documentation developed for the EU, US, UK or Canada can often be leveraged, but it must be assessed against the Australian classification, intended purpose, conformity evidence, labelling and application route.

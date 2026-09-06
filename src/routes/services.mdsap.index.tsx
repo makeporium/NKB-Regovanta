@@ -38,28 +38,21 @@ export const Route = createFileRoute("/services/mdsap/")({
   head: () => ({
     meta: [
       {
-        title:
-          "MDSAP Audit Readiness & Consulting for Medical Device Manufacturers | NKB Regovanta",
+        title: "MDSAP Audit Readiness & Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Prepare your QMS for one audit across 5 regulatory jurisdictions: US FDA, Health Canada, ANVISA Brazil, MHLW/PMDA Japan, and TGA Australia. Comprehensive MDSAP readiness, gap assessment, mock audits, and CAPA remediation.",
-      },
-      {
-        name: "keywords",
-        content:
-          "MDSAP Audit Readiness, MDSAP Consulting, Medical Device Single Audit Program, ISO 13485 MDSAP alignment, FDA QMSR MDSAP, Health Canada MDSAP, ANVISA MDSAP, TGA Australia MDSAP, PMDA Japan MDSAP, MDSAP Mock Audit, Auditing Organization AO support, NKB Regovanta",
+          "MDSAP audit readiness & consulting across 5 jurisdictions: US FDA, Health Canada, ANVISA Brazil, TGA Australia, and MHLW/PMDA Japan.",
       },
       {
         property: "og:title",
-        content:
-          "MDSAP Audit Readiness & Consulting | 5 Jurisdictions | NKB Regovanta",
+        content: "MDSAP Audit Readiness & Consulting | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Prepared for 5 Jurisdictions. Trusted for Quality. One single QMS audit across US, Canada, Brazil, Japan, and Australia.",
+          "MDSAP audit readiness & consulting across 5 jurisdictions: US FDA, Health Canada, ANVISA Brazil, TGA Australia, and MHLW/PMDA Japan.",
       },
       {
         property: "og:url",
@@ -75,13 +68,12 @@ export const Route = createFileRoute("/services/mdsap/")({
       },
       {
         name: "twitter:title",
-        content:
-          "MDSAP Audit Readiness & Consulting | 5 Jurisdictions | NKB Regovanta",
+        content: "MDSAP Audit Readiness & Consulting | NKB Regovanta",
       },
       {
         name: "twitter:description",
         content:
-          "Prepared for 5 Jurisdictions. Trusted for Quality. One single QMS audit across US, Canada, Brazil, Japan, and Australia.",
+          "MDSAP audit readiness & consulting across 5 jurisdictions: US FDA, Health Canada, ANVISA Brazil, TGA Australia, and MHLW/PMDA Japan.",
       },
       {
         name: "twitter:image",

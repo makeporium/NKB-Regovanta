@@ -7,29 +7,24 @@ const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.png
 export const Route = createFileRoute("/insights/medical-device-documentation-compliance-to-evidence")({
   head: () => ({
     meta: [
-      { title: "Medical Device Documentation: From Compliance Records to Regulatory Evidence | NKB Regovanta" },
+      { title: "Medical Device Regulatory Evidence | NKB Regovanta" },
       {
         name: "description",
         content:
-          "For medical device manufacturers, documentation is objective evidence of quality control. Discover how to avoid audit disconnects across design, risk management, validation, and PMS.",
+          "Documentation is objective evidence of quality control. Learn how to avoid audit disconnects across design, risk management, validation, and PMS.",
       },
-      {
-        name: "keywords",
-        content:
-          "medical device documentation, regulatory evidence, technical file traceability, FDA inspection readiness, ISO 13485 QMS audit, risk management ISO 14971, NKB Regovanta",
-      },
-      { property: "og:title", content: "Medical Device Documentation: From Compliance Records to Regulatory Evidence | NKB Regovanta" },
+      { property: "og:title", content: "Medical Device Regulatory Evidence | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Why auditors look for consistency and traceability between records, and how to build defensible regulatory evidence across the product lifecycle.",
+          "Documentation is objective evidence of quality control. Learn how to avoid audit disconnects across design, risk management, validation, and PMS.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence" },
       { property: "og:type", content: "article" },
       { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Medical Device Documentation: From Compliance Records to Regulatory Evidence" },
-      { name: "twitter:description", content: "Learn how to turn static compliance files into connected, traceable regulatory evidence." },
+      { name: "twitter:title", content: "Medical Device Regulatory Evidence | NKB Regovanta" },
+      { name: "twitter:description", content: "Documentation is objective evidence of quality control. Learn how to avoid audit disconnects across design, risk management, validation, and PMS." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
     ],
     links: [

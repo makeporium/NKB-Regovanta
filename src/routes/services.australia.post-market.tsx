@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/australia/post-market")({
   head: () => ({
     meta: [
       {
-        title:
-          "TGA Post-Market Surveillance, MDIR Incident Reporting & Vigilance | NKB Regovanta",
+        title: "TGA Post-Market Vigilance & MDIR | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Australia TGA post-market vigilance, Medical Device Incident Reporting (MDIR in IRIS), 48-hour/10-day/30-day timelines, annual reporting for Class III & implantable devices, recalls, and PRAC market actions.",
+          "TGA post-market vigilance consulting: Medical Device Incident Reporting (MDIR IRIS), statutory reporting timelines, recalls, and PRAC market actions.",
       },
-      { name: "keywords", content: "TGA Post-Market Surveillance, MDIR Incident Reporting & Vigilance, services australia post market, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "TGA Post-Market Surveillance, MDIR Incident Reporting & Vigilance | NKB Regovanta" },
-      { property: "og:description", content: "Australia TGA post-market vigilance, Medical Device Incident Reporting (MDIR in IRIS), 48-hour/10-day/30-day timelines, annual reporting for Class III & implantable devices, recalls, and PRAC market actions." },
+      { property: "og:title", content: "TGA Post-Market Vigilance & MDIR | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "TGA post-market vigilance consulting: Medical Device Incident Reporting (MDIR IRIS), statutory reporting timelines, recalls, and PRAC market actions.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/australia/post-market" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TGA Post-Market Surveillance, MDIR Incident Reporting & Vigilance | NKB Regovanta" },
-      { name: "twitter:description", content: "Australia TGA post-market vigilance, Medical Device Incident Reporting (MDIR in IRIS), 48-hour/10-day/30-day timelines, annual reporting for Class III & implantable devices, recalls, and PRAC market actions." },
+      { name: "twitter:title", content: "TGA Post-Market Vigilance & MDIR | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "TGA post-market vigilance consulting: Medical Device Incident Reporting (MDIR IRIS), statutory reporting timelines, recalls, and PRAC market actions.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia/post-market" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "TGA Post-Market Vigilance & MDIR Support",
+          description: "MDIR reporting in TGA IRIS, adverse incident management, and recall execution for Australian medical devices.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Australia",
+          },
+        }),
+      },
+    ],
   }),
   component: AustraliaPostMarketPage,
 });
@@ -134,7 +160,7 @@ function AustraliaPostMarketPage() {
               IRIS Vigilance &amp; MDIR
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Post-Market Surveillance, MDIR Reporting, Annual Reports &amp; Market Actions
+              TGA Post-Market Vigilance, MDIR &amp; Recall Management
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               ARTG inclusion creates continuing obligations. Sponsors must monitor device safety and performance, manage complaints, report adverse events within the prescribed timeframes, coordinate investigations and market actions, maintain records and respond to TGA post-market requests.

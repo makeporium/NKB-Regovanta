@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/uae/mohap-registration")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Medical Device Registration & Dossier Strategy | NKB Regovanta",
+        title: "MOHAP Medical Device Registration (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "MOHAP Medical Equipment and IVD registration in the United Arab Emirates. Electronic dossier compilation, Free Sale Certificate (FSC), CE Declaration of Conformity, and technical committee approval.",
+          "MOHAP medical device and IVD registration in UAE. Dossier compilation, FSC, CE declaration, and technical committee approval support.",
       },
-      { name: "keywords", content: "UAE MOHAP Medical Device Registration & Dossier Strategy, services uae mohap registration, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Medical Device Registration & Dossier Strategy | NKB Regovanta" },
-      { property: "og:description", content: "MOHAP Medical Equipment and IVD registration in the United Arab Emirates. Electronic dossier compilation, Free Sale Certificate (FSC), CE Declaration of Conformity, and technical committee approval." },
+      { property: "og:title", content: "MOHAP Medical Device Registration (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP medical device and IVD registration in UAE. Dossier compilation, FSC, CE declaration, and technical committee approval support.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/mohap-registration" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Medical Device Registration & Dossier Strategy | NKB Regovanta" },
-      { name: "twitter:description", content: "MOHAP Medical Equipment and IVD registration in the United Arab Emirates. Electronic dossier compilation, Free Sale Certificate (FSC), CE Declaration of Conformity, and technical committee approval." },
+      { name: "twitter:title", content: "MOHAP Medical Device Registration (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP medical device and IVD registration in UAE. Dossier compilation, FSC, CE declaration, and technical committee approval support.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/mohap-registration" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP Medical Device Registration (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "End-to-end MOHAP medical device registration consulting in the UAE - strategy, technical documentation, dossier preparation, and submission management.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEMohapRegistrationPage,
 });

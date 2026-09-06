@@ -48,26 +48,52 @@ export const Route = createFileRoute("/services/canada/mdel")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada Medical Device Establishment Licence (MDEL) | NKB Regovanta",
+        title: "Health Canada MDEL Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Medical Device Establishment Licence (MDEL) applications and compliance support for Class I manufacturers, Canadian importers, and distributors. Procedures for distribution records, mandatory problem reporting, and recalls.",
+          "Health Canada MDEL consulting: Medical Device Establishment Licence application, importer & distributor compliance, complaint systems, and recall SOPs.",
       },
-      { name: "keywords", content: "Health Canada Medical Device Establishment Licence (MDEL), services canada mdel, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "Health Canada Medical Device Establishment Licence (MDEL) | NKB Regovanta" },
-      { property: "og:description", content: "Medical Device Establishment Licence (MDEL) applications and compliance support for Class I manufacturers, Canadian importers, and distributors. Procedures for distribution records, mandatory problem reporting, and re..." },
+      { property: "og:title", content: "Health Canada MDEL Consulting | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Health Canada MDEL consulting: Medical Device Establishment Licence application, importer & distributor compliance, complaint systems, and recall SOPs.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada/mdel" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Health Canada Medical Device Establishment Licence (MDEL) | NKB Regovanta" },
-      { name: "twitter:description", content: "Medical Device Establishment Licence (MDEL) applications and compliance support for Class I manufacturers, Canadian importers, and distributors. Procedures for distribution records, mandatory problem reporting, and re..." },
+      { name: "twitter:title", content: "Health Canada MDEL Consulting | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Health Canada MDEL consulting: Medical Device Establishment Licence application, importer & distributor compliance, complaint systems, and recall SOPs.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada/mdel" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Health Canada Medical Device Establishment Licence (MDEL) Consulting",
+          description: "MDEL application support, importer & distributor compliance procedures, and annual licence reviews in Canada.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Canada",
+          },
+        }),
+      },
+    ],
   }),
   component: CanadaMDELPage,
 });
@@ -112,7 +138,7 @@ function CanadaMDELPage() {
               Establishment Licence (SOR/98-282)
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Medical Device Establishment Licence (MDEL)
+              Health Canada Medical Device Establishment Licence (MDEL)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               An MDEL authorizes an establishment to conduct regulated activities involving medical devices in Canada. It commonly applies to Class I manufacturers and to importers and distributors of medical devices across all classes, subject to regulatory exemptions.

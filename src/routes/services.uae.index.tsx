@@ -47,23 +47,21 @@ export const Route = createFileRoute("/services/uae/")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Medical Device Registration & Market Access Consultant | NKB Regovanta",
+        title: "UAE MOHAP Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "UAE Ministry of Health and Prevention (MOHAP) medical device and IVD registration consulting. Product classification, licensed medical warehouse / MAH interface, technical file compilation, MOIAT ECAS screening, and post-market vigilance.",
+          "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates.",
       },
-      { name: "keywords", content: "UAE MOHAP Medical Device Registration & Market Access Consultant, services uae, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "UAE MOHAP Medical Device Registration & Market Access Consultant | NKB Regovanta" },
-      { property: "og:description", content: "UAE Ministry of Health and Prevention (MOHAP) medical device and IVD registration consulting. Product classification, licensed medical warehouse / MAH interface, technical file compilation, MOIAT ECAS screening, and p..." },
+      { property: "og:title", content: "UAE MOHAP Medical Device Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uae" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UAE MOHAP Medical Device Registration & Market Access Consultant | NKB Regovanta" },
-      { name: "twitter:description", content: "UAE Ministry of Health and Prevention (MOHAP) medical device and IVD registration consulting. Product classification, licensed medical warehouse / MAH interface, technical file compilation, MOIAT ECAS screening, and p..." },
+      { name: "twitter:title", content: "UAE MOHAP Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae" }],
@@ -352,6 +350,24 @@ const faqs = [
 function UAEHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "UAE MOHAP Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "MOHAP Medical Device Registration & Market Access Consulting",
+            "description": "Comprehensive UAE MOHAP regulatory consulting for Medical Devices and IVDs including classification, technical files, and local representation.",
+            "areaServed": "United Arab Emirates"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Dubai Graphic)
       ══════════════════════════════════════════════════════════════════ */}

@@ -5,22 +5,41 @@ import { CTABand } from '@/components/site/Bits'
 export const Route = createFileRoute('/services/usa/rfd-pre-rfd')({
   head: () => ({
     meta: [
-      { title: 'RFD & Pre-RFD Designations | US FDA Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized US FDA RFD & Pre-RFD Designations services.' },
-      { name: "keywords", content: "RFD & Pre-RFD Designations, US FDA Services, services usa rfd pre rfd, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "RFD & Pre-RFD Designations | US FDA Services | NKB Regovanta" },
-      { property: "og:description", content: "FDA Requests for Designation (RFD) and Pre-RFD consulting for combination products, drug-device combinations, and products with uncertain primary mode of action. FDA Office of Combination Products (OCP) engagement and..." },
+      { title: "FDA RFD & Pre-RFD Designations | NKB Regovanta" },
+      { name: "description", content: "US FDA RFD & Pre-RFD consulting for combination products and borderlines. Determine lead center jurisdiction and regulatory classification with our experts." },
+      { property: "og:title", content: "FDA RFD & Pre-RFD Designations | NKB Regovanta" },
+      { property: "og:description", content: "US FDA RFD & Pre-RFD consulting for combination products and borderlines. Determine lead center jurisdiction and regulatory classification with our experts." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/usa/rfd-pre-rfd" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "RFD & Pre-RFD Designations | US FDA Services | NKB Regovanta" },
-      { name: "twitter:description", content: "FDA Requests for Designation (RFD) and Pre-RFD consulting for combination products, drug-device combinations, and products with uncertain primary mode of action. FDA Office of Combination Products (OCP) engagement and..." },
+      { name: "twitter:title", content: "FDA RFD & Pre-RFD Designations | NKB Regovanta" },
+      { name: "twitter:description", content: "US FDA RFD & Pre-RFD consulting for combination products and borderlines. Determine lead center jurisdiction and regulatory classification with our experts." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/usa/rfd-pre-rfd" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "FDA RFD & Pre-RFD Designations Consulting",
+          description: "US FDA Requests for Designation (RFD) and Pre-RFD consulting for combination products, drug-device combinations, and lead center determination.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "United States",
+          },
+        }),
+      },
+    ],
   }),
   component: ServicePage,
 })
@@ -36,7 +55,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to US FDA Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">RFD & Pre-RFD Designations</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">FDA RFD &amp; Pre-RFD Designations</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the US FDA regulatory landscape with our comprehensive RFD & Pre-RFD Designations support.
             </p>

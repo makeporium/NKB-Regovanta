@@ -48,26 +48,45 @@ export const Route = createFileRoute("/services/saudi-arabia/software")({
   head: () => ({
     meta: [
       {
-        title:
-          "SFDA SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta",
+        title: "SFDA SaMD, AI & Software Consulting | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Software as a Medical Device (SaMD) and AI/ML regulation in Saudi Arabia. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and SFDA MDMA authorization.",
+          "SFDA SaMD, AI/ML, and software regulation in Saudi Arabia. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MDMA authorization.",
       },
-      { name: "keywords", content: "SFDA SaMD, Software, AI & Cybersecurity Regulatory Consulting, services saudi arabia software, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "SFDA SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { property: "og:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in Saudi Arabia. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and SFDA MDMA authorization." },
+      { property: "og:title", content: "SFDA SaMD, AI & Software Consulting | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "SFDA SaMD, AI/ML, and software regulation in Saudi Arabia. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MDMA authorization.",
+      },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/saudi-arabia/software" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SFDA SaMD, Software, AI & Cybersecurity Regulatory Consulting | NKB Regovanta" },
-      { name: "twitter:description", content: "Software as a Medical Device (SaMD) and AI/ML regulation in Saudi Arabia. IEC 62304 software lifecycles, cybersecurity risk management, SBOM, algorithmic validation, and SFDA MDMA authorization." },
+      { name: "twitter:title", content: "SFDA SaMD, AI & Software Consulting | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "SFDA SaMD, AI/ML, and software regulation in Saudi Arabia. IEC 62304 lifecycles, cybersecurity risk management, SBOM, and MDMA authorization.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/saudi-arabia/software" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "SFDA Software as a Medical Device (SaMD) Registration (Saudi Arabia)",
+          areaServed: { "@type": "Country", name: "Saudi Arabia" },
+          description: "SFDA regulatory consulting for Software as a Medical Device in Saudi Arabia - classification, technical documentation, cybersecurity, and registration.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: SaudiSoftwarePage,
 });

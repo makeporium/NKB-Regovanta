@@ -48,26 +48,37 @@ export const Route = createFileRoute("/services/new-zealand/change-management")(
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand WAND Changes, Variations & Lifecycle Support | NKB Regovanta",
+        title: "Medsafe WAND Change Management | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Managing medical device changes, WAND database updates, and sponsor record variations under Medsafe regulations in New Zealand. Engineering revisions, labeling updates, and lifecycle governance.",
+          "Medical device change management for New Zealand — WAND updates, sponsor variations, engineering revisions, and lifecycle governance under Medsafe.",
       },
-      { name: "keywords", content: "New Zealand WAND Changes, Variations & Lifecycle Support, services new zealand change management, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand WAND Changes, Variations & Lifecycle Support | NKB Regovanta" },
-      { property: "og:description", content: "Managing medical device changes, WAND database updates, and sponsor record variations under Medsafe regulations in New Zealand. Engineering revisions, labeling updates, and lifecycle governance." },
+      { property: "og:title", content: "Medsafe WAND Change Management | NKB Regovanta" },
+      { property: "og:description", content: "Medical device change management for New Zealand — WAND updates, sponsor variations, engineering revisions, and lifecycle governance under Medsafe." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/change-management" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand WAND Changes, Variations & Lifecycle Support | NKB Regovanta" },
-      { name: "twitter:description", content: "Managing medical device changes, WAND database updates, and sponsor record variations under Medsafe regulations in New Zealand. Engineering revisions, labeling updates, and lifecycle governance." },
+      { name: "twitter:title", content: "Medsafe WAND Change Management | NKB Regovanta" },
+      { name: "twitter:description", content: "Medical device change management for New Zealand — WAND updates, sponsor variations, engineering revisions, and lifecycle governance under Medsafe." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/change-management" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand WAND Changes, Variations & Lifecycle Support",
+          description: "WAND database updates, sponsor record variations, and medical device lifecycle change management under Medsafe regulations in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZChangeManagementPage,
 });

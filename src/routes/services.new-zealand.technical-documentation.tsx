@@ -49,26 +49,37 @@ export const Route = createFileRoute("/services/new-zealand/technical-documentat
   head: () => ({
     meta: [
       {
-        title:
-          "New Zealand Technical Documentation & Safety / Performance Evidence | NKB Regovanta",
+        title: "NZ Technical Documentation & Safety | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Technical file substantiation and safety evidence compilation for medical devices supplied in New Zealand. Risk management (ISO 14971), clinical evaluation, testing evidence, and Medsafe audit readiness.",
+          "Technical file substantiation and safety evidence for medical devices in New Zealand — ISO 14971 risk, clinical evaluation, and Medsafe audit readiness.",
       },
-      { name: "keywords", content: "New Zealand Technical Documentation & Safety / Performance Evidence, services new zealand technical documentation, NKB Regovanta, regulatory consultant, medical device" },
-      { property: "og:title", content: "New Zealand Technical Documentation & Safety / Performance Evidence | NKB Regovanta" },
-      { property: "og:description", content: "Technical file substantiation and safety evidence compilation for medical devices supplied in New Zealand. Risk management (ISO 14971), clinical evaluation, testing evidence, and Medsafe audit readiness." },
+      { property: "og:title", content: "NZ Technical Documentation & Safety | NKB Regovanta" },
+      { property: "og:description", content: "Technical file substantiation and safety evidence for medical devices in New Zealand — ISO 14971 risk, clinical evaluation, and Medsafe audit readiness." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/technical-documentation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "New Zealand Technical Documentation & Safety / Performance Evidence | NKB Regovanta" },
-      { name: "twitter:description", content: "Technical file substantiation and safety evidence compilation for medical devices supplied in New Zealand. Risk management (ISO 14971), clinical evaluation, testing evidence, and Medsafe audit readiness." },
+      { name: "twitter:title", content: "NZ Technical Documentation & Safety | NKB Regovanta" },
+      { name: "twitter:description", content: "Technical file substantiation and safety evidence for medical devices in New Zealand — ISO 14971 risk, clinical evaluation, and Medsafe audit readiness." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/technical-documentation" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Technical Documentation & Safety/Performance Evidence",
+          description: "Technical file compilation, ISO 14971 risk management, clinical evaluation, and Medsafe safety evidence for medical devices supplied in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZTechnicalDocPage,
 });
@@ -133,7 +144,7 @@ function NZTechnicalDocPage() {
               Evidence Substantiation
             </div>
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl lg:text-[40px]">
-              Technical Documentation &amp; Safety / Performance Evidence
+              Medsafe Technical Documentation &amp; Evidence (New Zealand)
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               The Sponsor Must Be Able to Substantiate the Device Behind the WAND Entry. WAND is not a technical-dossier approval process, but a sponsor still has legal responsibilities for the safety of devices supplied in New Zealand. Technical evidence therefore needs to remain available and coherent enough to support the intended purpose, risk controls, performance claims and any Medsafe safety investigation or market action.
