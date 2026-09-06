@@ -93,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">CE Marking of Digital Health Technologies: EU MDR Compliance Guide</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Digital health technologies are transforming modern healthcare delivery. From mobile health applications and cloud-based AI diagnostic tools to wearable sensors that continuously track chronic conditions like diabetes or arrhythmia, software has become central to clinical decision-making.</p>

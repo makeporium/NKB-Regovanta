@@ -93,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">CDSCO Manufacturing License for Medical Devices in India: Registration, SUGAM Portal, Documents, Process &amp;#038; Compliance Guide (2026)</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">India has emerged as one of the fastest-growing medical device manufacturing hubs globally. With increasing investments in healthcare infrastructure, government support through the &quot;Make in India&quot; initiative, and growing domestic demand, numerous</p>

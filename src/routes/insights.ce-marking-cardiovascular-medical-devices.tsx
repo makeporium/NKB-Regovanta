@@ -93,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">CE Marking for Cardiovascular Medical Devices: A Complete Guide</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Cardiovascular diseases remain one of the leading causes of death worldwide, driving continuous innovation in cardiovascular medical devices such as coronary stents, cardiac catheters, pacemakers, heart valves, angioplasty balloons, and cardiac monitoring systems. Manufacturers planning to market these devices in the European Union (EU) must comply with stringent regulatory requirements, including obtaining CE Marking.</p>

@@ -94,8 +94,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">IVDR Verification of Class D IVDs</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">This content has guidance for establishing the activities of Notified Bodies for the verification process of class D IVD devices. According to the law on in vitro diagnostic Medical Devices (IVDR), Regulation (European) 2017/746, class D devices need to demonstrate their conformity assessment via the involvement of a notified body. In those terms, manufacturers of class D IVDs should forward to notified bodies a report of tests performed on each batch of devices and make available samples or batches of devices to the notified body. The notified body involved in the conformity assessment of class D IVDs should request one of the European reference laboratories (EURLs), if designated via the European commission, to carry out batch testing on those devices. Only upon verification of conformity, the manufacturer can proceed to place class D IVDs on the market.</p>

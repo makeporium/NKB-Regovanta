@@ -94,8 +94,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">GSPR Requirements for EU MDR and IVDR</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">GSPR Requirements for EU MDR and IVDR the EU Parliament published on 05 May 2017 sets forth new and important requirements for medical device and in vitro diagnostic manufacturers that distribute products in the EU. New General Safety and Performance Requirements for EU MDR &amp; IVDR is for ensuring that devices placed on the EU market are fit for the new technological challenges. In this respect, the new texts lay down certain new General Safety and Performance Requirements for EU MDR &amp; IVDR for all medical devices that incorporate electronic programmable systems and software that are medical devices in themselves.</p>

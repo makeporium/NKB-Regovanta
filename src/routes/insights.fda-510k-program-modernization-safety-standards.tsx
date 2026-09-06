@@ -94,8 +94,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">FDA Is Modernizing Its 510(k) Program, On How Old A Predicate Device Is</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Food and Drug Administration’s modernization plan for its 510(k) Program may not be all sweet music to the industry. In a joint statement on Monday describing the modernization effort, Commissioner Scott Gottlieb and Jeffrey Shuren, director of the Center for Devices and Radiological Health, said that the agency is considering placing a 10-year limit on older predicates. In other words, if you as a medical device manufacturer are developing a product with a predicate to gain 510(k) market clearance, then that predicate cannot have been introduced to the market more than 10 years ago.</p>

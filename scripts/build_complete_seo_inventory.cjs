@@ -115,6 +115,8 @@ const parsedPages = files.map(fileName => {
   const filePath = path.join(routesDir, fileName);
   const content = fs.readFileSync(filePath, 'utf-8');
 
+  const isLayout = (content.includes('<Outlet') || content.includes('<Outlet/>') || content.includes('<Outlet />')) && content.length < 400 && !fileName.endsWith('.index.tsx');
+
   // Route URL
   let routePath = fileName.replace('.tsx', '').replace(/_\./g, '/').replace(/\./g, '/');
   if (routePath === 'index') routePath = '';
@@ -125,30 +127,25 @@ const parsedPages = files.map(fileName => {
   const isNoindex = content.includes('noindex');
 
   // Title
-  const title = extractField(content, [
+  let title = extractField(content, [
     /title:\s*"([^"]+)"/,
     /title:\s*'([^']+)'/,
     /title:\s*\n\s*"([^"]+)"/,
     /title:\s*\n\s*'([^']+)'/
-  ]) || '[Missing Title]';
+  ]);
+  if (!title) {
+    title = isLayout ? '[Architectural Layout — Inherited from Child Route]' : '[Missing Title]';
+  }
 
   // Description
-  const description = extractField(content, [
+  let description = extractField(content, [
     /name:\s*["']description["'],\s*content:\s*"([\s\S]*?)"/,
     /name:\s*["']description["'],\s*content:\s*'([\s\S]*?)'/,
     /name:\s*["']description["'],\s*\n\s*content:\s*"([\s\S]*?)"/,
     /name:\s*["']description["'],\s*\n\s*content:\s*'([\s\S]*?)'/
-  ]) || '[No Description Defined]';
-
-  // Keywords
-  let keywords = extractField(content, [
-    /name:\s*["']keywords["'],\s*content:\s*"([\s\S]*?)"/,
-    /name:\s*["']keywords["'],\s*content:\s*'([\s\S]*?)'/,
-    /name:\s*["']keywords["'],\s*\n\s*content:\s*"([\s\S]*?)"/,
-    /name:\s*["']keywords["'],\s*\n\s*content:\s*'([\s\S]*?)'/
   ]);
-  if (!keywords || keywords.length === 0) {
-    keywords = '[None — Cleaned to prevent keyword stuffing penalty]';
+  if (!description) {
+    description = isLayout ? '[Architectural Layout — Inherited from Child Route]' : '[No Description Defined]';
   }
 
   // OG Title
@@ -167,29 +164,42 @@ const parsedPages = files.map(fileName => {
   const canonical = extractField(content, [
     /rel:\s*["']canonical["'],\s*href:\s*"([^"]+)"/,
     /rel:\s*["']canonical["'],\s*href:\s*'([^']+)'/
-  ]) || url;
+  ]) || (isLayout ? '[N/A — Shell Component]' : url);
 
   // H1
-  const h1 = extractH1(content, fileName);
+  const h1 = isLayout ? '[Architectural Layout Container — renders <Outlet />]' : extractH1(content, fileName);
 
   // Schemas
-  const schemas = extractSchemas(content);
+  const schemas = isLayout ? 'Inherited from __root.tsx' : extractSchemas(content);
 
   const category = getCategory(fileName);
-  const roleRationale = getRoleRationale(fileName, isNoindex);
+  let roleRationale = getRoleRationale(fileName, isNoindex);
+  if (isLayout) {
+    roleRationale = 'Framework architectural layout component. Renders <Outlet /> for child route views; delegates URL-level metadata and canonicals to child index components.';
+  }
+
+  let statusText = '**`INDEX, FOLLOW`**';
+  let statusBadge = '`INDEXABLE` (Targeted for Google Index)';
+  if (isLayout) {
+    statusText = '**`LAYOUT SHELL`**';
+    statusBadge = '`LAYOUT SHELL` (Non-Leaf Structural Route)';
+  } else if (isNoindex) {
+    statusText = '**`NOINDEX, FOLLOW`**';
+    statusBadge = '`NOINDEX` (Excluded from Google Index)';
+  }
 
   return {
     file: fileName,
     routePath,
     url,
     category,
+    isLayout,
     isNoindex,
-    statusText: isNoindex ? '**`NOINDEX, FOLLOW`**' : '**`INDEX, FOLLOW`**',
-    statusBadge: isNoindex ? '`NOINDEX` (Excluded from Google Index)' : '`INDEXED` (Public in Google Sitemap)',
+    statusText,
+    statusBadge,
     title,
     h1,
     description,
-    keywords,
     ogTitle,
     ogDescription,
     canonical,
@@ -222,14 +232,16 @@ const categoryOrder = [
 ];
 
 const totalPages = parsedPages.length;
-const totalIndexed = parsedPages.filter(p => !p.isNoindex).length;
-const totalNoindex = parsedPages.filter(p => p.isNoindex).length;
+const totalLayouts = parsedPages.filter(p => p.isLayout).length;
+const totalIndexable = parsedPages.filter(p => !p.isLayout && !p.isNoindex).length;
+const totalNoindex = parsedPages.filter(p => !p.isLayout && p.isNoindex).length;
 
 let md = `# NKB Regovanta — Complete Page-by-Page SEO & Indexing Inventory
 
-> **Total Active Routes:** ${totalPages}  
-> **Publicly Indexed Pages:** ${totalIndexed} (Included in Google Search & \`sitemap.xml\`)  
-> **Noindexed Pages:** ${totalNoindex} (Configured with \`robots: "noindex, follow"\`)  
+> **Total Route Files:** ${totalPages}  
+> **Indexable Authority URLs:** ${totalIndexable} (Included in Google Search & \`sitemap.xml\`)  
+> **Supporting Noindexed Pages:** ${totalNoindex} (Configured with \`robots: "noindex, follow"\`)  
+> **Architectural Layout Shells:** ${totalLayouts} (Renders \`<Outlet />\` for child routes)  
 > **Last Updated:** September 2026  
 > **Audit Status:** 100% Code-Level Verified (Build: 0 Errors, 0 Warnings)
 
@@ -248,32 +260,21 @@ When a website contains **277 pages**, but over **180 of them are thin, repetiti
 To resolve this, we implemented \`{ name: "robots", content: "noindex, follow" }\` across all supporting and procedural sub-pages:
 * **\`noindex\`**: Instructs Googlebot not to index the specific sub-page or display it in search results.
 * **\`follow\`**: Instructs Googlebot to crawl and follow all links on that page, passing PageRank and topical equity straight to your core pillar pages.
-* **Result**: Users browsing the website still get a rich, detailed experience with dedicated pages for every specific form and sub-process, while Google sees a lean, hyper-authoritative website of **${totalIndexed} clean pillar pages**.
+* **Result**: Users browsing the website still get a rich, detailed experience with dedicated pages for every specific form and sub-process, while Google sees a lean, hyper-authoritative website of **${totalIndexable} clean pillar pages**.
 
 ### 1.3 High-Level Category Indexing Breakdown
 
-| Category | Total Pages | Indexed | Noindex | Strategic Rationale |
-| :--- | :---: | :---: | :---: | :--- |
-| **Home** | 1 | 1 | 0 | Primary brand and commercial anchor. |
-| **Core & Corporate** | 2 | 2 | 0 | Essential trust, E-E-A-T, and contact conversion pages. |
-| **AI Regulatory Feeds** | 2 | 1 | 1 | Live intelligence hub indexed; duplicate feed noindexed. |
-| **Specialized Regulatory Services** | 13 | 11 | 2 | Flagship services (PC-PNDT, WPC, Combination Products, ISO 13485) fully indexed. |
-| **India CDSCO Services** | 21 | 4 | 17 | Core country hub, medical device hub, and IVD hub indexed; 17 specific form sub-pages noindexed. |
-| **US FDA Services** | 19 | 4 | 15 | FDA 510(k), US Agent, and main US hub indexed; procedural sub-pages noindexed. |
-| **European Union (EU MDR / IVDR)** | 28 | 5 | 23 | CE Marking, MDR, IVDR, and EU Hub indexed; 23 procedural sub-routes noindexed. |
-| **United Kingdom (MHRA / UKCA)** | 14 | 3 | 11 | UKRP flagship, conformity, and UK Hub indexed; 11 procedural sub-routes noindexed. |
-| **MDSAP Single Audit Program** | 14 | 2 | 12 | Main MDSAP Hub indexed; 12 sub-tier audit checklist pages noindexed. |
-| **Australia TGA Market Access** | 19 | 2 | 17 | Australia Hub & ARTG inclusion indexed; 17 sub-tier pages noindexed. |
-| **Brazil ANVISA Market Access** | 17 | 2 | 15 | Brazil Hub & ANVISA registration indexed; 15 sub-tier pages noindexed. |
-| **Health Canada Medical Devices** | 17 | 2 | 15 | Canada Hub & MDL/MDEL licensing indexed; 15 sub-tier pages noindexed. |
-| **Saudi Arabia SFDA Compliance** | 15 | 2 | 13 | Saudi Arabia Hub & MDMA registration indexed; 13 sub-tier pages noindexed. |
-| **UAE MOHAP Regulatory Affairs** | 16 | 2 | 14 | UAE Hub & MOHAP licensing indexed; 14 sub-tier pages noindexed. |
-| **New Zealand Medsafe WAND** | 15 | 2 | 13 | New Zealand Hub & WAND notification indexed; 13 sub-tier pages noindexed. |
-| **Industry Verticals** | 15 | 6 | 9 | Core Medical Devices, IVD, and Cosmetics hubs indexed; importer/mfg sub-variants noindexed. |
-| **Case Studies** | 8 | 8 | 0 | Real-world problem-solving proof-of-work; 100% indexed for E-E-A-T. |
-| **Insights & Regulatory Guides** | 40 | 21 | 19 | 21 high-depth pillar guides indexed for search intent; 19 thin/short updates noindexed. |
-| **Other Pages** | 1 | 1 | 0 | Markets overview directory indexed. |
-| **TOTALS** | **${totalPages}** | **${totalIndexed}** | **${totalNoindex}** | **Consolidated authority structure.** |
+| Category | Total Routes | Indexable URLs | Noindex URLs | Layout Shells | Strategic Rationale |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+${categoryOrder.map(cat => {
+  const catItems = parsedPages.filter(p => p.category === cat);
+  if (catItems.length === 0) return '';
+  const idxCount = catItems.filter(p => !p.isLayout && !p.isNoindex).length;
+  const noidxCount = catItems.filter(p => !p.isLayout && p.isNoindex).length;
+  const layoutCount = catItems.filter(p => p.isLayout).length;
+  return `| **${cat}** | ${catItems.length} | ${idxCount} | ${noidxCount} | ${layoutCount} | Consolidated regional/topical authority. |`;
+}).filter(Boolean).join('\n')}
+| **TOTALS** | **${totalPages}** | **${totalIndexable}** | **${totalNoindex}** | **${totalLayouts}** | **Consolidated authority structure.** |
 
 ---
 
@@ -284,9 +285,13 @@ categoryOrder.forEach(cat => {
   const catItems = parsedPages.filter(p => p.category === cat);
   if (catItems.length > 0) {
     const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const indexedInCat = catItems.filter(p => !p.isNoindex).length;
-    const noindexInCat = catItems.filter(p => p.isNoindex).length;
-    md += `- [${cat} (${catItems.length} pages — ${indexedInCat} Indexed / ${noindexInCat} Noindex)](#${slug})\n`;
+    const indexedInCat = catItems.filter(p => !p.isLayout && !p.isNoindex).length;
+    const noindexInCat = catItems.filter(p => !p.isLayout && p.isNoindex).length;
+    const layoutInCat = catItems.filter(p => p.isLayout).length;
+    const summaryParts = [`${indexedInCat} Indexable`];
+    if (noindexInCat > 0) summaryParts.push(`${noindexInCat} Noindex`);
+    if (layoutInCat > 0) summaryParts.push(`${layoutInCat} Layout`);
+    md += `- [${cat} (${catItems.length} files — ${summaryParts.join(', ')})](#${slug})\n`;
   }
 });
 
@@ -309,11 +314,10 @@ categoryOrder.forEach(cat => {
     md += `- **Page Title (\`<title>\`):** \`${p.title}\`\n`;
     md += `- **Primary H1 Heading:** \`${p.h1}\`\n`;
     md += `- **Meta Description:** ${p.description}\n`;
-    md += `- **Meta Keywords:** \`${p.keywords}\`\n`;
     md += `- **OpenGraph Title:** \`${p.ogTitle}\`\n`;
     md += `- **OpenGraph Description:** ${p.ogDescription}\n`;
     md += `- **Canonical Link:** \`${p.canonical}\`\n`;
-    md += `- **Robots Directive:** \`${p.isNoindex ? 'noindex, follow' : 'index, follow'}\`\n`;
+    md += `- **Robots Directive:** \`${p.isLayout ? 'N/A (Shell Container)' : (p.isNoindex ? 'noindex, follow' : 'index, follow')}\`\n`;
     md += `- **Structured Data (JSON-LD Schemas):** \`${p.schemas}\`\n`;
     md += `- **Strategic SEO Role:** ${p.roleRationale}\n\n`;
     md += `---\n\n`;

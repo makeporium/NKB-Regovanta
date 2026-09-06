@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,7 +7,6 @@ const imgArticle = "/assets/brain/usa_fda_regulatory_1786305043898.png";
 export const Route = createFileRoute("/insights/fda-q-sub-pre-submission-meeting-guide")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
       { title: "FDA Q-Submission (Pre-Sub) Guide | NKB Regovanta" },
       {
         name: "description",
@@ -94,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">FDA Pre Submission: All You Need to Know</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">Getting an FDA approval for your medical device can be a stressful task especially if you are new to the medical device industry. There are several processes and submissions before you send the final application for FDA approval. It is not a straightforward process and may require guidance from technical experts and consultants if it is your first time.</p>

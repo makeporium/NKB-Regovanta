@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,7 +7,6 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/iec-62304-medical-device-software-lifecycle")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
       { title: "IEC 62304 Software Lifecycle Guide | NKB Regovanta" },
       {
         name: "description",
@@ -94,8 +93,6 @@ function ArticlePage() {
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
-<p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">class=&quot;elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content&quot; data-id=&quot;232afc4&quot; data-element_type=&quot;widget&quot; data-e-type=&quot;widget&quot; data-widget_type=&quot;theme-post-content.default&quot;&gt;</p>
-
 <h2 className="text-2xl sm:text-3xl font-bold text-navy mt-12 mb-6 tracking-tight">IEC 62304: Navigating the Path to Medical Device Software Compliance</h2>
 
 <p className="text-base sm:text-lg leading-relaxed text-navy/80 my-5">IEC 62304 serves as a global standard for medical device software, establishing a consensus framework for processes spanning the entire product lifecycle.</p>
