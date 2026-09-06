@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -15,6 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/q-submission")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA Q-Submission (Pre-Sub) Consulting | NKB Regovanta" },
       {
         name: "description",

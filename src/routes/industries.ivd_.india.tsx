@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Stethoscope, AlertTriangle, CheckCircle2, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
@@ -7,6 +7,7 @@ import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.png";
 export const Route = createFileRoute("/industries/ivd_/india")({
     head: () => ({
         meta: [
+      { name: "robots", content: "noindex, follow" },
             { title: "India CDSCO IVD Regulatory Services | NKB Regovanta" },
             { name: "description", content: "India CDSCO IVD consulting: test licences (MD-16/17), import licences (MD-14/15), performance evaluations, and novel IVD approvals under MDR 2017." },
             { property: "og:title", content: "India CDSCO IVD Regulatory Services | NKB Regovanta" },

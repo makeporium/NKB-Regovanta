@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, Globe, FileText, Anchor } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-cosmetics.png";
@@ -6,6 +6,7 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/uk")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "UK Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling." },
       { property: "og:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },

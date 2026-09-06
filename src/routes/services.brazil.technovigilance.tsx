@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/brazil/technovigilance')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: 'ANVISA Technovigilance (Brazil) | NKB Regovanta' },
       { name: 'description', content: 'ANVISA tecnovigilância consulting: adverse event monitoring, Queixa Técnica (QT), NOTIVISA reporting, and post-market surveillance for medical devices.' },
       { property: "og:title", content: "ANVISA Technovigilance (Brazil) | NKB Regovanta" },

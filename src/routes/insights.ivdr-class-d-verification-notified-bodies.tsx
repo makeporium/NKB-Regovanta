@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/industry_ivd_1786310578306.png";
 export const Route = createFileRoute("/insights/ivdr-class-d-verification-notified-bodies")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "EU IVDR Class D Verification Guide | NKB Regovanta" },
       {
         name: "description",

@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, TrendingUp, Building2, Globe2, FileText, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/market-standing")({
   component: MarketStandingPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO Market Standing Certificate (MSC) | NKB Regovanta" },
       { name: "description", content: "Obtain a CDSCO Market Standing Certificate (MSC) to verify your device manufacturing track record for Indian tenders and global exports." },
       { property: "og:title", content: "CDSCO Market Standing Certificate (MSC) | NKB Regovanta" },

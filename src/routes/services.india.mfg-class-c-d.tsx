@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, Factory, ClipboardList, ShieldAlert, FileText, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-c-d")({
   component: MfgClassCDPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Class C & D Manufacturing License (MD-9) | NKB Regovanta" },
       { name: "description", content: "CDSCO MD-7 & MD-9 manufacturing license consulting for Class C & D medical devices in India. Plant audit readiness, technical files, and CLA support." },
       { property: "og:title", content: "Class C & D Manufacturing License (MD-9) | NKB Regovanta" },

@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FlaskConical, ClipboardList, PackageSearch, ShieldCheck, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/novel-ivds")({
   component: NovelIVDsPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO Novel IVD Import Authorization | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-26 & MD-27 import authorization for novel IVD diagnostics in India. Expert Committee liaison, clinical protocol review, and SUGAM support." },
       { property: "og:title", content: "CDSCO Novel IVD Import Authorization | NKB Regovanta" },

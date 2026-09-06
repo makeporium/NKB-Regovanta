@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
 export const Route = createFileRoute("/insights/gspr-compliance-eu-mdr-ivdr")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "GSPR Compliance for EU MDR & IVDR | NKB Regovanta" },
       {
         name: "description",

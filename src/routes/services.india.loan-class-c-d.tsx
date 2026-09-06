@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, Factory, ClipboardList, ShieldAlert, FileText, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-c-d")({
   component: LoanClassCDPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO Class C & D Loan Manufacturing | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-8 & MD-10 loan manufacturing licenses for Class C & D medical devices in India. End-to-end CLA application and facility audit support." },
       { property: "og:title", content: "CDSCO Class C & D Loan Manufacturing | NKB Regovanta" },

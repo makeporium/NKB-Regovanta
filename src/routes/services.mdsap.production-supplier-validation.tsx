@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -23,6 +23,7 @@ export const Route = createFileRoute(
 )({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "MDSAP Production & Supplier Validation | NKB Regovanta" },
       { name: "description", content: "Manufacturing controls, critical supplier governance, process validation evidence (IQ/OQ/PQ), sterilization, and cleanliness audit readiness for MDSAP." },
       { property: "og:title", content: "MDSAP Production & Supplier Validation | NKB Regovanta" },

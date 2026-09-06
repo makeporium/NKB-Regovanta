@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/technical-documentation")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Medical Device Technical Documentation | NKB Regovanta" },
       {
         name: "description",

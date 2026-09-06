@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ClipboardList, Hospital, ShieldAlert, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/investigational-devices")(
   component: InvestigationalDevicesPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Investigational Device Import CDSCO | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO import authorization for investigational medical devices (MD-18 & MD-19) in India. End-to-end clinical trial & hospital import support." },
       { property: "og:title", content: "Investigational Device Import CDSCO | NKB Regovanta" },

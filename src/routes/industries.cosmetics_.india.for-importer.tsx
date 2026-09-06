@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/industries/cosmetics_/india/for-importer")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Cosmetics Import Registration India | NKB Regovanta" },
       { name: "description", content: "Import cosmetics into India with CDSCO Form COS-1 and COS-2 registration. Expert support for SUGAM portal filings, wholesale licenses, and compliance." },
       { property: "og:title", content: "Cosmetics Import Registration India | NKB Regovanta" },

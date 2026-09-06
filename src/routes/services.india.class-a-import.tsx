@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ShieldCheck, ClipboardList, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/class-a-import")({
   component: ClassAImportPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
       { name: "description", content: "Expert CDSCO consulting for Class A medical device import under GSR 777(E). Fast-track registration for non-sterile and non-measuring devices in India." },
       { property: "og:title", content: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },

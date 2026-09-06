@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, ScrollText, AlertTriangle, Scale } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-cosmetics.png";
@@ -6,6 +6,7 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/usa")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
       { property: "og:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Database, Calendar, Users, FlaskConical, ChevronDown, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
@@ -7,6 +7,7 @@ import eudamedFlowchart from "@/assets/eudamed_registration_workflow.png";
 export const Route = createFileRoute("/industries/ivd_/eu")({
     head: () => ({
         meta: [
+      { name: "robots", content: "noindex, follow" },
             { title: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
             { name: "description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
             { property: "og:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },

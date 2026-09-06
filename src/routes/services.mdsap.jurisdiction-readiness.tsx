@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,6 +19,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/jurisdiction-readiness")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "MDSAP Country Regulatory Readiness | NKB Regovanta" },
       { name: "description", content: "Regulatory overlays for the 5 MDSAP jurisdictions: Australia (TGA), Brazil (ANVISA), Canada (Health Canada), Japan (PMDA), and USA (FDA)." },
       { property: "og:title", content: "MDSAP Country Regulatory Readiness | NKB Regovanta" },

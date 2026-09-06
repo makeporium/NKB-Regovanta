@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,6 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/qms-alignment")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta" },
       { name: "description", content: "Align your ISO 13485 QMS to MDSAP requirements with embedded country-specific decision trees and regulatory triggers — one unified system, five jurisdictions." },
       { property: "og:title", content: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta" },

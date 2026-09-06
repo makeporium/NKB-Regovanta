@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-cosmetics.png";
@@ -6,6 +6,7 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/india/")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "India Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "CDSCO cosmetics regulatory services in India: COS-1 import registration, COS-8 manufacturing licenses, labelling compliance, and GMP inspection readiness." },
       { property: "og:title", content: "India Cosmetics Regulatory Services | NKB Regovanta" },

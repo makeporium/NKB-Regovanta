@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/brazil/registro')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: 'ANVISA Registro Pathway (Brazil) | NKB Regovanta' },
       { name: 'description', content: 'ANVISA Registro consulting for Class III & IV medical devices in Brazil — pre-submission strategy, technical dossiers, queries, and lifecycle support.' },
       { property: "og:title", content: "ANVISA Registro Pathway (Brazil) | NKB Regovanta" },

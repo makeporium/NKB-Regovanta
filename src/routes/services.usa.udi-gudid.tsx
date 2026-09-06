@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/usa/udi-gudid')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA UDI & GUDID Compliance | NKB Regovanta" },
       { name: "description", content: "US FDA UDI and GUDID compliance consulting. Unique Device Identifier assignment, labeling compliance, and Global UDI Database submission support." },
       { property: "og:title", content: "FDA UDI & GUDID Compliance | NKB Regovanta" },

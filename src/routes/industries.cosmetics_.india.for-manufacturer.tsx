@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/industries/cosmetics_/india/for-manufacturer")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Cosmetics Manufacturing License in India | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO cosmetic manufacturing licenses (COS-5 & COS-8) in India. Expert guidance for GMP inspections, plant master files, and SLA compliance." },
       { property: "og:title", content: "Cosmetics Manufacturing License in India | NKB Regovanta" },

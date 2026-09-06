@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ClipboardList, ShieldAlert, Store, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/md-42")({
   component: MD42Page,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO MD-42 Registration Certificate | NKB Regovanta" },
       { name: "description", content: "Get your MD-42 certificate to legally sell, stock, wholesale, and distribute medical devices in India under Medical Device Rules (MDR) 2017." },
       { property: "og:title", content: "CDSCO MD-42 Registration Certificate | NKB Regovanta" },

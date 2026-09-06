@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -21,6 +21,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/process-readiness")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "MDSAP Process-Based Audit Readiness | NKB Regovanta" },
       { name: "description", content: "Cross-process audit trail simulations, record retrieval drills, and process-owner coaching across all 7 MDSAP process areas for AO audit readiness." },
       { property: "og:title", content: "MDSAP Process-Based Audit Readiness | NKB Regovanta" },

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -16,6 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/software")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "EU SaMD & Cybersecurity Consultant | NKB Regovanta" },
       {
         name: "description",

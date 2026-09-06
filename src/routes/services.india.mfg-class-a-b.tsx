@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, Factory, ClipboardList, ShieldCheck, FileText, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
   component: MfgClassABPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Class A & B Manufacturing License (MD-5) | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-3 and MD-5 manufacturing licenses for Class A & B medical devices in India. State Licensing Authority audit & document support." },
       { property: "og:title", content: "Class A & B Manufacturing License (MD-5) | NKB Regovanta" },

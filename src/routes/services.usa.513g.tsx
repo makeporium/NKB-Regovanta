@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/usa/513g')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA 513(g) Information Request | NKB Regovanta" },
       { name: "description", content: "Obtain a formal FDA written opinion on device classification and regulatory pathway with our 513(g) Information Request consulting services." },
       { property: "og:title", content: "FDA 513(g) Information Request | NKB Regovanta" },

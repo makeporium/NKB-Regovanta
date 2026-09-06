@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/eu_compliance_1786396542227.png";
 export const Route = createFileRoute("/insights/notified-body-selection-conformity-assessment-guide")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Notified Body Selection Guide | NKB Regovanta" },
       {
         name: "description",

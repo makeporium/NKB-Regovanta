@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
@@ -6,6 +6,7 @@ const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
 export const Route = createFileRoute("/insights/eu-mdr-2026")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       {
         name: "description",

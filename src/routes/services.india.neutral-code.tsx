@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CheckCircle2, Globe2, ShieldCheck, Tag, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 import heroImg from "@/assets/cdsco-india-hero.png";
 
@@ -13,6 +13,7 @@ export const Route = createFileRoute("/services/india/neutral-code")({
     component: NeutralCodePage,
     head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO Neutral Code Certificate | NKB Regovanta" },
       { name: "description", content: "Apply for a CDSCO Neutral Code Certificate to export medical devices while preserving OEM confidentiality and custom export branding in India." },
       { property: "og:title", content: "CDSCO Neutral Code Certificate | NKB Regovanta" },

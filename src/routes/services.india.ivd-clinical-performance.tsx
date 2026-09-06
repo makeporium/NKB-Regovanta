@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, ClipboardList, Microscope, ShieldCheck, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/ivd-clinical-performance")
   component: IVDClinicalPerformancePage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO IVD Clinical Performance (MD-24/25) | NKB Regovanta" },
       { name: "description", content: "CDSCO consulting for IVD Clinical Performance Evaluation under Forms MD-24 & MD-25 in India. Protocol review, ethics liaison, and approval support." },
       { property: "og:title", content: "CDSCO IVD Clinical Performance (MD-24/25) | NKB Regovanta" },

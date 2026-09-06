@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, ShieldCheck, Scale, FileText, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/non-conviction")({
   component: NonConvictionPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "CDSCO Non-Conviction Certificate (NCC) | NKB Regovanta" },
       { name: "description", content: "Obtain a CDSCO Non-Conviction Certificate (NCC) to verify regulatory compliance for medical device tenders and institutional procurement in India." },
       { property: "og:title", content: "CDSCO Non-Conviction Certificate (NCC) | NKB Regovanta" },

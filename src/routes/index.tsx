@@ -90,6 +90,7 @@ const expertise = [
     {
         title: "Medical Devices & IVDs",
         icon: ClipboardCheck,
+        link: "/services" as const,
         items: [
             "Regulatory Strategy",
             "Product Classification",
@@ -103,6 +104,7 @@ const expertise = [
     {
         title: "Pharmaceuticals & Drugs",
         icon: Pill,
+        link: "/services/drug-licenses-for-importers" as const,
         items: [
             "CDSCO Drug Import Licensing",
             "Registration Certificate (Form 41)",
@@ -116,6 +118,7 @@ const expertise = [
     {
         title: "Quality Systems",
         icon: ShieldCheck,
+        link: "/services/iso-13485" as const,
         items: [
             "ISO 13485 Implementation",
             "MDSAP Support",
@@ -129,6 +132,7 @@ const expertise = [
     {
         title: "Product & Market Access",
         icon: TrendingUp,
+        link: "/services/market-access" as const,
         items: [
             "Design Controls",
             "ISO 14971 Risk Management",
@@ -142,6 +146,7 @@ const expertise = [
     {
         title: "Cosmetics",
         icon: FlaskConical,
+        link: "/industries/cosmetics" as const,
         items: [
             "Regulatory Assessment",
             "Product Compliance",
@@ -407,32 +412,21 @@ function Index() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ProfessionalService",
-                        "name": "NKB Regovanta — Medical Device Consultant & Regulatory Consultancy",
-                        "alternateName": ["NKB Regovanta Solutions", "NKB Medical Device Consultancy"],
+                        "name": "NKB Regovanta",
+                        "alternateName": "NKB Regovanta Solutions",
                         "url": "https://www.nkbregovanta.com",
                         "logo": "https://www.nkbregovanta.com/og-image.png",
                         "image": "https://www.nkbregovanta.com/og-image.png",
-                        "description": "Premier global medical device consultant and regulatory consultancy specializing in USFDA 510(k) / 510 k clearance, CDSCO licensing, EU MDR/IVDR, and ISO 13485 quality systems.",
+                        "description": "Global regulatory consulting firm specialising in medical device registration, IVD compliance, pharmaceutical licensing, and ISO 13485 quality management across India (CDSCO), USA (FDA), EU (MDR/IVDR), UK (MHRA), and international markets.",
                         "serviceType": [
-                            "Medical Device Consultant",
-                            "Medical Device Consultancy",
-                            "USFDA 510(k) Clearance",
-                            "510 k Premarket Notification",
+                            "Medical Device Regulatory Consulting",
+                            "FDA 510(k) Submission",
                             "CDSCO Medical Device Licensing",
                             "EU MDR CE Marking",
-                            "ISO 13485 QMS Implementation"
+                            "ISO 13485 QMS Implementation",
+                            "MDSAP Audit Readiness"
                         ],
-                        "areaServed": ["India", "United States", "European Union", "United Kingdom", "Global"],
-                        "knowsAbout": [
-                            "Medical Device Consultant",
-                            "Medical Device Consultancy",
-                            "USFDA",
-                            "USFDA 510 k",
-                            "510 k Premarket Notification",
-                            "CDSCO Medical Device Rules 2017",
-                            "EU MDR 2017/745",
-                            "ISO 13485:2016"
-                        ],
+                        "areaServed": ["India", "United States", "European Union", "United Kingdom", "Canada", "Australia", "Brazil", "Saudi Arabia", "UAE"],
                         "address": {
                             "@type": "PostalAddress",
                             "addressCountry": "IN"
@@ -454,7 +448,7 @@ function Index() {
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
                                 Global Medical Device Regulatory &amp; Market Access Consulting
                             </h1>
-                            <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal whitespace-nowrap">
+                            <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal">
                                 Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing
                             </p>
                             <p className="mt-1.5 text-[13px] sm:text-[14.5px] md:text-[15.5px] lg:text-[14.5px] xl:text-[16px] font-bold text-blue-700 leading-snug">
@@ -470,9 +464,21 @@ function Index() {
 
                             {/* Regulatory Authorities Strip */}
                             <div className="mt-4 flex flex-wrap gap-x-2 gap-y-1 items-center">
-                                {["CDSCO India", "USFDA (510 k / 510k)", "US FDA De Novo & PMA", "EU MDR", "EU IVDR", "UK MHRA", "Health Canada", "TGA", "ANVISA", "SFDA", "MOHAP"].map((auth, i, arr) => (
-                                    <span key={auth} className="flex items-center gap-x-2">
-                                        <span className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{auth}</span>
+                                {([
+                                    { label: "CDSCO India", to: "/services/india" },
+                                    { label: "USFDA 510(k)", to: "/services/usa" },
+                                    { label: "US FDA De Novo & PMA", to: "/services/usa" },
+                                    { label: "EU MDR", to: "/services/eu" },
+                                    { label: "EU IVDR", to: "/services/eu" },
+                                    { label: "UK MHRA", to: "/services/uk" },
+                                    { label: "Health Canada", to: "/services/canada" },
+                                    { label: "TGA", to: "/services/australia" },
+                                    { label: "ANVISA", to: "/services/brazil" },
+                                    { label: "SFDA", to: "/services/saudi-arabia" },
+                                    { label: "MOHAP", to: "/services/uae" },
+                                ] as const).map(({ label, to }, i, arr) => (
+                                    <span key={label} className="flex items-center gap-x-2">
+                                        <Link to={to} className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{label}</Link>
                                         {i < arr.length - 1 && <span className="text-navy/25 text-[10px]">|</span>}
                                     </span>
                                 ))}
@@ -660,7 +666,7 @@ function Index() {
 
                                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <Link
-                                        to="/services"
+                                        to={e.link}
                                         className="text-xs font-bold text-[#0b3a96] group-hover:text-[#082b70] inline-flex items-center gap-1 transition-colors"
                                     >
                                         Learn More <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
@@ -934,7 +940,7 @@ function Index() {
                                             </div>
                                             <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
                                                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                                                Verified Executive Endorsement
+                                                Client Testimonial
                                             </span>
                                         </div>
 

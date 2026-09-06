@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -16,6 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/mdr-ivdr-transition")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "EU MDR & IVDR Transition Consultant | NKB Regovanta" },
       {
         name: "description",

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -14,6 +14,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/pma")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "US FDA Premarket Approval (PMA) | NKB Regovanta" },
       {
         name: "description",

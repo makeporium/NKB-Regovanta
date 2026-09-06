@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, ClipboardList, ShieldCheck, Zap, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
   component: MfgClassAGsrPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },
       { name: "description", content: "Class A medical device manufacturing registration under GSR 777(E) in India. Fast online intimation, plant layout review, and SLA compliance support." },
       { property: "og:title", content: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },

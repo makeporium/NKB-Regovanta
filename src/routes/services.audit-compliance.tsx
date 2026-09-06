@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
@@ -6,6 +6,7 @@ import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
 export const Route = createFileRoute("/services/audit-compliance")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Audit & Compliance Support | NKB Regovanta" },
       {
         name: "description",

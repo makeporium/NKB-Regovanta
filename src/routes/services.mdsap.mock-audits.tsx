@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,6 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/mock-audits")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta" },
       { name: "description", content: "Full-system and targeted mock MDSAP audits, opening/closing meeting simulations, record retrieval drills, and process-owner interview coaching." },
       { property: "og:title", content: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta" },

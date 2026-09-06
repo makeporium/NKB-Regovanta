@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
@@ -6,6 +6,7 @@ const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 export const Route = createFileRoute("/insights/fda-inspections-2026")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA Medical Device Inspections 2026 | NKB Regovanta" },
       {
         name: "description",

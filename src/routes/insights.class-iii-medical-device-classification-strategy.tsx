@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/industry_medical_devices_1786310566137.png";
 export const Route = createFileRoute("/insights/class-iii-medical-device-classification-strategy")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Class III Medical Device Strategy | NKB Regovanta" },
       {
         name: "description",

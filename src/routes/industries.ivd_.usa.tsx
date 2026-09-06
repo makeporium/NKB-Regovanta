@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
@@ -7,6 +7,7 @@ import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.png";
 export const Route = createFileRoute("/industries/ivd_/usa")({
     head: () => ({
         meta: [
+      { name: "robots", content: "noindex, follow" },
             { title: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
             { name: "description", content: "US FDA IVD regulatory consulting: 510(k) clearance, De Novo classification, CLIA waivers, LDT compliance, and eSTAR submissions from NKB Regovanta." },
             { property: "og:title", content: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },

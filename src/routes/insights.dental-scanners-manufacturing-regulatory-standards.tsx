@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/cleanroom_manufacturing.jpg";
 export const Route = createFileRoute("/insights/dental-scanners-manufacturing-regulatory-standards")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Intraoral Dental Scanner Regulations | NKB Regovanta" },
       {
         name: "description",

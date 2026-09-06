@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, HeartPulse, UserCircle, ShieldCheck, ArrowRight, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/personal-use")({
   component: PersonalUsePage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Personal Use Device Import (MD-20) | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-20 & MD-21 import licenses for patient personal use in India. Fast-track compassionate import documentation and prescription filing support." },
       { property: "og:title", content: "Personal Use Device Import (MD-20) | NKB Regovanta" },

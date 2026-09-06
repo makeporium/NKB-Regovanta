@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/usa/rfd-pre-rfd')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA RFD & Pre-RFD Designations | NKB Regovanta" },
       { name: "description", content: "US FDA RFD & Pre-RFD consulting for combination products and borderlines. Determine lead center jurisdiction and regulatory classification with our experts." },
       { property: "og:title", content: "FDA RFD & Pre-RFD Designations | NKB Regovanta" },

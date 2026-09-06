@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
       {
         name: "description",

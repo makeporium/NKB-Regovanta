@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -48,6 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/labeling")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       {
         title: "Medical Device Labelling New Zealand | NKB Regovanta",
       },

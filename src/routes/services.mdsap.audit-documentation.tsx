@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,6 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/audit-documentation")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "MDSAP Audit Documentation Preparation | NKB Regovanta" },
       { name: "description", content: "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for a successful Auditing Organization audit." },
       { property: "og:title", content: "MDSAP Audit Documentation Preparation | NKB Regovanta" },

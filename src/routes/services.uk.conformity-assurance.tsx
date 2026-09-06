@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -16,6 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/conformity-assurance")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "UKCA Marking & CE Recognition Strategy | NKB Regovanta" },
       {
         name: "description",

@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+﻿import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
 export const Route = createFileRoute('/services/australia/conformity-assessment')({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "TGA Conformity Assessment Support | NKB Regovanta" },
       {
         name: "description",

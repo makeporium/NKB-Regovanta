@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/media__1786282925761.png";
 export const Route = createFileRoute("/insights/regulatory-compliance-strategy-global-medtech")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Global MedTech Regulatory Strategy Guide | NKB Regovanta" },
       {
         name: "description",

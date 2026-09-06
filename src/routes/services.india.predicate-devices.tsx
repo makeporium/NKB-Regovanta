@@ -1,4 +1,4 @@
-import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ClipboardList, PackageSearch, Activity, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -6,6 +6,7 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Predicate Device Import License (MD-15) | NKB Regovanta" },
       { name: "description", content: "CDSCO MD-14 & MD-15 import license consulting for Class A-D predicate medical devices in India. Indian Authorized Agent, SUGAM filing, and dossier support." },
       { property: "og:title", content: "Predicate Device Import License (MD-15) | NKB Regovanta" },

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -48,6 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/medsafe-queries")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       {
         title: "Medsafe Inquiries & Technical Response | NKB Regovanta",
       },

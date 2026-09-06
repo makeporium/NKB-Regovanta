@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -47,6 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/brazil/ivd")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       {
         title: "ANVISA IVD Registration Services | NKB Regovanta",
       },

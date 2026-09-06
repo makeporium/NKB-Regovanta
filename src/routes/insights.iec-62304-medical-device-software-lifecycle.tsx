@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 export const Route = createFileRoute("/insights/iec-62304-medical-device-software-lifecycle")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "IEC 62304 Software Lifecycle Guide | NKB Regovanta" },
       {
         name: "description",

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileCheck, Layers, ShieldCheck, HelpCircle } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
@@ -7,6 +7,7 @@ const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.png
 export const Route = createFileRoute("/insights/medical-device-documentation-compliance-to-evidence")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "Medical Device Regulatory Evidence | NKB Regovanta" },
       {
         name: "description",

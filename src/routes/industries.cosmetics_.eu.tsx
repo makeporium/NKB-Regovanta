@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, FlaskConical, Globe, BookOpen } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/eu_hero_1786396525523.png"; // Assuming standard EU hero exists, or we use a fallback
@@ -6,6 +6,7 @@ import imgHero from "@/assets/eu_hero_1786396525523.png"; // Assuming standard E
 export const Route = createFileRoute("/industries/cosmetics_/eu")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "EU Cosmetic Regulation & Registration | NKB Regovanta" },
       {
         name: "description",

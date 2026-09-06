@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
@@ -6,6 +6,7 @@ const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
       {
         name: "description",

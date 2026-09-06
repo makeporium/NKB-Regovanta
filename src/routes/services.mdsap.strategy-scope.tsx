@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,6 +19,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/strategy-scope")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       { title: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta" },
       { name: "description", content: "Audit scope definition, legal manufacturer boundary mapping, facility mapping, product categories, and regulatory expectations across the 5 MDSAP jurisdictions." },
       { property: "og:title", content: "MDSAP Regulatory Strategy & Scope Assessment | NKB Regovanta" },

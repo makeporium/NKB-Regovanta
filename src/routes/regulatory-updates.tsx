@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { fetchRegulatoryFeedFn } from "@/functions/regulatoryFeed";
 import { RegulatoryDashboard } from "@/components/RegulatoryDashboard";
 
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/regulatory-updates")({
     },
     head: () => ({
         meta: [
+      { name: "robots", content: "noindex, follow" },
             {
                 title: "Global Regulatory Updates Feed | NKB Regovanta",
             },
