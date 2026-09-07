@@ -79,3 +79,20 @@ test("news cache coalesces concurrent requests and retains data during upstream 
   assert.equal(await exports.fetchRegulatoryFeed(), a);
   assert.equal(requests, 8);
 });
+
+test("article verification tolerates Git line endings but detects content changes", () => {
+  const { articleHash } = require('./check_articles.cjs');
+  const lf = '{\n  "intro": "Original reviewed content"\n}\n';
+  assert.equal(articleHash(Buffer.from(lf)), articleHash(Buffer.from(lf.replace(/\n/g, '\r\n'))));
+  assert.notEqual(articleHash(Buffer.from(lf)), articleHash(Buffer.from(lf.replace('reviewed', 'changed'))));
+});
+
+test("all reviewed article hashes match both Windows and Linux checkouts", () => {
+  const { articleHash } = require('./check_articles.cjs');
+  const replacements = require('../src/content/article-replacements.json');
+  for (const row of replacements) {
+    const content = fs.readFileSync(path.join(__dirname, '../src/content/articles', row.slug + '.json'), 'utf8').replace(/\r\n/g, '\n');
+    assert.equal(articleHash(Buffer.from(content)), row.contentSha256, row.slug + ' LF');
+    assert.equal(articleHash(Buffer.from(content.replace(/\n/g, '\r\n'))), row.contentSha256, row.slug + ' CRLF');
+  }
+});

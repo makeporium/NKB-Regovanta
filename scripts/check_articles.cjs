@@ -2,6 +2,11 @@ const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
 const {project,inventory}=require('./generate_sitemap.cjs');
+// Git checkouts use different line endings on Windows and Linux. Normalize only
+// those bytes; actual article changes must still invalidate editorial approval.
+function articleHash(bytes) {
+ return crypto.createHash('sha256').update(bytes.toString('utf8').replace(/\r\n/g, '\n')).digest('hex');
+}
 function checkArticles(pages=inventory()) {
  const failures=[];
  const read=p=>JSON.parse(fs.readFileSync(path.join(project,p),'utf8'));
@@ -14,7 +19,7 @@ function checkArticles(pages=inventory()) {
    const replacement=replacements.find(r=>r.slug===original.slug);
    const file=path.join(project,'src/content/articles',original.slug+'.json');
    const bytes=fs.readFileSync(file); const a=JSON.parse(bytes);
-   if(!replacement || replacement.status!=='original-source-checked' || replacement.contentSha256!==crypto.createHash('sha256').update(bytes).digest('hex')) throw Error('missing or changed editorial replacement');
+   if(!replacement || replacement.status!=='original-source-checked' || replacement.contentSha256!==articleHash(bytes)) throw Error('missing or changed editorial replacement');
    const page=pages.find(p=>p.route==='/insights/'+a.slug);
    if(!page || page.noindex===replacement.indexable) throw Error('indexing decision mismatch');
    const route=fs.readFileSync(path.join(project,'src/routes',page.file),'utf8');
@@ -33,5 +38,5 @@ function checkArticles(pages=inventory()) {
  if(replacements.length!==manifest.length || new Set(replacements.map(r=>r.slug)).size!==manifest.length) failures.push('Replacement coverage mismatch');
  return failures;
 }
-module.exports={checkArticles};
+module.exports={checkArticles,articleHash};
 if(require.main===module){const failures=checkArticles();if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else console.log('All 32 article replacements verified; no 20-word matches against archived copies.');}
