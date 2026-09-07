@@ -45,8 +45,8 @@
     "slug": "gspr-compliance-eu-mdr-ivdr",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "c0540c7f76e1114591c0290aece9e5eed9537730b6873ae55b5f27519900aed3"
+    "indexable": true,
+    "contentSha256": "bbfaa778176c526be6eea7ed79b551848e58d4579017c7a316676865f43b6fbc"
   },
   {
     "slug": "cdsco-medical-device-manufacturing-license-india",
@@ -59,15 +59,15 @@
     "slug": "class-iii-medical-device-classification-strategy",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "313a3f3a480a4881260c9c2b92e577e94c9046b792d8f43e1ea0f2c1cc5d0927"
+    "indexable": true,
+    "contentSha256": "c9e0b626af3c4f976b15d409e393b8dd833f08fdd5451d4cc7bdcc061f748772"
   },
   {
     "slug": "gspr-foundation-medical-device-development",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "00dd324b9f3b579b526e58480d8a915f352715b7441165ffc58a57d99f8bbc31"
+    "indexable": true,
+    "contentSha256": "99b3b3fb4b4acd464e46c9cfd2e7b40c1327bad044691c6a0903d894d4149013"
   },
   {
     "slug": "ce-marking-cardiovascular-medical-devices",
@@ -94,15 +94,15 @@
     "slug": "ivdr-class-d-verification-notified-bodies",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "5f5cb3bf1989352c316ec80b90991bc419e6189d4d1c0068fad5a6f26df23ad9"
+    "indexable": true,
+    "contentSha256": "86221b6657481b4d1c9b542a5e0b7ed3fef9cb9aab4b7e5c6aa2eca20f7a71f5"
   },
   {
     "slug": "dental-scanners-manufacturing-regulatory-standards",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "5e60bda05a88a1aa986068e44842801fc9d33f97f4ee3dbeeeb8e6c5d02d55b8"
+    "indexable": true,
+    "contentSha256": "8e438a2b669f19afc251bae4ddc8e4abfc07cdb56e13822ba5ec75b565f1c5f1"
   },
   {
     "slug": "borderline-medical-device-classification-strategy",
@@ -115,8 +115,8 @@
     "slug": "notified-body-expectations-eu-mdr-technical-documentation",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "843c603baa9369556eb894f213e1b99730b66f553dd35d38a6edcb6c981bb95d"
+    "indexable": true,
+    "contentSha256": "cf8fbdeb15e08b8cc2895102215710f8f82445a19af3ba0ff03ed7c9cfb958af"
   },
   {
     "slug": "overcoming-fda-510k-clearance-barriers",
@@ -136,15 +136,15 @@
     "slug": "regulatory-compliance-strategy-global-medtech",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "7e91c806a0f08ace77718a75064979c0fc82ead1fcfd8902679d43b96c5557d0"
+    "indexable": true,
+    "contentSha256": "411dd19d31173d443556813387240089ba0347be94674d661fac9ca3efe4f17b"
   },
   {
     "slug": "regulation-eu-2024-1860-mdr-ivdr-transition",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "8481edf93c734b0945247603744b7c97680ddee7d51409fac44ef79e8ff17f50"
+    "indexable": true,
+    "contentSha256": "6f990932ae607c35d764d8dd62c94ae8f0bdb0ec3cf3274f07dd23f4794206e3"
   },
   {
     "slug": "biological-evaluation-testing-medical-devices-iso-10993",
@@ -178,8 +178,8 @@
     "slug": "fda-510k-program-modernization-safety-standards",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "2d30862b1f47c805da999bb495095d4827ff49fcf5db05bc60af11aee9546556"
+    "indexable": true,
+    "contentSha256": "7571dc4dbcda114a276546374c7f93d99aab558b2fe4cd66ff98e3eea0e7198d"
   },
   {
     "slug": "human-factors-engineering-medical-device-design",
@@ -199,8 +199,8 @@
     "slug": "ce-marking-process-medical-devices-eu-mdr",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "bb82a20d6a3eab792579dd6070ae2e0c091f20721c2c5dc93239b2f60dbe8912"
+    "indexable": true,
+    "contentSha256": "07dec6161bf4b9a2638f35fd4d8e56d33e54b4f13241ff5bc5037f205cbd2f8e"
   },
   {
     "slug": "samd-classification-submission-usfda",
@@ -220,7 +220,7 @@
     "slug": "notified-body-selection-conformity-assessment-guide",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
-    "indexable": false,
-    "contentSha256": "ca124219159db013dd037abb50bee246e1ce66c3e4f6d7a01a6750407d46fe2d"
+    "indexable": true,
+    "contentSha256": "46064cd87409e68f1081e2126616957ef496a5b5c13e1637594146e2e70b855f"
   }
 ]

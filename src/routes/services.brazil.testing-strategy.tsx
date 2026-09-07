@@ -47,7 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/brazil/testing-strategy")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "ANVISA Testing Strategy (Brazil) | NKB Regovanta",
       },

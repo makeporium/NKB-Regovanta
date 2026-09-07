@@ -15,7 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ear")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "European Authorized Representative | NKB Regovanta" },
       {
         name: "description",

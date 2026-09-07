@@ -15,7 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/change-assessment")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU MDR Change Assessment Consultant | NKB Regovanta" },
       {
         name: "description",

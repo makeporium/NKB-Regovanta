@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-gsr")({
   component: MfgClassAGsrPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },
       { name: "description", content: "Class A medical device manufacturing registration under GSR 777(E) in India. Fast online intimation, plant layout review, and SLA compliance support." },
       { property: "og:title", content: "Class A Manufacturing (GSR 777(E)) | NKB Regovanta" },

@@ -7,7 +7,7 @@ const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
       {
         name: "description",

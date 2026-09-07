@@ -6,7 +6,7 @@ const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 export const Route = createFileRoute("/insights/fda-inspections-2026")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "FDA Medical Device Inspections 2026 | NKB Regovanta" },
       {
         name: "description",

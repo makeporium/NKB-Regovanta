@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/free-sale")({
   component: FreeSalePage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "CDSCO Free Sale Certificate (FSC) | NKB Regovanta" },
       { name: "description", content: "Obtain a CDSCO Free Sale Certificate (FSC) for exporting medical devices and IVDs manufactured in India. Expert regulatory support from NKB Regovanta." },
       { property: "og:title", content: "CDSCO Free Sale Certificate (FSC) | NKB Regovanta" },

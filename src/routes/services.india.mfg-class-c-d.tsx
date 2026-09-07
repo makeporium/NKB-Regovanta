@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-c-d")({
   component: MfgClassCDPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Class C & D Manufacturing License (MD-9) | NKB Regovanta" },
       { name: "description", content: "CDSCO MD-7 & MD-9 manufacturing license consulting for Class C & D medical devices in India. Plant audit readiness, technical files, and CLA support." },
       { property: "og:title", content: "Class C & D Manufacturing License (MD-9) | NKB Regovanta" },

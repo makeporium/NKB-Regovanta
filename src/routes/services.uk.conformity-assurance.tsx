@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/conformity-assurance")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "UKCA Marking & CE Recognition Strategy | NKB Regovanta" },
       {
         name: "description",

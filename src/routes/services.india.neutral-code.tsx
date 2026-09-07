@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services/india/neutral-code")({
     component: NeutralCodePage,
     head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "CDSCO Neutral Code Certificate | NKB Regovanta" },
       { name: "description", content: "Apply for a CDSCO Neutral Code Certificate to export medical devices while preserving OEM confidentiality and custom export branding in India." },
       { property: "og:title", content: "CDSCO Neutral Code Certificate | NKB Regovanta" },
@@ -155,7 +155,7 @@ function NeutralCodePage() {
                                     What is a Neutral Code?
                                 </h2>
                                 <p className="text-gray-700 leading-relaxed mb-6">
-                                    For medical device and pharmaceutical manufacturers aiming for international markets, a Neutral Code (also known as a Special Code) is a strategic identifier. Issued by India’s CDSCO, this confidential code replaces your company’s explicit name and address directly on the product label.
+                                    For eligible medical-device exports, a Neutral Code provides an alternative manufacturer identifier under the applicable export-labelling provisions. Its use must meet the Indian requirements and the importing country's rules; it does not replace product licensing or destination-market authorisation.
                                 </p>
                                 <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
                                     <h3 className="font-bold text-navy mb-3 text-lg">This is particularly valuable when:</h3>
@@ -211,7 +211,7 @@ function NeutralCodePage() {
                                     In India, the CDSCO is the sole regulatory authority responsible for approving and issuing Neutral Codes. To be eligible, manufacturers typically must possess a <strong>valid manufacturing license</strong> and established <strong>product permissions</strong> for the devices intended for export.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed">
-                                    The application process has been streamlined by the CDSCO through their online portal. It requires the submission of precise documentation verifying your manufacturing credentials and the specific intent for the exported devices.
+                                    CDSCO announced a system-generated Neutral Code facility through the Medical Devices Online portal in April 2025. Check the current portal process, manufacturing credentials and export scope before applying. <a className="underline" href="https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2018/UploadPublic_NoticesFiles/Public%20notice%20for%20Neutral%20code.pdf">Read the CDSCO notice</a>.
                                 </p>
                             </div>
                         </div>

@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/vigilance")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "UK MHRA Vigilance & FSCA Consulting | NKB Regovanta" },
       {
         name: "description",

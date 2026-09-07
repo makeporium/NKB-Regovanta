@@ -288,7 +288,7 @@ No. The assessment depends on the intended purpose and functions. Document the r
 
 URL: /insights/ce-marking-process-medical-devices-eu-mdr
 
-Indexing: noindex retained
+Indexing: indexable
 
 CE marking is the outcome of a conformity process, not a standalone application form. A manufacturer needs a clear view of the decisions, evidence, external assessment where applicable, and responsibilities that lead to that outcome. A staged plan makes dependencies visible and reduces the temptation to treat the final label as the whole project.
 
@@ -335,7 +335,7 @@ No. Notified-body involvement depends on the device and applicable conformity-as
 
 URL: /insights/class-iii-medical-device-classification-strategy
 
-Indexing: noindex retained
+Indexing: indexable
 
 A device's commercial description does not establish its FDA classification. Terms such as innovative, implantable, or life-supporting can signal important questions, but the regulatory assessment needs the actual intended use and applicable classification information. Getting that assessment wrong can send a team into studies that do not answer the questions for its eventual submission.
 
@@ -477,7 +477,7 @@ No. Applicability depends on the product and market. A broad list can prompt que
 
 URL: /insights/dental-scanners-manufacturing-regulatory-standards
 
-Indexing: noindex retained
+Indexing: indexable
 
 A dental scanner produces more than a visually attractive model. Its output may inform a restoration, appliance, treatment plan, or another clinical decision. The regulatory and development questions therefore depend on the claimed use of the scan and the workflow that turns it into a result. A demonstration that the device captures an image is only one part of that assessment.
 
@@ -616,7 +616,7 @@ No. Completion shows that the planned change was implemented. Effectiveness addr
 
 URL: /insights/fda-510k-program-modernization-safety-standards
 
-Indexing: noindex retained
+Indexing: indexable
 
 Discussion about 510(k) modernisation can be reduced to an unhelpful rule: choose the newest predicate. A stronger strategy examines the legally marketed comparison, intended use, technology, and quality of the available evidence. It also distinguishes a published final policy from a proposal or discussion that has not become a requirement.
 
@@ -756,7 +756,7 @@ No. A certificate does not establish that every applicable FDA obligation is met
 
 URL: /insights/gspr-compliance-eu-mdr-ivdr
 
-Indexing: noindex retained
+Indexing: indexable
 
 A GSPR checklist becomes useful when it explains why a requirement applies and exactly where the supporting evidence can be found. A column filled with 'compliant' does not provide that explanation. The practical goal is an evidence map that a reviewer can follow from a requirement to the device configuration, evaluation method, and approved result.
 
@@ -803,7 +803,7 @@ Usually the reviewer needs more context: why the method is appropriate, what was
 
 URL: /insights/gspr-foundation-medical-device-development
 
-Indexing: noindex retained
+Indexing: indexable
 
 A late GSPR review often finds a predictable problem: the team has completed substantial testing, but some of it does not support the final claims or configuration. Using the relevant requirements during development helps identify those gaps earlier. The objective is to influence product decisions while they are still affordable to change, not to add another end-stage checklist.
 
@@ -943,7 +943,7 @@ No. Software lifecycle evidence supports the overall case, but the manufacturer 
 
 URL: /insights/ivdr-class-d-verification-notified-bodies
 
-Indexing: noindex retained
+Indexing: indexable
 
 For a Class D IVD, certification planning and routine batch operations cannot be treated as unrelated projects. The manufacturer needs to understand which evidence supports the product and how the applicable verification arrangements affect ongoing supply. Misalignment between the technical team, quality unit, notified body, and laboratory can create avoidable uncertainty close to release.
 
@@ -990,7 +990,7 @@ The applicable role is not interchangeable with ordinary commercial testing. Con
 
 URL: /insights/notified-body-expectations-eu-mdr-technical-documentation
 
-Indexing: noindex retained
+Indexing: indexable
 
 A technical file can contain the right reports and still be difficult to assess. The reader may be unable to connect the device description, risk conclusions, testing, clinical evidence, and instructions. Preparing for notified-body review means making those connections explicit and resolving contradictions before the file leaves the manufacturer.
 
@@ -1036,7 +1036,7 @@ A template can organise information, but product-specific evidence and applicabl
 
 URL: /insights/notified-body-selection-conformity-assessment-guide
 
-Indexing: noindex retained
+Indexing: indexable
 
 The most useful notified-body comparison begins with whether a body can assess the product and proposed scope. Price and availability matter, but they cannot compensate for a mismatch in designation or an incomplete application. Prepare a clear product brief before approaching bodies so that the responses can be compared meaningfully.
 
@@ -1222,7 +1222,7 @@ Use common identifiers, approval controls, and essential fields where they help.
 
 URL: /insights/regulation-eu-2024-1860-mdr-ivdr-transition
 
-Indexing: noindex retained
+Indexing: indexable
 
 An extended transition date is not a blanket permission to continue supplying every IVD. Eligibility depends on the device's regulatory history and fulfilment of conditions. A useful transition plan therefore starts with a device-by-device assessment and supporting records, rather than a single deadline copied into the commercial forecast.
 
@@ -1269,7 +1269,7 @@ No. They concern qualifying devices and depend on conditions. New products and o
 
 URL: /insights/regulatory-compliance-strategy-global-medtech
 
-Indexing: noindex retained
+Indexing: indexable
 
 A global launch plan should do more than list countries and estimated filing dates. Its value comes from showing which decisions and evidence are shared, which obligations differ, and where an early market choice affects later work. This allows investment in evidence that supports the commercial plan without assuming one authorisation opens every market.
 

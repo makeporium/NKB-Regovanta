@@ -47,7 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/ivd")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "New Zealand IVD Regulatory Support | NKB Regovanta",
       },

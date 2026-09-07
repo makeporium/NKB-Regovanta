@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ivdr-pmpf")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU IVDR PMPF & PMS Consulting | NKB Regovanta" },
       {
         name: "description",

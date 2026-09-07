@@ -6,7 +6,7 @@ const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
       {
         name: "description",

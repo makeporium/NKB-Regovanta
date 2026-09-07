@@ -47,7 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/canada/mdsap")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "MDSAP & ISO 13485 for Health Canada | NKB Regovanta",
       },

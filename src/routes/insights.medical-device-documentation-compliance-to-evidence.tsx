@@ -7,7 +7,7 @@ const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.png
 export const Route = createFileRoute("/insights/medical-device-documentation-compliance-to-evidence")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Medical Device Regulatory Evidence | NKB Regovanta" },
       {
         name: "description",

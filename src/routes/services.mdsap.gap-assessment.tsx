@@ -19,7 +19,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/gap-assessment")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP QMS Gap Assessment Consulting | NKB Regovanta" },
       { name: "description", content: "Gap assessment against ISO 13485:2016 and MDSAP requirements across 7 process areas, with audit exposure modeling and prioritized remediation roadmap." },
       { property: "og:title", content: "MDSAP QMS Gap Assessment Consulting | NKB Regovanta" },

@@ -17,7 +17,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/predicate-strategy")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "FDA Predicate Device Strategy | NKB Regovanta" },
       {
         name: "description",

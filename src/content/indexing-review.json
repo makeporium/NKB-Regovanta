@@ -1,0 +1,3240 @@
+[
+  {
+    "file": "industries.cosmetics_.eu.tsx",
+    "route": "/industries/cosmetics/eu",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / eu industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Every cosmetic product must have a legally designated EU Responsible Person. We fulfill this critical role, ensuring ongoing regulatory and safety compliance across all 27 EU member states, plus Norway, Iceland, and Liechtenstein.",
+      "We compile, maintain, and manage the extensive Product Information File (PIF) documentation, which is required to be made readily accessible to the competent authorities upon request.",
+      "Cosmetic Product Safety Report (CPSR)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.cosmetics_.india.for-importer.tsx",
+    "route": "/industries/cosmetics/india/for-importer",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / india / for-importer industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Registration of importer on the SUGAM Portal",
+      "Document compilation for application filing",
+      "Pay government fees and upload challan"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.cosmetics_.india.for-manufacturer.tsx",
+    "route": "/industries/cosmetics/india/for-manufacturer",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / india / for-manufacturer industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Prepare layout plan and Good Manufacturing Practices (GMP) compliance documents",
+      "Compile list of machinery, equipment, and technical personnel",
+      "Submit online application (Form COS-5 or COS-6) to the SLA"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.cosmetics_.india.index.tsx",
+    "route": "/industries/cosmetics/india",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / india industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Seamless CDSCO registration and approval for cosmetic products entering the Indian market.",
+      "Obtain Form COS-8 for manufacturing or Form COS-9 for loan licensing to produce cosmetics in India.",
+      "We act as your legally authorized Indian representative for foreign cosmetic imports and registrations."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.cosmetics_.uk.tsx",
+    "route": "/industries/cosmetics/uk",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / uk industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Post-Brexit, a UK-based Responsible Person is mandatory. We act as your designated UK RP, ensuring continuous compliance with OPSS regulations.",
+      "We handle the mandatory Submit Cosmetic Product Notification (SCPN) process, registering your products with the UK government before they enter the market.",
+      "We compile, structure, and maintain your comprehensive Product Information Files tailored specifically to UK cosmetics compliance standards."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 5,
+      "averagePosition": 69.8
+    }
+  },
+  {
+    "file": "industries.cosmetics_.usa.tsx",
+    "route": "/industries/cosmetics/usa",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct cosmetics / usa industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "We ensure seamless compliance with mandatory MoCRA requirements by managing both your FDA Cosmetic Product Listing and Cosmetic Facility Registration.",
+      "Navigate the updated Modernization of Cosmetics Regulation Act with our experts to ensure strict safety substantiation and regulatory adherence.",
+      "Product Classification (Cosmetic vs. Drug)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.ivd_.eu.tsx",
+    "route": "/industries/ivd/eu",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct ivd / eu industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "We support you through the rigorous conformity assessments required by EU Notified Bodies for Class B, C, and D devices.",
+      "Ensure seamless market access by registering your Actor details and UDI/Device information in EUDAMED before the May 2026 deadline.",
+      "Develop robust analytical and clinical performance reports, and establish proactive Post-Market Performance Follow-up (PMPF) plans."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 456,
+      "averagePosition": 54.78
+    }
+  },
+  {
+    "file": "industries.ivd_.india.tsx",
+    "route": "/industries/ivd/india",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "accuracy-review",
+    "reason": "Makes blanket local-testing and designated-laboratory mandates for new IVDs; needs product- and pathway-specific source verification before restoring indexing.",
+    "relatedPage": "/services/india/ivd",
+    "contentEvidence": [
+      "We manage end-to-end import and manufacturing registrations via the CDSCO SUGAM portal, ensuring smooth dossier submission and tracking.",
+      "We coordinate mandatory local clinical performance evaluations at ICMR/AIIMS-designated laboratories to meet strict CDSCO requirements.",
+      "We determine the correct risk class for your IVD under Part II of the First Schedule and strategize your licensing pathway (CLA vs SLA)."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "industries.ivd_.usa.tsx",
+    "route": "/industries/ivd/usa",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct ivd / usa industry-market intent with product-specific requirements and service navigation; not a geographic name-only clone.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "We expertly map substantial equivalence to predicates and manage the Q-Submission process to align expectations with the FDA prior to formal review.",
+      "For Point-of-Care diagnostics, we design and execute the specialized analytical and usability studies required to secure CLIA waiver status.",
+      "Navigate the FDA's finalized phase-in oversight for Laboratory Developed Tests (LDTs) with our targeted quality and submission transition plans."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 59,
+      "averagePosition": 45.39
+    }
+  },
+  {
+    "file": "insights.ce-marking-process-medical-devices-eu-mdr.tsx",
+    "route": "/insights/ce-marking-process-medical-devices-eu-mdr",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: The EU MDR CE-Marking Process: Plan the Decisions and Handoffs. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "The EU MDR CE-Marking Process: Plan the Decisions and Handoffs",
+      "CE marking is the outcome of a conformity process, not a standalone application form. A manufacturer needs a clear view of the decisions, evidence, external assessment where applicable, and responsibilities that lead to that outcome. A staged plan makes dependencies visible and reduces the temptation to treat the final label as the whole project.",
+      "Define the product and assessment route"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.class-iii-medical-device-classification-strategy.tsx",
+    "route": "/insights/class-iii-medical-device-classification-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies",
+      "A device's commercial description does not establish its FDA classification. Terms such as innovative, implantable, or life-supporting can signal important questions, but the regulatory assessment needs the actual intended use and applicable classification information. Getting that assessment wrong can send a team into studies that do not answer the questions for its eventual submission.",
+      "Research the device type and applicable controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.dental-scanners-manufacturing-regulatory-standards.tsx",
+    "route": "/insights/dental-scanners-manufacturing-regulatory-standards",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Dental Scanner Development: Validate the Scan-to-Decision Workflow. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Dental Scanner Development: Validate the Scan-to-Decision Workflow",
+      "A dental scanner produces more than a visually attractive model. Its output may inform a restoration, appliance, treatment plan, or another clinical decision. The regulatory and development questions therefore depend on the claimed use of the scan and the workflow that turns it into a result. A demonstration that the device captures an image is only one part of that assessment.",
+      "Define the claimed output and downstream use"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.eu-mdr-2026.tsx",
+    "route": "/insights/eu-mdr-2026",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Back to Insights. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
+      "For medical-device manufacturers, 2026 brings practical regulatory changes that should be translated into clear actions across quality, regulatory and operational teams.",
+      "EUDAMED has moved into mandatory use"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.fda-510k-program-modernization-safety-standards.tsx",
+    "route": "/insights/fda-510k-program-modernization-safety-standards",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: 510(k) Modernisation: Assess Predicate Relevance and Performance Evidence. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "510(k) Modernisation: Assess Predicate Relevance and Performance Evidence",
+      "Discussion about 510(k) modernisation can be reduced to an unhelpful rule: choose the newest predicate. A stronger strategy examines the legally marketed comparison, intended use, technology, and quality of the available evidence. It also distinguishes a published final policy from a proposal or discussion that has not become a requirement.",
+      "Evaluate the predicate beyond its clearance date"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.fda-inspections-2026.tsx",
+    "route": "/insights/fda-inspections-2026",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Back to Insights. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
+      "For medical-device manufacturers, 2026 brings practical regulatory changes that should be translated into clear actions across quality, regulatory and operational teams.",
+      "Beginning February 2, 2026, FDA stopped using the Quality System Inspection Technique (QSIT) for medical-device inspections. Inspections are now conducted using the updated Inspection of Medical Device Manufacturers Compliance Program, CP 7382.850, which aligns the inspection process with the QMSR."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.fda-qmsr-2026.tsx",
+    "route": "/insights/fda-qmsr-2026",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Back to Insights. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "FDA QMSR 2026: What Medical Device Manufacturers Need to Know",
+      "For medical-device manufacturers, 2026 brings practical regulatory changes that should be translated into clear actions across quality, regulatory and operational teams.",
+      "On February 2, 2026, FDAâ€™s Quality Management System Regulation (QMSR) became effective. The revised 21 CFR Part 820 incorporates ISO 13485:2016 by reference and is intended to more closely align the U.S. medical-device quality framework with internationally recognized quality-management requirements."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 9.0
+    }
+  },
+  {
+    "file": "insights.gspr-compliance-eu-mdr-ivdr.tsx",
+    "route": "/insights/gspr-compliance-eu-mdr-ivdr",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: GSPR Compliance: Turn the Checklist Into an Evidence Map. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "GSPR Compliance: Turn the Checklist Into an Evidence Map",
+      "A GSPR checklist becomes useful when it explains why a requirement applies and exactly where the supporting evidence can be found. A column filled with 'compliant' does not provide that explanation. The practical goal is an evidence map that a reviewer can follow from a requirement to the device configuration, evaluation method, and approved result.",
+      "Start with the correct regulation and scope"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.gspr-foundation-medical-device-development.tsx",
+    "route": "/insights/gspr-foundation-medical-device-development",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs",
+      "A late GSPR review often finds a predictable problem: the team has completed substantial testing, but some of it does not support the final claims or configuration. Using the relevant requirements during development helps identify those gaps earlier. The objective is to influence product decisions while they are still affordable to change, not to add another end-stage checklist.",
+      "Begin with the intended use and foreseeable conditions"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.india-mdr-2026-rule-63.tsx",
+    "route": "/insights/india-mdr-2026-rule-63",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Back to Insights. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "India Medical Device Rules 2026: EU-Approved Devices Gain Recognition Under Rule 63",
+      "What the latest MDR amendment means for medical device manufacturers, EU companies and Indian importers.",
+      "India&apos;s medical device regulatory framework has taken another important step towards greater recognition of international regulatory evidence."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.ivdr-class-d-verification-notified-bodies.tsx",
+    "route": "/insights/ivdr-class-d-verification-notified-bodies",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow",
+      "For a Class D IVD, certification planning and routine batch operations cannot be treated as unrelated projects. The manufacturer needs to understand which evidence supports the product and how the applicable verification arrangements affect ongoing supply. Misalignment between the technical team, quality unit, notified body, and laboratory can create avoidable uncertainty close to release.",
+      "Confirm which external assessment arrangements apply"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.medical-device-documentation-compliance-to-evidence.tsx",
+    "route": "/insights/medical-device-documentation-compliance-to-evidence",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Back to Insights. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Medical Device Documentation: From Compliance Records to Regulatory Evidence",
+      "For a medical device manufacturer, documentation is more than a compliance requirement. It is the objective evidence that the product, processes and quality system remain under control.",
+      "During an FDA inspection, Notified Body audit or ISO 13485 assessment, auditors do not simply look for documents. They look for"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.notified-body-expectations-eu-mdr-technical-documentation.tsx",
+    "route": "/insights/notified-body-expectations-eu-mdr-technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: EU MDR Technical Documentation: Make the Evidence Trail Clear. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "EU MDR Technical Documentation: Make the Evidence Trail Clear",
+      "A technical file can contain the right reports and still be difficult to assess. The reader may be unable to connect the device description, risk conclusions, testing, clinical evidence, and instructions. Preparing for notified-body review means making those connections explicit and resolving contradictions before the file leaves the manufacturer.",
+      "MDR Annexes II and III provide the framework for technical documentation and post-market surveillance documentation. Start with the exact configurations covered. Identify models, accessories, relevant software versions, intended users, and claims. A reviewer should not have to infer the product scope from a collection of test reports."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.notified-body-selection-conformity-assessment-guide.tsx",
+    "route": "/insights/notified-body-selection-conformity-assessment-guide",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Selecting a Notified Body: Match Designation, Scope, and Project Readiness. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Selecting a Notified Body: Match Designation, Scope, and Project Readiness",
+      "The most useful notified-body comparison begins with whether a body can assess the product and proposed scope. Price and availability matter, but they cannot compensate for a mismatch in designation or an incomplete application. Prepare a clear product brief before approaching bodies so that the responses can be compared meaningfully.",
+      "The European Commission publishes information on notified bodies and their designation through the relevant official system. Confirm the applicable regulation and scope for the intended product and conformity-assessment activities. An organisation's ability to assess one device category does not establish coverage for another."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.regulation-eu-2024-1860-mdr-ivdr-transition.tsx",
+    "route": "/insights/regulation-eu-2024-1860-mdr-ivdr-transition",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: IVDR Transition Planning: Check Eligibility Before Relying on the Deadline. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "IVDR Transition Planning: Check Eligibility Before Relying on the Deadline",
+      "An extended transition date is not a blanket permission to continue supplying every IVD. Eligibility depends on the device's regulatory history and fulfilment of conditions. A useful transition plan therefore starts with a device-by-device assessment and supporting records, rather than a single deadline copied into the commercial forecast.",
+      "Separate the final transition date from earlier milestones"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "insights.regulatory-compliance-strategy-global-medtech.tsx",
+    "route": "/insights/regulatory-compliance-strategy-global-medtech",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Distinct informational article: Global MedTech Strategy: Sequence Markets Around Reusable Evidence. Provides explanatory guidance beyond a service enquiry page; related subject matter alone is not duplication.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Global MedTech Strategy: Sequence Markets Around Reusable Evidence",
+      "A global launch plan should do more than list countries and estimated filing dates. Its value comes from showing which decisions and evidence are shared, which obligations differ, and where an early market choice affects later work. This allows investment in evidence that supports the commercial plan without assuming one authorisation opens every market.",
+      "Use one controlled description of the device, intended use, configurations, and manufacturing arrangements. Record proposed variations by market rather than allowing teams to develop incompatible descriptions. A different indication or accessory can change the evidence needed even when the brand name stays the same."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "regulatory-updates.tsx",
+    "route": "/regulatory-updates",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "duplicate-feed",
+    "reason": "Same RegulatoryDashboard and feed as /ai-news; retain one search destination.",
+    "relatedPage": "/ai-news",
+    "contentEvidence": [
+      "Global Regulatory Updates & Intelligence Feed"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.audit-compliance.tsx",
+    "route": "/services/audit-compliance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering general internal/supplier audit and compliance service selection. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Independent assessment of QMS processes and regulatory compliance.",
+      "Evaluate supplier controls, qualification and ongoing performance.",
+      "Identify gaps against applicable regulatory and quality requirements."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.artg-inclusion.tsx",
+    "route": "/services/australia/artg-inclusion",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering kind-of-device grouping and ARTG application preparation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "First ARTG inclusion for a manufacturer",
+      "Adding new models, families or variants to an existing product line",
+      "Assessing whether multiple products can sit under one ARTG inclusion"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 5,
+      "averagePosition": 35.2
+    }
+  },
+  {
+    "file": "services.australia.australian-sponsor.tsx",
+    "route": "/services/australia/australian-sponsor",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Australian sponsor appointment and ongoing regulatory governance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Foreign manufacturer without an Australian legal entity",
+      "Existing commercial distributor acting as Sponsor but lacking regulatory governance and independence",
+      "Transfer of ARTG inclusions from one Sponsor to another"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.change-management.tsx",
+    "route": "/services/australia/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering change triggers, regulatory impact and lifecycle record updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design or technical specification modification to a marketed device",
+      "Raw material, chemical formulation, or critical supplier change",
+      "Software, firmware, or cybersecurity algorithmic update"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.classification.tsx",
+    "route": "/services/australia/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Launching a new medical device or IVD in Australia",
+      "Changing intended purpose, indications, duration of use, anatomical site or user population",
+      "Adding software functionality or converting a hardware feature into software"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.clinical-evidence.tsx",
+    "route": "/services/australia/clinical-evidence",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering claim-specific clinical evidence and evaluation deliverables. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Clinical evidence gap assessment against TGA Clinical Evidence Guidelines",
+      "Systematic clinical literature search and appraisal strategy",
+      "Clinical Evaluation Report (CER) drafting, updating, and remediation"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.conformity-assessment.tsx",
+    "route": "/services/australia/conformity-assessment",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic regulatory template without conformity-assessment-specific evidence or process; manufacturer-evidence page is substantive.",
+    "relatedPage": "/services/australia/manufacturer-evidence",
+    "contentEvidence": [
+      "Navigate the complexities of the Australia regulatory landscape with our comprehensive Conformity Assessment Support support.",
+      "The regulatory authority in Australia maintains strict requirements for Conformity Assessment Support. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Australia market.",
+      "Comprehensive regulatory strategy and pathway determination."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.ivd.tsx",
+    "route": "/services/australia/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering diagnostic intended use, performance evidence and the local IVD pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Class 1, 2, 3 or 4 IVD market launch in Australia",
+      "Self-testing, point-of-care (PoC), near-patient, or centralized laboratory IVD system",
+      "New analyte, specimen type, intended target population, or expanded clinical claim"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.labeling.tsx",
+    "route": "/services/australia/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "New Australian market launch or commercial relabelling",
+      "Class III or Class IIb device now subject to mandatory Australian UDI requirements",
+      "Preparing Class IIa, Class Is or IVD portfolios for subsequent UDI rollout phases"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.manufacturer-evidence.tsx",
+    "route": "/services/australia/manufacturer-evidence",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering conformity evidence, certificate scope and TGA application linkage. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing a first Australian ARTG application",
+      "Using EU, UK, US, Canadian or other overseas regulatory evidence to support Australia",
+      "Changing certification body, conformity assessment certificate, manufacturing site or legal manufacturer"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.pms.tsx",
+    "route": "/services/australia/pms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic PMS template; detailed post-market page covers the same service.",
+    "relatedPage": "/services/australia/post-market",
+    "contentEvidence": [
+      "TGA Post-Market Surveillance (PMS) Plans",
+      "Navigate the complexities of the Australia regulatory landscape with our comprehensive Post-Market Surveillance (PMS) support.",
+      "The regulatory authority in Australia maintains strict requirements for Post-Market Surveillance (PMS). Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Australia market."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 19.0
+    }
+  },
+  {
+    "file": "services.australia.post-market.tsx",
+    "route": "/services/australia/post-market",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering complaint assessment, reporting and field-action responsibilities. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "New ARTG inclusion requiring a functioning Australian post-market operating model",
+      "Adverse event or near-incident occurring in Australia or overseas involving the device",
+      "Safety signal, trend, or recurring complaint cluster identified in global PMS data"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.software.tsx",
+    "route": "/services/australia/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "New SaMD, digital health platform, or medical mobile application launch",
+      "AI / machine-learning algorithms with diagnostic or therapeutic medical purposes",
+      "Software update or algorithmic modification that may change clinical function or risk profile"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.sponsor.tsx",
+    "route": "/services/australia/sponsor",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic sponsor template; detailed Australian Sponsor page covers governance and obligations.",
+    "relatedPage": "/services/australia/australian-sponsor",
+    "contentEvidence": [
+      "Independent TGA Sponsor Representation",
+      "Navigate the complexities of the Australia regulatory landscape with our comprehensive Australian Sponsor Services support.",
+      "The regulatory authority in Australia maintains strict requirements for Australian Sponsor Services. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Australia market."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 21.0
+    }
+  },
+  {
+    "file": "services.australia.supply-chain.tsx",
+    "route": "/services/australia/supply-chain",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering importer/distributor responsibilities, traceability and complaint routing. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Sponsorâ€“manufacturer quality and regulatory interface agreements",
+      "Australian importer and commercial distributor role and responsibility mapping",
+      "Distribution records, lot-level batch tracking, and supply-chain traceability controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.technical-documentation.tsx",
+    "route": "/services/australia/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing for ARTG inclusion or a mandatory/discretionary TGA application audit",
+      "Using an EU MDR / IVDR dossier or FDA 510(k)/PMA submission as the starting technical package",
+      "Responding to a TGA post-market information request or compliance check"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.testing-strategy.tsx",
+    "route": "/services/australia/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "New medical device or IVD requiring verification and validation evidence for TGA submission",
+      "Predicate or overseas evidence does not fully cover the Australian marketed configuration or indications",
+      "TGA application audit identifies a specific testing or pre-clinical data gap"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.australia.tga-audit.tsx",
+    "route": "/services/australia/tga-audit",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering TGA application-audit preparation and information responses. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Application category is subject to mandatory or discretionary TGA application audit",
+      "High-risk, novel, implantable, or complex medical device / IVD submission",
+      "Using comparable overseas evidence (CE MDR, FDA) and needing to demonstrate equivalence of scope and evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.anvisa-queries.tsx",
+    "route": "/services/brazil/anvisa-queries",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering ANVISA exigencia responses supported by corrected evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "An official ANVISA exigÃªncia or technical deficiency letter has been received",
+      "A Class III or IV registration dossier has been questioned during pre-market technical review",
+      "BGMP / CBPF on-site inspection non-conformances require root-cause analysis and formal CAPA response"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.bgmp.tsx",
+    "route": "/services/brazil/bgmp",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Brazilian GMP and CBPF inspection evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A Class III or IV medical device or IVD product registration is planned in Brazil",
+      "A formal CBPF (Certificado de Boas PrÃ¡ticas de FabricaÃ§Ã£o) initial application or renewal is required",
+      "The manufacturer is preparing for an ANVISA on-site inspection or risk-based desk review"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 92.0
+    }
+  },
+  {
+    "file": "services.brazil.brh.tsx",
+    "route": "/services/brazil/brh",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Brazilian registration-holder governance and access to records. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "The foreign manufacturer has no established commercial or legal entity in Brazil",
+      "A new Brazilian importer or registration holder is being appointed for market entry",
+      "The manufacturer seeks stronger governance over regulatory data, technical files, complaints, and changes"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.change-management.tsx",
+    "route": "/services/brazil/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering change triggers, regulatory impact and lifecycle record updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design, raw material, or engineering specification changes are planned for a registered device",
+      "Manufacturing site relocation, line expansion, or critical component supplier is changing",
+      "Software algorithms, AI/ML models, firmware, or cybersecurity patches are being released"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.classification.tsx",
+    "route": "/services/brazil/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A new medical device or IVD is being introduced in the Brazilian market",
+      "The intended use or clinical claims differ from an existing US/EU global registration",
+      "The manufacturer is uncertain whether the product is a medical device, accessory, SaMD or IVD"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.ivd.tsx",
+    "route": "/services/brazil/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering diagnostic intended use, performance evidence and the local IVD pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Launching a Class I, II, III, or IV IVD in the Brazilian market",
+      "An IVD has been reclassified under the modernized RDC 830/2023 framework",
+      "A performance claim, validated specimen type, target population, or intended clinical use is changing"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.labeling.tsx",
+    "route": "/services/brazil/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing Brazilian Portuguese labels, packaging artwork, and IFUs for initial market launch",
+      "Updating Brazil Registration Holder details or legal manufacturer corporate data",
+      "Implementing physical and barcode UDI on medical device labels and packaging levels"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.notificacao.tsx",
+    "route": "/services/brazil/notificacao",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic notification template; combined registration page explains actual pathways.",
+    "relatedPage": "/services/brazil/registration",
+    "contentEvidence": [
+      "Navigate the complexities of the Brazil regulatory landscape with our comprehensive NotificaÃ§Ã£o Pathway support.",
+      "The regulatory authority in Brazil maintains strict requirements for NotificaÃ§Ã£o Pathway. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Brazil market.",
+      "Comprehensive regulatory strategy and pathway determination."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.registration.tsx",
+    "route": "/services/brazil/registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering notification versus registration and dossier consistency. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Launching a Class I, II, III or IV medical device in Brazil",
+      "Transferring or restructuring a product portfolio under a Brazilian registration holder (BRH)",
+      "Adding new models, commercial configurations, or family members to an existing authorization"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.registro.tsx",
+    "route": "/services/brazil/registro",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic registration template; combined registration page explains actual pathways.",
+    "relatedPage": "/services/brazil/registration",
+    "contentEvidence": [
+      "Navigate the complexities of the Brazil regulatory landscape with our comprehensive Registro Pathway support.",
+      "The regulatory authority in Brazil maintains strict requirements for Registro Pathway. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Brazil market.",
+      "Comprehensive regulatory strategy and pathway determination."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.software.tsx",
+    "route": "/services/brazil/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Standalone software (SaMD), digital health platform, or software-enabled medical device entering Brazil",
+      "Artificial intelligence (AI) / Machine Learning (ML) functionality is being incorporated for clinical use",
+      "A software update or patch alters clinical diagnostic functionality, output metrics, or risk controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.technical-documentation.tsx",
+    "route": "/services/brazil/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A Class III or IV registration dossier is being prepared for ANVISA submission",
+      "A Class I or II notification technical file needs to be verified and made defensible for post-market audit",
+      "ANVISA has issued an official exigÃªncia requesting technical performance or safety evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.technovigilance.tsx",
+    "route": "/services/brazil/technovigilance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic alternate-spelling page; tecnovigilance page has the substantive incident workflow.",
+    "relatedPage": "/services/brazil/tecnovigilance",
+    "contentEvidence": [
+      "ANVISA Technovigilance Services (Brazil)",
+      "Navigate the complexities of the Brazil regulatory landscape with our comprehensive Technovigilance Services support.",
+      "The regulatory authority in Brazil maintains strict requirements for Technovigilance Services. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Brazil market."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.tecnovigilance.tsx",
+    "route": "/services/brazil/tecnovigilance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Brazilian incident investigation, reporting and corrective actions. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Medical devices or IVDs are actively commercialized in Brazil requiring formal post-market oversight",
+      "A serious adverse event, patient injury, or critical technical complaint has occurred in Brazil or globally",
+      "A global recall, field safety corrective action (FSCA), or safety alert affects Brazilian distributed units"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.brazil.testing-strategy.tsx",
+    "route": "/services/brazil/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Existing global test reports do not fully cover the Brazilian marketed device configuration",
+      "ANVISA has raised a specific testing or pre-clinical validation exigÃªncia during technical review",
+      "A new device family or complex grouping requires scientifically justified worst-case model selection"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.change-management.tsx",
+    "route": "/services/canada/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering change triggers, regulatory impact and lifecycle record updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Intended use, indications, or contraindication expansions",
+      "Design and functional performance modifications",
+      "Material, chemical formulation, or biocompatibility changes"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.classification.tsx",
+    "route": "/services/canada/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Confirm whether the product meets the Canadian definition of a medical device or IVD.",
+      "Review intended use, indications, target population and user environment.",
+      "Apply the non-IVD or IVD classification rules under Schedule 1 of the Medical Devices Regulations."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.inspection.tsx",
+    "route": "/services/canada/inspection",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering inspection preparation using operating records and corrective actions. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "MDEL inspection readiness assessment and gap analysis",
+      "Complaint file review, investigation rigor, and closure timeliness",
+      "Distribution-record and batch traceability stress-testing"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.ivd.tsx",
+    "route": "/services/canada/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering diagnostic intended use, performance evidence and the local IVD pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "IVD qualification and classification under Schedule 1 Part 2",
+      "Intended-use and specimen-type review (serum, plasma, whole blood, urine, swab)",
+      "Near-patient / point-of-care (PoC) considerations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.labeling.tsx",
+    "route": "/services/canada/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Device name and legal manufacturer identity",
+      "Device identifier and catalogue/model information",
+      "Warnings, precautions, contraindications and limitations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.liaison.tsx",
+    "route": "/services/canada/liaison",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic liaison promises without a Canadian query process or concrete deliverables.",
+    "relatedPage": "/services/canada",
+    "contentEvidence": [
+      "Health Canada Regulatory Liaison Support",
+      "Navigate the complexities of the Canada regulatory landscape with our comprehensive Health Canada Liaison Support support.",
+      "The regulatory authority in Canada maintains strict requirements for Health Canada Liaison Support. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Canada market."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.mdel.tsx",
+    "route": "/services/canada/mdel",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Canadian establishment licensing and the activities it covers. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Determine whether the establishment requires an MDEL and which activities must be included.",
+      "Confirm establishment name, address and regulatory activity information.",
+      "Identify device classes and categories handled by the establishment."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.mdl.tsx",
+    "route": "/services/canada/mdl",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Canadian device licensing and class-dependent application evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Licence pathway and application-type assessment",
+      "Device grouping strategy: single device, family, group or group family where applicable",
+      "Manufacturer and device information review"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.mdsap.tsx",
+    "route": "/services/canada/mdsap",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Canadian licensing alignment with MDSAP certificate and QMS scope. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "MDSAP gap assessment against ISO 13485 and Health Canada regulatory requirements (SOR/98-282)",
+      "QMS scope and certificate alignment with the legal manufacturer and licensed devices",
+      "Design and development controls for applicable device classes"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.pms.tsx",
+    "route": "/services/canada/pms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering post-market evidence, complaints, reporting and periodic updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Complaint handling procedures and escalation logic",
+      "Reportability assessment under the Medical Devices Regulations (SOR/98-282 Part 1, Div. 2)",
+      "Preliminary and final incident reporting support"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.renewals.tsx",
+    "route": "/services/canada/renewals",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic maintenance text does not explain MDL versus MDEL renewal responsibilities.",
+    "relatedPage": "/services/canada",
+    "contentEvidence": [
+      "Health Canada MDL &amp; MDEL Annual Renewals",
+      "Navigate the complexities of the Canada regulatory landscape with our comprehensive License Maintenance & Renewals support.",
+      "The regulatory authority in Canada maintains strict requirements for License Maintenance & Renewals. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Canada market."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.software.tsx",
+    "route": "/services/canada/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Determine whether the software qualifies as a medical device (SaMD / SiMD)",
+      "Assess classification under the Canadian framework (SOR/98-282)",
+      "Define software architecture, clinical algorithms, and system boundaries"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.supply-chain.tsx",
+    "route": "/services/canada/supply-chain",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering importer/distributor responsibilities, traceability and complaint routing. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Legal manufacturer and establishment-role assessment",
+      "Importer and distributor MDEL requirements and verification",
+      "Verification of device licensing (MDL/MDEL) before import or commercial sale"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.technical-documentation.tsx",
+    "route": "/services/canada/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Device description, principles of operation and variants/configurations",
+      "Intended use, indications, contraindications and target population",
+      "Device classification and regulatory history"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.canada.testing-strategy.tsx",
+    "route": "/services/canada/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Bench and functional performance testing",
+      "Biocompatibility and chemical characterization (ISO 10993)",
+      "Sterilization validation (EO, Gamma, Steam, VHP)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.article-117.tsx",
+    "route": "/services/eu/article-117",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering integral drug-device evidence and conditional notified-body opinion requirements. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Article 117 applicability assessment (integral vs co-packaged / referenced combinations)",
+      "Device constituent qualification, intended purpose and applicable MDR GSPR mapping",
+      "Risk management file (ISO 14971) focused on device-drug interactions and delivery errors"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ce-registration.tsx",
+    "route": "/services/eu/ce-registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "navigation-bridge",
+    "reason": "Brief introduction points visitors to the full CE-marking architecture; insufficient standalone value.",
+    "relatedPage": "/services/eu/ce-marking",
+    "contentEvidence": [
+      "EU CE Marking Registration &amp; Compliance",
+      "NKB Regovanta oversees the complete EU CE-marking and device registration journey under MDR 2017/745 and IVDR 2017/746.",
+      "View Full CE Marking &amp; Registration Architecture"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 13,
+      "averagePosition": 71.38
+    }
+  },
+  {
+    "file": "services.eu.change-assessment.tsx",
+    "route": "/services/eu/change-assessment",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering EU change significance and notified-body communication. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design modifications and raw material / polymer changes",
+      "Software updates, cybersecurity patches and algorithmic refinements",
+      "Manufacturing site transfers, line additions and process validations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.class-d-ivdr.tsx",
+    "route": "/services/eu/class-d-ivdr",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class D evidence, Common Specifications and applicable EURL interfaces. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Rule 1 / Rule 2 / applicable Class D classification rationale & claim boundaries",
+      "Notified Body Annex IX or Annex X/XI high-risk conformity assessment planning",
+      "Performance evaluation depth and robust clinical specimen bank evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.classification.tsx",
+    "route": "/services/eu/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Qualification as a medical device under the MDR framework",
+      "Intended purpose and clinical claims review",
+      "Application of MDR classification rules, including software (Rule 11) and special rules"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.clinical-evaluation.tsx",
+    "route": "/services/eu/clinical-evaluation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering clinical claims, literature appraisal and CER conclusions. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Clinical Evaluation Plan (CEP) aligned to intended purpose, claims and GSPR",
+      "State-of-the-art and alternative treatment / benchmark technology context",
+      "Systematic literature search protocol and documented appraisal methodology"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 89.0
+    }
+  },
+  {
+    "file": "services.eu.deficiency-response.tsx",
+    "route": "/services/eu/deficiency-response",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering reviewer-question analysis, evidence remediation and response matrices. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Insufficient clinical / performance justification",
+      "Weak or ambiguous classification rationale",
+      "GSPR evidence inconsistency across Annex II files"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ear.tsx",
+    "route": "/services/eu/ear",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering EU authorised-representative responsibilities and documentation access. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Device Registration with EU Competent Authorities",
+      "As your appointed European Authorized Representative (EAR), NKB Regovanta fulfills all MDR/IVDR local representation mandates for non-EU manufacturers, facilitating direct device registration and maintaining mandatory regulatory records.",
+      "Documentation & Technical Conformity Assurance"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.eudamed.tsx",
+    "route": "/services/eu/eudamed",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering actor/device data, UDI consistency and registry maintenance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Actor registration & Single Registration Number (SRN) acquisition",
+      "Manufacturer and European Authorized Representative (EC REP) data alignment",
+      "Importer and distributor compliance verification under MDR/IVDR Articles 13 & 14"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 4,
+      "averagePosition": 74.75
+    }
+  },
+  {
+    "file": "services.eu.ivdr-analytical-performance.tsx",
+    "route": "/services/eu/ivdr-analytical-performance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering analytical study parameters, protocols and evidence traceability. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Analytical sensitivity & detection limits (LoB, LoD, LoQ)",
+      "Analytical specificity & discrimination capability",
+      "Trueness / systematic bias against certified reference materials"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ivdr-classification.tsx",
+    "route": "/services/eu/ivdr-classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering IVDR intended purpose and Annex VIII classification reasoning. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Intended purpose, target analyte / biological marker and specimen type review",
+      "Target clinical population, user environment and medical decision context",
+      "Application of IVDR Annex VIII Rules 1â€“7 across all assay components"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ivdr-clinical-performance.tsx",
+    "route": "/services/eu/ivdr-clinical-performance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering clinical performance study design and claim substantiation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Clinical performance claims definition mapped to exact target clinical condition",
+      "Target patient population, demographics and intended point-of-care / lab setting",
+      "Diagnostic sensitivity and diagnostic specificity calculation and clinical relevance"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ivdr-performance-evaluation.tsx",
+    "route": "/services/eu/ivdr-performance-evaluation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering integration of scientific validity, analytical and clinical evidence in a PER. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Intended purpose, intended user and clinical utility definition",
+      "Analyte / marker identification and associated medical condition",
+      "Target clinical population, specimen types and storage conditions"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.ivdr-pmpf.tsx",
+    "route": "/services/eu/ivdr-pmpf",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering post-market performance questions and follow-up evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "PMS Plan and PMS Report compilation (Class A and Class B IVDs)",
+      "PSUR strategy and annual/biennial preparation (Class C and Class D IVDs per Article 81)",
+      "PMPF Plan linked directly to residual analytical and clinical uncertainties"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.labeling.tsx",
+    "route": "/services/eu/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Annex I Chapter III Section 23 (MDR) / Section 20 (IVDR) GSPR compliance audit",
+      "ISO 15223-1 medical device symbology validation and symbol justification",
+      "UDI carrier (GS1 / HIBCC) layout, Human Readable Interpretation (HRI) and 2D DataMatrix placement"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 10,
+      "averagePosition": 56.6
+    }
+  },
+  {
+    "file": "services.eu.mdr-ivdr-transition.tsx",
+    "route": "/services/eu/mdr-ivdr-transition",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering legacy-device gap assessment and transition readiness. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Classification reassessment against MDR Annex VIII / IVDR Annex VIII rules",
+      "Conformity-assessment route impact & Notified Body scope confirmation",
+      "Annex II / III technical file gap assessment against new regulatory mandates"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.notified-body.tsx",
+    "route": "/services/eu/notified-body",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering assessment readiness, scope and evidence-based response support. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Notified Body scope, designation code and suitability review",
+      "Application readiness, scheduling and certification planning",
+      "Pre-assessment and mock audit of Annex II/III technical documentation"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.pms-pmcf.tsx",
+    "route": "/services/eu/pms-pmcf",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering PMS/PMCF evidence connected to risk and clinical evaluation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "PMS Plan and PMS Report compilation (Class I devices)",
+      "PSUR strategy and preparation (Class IIa, IIb and III devices per Article 86)",
+      "PMCF Plan targeted specifically to residual clinical uncertainties"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.pms.tsx",
+    "route": "/services/eu/pms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "navigation-bridge",
+    "reason": "Brief introduction links to the full PMS/PMCF service rather than answering a separate need.",
+    "relatedPage": "/services/eu/pms-pmcf",
+    "contentEvidence": [
+      "EU Post-Market Surveillance (PMS) &amp; Vigilance Support",
+      "Post-market compliance is an active clinical and quality evidence system. We connect complaints, safety signals, risk management updates, and clinical evaluations into one unified lifecycle process.",
+      "View Full PMS &amp; PMCF Architecture"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 4,
+      "averagePosition": 64.5
+    }
+  },
+  {
+    "file": "services.eu.qms.tsx",
+    "route": "/services/eu/qms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering jurisdiction-specific QMS implementation and objective evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design and development controls & Design History File (DHF)",
+      "Risk management integration aligned with ISO 14971",
+      "Supplier and outsourced-process control & critical supplier audits"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 16,
+      "averagePosition": 77.25
+    }
+  },
+  {
+    "file": "services.eu.software.tsx",
+    "route": "/services/eu/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Software qualification as medical device / IVD and Rule 11 classification strategy",
+      "Software lifecycle planning strictly aligned with IEC 62304 (Class A, B, C)",
+      "Software architecture, SOUP / OTS third-party software and configuration management"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.eu.technical-documentation.tsx",
+    "route": "/services/eu/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Including variants, configurations, accessories and Basic UDI-DI identification.",
+      "Information Supplied by Manufacturer",
+      "Labeling, Instructions for Use (IFU), packaging and multilingual requirements."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 110,
+      "averagePosition": 78.6
+    }
+  },
+  {
+    "file": "services.eu.testing-strategy.tsx",
+    "route": "/services/eu/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Biocompatibility and biological evaluation (ISO 10993 series)",
+      "Chemical characterization (ISO 10993-18) and toxicological assessment",
+      "Sterilization validation (EO, Gamma, Steam) and residual testing (ISO 10993-7)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.india.class-a-import.tsx",
+    "route": "/services/india/class-a-import",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering non-sterile, non-measuring Class A import registration. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Navigate the simplified CDSCO registration process for low-risk, non-sterile, and non-measuring medical devices entering the Indian market.",
+      "The Central Drugs Standard Control Organisation (CDSCO) classifies medical devices based on risk. Class A devices represent the lowest risk category and are subject to a significantly streamlined registration process. To qualify for this simplified pathway, a device must be:",
+      "Minimal potential for injury or adverse effects."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 42,
+      "averagePosition": 14.26
+    }
+  },
+  {
+    "file": "services.india.free-sale.tsx",
+    "route": "/services/india/free-sale",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering export free-sale certification and application preparation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Unlock global markets and expedite your international export processes with a CDSCO-issued Certificate for Export.",
+      "A Free Sale Certificate (FSC), also widely known as a Certificate for Export, is a critical regulatory document for Indian medical device companies looking to expand internationally. It serves as official verification from the Central Drugs Standard Control Organization (CDSCO) that your medical device can be freely sold and distributed without restriction within India, and is therefore safe for export.",
+      "Any manufacturer based in India holding a valid, current manufacturing license can apply to the CDSCO for an FSC for their approved devices. This certificate is often a mandatory prerequisite demanded by regulatory authorities in the importing countries."
+    ],
+    "searchConsole": {
+      "clicks": 1,
+      "impressions": 161,
+      "averagePosition": 67.87
+    }
+  },
+  {
+    "file": "services.india.investigational-devices.tsx",
+    "route": "/services/india/investigational-devices",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering institutional investigational-device access and relevant forms. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Navigate the specialized regulatory pathway allowing government hospitals to import unapproved, cutting-edge medical devices for compassionate patient use.",
+      "Government hospitals and statutory medical institutions in India often require access to advanced, investigational medical technologies that are not yet commercially approved in the country. The Medical Devices Rules, 2017 establishes a vital regulatory mechanism for this exact scenario, often referred to as \"compassionate use.\"",
+      "Submitted to the CDSCO by the medical institution, this form formally requests permission to import a limited, specific quantity of an unapproved device. It requires strong clinical justification for treating life-threatening conditions or serious permanent disabilities where no local alternatives exist."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 14,
+      "averagePosition": 27.71
+    }
+  },
+  {
+    "file": "services.india.ivd-clinical-performance.tsx",
+    "route": "/services/india/ivd-clinical-performance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering IVD clinical performance planning and study permission. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Navigate the mandatory Clinical Performance Evaluation (CPE) requirements for introducing innovative In Vitro Diagnostic (IVD) devices to the Indian market.",
+      "For manufacturers, importers, and CROs, conducting a Clinical Performance Evaluation (CPE) is a non-negotiable step in gaining regulatory approval for new IVDs. This rigorous evaluation ensures the diagnostic accuracy, reliability, and safety of the device when analyzing human samples.",
+      "The comprehensive application submitted via the Sugam portal. It details the proposed CPE plan, device specifications, and pre-existing in-house performance data."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 5,
+      "averagePosition": 45.8
+    }
+  },
+  {
+    "file": "services.india.ivd-testing.tsx",
+    "route": "/services/india/ivd-testing",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering non-commercial IVD test licensing and permitted purposes. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Legally import limited quantities of IVD medical devices for essential pre-market activities, including clinical investigations, evaluations, and training.",
+      "Before commercial launch, manufacturers and importers often require limited quantities of an IVD device for non-commercial purposes. The CDSCO strictly regulates this through the \"Test License\" pathway, ensuring critical pre-market activities are conducted compliantly.",
+      "Submitted to the Central Licensing Authority, detailing the specific IVD, the exact quantity requested, and the precise non-commercial purpose (e.g., performance evaluation)."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 5,
+      "averagePosition": 67.6
+    }
+  },
+  {
+    "file": "services.india.loan-class-a-b.tsx",
+    "route": "/services/india/loan-class-a-b",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class A/B loan licensing using an existing facility. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Launch your low-to-moderate risk medical devices efficiently by utilizing existing State Licensing Authority (SLA) approved manufacturing facilities.",
+      "For startups or companies aiming to manufacture Class A or Class B medical devices without investing in their own manufacturing unit, a Loan License is the ideal pathway. It permits you to contract an existing, licensed manufacturer to produce your devices.",
+      "The official application form submitted electronically via the CDSCO portal, requesting a loan license for low-to-moderate risk devices."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.india.loan-class-c-d.tsx",
+    "route": "/services/india/loan-class-c-d",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class C/D loan licensing under the central pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Scale your production of high-risk medical devices efficiently by utilizing existing, fully-compliant licensed manufacturing facilities in India.",
+      "For start-ups or companies lacking their own specialized manufacturing infrastructure, producing high-risk (Class D) or moderate-high risk (Class C) devices presents a massive capital barrier. A Loan License allows you to utilize an existing manufacturer's facility to produce your devices.",
+      "Submitted electronically to the Central Licensing Authority (CLA), this form details your request to manufacture Class C or D devices at a loan facility."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.india.market-standing.tsx",
+    "route": "/services/india/market-standing",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering market-standing evidence for tender/certificate applications. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Validate your company's established market presence, robust track record, and regulatory compliance to unlock tenders and global exports.",
+      "What is the Market Standing Certificate?",
+      "In the competitive landscape of medical devices, a Market Standing Certificate (MSC) is a powerful testament to your companyâ€™s established presence. Issued by the CDSCO, it serves as an official confirmation of your proven track record."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 34,
+      "averagePosition": 9.56
+    }
+  },
+  {
+    "file": "services.india.md-42.tsx",
+    "route": "/services/india/md-42",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering sale/distribution establishment registration and documentation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Secure the fundamental legal authorization to sell, stock, exhibit, and distribute medical devices and IVDs across the Indian market.",
+      "For any businessâ€”whether a retailer, wholesaler, or stockistâ€”involved in the sale, stocking, exhibition, or distribution of medical devices (including in-vitro diagnostics) in India, the",
+      "is a mandatory legal requirement. Officially known as the Medical Device Registration Certificate, it ensures full compliance with the Medical Devices Rules, 2017."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 37,
+      "averagePosition": 39.19
+    }
+  },
+  {
+    "file": "services.india.mfg-class-a-b.tsx",
+    "route": "/services/india/mfg-class-a-b",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class A/B manufacturing licensing and site documentation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Obtain the essential MD-5 manufacturing license from the State Licensing Authority (SLA) for low-to-moderate risk medical devices.",
+      "Companies established in India intending to manufacture and sell Class A or Class B medical devices (including IVDs) require a manufacturing license from the State Licensing Authority (SLA) under CDSCO's jurisdiction.",
+      "Devices with minimal potential for harm."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 31,
+      "averagePosition": 52.42
+    }
+  },
+  {
+    "file": "services.india.mfg-class-a-gsr.tsx",
+    "route": "/services/india/mfg-class-a-gsr",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class A non-sterile/non-measuring manufacturing registration. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Experience a streamlined compliance and rapid registration process for low-risk, non-sterile, and non-measuring medical devices in India.",
+      "Streamlined Compliance for Low-Risk Devices",
+      "While the CDSCO mandates registration for all medical devices in India, it has implemented a significantly simplified pathway under GSR 777(E) for specific low-risk products."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.india.mfg-class-c-d.tsx",
+    "route": "/services/india/mfg-class-c-d",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Class C/D central manufacturing licensing. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Navigate stringent CDSCO regulations to secure your MD-9 license for manufacturing high-risk and moderate-risk medical devices in India.",
+      "Companies established in India intending to manufacture and distribute high-risk or moderate-high risk medical devices must obtain a manufacturing license from the Central Licensing Authority (CLA).",
+      "Requires strict regulatory controls compared to lower classes."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.india.neutral-code.tsx",
+    "route": "/services/india/neutral-code",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering export manufacturer identification and the CDSCO online code process. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Maintain confidentiality and seamlessly navigate diverse international labeling requirements with a CDSCO-issued Neutral Code for your exports.",
+      "For medical device and pharmaceutical manufacturers aiming for international markets, a Neutral Code (also known as a Special Code) is a strategic identifier. Issued by Indiaâ€™s CDSCO, this confidential code replaces your companyâ€™s explicit name and address directly on the product label.",
+      "The importing country or buyer dictates specific labeling regulations that conflict with your standard domestic labeling practices."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 161,
+      "averagePosition": 9.39
+    }
+  },
+  {
+    "file": "services.india.non-conviction.tsx",
+    "route": "/services/india/non-conviction",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering non-conviction certification for relevant commercial/tender requirements. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Demonstrate your impeccable regulatory record and secure essential qualification documents for major tenders and procurements in India.",
+      "The Non-Conviction Certificate (NCC) is a vital official document issued by the Central Drugs Standard Control Organization (CDSCO) or the respective State Licensing Authority. It confirms that a medical device companyâ€”whether a manufacturer or importerâ€”has a clean legal record with no history of convictions for serious regulatory offenses.",
+      "The NCC verifies the absence of incidents such as:"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 71,
+      "averagePosition": 14.79
+    }
+  },
+  {
+    "file": "services.india.novel-ivds.tsx",
+    "route": "/services/india/novel-ivds",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering new-IVD evidence and MD-26/27 application planning. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Navigate the complex regulatory pathway for introducing new, innovative In Vitro Diagnostic (IVD) devices to the Indian healthcare market.",
+      "Bringing a novel In Vitro Diagnostic (IVD) medical device to India requires precise regulatory approval. Under the Medical Devices Rules, 2017, a \"new IVD medical device\" generally refers to a diagnostic product that has not been previously approved in India, or an existing device that has undergone significant modifications.",
+      "The detailed application submitted to the Central Licensing Authority (CLA). It requires comprehensive data proving the device's safety, quality, and performanceâ€”particularly crucial when no \"predicate device\" exists."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 79.0
+    }
+  },
+  {
+    "file": "services.india.personal-use.tsx",
+    "route": "/services/india/personal-use",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering individual personal-use imports rather than commercial distribution. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A dedicated regulatory pathway ensuring Indian patients can legally import essential, specialized medical devices tailored to their unique health needs.",
+      "When individuals in India require specific medical devices for their personal treatment that are not commercially available or approved locally, the CDSCO provides a vital regulatory provision. This ensures patients are not denied access to life-improving or life-saving specialized technologies.",
+      "Submitted by the individual or their representative, requesting permission to import a limited quantity of a specific device. A valid prescription and detailed medical justification from a registered Indian medical practitioner are mandatory."
+    ],
+    "searchConsole": {
+      "clicks": 1,
+      "impressions": 177,
+      "averagePosition": 64.14
+    }
+  },
+  {
+    "file": "services.india.predicate-devices.tsx",
+    "route": "/services/india/predicate-devices",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MD-14/15 import dossier preparation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "License for Predicate Medical Devices",
+      "Secure the mandatory MD-15 import license to legally distribute and sell your medical devices across the Indian healthcare market.",
+      "The MD-15 license is the official import license granted by the Central Drugs Standard Control Organization (CDSCO). It authorizes the importation of medical devicesâ€”spanning Classes A, B, C, and Dâ€”into India, enabling their legal commercialization and distribution."
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 6,
+      "averagePosition": 69.67
+    }
+  },
+  {
+    "file": "services.mdsap.audit-documentation.tsx",
+    "route": "/services/mdsap/audit-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering retrievable, controlled MDSAP operating records. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Document-control readiness and revision integrity",
+      "Current approved SOP, work instruction and form verification",
+      "Training matrix and employee competency evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.capa-remediation.tsx",
+    "route": "/services/mdsap/capa-remediation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP findings, root causes and effectiveness evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Audit finding and nonconformity triage",
+      "Immediate containment strategy and risk mitigation",
+      "Extent-of-condition assessment across all product families"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.complaint-vigilance.tsx",
+    "route": "/services/mdsap/complaint-vigilance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP complaint trails and jurisdiction-specific reporting. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Complaint intake and triage protocols",
+      "Complaint investigation depth and root cause adequacy",
+      "Reportability assessment across applicable jurisdictions (FDA eMDR, Health Canada, TGA, ANVISA, MHLW)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.design-controls.tsx",
+    "route": "/services/mdsap/design-controls",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP design-input-to-transfer evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design and development planning and phase-gate governance",
+      "User needs and measurable design-input quality",
+      "Design-output completeness and specification control"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.gap-assessment.tsx",
+    "route": "/services/mdsap/gap-assessment",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP implementation gaps and prioritised remediation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "ISO 13485:2016 baseline and MDSAP process mapping",
+      "Quality manual, SOP, work instruction and form review",
+      "Management review and quality-objective evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.jurisdiction-readiness.tsx",
+    "route": "/services/mdsap/jurisdiction-readiness",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP country requirements embedded into QMS processes. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Australia: TGA-facing QMS and regulatory control mapping",
+      "Brazil: ANVISA-specific QMS and regulatory obligation mapping",
+      "Canada: Health Canada medical device licensing and MDSAP dependency readiness"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.mock-audits.tsx",
+    "route": "/services/mdsap/mock-audits",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP audit simulation and evidence sampling. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Full-system or targeted process mock audits",
+      "Opening and closing meeting simulation",
+      "Live record sampling across historical batches"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.post-certification.tsx",
+    "route": "/services/mdsap/post-certification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP surveillance, scope changes and ongoing readiness. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Closing-meeting finding review and risk triage",
+      "Response strategy and process-owner assignment",
+      "CAPA response drafting and evidence organization"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.process-readiness.tsx",
+    "route": "/services/mdsap/process-readiness",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP process handoffs and trace exercises. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Readiness across all seven MDSAP process areas",
+      "Process-owner responsibility mapping",
+      "Process interaction and handoff review"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.production-supplier-validation.tsx",
+    "route": "/services/mdsap/production-supplier-validation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering production validation and outsourced supplier control. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Manufacturing-process control and DMR alignment",
+      "Work instruction and production-record (DHR) compliance",
+      "Identification, lot control and device traceability systems"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.qms-alignment.tsx",
+    "route": "/services/mdsap/qms-alignment",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering ISO 13485 to MDSAP process integration. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Country-specific regulatory matrices",
+      "Regulatory responsibility assignment",
+      "Marketing authorization and facility-registration controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.mdsap.strategy-scope.tsx",
+    "route": "/services/mdsap/strategy-scope",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MDSAP sites, product families and audit boundaries. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Legal manufacturer and site-scope assessment",
+      "Product-family and technology mapping",
+      "Design, manufacturing, service and distribution activity mapping"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.change-management.tsx",
+    "route": "/services/new-zealand/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering change triggers, regulatory impact and lifecycle record updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design, raw material, or engineering specification changes planned for a device notified in WAND",
+      "Manufacturing site transfer, contract sterilizer change, or critical component supplier change",
+      "Releasing a software version update, algorithmic revision, or cybersecurity patch"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.classification.tsx",
+    "route": "/services/new-zealand/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Introducing a new medical device, IVD, SaMD, or accessory into the New Zealand market",
+      "Determining the applicable risk class under Schedule 2 of the Medicines (Database of Medical Devices) Regulations 2003",
+      "Selecting the correct GMDN code and collective term for WAND database notification"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.ivd.tsx",
+    "route": "/services/new-zealand/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering diagnostic intended use, performance evidence and the local IVD pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Commercializing an in vitro diagnostic (IVD) reagent, kit, or instrument in the New Zealand market",
+      "Assessing whether to utilize voluntary WAND notification or maintain non-notified status for exempt IVDs",
+      "Expanding clinical intended uses, specimen types, diagnostic cut-offs, or target patient populations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.labeling.tsx",
+    "route": "/services/new-zealand/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing product labels, packaging artwork, and Instructions for Use (IFU) for New Zealand market launch",
+      "Verifying that commercial brochures, websites, and marketing materials comply with Medsafe advertising rules",
+      "Adding New Zealand Sponsor legal contact details to primary/secondary packaging or user manuals"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.medsafe-queries.tsx",
+    "route": "/services/new-zealand/medsafe-queries",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Medsafe safety inquiries and evidence responses. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Medsafe issues a formal inquiry or request for information regarding a device supplied in New Zealand",
+      "A product safety concern, adverse event report, or international alert prompts a Medsafe review",
+      "Medsafe requests technical documentation, clinical evidence, or risk management files from the sponsor"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.post-market.tsx",
+    "route": "/services/new-zealand/post-market",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering complaint assessment, reporting and field-action responsibilities. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Medical devices, equipment, or IVDs are actively supplied in New Zealand requiring statutory post-market oversight",
+      "A serious adverse event, patient injury, or technical malfunction occurs within New Zealand or overseas",
+      "A global Field Safety Corrective Action (FSCA), product recall, or customer safety notice affects New Zealand inventory"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.qms-compliance.tsx",
+    "route": "/services/new-zealand/qms-compliance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering New Zealand sponsor records and operational controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Establishing quality management controls and record retention procedures for a New Zealand Sponsor",
+      "Aligning quality procedures with ISO 13485 and the Medicines Regulations 1984",
+      "Preparing for a Medsafe safety investigation, compliance review, or importer audit"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.software.tsx",
+    "route": "/services/new-zealand/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Standalone software (SaMD), mobile medical apps, or cloud-based clinical platforms entering New Zealand",
+      "Incorporating Artificial Intelligence (AI) or Machine Learning (ML) algorithms for diagnostic or predictive purposes",
+      "Releasing a significant software update, algorithmic revision, or cybersecurity firmware patch"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.sponsor.tsx",
+    "route": "/services/new-zealand/sponsor",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering New Zealand sponsor responsibilities and WAND governance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A foreign manufacturer without an established legal entity in New Zealand requires an authorized NZ Sponsor",
+      "Appointing an independent regulatory sponsor to maintain control over product WAND entries separate from commercial distributors",
+      "Establishing regulatory governance between the overseas manufacturer, NZ Sponsor, and local importers"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.supply-chain.tsx",
+    "route": "/services/new-zealand/supply-chain",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering importer/distributor responsibilities, traceability and complaint routing. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Supplying medical devices through multiple independent commercial importers in New Zealand",
+      "Structuring regulatory sponsor responsibilities versus commercial distribution agreements",
+      "Establishing distribution record keeping and batch traceability systems for New Zealand consignments"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.technical-documentation.tsx",
+    "route": "/services/new-zealand/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Establishing technical file substantiation for devices notified in the Medsafe WAND database",
+      "Adapting an overseas EU MDR technical file, Australian TGA dossier, or US FDA 510(k) for New Zealand supply",
+      "Responding to Medsafe safety inquiries, product quality investigations, or compliance audits"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.testing-strategy.tsx",
+    "route": "/services/new-zealand/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Existing global test reports do not fully cover the product configurations supplied to New Zealand",
+      "Medsafe requests additional pre-clinical safety, electrical, biological, or chemical test data during an inquiry",
+      "A complex product family or modular system requires a scientifically justified worst-case testing rationale"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.new-zealand.wand-notification.tsx",
+    "route": "/services/new-zealand/wand-notification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering WAND notification, data accuracy and limits of notification. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A New Zealand Sponsor must notify a medical device or SaMD to the Medsafe WAND database within 30 calendar days",
+      "Transitioning an existing product line or adding new models, sizes, or catalogue codes to WAND",
+      "Correcting or updating manufacturer, sponsor, intended purpose, or classification data in WAND"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.authorized-representative.tsx",
+    "route": "/services/saudi-arabia/authorized-representative",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Saudi representation and ongoing regulatory governance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "A manufacturer established outside the Kingdom of Saudi Arabia requires legal representation under the Medical Devices Law",
+      "Appointing an independent Saudi Authorized Representative to maintain control over registrations rather than commercial distributors",
+      "Transitioning representation to a compliant, licensed Authorized Representative with full GHAD portal capability"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.change-management.tsx",
+    "route": "/services/saudi-arabia/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering change triggers, regulatory impact and lifecycle record updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Design, raw material, or engineering specification changes planned for an MDMA-authorized device",
+      "Manufacturing site transfer, contract sterilizer change, or critical component supplier replacement",
+      "Releasing a software version update, cybersecurity patch, or new algorithmic capability"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.classification.tsx",
+    "route": "/services/saudi-arabia/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Introducing a new medical device or IVD into the Kingdom of Saudi Arabia",
+      "Intended clinical purpose or indications differ from existing US FDA or CE mark claims",
+      "Uncertainty regarding whether a software algorithm constitutes a regulated SaMD or accessory"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.establishment-licensing.tsx",
+    "route": "/services/saudi-arabia/establishment-licensing",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Saudi establishment activities distinct from product authorisation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Establishing a new commercial entity or subsidiary for medical device importation or distribution in Saudi Arabia",
+      "Securing or renewing an SFDA Establishment License for Authorized Representatives, Importers, or Distributors",
+      "Aligning storage warehouses, 3PL logistics facilities, and transportation controls with SFDA Good Storage Practices"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.inspection.tsx",
+    "route": "/services/saudi-arabia/inspection",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering inspection preparation using operating records and corrective actions. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing for an SFDA on-site regulatory audit or establishment inspection in Saudi Arabia",
+      "Aligning quality management procedures with SFDA requirements under MDS-REQ 10 and ISO 13485",
+      "Undergoing an inspection of warehouse storage, distribution facilities, or Authorized Representative operations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.ivd.tsx",
+    "route": "/services/saudi-arabia/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering diagnostic intended use, performance evidence and the local IVD pathway. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Commercializing a new Class A, B, C, or D in vitro diagnostic (IVD) medical device in Saudi Arabia",
+      "Transitioning an existing CE-marked (IVDR) or FDA-cleared diagnostic test to the SFDA GHAD portal",
+      "Expanding clinical intended uses, specimen types, diagnostic cut-offs, or target patient populations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.labeling.tsx",
+    "route": "/services/saudi-arabia/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering local labelling, identifiers and consistency with the authorised device. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing Arabic and English product labels, packaging artwork, and IFUs for Saudi market launch",
+      "Implementing physical and digital Unique Device Identification (Saudi-DI UDI) on product packaging",
+      "Reviewing marketing, commercial advertising, or promotional campaign materials under MDS-REQ 8"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.mdma.tsx",
+    "route": "/services/saudi-arabia/mdma",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering Saudi device authorisation and its technical evidence package. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Preparing an initial MDMA application for Class A, B, C, or D medical devices or IVDs in Saudi Arabia",
+      "Restructuring an existing MDMA authorization following device line expansions or model additions",
+      "Transitioning legacy registrations to current unified GHAD electronic portal standards"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.post-market.tsx",
+    "route": "/services/saudi-arabia/post-market",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering complaint assessment, reporting and field-action responsibilities. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Medical devices or IVDs are actively commercialized in Saudi Arabia requiring statutory post-market oversight",
+      "A serious adverse event, patient injury, or technical malfunction occurs within the Kingdom or overseas",
+      "A global Field Safety Corrective Action (FSCA), product recall, or customer safety notice affects Saudi inventory"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.sfda-queries.tsx",
+    "route": "/services/saudi-arabia/sfda-queries",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering SFDA deficiency diagnosis and evidence-based responses. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "An official SFDA deficiency letter or technical query has been received in the GHAD portal",
+      "An MDMA marketing authorization application is facing scientific or clinical objections",
+      "SFDA has requested clarification on risk-benefit ratios, Essential Principles, or biocompatibility data"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.software.tsx",
+    "route": "/services/saudi-arabia/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering medical software qualification, lifecycle evidence and change controls. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Standalone software (SaMD), mobile medical app, or cloud-based clinical platform entering Saudi Arabia",
+      "Incorporating Artificial Intelligence (AI) or Machine Learning (ML) algorithms for diagnostic or predictive purposes",
+      "Releasing a significant software update, algorithmic revision, or cybersecurity firmware patch"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.technical-documentation.tsx",
+    "route": "/services/saudi-arabia/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Compiling a complete technical file for Class A, B, C, or D MDMA authorization under MDS-REQ 1",
+      "Adapting an existing EU MDR/IVDR technical file or US FDA 510(k)/PMA dossier for Saudi Arabia",
+      "SFDA has issued an official deficiency notice questioning pre-clinical, clinical, or testing evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.saudi-arabia.testing-strategy.tsx",
+    "route": "/services/saudi-arabia/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Existing global test reports do not fully cover the specific product configurations intended for Saudi Arabia",
+      "SFDA has issued a deficiency notice requesting additional physical, electrical, biological, or chemical testing data",
+      "A complex device family or multi-component system requires scientifically defended worst-case sample selection"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.technical-documentation.tsx",
+    "route": "/services/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical dossier scope and traceable supporting evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Technical File / Technical Documentation",
+      "Structured documentation aligned with applicable regulatory requirements.",
+      "Risk analysis, evaluation and documentation aligned with the product's risk profile."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.change-management.tsx",
+    "route": "/services/uae/change-management",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the change management guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Design, raw material, or engineering specification changes planned for a MOHAP-registered device",
+      "Manufacturing site relocation, contract sterilizer change, or critical supplier change",
+      "Releasing a software version update, algorithmic revision, or cybersecurity patch"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.classification.tsx",
+    "route": "/services/uae/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the classification guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Introducing a new medical device, IVD, software, or combination product into the UAE market",
+      "Formal confirmation is required regarding whether the product requires MOHAP registration",
+      "Borderline product qualification (medical equipment vs cosmetic vs general consumer product)"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.ecas.tsx",
+    "route": "/services/uae/ecas",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the ecas guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "A medical device or accessory includes electrical, low-voltage (LVD), or wireless radio components regulated by MOIAT",
+      "Screening whether finished equipment or accessories require separate ECAS Certificate of Conformity (CoC)",
+      "Addressing UAE customs inquiries regarding MOIAT / ECAS compliance for imported medical electronics"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.ivd.tsx",
+    "route": "/services/uae/ivd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the ivd guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Commercializing a new in vitro diagnostic (IVD) reagent, kit, or instrument in the UAE market",
+      "Transitioning an existing CE-marked (IVDR) or FDA-cleared diagnostic assay to MOHAP registration",
+      "Expanding clinical intended uses, specimen matrices, diagnostic cut-offs, or target patient populations"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.labeling.tsx",
+    "route": "/services/uae/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the labeling guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Preparing Arabic and English product labels, packaging artwork, and IFUs for UAE market launch",
+      "Verifying commercial brochures, leaflets, and promotional materials against registered MOHAP claims",
+      "Implementing Unique Device Identification (UDI) barcodes on device primary and secondary packaging"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.local-applicant.tsx",
+    "route": "/services/uae/local-applicant",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the local applicant guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "A foreign manufacturer without a commercial presence in the UAE requires an authorized local applicant",
+      "Selecting and qualifying a licensed medical warehouse or marketing office to submit MOHAP registrations",
+      "Establishing regulatory governance between the overseas manufacturer, MAH, and local distributors"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.mohap-queries.tsx",
+    "route": "/services/uae/mohap-queries",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the mohap queries guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "An official MOHAP deficiency letter or technical query has been issued in the electronic portal",
+      "A medical equipment registration application faces scientific, clinical, or quality objections from the committee",
+      "MOHAP has requested physical samples, Certificate of Analysis (CoA), or laboratory test validation data"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.mohap-registration.tsx",
+    "route": "/services/uae/mohap-registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the mohap registration guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Registering medical equipment, consumables, IVDs, or SaMD with MOHAP for legal importation and sale in the UAE",
+      "Transitioning an existing product line to current MOHAP electronic portal standards",
+      "Adding new models, catalogue codes, sizes, or accessories to an active MOHAP registration certificate"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.post-market.tsx",
+    "route": "/services/uae/post-market",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the post market guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Medical devices, equipment, or IVDs are actively marketed in the UAE requiring statutory post-market vigilance",
+      "A serious adverse event, patient injury, or technical malfunction occurs within the UAE or overseas",
+      "A global Field Safety Corrective Action (FSCA), product recall, or customer safety notice affects UAE inventory"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.qms-inspection.tsx",
+    "route": "/services/uae/qms-inspection",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the qms inspection guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Preparing for a MOHAP regulatory inspection of a licensed medical warehouse or marketing office",
+      "Aligning quality management procedures with ISO 13485 and UAE Good Distribution Practice (GDP)",
+      "Auditing cold-chain storage facilities, temperature mapping, and batch traceability systems"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.software.tsx",
+    "route": "/services/uae/software",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the software guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Standalone software (SaMD), mobile medical apps, or cloud-based clinical platforms entering the UAE",
+      "Incorporating Artificial Intelligence (AI) or Machine Learning (ML) algorithms for diagnostic or predictive purposes",
+      "Releasing a significant software update, algorithmic revision, or cybersecurity firmware patch"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.supply-chain.tsx",
+    "route": "/services/uae/supply-chain",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the supply chain guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Establishing a commercial distribution channel with licensed UAE medical warehouses and marketing offices",
+      "Setting up importation clearance procedures and customs compliance for MOHAP-registered devices",
+      "Establishing traceability, storage conditions, and complaint escalation pathways with commercial distributors"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.technical-documentation.tsx",
+    "route": "/services/uae/technical-documentation",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the technical documentation guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Compiling a comprehensive technical dossier for Class I, II, III, or IV MOHAP registration",
+      "Adapting an overseas EU MDR/IVDR technical file or US FDA 510(k)/PMA dossier for the UAE market",
+      "Responding to MOHAP technical evaluation committee requests for safety and performance evidence"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uae.testing-strategy.tsx",
+    "route": "/services/uae/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "outdated-regulator",
+    "reason": "Still describes MOHAP as the current medical-device submission/regulatory interface. EDE now operates relevant services; update the testing strategy guidance and authority references before indexing.",
+    "relatedPage": "/services/uae",
+    "contentEvidence": [
+      "Existing global test reports do not fully cover the specific product configurations intended for the UAE",
+      "MOHAP or technical evaluators request additional pre-clinical safety, electrical, biological, or chemical test data",
+      "A complex product family or modular system requires a scientifically justified worst-case testing model"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uk.audit-readiness.tsx",
+    "route": "/services/uk/audit-readiness",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering UK Approved Body assessment and findings preparation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "UK Approved Body conformity assessment route and annex selection",
+      "Body selection, designated scope matching and application lodgement",
+      "Formal application dossier completeness and readiness verification"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 17,
+      "averagePosition": 77.12
+    }
+  },
+  {
+    "file": "services.uk.conformity-assurance.tsx",
+    "route": "/services/uk/conformity-assurance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering CE recognition versus UKCA pathway planning. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Current CE certification basis and underlying European Directive or Regulation",
+      "Applicable EU legislation (EU MDR 2017/745, EU IVDR 2017/746 or legacy Directives)",
+      "Device risk classification and conformity assessment annexes"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 1,
+      "averagePosition": 80.0
+    }
+  },
+  {
+    "file": "services.uk.dors-registration.tsx",
+    "route": "/services/uk/dors-registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "navigation-bridge",
+    "reason": "Brief DORS pointer duplicates the purpose of the full MHRA registration service.",
+    "relatedPage": "/services/uk/mhra-registration",
+    "contentEvidence": [
+      "MHRA DORS Device Registration System",
+      "We manage your complete MHRA registration dataset in DORS, verifying product classification, GMDN nomenclature, and UKRP authorization.",
+      "Register Your Medical Devices on the MHRA Public Register"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 25,
+      "averagePosition": 71.48
+    }
+  },
+  {
+    "file": "services.uk.labeling.tsx",
+    "route": "/services/uk/labeling",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "underdeveloped",
+    "reason": "Five broad artwork bullets and a pointer to technical-file review; needs route-specific labelling detail and examples.",
+    "relatedPage": "/services/uk/technical-file",
+    "contentEvidence": [
+      "UKCA marking symbol placement, proportions and legibility on primary/secondary packaging",
+      "UK Responsible Person (UKRP) legal name and address identification requirements",
+      "Instructions for Use (IFU) authoring, contraindications, and risk warning alignment"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 85,
+      "averagePosition": 56.42
+    }
+  },
+  {
+    "file": "services.uk.mhra-liaison.tsx",
+    "route": "/services/uk/mhra-liaison",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "navigation-bridge",
+    "reason": "Brief liaison pointer directs users to full UKRP representation; no independent service explanation.",
+    "relatedPage": "/services/uk/ukrp",
+    "contentEvidence": [
+      "MHRA Communication Liaison &amp; Regulatory Representation",
+      "As your appointed UK Responsible Person, we act as your definitive point of contact for all regulatory communications, inspections, and inquiries from the MHRA.",
+      "Establish Direct, Professional Representation with the MHRA"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uk.mhra-registration.tsx",
+    "route": "/services/uk/mhra-registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering MHRA device registration, data consistency and maintenance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Legal manufacturer identity and establishment details",
+      "UK Responsible Person (UKRP) appointment where required",
+      "Device type and classification under UK MDR 2002"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uk.pms.tsx",
+    "route": "/services/uk/pms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering post-market evidence, complaints, reporting and periodic updates. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "PMS system gap assessment against new GB post-market regulations",
+      "Proactive PMS Plan development, review and lifecycle remediation",
+      "Post-Market Surveillance Report (PMSR) authoring for Class I devices"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 30,
+      "averagePosition": 81.87
+    }
+  },
+  {
+    "file": "services.uk.qms.tsx",
+    "route": "/services/uk/qms",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "underdeveloped",
+    "reason": "Short ISO/QMS list and a link to audit readiness; needs implementation process and distinct deliverables.",
+    "relatedPage": "/services/uk/audit-readiness",
+    "contentEvidence": [
+      "ISO 13485:2016 quality management system adaptation for UK MDR 2002",
+      "Post-market surveillance and UK vigilance reporting standard operating procedures",
+      "Design control, risk management (ISO 14971) and technical documentation linkages"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 2,
+      "averagePosition": 84.5
+    }
+  },
+  {
+    "file": "services.uk.regulatory-writing.tsx",
+    "route": "/services/uk/regulatory-writing",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "underdeveloped",
+    "reason": "Short list of documents and a technical-file pointer; needs a distinct authoring process and scope.",
+    "relatedPage": "/services/uk/technical-file",
+    "contentEvidence": [
+      "Clinical Evaluation Reports (CER) and clinical literature search protocols",
+      "Post-Market Surveillance Plans, PMSR and Periodic Safety Update Reports (PSUR)",
+      "ISO 14971 Risk Management Plans, Hazard Analysis and Benefit-Risk Summaries"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 12,
+      "averagePosition": 71.33
+    }
+  },
+  {
+    "file": "services.uk.technical-file.tsx",
+    "route": "/services/uk/technical-file",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering technical file scope and evidence-gap assessment. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Device description, variants, specifications and intended clinical purpose",
+      "Classification rationale against UK MDR 2002 Annex IX rules",
+      "Design and manufacturing process validation information"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.uk.vigilance.tsx",
+    "route": "/services/uk/vigilance",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering UK incident reporting and field safety corrective actions. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Initial adverse incident triage and device causality investigation",
+      "Statutory reportability assessment against MHRA vigilance guidance",
+      "Serious-incident classification (death, severe deterioration, public health threat)"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 20,
+      "averagePosition": 78.2
+    }
+  },
+  {
+    "file": "services.usa.513g.tsx",
+    "route": "/services/usa/513g",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic template does not explain the 513(g) request, inputs or limitations.",
+    "relatedPage": "/services/usa/classification",
+    "contentEvidence": [
+      "Navigate the complexities of the US FDA regulatory landscape with our comprehensive 513(g) Requests for Information support.",
+      "The FDA has rigorous expectations when it comes to 513(g) Requests for Information. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the US market.",
+      "Comprehensive regulatory strategy and pathway determination."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.classification.tsx",
+    "route": "/services/usa/classification",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering qualification, risk-class reasoning and its effect on the submission route. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "For a new Medical Device or IVD entering the US market",
+      "When the product code or classification is uncertain",
+      "When the device combines functions or technologies that do not fit neatly into an existing category"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.de-novo.tsx",
+    "route": "/services/usa/de-novo",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering novel-device route selection and De Novo evidence planning. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "No appropriate legally marketed predicate exists",
+      "The device is novel but may be suitable for Class I or Class II controls",
+      "Risks can potentially be mitigated through general and/or special controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.deficiency-response.tsx",
+    "route": "/services/usa/deficiency-response",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering reviewer-question analysis, evidence remediation and response matrices. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "After receipt of an FDA Additional Information request",
+      "During Interactive Review when FDA requests clarification or additional evidence",
+      "When a predicate or substantial equivalence strategy has been challenged"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.e-star.tsx",
+    "route": "/services/usa/e-star",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering eSTAR compilation and cross-section dossier consistency. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "For applicable 510(k) and De Novo submissions",
+      "When a manufacturer has supporting reports but needs an integrated FDA dossier",
+      "When multiple teams have generated documents and consistency across the submission must be controlled"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 318,
+      "averagePosition": 72.77
+    }
+  },
+  {
+    "file": "services.usa.establishment-registration.tsx",
+    "route": "/services/usa/establishment-registration",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering FDA establishment registration and listing rather than premarket authorisation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Before applicable establishments begin commercial distribution in the US",
+      "During annual establishment registration renewal (October 1 â€“ December 31)",
+      "When new devices are added or existing listings change"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.global-market-access.tsx",
+    "route": "/services/usa/global-market-access",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering multi-market evidence reuse and sequencing. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "When the same Medical Device or IVD is planned for US, EU, India or other markets",
+      "Before major testing programs are initiated",
+      "When the manufacturer wants to avoid repeating equivalent studies for different jurisdictions"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.pma.tsx",
+    "route": "/services/usa/pma",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "overlapping-content",
+    "reason": "Shares approximately 78% of shorter-page eight-word sequences with De Novo and repeats Class I/II De Novo eligibility on the PMA page; needs a dedicated PMA rewrite.",
+    "relatedPage": "/services/usa/de-novo",
+    "contentEvidence": [
+      "No appropriate legally marketed predicate exists",
+      "The device is novel but may be suitable for Class I or Class II controls",
+      "Risks can potentially be mitigated through general and/or special controls"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.post-clearance-lifecycle.tsx",
+    "route": "/services/usa/post-clearance-lifecycle",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering FDA change assessment after clearance. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Labeling or indications-for-use changes",
+      "Does the intended use or indication change?",
+      "Do technological characteristics change?"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.predicate-strategy.tsx",
+    "route": "/services/usa/predicate-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering FDA predicate suitability and substantial-equivalence evidence. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Before a new 510(k) submission is developed",
+      "When multiple potential predicates exist",
+      "When the subject device contains meaningful technological differences"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.q-submission.tsx",
+    "route": "/services/usa/q-submission",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering focused FDA Pre-Submission questions and briefing preparation. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "When the regulatory pathway is uncertain",
+      "When a novel technology or intended use is involved",
+      "When the proposed testing method or acceptance criteria are uncertain"
+    ],
+    "searchConsole": {
+      "clicks": 0,
+      "impressions": 36,
+      "averagePosition": 74.53
+    }
+  },
+  {
+    "file": "services.usa.qmsr-inspection.tsx",
+    "route": "/services/usa/qmsr-inspection",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering FDA inspection readiness and linked QMS records. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Before an anticipated FDA inspection",
+      "When transitioning an existing QMS to current QMSR expectations",
+      "Before a new US manufacturing site becomes operational"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.rfd-pre-rfd.tsx",
+    "route": "/services/usa/rfd-pre-rfd",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic template lacks RFD versus Pre-RFD jurisdiction detail.",
+    "relatedPage": "/services/usa/classification",
+    "contentEvidence": [
+      "Navigate the complexities of the US FDA regulatory landscape with our comprehensive RFD & Pre-RFD Designations support.",
+      "The FDA has rigorous expectations when it comes to RFD & Pre-RFD Designations. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the US market.",
+      "Comprehensive regulatory strategy and pathway determination."
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.testing-strategy.tsx",
+    "route": "/services/usa/testing-strategy",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": true,
+    "category": "distinct-useful-content",
+    "reason": "Dedicated service intent covering test planning, configurations and regulatory usability of reports. The body provides relevant scope or deliverables; country-hub summaries and shared layout do not by themselves justify exclusion.",
+    "relatedPage": null,
+    "contentEvidence": [
+      "Before initiating verification and validation testing for a 510(k), De Novo or PMA program",
+      "When predicate differences create specific performance questions",
+      "When multiple device configurations exist and worst-case selection must be justified"
+    ],
+    "searchConsole": null
+  },
+  {
+    "file": "services.usa.udi-gudid.tsx",
+    "route": "/services/usa/udi-gudid",
+    "reviewDate": "2026-09-07",
+    "previouslyNoindex": true,
+    "indexable": false,
+    "category": "placeholder",
+    "reason": "Generic template lacks UDI applicability, identifiers or GUDID workflow.",
+    "relatedPage": "/services/usa",
+    "contentEvidence": [
+      "FDA UDI &amp; GUDID Compliance Solutions",
+      "Navigate the complexities of the US FDA regulatory landscape with our comprehensive UDI & GUDID Solutions support.",
+      "The FDA has rigorous expectations when it comes to UDI & GUDID Solutions. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the US market."
+    ],
+    "searchConsole": null
+  }
+]

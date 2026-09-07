@@ -22,13 +22,13 @@ Date: September 7, 2026. Changes are local; this report does not assert deployme
 
 All 32 copied article bodies have been replaced with original guides, including practical examples, checklists and official regulatory references. Existing URLs and initial publication dates are preserved; the replacement date is September 7, 2026. There is no claim of independent human expert review.
 
-The 21 temporarily excluded articles have returned to their previous indexable state. The 11 articles that were already noindexed retain that decision. All 193 pre-existing exclusions across the site remain in place. The original scraped files are retained only as an archive; the scraper-based route generator remains disabled.
+After the page-by-page noindex review, all 32 original article replacements now allow indexing. Across the website, 158 of the 193 previously excluded pages were restored and 35 retain documented exclusions. See SEO_NOINDEX_REVIEW.md and SEO_NOINDEX_REVIEW.csv for every decision. The scraper-based generator remains disabled.
 
 The build checks replacement coverage, content hashes, route integration, indexing decisions, service links, source references and absence of matching 20-word passages against archived copies. This comparison covers the local archive, not the entire internet. See ARTICLE_REWRITE_REPORT.md and ARTICLE_REWRITES.md.
 
 ## Final inventory
 
-265 content pages; 12 additional layout routes. There are 72 indexable pages and 193 noindex pages. All 72 indexable canonical URLs are in the sitemap, including the formerly omitted India importer and manufacturer landing pages.
+265 content pages; 12 additional layout routes. There are 230 indexable pages and 35 noindex pages. All 230 indexable canonical URLs are in the sitemap, including the formerly omitted India importer and manufacturer landing pages.
 
 SEO_PAGE_DECISIONS.csv lists every content route, its indexing state, and its next action.
 
@@ -40,7 +40,7 @@ SEO_PAGE_DECISIONS.csv lists every content route, its indexing state, and its ne
 - npm run build (runs sitemap generation, SEO checks and typecheck first)
 - node scripts/check_rendered_seo.cjs http://127.0.0.1:4173 (with local development server running)
 
-Verification completed: TypeScript and source SEO checks passed; all four regression tests passed; all 265 local rendered pages passed. The final production build result is recorded in .seo-build-verification.log.
+Verification completed: TypeScript and source SEO checks passed; all seven regression tests passed; all 265 local rendered pages passed. The final production build result is recorded in .seo-build-verification.log.
 
 The rendered checker covers all 265 pages: response status, exactly one H1, description count, canonical, noindex state, absence of redundant bot tags, JSON-LD syntax and the obsolete footer destination. The 32 replacement articles are also checked for their full expected paragraphs and H1 titles.
 
@@ -48,10 +48,10 @@ Repository-wide formatting lint debt remains separate from these functional fixe
 
 ## Next SEO work, in priority order
 
-1. Deploy the reviewed changes through the existing production workflow. Confirm the live sitemap contains 72 URLs and the revised noindex directives are present. Resubmit the sitemap in Search Console. Request indexing only for improved indexable pages, respecting the retained exclusions.
+1. Deploy the reviewed changes through the existing production workflow. Confirm the live sitemap contains 230 URLs and the revised noindex directives are present. Resubmit the sitemap in Search Console. Request indexing only for improved indexable pages, respecting the retained exclusions.
 2. Establish a current Search Console baseline: export queries and landing pages for the last 3 months; review Pages exclusions, Google-selected canonicals, manual actions and Core Web Vitals. Separate branded and non-branded performance. Prior audit documents are not evidence of current account status.
 3. Map each commercially important search intent to one primary landing page. Start with medical device regulatory consulting, CDSCO import/manufacturing, FDA 510(k), EU MDR/IVDR, ISO 13485, MDSAP and UKRP. Use query evidence and client priorities rather than invented search-volume figures.
-4. Review the noindex service pages individually. Keep repetitive stubs excluded; improve genuinely distinct services before indexing; merge genuinely equivalent pages into their closest relevant destination with an intentional redirect. Do not redirect unrelated services to the homepage or indiscriminately enable indexing.
+4. Resolve the 35 documented remaining exclusions, prioritising outdated UAE guidance, India IVD claims, the PMA/De Novo overlap and the placeholder/bridge pages. The individual indexing review is complete. Keep repetitive stubs excluded; improve genuinely distinct services before indexing; merge genuinely equivalent pages into their closest relevant destination with an intentional redirect. Do not redirect unrelated services to the homepage or indiscriminately enable indexing.
 5. Have a named regulatory specialist review the 32 original replacements for product-specific nuance. Add reviewer credentials only after that review actually occurs. Maintain references and revise articles when regulations or guidance change.
 6. Strengthen service pages with substantiated experience, clear scope and deliverables, project process, useful questions, relevant case studies and contextual links. Verify all client-logo permissions, testimonials, credentials and numerical outcome claims with the client.
 7. Measure real mobile performance after deployment using PageSpeed Insights and Search Console. Inspect LCP, INP and CLS on the homepage, India hub, FDA 510(k) and manufacturing pages. Consider responsive image variants and further compression only against measured needs and visual review.

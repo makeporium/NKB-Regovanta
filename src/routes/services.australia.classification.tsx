@@ -47,7 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/australia/classification")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "TGA Medical Device Classification | NKB Regovanta",
       },

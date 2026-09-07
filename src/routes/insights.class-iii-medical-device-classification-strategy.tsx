@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/class-iii-medical-device-classif
     meta: [
       { title: "Class III Medical Device Strategy | NKB Regovanta" },
       { name: "description", content: "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies" },
       { property: "og:description", content: "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy" },

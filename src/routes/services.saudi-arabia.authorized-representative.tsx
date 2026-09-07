@@ -47,7 +47,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/saudi-arabia/authorized-representative")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "Saudi AR Services & SFDA Compliance | NKB Regovanta",
       },

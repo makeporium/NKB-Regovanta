@@ -48,7 +48,7 @@
   "image": "/assets/brain/media__1786282925761.optimized.webp",
   "published": "2026-09-03",
   "updated": "2026-09-07",
-  "indexable": false,
+  "indexable": true,
   "sourceKeys": [
     "fdaPathway",
     "mdr",

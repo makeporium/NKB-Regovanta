@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/loan-class-a-b")({
   component: LoanClassABPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Class A & B Loan License India (MD-4/6) | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-4 and MD-6 loan manufacturing licenses for Class A & B medical devices in India. End-to-end SLA application & facility audit support." },
       { property: "og:title", content: "Class A & B Loan License India (MD-4/6) | NKB Regovanta" },

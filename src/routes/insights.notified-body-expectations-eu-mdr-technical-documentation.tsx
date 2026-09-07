@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/notified-body-expectations-eu-md
     meta: [
       { title: "EU MDR Technical Documentation Guide | NKB Regovanta" },
       { name: "description", content: "Prepare an MDR technical file with consistent scope, claim-to-evidence links, controlled revisions, and traceable responses to review questions." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "EU MDR Technical Documentation: Make the Evidence Trail Clear" },
       { property: "og:description", content: "Prepare an MDR technical file with consistent scope, claim-to-evidence links, controlled revisions, and traceable responses to review questions." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/notified-body-expectations-eu-mdr-technical-documentation" },

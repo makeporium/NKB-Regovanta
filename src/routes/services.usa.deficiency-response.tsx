@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/deficiency-response")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "FDA Deficiency Response Consulting | NKB Regovanta" },
       {
         name: "description",

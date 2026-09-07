@@ -48,7 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/brazil/technical-documentation")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "ANVISA Technical Dossier (Brazil) | NKB Regovanta",
       },

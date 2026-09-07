@@ -46,7 +46,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/canada/classification")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "Health Canada Device Classification | NKB Regovanta",
       },

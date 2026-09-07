@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/deficiency-response")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU Notified Body Deficiency Response | NKB Regovanta" },
       {
         name: "description",
@@ -229,7 +229,7 @@ function EUDeficiencyResponsePage() {
                   Critical Clock Management
                 </h4>
                 <div className="space-y-3 text-xs font-medium text-navy/75">
-                  <p>Notified Bodies enforce strict round limits (often max 2 rounds) and rigid 30–60 day deadlines. Our rapid response team mobilizes immediately to ensure zero clock expirations.</p>
+                  <p>Response deadlines and review-round arrangements depend on the Notified Body and the application. We confirm the applicable requirements, assign technical owners and track the evidence needed for a complete response.</p>
                 </div>
               </div>
 

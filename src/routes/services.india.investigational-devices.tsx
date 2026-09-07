@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/investigational-devices")(
   component: InvestigationalDevicesPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Investigational Device Import CDSCO | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO import authorization for investigational medical devices (MD-18 & MD-19) in India. End-to-end clinical trial & hospital import support." },
       { property: "og:title", content: "Investigational Device Import CDSCO | NKB Regovanta" },

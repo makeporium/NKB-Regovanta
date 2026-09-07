@@ -15,7 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/labeling")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU MDR & IVDR Labeling Compliance | NKB Regovanta" },
       {
         name: "description",
@@ -160,7 +160,7 @@ function EULabelingPage() {
                   100% Alignment with Risk Management and CER/PER
                 </h3>
                 <p className="text-[13.5px] text-white/85 leading-relaxed font-normal">
-                  Every warning, contraindication, residual risk mitigation and clinical claim in the Instructions for Use must match the ISO 14971 risk management file and the Clinical Evaluation Report verbatim. We audit this chain to eliminate Notified Body nonconformities.
+                  Warnings, contraindications, risk information and clinical claims in the Instructions for Use should be consistent with the risk management file and clinical evidence. The wording should suit the intended user while preserving the supported meaning and scope.
                 </p>
               </div>
             </div>

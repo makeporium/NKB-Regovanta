@@ -15,7 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/testing-strategy")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU Medical Device Testing Strategy | NKB Regovanta" },
       {
         name: "description",

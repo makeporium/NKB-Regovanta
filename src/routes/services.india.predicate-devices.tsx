@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/predicate-devices")({
   component: PredicateDevicesPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Predicate Device Import License (MD-15) | NKB Regovanta" },
       { name: "description", content: "CDSCO MD-14 & MD-15 import license consulting for Class A-D predicate medical devices in India. Indian Authorized Agent, SUGAM filing, and dossier support." },
       { property: "og:title", content: "Predicate Device Import License (MD-15) | NKB Regovanta" },

@@ -48,7 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/qms-compliance")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "NZ QMS & Sponsor Compliance Readiness | NKB Regovanta",
       },

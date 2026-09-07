@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/mfg-class-a-b")({
   component: MfgClassABPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Class A & B Manufacturing License (MD-5) | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-3 and MD-5 manufacturing licenses for Class A & B medical devices in India. State Licensing Authority audit & document support." },
       { property: "og:title", content: "Class A & B Manufacturing License (MD-5) | NKB Regovanta" },

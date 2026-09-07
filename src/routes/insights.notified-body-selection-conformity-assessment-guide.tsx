@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/notified-body-selection-conformi
     meta: [
       { title: "Notified Body Selection Guide | NKB Regovanta" },
       { name: "description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Selecting a Notified Body: Match Designation, Scope, and Project Readiness" },
       { property: "og:description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide" },

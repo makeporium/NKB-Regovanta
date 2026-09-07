@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/mhra-registration")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MHRA Medical Device Registration | NKB Regovanta" },
       {
         name: "description",
@@ -246,7 +246,7 @@ function UKMHRARegistrationPage() {
                   DORS Statutory Fee
                 </h4>
                 <div className="space-y-3 text-xs font-medium text-navy/75">
-                  <p>MHRA assesses a statutory fee of £240 per registration application (covering up to 20,000 devices per GMDN group). We ensure your application is 100% error-free to prevent rejected filings.</p>
+                  <p>MHRA introduced an updated device-registration fee structure, including an annual fee, from 1 April 2026. We check the applicable charges and registration scope against the current published guidance before filing. <a className="underline" href="https://www.gov.uk/government/publications/mhra-fees/current-mhra-fees">Check current MHRA fees</a>.</p>
                 </div>
               </div>
 

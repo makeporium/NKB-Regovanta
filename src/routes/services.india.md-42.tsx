@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/md-42")({
   component: MD42Page,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "CDSCO MD-42 Registration Certificate | NKB Regovanta" },
       { name: "description", content: "Get your MD-42 certificate to legally sell, stock, wholesale, and distribute medical devices in India under Medical Device Rules (MDR) 2017." },
       { property: "og:title", content: "CDSCO MD-42 Registration Certificate | NKB Regovanta" },

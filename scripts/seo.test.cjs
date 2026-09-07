@@ -5,6 +5,18 @@ const os = require("node:os");
 const path = require("node:path");
 const { inventory, renderSitemap } = require("./generate_sitemap.cjs");
 
+test("reviewed indexing decisions reject accidental re-exclusion or premature indexing", () => {
+  const { checkIndexingReview } = require('./check_indexing_review.cjs');
+  const decisions = [
+    { route: '/useful', file: 'useful.tsx', indexable: true, category: 'distinct', reason: 'Distinct service' },
+    { route: '/stub', file: 'stub.tsx', indexable: false, category: 'placeholder', reason: 'Generic template', relatedPage: '/useful' },
+  ];
+  const pages = [{ route: '/useful', file: 'useful.tsx', noindex: false }, { route: '/stub', file: 'stub.tsx', noindex: true }];
+  assert.deepEqual(checkIndexingReview(pages, decisions), []);
+  assert.equal(checkIndexingReview(pages.map(p => ({ ...p, noindex: !p.noindex })), decisions).length, 2);
+  assert.ok(checkIndexingReview(pages.slice(1), decisions).some(f => f.includes('destination does not exist')));
+});
+
 function fixture(t, files) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "nkb-seo-test-"));
   t.after(() => fs.rmSync(dir, { recursive: true, force: true }));

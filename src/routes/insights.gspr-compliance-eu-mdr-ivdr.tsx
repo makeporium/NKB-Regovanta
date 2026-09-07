@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/gspr-compliance-eu-mdr-ivdr")({
     meta: [
       { title: "GSPR Compliance for EU MDR & IVDR | NKB Regovanta" },
       { name: "description", content: "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "GSPR Compliance: Turn the Checklist Into an Evidence Map" },
       { property: "og:description", content: "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr" },

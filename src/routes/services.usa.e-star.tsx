@@ -15,7 +15,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/usa/e-star")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "FDA eSTAR Dossier Preparation | NKB Regovanta" },
       {
         name: "description",
@@ -263,7 +263,7 @@ function EStarPage() {
 
       <CTABand
         title="Ready to Build Your eSTAR Dossier?"
-        description="Our FDA team ensures seamless compliance and zero screening rejections."
+        description="Our FDA team reviews dossier completeness, supporting evidence and cross-section consistency before submission."
       />
     </>
   );

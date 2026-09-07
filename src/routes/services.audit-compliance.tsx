@@ -6,7 +6,7 @@ import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
 export const Route = createFileRoute("/services/audit-compliance")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Audit & Compliance Support | NKB Regovanta" },
       {
         name: "description",

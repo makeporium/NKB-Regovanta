@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/class-a-import")({
   component: ClassAImportPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },
       { name: "description", content: "Expert CDSCO consulting for Class A medical device import under GSR 777(E). Fast-track registration for non-sterile and non-measuring devices in India." },
       { property: "og:title", content: "Class A Import Registration (GSR 777(E)) | NKB Regovanta" },

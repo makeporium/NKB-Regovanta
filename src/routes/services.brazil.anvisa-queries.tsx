@@ -48,7 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/brazil/anvisa-queries")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "ANVISA Exigência & Inspection Response | NKB Regovanta",
       },

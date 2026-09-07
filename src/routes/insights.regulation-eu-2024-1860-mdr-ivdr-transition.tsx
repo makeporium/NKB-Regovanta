@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/regulation-eu-2024-1860-mdr-ivdr
     meta: [
       { title: "EU IVDR Transition Eligibility Guide | NKB Regovanta" },
       { name: "description", content: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "IVDR Transition Planning: Check Eligibility Before Relying on the Deadline" },
       { property: "og:description", content: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition" },

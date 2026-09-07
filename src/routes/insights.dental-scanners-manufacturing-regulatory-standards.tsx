@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/dental-scanners-manufacturing-re
     meta: [
       { title: "Intraoral Dental Scanner Regulations | NKB Regovanta" },
       { name: "description", content: "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Dental Scanner Development: Validate the Scan-to-Decision Workflow" },
       { property: "og:description", content: "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards" },

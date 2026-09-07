@@ -20,7 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/audit-documentation")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP Audit Documentation Preparation | NKB Regovanta" },
       { name: "description", content: "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for a successful Auditing Organization audit." },
       { property: "og:title", content: "MDSAP Audit Documentation Preparation | NKB Regovanta" },

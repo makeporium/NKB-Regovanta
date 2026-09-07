@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/ivdr-class-d-verification-notifi
     meta: [
       { title: "EU IVDR Class D Verification Guide | NKB Regovanta" },
       { name: "description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow" },
       { property: "og:description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies" },

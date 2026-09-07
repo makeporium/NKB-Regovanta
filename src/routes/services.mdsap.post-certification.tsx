@@ -21,7 +21,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/post-certification")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP Post-Certification Support | NKB Regovanta" },
       { name: "description", content: "Audit response packages, finding management, surveillance audit readiness, and continuous MDSAP QMS maintenance across 5 jurisdictions." },
       { property: "og:title", content: "MDSAP Post-Certification Support | NKB Regovanta" },

@@ -48,7 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/canada/technical-documentation")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "Health Canada IMDRF ToC Technical Dossier | NKB Regovanta",
       },

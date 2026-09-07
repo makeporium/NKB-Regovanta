@@ -49,7 +49,7 @@
   "image": "/assets/brain/cleanroom_manufacturing.jpg",
   "published": "2026-09-02",
   "updated": "2026-09-07",
-  "indexable": false,
+  "indexable": true,
   "sourceKeys": [
     "fdaClass",
     "fdaSoftware"

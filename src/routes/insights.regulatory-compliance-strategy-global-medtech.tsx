@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/regulatory-compliance-strategy-g
     meta: [
       { title: "Global MedTech Regulatory Strategy Guide | NKB Regovanta" },
       { name: "description", content: "Separate reusable product evidence from market-specific classification, representation, and submission needs in a global regulatory plan." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Global MedTech Strategy: Sequence Markets Around Reusable Evidence" },
       { property: "og:description", content: "Separate reusable product evidence from market-specific classification, representation, and submission needs in a global regulatory plan." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/regulatory-compliance-strategy-global-medtech" },

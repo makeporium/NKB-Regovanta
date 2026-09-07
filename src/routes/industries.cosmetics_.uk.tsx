@@ -6,7 +6,7 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/uk")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "UK Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "UK Cosmetics Regulation compliance: UK Responsible Person (RP), SCPN notifications, CPSR safety reports, PIF compilation, and post-Brexit labelling." },
       { property: "og:title", content: "UK Cosmetics Regulatory Services | NKB Regovanta" },
@@ -94,7 +94,7 @@ function UKCosmetics() {
             Cosmetics Regulatory Services in the UK
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-navy/70 font-medium max-w-3xl">
-            Following Brexit, the United Kingdom's cosmetic market operates under an independent regulatory framework. Manufacturers and importers must now adhere strictly to UK-specific regulations, separately from the EU, to successfully place cosmetic products on the British market.
+            Cosmetic market access differs between Great Britain and Northern Ireland. Great Britain uses the UK responsible-person and SCPN framework; EU cosmetic rules apply in Northern Ireland, with separate provisions for qualifying Northern Ireland goods supplied to Great Britain.
           </p>
         </div>
       </section>
@@ -106,16 +106,16 @@ function UKCosmetics() {
             <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">Navigating Post-Brexit UK Regulations</h2>
             <div className="prose prose-blue max-w-none text-navy/80 space-y-6">
               <p className="text-[15px] leading-relaxed">
-                In the UK, the cosmetics industry is meticulously governed by the <strong>Office for Product Safety and Standards (OPSS)</strong>. The regulatory landscape mandates rigorous compliance regarding product registration, labeling, safety assessments, and local representation to ensure absolute consumer transparency and safety.
+                For the Great Britain market, the relevant cosmetic notification authority is the <strong>Office for Product Safety and Standards (OPSS)</strong>. The regulatory landscape mandates rigorous compliance regarding product registration, labeling, safety assessments, and local representation to ensure absolute consumer transparency and safety.
               </p>
               <p className="text-[15px] leading-relaxed">
-                A critical divergence post-Brexit is the requirement for a dedicated <strong>UK-based Responsible Person (RP)</strong>. Even if a brand has an established EU RP, a separate UK RP is legally mandated for the British market. The RP is the ultimate guarantor of compliance, responsible for managing notifications, holding the Product Information File (PIF), and interacting with UK authorities.
+                A critical divergence post-Brexit is the requirement for a dedicated <strong>UK-based Responsible Person (RP)</strong>. An EU appointment alone generally does not satisfy Great Britain's establishment requirement. Northern Ireland and qualifying Northern Ireland goods require a separate assessment. The RP is the ultimate guarantor of compliance, responsible for managing notifications, holding the Product Information File (PIF), and interacting with UK authorities.
               </p>
               <p className="text-[15px] leading-relaxed">
-                Before any cosmetic product can be legally sold in the UK, it must be officially registered through the <strong>Submit Cosmetic Product Notification (SCPN)</strong> portal. This requires a robust <strong>Cosmetic Product Safety Report (CPSR)</strong>, confirming the toxicological safety of the formulation based on UK-specific restricted and prohibited ingredient lists.
+                Before a cosmetic product is placed on the Great Britain market, it must be notified through the <strong>Submit Cosmetic Product Notification (SCPN)</strong> portal. This requires a robust <strong>Cosmetic Product Safety Report (CPSR)</strong>, confirming the toxicological safety of the formulation based on UK-specific restricted and prohibited ingredient lists.
               </p>
               <p className="text-[15px] leading-relaxed">
-                NKB Regovanta provides comprehensive regulatory support to bridge this gap. With our extensive expertise, we act as your designated UK RP, manage your SCPN notifications, ensure strict labeling compliance in English, and guarantee a frictionless entry into the UK cosmetic market.
+                NKB Regovanta provides comprehensive regulatory support to bridge this gap. With our extensive expertise, we act as your designated UK RP, manage your SCPN notifications, ensure strict labeling compliance in English, and help plan compliance for the intended market.
               </p>
             </div>
           </div>
@@ -152,19 +152,19 @@ function UKCosmetics() {
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Can my EU Responsible Person act for the UK market too?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                No. Following Brexit, you are legally required to appoint a separate, UK-based Responsible Person (RP) to oversee your operations and compliance within the United Kingdom.
+                For Great Britain, the Responsible Person generally needs a UK establishment. Northern Ireland follows a different framework, and qualifying Northern Ireland goods have specific access arrangements. Assess the destination and supply route before appointing representation.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Do I need to notify my products before selling them in the UK?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                Yes. All cosmetics must be officially notified on the UK government's Submit Cosmetic Product Notification (SCPN) portal prior to being placed on the market.
+                For Great Britain, notification is made through SCPN before placement on the market. Northern Ireland follows the EU notification framework. <a className="underline" href="https://www.gov.uk/guidance/making-cosmetic-products-available-to-consumers-in-great-britain">Read the Great Britain guidance</a>.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Can I sell the exact same product in the EU and UK?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                Generally yes, provided the ingredients comply with both regions' restricted lists. However, you must complete separate notifications (CPNP for EU, SCPN for UK), possess two RPs, and ensure the label satisfies both jurisdictions' requirements.
+                A formulation may serve both markets if it meets each applicable requirement. Check ingredients, safety evidence, responsible-person arrangements, notification and labelling separately, including any Northern Ireland provisions relevant to the supply route.
               </p>
             </div>
           </div>

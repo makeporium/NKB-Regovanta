@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/ce-marking-process-medical-devic
     meta: [
       { title: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
       { name: "description", content: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "The EU MDR CE-Marking Process: Plan the Decisions and Handoffs" },
       { property: "og:description", content: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr" },

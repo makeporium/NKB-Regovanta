@@ -20,7 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/capa-remediation")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP Nonconformity & CAPA Remediation | NKB Regovanta" },
       { name: "description", content: "Root cause analysis, systemic CAPA development, trend prevention, and grade 4 nonconformity remediation packages for MDSAP Auditing Organizations." },
       { property: "og:title", content: "MDSAP Nonconformity & CAPA Remediation | NKB Regovanta" },

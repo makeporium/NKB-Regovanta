@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/market-standing")({
   component: MarketStandingPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "CDSCO Market Standing Certificate (MSC) | NKB Regovanta" },
       { name: "description", content: "Obtain a CDSCO Market Standing Certificate (MSC) to verify your device manufacturing track record for Indian tenders and global exports." },
       { property: "og:title", content: "CDSCO Market Standing Certificate (MSC) | NKB Regovanta" },

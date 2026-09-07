@@ -46,7 +46,7 @@
   "image": "/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
   "published": "2026-09-03",
   "updated": "2026-09-07",
-  "indexable": false,
+  "indexable": true,
   "sourceKeys": [
     "mdr"
   ],

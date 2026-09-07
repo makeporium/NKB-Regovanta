@@ -47,7 +47,7 @@
   "image": "/assets/brain/industry_medical_devices_1786310566137.png",
   "published": "2026-08-29",
   "updated": "2026-09-07",
-  "indexable": false,
+  "indexable": true,
   "sourceKeys": [
     "fdaClass",
     "fdaPathway"

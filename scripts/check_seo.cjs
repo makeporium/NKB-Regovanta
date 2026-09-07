@@ -36,6 +36,7 @@ function scan(dir) {
 }
 scan(path.join(project, "src"));
 failures.push(...require("./check_articles.cjs").checkArticles(pages));
+failures.push(...require("./check_indexing_review.cjs").checkIndexingReview(pages));
 if (fs.readFileSync(path.join(project, "public/sitemap.xml"), "utf8").replaceAll("\r\n", "\n") !== renderSitemap(pages)) {
   failures.push("Sitemap does not match indexable routes");
 }

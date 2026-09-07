@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services/india/novel-ivds")({
   component: NovelIVDsPage,
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "CDSCO Novel IVD Import Authorization | NKB Regovanta" },
       { name: "description", content: "Obtain CDSCO MD-26 & MD-27 import authorization for novel IVD diagnostics in India. Expert Committee liaison, clinical protocol review, and SUGAM support." },
       { property: "og:title", content: "CDSCO Novel IVD Import Authorization | NKB Regovanta" },

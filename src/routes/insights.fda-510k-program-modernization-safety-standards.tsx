@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/fda-510k-program-modernization-s
     meta: [
       { title: "FDA 510(k) Modernization Guide | NKB Regovanta" },
       { name: "description", content: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "510(k) Modernisation: Assess Predicate Relevance and Performance Evidence" },
       { property: "og:description", content: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards" },

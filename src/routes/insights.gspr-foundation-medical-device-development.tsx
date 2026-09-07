@@ -7,7 +7,7 @@ export const Route = createFileRoute("/insights/gspr-foundation-medical-device-d
     meta: [
       { title: "GSPR in Medical Device R&D | NKB Regovanta" },
       { name: "description", content: "Use GSPRs during device development to define measurable design inputs, evidence dependencies, and review gates before testing begins." },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs" },
       { property: "og:description", content: "Use GSPRs during device development to define measurable design inputs, evidence dependencies, and review gates before testing begins." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/gspr-foundation-medical-device-development" },

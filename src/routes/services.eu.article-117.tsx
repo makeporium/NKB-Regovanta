@@ -16,7 +16,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/article-117")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU MDR Article 117 Consulting | NKB Regovanta" },
       {
         name: "description",
@@ -116,7 +116,7 @@ function EUArticle117Page() {
               EU MDR Article 117 Drug-Device Combination Products
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
-              For medicinal products incorporating an integral device constituent part (such as pre-filled pens, auto-injectors, or inhalers), Article 117 mandates evidence of conformity with applicable MDR Annex I GSPRs and a Notified Body Opinion (NBOp). We prepare and defend the complete device evidence dossier.
+              For medicinal products incorporating an integral device part, Article 117 addresses evidence of conformity with applicable MDR Annex I requirements. Where the required conformity evidence is absent, a Notified Body opinion is needed if the device part, considered separately, would require Notified Body involvement. We assess applicability before preparing the device evidence dossier.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link

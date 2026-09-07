@@ -20,7 +20,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/design-controls")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP Design & Development Control Readiness | NKB Regovanta" },
       { name: "description", content: "Audit-ready design controls, user needs, V&V evidence, design transfer, software lifecycles (IEC 62304), and Design History File (DHF) support for MDSAP audits." },
       { property: "og:title", content: "MDSAP Design & Development Control Readiness | NKB Regovanta" },

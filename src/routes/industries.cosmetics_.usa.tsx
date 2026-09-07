@@ -6,7 +6,7 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/usa")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
       { name: "description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
       { property: "og:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
@@ -128,7 +128,7 @@ function USACosmetics() {
           <div className="text-center max-w-3xl mx-auto mb-12">
              <h2 className="text-3xl font-bold text-navy">Comprehensive FDA Compliance Solutions</h2>
              <p className="mt-4 text-[15px] text-navy/70 leading-relaxed">
-               Our structured, cost-effective approach guarantees that your brand meets every FDA requirement while accelerating your speed-to-market across the United States.
+               We assess which FDA obligations apply to your products and activities, then organise the evidence, registration and ongoing compliance work needed for your US market plan.
              </p>
           </div>
 
@@ -152,7 +152,7 @@ function USACosmetics() {
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Is FDA registration now mandatory for cosmetics?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                Yes. Under MoCRA, both FDA Cosmetic Facility Registration and FDA Cosmetic Product Listing are mandatory requirements for any brand legally marketing cosmetic products in the United States.
+                MoCRA requires facility registration and product listing for covered facilities and products, but exemptions apply, including for certain small businesses. Eligibility depends on the business and product category. <a className="underline" href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra">Check FDA's MoCRA exemptions</a>.
               </p>
             </div>
             <div>

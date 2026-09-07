@@ -47,7 +47,7 @@
   "image": "/assets/brain/industry_ivd_1786310578306.png",
   "published": "2026-09-02",
   "updated": "2026-09-07",
-  "indexable": false,
+  "indexable": true,
   "sourceKeys": [
     "eurl",
     "mdcg"

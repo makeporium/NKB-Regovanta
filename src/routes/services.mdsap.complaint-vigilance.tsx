@@ -21,7 +21,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/complaint-vigilance")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "MDSAP Complaint Handling & Vigilance | NKB Regovanta" },
       { name: "description", content: "MDSAP complaint handling, vigilance reporting across 5 jurisdictions, adverse event analysis, and FSCA advisory notice support for device manufacturers." },
       { property: "og:title", content: "MDSAP Complaint Handling & Vigilance | NKB Regovanta" },

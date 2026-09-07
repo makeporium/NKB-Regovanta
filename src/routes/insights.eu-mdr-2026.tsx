@@ -6,7 +6,7 @@ const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
 export const Route = createFileRoute("/insights/eu-mdr-2026")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       {
         name: "description",

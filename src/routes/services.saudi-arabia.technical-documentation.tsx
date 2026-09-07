@@ -48,7 +48,7 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/saudi-arabia/technical-documentation")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
         title: "SFDA Technical Documentation Services | NKB Regovanta",
       },

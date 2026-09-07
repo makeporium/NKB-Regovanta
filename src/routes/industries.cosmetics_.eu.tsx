@@ -6,7 +6,7 @@ import imgHero from "@/assets/eu_hero_1786396525523.png"; // Assuming standard E
 export const Route = createFileRoute("/industries/cosmetics_/eu")({
   head: () => ({
     meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU Cosmetic Regulation & Registration | NKB Regovanta" },
       {
         name: "description",
@@ -165,7 +165,7 @@ function EUCosmetics() {
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Do I need a separate registration for each EU member state?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                No. Because of the harmonized EU Cosmetic Regulation, once your product is registered and notified via the CPNP, it is legally valid to be marketed across all 27 EU member states, plus Norway, Iceland, and Liechtenstein.
+                CPNP provides a central notification system, so a separate national cosmetic notification is not needed in each EU member state. Notification is not product approval: safety, responsible-person, ingredient, labelling and other applicable requirements must still be met.
               </p>
             </div>
             <div>
