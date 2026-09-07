@@ -1,8 +1,10 @@
+> Historical document. Page counts, verification claims, and ranking timelines below are not current evidence. See [SEO implementation and next steps](SEO_IMPLEMENTATION_AND_NEXT_STEPS.md) for the September 7, 2026 changes. Search rankings and indexing dates are not guaranteed.
+
 # NKB Regovanta — Post-Optimization Action Plan, Indexing Guide & Ranking Timeline
 
-> **Target Domain:** [https://www.nkbregovanta.com](https://www.nkbregovanta.com)  
-> **Status:** All on-page & technical SEO fixes completed across 241 routes  
-> **Date:** September 2026  
+> **Target Domain:** [https://www.nkbregovanta.com](https://www.nkbregovanta.com)
+> **Status:** All on-page & technical SEO fixes completed across 241 routes
+> **Date:** September 2026
 
 ---
 
@@ -18,11 +20,11 @@ and reads HTML & metadata            its searchable database             & autho
 ```
 
 ### The Direct Answer to Your Questions:
-1. **Will pages start coming on top automatically?**  
+1. **Will pages start coming on top automatically?**
    **No page jumps to #1 automatically overnight.** What our code changes did was **remove the technical blockers that made you completely invisible** (such as the root canonical bug that forced Google to treat all subpages as duplicates of the homepage). Now, your pages are 100% search-engine-ready.
-2. **Do you have to index them?**  
+2. **Do you have to index them?**
    Google will eventually crawl public links and sitemaps on its own, **BUT waiting for Google to crawl 230 pages organically can take 4 to 8 weeks.** You can and **must expedite this** by submitting your sitemap in Google Search Console and manually requesting indexing for top money pages (takes 24–72 hours).
-3. **How much time will it take to rank?**  
+3. **How much time will it take to rank?**
    - **Indexing:** 24–72 hours (with manual submission).
    - **Initial Search Impressions (GSC):** 1–3 weeks.
    - **Page 1 Rankings for Specific Regulatory Forms (e.g., MD-14, MD-15, eSTAR, FSC, Article 117):** 4–8 weeks.
@@ -72,7 +74,7 @@ Google Search Console (GSC) is the direct communication channel between your web
    sitemap.xml
    ```
 5. Click **SUBMIT**.
-6. **Expected Status:** It should display **"Success"** with **230 Discovered URLs**.  
+6. **Expected Status:** It should display **"Success"** with **230 Discovered URLs**.
    *(If it says "Couldn't fetch", refresh after a few minutes — Google's parser occasionally takes a short moment to read fresh sitemaps).*
 
 ---
@@ -216,7 +218,7 @@ List NKB Regovanta on trusted industry portals and directories with consistent N
 ### 2. Leverage the AI Regulatory News Feed for Backlinks (Month 1–2)
 - Whenever CDSCO issues a new circular, or FDA releases a draft guidance:
   - Copy the structured analysis from your `/ai-news` or `/regulatory-updates` feed.
-  - Publish a short LinkedIn post or company article with a summary, ending with:  
+  - Publish a short LinkedIn post or company article with a summary, ending with:
     *“Read our full regulatory breakdown and impact analysis on NKB Regovanta: [Link to page]”*
   - This drives real human traffic, social signals, and natural referral backlinks.
 

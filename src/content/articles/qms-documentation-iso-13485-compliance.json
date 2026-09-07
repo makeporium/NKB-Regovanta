@@ -1,0 +1,56 @@
+{
+  "slug": "qms-documentation-iso-13485-compliance",
+  "title": "ISO 13485 Documentation: Build a System People Can Use and Auditors Can Trace",
+  "description": "Organise medical-device QMS documentation around process ownership, controlled records, traceability, and reliable retrieval.",
+  "service": "/services/iso-13485",
+  "intro": "The size of a quality-management document library tells you little about its effectiveness. A useful library helps staff perform a task correctly and lets a reviewer reconstruct what happened. When documentation becomes difficult to navigate, teams often create unofficial spreadsheets and instructions, leaving a gap between the described system and the one actually used.",
+  "sections": [
+    {
+      "title": "Separate instructions from evidence",
+      "paragraphs": [
+        "A procedure explains how a process is intended to operate; a completed record shows what happened on a particular occasion. Keep that distinction visible in the document structure. For example, a supplier-evaluation procedure is different from the evidence supporting approval of a specific supplier and from a subsequent performance review.",
+        "For US-market manufacturers, FDA's QMSR incorporates ISO 13485:2016 and includes additional FDA requirements. Use the applicable framework to define the required controls, then build a usable company-specific structure around them. Avoid treating a downloaded template package as proof that those controls are implemented."
+      ],
+      "sourceKeys": [
+        "qmsr"
+      ]
+    },
+    {
+      "title": "Design the library around real workflows",
+      "paragraphs": [
+        "Group documents by the decisions employees need to make: approving a supplier, changing a design, releasing a batch, investigating a complaint, or closing a corrective action. Give each process an owner who understands both the written instruction and the system used to retain its records.",
+        "Use identifiers and links that remain stable when files are revised. A manufacturing record should identify the specification version that applied at the time, not simply point to whatever drawing is current today. When records are held in several tools, document the relationships and access controls so evidence does not depend on one employee's memory."
+      ]
+    },
+    {
+      "title": "Test retrieval and change control together",
+      "paragraphs": [
+        "Choose a recently released device and ask a colleague outside the project to retrieve the approved requirements, relevant verification, release evidence, and any associated change. Note missing links, ambiguous statuses, and duplicate versions. This exercise often identifies practical weaknesses that a document-count checklist will miss.",
+        "When changing a procedure, identify the forms, training, software settings, and ongoing work affected by the change. Releasing a new instruction without updating the form can create contradictory expectations. Define how old records remain accessible and how work already in progress will be handled. A change is complete when the operating process can follow it consistently."
+      ]
+    }
+  ],
+  "example": "Suppose a manufacturer stores drawing approvals in a product-lifecycle tool and inspection results in a shared folder. Both systems contain valid records, but the inspection sheet does not state the drawing revision. A retrieval exercise exposes that the acceptance decision cannot be reconstructed confidently. Adding a controlled revision reference and checking it during record review improves traceability without creating another large procedure.",
+  "checklist": [
+    "Assign an accountable owner to each process.",
+    "Distinguish procedures, templates, and completed records.",
+    "Link product records to the versions used.",
+    "Test retrieval without relying on the original author.",
+    "Coordinate document changes with forms, training, and tools."
+  ],
+  "faq": {
+    "question": "Should every team use the same document template?",
+    "answer": "Use common identifiers, approval controls, and essential fields where they help. The detailed format can vary with the process. A laboratory report and a supplier review need different content, even though both require clear ownership and revision status."
+  },
+  "seoTitle": "Defensible QMS Documentation Guide | NKB Regovanta",
+  "image": "/assets/brain/qms_inspection_office.jpg",
+  "published": "2026-08-25",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "qmsr"
+  ],
+  "imageWidth": 1376,
+  "imageHeight": 768,
+  "category": "QUALITY & SOFTWARE"
+}

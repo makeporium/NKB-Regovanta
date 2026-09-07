@@ -1,0 +1,56 @@
+{
+  "slug": "fda-q-sub-pre-submission-meeting-guide",
+  "title": "FDA Pre-Submissions: Ask Questions That Resolve a Development Decision",
+  "description": "Prepare a focused FDA Pre-Submission with a defined device, evidence context, proposed approach, and questions tied to development decisions.",
+  "service": "/services/usa/q-submission",
+  "intro": "A productive Pre-Submission starts with a decision the manufacturer needs to make. The package should give FDA enough context to understand the device, the uncertainty, and the proposed approach. Asking the agency to review a vague concept or design an entire programme makes it harder to obtain feedback that the team can act on.",
+  "sections": [
+    {
+      "title": "Choose a question suited to the interaction",
+      "paragraphs": [
+        "FDA's Q-Submission guidance describes mechanisms for obtaining feedback and meetings related to medical-device submissions. A Pre-Submission can help address focused questions before later work or a marketing submission. It should not be treated as a marketing authorisation or a guarantee of the outcome of a future submission.",
+        "State the decision that depends on the answer. Examples include whether a proposed evaluation approach addresses a defined concern or how to frame a particular evidence question. Separate those issues from routine administrative questions that may be better handled through another communication route."
+      ],
+      "sourceKeys": [
+        "qsub"
+      ]
+    },
+    {
+      "title": "Provide a proposal and the reasoning behind it",
+      "paragraphs": [
+        "Describe the device, intended use, relevant configuration, and development stage. Include enough information to explain why the question matters. Present the manufacturer's proposed approach and its justification, including important assumptions and alternatives considered.",
+        "For a study question, provide a sufficiently developed outline of the objectives, population or samples, methods, endpoints, and analysis as relevant. A question such as 'Is our testing acceptable?' is difficult to answer if the package does not explain what will be tested or what the results are intended to establish."
+      ]
+    },
+    {
+      "title": "Prepare the team to use the feedback",
+      "paragraphs": [
+        "Choose participants who understand the device and can explain the proposed evidence. Prioritise the questions and plan how to capture clarifications. Keep the discussion connected to the submitted context rather than introducing a substantially different product without explanation.",
+        "Afterwards, record the feedback, the resulting decisions, and the assumptions that remain important. Update the development plan and identify changes that could require reconsideration. Feedback on one configuration or claim should not silently become support for a broader product developed later."
+      ]
+    }
+  ],
+  "example": "A hypothetical company is uncertain about the endpoint for a device-performance study. A focused package explains the intended claim, proposes an endpoint and acceptance approach, and gives the rationale and limitations. That creates a clearer discussion than submitting a general product brochure and asking FDA to specify all necessary testing.",
+  "checklist": [
+    "Identify the development decision requiring feedback.",
+    "Confirm the appropriate Q-Submission mechanism.",
+    "Describe the device and proposed approach clearly.",
+    "Ask focused questions with supporting rationale.",
+    "Record how feedback changes the plan and its assumptions."
+  ],
+  "faq": {
+    "question": "Does favourable Pre-Submission feedback guarantee clearance?",
+    "answer": "No. The eventual submission is assessed on its content and circumstances. Preserve the context of the feedback and evaluate whether subsequent changes to the device, claims, or evidence affect its relevance."
+  },
+  "seoTitle": "FDA Q-Submission (Pre-Sub) Guide | NKB Regovanta",
+  "image": "/assets/brain/usa_fda_regulatory_1786305043898.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "qsub"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

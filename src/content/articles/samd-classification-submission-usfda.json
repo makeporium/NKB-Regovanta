@@ -1,0 +1,68 @@
+{
+  "slug": "samd-classification-submission-usfda",
+  "title": "FDA SaMD Planning: Assess the Software Function Before Selecting a Submission",
+  "description": "Define medical software functions, assess FDA regulatory treatment, and connect classification and submission evidence to the intended use.",
+  "service": "/services/usa",
+  "intro": "Software can provide several functions within the same application, and those functions may not receive identical regulatory treatment. Before selecting a submission route, define what the software does, what information it uses, who relies on the output, and what medical decision it is intended to support. The label 'SaMD' is a starting description, not a pathway decision.",
+  "sections": [
+    {
+      "title": "Assess the function and its intended purpose",
+      "paragraphs": [
+        "FDA's software resources distinguish device software functions, functions outside the device definition, and areas where particular policies apply. Analyse the actual function rather than classifying by whether the product runs on a phone, browser, or cloud service.",
+        "Separate medical analysis from communication, storage, administration, and other features. Document the interfaces and any effect supporting functions could have on the medical output. If the application changes from presenting information to interpreting it or recommending action, revisit the assessment."
+      ],
+      "sourceKeys": [
+        "fdaApps",
+        "fdaNavigator"
+      ]
+    },
+    {
+      "title": "Select the pathway using device-specific evidence",
+      "paragraphs": [
+        "Research applicable classification information and relevant legally marketed devices. Consider the intended use and technological characteristics, not merely a similar user interface. FDA's submission resources describe 510(k), De Novo, PMA, and other routes; determine which is appropriate to the product rather than assuming all medical software uses 510(k).",
+        "Record unresolved questions that affect the development plan. If a comparator or proposed claim is uncertain, identify how the team will resolve it before relying on that assumption to design its evaluation or commercial schedule."
+      ],
+      "sourceKeys": [
+        "fdaPathway",
+        "fdaClass"
+      ]
+    },
+    {
+      "title": "Connect software documentation to the clinical claim",
+      "paragraphs": [
+        "FDA's software-function guidance describes recommended premarket documentation. Organise the relevant requirements, architecture, risks, verification, configuration, and unresolved-issue information so that the software's role can be understood. Keep the submitted version identifiable.",
+        "Technical testing should be connected to the intended clinical function. A programme that produces a mathematically correct output may still need evidence that the output is appropriate for the claimed population and use. Define the datasets, reference methods, limitations, and acceptance criteria needed for that particular claim."
+      ],
+      "sourceKeys": [
+        "fdaSoftware"
+      ]
+    }
+  ],
+  "example": "A hypothetical app initially displays a clinician-entered score and later automatically derives that score from images. The new analysis can change the regulatory and evidence questions even if the screen looks identical. The team should reassess the function, intended use, and evaluation plan rather than relying on the earlier display-only assessment.",
+  "checklist": [
+    "Define each medical and supporting software function.",
+    "Document the regulatory-treatment rationale.",
+    "Research classification and the relevant pathway.",
+    "Control the evaluated and submitted software version.",
+    "Connect technical evidence to the claimed clinical purpose."
+  ],
+  "faq": {
+    "question": "Is all software used by a hospital a medical device?",
+    "answer": "No. The assessment depends on the function and intended purpose. Administrative software and medical analytical functions can raise different questions even when they are sold within the same platform."
+  },
+  "seoTitle": "US FDA SaMD Classification Guide | NKB Regovanta",
+  "image": "/assets/brain/cs_algorithm_claim_1786441224937.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fdaApps",
+    "fdaNavigator",
+    "fdaPathway",
+    "fdaClass",
+    "fdaSoftware"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

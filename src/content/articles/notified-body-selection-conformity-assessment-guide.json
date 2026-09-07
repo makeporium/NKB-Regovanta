@@ -1,0 +1,56 @@
+{
+  "slug": "notified-body-selection-conformity-assessment-guide",
+  "title": "Selecting a Notified Body: Match Designation, Scope, and Project Readiness",
+  "description": "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone.",
+  "service": "/services/eu/notified-body",
+  "intro": "The most useful notified-body comparison begins with whether a body can assess the product and proposed scope. Price and availability matter, but they cannot compensate for a mismatch in designation or an incomplete application. Prepare a clear product brief before approaching bodies so that the responses can be compared meaningfully.",
+  "sections": [
+    {
+      "title": "Verify the relevant designation",
+      "paragraphs": [
+        "The European Commission publishes information on notified bodies and their designation through the relevant official system. Confirm the applicable regulation and scope for the intended product and conformity-assessment activities. An organisation's ability to assess one device category does not establish coverage for another.",
+        "Retain the verification and discuss the actual product configuration. Software, special technologies, combinations, or particular assessment activities may need clarification. Use the legal manufacturer's proposed scope rather than a broad marketing description when asking whether the body can undertake the work."
+      ],
+      "sourceKeys": [
+        "notified"
+      ]
+    },
+    {
+      "title": "Compare requirements on a consistent basis",
+      "paragraphs": [
+        "Give each body the same controlled brief: intended purpose, classification rationale, product families, manufacturing locations, relevant suppliers, and evidence status. Explain significant unfinished work rather than presenting a draft file as complete. This helps avoid comparing a preliminary estimate with an offer based on a very different scope.",
+        "Ask about application content, document format, languages, assessment stages, communications, and the handling of questions or changes. Record assumptions behind timing and cost estimates. A quoted review window may depend on a complete submission, available specialists, and timely responses from the manufacturer."
+      ]
+    },
+    {
+      "title": "Prepare for the working relationship",
+      "paragraphs": [
+        "Assign an internal coordinator and technical owners who can respond consistently. Maintain a controlled submission baseline and an issue tracker for questions, evidence, and revisions. Good coordination reduces confusion without changing the manufacturer's responsibility for the product and evidence.",
+        "Before committing, review the agreement's scope and operational implications with the appropriate business and legal owners. Plan continuity for changes in product scope, sites, or the relationship itself. The selection decision should leave the company with a workable assessment process, not merely a preferred name on a spreadsheet."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer selects a body from a price comparison prepared before adding an IVD product family. The original discussion covered an MDR device, so the added portfolio changes the scope question. Checking designation and discussing the expanded brief before committing prevents the company from relying on an offer that was never intended to cover the full project.",
+  "checklist": [
+    "Verify regulation and designation scope.",
+    "Provide a consistent product and evidence brief.",
+    "Record assumptions behind cost and timing.",
+    "Assign internal technical and coordination owners.",
+    "Review agreement scope and future change arrangements."
+  ],
+  "faq": {
+    "question": "Should the fastest quoted review time determine the choice?",
+    "answer": "It is one factor, but first confirm scope and the conditions behind the estimate. A realistic schedule also depends on the manufacturer's readiness and response capacity. Compare offers using the same product information and assumptions."
+  },
+  "seoTitle": "Notified Body Selection Guide | NKB Regovanta",
+  "image": "/assets/brain/eu_compliance_1786396542227.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "notified"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

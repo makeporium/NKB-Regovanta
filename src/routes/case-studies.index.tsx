@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, BarChart3, ShieldCheck, Globe2, Trophy, Users } from "lucide-react";
-import caseHero from "@/assets/case.png";
+import caseHero from "@/assets/case.optimized.webp";
 const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";
 const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
 const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
@@ -141,7 +141,7 @@ function CaseStudies() {
             </p>
           </div>
           <div className="hidden lg:flex justify-end items-center h-full">
-            <img src={caseHero} alt="Case Studies Concept" className="w-full max-w-lg object-contain" />
+            <img width={1384} height={472} src={caseHero} alt="Case Studies Concept" className="w-full max-w-lg object-contain" />
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ function CaseStudies() {
                   <p className="mt-4 text-[13.5px] leading-relaxed text-navy/70 flex-1">
                     {s.desc}
                   </p>
-                  
+
                   <div className="mt-8 pt-6 border-t border-border grid grid-cols-3 gap-2">
                     {s.metrics.map((m, i) => (
                       <div key={i} className="flex flex-col gap-1.5">

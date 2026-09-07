@@ -13,11 +13,11 @@ import {
   ArrowRight
 } from "lucide-react";
 import imgHero from "@/assets/industry-ivd.png";
-import imgWorld from "@/assets/world-map.png";
+import imgWorld from "@/assets/world-map.optimized.webp";
 import imgEU from "@/assets/eu.png";
-import imgUS from "@/assets/us.png";
+import imgUS from "@/assets/us.optimized.webp";
 import imgISO from "@/assets/iso2.png";
-import imgIvd2 from "@/assets/ivd2.png";
+import imgIvd2 from "@/assets/ivd2.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd")({
   head: () => ({
@@ -101,12 +101,12 @@ function IVD() {
               </div>
             </div>
           </div>
-          
+
           {/* Right Image */}
           <div className="hidden lg:block h-full relative">
             {/* White gradient fade to blend the left edge of the image */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <img src={imgHero} alt="IVD Support" className="w-full h-full object-cover object-left" />
+            <img width={1024} height={1024} src={imgHero} alt="IVD Support" className="w-full h-full object-cover object-left" />
           </div>
         </div>
       </section>
@@ -241,7 +241,7 @@ function IVD() {
                     {m.name}
                   </h3>
                 </div>
-                
+
                 <div className="flex items-center justify-between pt-2 border-t border-gray-200/60 mt-auto">
                   <span className="text-[11px] font-semibold text-navy/70 group-hover:text-[#0b3a96] transition-colors line-clamp-1">
                     {m.auth}
@@ -427,7 +427,7 @@ function IVD() {
       {/* 6. DARK SECTION: WHY LEADING IVD COMPANIES... */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f8f9fc]">
         <div className="mx-auto max-w-[1440px]">
-          <div 
+          <div
             className="rounded-xl overflow-hidden relative shadow-xl bg-navy bg-center bg-cover bg-no-repeat min-h-[380px] flex items-center"
             style={{ backgroundImage: `url(${imgIvd2})` }}
           >
@@ -436,7 +436,7 @@ function IVD() {
                 WHY LEADING IVD COMPANIES<br/>
                 PARTNER WITH NKB REGOVANTA
               </h2>
-              
+
               <ul className="space-y-4">
                 {[
                   "Deep expertise in EU IVDR, US FDA and global regulatory pathways",

@@ -418,7 +418,7 @@ function CanadaMarketCompletePage() {
             {/* Right 3D Visual with Parliament, MDSAP Medal, Health Canada Binder & Maple Leaf */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <img width={285} height={197}
                   src={canadaHero3dImg}
                   alt="Health Canada MDL MDEL MDSAP Canada"
                   className="w-full h-auto object-contain rounded-xl"
@@ -557,7 +557,7 @@ function CanadaMarketCompletePage() {
               </div>
 
               <div className="absolute right-2 bottom-3 w-28 sm:w-36 opacity-90 pointer-events-none hidden sm:block">
-                <img
+                <img width={93} height={90}
                   src={canadaMapShieldImg}
                   alt="Canada Map with Maple Leaf Shield"
                   className="w-full h-auto object-contain drop-shadow-xl"
@@ -645,7 +645,7 @@ function CanadaMarketCompletePage() {
               <p className="text-[9.5px] text-gray-600 leading-tight font-medium mb-1.5">
                 Canada is a participating country in MDSAP. A single MDSAP audit can satisfy the QMS requirements for Canada along with other MDSAP countries.
               </p>
-              <img src={canadaMdsapLogoImg} alt="MDSAP Logo" className="h-3.5 w-auto object-contain opacity-80" />
+              <img width={49} height={29} src={canadaMdsapLogoImg} alt="MDSAP Logo" className="h-3.5 w-auto object-contain opacity-80" />
             </div>
 
             <div>
@@ -691,7 +691,7 @@ function CanadaMarketCompletePage() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 bg-slate-50 border-t border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           {/* Framework Intro */}
           <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-xs">
             <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
@@ -1462,7 +1462,7 @@ function CanadaMarketCompletePage() {
           <div className="bg-[#05152e] text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
             {/* Left Maple Leaf + Text */}
             <div className="flex items-center gap-4 lg:gap-6 z-10">
-              <img
+              <img width={55} height={57}
                 src={canadaMapleBottomImg}
                 alt="Canada Maple Leaf"
                 className="w-10 sm:w-12 h-auto object-contain shrink-0 drop-shadow-md hidden sm:block"

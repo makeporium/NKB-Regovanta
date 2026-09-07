@@ -107,7 +107,7 @@ function IndiaCosmetics() {
                 Read More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            
+
             <div className="card-elevated bg-white p-8 rounded-md border border-border/50 shadow-sm flex flex-col">
               <FileCheck2 className="h-10 w-10 text-accent mb-6" />
               <h2 className="text-2xl font-bold text-navy mb-3">For Manufacturers</h2>
@@ -131,7 +131,7 @@ function IndiaCosmetics() {
                Whether you are importing or manufacturing locally, our tailored regulatory services ensure your cosmetic products meet all Indian safety and quality standards without unnecessary delays.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-6 rounded-md bg-surface/50 border border-border">
@@ -144,7 +144,7 @@ function IndiaCosmetics() {
         </div>
       </section>
 
-      <CTABand title="Ready to launch your cosmetics in India?" btnText="Consult an Expert" />
+      <CTABand title="Ready to launch your cosmetics in India?" action="Consult an Expert" />
     </>
   );
 }

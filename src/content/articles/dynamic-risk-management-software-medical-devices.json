@@ -1,0 +1,56 @@
+{
+  "slug": "dynamic-risk-management-software-medical-devices",
+  "title": "Software Risk Management After Release: Turn New Signals Into Decisions",
+  "description": "Connect software incidents, dependency updates, and clinical feedback to risk assessment, change control, and verified release decisions.",
+  "service": "/services/technical-documentation",
+  "intro": "Software risk management often looks strongest immediately before a submission, when the risk file and test reports are aligned. The harder work begins after release. Operating systems change, users find unexpected workflows, and field data exposes assumptions that were invisible in development. The manufacturer needs a repeatable way to decide which signals change the safety assessment.",
+  "sections": [
+    {
+      "title": "Describe harm before scoring a software defect",
+      "paragraphs": [
+        "ISO 14971 describes a lifecycle approach to medical-device risk management. For a software issue, begin with the sequence that could expose a patient or user to harm. A defect's technical severity, such as a server crash, does not by itself describe its clinical significance. The same outage can have different consequences in a retrospective reporting tool and an urgent monitoring workflow.",
+        "Write the sequence in plain language: triggering condition, incorrect or unavailable output, user response, and possible harm. Include external systems and human actions where they matter. This makes the risk discussion accessible to software engineers, clinicians, quality staff, and support teams without pretending that they use identical terminology."
+      ],
+      "sourceKeys": [
+        "risk"
+      ]
+    },
+    {
+      "title": "Connect field signals to the released configuration",
+      "paragraphs": [
+        "For every significant incident, identify the software version, device configuration, environment, and affected workflow. Separate a reproducible product defect from an installation problem, unsupported configuration, or misunderstood instruction. The categories may lead to different actions, but each still needs an assessment of the actual safety consequences.",
+        "Keep a link between the issue tracker and the relevant risk-control and verification records. Avoid copying the same assessment into several systems where it can diverge. A short controlled decision record can reference the engineering investigation, complaint assessment, and release record while making the overall rationale easy to retrieve."
+      ]
+    },
+    {
+      "title": "Verify the response, including the possibility of new problems",
+      "paragraphs": [
+        "A software patch should be evaluated against the failure sequence that prompted it. If a change prevents a false alarm by suppressing more events, the team must also examine whether genuine events could be missed. Tests that prove the code changed are not sufficient to establish that the affected clinical workflow is safer.",
+        "Define the follow-up measure before closing the issue: recurrence under comparable exposure, performance of the revised control, or evidence from a targeted evaluation. For dependency updates, retain the version change and its impact assessment even when the conclusion is that no safety-related behaviour changed. Consistent negative decisions are part of a useful change history."
+      ]
+    }
+  ],
+  "example": "Imagine a monitoring application that occasionally displays an old measurement after network recovery. The engineering ticket describes a caching bug. The safety assessment asks whether the clinician can recognise that the value is old and what action could follow. A correction might include timestamp handling, stale-data indication, and recovery tests. Measuring only the reduction in software exceptions would miss whether the user-facing risk was controlled.",
+  "checklist": [
+    "Capture the released version and environment for each signal.",
+    "Describe the path from defect to possible harm.",
+    "Link the issue to affected controls and requirements.",
+    "Test the correction and plausible unintended effects.",
+    "Define a follow-up measure before closing the action."
+  ],
+  "faq": {
+    "question": "Must every software ticket trigger a complete risk-file rewrite?",
+    "answer": "No. Use a documented assessment proportionate to the issue. The important step is deciding whether hazards, controls, evidence, or the overall risk conclusion are affected, then updating the relevant records when they are."
+  },
+  "seoTitle": "Medical Device Software Risk Management | NKB Regovanta",
+  "image": "/assets/brain/cs_algorithm_claim_1786441224937.png",
+  "published": "2026-08-23",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "risk"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "QUALITY & SOFTWARE"
+}

@@ -28,11 +28,11 @@ import {
   Landmark,
   Pill,
 } from "lucide-react";
-import heroImg from "@/assets/cdsco-india-hero.png";
-import imgWorldAccess from "@/assets/India on World Map Accesing.png";
-import imgGlobeNetwork from "@/assets/Ethereal Global Network Globe.png";
-import imgManufacturingBg from "@/assets/Medtech Manufacturing Network Illustration.png";
-import imgCertificatesBg from "@/assets/CDSCO Certification Compliance Network.png";
+import heroImg from "@/assets/cdsco-india-hero.optimized.webp";
+import imgWorldAccess from "@/assets/India on World Map Accesing.optimized.webp";
+import imgGlobeNetwork from "@/assets/Ethereal Global Network Globe.optimized.webp";
+import imgManufacturingBg from "@/assets/Medtech Manufacturing Network Illustration.optimized.webp";
+import imgCertificatesBg from "@/assets/CDSCO Certification Compliance Network.optimized.webp";
 
 /* Badge positions are % of the hero artwork, matching the empty circles baked into it. */
 const heroBadges = [
@@ -181,17 +181,22 @@ function IndiaCDSCOPage() {
   return (
     <div className="bg-white">
       {/* HERO SECTION */}
-      <section className="bg-[#f7f9fc]">
-        {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
-        <div className="@container relative hidden md:block">
-          <img src={heroImg} alt="CDSCO medical device registration in India" className="block w-full" />
-
-          <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
-            <h1 className="font-display text-[3.1cqw] font-bold leading-[1.2] text-[#0f2340]">
+      <h1 className="sr-only">
               <span className="text-[#0b3a96]">CDSCO</span> Medical Device
               <br />
               Registration in India
             </h1>
+      <section className="bg-[#f7f9fc]">
+        {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
+        <div className="@container relative hidden md:block">
+          <img width={1942} height={745} src={heroImg} alt="CDSCO medical device registration in India" className="block w-full" />
+
+          <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
+            <p aria-hidden="true" className="font-display text-[3.1cqw] font-bold leading-[1.2] text-[#0f2340]">
+              <span className="text-[#0b3a96]">CDSCO</span> Medical Device
+              <br />
+              Registration in India
+            </p>
             <div className="mt-[2.4cqw] flex items-center gap-[0.4cqw]">
               <span className="h-[0.2cqw] w-[3.5cqw] rounded-full bg-[#ff6b1a]" />
               <span className="h-[0.5cqw] w-[0.5cqw] rounded-full bg-[#c9d3e0]" />
@@ -249,9 +254,9 @@ function IndiaCDSCOPage() {
 
         {/* Mobile: stacked */}
         <div className="md:hidden px-4 pt-12 pb-8 sm:px-6">
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">CDSCO</span> Medical Device Registration in India
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />
@@ -283,7 +288,7 @@ function IndiaCDSCOPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img src={heroImg} alt="" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -308,7 +313,7 @@ function IndiaCDSCOPage() {
                 </p>
               </div>
             </div>
-            <img
+            <img width={1672} height={941}
               src={imgWorldAccess}
               alt="India connected to the United States, Canada, United Kingdom, European Union and Australia"
               className="w-full rounded-2xl border border-gray-100 shadow-xl"
@@ -316,7 +321,7 @@ function IndiaCDSCOPage() {
           </div>
         </div>
       </section>
-      
+
       {/* SUGAM PORTAL SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1f4d] via-navy to-[#081430] py-16 text-white">
         <div
@@ -346,7 +351,7 @@ function IndiaCDSCOPage() {
           </div>
 
           <div className="space-y-16">
-            
+
             <ServiceGroup
               icon={Download}
               title="Import Registrations"

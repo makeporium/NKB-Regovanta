@@ -107,7 +107,7 @@ function MarketAccessService() {
             <p className="text-[15px] text-navy/80 leading-relaxed mb-8">
               NKB Regovanta helps organizations evaluate market-entry pathways and develop practical strategies for expansion across global markets.
             </p>
-            
+
             <h3 className="text-xl font-bold text-navy mb-6">Our Market Access Support</h3>
             <div className="space-y-6 mb-8">
               {offerings.map((offering, idx) => (
@@ -130,16 +130,16 @@ function MarketAccessService() {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100 to-blue-50 rounded-[2rem] -z-10 transform rotate-3" />
-            <img 
+            <img
               src={imgPlaceholder}
-              alt="Global Market Access" 
-              className="rounded-2xl shadow-xl border border-white/50 w-full object-cover" 
+              alt="Global Market Access"
+              className="rounded-2xl shadow-xl border border-white/50 w-full object-cover"
             />
           </div>
         </div>
       </section>
 
-      <CTABand title="Planning your next market?" btnText="DISCUSS YOUR MARKET ENTRY →" />
+      <CTABand title="Planning your next market?" action="DISCUSS YOUR MARKET ENTRY →" />
     </>
   );
 }

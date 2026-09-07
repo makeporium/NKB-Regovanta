@@ -1,0 +1,58 @@
+{
+  "slug": "ivdr-class-d-verification-notified-bodies",
+  "title": "Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow",
+  "description": "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces.",
+  "service": "/services/eu/ivdr",
+  "intro": "For a Class D IVD, certification planning and routine batch operations cannot be treated as unrelated projects. The manufacturer needs to understand which evidence supports the product and how the applicable verification arrangements affect ongoing supply. Misalignment between the technical team, quality unit, notified body, and laboratory can create avoidable uncertainty close to release.",
+  "sections": [
+    {
+      "title": "Confirm which external assessment arrangements apply",
+      "paragraphs": [
+        "The European Commission describes EU reference laboratories for designated categories of high-risk IVDs. Their role and availability depend on the relevant scope. The MDCG guidance library also includes guidance on verification of manufactured Class D IVDs by notified bodies. Confirm the applicable arrangements for the actual device rather than assuming every Class D product follows an identical workflow.",
+        "Identify the device category, configuration, intended purpose, and performance claims when discussing the project with the notified body. Ask how the relevant laboratory interfaces, samples, documentation, and communications will be managed. Retain the agreed responsibilities in a form that production and quality staff can use."
+      ],
+      "sourceKeys": [
+        "eurl",
+        "mdcg"
+      ]
+    },
+    {
+      "title": "Make the submitted product definition reproducible",
+      "paragraphs": [
+        "Define the reagent, calibrator, control material, instrument, and software combinations covered by the evidence. State which variations are permitted and how changes are assessed. A performance report is difficult to interpret if the evaluated combination cannot be related to the commercial configuration.",
+        "Prepare a clear evidence index that distinguishes development studies, performance-evaluation conclusions, manufacturing controls, and batch-specific information. Assign owners for resolving discrepancies between them. If a manufacturing acceptance criterion changes, assess whether the performance claims and verification arrangements remain supported rather than treating the revision as a purely internal quality decision."
+      ]
+    },
+    {
+      "title": "Plan the routine operational handoff",
+      "paragraphs": [
+        "Map when the required batch information or samples become available and which decisions depend on them. Include preparation, review, shipment where relevant, feedback, and escalation for unexpected findings. Avoid promising a fixed supply timeline until these dependencies have been understood for the product.",
+        "Keep change control connected to the external assessment arrangement. Reagent sourcing, control materials, calculation software, and manufacturing changes can affect the relevance of prior information. A documented communication decision helps ensure that the correct parties are consulted before implementation where required."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer improves the yield of a reagent process and changes an internal release criterion. The product name and intended purpose remain the same, so the change appears administrative. Reviewing it against the established performance and verification arrangements may reveal a need for additional assessment or communication. Bringing quality, performance-evaluation, and regulatory owners together prevents the batch workflow from drifting away from the product evidence.",
+  "checklist": [
+    "Confirm the device category and applicable assessment interfaces.",
+    "Define the commercial configurations precisely.",
+    "Separate product-level and batch-level evidence.",
+    "Map information and sample handoffs with named owners.",
+    "Assess process changes against existing verification arrangements."
+  ],
+  "faq": {
+    "question": "Can the manufacturer choose any laboratory for Class D verification?",
+    "answer": "The applicable role is not interchangeable with ordinary commercial testing. Confirm the requirements and any designated reference-laboratory scope with the notified body and current Commission information before arranging samples or relying on a proposed workflow."
+  },
+  "seoTitle": "EU IVDR Class D Verification Guide | NKB Regovanta",
+  "image": "/assets/brain/industry_ivd_1786310578306.png",
+  "published": "2026-09-02",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "eurl",
+    "mdcg"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

@@ -433,7 +433,7 @@ function SaudiArabiaHubPage() {
             {/* Right Riyadh Graphic with Flag and SFDA Shield */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[440px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img
+                <img width={341} height={204}
                   src={saudiHeroImg}
                   alt="SFDA Medical Device Registration Saudi Arabia Riyadh"
                   className="w-full h-auto object-cover rounded-xl"

@@ -1,0 +1,58 @@
+{
+  "slug": "regulation-eu-2024-1860-mdr-ivdr-transition",
+  "title": "IVDR Transition Planning: Check Eligibility Before Relying on the Deadline",
+  "description": "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates.",
+  "service": "/services/eu/ivdr",
+  "intro": "An extended transition date is not a blanket permission to continue supplying every IVD. Eligibility depends on the device's regulatory history and fulfilment of conditions. A useful transition plan therefore starts with a device-by-device assessment and supporting records, rather than a single deadline copied into the commercial forecast.",
+  "sections": [
+    {
+      "title": "Separate the final transition date from earlier milestones",
+      "paragraphs": [
+        "Regulation (EU) 2024/1860 extended certain IVDR transition arrangements subject to conditions. The Commission identifies earlier milestones for the quality system, notified-body application, and written agreement. Its guidance lists application dates of 26 May 2025 for Class D, 26 May 2026 for Class C, and 26 May 2027 for Class B and Class A sterile devices.",
+        "At this article's September 2026 update, the Class C application milestone has already passed. A later transition end date should not be read as extending that application milestone. Verify eligibility and the applicable agreement requirements using the current provisions and the product's actual records."
+      ],
+      "sourceKeys": [
+        "transition",
+        "transitionQA"
+      ]
+    },
+    {
+      "title": "Build an eligibility record for each device group",
+      "paragraphs": [
+        "Identify the relevant declaration or certificate history, the IVDR classification, and the evidence that the transition conditions were met. Separate products that qualify from new devices or other products outside the relevant arrangement. Where devices are grouped, explain why the same conclusion applies to each member.",
+        "Keep the supporting correspondence and agreements together with the assessment. A project tracker saying 'application complete' is less useful than a clear reference to what was submitted, when, and for which scope. Resolve discrepancies between commercial product names and the identifiers in the formal records."
+      ]
+    },
+    {
+      "title": "Keep changes and supply planning connected",
+      "paragraphs": [
+        "A transition assessment should be revisited when design or intended-purpose changes are proposed. Maintain a decision process that considers the conditions applicable to legacy devices before implementing changes. A commercial improvement can have regulatory consequences even when the product remains in the same broad category.",
+        "Use the eligibility assessment in supply planning. Identify dependencies such as remaining conformity-assessment work, evidence gaps, and external review. Give management a view of what is confirmed, what is conditional, and what requires action. Do not present the most distant possible date as a guaranteed launch or supply commitment."
+      ]
+    }
+  ],
+  "example": "A hypothetical Class C IVD manufacturer sees an extended final date and postpones its notified-body application. The earlier application milestone is a separate condition, so that assumption can undermine the transition plan. A device-level tracker that distinguishes final dates from eligibility milestones makes the missed dependency visible before the business relies on it.",
+  "checklist": [
+    "Record the device's legacy regulatory history.",
+    "Confirm IVDR classification and transition eligibility.",
+    "Track application and agreement milestones separately.",
+    "Review proposed changes against transition conditions.",
+    "Base supply forecasts on documented status."
+  ],
+  "faq": {
+    "question": "Do the extended periods cover every IVD?",
+    "answer": "No. They concern qualifying devices and depend on conditions. New products and other devices outside the relevant provisions cannot rely on an extension simply because they belong to the same risk class as an eligible legacy device."
+  },
+  "seoTitle": "EU IVDR Transition Eligibility Guide | NKB Regovanta",
+  "image": "/assets/brain/eu_mdr_market_1786306179767.png",
+  "published": "2026-09-04",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "transition",
+    "transitionQA"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

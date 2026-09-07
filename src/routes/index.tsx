@@ -27,11 +27,11 @@ import {
     CheckCircle2,
     MessageSquareQuote,
 } from "lucide-react";
-import heroImage from "@/assets/hero-global.png";
+import heroImage from "@/assets/hero-global.optimized.webp";
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgCleanroomSolutions from "@/assets/mfg-cleanroom-solutions.jpg";
 import imgHealthcareProducts from "@/assets/mfg-healthcare-products.jpg";
-import imgComplianceSupport from "@/assets/mfg-compliance-support.png";
+import imgComplianceSupport from "@/assets/mfg-compliance-support.optimized.webp";
 
 // Client Logos
 import logoIpca from "@/assets/clients/ipca.png";
@@ -510,6 +510,9 @@ function Index() {
                         <div className="flex justify-center lg:justify-end mt-2 lg:mt-8">
                             <img
                                 src={heroImage}
+                                width={612}
+                                height={408}
+                                fetchPriority="high"
                                 alt="Global regulatory compliance for medical devices"
                                 className="w-full max-w-[580px] object-contain"
                             />
@@ -691,7 +694,7 @@ function Index() {
             <section className="py-6 sm:py-10 bg-surface/30 border-b border-border/40">
                 <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-3xl border border-gray-200/90 p-5 sm:p-8 lg:p-10 shadow-xs">
-                        
+
                         {/* Header with Title + CTA Button */}
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-gray-100">
                             <div className="max-w-3xl">
@@ -726,6 +729,8 @@ function Index() {
                                     <div className="h-44 sm:h-48 w-full overflow-hidden bg-slate-100 relative">
                                         <img
                                             src={sol.image}
+                                            loading="lazy"
+                                            decoding="async"
                                             alt={sol.title}
                                             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                         />
@@ -812,6 +817,8 @@ function Index() {
                                 <div className="h-20 w-full rounded-xl bg-white border border-gray-100/90 shadow-2xs flex items-center justify-center p-3 mb-4 group-hover:shadow-xs group-hover:scale-[1.03] transition-all duration-300">
                                     <img
                                         src={client.logo}
+                                            loading="lazy"
+                                            decoding="async"
                                         alt={client.name}
                                         className="max-h-14 max-w-[90%] object-contain"
                                     />
@@ -968,6 +975,8 @@ function Index() {
                                             <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
                                                 <img
                                                     src={t.logo}
+                                            loading="lazy"
+                                            decoding="async"
                                                     alt={t.company}
                                                     className="max-h-10 max-w-full object-contain"
                                                 />

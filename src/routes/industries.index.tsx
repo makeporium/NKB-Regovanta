@@ -4,7 +4,7 @@ import { CTABand } from "@/components/site/Bits";
 import imgMedical from "@/assets/industry-medical.png";
 import imgIVD from "@/assets/industry-ivd.png";
 import imgCosmetics from "@/assets/industry-cosmetics.png";
-import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.png";
+import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.optimized.webp";
 
 export const Route = createFileRoute("/industries/")({
     head: () => ({

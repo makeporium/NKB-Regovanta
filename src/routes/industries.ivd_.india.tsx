@@ -2,7 +2,7 @@
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Stethoscope, AlertTriangle, CheckCircle2, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
-import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.png";
+import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd_/india")({
     head: () => ({
@@ -179,7 +179,7 @@ function IVDIndia() {
 
                             {/* CDSCO IVD Application Flowchart */}
                             <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
-                                <img src={cdscoFlowchart} alt="CDSCO IVD Application Flowchart" className="w-full h-auto object-contain rounded-md" />
+                                <img width={2720} height={2800} src={cdscoFlowchart} alt="CDSCO IVD Application Flowchart" className="w-full h-auto object-contain rounded-md" />
                             </div>
 
                             <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">Key 2025–2026 Regulatory Updates</h2>
@@ -249,7 +249,7 @@ function IVDIndia() {
                 </div>
             </section>
 
-            <CTABand title="Secure CDSCO approval for your IVD products" btnText="Contact Our India Experts" />
+            <CTABand title="Secure CDSCO approval for your IVD products" action="Contact Our India Experts" />
         </>
     );
 }

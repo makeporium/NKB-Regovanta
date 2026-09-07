@@ -110,7 +110,7 @@ function RegulatoryAffairs() {
 
                         {/* Right column — image and markets */}
                         <div className="flex flex-col lg:items-end mt-2 lg:mt-8 -mr-4 sm:-mr-6 lg:-mr-8">
-                            <img src={imgReg} alt="Regulatory Strategy and Compliance" className="w-full max-w-[460px] object-contain" />
+                            <img width={456} height={393} src={imgReg} alt="Regulatory Strategy and Compliance" className="w-full max-w-[460px] object-contain" />
 
                             {/* Markets We Support - placed on the right side under the image */}
                             <div className="w-full w-full lg:w-[120%] lg:-ml-[20%] mt-8 pt-6 border-t border-navy/20">

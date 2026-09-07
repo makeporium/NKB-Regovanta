@@ -1,0 +1,56 @@
+{
+  "slug": "gspr-foundation-medical-device-development",
+  "title": "Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs",
+  "description": "Use GSPRs during device development to define measurable design inputs, evidence dependencies, and review gates before testing begins.",
+  "service": "/services/technical-documentation",
+  "intro": "A late GSPR review often finds a predictable problem: the team has completed substantial testing, but some of it does not support the final claims or configuration. Using the relevant requirements during development helps identify those gaps earlier. The objective is to influence product decisions while they are still affordable to change, not to add another end-stage checklist.",
+  "sections": [
+    {
+      "title": "Begin with the intended use and foreseeable conditions",
+      "paragraphs": [
+        "The MDR's general safety and performance requirements provide an organising framework for safety, performance, and information supplied with a device. At the concept stage, use the relevant requirements to ask what must be true for the proposed product to work acceptably in its intended setting.",
+        "Describe the user, environment, contact characteristics, operating conditions, and foreseeable misuse. Turn vague goals into reviewable design inputs. 'Easy to clean' is difficult to verify; a defined cleaning procedure, surface condition, and measurable acceptance criterion give the team something it can design and evaluate."
+      ],
+      "sourceKeys": [
+        "mdr"
+      ]
+    },
+    {
+      "title": "Build evidence dependencies into the project schedule",
+      "paragraphs": [
+        "Link each important requirement to a planned evaluation and the configuration needed for that evaluation. A packaging study may depend on a final packaging system; a usability evaluation may depend on stable instructions and interface behaviour. If those inputs change later, the relevance of the evidence needs review.",
+        "Use the dependency map when approving design changes. Ask which reports, instructions, and risk controls are affected, not only whether the physical modification is small. A minor change in a connector can alter compatibility or use-error risks even when it has little effect on the bill of materials."
+      ]
+    },
+    {
+      "title": "Give design reviews clear exit decisions",
+      "paragraphs": [
+        "A review should end with a decision about readiness, open risks, and the evidence still needed. Distinguish work that can proceed from work that would be wasted if an unresolved assumption changes. Record who accepts each remaining uncertainty and why it is reasonable to proceed.",
+        "At the transfer stage, check that the manufacturing and inspection controls can maintain the characteristics evaluated during development. A requirement verified on a carefully selected prototype may need a production control to remain true across routine output. Connecting those two steps makes the GSPR work useful to both product development and operations."
+      ]
+    }
+  ],
+  "example": "A hypothetical reusable instrument is initially intended for one cleaning method. During development, the commercial team adds compatibility with a second process. An early requirements review identifies the need to assess that added claim before instructions are finalised. If the team waits until the technical file is assembled, it may discover that the completed evaluation supports only the original process.",
+  "checklist": [
+    "Write measurable inputs for key safety and performance claims.",
+    "Identify the configuration needed for each evaluation.",
+    "Link design changes to affected evidence.",
+    "Set review gates around unresolved assumptions.",
+    "Connect verified characteristics to production controls."
+  ],
+  "faq": {
+    "question": "Do GSPRs need to become engineering specifications word for word?",
+    "answer": "No. Translate applicable expectations into product-specific requirements that can be evaluated. Retain the connection to the regulatory requirement, but write design inputs in language that the development team can implement and verify."
+  },
+  "seoTitle": "GSPR in Medical Device R&D | NKB Regovanta",
+  "image": "/assets/brain/eu_compliance_1786396542227.png",
+  "published": "2026-08-30",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "mdr"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

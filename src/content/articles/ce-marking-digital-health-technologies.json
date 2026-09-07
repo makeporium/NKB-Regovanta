@@ -1,0 +1,60 @@
+{
+  "slug": "ce-marking-digital-health-technologies",
+  "title": "CE Marking for Digital Health: Define the Product Before Planning the Evidence",
+  "description": "Plan EU medical software qualification, classification, clinical evidence, and release controls around a clearly defined intended purpose.",
+  "service": "/services/eu/mdr",
+  "intro": "A digital health product can combine appointment booking, medical measurements, clinical recommendations, and communication in one interface. Treating the entire platform as a single regulatory function can obscure the real questions. A useful CE-marking plan starts by identifying what each function does, who relies on it, and which decisions its output is intended to support.",
+  "sections": [
+    {
+      "title": "Draw the boundary around the medical function",
+      "paragraphs": [
+        "The European Commission's software guidance distinguishes qualification from classification. Qualification asks whether a function falls within medical-device or IVD legislation; classification addresses its risk category once that boundary is established. A smartphone interface or a cloud deployment does not answer either question. Document the medical purpose, input data, intended user, and significance of the output before choosing a classification rule.",
+        "Prepare a function map that separates medical analysis from storage, messaging, billing, and other supporting features. Show how the modules exchange information. A non-medical module can still affect the medical function through incorrect patient identification, delayed transmission, or corrupted data. Include those interfaces in the product's safety assessment."
+      ],
+      "sourceKeys": [
+        "euSoftware"
+      ]
+    },
+    {
+      "title": "Connect the claim to a measurable clinical question",
+      "paragraphs": [
+        "For medical software, technical correctness and clinical usefulness are related but different questions. A calculation may execute exactly as specified while its output is unsuitable for the patient group in the claim. The MDCG software-evaluation guidance provides a framework for considering the relationship between the output and the clinical condition, the software's technical performance, and its clinical performance.",
+        "Build an evidence table with a row for each proposed claim. Record the target population, reference method, evaluation dataset, acceptance criterion, and known limitation. Make exclusions visible: a model evaluated on adult hospital data should not silently acquire a paediatric home-use claim through a marketing edit."
+      ],
+      "sourceKeys": [
+        "euSoftwareEvidence"
+      ]
+    },
+    {
+      "title": "Treat deployment as part of the product definition",
+      "paragraphs": [
+        "Record the supported operating systems, hardware, cloud services, network assumptions, and software version associated with the evidence. Plan how the product responds to stale inputs, lost connectivity, or an unavailable third-party service. Users should be able to distinguish a current result from an old result that is merely still displayed.",
+        "Before each release, compare changes against the approved product description and risk controls. Decide which tests must be repeated, whether clinical evidence remains representative, and whether labelling needs revision. A release note that says only 'performance improvements' gives the regulatory team too little information to make that assessment."
+      ]
+    }
+  ],
+  "example": "Consider a hypothetical wound-assessment app that begins as a photo diary and later estimates infection risk. The new analytical function changes the regulatory discussion even if the camera and user interface remain unchanged. The team should define the risk estimate, intended users, clinical action, and target population, then plan suitable evaluation. Evidence that the photo uploads reliably would not establish that the infection estimate is clinically useful.",
+  "checklist": [
+    "Write a version-controlled intended-purpose statement.",
+    "Map medical functions, supporting modules, and data interfaces.",
+    "Document the classification rationale and unresolved questions.",
+    "Link each clinical claim to a defined evaluation.",
+    "Set change-review criteria for software, datasets, and deployment."
+  ],
+  "faq": {
+    "question": "Does every health app need CE marking as a medical device?",
+    "answer": "No. The assessment depends on the intended purpose and functions. Document the reasoning for functions outside device legislation as carefully as for those inside it, and reassess when analytical features or claims change."
+  },
+  "seoTitle": "CE Marking for Digital Health Under EU MDR | NKB Regovanta",
+  "image": "/assets/brain/cs_algorithm_claim_1786441224937.png",
+  "published": "2026-08-20",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "euSoftware",
+    "euSoftwareEvidence"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

@@ -445,7 +445,7 @@ function NZHubPage() {
             {/* Right Auckland Graphic with NZ Flag, Medsafe Shield, and Laptop */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[440px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img
+                <img width={326} height={240}
                   src={nzHeroImg}
                   alt="New Zealand Medsafe WAND Notification Auckland"
                   className="w-full h-auto object-cover rounded-xl"

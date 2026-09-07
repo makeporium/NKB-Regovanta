@@ -1,0 +1,58 @@
+{
+  "slug": "optimal-timing-usfda-510k-submission",
+  "title": "When to Submit a 510(k): Use Readiness Gates Instead of a Calendar Target",
+  "description": "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions.",
+  "service": "/services/usa/510k",
+  "intro": "The best submission date is not necessarily the earliest date on which a dossier can be uploaded. A 510(k) is more likely to be coherent when the claim, device configuration, comparison, and supporting evidence are stable. A readiness review helps distinguish a genuinely complete package from one that depends on assumptions still being resolved.",
+  "sections": [
+    {
+      "title": "Stabilise the regulatory argument",
+      "paragraphs": [
+        "Confirm the intended use, relevant device classification, and predicate strategy. FDA's 510(k) resources explain the substantial-equivalence framework; use that framework to identify the differences the submission must address. The commercial launch plan should reflect the claim actually supported by the evidence.",
+        "If a major pathway or study-design uncertainty remains, decide whether a focused regulatory interaction is appropriate before proceeding. Do not label an unresolved strategic question as a formatting task simply to keep the submission date unchanged."
+      ],
+      "sourceKeys": [
+        "fda510k",
+        "qsub"
+      ]
+    },
+    {
+      "title": "Check evidence and configuration together",
+      "paragraphs": [
+        "For each important report, verify that the tested configuration represents the submitted device and that acceptance criteria support the relevant claim. Identify deviations, unresolved results, and subsequent design changes. A report's completion date is not enough to establish that it remains applicable.",
+        "Use a readiness table that separates completed evidence, justified exclusions, and open gaps. Identify dependencies such as final software, labelling, or manufacturing configuration. If a planned update changes the evidence basis soon after submission, evaluate whether it is more efficient to resolve it before filing."
+      ]
+    },
+    {
+      "title": "Plan the review period as active work",
+      "paragraphs": [
+        "Reserve access to the engineers, clinical specialists, laboratory contacts, and document owners who may be needed to answer questions. Ensure that source records and analysis files are retrievable. A submission can be administratively complete while the team lacks the capacity to support it.",
+        "Set an internal response workflow with ownership, review, and cross-document consistency checks. Keep a controlled baseline of exactly what was submitted. Later answers should explain changes relative to that baseline rather than relying on an evolving folder in which the original version has disappeared."
+      ]
+    }
+  ],
+  "example": "A hypothetical team schedules filing immediately after a software test report is signed. A planned algorithm update will change the results presented in that report, and the final instructions are still being revised. A readiness gate exposes both dependencies. Management can then make an informed decision about timing instead of treating the signed report as evidence that the whole submission is ready.",
+  "checklist": [
+    "Confirm intended use and predicate strategy.",
+    "Match reports to the submitted configuration.",
+    "Resolve significant open evidence gaps.",
+    "Freeze and retain the submission baseline.",
+    "Reserve resources for review questions."
+  ],
+  "faq": {
+    "question": "Should a team wait until every future enhancement is complete?",
+    "answer": "No. Define a stable version and claim that the current evidence supports. Future enhancements can be managed separately through change control. The key is avoiding a submission whose own configuration or evidence remains unsettled."
+  },
+  "seoTitle": "FDA 510(k) Submission Timing Strategy | NKB Regovanta",
+  "image": "/assets/brain/usa_fda_regulatory_1786305043898.png",
+  "published": "2026-09-04",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fda510k",
+    "qsub"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

@@ -370,7 +370,7 @@ function EUIVDRPage() {
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#133d23] to-[#0a2012] p-4 text-center">
-                <img
+                <img width={113} height={118}
                   src={euIvdrDeviceImg}
                   alt="EU IVDR Laboratory Technology"
                   className="w-48 h-48 mx-auto object-contain mb-3 drop-shadow-xl"

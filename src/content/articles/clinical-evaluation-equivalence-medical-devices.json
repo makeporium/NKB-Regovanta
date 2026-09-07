@@ -1,0 +1,56 @@
+{
+  "slug": "clinical-evaluation-equivalence-medical-devices",
+  "title": "Clinical Equivalence Under EU MDR: Establish What the Comparison Can Support",
+  "description": "Evaluate technical, biological, and clinical equivalence, data access, and evidence gaps before relying on another device's clinical data.",
+  "service": "/services/eu/clinical-evaluation",
+  "intro": "A familiar competitor product can look like an easy starting point for a clinical evaluation. The difficult question is whether its data actually supports the claims of the device being assessed. A credible equivalence argument explains the relevant similarities, the differences, and the evidence available to evaluate those differences. A visual resemblance or matching catalogue description is not enough.",
+  "sections": [
+    {
+      "title": "Keep equivalence separate from general similarity",
+      "paragraphs": [
+        "MDCG 2020-5 addresses technical, biological, and clinical characteristics when demonstrating equivalence under the MDR. The assessment needs to establish that relevant differences do not produce a clinically significant difference in safety or clinical performance. Similar-device information can have other uses in an evaluation, but it should not be presented as equivalent-device evidence without the necessary justification.",
+        "Build a comparison using the actual claimed purpose, patient population, contact characteristics, design, and performance. Record the source behind every important statement. If a field cannot be established from reliable information, mark it as unknown rather than assuming that two products share a characteristic."
+      ],
+      "sourceKeys": [
+        "equivalence"
+      ]
+    },
+    {
+      "title": "Assess the evidence you can genuinely access",
+      "paragraphs": [
+        "A published study may describe clinical outcomes without disclosing manufacturing details, material composition, or the exact configuration evaluated. Decide whether the available information is sufficient for the proposed argument. Where additional access arrangements are relevant, resolve them before basing the development schedule on equivalence.",
+        "Keep an evidence-gap log that explains the consequence of each unknown. A missing administrative detail may be easy to resolve; an unknown patient-contact material can affect the biological comparison. This prioritisation helps the team decide whether to obtain information, narrow the argument, generate additional evidence, or adopt a different clinical strategy."
+      ]
+    },
+    {
+      "title": "Make the clinical evaluation useful even if equivalence fails",
+      "paragraphs": [
+        "Do not allow a weak equivalence argument to become the only route to project completion. Plan how the manufacturer's own data, relevant literature, clinical investigations where required, and post-market information contribute to the overall evaluation. Equivalence is an evidence route, not a replacement for an evaluation.",
+        "Make each conclusion traceable to a claim and identify the remaining uncertainty. A product can have substantial engineering evidence while still lacking support for a particular clinical benefit. Keeping those distinctions visible allows management to change the claim or evidence plan before a reviewer raises the same issue."
+      ]
+    }
+  ],
+  "example": "Consider two hypothetical dressings advertised for the same wound category. One uses a different contact layer and makes a longer-wear claim. Comparing dimensions and absorbency alone would leave important questions unresolved. The team should assess the changed contact characteristics and clinical use, identify the information available, and determine whether additional evidence is needed. Similar intended applications do not automatically establish equivalence.",
+  "checklist": [
+    "Compare technical, biological, and clinical characteristics.",
+    "Identify the source and reliability of each comparison.",
+    "Record unknowns and their impact on the argument.",
+    "Check data-access requirements for the proposed route.",
+    "Maintain an evidence plan that does not depend on an unsupported assumption."
+  ],
+  "faq": {
+    "question": "Can similar-device literature still be useful without equivalence?",
+    "answer": "Yes. It may inform the state of the art, known risks, or evaluation design. Clearly distinguish that supporting context from evidence claimed to demonstrate the subject device's safety or clinical performance through equivalence."
+  },
+  "seoTitle": "EU MDR Clinical Equivalence Guide | NKB Regovanta",
+  "image": "/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
+  "published": "2026-08-26",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "equivalence"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

@@ -131,7 +131,7 @@ function USACosmetics() {
                Our structured, cost-effective approach guarantees that your brand meets every FDA requirement while accelerating your speed-to-market across the United States.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-8 rounded-md bg-surface/50 border border-border hover:bg-surface transition-colors">
@@ -171,7 +171,7 @@ function USACosmetics() {
         </div>
       </section>
 
-      <CTABand title="Ensure your cosmetics are FDA compliant" btnText="Contact Our US Experts" />
+      <CTABand title="Ensure your cosmetics are FDA compliant" action="Contact Our US Experts" />
     </>
   );
 }

@@ -1,0 +1,56 @@
+{
+  "slug": "effective-capa-system-medical-devices",
+  "title": "Medical Device CAPA: Show That the Cause Was Addressed",
+  "description": "Build CAPA records around problem definition, investigation, cause-based actions, effectiveness measures, and a justified closure decision.",
+  "service": "/services/iso-13485",
+  "intro": "A CAPA system is easy to measure by closed records and harder to judge by recurring problems. Closure is useful only when the investigation supports the action and follow-up shows that the action worked. Start by making the problem precise enough that the team can tell whether it has actually improved.",
+  "sections": [
+    {
+      "title": "Define the problem before proposing the action",
+      "paragraphs": [
+        "Describe what failed, where it occurred, how often it was observed, and what evidence establishes the issue. Separate immediate correction or containment from work intended to address the cause. Replacing a damaged unit may help the affected customer without explaining why the damage occurred.",
+        "For organisations supplying the US market, place the process within the current QMSR and applicable quality-system requirements. Write records in practical language: what was observed, investigated, concluded, and changed. A form with every box populated can still contain a weak investigation."
+      ],
+      "sourceKeys": [
+        "qmsrFaq"
+      ]
+    },
+    {
+      "title": "Investigate a cause that explains the evidence",
+      "paragraphs": [
+        "Use records, process observations, measurements, and interviews to test possible explanations. Avoid defaulting to 'operator error' when the instruction, equipment, workload, or acceptance criteria may have contributed. A credible cause should explain why the problem occurred and why existing controls did not prevent or detect it.",
+        "Match the action to that explanation. If inconsistent component specifications caused the problem, retraining alone is unlikely to be enough. Consider whether the condition affects other products, sites, or suppliers. Document the basis for the chosen scope rather than expanding or restricting it without reasoning."
+      ]
+    },
+    {
+      "title": "Define effectiveness before closing the record",
+      "paragraphs": [
+        "Choose the measure and observation period before evaluating success. The measure should address recurrence or control performance under relevant operating conditions. 'Training completed' verifies implementation of an action, not necessarily its effectiveness.",
+        "Check for unintended consequences and document the closure decision. If results are inconclusive, explain what additional information is needed. Management should distinguish overdue administration from an unresolved quality problem and provide resources accordingly. Another reviewer should be able to understand why closure was justified without interviewing the investigator."
+      ]
+    }
+  ],
+  "example": "A hypothetical packaging line has intermittent seal defects. Investigation shows that a fixture wears beyond its useful range before scheduled maintenance. A cause-based action could revise the fixture control and its detection method. Effectiveness should be checked using meaningful production evidence, not merely the existence of a revised maintenance instruction.",
+  "checklist": [
+    "Define the failure and evidence of its extent.",
+    "Separate containment from cause-based action.",
+    "Test plausible explanations.",
+    "Set effectiveness criteria before evaluation.",
+    "Document recurrence checks and the closure rationale."
+  ],
+  "faq": {
+    "question": "Is completing the action plan the same as proving effectiveness?",
+    "answer": "No. Completion shows that the planned change was implemented. Effectiveness addresses whether it achieved the intended result under relevant conditions. Keep both decisions visible in the record."
+  },
+  "seoTitle": "ISO 13485 & QMSR CAPA System Guide | NKB Regovanta",
+  "image": "/assets/brain/qms_inspection_office.jpg",
+  "published": "2026-09-03",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "qmsrFaq"
+  ],
+  "imageWidth": 1376,
+  "imageHeight": 768,
+  "category": "QUALITY & SOFTWARE"
+}

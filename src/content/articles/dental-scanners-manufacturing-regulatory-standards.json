@@ -1,0 +1,60 @@
+{
+  "slug": "dental-scanners-manufacturing-regulatory-standards",
+  "title": "Dental Scanner Development: Validate the Scan-to-Decision Workflow",
+  "description": "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows.",
+  "service": "/services/technical-documentation",
+  "intro": "A dental scanner produces more than a visually attractive model. Its output may inform a restoration, appliance, treatment plan, or another clinical decision. The regulatory and development questions therefore depend on the claimed use of the scan and the workflow that turns it into a result. A demonstration that the device captures an image is only one part of that assessment.",
+  "sections": [
+    {
+      "title": "Define the claimed output and downstream use",
+      "paragraphs": [
+        "Identify the scanner's intended purpose and the markets in which it will be supplied. FDA classification research begins with the device type and intended use; the relevant entry should be checked for the actual product. Avoid assigning one pathway to every dental imaging product, since technologies and clinical functions differ.",
+        "Document whether the output is used for visual inspection, measurement, restoration design, or another defined activity. State which software and downstream systems are covered by the claim. If interoperability is limited to specified formats or versions, make those limits part of the product definition rather than leaving them to a sales conversation."
+      ],
+      "sourceKeys": [
+        "fdaClass"
+      ]
+    },
+    {
+      "title": "Build an evaluation around the complete workflow",
+      "paragraphs": [
+        "Define the dimensions or outcomes that matter for the intended application and select a justified reference method. Consider the range of conditions represented in evaluation: scan area, surface properties, access, operator technique, and the processing steps applied to the acquired data. Acceptance criteria should connect to the claimed use rather than a convenient marketing number.",
+        "Distinguish acquisition performance from software processing and export behaviour. A raw dataset can be accurate while later smoothing, stitching, or conversion affects the output. Preserve the software version and settings used for evaluation, and assess whether later changes alter the supported claims."
+      ],
+      "sourceKeys": [
+        "fdaSoftware"
+      ]
+    },
+    {
+      "title": "Include the reusable interface and operator workflow",
+      "paragraphs": [
+        "Where components contact the patient or are reused, define the associated handling, cleaning, and processing instructions and the evidence needed for those claims. Keep the evaluated configuration aligned with the actual tips, sleeves, accessories, and materials supplied. Changes in those parts can affect more than appearance.",
+        "Observe representative users performing setup, scanning, identification, and transfer tasks. Look for incorrect patient selection, incomplete coverage, and uncertainty about whether a scan is acceptable. Use those observations to improve the interface and instructions before relying on a final evaluation."
+      ]
+    }
+  ],
+  "example": "A hypothetical scanner performs well on a laboratory model, but the exported file loses a measurement unit during transfer to a design tool. The acquisition result remains technically correct while the downstream workflow becomes unreliable. An end-to-end evaluation would test the supported export and receiving configuration, not stop at the scanner's own preview screen.",
+  "checklist": [
+    "Define the clinical use of the output.",
+    "Confirm the device-specific classification and pathway.",
+    "Evaluate acquisition, processing, and export together.",
+    "Control software settings and accessory configurations.",
+    "Review patient identification, reuse, and operator tasks."
+  ],
+  "faq": {
+    "question": "Can one scan-accuracy figure establish readiness for every dental application?",
+    "answer": "No. The significance of an error depends on the intended application and evaluation method. Define the claim, conditions, reference, and acceptance criteria, and avoid extending a result beyond the workflow that was actually evaluated."
+  },
+  "seoTitle": "Intraoral Dental Scanner Regulations | NKB Regovanta",
+  "image": "/assets/brain/cleanroom_manufacturing.jpg",
+  "published": "2026-09-02",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "fdaClass",
+    "fdaSoftware"
+  ],
+  "imageWidth": 1376,
+  "imageHeight": 768,
+  "category": "US FDA"
+}

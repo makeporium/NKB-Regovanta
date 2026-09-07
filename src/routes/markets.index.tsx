@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2, Users, FileCheck2, Handshake } from "lucide-react";
-import mapImage from "@/assets/map2.png";
+import mapImage from "@/assets/map2.optimized.webp";
 
 export const Route = createFileRoute("/markets/")({
     head: () => ({
@@ -97,7 +97,7 @@ function Markets() {
 
                     {/* Right — break out to right viewport edge, no crop */}
                     <div className="flex-1 w-full lg:-mr-8 -mr-4 mt-6 lg:mt-0">
-                        <img
+                        <img width={1672} height={940}
                             src={mapImage}
                             alt="Global Markets Map"
                             className="w-full h-auto object-cover"

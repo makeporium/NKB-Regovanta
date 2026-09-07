@@ -144,7 +144,7 @@ function EUCosmetics() {
                With years of experience guiding cosmetic brands through the complexities of European registration, we ensure your products meet all compliance requirements without sacrificing speed-to-market.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-8 rounded-md bg-surface/50 border border-border hover:bg-surface transition-colors">
@@ -184,7 +184,7 @@ function EUCosmetics() {
         </div>
       </section>
 
-      <CTABand title="Partner with us for seamless EU market access" btnText="Contact Our EU Experts" />
+      <CTABand title="Partner with us for seamless EU market access" action="Contact Our EU Experts" />
     </>
   );
 }

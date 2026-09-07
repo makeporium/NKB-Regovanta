@@ -1,0 +1,58 @@
+{
+  "slug": "cdsco-medical-device-manufacturing-license-india",
+  "title": "CDSCO Manufacturing Licences: Prepare the Product and Site Evidence Together",
+  "description": "Plan an Indian medical-device manufacturing application around classification, site scope, product evidence, and consistent licence documentation.",
+  "service": "/industries/medical-devices/india/for-manufacturer",
+  "intro": "A manufacturing application can stall even when the individual documents look complete. Common problems arise at their boundaries: the site name differs between records, a product family is described inconsistently, or the claimed manufacturing activity is not reflected in the quality documentation. Preparing the product and site evidence together reduces those avoidable inconsistencies.",
+  "sections": [
+    {
+      "title": "Confirm the route before building the dossier",
+      "paragraphs": [
+        "India's Medical Devices Rules, 2017 and subsequent amendments provide the framework. CDSCO describes different manufacturing and loan-licence routes by risk class. For Class C and D devices, its published information identifies MD-7 and MD-8 applications and MD-9 and MD-10 licences. Do not select forms from a generic checklist without first confirming classification and the applicant's actual activities.",
+        "Check whether a specific exemption or amended provision applies, including the provisions for eligible non-sterile, non-measuring Class A devices. Keep the classification rationale and the applicable notification with the project records. Product names alone can be misleading when intended uses differ."
+      ],
+      "sourceKeys": [
+        "cdsco",
+        "indiaRules"
+      ]
+    },
+    {
+      "title": "Define what happens at each site",
+      "paragraphs": [
+        "Map the manufacturing activities from receipt of materials to finished-device release. Identify which steps occur at the applicant's site and which are outsourced, such as sterilisation, specialised testing, or packaging. Align that map with the proposed licence scope, supplier controls, and the records used to demonstrate that the finished product meets its specifications.",
+        "Prepare a controlled product list with model identifiers, intended uses, and relevant family relationships. Check that names and addresses agree across authorisations, certificates, labels, and application fields. Where one document covers a wider scope than the application, make the relevant portion clear rather than expecting the reviewer to infer it."
+      ]
+    },
+    {
+      "title": "Check readiness beyond the portal upload",
+      "paragraphs": [
+        "Assign a named owner to each evidence gap and distinguish a document that exists from a process that is operating. For example, a calibration procedure does not establish that the equipment used for release testing is currently controlled. Review records that demonstrate actual implementation of the proposed manufacturing process.",
+        "Before submission, run a consistency review across the product description, manufacturing flow, quality evidence, and labelling. After submission, maintain a response log that connects each query to the revised document and its effect on the rest of the application. Do not make an isolated correction that creates a new discrepancy elsewhere."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer applies for a family of reusable instruments while one variant is supplied sterile by an external processor. A single undifferentiated product description hides that difference. Separating the relevant configurations, defining outsourced responsibilities, and aligning labels with the supporting evidence makes the proposed scope clearer. The right application route still depends on the actual devices and current rules.",
+  "checklist": [
+    "Record classification and the applicable legal route.",
+    "Map applicant, manufacturing sites, and outsourced activities.",
+    "Control product names and model identifiers.",
+    "Check evidence of implemented site controls.",
+    "Review every query response for cross-document effects."
+  ],
+  "faq": {
+    "question": "Can a manufacturing-licence checklist be reused for every device?",
+    "answer": "It can provide a starting structure, but product class, intended use, site activities, and current amendments affect the application. Tailor the evidence and form selection to the actual product rather than treating a previous dossier as a universal template."
+  },
+  "seoTitle": "CDSCO Device Manufacturing License Guide | NKB Regovanta",
+  "image": "/assets/brain/india_cdsco_market_1786307143373.png",
+  "published": "2026-08-28",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "cdsco",
+    "indiaRules"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "CDSCO INDIA"
+}

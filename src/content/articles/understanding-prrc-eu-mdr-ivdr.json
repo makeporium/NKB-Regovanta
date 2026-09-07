@@ -1,0 +1,60 @@
+{
+  "slug": "understanding-prrc-eu-mdr-ivdr",
+  "title": "Appointing a PRRC: Make the Responsibility Work Beyond the Contract",
+  "description": "Define a workable PRRC arrangement with appropriate qualifications, access to evidence, escalation routes, and clear manufacturer responsibilities.",
+  "service": "/services/eu/mdr",
+  "intro": "Naming a person responsible for regulatory compliance is only the beginning of a workable PRRC arrangement. The person needs access to the records and decisions that sit behind the role. Manufacturers should therefore design the appointment around how conformity, documentation, and post-market decisions are actually made, rather than treating the role as a signature purchased at the end of a project.",
+  "sections": [
+    {
+      "title": "Check eligibility and the organisational arrangement",
+      "paragraphs": [
+        "Article 15 of the MDR and IVDR establishes the PRRC role. The MDCG guidance explains the relevant qualification routes and organisational expectations, including the provisions for micro and small enterprises. Determine which arrangement applies to the business and retain evidence that the named person satisfies the applicable criteria.",
+        "Start with a written role description and an organisational chart. Identify the legal manufacturer, product scope, and relevant locations. If an external arrangement is used where permitted, specify availability, access, and continuity. A service contract that promises a named contact but says nothing about response or evidence access leaves important operational questions unanswered."
+      ],
+      "sourceKeys": [
+        "mdcg",
+        "mdr",
+        "ivdr"
+      ]
+    },
+    {
+      "title": "Define access to the decisions behind compliance",
+      "paragraphs": [
+        "Map the role to the company's existing workflows. Consider release checks, technical-documentation updates, declarations of conformity, post-market activities, and reportability decisions. Clarify which records the PRRC receives routinely, which require involvement before a decision, and which events trigger immediate escalation.",
+        "Keep operational ownership clear. Design engineers remain responsible for their work, production teams for their records, and management for providing resources. The PRRC arrangement should make oversight possible without implying that a single person personally performs every compliance activity. Document who can stop an inappropriate release and how disagreements are resolved."
+      ]
+    },
+    {
+      "title": "Plan continuity and review the arrangement",
+      "paragraphs": [
+        "A workable appointment anticipates leave, departure, product expansion, and organisational changes. Keep a handover package with the current portfolio, open regulatory commitments, significant investigations, and access instructions. A successor should not have to reconstruct the company's compliance position from email threads.",
+        "Review the arrangement when a new device family, acquisition, or market strategy changes the workload. Use a small set of practical measures: overdue decisions, missing information, time to escalate significant concerns, and unresolved resource constraints. These measures help management determine whether the role is sufficiently supported rather than merely present on paper."
+      ]
+    }
+  ],
+  "example": "A hypothetical small IVD manufacturer appoints an external PRRC but informs them of label changes only after release. The contract is in place, yet the workflow prevents timely oversight. A better arrangement defines which changes require advance review, provides controlled access to the evidence, and assigns a substitute for planned absences. It also identifies who makes the final release decision and how a concern is escalated.",
+  "checklist": [
+    "Document the applicable qualification route.",
+    "Define the legal entity, products, and scope covered.",
+    "Provide controlled access to relevant compliance records.",
+    "Set escalation, availability, and continuity arrangements.",
+    "Review capacity when the product portfolio changes."
+  ],
+  "faq": {
+    "question": "Does appointing a PRRC transfer the manufacturer's obligations?",
+    "answer": "No. The appointment supports the manufacturer's compliance arrangements. It should clarify oversight and accountability while preserving the responsibilities of the legal manufacturer and the teams performing the work."
+  },
+  "seoTitle": "PRRC Role Under EU MDR & EU IVDR | NKB Regovanta",
+  "image": "/assets/brain/eu_compliance_1786396542227.png",
+  "published": "2026-08-24",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "mdcg",
+    "mdr",
+    "ivdr"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

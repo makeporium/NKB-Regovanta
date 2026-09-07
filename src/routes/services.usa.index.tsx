@@ -216,7 +216,7 @@ function USAMarket() {
 
                         <div className="flex justify-center lg:justify-end items-center mt-4 lg:mt-0">
                             <div className="w-full max-w-[560px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80 bg-white hover:shadow-xl transition-all duration-300">
-                                <img
+                                <img width={1015} height={781}
                                     src={usaHeroImg}
                                     alt="US FDA Medical Device Clearance, Establishment Registration & QMSR Compliance"
                                     className="w-full h-auto object-contain"

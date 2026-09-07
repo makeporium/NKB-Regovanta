@@ -1,3 +1,5 @@
+// Retired: scraped text is not an approved source for published articles.
+throw new Error("Scraped article publishing is disabled. Write original, source-checked articles in src/routes instead.");
 const fs = require('fs');
 const path = require('path');
 
@@ -148,7 +150,7 @@ function ArticlePage() {
 
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          
+
           <Link to="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-navy/70 hover:text-navy transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" /> Back to Insights
           </Link>
@@ -169,10 +171,10 @@ function ArticlePage() {
             ${meta.subtitle}
           </p>
 
-          <img 
-            src={imgArticle} 
-            alt="${meta.title.replace(/"/g, '&quot;')}" 
-            className="w-full h-[380px] sm:h-[420px] object-cover rounded-xl mb-12 shadow-md border border-gray-100" 
+          <img
+            src={imgArticle}
+            alt="${meta.title.replace(/"/g, '&quot;')}"
+            className="w-full h-[380px] sm:h-[420px] object-cover rounded-xl mb-12 shadow-md border border-gray-100"
           />
 
           <div className="prose prose-lg max-w-none text-navy/80 space-y-6 leading-relaxed">
@@ -206,10 +208,10 @@ ${jsxContent}
         </div>
       </article>
 
-      <CTABand 
-        title="Ready to navigate your medical device regulatory pathway?" 
-        description="Speak directly with NKB Regovanta's senior regulatory consultants for clear, practical guidance." 
-        action="Schedule a Consultation" 
+      <CTABand
+        title="Ready to navigate your medical device regulatory pathway?"
+        description="Speak directly with NKB Regovanta's senior regulatory consultants for clear, practical guidance."
+        action="Schedule a Consultation"
       />
     </>
   );

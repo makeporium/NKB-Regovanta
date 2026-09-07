@@ -1,0 +1,60 @@
+{
+  "slug": "fda-510k-program-modernization-safety-standards",
+  "title": "510(k) Modernisation: Assess Predicate Relevance and Performance Evidence",
+  "description": "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway.",
+  "service": "/services/usa/510k",
+  "intro": "Discussion about 510(k) modernisation can be reduced to an unhelpful rule: choose the newest predicate. A stronger strategy examines the legally marketed comparison, intended use, technology, and quality of the available evidence. It also distinguishes a published final policy from a proposal or discussion that has not become a requirement.",
+  "sections": [
+    {
+      "title": "Evaluate the predicate beyond its clearance date",
+      "paragraphs": [
+        "FDA's predicate resources explain how legally marketed devices support the substantial-equivalence comparison. The date of a predicate's clearance is relevant context, but it should not replace analysis of intended use, technological characteristics, and the information available for comparison.",
+        "Prepare a selection rationale that considers the proposed device and its differences. Review relevant public information rather than choosing a predicate only because its name resembles the new product. An older comparison may present evidence limitations; a newer one may still be unsuitable for the proposed intended use."
+      ],
+      "sourceKeys": [
+        "predicate"
+      ]
+    },
+    {
+      "title": "Understand the scope of performance-based options",
+      "paragraphs": [
+        "FDA's Safety and Performance Based Pathway is an optional approach for certain well-understood device types with FDA-identified performance criteria. It is not a universal replacement for the 510(k) framework. Confirm that the device type, criteria, and intended approach are applicable before building the test programme around it.",
+        "Document which criteria apply, the methods used, and how the results will support the submission. Do not substitute a general industry benchmark for an FDA-identified criterion without examining whether that is appropriate to the chosen route."
+      ],
+      "sourceKeys": [
+        "fdaPerformance"
+      ]
+    },
+    {
+      "title": "Track policy status as part of the strategy",
+      "paragraphs": [
+        "Maintain a short policy register for the project with document title, issuing authority, date, and final or draft status. When a new publication appears, assess its effect on the actual device and evidence plan. Avoid automatically rewriting the strategy because a headline describes a broad programme change.",
+        "Keep the underlying scientific argument coherent as submission tools and guidance evolve. A digital template can improve organisation, but it cannot establish an unsupported claim or resolve an inappropriate comparator. Review the evidence first, then ensure the package follows the current applicable submission instructions."
+      ]
+    }
+  ],
+  "example": "A hypothetical team replaces its proposed predicate with a recently cleared device solely because it is newer. The newer product has a different intended population and provides less useful information for the comparison. A structured selection review could show that the change weakened the argument. The decision should follow relevance and evidence, not age alone.",
+  "checklist": [
+    "Record why the predicate fits the proposed comparison.",
+    "Assess differences and public evidence limitations.",
+    "Verify eligibility for performance-based options.",
+    "Distinguish final policies from draft proposals.",
+    "Keep the submission argument independent of its template."
+  ],
+  "faq": {
+    "question": "Does modernisation mean every old predicate is automatically invalid?",
+    "answer": "Do not infer a blanket rule from programme discussions. Check the applicable FDA requirements and the particular predicate's status and relevance. The selection needs a device-specific rationale supported by current official information."
+  },
+  "seoTitle": "FDA 510(k) Modernization Guide | NKB Regovanta",
+  "image": "/assets/brain/usa_fda_market_1786305218141.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "predicate",
+    "fdaPerformance"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

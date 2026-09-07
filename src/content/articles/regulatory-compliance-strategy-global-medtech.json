@@ -1,0 +1,60 @@
+{
+  "slug": "regulatory-compliance-strategy-global-medtech",
+  "title": "Global MedTech Strategy: Sequence Markets Around Reusable Evidence",
+  "description": "Separate reusable product evidence from market-specific classification, representation, and submission needs in a global regulatory plan.",
+  "service": "/services/market-access",
+  "intro": "A global launch plan should do more than list countries and estimated filing dates. Its value comes from showing which decisions and evidence are shared, which obligations differ, and where an early market choice affects later work. This allows investment in evidence that supports the commercial plan without assuming one authorisation opens every market.",
+  "sections": [
+    {
+      "title": "Create a common product baseline",
+      "paragraphs": [
+        "Use one controlled description of the device, intended use, configurations, and manufacturing arrangements. Record proposed variations by market rather than allowing teams to develop incompatible descriptions. A different indication or accessory can change the evidence needed even when the brand name stays the same.",
+        "Identify evidence packages that may support several markets: design performance, biological evaluation where relevant, software, usability, quality controls, and clinical or performance evaluation. For each, record the configuration and claims represented so that later reuse is an informed decision."
+      ]
+    },
+    {
+      "title": "Build a market-specific requirements layer",
+      "paragraphs": [
+        "Assess classification, pathway, local representation, registration, labelling, and post-market obligations separately for each market. FDA's pathway resources, the EU frameworks, and CDSCO's rules illustrate why these decisions cannot be assumed to match. Record the source and date behind each important requirement.",
+        "Mark which differences require new evidence and which require adaptation of existing information. A translation task, a different administrative applicant, and an additional clinical claim are not equivalent schedule items. Grouping them under 'localisation' can hide the real cost and lead time."
+      ],
+      "sourceKeys": [
+        "fdaPathway",
+        "mdr",
+        "cdsco"
+      ]
+    },
+    {
+      "title": "Sequence work by dependencies and business value",
+      "paragraphs": [
+        "Compare market priority with evidence readiness, operational capacity, and unresolved questions. An early filing is not always the best use of resources if a planned design change will invalidate its supporting configuration. A focused initial claim may provide a manageable first step if the commercial team understands its limits.",
+        "Maintain a decision log for changes in market sequence, product scope, and evidence strategy. Review the plan after significant authority feedback or a major product change. The result should support current business decisions, rather than remain fixed while its assumptions disappear."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer plans a home-use version shortly after launching a professional-use device. Treating it as a label adaptation may overlook different users, environments, and supporting evidence. Mapping the claim change early helps the team choose which evaluations can be shared and which must specifically address home use.",
+  "checklist": [
+    "Control the product baseline and market variations.",
+    "Map reusable evidence to configurations and claims.",
+    "Assess each market's pathway and operational obligations.",
+    "Separate administrative adaptation from new evidence.",
+    "Review launch sequencing when assumptions change."
+  ],
+  "faq": {
+    "question": "Can an existing approval be reused as the complete submission elsewhere?",
+    "answer": "Do not assume so. It may support a particular route or provide useful evidence, but the receiving jurisdiction's requirements still apply. Check the specific provisions and approved scope before planning reuse."
+  },
+  "seoTitle": "Global MedTech Regulatory Strategy Guide | NKB Regovanta",
+  "image": "/assets/brain/media__1786282925761.optimized.webp",
+  "published": "2026-09-03",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "fdaPathway",
+    "mdr",
+    "cdsco"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 682,
+  "category": "CDSCO INDIA"
+}

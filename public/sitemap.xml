@@ -1,88 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- CORE PAGES (6) -->
-  <url><loc>https://www.nkbregovanta.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.nkbregovanta.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/markets</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/industries</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- COUNTRY HUBS (10) -->
-  <url><loc>https://www.nkbregovanta.com/services/india</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/usa</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/eu</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/uk</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/canada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/australia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/brazil</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/saudi-arabia</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/uae</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/new-zealand</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
-  <!-- HIGH-VALUE SERVICE PAGES -->
-  <url><loc>https://www.nkbregovanta.com/services/usa/510k</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/usa/agent-service</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/uk/ukrp</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/eu/mdr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/eu/ivdr</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/eu/ce-marking</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/india/medical-devices</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/india/ivd</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/iso-13485</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/mdsap</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/manufacturing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/regulatory-affairs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/regulatory-due-diligence</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/market-access</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/drug-licenses-for-importers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/wpc-wireless-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/pc-pndt-certificate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/drug-device-combination-products</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/services/iec-ad-code</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
-  <!-- INDUSTRIES -->
-  <url><loc>https://www.nkbregovanta.com/industries/medical-devices</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.nkbregovanta.com/industries/cosmetics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/industries/ivd</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- CASE STUDIES (7) -->
-  <url><loc>https://www.nkbregovanta.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/algorithm-claim</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/australia-tga</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/eu-mdr-remediation</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/fda-biocompatibility</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/fda-simulated-use</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/case-studies/test-smarter</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-
-  <!-- INSIGHTS HUB + PILLAR GUIDES -->
-  <url><loc>https://www.nkbregovanta.com/insights</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/samd-classification-submission-usfda</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
-  <!-- AI NEWS -->
-  <url><loc>https://www.nkbregovanta.com/ai-news</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-
+  <url><loc>https://www.nkbregovanta.com</loc></url>
+  <url><loc>https://www.nkbregovanta.com/about</loc></url>
+  <url><loc>https://www.nkbregovanta.com/ai-news</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/algorithm-claim</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/australia-tga</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/eu-mdr-remediation</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/fda-biocompatibility</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/fda-simulated-use</loc></url>
+  <url><loc>https://www.nkbregovanta.com/case-studies/test-smarter</loc></url>
+  <url><loc>https://www.nkbregovanta.com/contact</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries/cosmetics</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries/ivd</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries/medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries/medical-devices/india/for-importer</loc></url>
+  <url><loc>https://www.nkbregovanta.com/industries/medical-devices/india/for-manufacturer</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/samd-classification-submission-usfda</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr</loc></url>
+  <url><loc>https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366</loc></url>
+  <url><loc>https://www.nkbregovanta.com/markets</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/australia</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/brazil</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/canada</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/drug-device-combination-products</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/drug-licenses-for-importers</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/eu</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/eu/ce-marking</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/eu/ivdr</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/eu/mdr</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/iec-ad-code</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/india</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/india/ivd</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/india/medical-devices</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/iso-13485</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/manufacturing</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/market-access</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/mdsap</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/new-zealand</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/pc-pndt-certificate</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/regulatory-affairs</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/regulatory-due-diligence</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/saudi-arabia</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/uae</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/uk</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/uk/ukrp</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/usa</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/usa/510k</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/usa/agent-service</loc></url>
+  <url><loc>https://www.nkbregovanta.com/services/wpc-wireless-medical-devices</loc></url>
 </urlset>

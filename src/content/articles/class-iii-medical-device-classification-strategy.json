@@ -1,0 +1,58 @@
+{
+  "slug": "class-iii-medical-device-classification-strategy",
+  "title": "FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies",
+  "description": "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA.",
+  "service": "/services/usa/pma",
+  "intro": "A device's commercial description does not establish its FDA classification. Terms such as innovative, implantable, or life-supporting can signal important questions, but the regulatory assessment needs the actual intended use and applicable classification information. Getting that assessment wrong can send a team into studies that do not answer the questions for its eventual submission.",
+  "sections": [
+    {
+      "title": "Research the device type and applicable controls",
+      "paragraphs": [
+        "FDA provides classification information organised around device types, regulations, and product codes. Start with the proposed intended use and identify the potentially applicable entries. Record why each candidate does or does not fit, including differences in patient population, clinical use, and technology. A competitor's pathway is a research lead, not a classification decision for a different product.",
+        "Class III devices generally follow the PMA route, subject to the applicable regulatory provisions. Novelty alone does not establish Class III: FDA also has a De Novo pathway for certain novel devices of low to moderate risk. Resolve the classification and pathway questions together rather than equating every device without a convenient predicate with PMA."
+      ],
+      "sourceKeys": [
+        "fdaClass",
+        "fdaPathway"
+      ]
+    },
+    {
+      "title": "Define the evidence questions before commissioning work",
+      "paragraphs": [
+        "Translate the proposed claims into a list of safety and effectiveness questions. Separate what bench testing can establish from what needs clinical evidence or other evaluation. Identify the device configuration, target population, endpoints, follow-up, and comparison strategy relevant to each question.",
+        "Build dependencies into the plan. A clinical protocol written before the intended use is stable may become unsuitable when the target population changes. Similarly, changes to the final design can affect whether early testing represents the device to be marketed. Make those dependencies visible to the team approving the budget."
+      ]
+    },
+    {
+      "title": "Use uncertainty to shape the regulatory interaction",
+      "paragraphs": [
+        "A useful early discussion presents a defined device, a specific uncertainty, and a proposed approach. Prepare the reasoning behind the proposal and identify the decision that depends on the answer. Broad requests for FDA to design the whole development programme make it difficult to obtain focused feedback.",
+        "When feedback is obtained, record the assumptions under which it was given and the changes that could make it less applicable. Keep a decision log showing how the study programme and submission strategy developed. This helps prevent an early informal assumption from being repeated later as if it were a settled regulatory conclusion."
+      ]
+    }
+  ],
+  "example": "A hypothetical developer of an implanted monitoring system finds a cleared external monitor with a similar measurement function. That similarity does not settle the implant's classification or evidence needs. The team should examine the applicable device type, contact and implantation implications, intended use, and technology. Only then can it decide whether the proposed comparator and development programme support the relevant pathway.",
+  "checklist": [
+    "Define intended use before searching classification entries.",
+    "Record regulation numbers and candidate product codes.",
+    "Explain why a pathway is applicable.",
+    "Map claims to study questions and design dependencies.",
+    "Resolve high-impact uncertainties before major study commitments."
+  ],
+  "faq": {
+    "question": "Does the absence of a predicate automatically mean PMA?",
+    "answer": "No. Pathway selection depends on the device and applicable controls. Investigate whether De Novo or another route is relevant rather than inferring Class III solely because a predicate search was unsuccessful."
+  },
+  "seoTitle": "Class III Medical Device Strategy | NKB Regovanta",
+  "image": "/assets/brain/industry_medical_devices_1786310566137.png",
+  "published": "2026-08-29",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "fdaClass",
+    "fdaPathway"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

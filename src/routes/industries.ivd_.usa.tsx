@@ -2,7 +2,7 @@
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
-import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.png";
+import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd_/usa")({
     head: () => ({
@@ -137,7 +137,7 @@ function IVDUsa() {
 
                             {/* FDA Pathway Diagram */}
                             <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
-                                <img src={fdaIvdFlowchart} alt="US FDA IVD Regulatory Pathway Flowchart" className="w-full h-auto object-contain rounded-md" />
+                                <img width={2720} height={3040} src={fdaIvdFlowchart} alt="US FDA IVD Regulatory Pathway Flowchart" className="w-full h-auto object-contain rounded-md" />
                             </div>
 
                             <h2 className="text-2xl md:text-3xl font-bold text-navy mt-12 mb-6">Key FDA Regulatory Shifts (2025–2026)</h2>
@@ -225,7 +225,7 @@ function IVDUsa() {
                 </div>
             </section>
 
-            <CTABand title="Accelerate your FDA clearance timeline" btnText="Contact Our FDA Experts" />
+            <CTABand title="Accelerate your FDA clearance timeline" action="Contact Our FDA Experts" />
         </>
     );
 }

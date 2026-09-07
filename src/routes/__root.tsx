@@ -93,14 +93,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "robots",
         content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       },
-      {
-        name: "googlebot",
-        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-      },
-      {
-        name: "bingbot",
-        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-      },
       { name: "application-name", content: "NKB Regovanta" },
       { name: "apple-mobile-web-app-title", content: "NKB Regovanta" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
@@ -221,12 +213,7 @@ const structuredDataGraph = {
       "publisher": {
         "@id": "https://www.nkbregovanta.com/#organization"
       },
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.nkbregovanta.com/services?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": "en-US"
     }
   ]
 };

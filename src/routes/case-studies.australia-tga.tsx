@@ -73,7 +73,7 @@ function Article() {
           </p>
           <img src={imgPlaceholder} alt="Australia TGA ARTG Inclusion" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
-            
+
             <h2 className="text-2xl font-bold mt-10 mb-4">Challenge</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               A medical device already had overseas regulatory approvals and supporting conformity-assessment evidence. Treating Australia as a completely new dossier could have duplicated work, cost and launch time.
@@ -105,7 +105,7 @@ function Article() {
           </div>
         </div>
       </article>
-      <CTABand title="Looking for a smarter entry into Australia?" description="NKB Regovanta can assist you with your TGA strategy." btnText="Contact Us Today" />
+      <CTABand title="Looking for a smarter entry into Australia?" description="NKB Regovanta can assist you with your TGA strategy." action="Contact Us Today" />
     </>
   );
 }

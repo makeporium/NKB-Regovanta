@@ -1,0 +1,58 @@
+{
+  "slug": "gspr-compliance-eu-mdr-ivdr",
+  "title": "GSPR Compliance: Turn the Checklist Into an Evidence Map",
+  "description": "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps.",
+  "service": "/services/eu/technical-documentation",
+  "intro": "A GSPR checklist becomes useful when it explains why a requirement applies and exactly where the supporting evidence can be found. A column filled with 'compliant' does not provide that explanation. The practical goal is an evidence map that a reviewer can follow from a requirement to the device configuration, evaluation method, and approved result.",
+  "sections": [
+    {
+      "title": "Start with the correct regulation and scope",
+      "paragraphs": [
+        "The MDR and IVDR set out general safety and performance requirements in their respective Annex I. Their structures overlap, but they are not interchangeable checklists. Establish whether the product is assessed under the MDR or IVDR and identify the device versions, accessories, intended users, and claims covered by the matrix.",
+        "For each requirement, record applicability with a product-specific rationale. Avoid describing a requirement as inapplicable merely because a test has not been performed. A software-only product may have no direct patient-contact material, for example, but still needs careful consideration of information, software performance, and use-related risks."
+      ],
+      "sourceKeys": [
+        "mdr",
+        "ivdr"
+      ]
+    },
+    {
+      "title": "Reference the decision and the evidence",
+      "paragraphs": [
+        "Give each applicable row a compliance method and a precise document reference. Where a standard is used, record the edition and the scope actually applied. Where another method is used, explain the reasoning. A list of standard numbers without results or applicability analysis leaves the reviewer to reconstruct the argument.",
+        "Link to a specific report, section, and revision where possible. Distinguish planned work from approved evidence and keep open gaps visible. A matrix should not imply that a test is complete because its protocol has been approved. The same principle applies to a draft evaluation report that still contains unresolved assumptions."
+      ]
+    },
+    {
+      "title": "Keep the matrix aligned with changes",
+      "paragraphs": [
+        "Use the matrix during change assessment, not only at submission. A new indication, material, software function, or manufacturing process can affect several requirements and evidence packages at once. Start with the changed characteristic, identify affected rows, and document which conclusions remain valid.",
+        "Review the matrix with engineering, clinical or performance-evaluation, quality, and regulatory owners. Disagreement can be useful: it often exposes a claim that is broader than the evidence or an exclusion that has not been justified. Resolve the decision before circulating a version labelled final."
+      ]
+    }
+  ],
+  "example": "A hypothetical IVD manufacturer updates the instrument's result-calculation algorithm but leaves the GSPR matrix untouched because the reagent formulation is unchanged. A row-level review would identify the analytical and software evidence affected by the new calculation. It could also reveal changes needed in instructions or limitations. Treating the matrix as a living evidence map makes those dependencies easier to see.",
+  "checklist": [
+    "Use the Annex I relevant to the product.",
+    "Define the configurations and claims covered.",
+    "Explain applicability and non-applicability.",
+    "Reference approved evidence with revision details.",
+    "Track open gaps and revisit affected rows after changes."
+  ],
+  "faq": {
+    "question": "Is citing a standard enough to close a GSPR row?",
+    "answer": "Usually the reviewer needs more context: why the method is appropriate, what was evaluated, and where the result supports the requirement. Record the actual evidence and any limitations rather than relying on the standard's title alone."
+  },
+  "seoTitle": "GSPR Compliance for EU MDR & IVDR | NKB Regovanta",
+  "image": "/assets/brain/eu_mdr_market_1786306179767.png",
+  "published": "2026-08-27",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "mdr",
+    "ivdr"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

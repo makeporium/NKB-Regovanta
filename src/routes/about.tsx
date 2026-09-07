@@ -19,25 +19,25 @@ import {
 } from "lucide-react";
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgUsha from "@/assets/usha new.jpeg";
-import imgSaurav from "@/assets/saurav.png";
-import imgDaniel from "@/assets/daniel.png";
-import imgSatish from "@/assets/satish.png";
+import imgSaurav from "@/assets/saurav.optimized.webp";
+import imgDaniel from "@/assets/daniel.optimized.webp";
+import imgSatish from "@/assets/satish.optimized.webp";
 import imgSwati from "@/assets/swati.jpeg";
-import imgHero from "@/assets/Global Healthcare Expertise in Action.png";
-import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.png";
-import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.png";
-import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.png";
+import imgHero from "@/assets/Global Healthcare Expertise in Action.optimized.webp";
+import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.optimized.webp";
+import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.optimized.webp";
+import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.optimized.webp";
 import imgIvd from "@/assets/industry-ivd.png";
-import imgPharma from "@/assets/industry-pharma.png";
-import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.png";
+import imgPharma from "@/assets/industry-pharma.optimized.webp";
+import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.optimized.webp";
 import imgMedical from "@/assets/industry-medical.png";
-import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.png";
-import imgShieldBadge from "@/assets/Blue Security Shield UI Card.png";
-import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.png";
-import imgDocBadge from "@/assets/Document Inspection Icon Banner.png";
-import imgPuzzleBadge from "@/assets/Puzzle Piece in Blue Badge.png";
-import imgGrowthBadge from "@/assets/Riseing Growth Bar Graph Blue.png";
-import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
+import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.optimized.webp";
+import imgShieldBadge from "@/assets/Blue Security Shield UI Card.optimized.webp";
+import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.optimized.webp";
+import imgDocBadge from "@/assets/Document Inspection Icon Banner.optimized.webp";
+import imgPuzzleBadge from "@/assets/Puzzle Piece in Blue Badge.optimized.webp";
+import imgGrowthBadge from "@/assets/Riseing Growth Bar Graph Blue.optimized.webp";
+import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.optimized.webp";
 
 export const Route = createFileRoute("/about")({
     head: () => ({
@@ -141,7 +141,7 @@ function About() {
             />
             {/* 1. HERO SECTION */}
             <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
-                <img
+                <img width={1983} height={793}
                     src={imgHero}
                     alt="Global healthcare expertise across regulatory, quality and market access"
                     className="absolute inset-0 h-full w-full object-cover object-right opacity-90 pointer-events-none"
@@ -189,7 +189,7 @@ function About() {
             <section className="relative bg-surface border-b border-border overflow-hidden">
                 {/* Mobile banner image — fades into the panel below instead of a hard edge */}
                 <div className="sm:hidden h-56 w-full overflow-hidden">
-                    <img
+                    <img width={1983} height={793}
                         src={imgIndiaGlobe}
                         alt="From India to the world"
                         className="h-full w-full object-cover"
@@ -202,7 +202,7 @@ function About() {
                 </div>
 
                 {/* Desktop full-bleed image — right edge fades into the panel, no hard seam */}
-                <img
+                <img width={1983} height={793}
                     src={imgIndiaGlobe}
                     alt="From India to the world"
                     className="hidden sm:block absolute inset-y-0 left-0 h-full w-[46%] lg:w-[44%] object-cover"
@@ -270,7 +270,7 @@ function About() {
             <section className="py-10 lg:py-14 bg-slate-50 relative overflow-hidden border-b border-border">
                 {/* Golden Network Map */}
                 <div className="absolute right-0 top-0 bottom-0 w-full lg:w-2/3 pointer-events-none">
-                    <img
+                    <img width={1881} height={836}
                         src={imgGoldNetwork}
                         alt="Global market access network from India"
                         className="h-full w-full object-cover object-right opacity-60 lg:opacity-90"
@@ -326,7 +326,7 @@ function About() {
                         {/* MEDICAL DEVICES */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover" />
+                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -347,7 +347,7 @@ function About() {
                         {/* IVDs */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgIvd} alt="IVDs" className="h-full w-full object-cover" />
+                                <img width={1024} height={1024} src={imgIvd} alt="IVDs" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -368,7 +368,7 @@ function About() {
                         {/* PHARMACEUTICALS */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
+                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -389,7 +389,7 @@ function About() {
                         {/* COSMETICS */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover" />
+                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -410,7 +410,7 @@ function About() {
                         {/* MANUFACTURING */}
                         <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
                             <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover" />
+                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover" />
                             </div>
                             <div className="px-5 py-4 flex items-start gap-3 flex-1">
                                 <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
@@ -507,7 +507,7 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">MARKET-ENTRY CAPABILITY</h3>
@@ -525,7 +525,7 @@ function About() {
 
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">SENIOR REGULATORY EXPERTISE</h3>
@@ -543,7 +543,7 @@ function About() {
             {/* 7. BUILT FOR INNOVATORS / BEYOND COMPLIANCE */}
             <section className="py-10 lg:py-14 bg-navy relative overflow-hidden">
                 {/* Split background: rocket growth (left) / mother & child care (right) */}
-                <img
+                <img width={2117} height={743}
                     src={imgTechCare}
                     alt=""
                     className="absolute inset-0 h-full w-full object-cover hidden md:block"
@@ -802,7 +802,7 @@ function About() {
 
             {/* 10. FOOTER CTA */}
             <section className="bg-navy py-12 relative overflow-hidden">
-                <img
+                <img width={1983} height={793}
                     src={imgEarthCta}
                     alt=""
                     className="absolute right-0 top-0 bottom-0 h-full w-2/3 object-cover object-right opacity-40 pointer-events-none"

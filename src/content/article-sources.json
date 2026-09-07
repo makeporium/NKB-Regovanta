@@ -1,0 +1,126 @@
+{
+  "mdr": {
+    "label": "EU Medical Device Regulation: consolidated text",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20260719"
+  },
+  "ivdr": {
+    "label": "EU In Vitro Diagnostic Medical Devices Regulation",
+    "url": "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+  },
+  "mdcg": {
+    "label": "European Commission: MDCG guidance library",
+    "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en"
+  },
+  "euSoftware": {
+    "label": "MDCG 2019-11 rev.1: software qualification and classification",
+    "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+  },
+  "euSoftwareEvidence": {
+    "label": "MDCG 2020-1: clinical and performance evaluation of software",
+    "url": "https://health.ec.europa.eu/document/download/19d9e24f-2808-4e00-bfeb-75892047407d_en?filename=md_mdcg_2020_1_guidance_clinic_eva_md_software_en.pdf"
+  },
+  "equivalence": {
+    "label": "MDCG 2020-5: clinical evaluation and equivalence",
+    "url": "https://health.ec.europa.eu/document/download/575a0f79-e3a0-4a96-9ce0-930576c12aa2_en?filename=md_mdcg_2020_5_guidance_clinical_evaluation_equivalence_en.pdf"
+  },
+  "qmsr": {
+    "label": "FDA: Quality Management System Regulation",
+    "url": "https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr"
+  },
+  "qmsrFaq": {
+    "label": "FDA: QMSR frequently asked questions",
+    "url": "https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-frequently-asked-questions"
+  },
+  "risk": {
+    "label": "ISO 14971: medical device risk management",
+    "url": "https://www.iso.org/standard/72704.html"
+  },
+  "softwareLifecycle": {
+    "label": "IEC 62304: software life cycle processes",
+    "url": "https://webstore.iec.ch/en/publication/22794"
+  },
+  "fdaSoftware": {
+    "label": "FDA: premarket documentation for device software functions",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/content-premarket-submissions-device-software-functions"
+  },
+  "fdaApps": {
+    "label": "FDA: device software functions and mobile applications",
+    "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/device-software-functions-including-mobile-medical-applications"
+  },
+  "fdaNavigator": {
+    "label": "FDA: medical device software guidance navigator",
+    "url": "https://www.fda.gov/medical-devices/regulatory-accelerator/medical-device-software-guidance-navigator"
+  },
+  "fda510k": {
+    "label": "FDA: premarket notification 510(k)",
+    "url": "https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/premarket-notification-510k"
+  },
+  "predicate": {
+    "label": "FDA: finding and using predicate devices",
+    "url": "https://www.fda.gov/medical-devices/premarket-notification-510k/how-find-and-effectively-use-predicate-devices"
+  },
+  "fdaPathway": {
+    "label": "FDA: selecting the correct premarket submission",
+    "url": "https://www.fda.gov/medical-devices/how-study-and-market-your-device/premarket-submissions-selecting-and-preparing-correct-submission"
+  },
+  "fdaClass": {
+    "label": "FDA: classify your medical device",
+    "url": "https://www.fda.gov/medical-devices/overview-device-regulation/classify-your-medical-device"
+  },
+  "qsub": {
+    "label": "FDA: the Q-Submission Program",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/requests-feedback-and-meetings-medical-device-submissions-q-submission-program"
+  },
+  "fdaPerformance": {
+    "label": "FDA: Safety and Performance Based Pathway",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/safety-and-performance-based-pathway"
+  },
+  "fdaHuman": {
+    "label": "FDA: applying human factors and usability engineering",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/applying-human-factors-and-usability-engineering-medical-devices"
+  },
+  "fdaHumanFactors": {
+    "label": "FDA: human factors considerations",
+    "url": "https://www.fda.gov/medical-devices/human-factors-and-medical-devices/human-factors-considerations"
+  },
+  "fdaHumanSubmission": {
+    "label": "FDA: human factors premarket information",
+    "url": "https://www.fda.gov/medical-devices/human-factors-and-medical-devices/human-factors-premarket-information-device-design-and-documentation-processes"
+  },
+  "fdaBiology": {
+    "label": "FDA: biocompatibility considerations",
+    "url": "https://www.fda.gov/medical-devices/premarket-approval-pma/pma-special-considerations"
+  },
+  "fdaStandards": {
+    "label": "FDA: ISO 10993-1 recognition and transition",
+    "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfStandards/detail.cfm?standard__identification_no=47116"
+  },
+  "cyber": {
+    "label": "FDA: cybersecurity guidance, February 2026",
+    "url": "https://www.fda.gov/media/119933/download"
+  },
+  "cdsco": {
+    "label": "CDSCO: medical devices and diagnostics",
+    "url": "https://www.cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/Medical-Device-Diagnostics/"
+  },
+  "indiaRules": {
+    "label": "CDSCO: Medical Devices Rules and amendments",
+    "url": "https://cdsco.gov.in/opencms/opencms/en/Acts-and-rules/Medical-Devices-Rules/"
+  },
+  "transition": {
+    "label": "European Commission: IVDR transitional provisions",
+    "url": "https://health.ec.europa.eu/medical-devices-vitro-diagnostics/transitional-provisions_en"
+  },
+  "transitionQA": {
+    "label": "European Commission: IVDR transition questions and answers",
+    "url": "https://health.ec.europa.eu/document/download/dfd7a1c6-f319-4682-9bac-77bef1165818_en"
+  },
+  "notified": {
+    "label": "European Commission: notified bodies and designation",
+    "url": "https://health.ec.europa.eu/medical-devices-topics-interest/notified-bodies-medical-devices_en"
+  },
+  "eurl": {
+    "label": "European Commission: EU reference laboratories for IVDs",
+    "url": "https://health.ec.europa.eu/medical-devices-vitro-diagnostics/eu-reference-laboratories-eurls_en"
+  }
+}

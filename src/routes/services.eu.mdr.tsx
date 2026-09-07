@@ -328,7 +328,7 @@ function EUMDRPage() {
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#0e2a54] to-[#081832] p-4 text-center">
-                <img
+                <img width={113} height={118}
                   src={euMdrDeviceImg}
                   alt="EU MDR Medical Device Technology"
                   className="w-48 h-48 mx-auto object-contain mb-3 drop-shadow-xl"

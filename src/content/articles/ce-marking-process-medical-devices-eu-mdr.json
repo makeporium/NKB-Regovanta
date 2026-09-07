@@ -1,0 +1,58 @@
+{
+  "slug": "ce-marking-process-medical-devices-eu-mdr",
+  "title": "The EU MDR CE-Marking Process: Plan the Decisions and Handoffs",
+  "description": "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan.",
+  "service": "/services/eu/mdr",
+  "intro": "CE marking is the outcome of a conformity process, not a standalone application form. A manufacturer needs a clear view of the decisions, evidence, external assessment where applicable, and responsibilities that lead to that outcome. A staged plan makes dependencies visible and reduces the temptation to treat the final label as the whole project.",
+  "sections": [
+    {
+      "title": "Define the product and assessment route",
+      "paragraphs": [
+        "Establish whether the product falls within the MDR, then document its classification and applicable conformity-assessment route. Identify the legal manufacturer, intended purpose, configurations, and relevant economic-operator arrangements. Notified-body involvement depends on the applicable route and product characteristics.",
+        "If a notified body is needed, confirm that its designation covers the relevant work. Do this early enough to understand the application and assessment dependencies, while ensuring the product description is sufficiently developed for a meaningful discussion."
+      ],
+      "sourceKeys": [
+        "mdr",
+        "notified"
+      ]
+    },
+    {
+      "title": "Build the evidence before treating the file as final",
+      "paragraphs": [
+        "Create a work plan linking the device's claims and risks to the necessary design, performance, biological, software, usability, and clinical evidence as applicable. Assign owners and identify the configurations needed for each activity. The technical documentation should explain the case for the product rather than simply collect completed reports.",
+        "Review the quality-system and manufacturing interfaces alongside the product evidence. Confirm that the supplied product will match the configuration evaluated and that changes can be assessed consistently. A strong design report cannot compensate for an uncontrolled transition into routine production."
+      ]
+    },
+    {
+      "title": "Complete the applicable assessment and maintain the result",
+      "paragraphs": [
+        "Track the required conformity-assessment steps, questions, and decisions. Before finalising the declaration and marking, verify that the applicable prerequisites are satisfied and that the stated scope matches the evidence and assessment outcome. Keep identifiers and product descriptions consistent across the final records.",
+        "Plan ongoing activities from the start: feedback collection, post-market assessment, vigilance where applicable, changes, and updates to the technical documentation. The project should hand over a functioning process to the operating organisation. A certificate or declaration stored without clear ownership will not keep the compliance position current."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer completes product testing before confirming the intended EU claim. A later claim expansion changes the evidence needs and the assessment discussion. A staged CE-marking plan would identify claim definition as an early decision, showing why later steps depend on it rather than presenting all activities as parallel administrative tasks.",
+  "checklist": [
+    "Establish qualification, classification, and legal manufacturer.",
+    "Confirm the applicable assessment route.",
+    "Map claims and risks to evidence activities.",
+    "Align final scope across assessment, declaration, and labels.",
+    "Assign owners for ongoing post-market and change activities."
+  ],
+  "faq": {
+    "question": "Does every device receive a CE certificate from a notified body?",
+    "answer": "No. Notified-body involvement depends on the device and applicable conformity-assessment route. Determine that route first rather than assuming every product follows the same certification process."
+  },
+  "seoTitle": "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta",
+  "image": "/assets/brain/eu_mdr_market_1786306179767.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "mdr",
+    "notified"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

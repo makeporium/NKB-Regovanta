@@ -291,7 +291,7 @@ function EUMarketHubPage() {
             {/* Right Graphic: 3D EU Map & MDR / IVDR Badges */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[420px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#0e2a54] to-[#081832] p-2">
-                <img
+                <img width={303} height={193}
                   src={euHeroMapImg}
                   alt="European Union 3D Map with EU MDR 2017/745 & EU IVDR 2017/746"
                   className="w-full h-auto object-contain rounded-xl"
@@ -329,7 +329,7 @@ function EUMarketHubPage() {
                       Support across Class I, Is, Im, Ir, IIa, IIb and III Medical Devices, including implantable, active, software and custom-made devices.
                     </p>
                     <div className="w-20 h-20 shrink-0 hidden sm:block">
-                      <img
+                      <img width={113} height={118}
                         src={euMdrDeviceImg}
                         alt="Medical Device Cart"
                         className="w-full h-full object-contain"
@@ -387,7 +387,7 @@ function EUMarketHubPage() {
                       Support across Class A, B, C and D IVDs under Rules 1–7, with deep expertise in scientific validity, analytical performance and higher-risk scrutiny.
                     </p>
                     <div className="w-20 h-20 shrink-0 hidden sm:block">
-                      <img
+                      <img width={113} height={118}
                         src={euIvdrDeviceImg}
                         alt="IVD Microscope"
                         className="w-full h-full object-contain"

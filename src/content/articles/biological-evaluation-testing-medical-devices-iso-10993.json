@@ -1,0 +1,60 @@
+{
+  "slug": "biological-evaluation-testing-medical-devices-iso-10993",
+  "title": "ISO 10993 Biological Evaluation: Define the Question Before Ordering Tests",
+  "description": "Plan biological evaluation using finished-device contact, materials, processing, available evidence, and current standards-recognition requirements.",
+  "service": "/services/technical-documentation",
+  "intro": "Biological evaluation starts with understanding the device that contacts the body, not with selecting a standard test package. Material composition, manufacturing residues, processing, contact conditions, and existing evidence all affect the questions to be answered. A justified plan helps avoid both unnecessary testing and important gaps hidden by a familiar checklist.",
+  "sections": [
+    {
+      "title": "Define the finished device and its contact conditions",
+      "paragraphs": [
+        "Describe direct and indirect contact, relevant tissues or fluids, contact duration, and the supplied configuration. Identify coatings, adhesives, processing aids, and other constituents that may affect the finished product. A material supplier's certificate can be useful evidence, but it does not automatically describe the biological safety of the finished device after manufacturing and processing.",
+        "FDA's biocompatibility resources describe evaluation within a risk-management context. Use the available information to identify the actual concerns, document existing evidence, and determine what additional evaluation is justified. Keep the rationale connected to the intended use and product configuration."
+      ],
+      "sourceKeys": [
+        "fdaBiology"
+      ]
+    },
+    {
+      "title": "Check the edition and regulatory recognition",
+      "paragraphs": [
+        "A standard's latest edition and its regulatory recognition are separate matters. FDA's May 2026 recognition entry for ISO 10993-1:2025 records partial recognition and specific exclusions. It also describes a transition for declarations to the earlier recognised edition through July 1, 2029. Check the entry and relevant guidance when planning a US submission.",
+        "Record the edition, recognition status, and any limitations relevant to the plan. Avoid updating a standard number in the dossier without assessing whether the evaluation approach needs to change. Conversely, do not assume every existing study becomes unusable when a new edition is published."
+      ],
+      "sourceKeys": [
+        "fdaStandards"
+      ]
+    },
+    {
+      "title": "Turn results into an evaluation conclusion",
+      "paragraphs": [
+        "Prepare a gap assessment before commissioning work. Identify what existing material information, characterisation, test results, or other evidence can support, and what remains uncertain. Agree the sample configuration and preparation with the evaluation team so that results represent the intended finished device.",
+        "After results arrive, assess their relevance and limitations rather than attaching reports without interpretation. Explain how the evidence addresses the identified concerns and what changes would trigger reassessment. Material substitutions, processing changes, and revised contact claims should feed back into that decision."
+      ]
+    }
+  ],
+  "example": "A hypothetical manufacturer changes an adhesive while retaining the same visible polymer components. Reviewing only the base material certificate would overlook a constituent introduced during assembly. A change assessment should identify the adhesive's role, potential exposure, processing, and available evidence, then determine whether further evaluation is needed. The appropriate response depends on the product rather than a universal retest rule.",
+  "checklist": [
+    "Define contact conditions and the finished configuration.",
+    "Include manufacturing and processing information.",
+    "Review the applicable standard edition and recognition limits.",
+    "Justify evidence gaps and sample selection.",
+    "Document the overall conclusion and reassessment triggers."
+  ],
+  "faq": {
+    "question": "Does a material being described as medical grade establish biocompatibility?",
+    "answer": "No. The label alone does not establish suitability for the finished device's contact conditions and processing history. Use relevant evidence in a product-specific evaluation and explain what it does and does not support."
+  },
+  "seoTitle": "ISO 10993 Biocompatibility Testing | NKB Regovanta",
+  "image": "/assets/brain/cs_fda_biocompatibility_1786441176273.png",
+  "published": "2026-09-04",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fdaBiology",
+    "fdaStandards"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

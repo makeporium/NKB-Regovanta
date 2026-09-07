@@ -84,12 +84,12 @@ function parseRssFeed(xml: string, label: string): RawItem[] {
         return items
             .map((item: unknown) => {
                 const i = item as Record<string, unknown>;
-                const rawUrl = String(
-                    i["link"] ??
-                    (typeof i["link"] === "object"
-                        ? (i["link"] as Record<string, unknown>)["@_href"]
-                        : "") ?? ""
-                );
+                const link = i["link"];
+                const rawUrl = typeof link === "string"
+                    ? link
+                    : link && typeof link === "object"
+                        ? String((link as Record<string, unknown>)["@_href"] ?? "")
+                        : "";
                 return {
                     title: String(i["title"] ?? ""),
                     link: decodeGoogleNewsUrl(rawUrl),
@@ -121,7 +121,7 @@ async function fetchFeed(url: string, label: string): Promise<RawItem[]> {
                 "User-Agent":
                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
             },
-            signal: AbortSignal.timeout(10_000),
+            signal: AbortSignal.timeout(2_500),
         });
         if (!res.ok) return [];
         const xml = await res.text();
@@ -236,9 +236,9 @@ async function callGeminiAI(
 ): Promise<RegulatoryItem[]> {
     // Read API key (support GEMINI_API_KEY, GOOGLE_API_KEY, or fallback GROQ_API_KEY)
     const apiKey =
-        (typeof process !== "undefined" && (process.env?.GEMINI_API_KEY || process.env?.GOOGLE_API_KEY)) ||
-        (import.meta as any).env?.GEMINI_API_KEY ||
-        (import.meta as any).env?.GOOGLE_API_KEY ||
+        (typeof process !== "undefined" && (process.env?.["GEMINI_API_KEY"] || process.env?.["GOOGLE_API_KEY"])) ||
+        import.meta.env["GEMINI_API_KEY"] ||
+        import.meta.env["GOOGLE_API_KEY"] ||
         "";
 
     if (!apiKey || apiKey === "your_gemini_api_key_here" || apiKey === "your_groq_api_key_here") {
@@ -249,7 +249,10 @@ async function callGeminiAI(
     // Try Gemini 2.0 Flash first, fallback to 1.5 Flash if needed
     const models = ["gemini-2.0-flash", "gemini-1.5-flash"];
 
+    // A shared deadline bounds both attempts; SSR must not wait a minute for AI.
+    const signal = AbortSignal.timeout(3_500);
     for (const model of models) {
+        if (signal.aborted) break;
         try {
             const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
@@ -269,7 +272,7 @@ async function callGeminiAI(
                         temperature: 0.1,
                     },
                 }),
-                signal: AbortSignal.timeout(30_000),
+                signal,
             });
 
             if (!res.ok) {
@@ -342,7 +345,7 @@ async function callGeminiAI(
 
 // ── Main Export ─────────────────────────────────────────────────────────────────
 
-export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
+async function refreshRegulatoryFeed(): Promise<RegulatoryItem[]> {
     console.log("[RegulatoryFeed] Regulatory Pipeline triggered.");
 
     // 1. Fetch all feeds in parallel
@@ -382,6 +385,31 @@ export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
     // 6. Graceful fallback if GEMINI_API_KEY is not yet added
     console.log("[RegulatoryFeed] Returning structured RSS fallback notices.");
     return fallbackFromRss(topItems);
+}
+
+// Coalesce concurrent page loads and reuse results within each server instance.
+// Retain the last successful result briefly if an upstream refresh is unavailable.
+let cachedFeed: { items: RegulatoryItem[]; expiresAt: number } | undefined;
+let pendingFeed: Promise<RegulatoryItem[]> | undefined;
+
+export async function fetchRegulatoryFeed(): Promise<RegulatoryItem[]> {
+    if (cachedFeed && cachedFeed.expiresAt > Date.now()) return cachedFeed.items;
+    if (!pendingFeed) {
+        pendingFeed = refreshRegulatoryFeed()
+            .then((items) => {
+                cachedFeed = {
+                    items: items.length ? items : cachedFeed?.items ?? [],
+                    expiresAt: Date.now() + (items.length ? 15 * 60_000 : 60_000),
+                };
+                return cachedFeed.items;
+            })
+            .catch((error: unknown) => {
+                console.error("[RegulatoryFeed] Refresh unavailable", error);
+                return cachedFeed?.items ?? [];
+            })
+            .finally(() => { pendingFeed = undefined; });
+    }
+    return pendingFeed;
 }
 
 // ── Server Function Wrapper ────────────────────────────────────────────────────

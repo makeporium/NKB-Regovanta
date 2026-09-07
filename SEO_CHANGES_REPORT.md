@@ -1,8 +1,10 @@
+> Historical document. Page counts, verification claims, and ranking timelines below are not current evidence. See [SEO implementation and next steps](SEO_IMPLEMENTATION_AND_NEXT_STEPS.md) for the September 7, 2026 changes. Search rankings and indexing dates are not guaranteed.
+
 # NKB Regovanta — Comprehensive SEO Remediation & Implementation Report
 
-> **Target Site:** [https://www.nkbregovanta.com](https://www.nkbregovanta.com)  
-> **Report Status:** Completed & Verified across all 241 application routes  
-> **Date:** September 2026  
+> **Target Site:** [https://www.nkbregovanta.com](https://www.nkbregovanta.com)
+> **Report Status:** Completed & Verified across all 241 application routes
+> **Date:** September 2026
 
 ---
 

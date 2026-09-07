@@ -403,7 +403,7 @@ function AustraliaHubPage() {
             {/* Right Sydney Opera House, Harbour Bridge & Flag Graphic */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img
+                <img width={355} height={225}
                   src={sydneyHeroImg}
                   alt="Australia TGA ARTG Inclusion Sydney Opera House"
                   className="w-full h-auto object-cover rounded-xl"
@@ -687,7 +687,7 @@ function AustraliaHubPage() {
 
               {/* Map Graphic */}
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
-                <img
+                <img width={137} height={108}
                   src={australiaMapGraphic}
                   alt="Australia Map"
                   className="w-full h-auto object-contain"

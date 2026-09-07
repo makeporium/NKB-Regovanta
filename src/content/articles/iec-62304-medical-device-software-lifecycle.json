@@ -1,0 +1,60 @@
+{
+  "slug": "iec-62304-medical-device-software-lifecycle",
+  "title": "IEC 62304 in Practice: Keep Requirements, Risk Controls, and Releases Connected",
+  "description": "Organise a medical-device software lifecycle around traceable requirements, risk controls, verification, third-party software, and release records.",
+  "service": "/services/technical-documentation",
+  "intro": "A software lifecycle file is most useful when it explains how a released version was produced and why it was considered ready. A large collection of test screenshots cannot answer that question on its own. Teams need a coherent connection between requirements, architecture, risk controls, verification, unresolved issues, and the exact software configuration delivered.",
+  "sections": [
+    {
+      "title": "Define the lifecycle and its boundaries",
+      "paragraphs": [
+        "IEC 62304 addresses medical-device software life cycle processes. It should be considered alongside the product's broader risk management and regulatory obligations. Applying a software lifecycle standard does not, by itself, establish that the finished device is suitable for its clinical purpose or ready for market.",
+        "Define the software items, external interfaces, and development responsibilities covered by the plan. Include outsourced work and third-party components. Decide how changes are reviewed, how versions are identified, and which records are needed at each stage. An agile development process can produce controlled evidence, but the relationship between working tickets and formal release decisions must be clear."
+      ],
+      "sourceKeys": [
+        "softwareLifecycle"
+      ]
+    },
+    {
+      "title": "Make traceability selective and meaningful",
+      "paragraphs": [
+        "Start with requirements that describe observable behaviour, including failure handling and safety-related constraints. Link them to the architecture or implementation elements and evaluations that demonstrate the intended behaviour. For risk controls, make the connection especially clear: the reviewer should be able to see the hazard addressed, the implemented measure, and how it was checked.",
+        "Avoid creating links solely to make a matrix appear complete. A broad system test may not establish a detailed safety requirement. Review whether the linked result actually answers the requirement and whether it represents the released configuration. When a test fails, retain the disposition and the evidence supporting any decision to proceed."
+      ]
+    },
+    {
+      "title": "Control the release, not just the source repository",
+      "paragraphs": [
+        "Identify the build, configuration, dependencies, and deployment instructions associated with the release. Keep a list of unresolved issues with their assessed impact. A source-control tag is helpful, but it does not necessarily identify the exact binary, model, configuration, or cloud service behaviour used in production.",
+        "For an FDA submission, also review the agency's software-function documentation guidance rather than assuming that a lifecycle file automatically matches submission expectations. Prepare the information a reviewer needs to understand the software's role and evidence, while keeping the development records detailed enough for maintenance and future changes."
+      ],
+      "sourceKeys": [
+        "fdaSoftware"
+      ]
+    }
+  ],
+  "example": "A hypothetical diagnostic application passes its test suite, but the deployment uses a newer third-party image library than the tested build. The issue is not merely a missing version number. The team must assess whether the change could affect image handling or results and determine the appropriate verification. A controlled release record makes that discrepancy visible before the product is distributed.",
+  "checklist": [
+    "Define software scope, interfaces, and responsibilities.",
+    "Link safety-related requirements to meaningful evaluations.",
+    "Control third-party software and configuration changes.",
+    "Record unresolved issues and their release disposition.",
+    "Identify the exact released build and deployment configuration."
+  ],
+  "faq": {
+    "question": "Does IEC 62304 compliance replace device validation?",
+    "answer": "No. Software lifecycle evidence supports the overall case, but the manufacturer still needs to establish that the finished product meets its intended use and applicable regulatory expectations. Keep those evaluations connected while distinguishing their purposes."
+  },
+  "seoTitle": "IEC 62304 Software Lifecycle Guide | NKB Regovanta",
+  "image": "/assets/brain/cs_algorithm_claim_1786441224937.png",
+  "published": "2026-09-01",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "softwareLifecycle",
+    "fdaSoftware"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "QUALITY & SOFTWARE"
+}

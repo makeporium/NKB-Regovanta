@@ -70,7 +70,7 @@ function Article() {
           </h1>
           <img src={imgPlaceholder} alt="EU MDR Technical Documentation Remediation" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
-            
+
             <p className="lead font-medium text-navy/80">
               <strong>Client profile:</strong> Established medical-device manufacturer transitioning a mature product and legacy technical documentation to Regulation (EU) 2017/745.
             </p>
@@ -119,7 +119,7 @@ function Article() {
           </div>
         </div>
       </article>
-      <CTABand title="Need help transitioning your legacy files?" description="NKB Regovanta can assist you with your MDR transition strategy." btnText="Contact Us Today" />
+      <CTABand title="Need help transitioning your legacy files?" description="NKB Regovanta can assist you with your MDR transition strategy." action="Contact Us Today" />
     </>
   );
 }

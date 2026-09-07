@@ -1,4 +1,4 @@
-﻿import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.optimized.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ClipboardList, Hospital, ShieldAlert, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -49,19 +49,22 @@ function InvestigationalDevicesPage() {
   return (
     <div className="bg-white">
             {/* HERO SECTION */}
+      <h1 className="sr-only">
+              <span className="text-[#0b3a96]">Investigational</span> Devices in Govt. Hospitals <br/> (Forms MD-18, MD-19)
+            </h1>
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
-          <img src={heroImg} alt="Investigational Devices in Govt. Hospitals  (Forms MD-18, MD-19)" className="block w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Investigational Devices in Govt. Hospitals  (Forms MD-18, MD-19)" className="block w-full" />
 
           <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
             <Link to="/services/india" className="inline-flex items-center text-[#465569] hover:text-[#0b3a96] transition-colors mb-[1cqw] font-semibold text-[0.9cqw]">
               <ArrowLeft className="mr-[0.4cqw] h-[1cqw] w-[1cqw]" />
               Back to India CDSCO Services
             </Link>
-            <h1 className="font-display text-[2.8cqw] font-bold leading-[1.2] text-[#0f2340]">
+            <p aria-hidden="true" className="font-display text-[2.8cqw] font-bold leading-[1.2] text-[#0f2340]">
               <span className="text-[#0b3a96]">Investigational</span> Devices in Govt. Hospitals <br/> (Forms MD-18, MD-19)
-            </h1>
+            </p>
             <div className="mt-[1.8cqw] flex items-center gap-[0.4cqw]">
               <span className="h-[0.2cqw] w-[3.5cqw] rounded-full bg-[#ff6b1a]" />
               <span className="h-[0.5cqw] w-[0.5cqw] rounded-full bg-[#c9d3e0]" />
@@ -107,9 +110,9 @@ function InvestigationalDevicesPage() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">Investigational</span> Devices in Govt. Hospitals <br/> (Forms MD-18, MD-19)
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />
@@ -125,7 +128,7 @@ function InvestigationalDevicesPage() {
             Consult Our CDSCO Experts
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <img src={heroImg} alt="Investigational Devices in Govt. Hospitals  (Forms MD-18, MD-19)" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Investigational Devices in Govt. Hospitals  (Forms MD-18, MD-19)" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -133,7 +136,7 @@ function InvestigationalDevicesPage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            
+
             {/* Left Content Column */}
             <div className="lg:col-span-2 space-y-12">
               <div>
@@ -144,7 +147,7 @@ function InvestigationalDevicesPage() {
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Government hospitals and statutory medical institutions in India often require access to advanced, investigational medical technologies that are not yet commercially approved in the country. The Medical Devices Rules, 2017 establishes a vital regulatory mechanism for this exact scenario, often referred to as "compassionate use."
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
                     <h3 className="font-bold text-navy mb-3 text-lg">Form MD-18: The Application</h3>
@@ -168,7 +171,7 @@ function InvestigationalDevicesPage() {
                   <ShieldAlert className="h-7 w-7 text-blue-600" />
                   Eligibility & Key Regulations
                 </h2>
-                
+
                 <div className="space-y-4">
                   <div className="flex gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100 items-start">
                     <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />
@@ -193,7 +196,7 @@ function InvestigationalDevicesPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-navy rounded-2xl p-8 border border-gray-100 text-white shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10">
                   <ClipboardList className="h-32 w-32" />

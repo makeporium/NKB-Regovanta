@@ -1,90 +1,72 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("node:fs");
+const path = require("node:path");
+const ts = require("typescript");
 
-const routesDir = path.join(__dirname, '../src/routes');
-const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
+const project = path.resolve(__dirname, "..");
+const origin = "https://www.nkbregovanta.com";
 
-// Layout routes that do not have their own page content (they only render Outlet)
-const layoutRoutes = new Set([
-  'case-studies.tsx',
-  'services.australia.tsx',
-  'services.brazil.tsx',
-  'services.canada.tsx',
-  'services.eu.tsx',
-  'services.india.tsx',
-  'services.mdsap.tsx',
-  'services.new-zealand.tsx',
-  'services.saudi-arabia.tsx',
-  'services.uae.tsx',
-  'services.uk.tsx',
-  'services.usa.tsx'
-]);
+function inventory(routesDir = path.join(project, "src/routes")) {
+  return fs.readdirSync(routesDir)
+    .filter((file) => file.endsWith(".tsx") && !file.startsWith("__"))
+    .map((file) => {
+      const source = fs.readFileSync(path.join(routesDir, file), "utf8");
+      const ast = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+      let route;
+      let canonical;
+      let noindex = false;
+      function visit(node) {
+        if (ts.isCallExpression(node) && node.expression.getText(ast) === "createFileRoute"
+          && node.arguments[0] && ts.isStringLiteral(node.arguments[0])) {
+          route = node.arguments[0].text.replaceAll("_", "").replace(/\/$/, "") || "/";
+        }
+        if (ts.isObjectLiteralExpression(node)) {
+          const values = {};
+          for (const prop of node.properties) {
+            if (ts.isPropertyAssignment(prop) && ts.isStringLiteral(prop.initializer)) {
+              values[prop.name.getText(ast).replace(/["']/g, "")] = prop.initializer.text;
+            }
+          }
+          if (values.rel === "canonical") canonical = values.href;
+          if (["robots", "googlebot", "bingbot"].includes(values.name)
+            && /\bnoindex\b/i.test(values.content || "")) noindex = true;
+        }
+        ts.forEachChild(node, visit);
+      }
+      visit(ast);
+      if (!route) throw new Error(`Missing literal route: ${file}`);
+      if (!canonical) {
+        if (/return\s*<Outlet\s*\/>/.test(source)) return null;
+        throw new Error(`Missing canonical: ${file}`);
+      }
+      const url = new URL(canonical);
+      if (url.origin !== origin || (url.pathname.replace(/\/$/, "") || "/") !== route) {
+        throw new Error(`Canonical mismatch: ${file}`);
+      }
+      return { file, route, canonical, noindex };
+    }).filter(Boolean);
+}
 
-const files = fs.readdirSync(routesDir);
-const urls = [];
-const today = new Date().toISOString().split('T')[0];
+function renderSitemap(pages = inventory()) {
+  const urls = pages.filter((page) => !page.noindex).map((page) => page.canonical).sort();
+  if (new Set(urls).size !== urls.length) throw new Error("Duplicate sitemap URL");
+  const escape = (text) => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+  // Omit lastmod unless a trustworthy content-modification date is maintained.
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + urls.map((url) => `  <url><loc>${escape(url)}</loc></url>`).join("\n")
+    + "\n</urlset>\n";
+}
 
-for (const file of files) {
-  if (!file.endsWith('.tsx') || file.startsWith('__') || layoutRoutes.has(file)) continue;
-
-  // Convert file name to URL path
-  let routePath = file.replace('.tsx', '').replace(/_\./g, '/').replace(/\./g, '/');
-  if (routePath === 'index') routePath = '';
-  if (routePath.endsWith('/index')) routePath = routePath.replace('/index', '');
-
-  const loc = 'https://www.nkbregovanta.com' + (routePath ? '/' + routePath : '');
-
-  // Determine priority and changefreq based on business value
-  let priority = '0.75';
-  let changefreq = 'weekly';
-
-  if (routePath === '') {
-    priority = '1.0';
-    changefreq = 'daily';
-  } else if (
-    routePath === 'services/india/medical-devices' ||
-    routePath === 'services/india/predicate-devices' ||
-    routePath === 'services/india/ivd' ||
-    routePath === 'services/usa/510k' ||
-    routePath === 'services/usa/e-star' ||
-    routePath === 'services/usa/agent-service' ||
-    routePath === 'services/eu/mdr' ||
-    routePath === 'services/eu/ivdr' ||
-    routePath === 'services/iso-13485' ||
-    routePath === 'services/mdsap'
-  ) {
-    priority = '0.9';
-    changefreq = 'weekly';
-  } else if (
-    routePath.startsWith('services/india') ||
-    routePath.startsWith('services/usa') ||
-    routePath.startsWith('services/eu') ||
-    routePath.startsWith('services/uk') ||
-    routePath.startsWith('services/mdsap')
-  ) {
-    priority = '0.85';
-    changefreq = 'weekly';
-  } else if (routePath === 'ai-news' || routePath === 'regulatory-updates') {
-    priority = '0.8';
-    changefreq = 'daily';
-  } else if (routePath === 'contact' || routePath === 'about') {
-    priority = '0.7';
-    changefreq = 'monthly';
+if (require.main === module) {
+  const output = renderSitemap();
+  const target = path.join(project, "public/sitemap.xml");
+  if (process.argv.includes("--check")) {
+    if (fs.readFileSync(target, "utf8").replaceAll("\r\n", "\n") !== output) {
+      console.error("Sitemap is stale. Run npm run seo:sitemap.");
+      process.exitCode = 1;
+    } else console.log("Sitemap matches all indexable canonical routes.");
+  } else {
+    fs.writeFileSync(target, output);
+    console.log(`Generated sitemap with ${inventory().filter((page) => !page.noindex).length} URLs.`);
   }
-
-  urls.push({ loc, priority, changefreq });
 }
-
-// Sort alphabetically by loc
-urls.sort((a, b) => a.loc.localeCompare(b.loc));
-
-let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n`;
-
-for (const u of urls) {
-  xml += `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${u.changefreq}</changefreq>\n    <priority>${u.priority}</priority>\n  </url>\n`;
-}
-
-xml += `</urlset>\n`;
-
-fs.writeFileSync(sitemapPath, xml, 'utf8');
-console.log(`Generated sitemap.xml with ${urls.length} URLs.`);
+module.exports = { inventory, renderSitemap, project };

@@ -1,0 +1,56 @@
+{
+  "slug": "borderline-medical-device-classification-strategy",
+  "title": "Borderline Products: Separate Device Qualification From Risk Classification",
+  "description": "Assess borderline products using intended purpose, mode of action, claims, and jurisdiction-specific reasoning before selecting a device class.",
+  "service": "/services/regulatory-affairs",
+  "intro": "A borderline assessment asks what regulatory framework applies before it asks which device class is appropriate. Teams can lose time by beginning with a classification rule while the product's status as a device, medicine, IVD, or another category remains unresolved. A clear qualification assessment gives the later evidence and market-access plan a reliable starting point.",
+  "sections": [
+    {
+      "title": "Describe the product without the marketing shorthand",
+      "paragraphs": [
+        "Record the intended purpose, composition or technology, mode of action, presentation, and proposed claims. For a combination or multi-function product, explain the contribution of each part. The European Commission publishes guidance on borderline questions, including the distinction between medical devices and medicinal products. Use the current relevant guidance as context for the particular product.",
+        "Keep qualification and classification in separate parts of the decision record. A conclusion that a product is a medical device does not determine its risk class. Conversely, a proposed class does not establish that device legislation was the right framework in the first place."
+      ],
+      "sourceKeys": [
+        "mdcg"
+      ]
+    },
+    {
+      "title": "Test the reasoning against realistic claim changes",
+      "paragraphs": [
+        "Ask whether the conclusion depends on a narrow claim or a specific mode of action. Review the website, instructions, packaging, demonstrations, and distributor materials for inconsistent statements. A restrained regulatory description cannot reliably coexist with a broader promotional claim that changes the product's intended purpose.",
+        "Record alternative interpretations and the evidence that supports or weakens them. If a critical fact remains uncertain, identify how it will be established and who is responsible. This makes the assessment more useful than a one-line conclusion that provides no basis for revisiting the decision later."
+      ]
+    },
+    {
+      "title": "Avoid transferring a conclusion between markets automatically",
+      "paragraphs": [
+        "A product's status in one jurisdiction can inform research but does not settle its treatment elsewhere. Prepare a market-specific assessment, including the relevant definitions, available authority information, and any unresolved questions. Keep the common product description consistent while allowing the legal analysis to differ.",
+        "Where a formal clarification route is appropriate, submit a focused product description and a reasoned question. Preserve the response and its assumptions. Reassess when the composition, claimed purpose, mechanism, or configuration changes, especially if the earlier conclusion relied on a characteristic that no longer applies."
+      ]
+    }
+  ],
+  "example": "A hypothetical topical product is initially promoted as creating a physical protective barrier, then acquires claims about treating a biological process. The added claims should trigger a fresh assessment rather than a cosmetic label review. The team needs to examine the product's characteristics, mechanism, and presentation under each intended market's framework before assuming the existing route remains suitable.",
+  "checklist": [
+    "Record intended purpose, mechanism, and presentation.",
+    "Separate qualification from device classification.",
+    "Review claims across all customer-facing materials.",
+    "Document alternative interpretations and missing evidence.",
+    "Reassess after meaningful changes and for each target market."
+  ],
+  "faq": {
+    "question": "Does a competitor's registration settle a borderline assessment?",
+    "answer": "No. It may be relevant background, but the competing product's composition, claims, mechanism, or jurisdictional history can differ. Base the decision on the actual product and retain the reasoning that supports it."
+  },
+  "seoTitle": "Borderline Medical Device Classification | NKB Regovanta",
+  "image": "/assets/brain/industry_cosmetics_1786310589050.png",
+  "published": "2026-09-02",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "mdcg"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

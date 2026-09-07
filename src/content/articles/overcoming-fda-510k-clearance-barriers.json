@@ -1,0 +1,58 @@
+{
+  "slug": "overcoming-fda-510k-clearance-barriers",
+  "title": "FDA 510(k) Problems: Diagnose the Evidence Gap Before Responding",
+  "description": "Address 510(k) obstacles by distinguishing pathway, intended-use, performance-evidence, and submission-consistency problems.",
+  "service": "/services/usa/510k",
+  "intro": "When a 510(k) encounters difficulty, first identify the type of problem. A missing attachment, an unclear comparison, and an unsupported intended use need different responses. Treating every question as a request for more wording can consume time while leaving the underlying scientific or regulatory issue unresolved.",
+  "sections": [
+    {
+      "title": "Recheck the substantial-equivalence argument",
+      "paragraphs": [
+        "FDA's 510(k) framework centres on substantial equivalence to a legally marketed predicate. Intended use and technological characteristics are important parts of that assessment. If the proposed use differs materially or the technology raises different safety or effectiveness questions, adding a comparison table alone may not resolve the pathway issue.",
+        "Prepare a short argument identifying the predicate, relevant similarities and differences, and the evidence addressing each difference. Distinguish facts established by public information from assumptions about the predicate. If a critical comparison depends on unavailable information, make the limitation explicit and decide how to address it."
+      ],
+      "sourceKeys": [
+        "fda510k",
+        "predicate"
+      ]
+    },
+    {
+      "title": "Identify the decision behind each concern",
+      "paragraphs": [
+        "For each review question, state what the reviewer needs to determine. Is the issue the test method, sample representativeness, acceptance criterion, or interpretation of a result? Organise the response around that decision instead of repeating the original section at greater length.",
+        "Decide whether existing evidence is sufficient, requires clarification, or must be supplemented. If new testing is proposed, confirm that the protocol addresses the concern before committing resources. Connect the result to the marketed configuration and the claim it supports; a new report can still miss the question if its scope is wrong."
+      ]
+    },
+    {
+      "title": "Control the response package as a whole",
+      "paragraphs": [
+        "Use a response matrix linking every answer to the affected files and revisions. Review related sections for consequences of the change. A revised intended-use statement may affect labelling, the device description, comparison, and interpretation of performance results.",
+        "Assign an independent consistency review before sending the response. Check model identifiers, units, software versions, and report references. Keep a separate list of unresolved assumptions so that a polished response does not present an open issue as settled. The aim is an evidence-based answer, not simply a larger submission."
+      ]
+    }
+  ],
+  "example": "A hypothetical device comparison reports good average performance, but the claim includes a range absent from testing. The manufacturer should determine whether additional evaluation or a narrower claim is appropriate, then update the affected sections consistently. Repeating the average result would not answer the missing-range question.",
+  "checklist": [
+    "Identify pathway, evidence, and presentation issues separately.",
+    "Explain the predicate comparison without unsupported assumptions.",
+    "Convert each question into a specific decision.",
+    "Link responses to exact reports and revisions.",
+    "Check changes across the complete submission."
+  ],
+  "faq": {
+    "question": "Does every FDA question require a new study?",
+    "answer": "No. Some questions can be resolved with existing evidence and a clearer explanation. Others expose a genuine gap. Make that distinction before deciding whether clarification, additional analysis, testing, or a changed claim is appropriate."
+  },
+  "seoTitle": "FDA 510(k) Clearance Barriers Guide | NKB Regovanta",
+  "image": "/assets/brain/usa_fda_market_1786305218141.png",
+  "published": "2026-09-03",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fda510k",
+    "predicate"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

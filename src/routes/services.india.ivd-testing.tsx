@@ -1,4 +1,4 @@
-﻿import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.optimized.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, ClipboardList, PackageSearch, Activity, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -52,7 +52,7 @@ function IVDTestingPage() {
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
-          <img src={heroImg} alt="Test License for IVD Devices  (Forms MD-16, MD-17)" className="block w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Test License for IVD Devices  (Forms MD-16, MD-17)" className="block w-full" />
 
           <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
             <Link to="/services/india" className="inline-flex items-center text-[#465569] hover:text-[#0b3a96] transition-colors mb-[1cqw] font-semibold text-[0.9cqw]">
@@ -125,7 +125,7 @@ function IVDTestingPage() {
             Consult Our CDSCO Experts
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <img src={heroImg} alt="Test License for IVD Devices  (Forms MD-16, MD-17)" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Test License for IVD Devices  (Forms MD-16, MD-17)" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -133,7 +133,7 @@ function IVDTestingPage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            
+
             {/* Left Content Column */}
             <div className="lg:col-span-2 space-y-12">
               <div>
@@ -167,7 +167,7 @@ function IVDTestingPage() {
                   <ClipboardList className="h-7 w-7 text-blue-600" />
                   Strategic Value of the Test License
                 </h2>
-                
+
                 <div className="space-y-4">
                   <div className="flex gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100 items-start">
                     <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />

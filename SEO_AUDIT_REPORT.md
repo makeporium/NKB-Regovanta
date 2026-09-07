@@ -1,7 +1,9 @@
+> Historical document. Page counts, verification claims, and ranking timelines below are not current evidence. See [SEO implementation and next steps](SEO_IMPLEMENTATION_AND_NEXT_STEPS.md) for the September 7, 2026 changes. Search rankings and indexing dates are not guaranteed.
+
 # NKB Regovanta — Complete SEO Audit Report
 
-> **278 Pages Analyzed** | **777 Issues Identified** | **42 Critical** | **43 High** | **687 Medium** | **5 Low**  
-> **Date:** September 6, 2026  
+> **278 Pages Analyzed** | **777 Issues Identified** | **42 Critical** | **43 High** | **687 Medium** | **5 Low**
+> **Date:** September 6, 2026
 > **Scope:** All route files in `src/routes/`
 
 ---
@@ -138,7 +140,7 @@ Multiple pages share the **exact same H1 heading**, making them compete for the 
 
 ### Group 2: "Medical Device Software, SaMD & Cybersecurity" — 2 pages
 
-| URL | 
+| URL |
 |:---|
 | `/services/canada/software` |
 | `/services/eu/software` |
@@ -163,8 +165,8 @@ Multiple pages share the **exact same H1 heading**, making them compete for the 
 
 > [!CAUTION]
 > **This is the worst case.** Two USA service pages — De Novo and PMA — share the exact same H1. Google literally cannot tell them apart.
-> 
-> **Fix:** 
+>
+> **Fix:**
 > - `/services/usa/de-novo` → H1: `FDA De Novo Classification Request Consulting`
 > - `/services/usa/pma` → H1: `FDA PMA Premarket Approval Consulting`
 
@@ -266,7 +268,7 @@ Both share the identical description: *"Real-time AI-structured regulatory updat
 
 > [!TIP]
 > **Target:** Keep all titles under 60 characters. Structure as: `Primary Keyword | NKB Regovanta` (≤60 chars).
-> 
+>
 > **Example fixes:**
 > - `EU MDR & IVDR Regulatory Consultant | NKB Regovanta` (52 chars ✅)
 > - `UK MHRA Registration & UKRP | NKB Regovanta` (45 chars ✅)
@@ -303,7 +305,7 @@ Then `/services/usa/510k`, `/services/usa/de-novo`, `/services/usa/pma` each tar
 
 > [!WARNING]
 > **Google has officially stated since 2009 that it does NOT use the meta keywords tag for ranking.** Maintaining these keyword lists across 278 pages is entirely wasted effort. It adds code bulk, increases maintenance burden, and provides zero SEO value.
-> 
+>
 > **Recommendation:** Remove all `meta keywords` tags site-wide.
 
 ---

@@ -116,7 +116,7 @@ function ForImporter() {
         </div>
       </article>
 
-      <CTABand title="Start Your Import Registration Today" btnText="Contact Us" />
+      <CTABand title="Start Your Import Registration Today" action="Contact Us" />
     </>
   );
 }

@@ -131,7 +131,7 @@ function UKCosmetics() {
                We navigate the complexities of OPSS regulations and SCPN portals so you can focus on growing your brand in the United Kingdom.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-8 rounded-md bg-surface/50 border border-border hover:bg-surface transition-colors">
@@ -171,7 +171,7 @@ function UKCosmetics() {
         </div>
       </section>
 
-      <CTABand title="Seamlessly enter the UK cosmetics market" btnText="Contact Our UK Experts" />
+      <CTABand title="Seamlessly enter the UK cosmetics market" action="Contact Our UK Experts" />
     </>
   );
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "human-factors-engineering-medical-device-design",
+  "title": "Human Factors in Device Design: Find Use Problems Before Validation",
+  "description": "Integrate human factors into early device design through user research, task analysis, formative evaluation, and traceable design decisions.",
+  "service": "/services/technical-documentation",
+  "intro": "Human factors is most valuable while the product can still change. Waiting until a final study to discover confusing controls or unrealistic assumptions creates expensive choices: redesign, restrict the claim, or attempt to justify a difficult result. Integrating observations into development gives the team more useful options.",
+  "sections": [
+    {
+      "title": "Study the actual work, not only the intended sequence",
+      "paragraphs": [
+        "FDA describes users, environments, and interfaces as central elements of human-factors assessment. Observe how the task fits into the wider clinical or home workflow. Interruptions, lighting, protective equipment, physical access, and competing demands may influence how the product is used.",
+        "Interviewing experienced users can identify assumptions worth testing, but observations are also important. People may describe the official sequence while routinely using a different workaround. Record these differences without treating every deviation as a training failure."
+      ],
+      "sourceKeys": [
+        "fdaHumanFactors"
+      ]
+    },
+    {
+      "title": "Translate observations into design decisions",
+      "paragraphs": [
+        "For each important task, identify where an error could occur and what could contribute to it. Consider controls, displays, feedback, terminology, packaging, connectors, and instructions together. A confusing display cannot always be corrected reliably by adding a sentence to a manual.",
+        "Use simple prototypes or focused evaluations to compare design options. Record what changed and why. The useful output is not just a list of participant comments; it is a traceable decision about how the interface addresses a recognised problem and what later evidence will evaluate the result."
+      ]
+    },
+    {
+      "title": "Carry the reasoning into later evaluation",
+      "paragraphs": [
+        "Maintain a link between use-related risks, design responses, and the tasks selected for later assessment. This helps the final evaluation focus on meaningful questions rather than replaying an arbitrary sequence of buttons. Keep the evaluated configuration consistent with the product intended for release.",
+        "For an EU device, connect the human-factors work to the relevant safety and performance requirements and the product's risk assessment. Explain how the interface and supplied information support the intended users and use conditions. The evidence should show the reasoning behind the design, not merely that a study took place."
+      ],
+      "sourceKeys": [
+        "mdr"
+      ]
+    }
+  ],
+  "example": "A hypothetical infusion-device prototype uses similar-looking controls for two very different actions. Early observation shows that users hesitate when interrupted mid-task. The design team can explore distinct control placement or clearer feedback before the interface is finalised. Finding the same issue only in a late validation study would leave fewer practical options.",
+  "checklist": [
+    "Observe representative workflows and environments.",
+    "Document assumptions about user knowledge and capability.",
+    "Link potential errors to contributing design factors.",
+    "Evaluate alternatives before the interface is fixed.",
+    "Carry design reasoning into later usability evidence."
+  ],
+  "faq": {
+    "question": "Can good instructions compensate for every interface problem?",
+    "answer": "No. Consider whether the design itself can reduce the opportunity for error. Instructions and training are part of the overall approach, but their effectiveness should not be assumed where users may not access or remember them at the relevant moment."
+  },
+  "seoTitle": "Human Factors in Medical Device Design | NKB Regovanta",
+  "image": "/assets/brain/cs_fda_simulated_use_1786441155542.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fdaHumanFactors",
+    "mdr"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

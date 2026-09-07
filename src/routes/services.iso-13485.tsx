@@ -1,6 +1,7 @@
+import { Fragment } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, ClipboardCheck, Cog, LineChart, Search, ShieldCheck, Users, Globe2 } from "lucide-react";
-import imgISO from "@/assets/iso.png";
+import imgISO from "@/assets/iso.optimized.webp";
 
 export const Route = createFileRoute("/services/iso-13485")({
   head: () => ({
@@ -74,7 +75,7 @@ function Iso13485() {
 
           {/* Right — image flush to edge, no extra padding */}
           <div className="relative hidden lg:block h-full">
-            <img
+            <img width={1022} height={406}
               src={imgISO}
               alt="ISO 13485 Certification"
               className="w-full h-full object-cover object-center"
@@ -112,7 +113,7 @@ function Iso13485() {
           <h3 className="text-center text-[14px] font-bold text-navy mb-7">Trusted by Medical Device Companies Worldwide</h3>
           <div className="flex flex-nowrap justify-center items-center gap-0 overflow-x-auto">
             {trusted.map((t, i) => (
-              <>
+              <Fragment key={t.title}>
                 <div key={t.title} className="flex items-center gap-2 px-4 shrink-0">
                   <t.icon className="h-4 w-4 text-navy shrink-0" />
                   <span className="text-[11.5px] font-semibold text-navy whitespace-nowrap">{t.title}</span>
@@ -120,7 +121,7 @@ function Iso13485() {
                 {i < trusted.length - 1 && (
                   <div className="w-px h-5 bg-border shrink-0" />
                 )}
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

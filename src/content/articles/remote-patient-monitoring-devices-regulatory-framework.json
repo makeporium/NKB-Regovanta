@@ -1,0 +1,62 @@
+{
+  "slug": "remote-patient-monitoring-devices-regulatory-framework",
+  "title": "Remote Patient Monitoring: Define the Clinical Workflow Before the Device Boundary",
+  "description": "Assess remote-monitoring systems through their measurement claims, alerts, data flow, home-use conditions, and clinical responsibilities.",
+  "service": "/services/usa",
+  "intro": "Remote monitoring is a workflow, not one regulatory category. A system may include a sensor, mobile app, communications service, analytical software, and a clinician dashboard. Its safety depends on how those parts work together and on what users believe will happen when a measurement changes. Start by defining that end-to-end use case.",
+  "sections": [
+    {
+      "title": "Identify the functions and claims",
+      "paragraphs": [
+        "FDA's digital-health resources distinguish different software functions and their regulatory treatment. A function that only communicates data raises different questions from one that interprets it or recommends action. Assess each function using its intended purpose and the significance of its output, then consider the interfaces within the overall system.",
+        "Write down whether the system supports routine review, detects specified events, or is intended to prompt time-sensitive action. Identify who is expected to respond and under what conditions. Do not let a marketing phrase such as 'continuous monitoring' imply a clinical response capability that the service does not provide."
+      ],
+      "sourceKeys": [
+        "fdaApps",
+        "fdaNavigator"
+      ]
+    },
+    {
+      "title": "Evaluate the complete data journey",
+      "paragraphs": [
+        "Map the path from measurement to display: acquisition, patient association, transmission, storage, processing, and presentation. Identify where information can become delayed, duplicated, incomplete, or associated with the wrong person. Define how the system communicates those states to the user.",
+        "Design evaluations around the actual use environment. Home users may face unreliable connectivity, limited technical support, and interruptions that differ from a controlled clinic. Check recovery after loss of power or network service and whether old information can be mistaken for a current reading. A successful sensor-accuracy test does not cover all those system behaviours."
+      ]
+    },
+    {
+      "title": "Make operational responsibilities explicit",
+      "paragraphs": [
+        "Clarify setup, training, maintenance, escalation, and support responsibilities. A device manufacturer, healthcare service, and communications provider may each own different parts of the workflow. The documentation should show how an issue moves between them without assuming that someone else is monitoring every failure.",
+        "For connected devices, consider cybersecurity alongside safety and performance. Assess how authentication, updates, and loss of availability affect the clinical function. The relevant FDA cybersecurity guidance is an important input where applicable, but the practical assessment should remain tied to the particular product and its dependencies."
+      ],
+      "sourceKeys": [
+        "cyber"
+      ]
+    }
+  ],
+  "example": "A hypothetical home-monitoring platform uploads measurements every few minutes, but its dashboard does not indicate a prolonged communication gap. The displayed value may be accurate for the time it was taken and still be misleading during later review. The team should evaluate timestamp presentation, stale-data warnings, and the intended response to missing information. This is a workflow issue that sensor accuracy alone cannot resolve.",
+  "checklist": [
+    "Specify the intended clinical decision and response.",
+    "Map components and end-to-end data flow.",
+    "Evaluate delayed, missing, and misidentified data.",
+    "Test recovery in representative home-use conditions.",
+    "Define responsibility for alerts, support, and security updates."
+  ],
+  "faq": {
+    "question": "Does remote transmission alone make an app a high-risk medical device?",
+    "answer": "No. Assessment depends on the functions and intended use. Examine whether the app merely transfers information or also analyses it, controls a device, or supports a particular clinical decision, and document the resulting rationale."
+  },
+  "seoTitle": "Remote Patient Monitoring Regulations | NKB Regovanta",
+  "image": "/assets/brain/medtech_reg_lab.jpg",
+  "published": "2026-09-01",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fdaApps",
+    "fdaNavigator",
+    "cyber"
+  ],
+  "imageWidth": 1376,
+  "imageHeight": 768,
+  "category": "US FDA"
+}

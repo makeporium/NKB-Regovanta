@@ -1,3 +1,5 @@
+> Historical document. Page counts, verification claims, and ranking timelines below are not current evidence. See [SEO implementation and next steps](SEO_IMPLEMENTATION_AND_NEXT_STEPS.md) for the September 7, 2026 changes. Search rankings and indexing dates are not guaranteed.
+
 # Google Ranking Optimization Guide for Target Keywords
 
 > **Target Search Terms:**

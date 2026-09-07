@@ -404,7 +404,7 @@ function BrazilHubPage() {
             {/* Right Rio Graphic with Flag and ANVISA Booklet */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img
+                <img width={368} height={240}
                   src={brazilHeroImg}
                   alt="ANVISA Brazil Medical Device Registration Rio de Janeiro"
                   className="w-full h-auto object-cover rounded-xl"
@@ -697,7 +697,7 @@ function BrazilHubPage() {
 
               {/* Map Graphic */}
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
-                <img
+                <img width={123} height={118}
                   src={brazilMapGraphic}
                   alt="Brazil Map"
                   className="w-full h-auto object-contain"

@@ -104,7 +104,7 @@ function AuditComplianceService() {
             <p className="text-[15px] text-navy/80 leading-relaxed mb-8">
               NKB Regovanta helps organizations identify compliance gaps, strengthen quality processes and prepare for internal, supplier and regulatory audits.
             </p>
-            
+
             <h3 className="text-xl font-bold text-navy mb-6">Our Audit & Compliance Support</h3>
             <div className="space-y-6">
               {offerings.map((offering, idx) => (
@@ -122,10 +122,10 @@ function AuditComplianceService() {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100 to-blue-50 rounded-[2rem] -z-10 transform rotate-3" />
-            <img 
+            <img width={1200} height={800}
               src={imgPlaceholder}
-              alt="Quality and Audit Compliance" 
-              className="rounded-2xl shadow-xl border border-white/50 w-full object-cover" 
+              alt="Quality and Audit Compliance"
+              className="rounded-2xl shadow-xl border border-white/50 w-full object-cover"
             />
           </div>
         </div>

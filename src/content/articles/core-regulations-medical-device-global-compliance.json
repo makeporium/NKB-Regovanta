@@ -1,0 +1,64 @@
+{
+  "slug": "core-regulations-medical-device-global-compliance",
+  "title": "Build a Medical Device Requirements Register Across Regulatory Disciplines",
+  "description": "Create a product-specific register linking device rules, software, electrical safety, biological evaluation, and other applicable obligations.",
+  "service": "/services/regulatory-affairs",
+  "intro": "Medical-device compliance rarely sits within one document or one discipline. A connected product may raise questions about device regulation, software, electrical behaviour, patient contact, information security, and the use environment. A requirements register helps the team determine what applies, who owns it, and which evidence supports the conclusion.",
+  "sections": [
+    {
+      "title": "Separate legal requirements, standards, and guidance",
+      "paragraphs": [
+        "These sources serve different purposes. Applicable legislation establishes obligations; standards can provide methods or specifications; guidance explains an authority's approach. Do not treat a list of popular standards as a complete statement of legal compliance. Identify the product characteristics and intended markets first.",
+        "For each source, record its status, edition or date, scope, and relevance. The EU medical-device framework and FDA's pathway resources are starting points for market requirements, while discipline-specific sources help define the supporting work. Make any assumptions or exclusions explicit so that the register can be reviewed when the product changes."
+      ],
+      "sourceKeys": [
+        "mdr",
+        "fdaPathway"
+      ]
+    },
+    {
+      "title": "Use product characteristics to assign disciplines",
+      "paragraphs": [
+        "Ask practical questions: does the product contact the patient, include software, depend on a network, use electrical energy, require reprocessing, or make a measurement? Each answer can identify an evidence area and a responsible specialist. Avoid assuming that a requirement is irrelevant because a supplier handles the associated component.",
+        "Build one row per meaningful obligation or evidence question. Include the source, applicability rationale, owner, supporting document, and status. Where two disciplines interact, identify the handoff. A cybersecurity control that changes login behaviour may also affect a time-sensitive clinical workflow and its usability evaluation."
+      ],
+      "sourceKeys": [
+        "fdaNavigator",
+        "cyber"
+      ]
+    },
+    {
+      "title": "Review the register at product and market changes",
+      "paragraphs": [
+        "Use the register when adding a market, changing a claim, replacing a component, or introducing a new manufacturing activity. Record which entries change and which remain supported. This is more useful than periodically replacing the list with a newer template that loses the original reasoning.",
+        "At a review gate, prioritise unresolved items that could alter product design or invalidate scheduled testing. Give management a concise view of those dependencies. A register is effective when it changes decisions early enough to matter, not when every row is marked complete just before submission."
+      ]
+    }
+  ],
+  "example": "A hypothetical device adds wireless communication to an established measurement function. The change may affect software, security, communication reliability, and the user interface, while leaving other evidence largely unchanged. A characteristic-based register identifies the areas needing assessment and prevents the update from being treated solely as a new radio component purchase.",
+  "checklist": [
+    "Identify the market and product characteristics first.",
+    "Distinguish legislation, standards, and guidance.",
+    "Assign owners and evidence references.",
+    "Record cross-disciplinary dependencies.",
+    "Reassess after product, claim, supplier, or market changes."
+  ],
+  "faq": {
+    "question": "Is there one universal list of standards for all medical devices?",
+    "answer": "No. Applicability depends on the product and market. A broad list can prompt questions, but the manufacturer needs a documented, device-specific rationale for the requirements and methods it selects."
+  },
+  "seoTitle": "Core Global MedTech Regulations Guide | NKB Regovanta",
+  "image": "/assets/brain/media__1786282925761.optimized.webp",
+  "published": "2026-09-04",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "mdr",
+    "fdaPathway",
+    "fdaNavigator",
+    "cyber"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 682,
+  "category": "EU MDR & IVDR"
+}

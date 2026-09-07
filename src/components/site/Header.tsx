@@ -31,8 +31,7 @@ const serviceCategories = [
 ];
 
 const services = [
-  ...serviceCategories[0].items,
-  ...serviceCategories[1].items,
+  ...serviceCategories.flatMap((category) => category.items),
   { to: "/services", label: "All Services Directory" },
 ];
 
@@ -113,18 +112,18 @@ export function Header() {
             <Link to="/" className={linkClass} activeProps={{ className: "text-navy font-semibold" }}>
               Home
             </Link>
-            
+
             {/* Services Dropdown */}
             <div className="group relative">
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className={`${linkClass} inline-flex items-center gap-1`}
                 activeProps={{ className: "text-navy font-semibold" }}
                 activeOptions={{ exact: false }}
               >
                 Services <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
               </Link>
-              
+
               <div className="invisible absolute -left-12 top-full w-[640px] translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 z-50">
                 <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl overscroll-contain max-h-[calc(100vh-95px)] overflow-y-auto">
                   <div className="grid grid-cols-2 gap-x-6 gap-y-2">
@@ -165,15 +164,15 @@ export function Header() {
 
             {/* Markets Dropdown with Flags */}
             <div className="group relative">
-              <Link 
-                to="/markets" 
+              <Link
+                to="/markets"
                 className={`${linkClass} inline-flex items-center gap-1`}
                 activeProps={{ className: "text-navy font-semibold" }}
                 activeOptions={{ exact: false }}
               >
                 Markets <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
               </Link>
-              
+
               <div className="invisible absolute -left-16 top-full w-[490px] translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 z-50">
                 <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl">
                   <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#0b3a96] pb-2 mb-3 border-b border-gray-100 flex items-center justify-between">
@@ -258,7 +257,7 @@ export function Header() {
               >
                 Home
               </Link>
-              
+
               <div className="border-b border-border flex flex-col">
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}

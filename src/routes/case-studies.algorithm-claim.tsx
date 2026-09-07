@@ -106,7 +106,7 @@ function Article() {
           </div>
         </div>
       </article>
-      <CTABand title="Looking for a clearer AI/ML regulatory strategy?" description="NKB Regovanta can help." btnText="Contact Us Today" />
+      <CTABand title="Looking for a clearer AI/ML regulatory strategy?" description="NKB Regovanta can help." action="Contact Us Today" />
     </>
   );
 }

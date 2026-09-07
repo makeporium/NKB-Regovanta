@@ -92,7 +92,7 @@ function MedicalDevices() {
             </p>
           </div>
           <div className="hidden lg:block h-full overflow-hidden">
-            <img src={imgHero} alt="Medical Devices" className="w-full h-full object-cover object-center" />
+            <img width={1024} height={1024} src={imgHero} alt="Medical Devices" className="w-full h-full object-cover object-center" />
           </div>
         </div>
       </section>

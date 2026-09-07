@@ -9,7 +9,12 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "seo:sitemap": "node scripts/generate_sitemap.cjs",
+    "seo:check": "node scripts/check_seo.cjs",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "npm run seo:sitemap && npm run seo:check && npm run typecheck",
+    "test:seo": "node --test scripts/seo.test.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

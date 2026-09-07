@@ -1,0 +1,62 @@
+{
+  "slug": "usability-testing-medical-devices-iec-62366",
+  "title": "Medical Device Usability Testing: Design a Study That Answers the Safety Question",
+  "description": "Plan usability evaluations around representative users, critical tasks, realistic conditions, observations, and justified interpretation.",
+  "service": "/services/technical-documentation",
+  "intro": "A usability study should reveal whether intended users can perform the important tasks safely under realistic conditions. It is not simply a demonstration that participants like the interface. The study becomes more informative when its tasks, user groups, and observations are connected to the product's use-related risks and intended environment.",
+  "sections": [
+    {
+      "title": "Define the tasks and users before the protocol",
+      "paragraphs": [
+        "FDA's human-factors resources emphasise intended users, uses, and use environments. Identify the tasks whose failure could have important safety consequences and explain why they belong in the evaluation. Different groups may have different experience, capabilities, or training, so a convenient participant sample may not represent the intended population.",
+        "Describe the relevant environmental conditions, equipment, accessories, and information available to the user. If training is part of the intended product workflow, define how the evaluation will represent it. Avoid giving participants extra assistance that would not exist in actual use."
+      ],
+      "sourceKeys": [
+        "fdaHuman",
+        "fdaHumanFactors"
+      ]
+    },
+    {
+      "title": "Use earlier evaluations to improve the design",
+      "paragraphs": [
+        "Exploratory sessions can identify confusing labels, awkward sequences, or assumptions about user knowledge while changes are still practical. Record the observation, the suspected contributing factor, the design response, and what later work will check. Do not treat an early session with colleagues as a substitute for a representative final evaluation.",
+        "Before the final study, stabilise the interface, instructions, and configuration being assessed. If these change afterwards, evaluate whether the findings still apply. The protocol should describe the intended tasks and observation methods clearly enough that the study is repeatable without scripting participants into success."
+      ]
+    },
+    {
+      "title": "Interpret difficulties rather than counting successes alone",
+      "paragraphs": [
+        "Record use errors, close calls, difficulties, and relevant participant explanations. Look for patterns that reveal a problem even if the task was eventually completed. A participant who succeeds only after a long, uncertain sequence may expose an important issue in a time-sensitive workflow.",
+        "Analyse the findings against the associated risks and controls. Explain the conclusion and any remaining action. Do not use a high overall completion percentage to conceal a serious failure on one important task. FDA's submission guidance should also be consulted for the information appropriate to the product and submission."
+      ],
+      "sourceKeys": [
+        "fdaHumanSubmission"
+      ]
+    }
+  ],
+  "example": "In a hypothetical study, every participant eventually enters a dose correctly, but several first select the wrong unit and correct it only after checking another screen. A success count alone would hide the difficulty. The team should investigate the interface and workflow, consider the consequences in real use, and decide what design or information changes need evaluation.",
+  "checklist": [
+    "Identify relevant user groups and safety-related tasks.",
+    "Represent the actual environment and training.",
+    "Use early findings to improve the design.",
+    "Evaluate the intended final configuration.",
+    "Analyse errors and difficulties in context."
+  ],
+  "faq": {
+    "question": "Is user satisfaction enough to establish safe usability?",
+    "answer": "No. Satisfaction can be useful feedback, but safety-focused evaluation asks whether users perform relevant tasks correctly and what errors or difficulties occur. Keep preference measures separate from the evidence supporting use-related safety."
+  },
+  "seoTitle": "IEC 62366 Usability Testing Guide | NKB Regovanta",
+  "image": "/assets/brain/cs_fda_simulated_use_1786441155542.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "fdaHuman",
+    "fdaHumanFactors",
+    "fdaHumanSubmission"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "US FDA"
+}

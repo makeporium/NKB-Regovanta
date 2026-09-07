@@ -1,0 +1,58 @@
+{
+  "slug": "ce-marking-cardiovascular-medical-devices",
+  "title": "Cardiovascular Device CE Marking: Organise Evidence Around the Clinical Claim",
+  "description": "Plan cardiovascular-device evidence across design performance, patient contact, clinical benefit, and follow-up without assuming one route fits all products.",
+  "service": "/services/eu/mdr",
+  "intro": "Cardiovascular devices cover very different technologies and clinical roles. A diagnostic accessory, a vascular implant, and an active therapeutic system should not inherit the same development checklist merely because they are used in cardiology. The most useful starting point is the clinical claim: what the device is intended to do, for whom, and under what conditions.",
+  "sections": [
+    {
+      "title": "Resolve the device-specific classification and route",
+      "paragraphs": [
+        "EU MDR classification follows the product's characteristics and applicable rules, not a single cardiovascular label. Establish the intended purpose, duration and nature of contact, mode of action, and relevant technology. Use those details to determine the conformity-assessment route and the scope of notified-body involvement.",
+        "Record combinations and accessories explicitly. If a product is intended to work with a delivery system, external controller, or particular accessories, clarify which configurations are covered. The European Commission's notified-body information can help identify designation scope, but the actual product and assessment needs still have to be discussed with the selected body."
+      ],
+      "sourceKeys": [
+        "mdr",
+        "notified"
+      ]
+    },
+    {
+      "title": "Connect technical performance to clinical use",
+      "paragraphs": [
+        "Create a claim-to-evidence map that distinguishes mechanical or electrical performance, biological safety, clinical outcomes, and information for the user. For each evaluation, identify the configuration, use condition, and acceptance criterion represented by the result. Avoid assuming that a successful laboratory test proves every clinical claim.",
+        "Consider interactions between evidence areas. A material or surface change may influence both performance and patient-contact assessment. A modification intended to make deployment easier may affect how the product is used or which training is needed. Review those connections before deciding that only one report needs updating."
+      ]
+    },
+    {
+      "title": "Plan how the evidence will remain current",
+      "paragraphs": [
+        "Choose follow-up questions that address the remaining uncertainty for the specific product. These may concern longer-term performance, less-represented patient groups, or use in settings not well covered by initial evidence. Define how information will be collected, evaluated, and linked back to the clinical and risk conclusions.",
+        "Separate a meaningful follow-up plan from a promise to review complaints. Complaints can reveal important signals, but they may not answer a defined performance question. Identify the data needed, the denominator or exposure information where relevant, and the point at which a signal would trigger further investigation or a change in the product information."
+      ]
+    }
+  ],
+  "example": "A hypothetical vascular device adds a claim for use in a more challenging anatomical setting. The original bench programme may remain useful, but it does not automatically support the expanded clinical claim. The manufacturer should identify which performance conditions, clinical evidence, and user instructions are affected. Framing the decision around the added claim prevents a broad statement that 'the device has already been tested' from closing the question prematurely.",
+  "checklist": [
+    "Define the precise clinical purpose and configurations.",
+    "Document classification and assessment route.",
+    "Map each claim to an appropriate evidence category.",
+    "Review interactions between material, design, and use changes.",
+    "Define product-specific follow-up questions and decision thresholds."
+  ],
+  "faq": {
+    "question": "Are all cardiovascular devices Class III under the MDR?",
+    "answer": "No. Classification depends on the applicable rules and the specific device. Do not assign a class from the clinical specialty alone; document the intended use and characteristics that support the classification rationale."
+  },
+  "seoTitle": "CE Marking for Cardiovascular Devices | NKB Regovanta",
+  "image": "/assets/brain/medtech_reg_lab.jpg",
+  "published": "2026-08-31",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "mdr",
+    "notified"
+  ],
+  "imageWidth": 1376,
+  "imageHeight": 768,
+  "category": "EU MDR & IVDR"
+}

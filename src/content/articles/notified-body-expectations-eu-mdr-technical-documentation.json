@@ -1,0 +1,56 @@
+{
+  "slug": "notified-body-expectations-eu-mdr-technical-documentation",
+  "title": "EU MDR Technical Documentation: Make the Evidence Trail Clear",
+  "description": "Prepare an MDR technical file with consistent scope, claim-to-evidence links, controlled revisions, and traceable responses to review questions.",
+  "service": "/services/eu/technical-documentation",
+  "intro": "A technical file can contain the right reports and still be difficult to assess. The reader may be unable to connect the device description, risk conclusions, testing, clinical evidence, and instructions. Preparing for notified-body review means making those connections explicit and resolving contradictions before the file leaves the manufacturer.",
+  "sections": [
+    {
+      "title": "Establish the scope of the file",
+      "paragraphs": [
+        "MDR Annexes II and III provide the framework for technical documentation and post-market surveillance documentation. Start with the exact configurations covered. Identify models, accessories, relevant software versions, intended users, and claims. A reviewer should not have to infer the product scope from a collection of test reports.",
+        "Use a controlled index with current revisions and a clear status for unfinished work. If one file covers a family, explain the relationship between variants and the reasoning for representative evaluations. Make exclusions visible so that evidence for one configuration is not accidentally presented as covering another."
+      ],
+      "sourceKeys": [
+        "mdr"
+      ]
+    },
+    {
+      "title": "Follow a claim through the evidence",
+      "paragraphs": [
+        "Select a significant performance claim and trace it into requirements, evaluation methods, results, risk conclusions, and labelling. Check that the acceptance criteria answer the claim and that the report identifies the relevant configuration. Repeat the exercise for a key safety concern and a user-facing limitation.",
+        "Resolve discrepancies before adding more documents. If the clinical evaluation describes one population and the instructions describe a broader one, another report may not fix the inconsistency. The team needs a decision about the claim or the missing evidence. A short, explicit rationale is more useful than a large appendix of loosely related material."
+      ]
+    },
+    {
+      "title": "Manage questions as controlled changes",
+      "paragraphs": [
+        "Maintain a response table stating the question, proposed answer, supporting evidence, and exact revisions made. Distinguish clarification of existing information from a change to the product or evidence package. The latter may affect several parts of the file and needs coordinated review.",
+        "Before resubmission, verify that every referenced document is included and that previous references still resolve. Explain how the concern was addressed. A response that merely says 'updated as requested' forces the reviewer to search for both the reasoning and the changed content."
+      ]
+    }
+  ],
+  "example": "A hypothetical technical file describes a reusable device while a report evaluates only single use. The instructions also omit the proposed reprocessing limit. An effective pre-review catches the disagreement, establishes the intended claim, and aligns the necessary evidence and instructions. Rearranging the folders would make the file tidier without resolving the actual assessment question.",
+  "checklist": [
+    "Define models, versions, accessories, and intended claims.",
+    "Maintain a controlled evidence index.",
+    "Trace claims through the complete file.",
+    "Resolve conflicting assumptions between documents.",
+    "Respond with precise evidence and revision references."
+  ],
+  "faq": {
+    "question": "Will one technical-file template satisfy every notified body?",
+    "answer": "A template can organise information, but product-specific evidence and applicable requirements determine adequacy. Confirm submission-format expectations with the body while ensuring that the substantive argument remains complete and internally consistent."
+  },
+  "seoTitle": "EU MDR Technical Documentation Guide | NKB Regovanta",
+  "image": "/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
+  "published": "2026-09-03",
+  "updated": "2026-09-07",
+  "indexable": false,
+  "sourceKeys": [
+    "mdr"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "EU MDR & IVDR"
+}

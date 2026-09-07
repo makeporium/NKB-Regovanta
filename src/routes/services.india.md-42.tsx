@@ -1,4 +1,4 @@
-﻿import heroImg from "@/assets/cdsco-india-hero.png";
+﻿import heroImg from "@/assets/cdsco-india-hero.optimized.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, ClipboardList, ShieldAlert, Store, ArrowRight, ShieldCheck, FileCheck2, ClipboardCheck, Globe } from "lucide-react";
 
@@ -48,19 +48,22 @@ function MD42Page() {
   return (
     <div className="bg-white">
             {/* HERO SECTION */}
+      <h1 className="sr-only">
+              <span className="text-[#0b3a96]">MD-42</span> Medical Device <br/> Registration Certificate
+            </h1>
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
-          <img src={heroImg} alt="MD-42 Medical Device  Registration Certificate" className="block w-full" />
+          <img width={1942} height={745} src={heroImg} alt="MD-42 Medical Device  Registration Certificate" className="block w-full" />
 
           <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
             <Link to="/services/india" className="inline-flex items-center text-[#465569] hover:text-[#0b3a96] transition-colors mb-[1cqw] font-semibold text-[0.9cqw]">
               <ArrowLeft className="mr-[0.4cqw] h-[1cqw] w-[1cqw]" />
               Back to India CDSCO Services
             </Link>
-            <h1 className="font-display text-[2.8cqw] font-bold leading-[1.2] text-[#0f2340]">
+            <p aria-hidden="true" className="font-display text-[2.8cqw] font-bold leading-[1.2] text-[#0f2340]">
               <span className="text-[#0b3a96]">MD-42</span> Medical Device <br/> Registration Certificate
-            </h1>
+            </p>
             <div className="mt-[1.8cqw] flex items-center gap-[0.4cqw]">
               <span className="h-[0.2cqw] w-[3.5cqw] rounded-full bg-[#ff6b1a]" />
               <span className="h-[0.5cqw] w-[0.5cqw] rounded-full bg-[#c9d3e0]" />
@@ -106,9 +109,9 @@ function MD42Page() {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to India CDSCO Services
           </Link>
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">MD-42</span> Medical Device <br/> Registration Certificate
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />
@@ -124,7 +127,7 @@ function MD42Page() {
             Consult Our CDSCO Experts
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <img src={heroImg} alt="MD-42 Medical Device  Registration Certificate" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="MD-42 Medical Device  Registration Certificate" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -132,7 +135,7 @@ function MD42Page() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            
+
             {/* Left Content Column */}
             <div className="lg:col-span-2 space-y-12">
               <div>
@@ -173,7 +176,7 @@ function MD42Page() {
                   <ShieldAlert className="h-7 w-7 text-blue-600" />
                   Why is it Crucial for Your Business?
                 </h2>
-                
+
                 <div className="space-y-4">
                   <div className="flex gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100 items-start">
                     <CheckCircle2 className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />

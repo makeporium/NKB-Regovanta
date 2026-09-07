@@ -2,7 +2,7 @@
 import { ChevronRight, FileCheck2, ShieldCheck, Database, Calendar, Users, FlaskConical, ChevronDown, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
-import eudamedFlowchart from "@/assets/eudamed_registration_workflow.png";
+import eudamedFlowchart from "@/assets/eudamed_registration_workflow.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd_/eu")({
     head: () => ({
@@ -164,7 +164,7 @@ function IVDEu() {
 
                             {/* EUDAMED workflow */}
                             <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
-                                <img src={eudamedFlowchart} alt="EUDAMED Registration Workflow" className="w-full h-auto object-contain rounded-md" />
+                                <img width={2720} height={2800} src={eudamedFlowchart} alt="EUDAMED Registration Workflow" className="w-full h-auto object-contain rounded-md" />
                             </div>
 
                             <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4 flex items-center gap-3">
@@ -196,7 +196,7 @@ function IVDEu() {
                             <p className="text-[15px] leading-relaxed mb-6">
                                 Four additional regulations have been enacted with the primary purpose of providing adequate time and resources to ensure continued availability of devices on the EU market:
                             </p>
-                            
+
                             <div className="overflow-x-auto mb-10">
                                 <table className="w-full text-left border-collapse text-sm bg-white rounded-md border border-border">
                                     <thead>
@@ -259,7 +259,7 @@ function IVDEu() {
                             <p className="text-[15px] leading-relaxed mb-6">
                                 The transition period depends on the classification of the device and whether it was CE-marked under the IVDD by self-declaration or by certification with a Notified Body. The following timelines apply:
                             </p>
-                            
+
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                                 <div className="bg-surface/50 p-5 rounded-lg border border-border">
                                     <h4 className="font-bold text-navy mb-3 pb-2 border-b border-navy/10">Devices with an IVDD certificate</h4>
@@ -326,7 +326,7 @@ function IVDEu() {
                             </div>
 
                             <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-6">Further IVDR Details & Procedures</h2>
-              
+
                             <details className="group border border-border rounded-lg bg-white mb-4 overflow-hidden">
                                 <summary className="font-bold text-navy text-lg p-5 cursor-pointer flex justify-between items-center list-none hover:bg-surface/50 transition-colors">
                                 Structured dialogue
@@ -483,7 +483,7 @@ function IVDEu() {
                 </div>
             </section>
 
-            <CTABand title="Navigate IVDR conformity with confidence" btnText="Contact Our EU Experts" />
+            <CTABand title="Navigate IVDR conformity with confidence" action="Contact Our EU Experts" />
         </>
     );
 }

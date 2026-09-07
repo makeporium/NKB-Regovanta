@@ -104,7 +104,7 @@ function Cosmetics() {
             </p>
           </div>
           <div className="hidden lg:block h-full overflow-hidden">
-            <img src={imgHero} alt="Cosmetics Regulatory" className="w-full h-full object-cover object-center" />
+            <img width={1024} height={1024} src={imgHero} alt="Cosmetics Regulatory" className="w-full h-full object-cover object-center" />
           </div>
         </div>
       </section>

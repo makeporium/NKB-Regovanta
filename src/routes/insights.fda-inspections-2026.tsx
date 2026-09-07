@@ -62,7 +62,7 @@ function Article() {
       />
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <Link to="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-navy/70 hover:text-navy transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" /> Back to Insights
           </Link>
@@ -118,10 +118,10 @@ function Article() {
         </div>
       </article>
 
-      <CTABand 
-        title="Preparing for an FDA inspection?" 
-        description="NKB Regovanta can support QMSR gap assessments, mock inspections, CAPA remediation, supplier-quality reviews and inspection-readiness programs." 
-        btnText="Contact Us Today" 
+      <CTABand
+        title="Preparing for an FDA inspection?"
+        description="NKB Regovanta can support QMSR gap assessments, mock inspections, CAPA remediation, supplier-quality reviews and inspection-readiness programs."
+        action="Contact Us Today"
       />
     </>
   );

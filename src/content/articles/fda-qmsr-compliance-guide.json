@@ -1,0 +1,58 @@
+{
+  "slug": "fda-qmsr-compliance-guide",
+  "title": "FDA QMSR Readiness: Follow a Product Record Through the Quality System",
+  "description": "Assess FDA QMSR readiness through connected product records, supplier controls, complaints, and management decisions rather than a document count.",
+  "service": "/services/iso-13485",
+  "intro": "A quality manual can describe a convincing system while daily records tell a different story. For a manufacturer reviewing FDA QMSR readiness, a more useful starting point is one released product: follow its requirements, supplier decisions, production history, release evidence, and post-market feedback. The connections reveal whether the system works in practice.",
+  "sections": [
+    {
+      "title": "Use the current regulatory baseline",
+      "paragraphs": [
+        "FDA's Quality Management System Regulation became effective on February 2, 2026. It incorporates ISO 13485:2016 by reference while retaining applicable FDA-specific requirements. An existing ISO certificate is useful context, but it is not a substitute for understanding the manufacturer's obligations under the FDA framework.",
+        "Maintain a concise applicability register showing which requirements apply to the site's activities and products. Assign an owner to each gap between the actual operating process and the controlled procedure. Avoid rewriting every document simply to change terminology; first identify whether a control, responsibility, or retained record is actually missing."
+      ],
+      "sourceKeys": [
+        "qmsr",
+        "qmsrFaq"
+      ]
+    },
+    {
+      "title": "Run a product-based evidence walkthrough",
+      "paragraphs": [
+        "Choose a representative product and trace a design requirement into its verification result, the released specification, and the manufacturing record. Then select a critical purchased component. Confirm that the approved supplier, purchasing specification, incoming checks, and change notifications tell a consistent story.",
+        "Ask the people performing the work to retrieve the evidence using their normal systems. Record the time taken and any reliance on personal folders or informal explanations. A procedure may be adequate while retrieval, approval status, or version control is weak. Those findings call for different corrective actions from a genuinely missing process."
+      ]
+    },
+    {
+      "title": "Close the loop from complaints to decisions",
+      "paragraphs": [
+        "Select a complaint trend and examine how it was assessed, investigated, and communicated to the teams responsible for the product. A trend with no immediate corrective action may still require a documented rationale. Conversely, an action labelled complete should have evidence that it addressed the identified cause and did not introduce a new problem.",
+        "Use management review to resolve recurring constraints, such as insufficient investigation capacity or incomplete supplier data. Give each decision an owner, expected result, and review date. The practical objective is a system that notices deteriorating performance and responds consistently, rather than a collection of forms completed shortly before an audit."
+      ]
+    }
+  ],
+  "example": "In a hypothetical catheter business, receiving inspection repeatedly rejects the same connector dimension. The purchasing team changes suppliers, but the approved drawing remains ambiguous. A product walkthrough connects the supplier issue to the design specification and inspection method. Retraining inspectors alone would leave the underlying problem untouched. A stronger response clarifies the requirement, verifies the measurement method, and checks whether the revised supply process remains effective.",
+  "checklist": [
+    "Confirm the current QMSR and FDA-specific requirements.",
+    "Trace one product from requirements to release.",
+    "Sample critical supplier and change-control records.",
+    "Link complaint decisions to investigation and follow-up evidence.",
+    "Assign measurable outcomes to management actions."
+  ],
+  "faq": {
+    "question": "Does an ISO 13485 certificate eliminate FDA inspection risk?",
+    "answer": "No. A certificate does not establish that every applicable FDA obligation is met or that daily implementation is effective. Use the certificate as one input to readiness, alongside product records and current FDA requirements."
+  },
+  "seoTitle": "FDA QMSR & ISO 13485 Compliance Guide | NKB Regovanta",
+  "image": "/assets/brain/insight_fda_qmsr_1786440932587.png",
+  "published": "2026-08-22",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "qmsr",
+    "qmsrFaq"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "QUALITY & SOFTWARE"
+}

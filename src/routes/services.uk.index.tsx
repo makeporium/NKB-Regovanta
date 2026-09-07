@@ -392,7 +392,7 @@ function UKMarketCompletePage() {
             {/* Right 3D Visual with Big Ben, UKRP Shield, MHRA Book & UKCA */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <img width={341} height={236}
                   src={ukHero3dImg}
                   alt="UK MHRA Medical Device Registration & UK Responsible Person (UKRP)"
                   className="w-full h-auto object-contain rounded-xl"
@@ -535,7 +535,7 @@ function UKMarketCompletePage() {
               </div>
 
               <div className="absolute right-3 bottom-4 w-36 sm:w-44 opacity-90 pointer-events-none hidden sm:block">
-                <img
+                <img width={82} height={133}
                   src={ukMapShieldImg}
                   alt="UK Regulatory Shield"
                   className="w-full h-auto object-contain drop-shadow-xl"
@@ -833,7 +833,7 @@ function UKMarketCompletePage() {
           <div className="bg-[#05152e] text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
             {/* Left Big Ben tower + Text */}
             <div className="flex items-center gap-4 lg:gap-6 z-10">
-              <img
+              <img width={55} height={102}
                 src={ukBigBenImg}
                 alt="Big Ben London"
                 className="w-10 sm:w-12 h-auto object-contain shrink-0 drop-shadow-md hidden sm:block"

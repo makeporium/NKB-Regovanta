@@ -1,0 +1,58 @@
+{
+  "slug": "cdsco-medical-device-registration-guidelines-india",
+  "title": "Medical Device Registration in India: Define the Applicant, Product, and Route",
+  "description": "Prepare an Indian medical-device registration strategy using product classification, applicant roles, manufacturing or import scope, and current rules.",
+  "service": "/services/india/medical-devices",
+  "intro": "The phrase 'CDSCO registration' can hide several different activities. A manufacturer, importer, or distributor may need a different route and supporting information. Before collecting documents, define the device, its intended use, the business activity, and the legal entity that will hold the relevant responsibility. That definition makes the application plan much more reliable.",
+  "sections": [
+    {
+      "title": "Confirm the applicable product classification",
+      "paragraphs": [
+        "India's Medical Devices Rules, 2017 and subsequent amendments govern the relevant framework. Establish the intended use and risk classification using the applicable provisions and CDSCO information. Product category names should support the assessment, not replace it when the actual use differs.",
+        "Check current amendments and specific provisions, including those affecting eligible non-sterile, non-measuring Class A devices. Record the source behind the selected route. Do not assume that a checklist used for a different device or an earlier application remains current."
+      ],
+      "sourceKeys": [
+        "indiaRules",
+        "cdsco"
+      ]
+    },
+    {
+      "title": "Distinguish import and manufacturing responsibilities",
+      "paragraphs": [
+        "For an import project, identify the foreign manufacturer, relevant manufacturing locations, Indian applicant arrangements, and proposed products. For domestic manufacture, define the activities and sites covered. CDSCO's published information identifies the respective application and licence routes; select the one matching the actual activity.",
+        "Prepare an entity-and-product table before assembling the dossier. Check names, addresses, authorisations, and model identifiers across documents. Differences in spelling or scope may appear minor to the project team but can make the application difficult to assess."
+      ]
+    },
+    {
+      "title": "Build a consistent application and post-licence plan",
+      "paragraphs": [
+        "Map each required item to an owner and a controlled source. Distinguish an available document from one that is current, applicable, and complete for the proposed scope. Review product descriptions, labels, certificates, and supporting technical information together rather than in separate administrative streams.",
+        "Plan how changes and ongoing obligations will be handled after the licence or registration. Keep the authorised scope accessible to commercial and operations teams so that new models or changed sites are not added informally. An application project should leave behind a maintainable regulatory record, not just an upload folder."
+      ]
+    }
+  ],
+  "example": "A hypothetical importer receives a global catalogue containing several model families, but the available authorisation covers only one manufacturing location. Building the product-and-entity table early exposes the mismatch. The team can then resolve the proposed scope and supporting records before submitting information that implies wider coverage than the documents establish.",
+  "checklist": [
+    "Define the intended use and classification.",
+    "Identify the applicant and actual business activity.",
+    "Confirm the current route and applicable amendments.",
+    "Reconcile product and entity details across records.",
+    "Assign responsibility for post-licence changes."
+  ],
+  "faq": {
+    "question": "Does an overseas approval automatically permit sale in India?",
+    "answer": "Do not assume so. Overseas evidence may be relevant to an applicable route, but Indian requirements and the product's circumstances still need assessment. Confirm the necessary licence or registration and its scope before commercial supply."
+  },
+  "seoTitle": "CDSCO Device Registration Guide India | NKB Regovanta",
+  "image": "/assets/brain/india_cdsco_market_1786307143373.png",
+  "published": "2026-09-05",
+  "updated": "2026-09-07",
+  "indexable": true,
+  "sourceKeys": [
+    "indiaRules",
+    "cdsco"
+  ],
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "category": "CDSCO INDIA"
+}

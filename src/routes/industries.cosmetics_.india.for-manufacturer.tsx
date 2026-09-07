@@ -117,7 +117,7 @@ function ForManufacturer() {
         </div>
       </article>
 
-      <CTABand title="Ready to setup your manufacturing unit?" btnText="Contact Us" />
+      <CTABand title="Ready to setup your manufacturing unit?" action="Contact Us" />
     </>
   );
 }

@@ -70,7 +70,7 @@ function Article() {
           </h1>
           <img src={imgPlaceholder} alt="US FDA 510(k)" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
-            
+
             <p className="lead font-medium text-navy/80">
               <strong>Client profile:</strong> International manufacturer preparing a 510(k) for a medical device incorporating a sharps-injury-prevention feature.
             </p>
@@ -117,7 +117,7 @@ function Article() {
           </div>
         </div>
       </article>
-      <CTABand title="Looking for a smarter 510(k) strategy?" description="NKB Regovanta can help." btnText="Contact Us Today" />
+      <CTABand title="Looking for a smarter 510(k) strategy?" description="NKB Regovanta can help." action="Contact Us Today" />
     </>
   );
 }
