@@ -25,53 +25,6 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/pc-pndt-certificate")({
-  head: () => ({
-    meta: [
-      { title: "PC-PNDT Certificate Registration India | NKB Regovanta" },
-      {
-        name: "description",
-        content:
-          "Statutory PC-PNDT Certificate registration (Form A & B) for ultrasound machines and diagnostic imaging in India. Complete compliance consulting.",
-      },
-      { property: "og:title", content: "PC-PNDT Certificate Registration India | NKB Regovanta" },
-      {
-        property: "og:description",
-        content:
-          "Statutory PC-PNDT Certificate registration (Form A & B) for ultrasound machines and diagnostic imaging in India. Complete compliance consulting.",
-      },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "PC-PNDT Certificate Registration India | NKB Regovanta" },
-      {
-        name: "twitter:description",
-        content:
-          "Statutory PC-PNDT Certificate registration (Form A & B) for ultrasound machines and diagnostic imaging in India. Complete compliance consulting.",
-      },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
-    ],
-    links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: "PC-PNDT Certificate Registration India",
-          areaServed: { "@type": "Country", name: "India" },
-          description:
-            "Statutory PC-PNDT Certificate registration (Form A & B) for ultrasound machines and diagnostic imaging in India.",
-          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
-        }),
-      },
-    ],
-  }),
-  component: PcPndtCertificatePage,
-});
-
 const stakeholders = [
   {
     icon: Building2,
@@ -145,6 +98,104 @@ const faqs = [
   },
 ];
 
+export const Route = createFileRoute("/services/pc-pndt-certificate")({
+  head: () => ({
+    meta: [
+      { title: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Leading PC-PNDT registration consultant in India. Statutory Form A filing & Form B certificate grant for ultrasound machines, imaging equipment, importers, OEMs & dealers.",
+      },
+      {
+        name: "keywords",
+        content:
+          "PC PNDT registration consultant, PCPNDT consultant India, PC PNDT certificate registration, ultrasound machine registration India, Form A and Form B PCPNDT, PNDT license India, NKB Regovanta",
+      },
+      { property: "og:title", content: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "Leading PC-PNDT registration consultant in India. Statutory Form A filing & Form B certificate grant for ultrasound machines, imaging equipment, importers, OEMs & dealers.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Leading PC-PNDT registration consultant in India. Statutory Form A filing & Form B certificate grant for ultrasound machines, imaging equipment, importers, OEMs & dealers.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#service",
+              name: "PC-PNDT Registration Consultant & Certificate Licensing",
+              serviceType: "PC-PNDT Statutory Registration Consulting",
+              description:
+                "Statutory PC-PNDT Certificate registration (Form A & B) and compliance consultancy for ultrasound machines and diagnostic imaging equipment in India.",
+              provider: {
+                "@type": "Organization",
+                name: "NKB Regovanta",
+                url: "https://www.nkbregovanta.com",
+              },
+              areaServed: { "@type": "Country", name: "India" },
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#breadcrumb",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.nkbregovanta.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Services",
+                  item: "https://www.nkbregovanta.com/services",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "PC-PNDT Registration Consultant",
+                  item: "https://www.nkbregovanta.com/services/pc-pndt-certificate",
+                },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#faq",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: f.a,
+                },
+              })),
+            },
+          ],
+        }),
+      },
+    ],
+  }),
+  component: PcPndtCertificatePage,
+});
+
 function PcPndtCertificatePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [formState, setFormState] = useState({
@@ -205,7 +256,7 @@ function PcPndtCertificatePage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/services" className="hover:text-white transition-colors">Services</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#F5C754]">PC-PNDT Certificate</span>
+            <span className="text-[#F5C754]">PC-PNDT Registration Consultant</span>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -217,14 +268,14 @@ function PcPndtCertificatePage() {
               </div>
 
               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] text-white">
-                PC-PNDT Registration & Certificate
+                PC-PNDT Registration Consultant & Certificate
                 <span className="block text-[#F5C754] mt-2">
                   For Ultrasound & Imaging Medical Devices (Form A & B)
                 </span>
               </h1>
 
               <p className="text-base sm:text-lg text-white/85 leading-relaxed max-w-2xl font-normal">
-                End-to-end statutory licensing, Form A filing, Appropriate Authority liaison, and Form B certificate acquisition for manufacturers, importers, dealers, and technicians of ultrasound and imaging machinery in India.
+                As India&apos;s leading PC-PNDT registration consultant, NKB Regovanta provides end-to-end statutory licensing, Form A filing, Appropriate Authority liaison, and Form B certificate acquisition for manufacturers, importers, dealers, and technicians of ultrasound and imaging machinery in India.
               </p>
 
               {/* Badges */}
