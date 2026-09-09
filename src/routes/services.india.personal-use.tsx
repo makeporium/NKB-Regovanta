@@ -7,16 +7,16 @@ export const Route = createFileRoute("/services/india/personal-use")({
   head: () => ({
     meta: [
       { name: "robots", content: "index, follow, max-image-preview:large" },
-      { title: "Personal Use Device Import (MD-20) | NKB Regovanta" },
-      { name: "description", content: "Obtain CDSCO MD-20 & MD-21 import licenses for patient personal use in India. Fast-track compassionate import documentation and prescription filing support." },
-      { property: "og:title", content: "Personal Use Device Import (MD-20) | NKB Regovanta" },
-      { property: "og:description", content: "Obtain CDSCO MD-20 & MD-21 import licenses for patient personal use in India. Fast-track compassionate import documentation and prescription filing support." },
+      { title: "Patient Device Import India (MD-20/21) | NKB Regovanta" },
+      { name: "description", content: "CDSCO MD-20/21 support for an individual patient importing a limited-quantity medical device for personal treatment in India, not commercial distribution." },
+      { property: "og:title", content: "Patient Device Import India (MD-20/21) | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO MD-20/21 support for an individual patient importing a limited-quantity medical device for personal treatment in India, not commercial distribution." },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/india/personal-use" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Personal Use Device Import (MD-20) | NKB Regovanta" },
-      { name: "twitter:description", content: "Obtain CDSCO MD-20 & MD-21 import licenses for patient personal use in India. Fast-track compassionate import documentation and prescription filing support." },
+      { name: "twitter:title", content: "Patient Device Import India (MD-20/21) | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO MD-20/21 support for an individual patient importing a limited-quantity medical device for personal treatment in India, not commercial distribution." },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
@@ -28,8 +28,8 @@ export const Route = createFileRoute("/services/india/personal-use")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "CDSCO Personal Use Medical Device Import (MD-20 & MD-21)",
-          description: "CDSCO Forms MD-20 and MD-21 for importing specialized medical devices for compassionate personal use in India.",
+          name: "CDSCO Patient Personal-Use Medical Device Import (MD-20 & MD-21)",
+          description: "CDSCO Forms MD-20 and MD-21 support for an individual patient importing a limited quantity of a medical device for personal treatment in India.",
           provider: {
             "@type": "Organization",
             name: "NKB Regovanta",
@@ -50,12 +50,12 @@ function PersonalUsePage() {
     <div className="bg-white">
             {/* HERO SECTION */}
       <h1 className="sr-only">
-              <span className="text-[#0b3a96]">Personal</span> Use Import License <br/> (Forms MD-20, MD-21)
+              <span className="text-[#0b3a96]">Patient Personal-Use</span> Device Import <br/> (Forms MD-20, MD-21)
             </h1>
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
-          <img width={1942} height={745} src={heroImg} alt="Personal Use Import License  (Forms MD-20, MD-21)" className="block w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Patient personal-use medical device import under CDSCO Forms MD-20 and MD-21" className="block w-full" />
 
           <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
             <Link to="/services/india" className="inline-flex items-center text-[#465569] hover:text-[#0b3a96] transition-colors mb-[1cqw] font-semibold text-[0.9cqw]">
@@ -63,7 +63,7 @@ function PersonalUsePage() {
               Back to India CDSCO Services
             </Link>
             <p aria-hidden="true" className="font-display text-[2.8cqw] font-bold leading-[1.2] text-[#0f2340]">
-              <span className="text-[#0b3a96]">Personal</span> Use Import License <br/> (Forms MD-20, MD-21)
+              <span className="text-[#0b3a96]">Patient Personal-Use</span> Device Import <br/> (Forms MD-20, MD-21)
             </p>
             <div className="mt-[1.8cqw] flex items-center gap-[0.4cqw]">
               <span className="h-[0.2cqw] w-[3.5cqw] rounded-full bg-[#ff6b1a]" />
@@ -111,7 +111,7 @@ function PersonalUsePage() {
             Back to India CDSCO Services
           </Link>
           <p aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
-            <span className="text-[#0b3a96]">Personal</span> Use Import License <br/> (Forms MD-20, MD-21)
+            <span className="text-[#0b3a96]">Patient Personal-Use</span> Device Import <br/> (Forms MD-20, MD-21)
           </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
@@ -128,7 +128,7 @@ function PersonalUsePage() {
             Consult Our CDSCO Experts
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <img width={1942} height={745} src={heroImg} alt="Personal Use Import License  (Forms MD-20, MD-21)" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="Patient personal-use medical device import under CDSCO Forms MD-20 and MD-21" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -146,6 +146,12 @@ function PersonalUsePage() {
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   When individuals in India require specific medical devices for their personal treatment that are not commercially available or approved locally, the CDSCO provides a vital regulatory provision. This ensures patients are not denied access to life-improving or life-saving specialized technologies.
+                </p>
+                <p className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-relaxed text-gray-700">
+                  This MD-20/MD-21 pathway is only for an individual patient and a limited quantity for personal treatment. Manufacturers, authorized agents, and commercial importers should use the{" "}
+                  <Link to="/industries/medical-devices/india/for-importer" className="font-bold text-[#0b3a96] underline underline-offset-2">
+                    CDSCO MD-14/MD-15 commercial medical device import registration pathway
+                  </Link>.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
