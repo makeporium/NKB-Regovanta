@@ -217,20 +217,28 @@ def build(markdown_path, output_path):
                 set_font(run, size=11, color="444444")
         elif line.startswith("## "):
             heading = line[3:]
+            force_page_break = False
             if heading == "Page by page inventory":
-                doc.add_page_break()
+                force_page_break = True
                 in_inventory = True
             elif in_inventory:
                 if not first_inventory_group:
-                    doc.add_page_break()
+                    force_page_break = True
                 first_inventory_group = False
-            doc.add_heading(normalize_markdown(heading), level=1)
+            paragraph = doc.add_heading(normalize_markdown(heading), level=1)
+            if force_page_break:
+                paragraph.paragraph_format.page_break_before = True
         elif line.startswith("### "):
             paragraph = doc.add_heading(normalize_markdown(line[4:]), level=2)
             paragraph.paragraph_format.keep_with_next = True
         elif re.match(r"^\d+\. ", line):
-            paragraph = doc.add_paragraph(style="List Number")
-            add_mixed_text(paragraph, re.sub(r"^\d+\. ", "", line), size=9.2)
+            # Preserve the explicit Markdown number so each independent list
+            # starts where the report author intended instead of continuing a
+            # previous Word auto-numbered list.
+            paragraph = doc.add_paragraph()
+            paragraph.paragraph_format.left_indent = Inches(0.22)
+            paragraph.paragraph_format.first_line_indent = Inches(-0.18)
+            add_mixed_text(paragraph, line, size=9.2)
         elif line.startswith("- "):
             style = "Audit Detail" if in_inventory else "List Bullet"
             paragraph = doc.add_paragraph(style=style)
