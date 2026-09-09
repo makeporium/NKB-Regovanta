@@ -1,5 +1,12 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/ai_news",
+      "destination": "/ai-news",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

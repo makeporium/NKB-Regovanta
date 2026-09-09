@@ -62,10 +62,6 @@ function FiveTenKPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a substantial equivalence predicate in an FDA 510(k) submission?","acceptedAnswer":{"@type":"Answer","text":"A predicate device is a legally marketed device to which the new device is compared for 510(k) clearance. It must share the same intended use and have the same or comparable technological characteristics as the new device."}},{"@type":"Question","name":"Is eSTAR mandatory for all FDA 510(k) submissions?","acceptedAnswer":{"@type":"Answer","text":"Yes. As of October 1, 2023, FDA requires all 510(k) submissions to be filed using the eSTAR (electronic Submission Template and Resource) standardized PDF format. Paper 510(k) submissions are no longer accepted."}},{"@type":"Question","name":"How long does FDA 510(k) clearance take in 2026?","acceptedAnswer":{"@type":"Answer","text":"Under MDUFA V, FDA's performance goal is to issue a decision within 90 days for 90% of 510(k)s. In practice, most routine submissions achieve clearance in 3–6 months, including any Additional Information (AI) request cycles."}},{"@type":"Question","name":"What is the difference between FDA 510(k) clearance and FDA PMA approval?","acceptedAnswer":{"@type":"Answer","text":"510(k) clearance is for Class II devices that demonstrate substantial equivalence to a predicate. PMA (Premarket Approval) is required for Class III devices and requires independent clinical evidence of safety and effectiveness — a much more rigorous process."}},{"@type":"Question","name":"What types of devices require a 510(k) submission?","acceptedAnswer":{"@type":"Answer","text":"Class II medical devices typically require a 510(k) unless they are 510(k)-exempt. Class I devices are usually exempt. Class III devices require PMA unless a De Novo has been granted. Some devices may qualify for the De Novo pathway to create a new device category."}}]}) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             {
@@ -90,36 +86,6 @@ function FiveTenKPage() {
                 { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nkbregovanta.com/services" },
                 { "@type": "ListItem", position: 3, name: "USA FDA", item: "https://www.nkbregovanta.com/services/usa" },
                 { "@type": "ListItem", position: 4, name: "510(k) / 510 k Consultant", item: "https://www.nkbregovanta.com/services/usa/510k" },
-              ],
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "What is a USFDA 510(k) (510 k) premarket notification?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "A USFDA 510(k) (often searched as 510 k or 510k clearance) is a statutory premarket submission to the US FDA demonstrating that a device is substantially equivalent to a legally marketed predicate.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How does a medical device consultant assist with 510 k clearance?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "As an experienced medical device consultancy, NKB Regovanta analyzes predicate eligibility, designs consensus standards testing strategies, drafts the mandatory electronic eSTAR dossier, and handles FDA reviewer deficiency responses.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is eSTAR mandatory for all USFDA 510 k submissions?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes. US FDA mandates all 510(k) premarket notification filings must use the electronic Submission Template and Resource (eSTAR) PDF format.",
-                  },
-                },
               ],
             },
           ]),

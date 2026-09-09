@@ -176,18 +176,6 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
                 },
               ],
             },
-            {
-              "@type": "FAQPage",
-              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#faq",
-              mainEntity: faqs.map((f) => ({
-                "@type": "Question",
-                name: f.q,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: f.a,
-                },
-              })),
-            },
           ],
         }),
       },

@@ -246,10 +246,6 @@ function EUMDRPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between EU MDR and the old EU MDD?","acceptedAnswer":{"@type":"Answer","text":"EU MDR 2017/745 replaced EU MDD 93/42/EEC with significantly more stringent requirements including mandatory clinical evidence, PMCF studies, EUDAMED registration, UDI labelling, QMS certification, and enhanced Notified Body scrutiny for high-risk devices."}},{"@type":"Question","name":"What clinical evidence is required for EU MDR CE marking?","acceptedAnswer":{"@type":"Answer","text":"EU MDR requires a Clinical Evaluation Report (CER) following MEDDEV 2.7/1 Rev 4 or MDCG guidance demonstrating clinical safety and performance. Class IIb and III devices often require direct clinical investigation data rather than literature equivalence alone."}},{"@type":"Question","name":"When must all legacy MDD-marked devices comply with EU MDR?","acceptedAnswer":{"@type":"Answer","text":"Under EU Regulation 2023/607, Class III and implantable Class IIb devices must comply by 31 December 2027. Other Class IIb, IIa, and Is/Im/Ir devices have a deadline of 31 December 2028, subject to meeting specific eligibility conditions."}},{"@type":"Question","name":"Do I need EUDAMED registration for CE marking?","acceptedAnswer":{"@type":"Answer","text":"Yes. EU MDR requires manufacturers to register in EUDAMED and obtain a Single Registration Number (SRN) before applying for CE certification. EUDAMED registration is mandatory for Notified Body submission and ongoing market surveillance reporting."}},{"@type":"Question","name":"What is the General Safety and Performance Requirements (GSPR) in EU MDR?","acceptedAnswer":{"@type":"Answer","text":"GSPR (Annex I of EU MDR) lists all safety and performance requirements a device must meet to obtain CE marking. Manufacturers must create a GSPR checklist demonstrating compliance with each applicable requirement, with supporting evidence."}}]}) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             {
@@ -507,6 +503,17 @@ function EUMDRPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-slate-50 border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-extrabold text-navy mb-3">Primary regulatory references</h2>
+          <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">Requirements and transition conditions must be assessed against the current legislation and European Commission guidance for the specific device and economic operator.</p>
+          <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-navy/75">
+            <li><a className="underline" href="https://health.ec.europa.eu/medical-devices-sector/new-regulations_en">European Commission: Medical Devices Regulation (EU) 2017/745</a></li>
+            <li><a className="underline" href="https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en">European Commission: EUDAMED mandatory modules from 28 May 2026</a></li>
+          </ul>
         </div>
       </section>
 

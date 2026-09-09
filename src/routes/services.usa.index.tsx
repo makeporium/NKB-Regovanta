@@ -309,6 +309,14 @@ function USAMarket() {
                 </div>
             </section>
 
+            <section className="py-10 bg-white border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-xl sm:text-2xl font-extrabold text-navy mb-3">Current FDA reference</h2>
+                    <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">FDA’s Quality Management System Regulation became effective on 2 February 2026 and incorporates ISO 13485:2016 by reference. The applicable premarket and postmarket requirements still depend on the device, establishment, and pathway.</p>
+                    <p className="mt-3 text-sm"><a className="underline text-[#0b3a96]" href="https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr">FDA: Quality Management System Regulation</a></p>
+                </div>
+            </section>
+
             {/* ── WHY CHOOSE + CTA ── */}
             <section className="py-14 bg-slate-50 border-t border-border/40">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

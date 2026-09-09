@@ -288,10 +288,6 @@ function EUIVDRPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is EU IVDR and who does it affect?","acceptedAnswer":{"@type":"Answer","text":"EU IVDR 2017/746 is the In Vitro Diagnostic Regulation that applies to all in vitro diagnostic medical devices sold in Europe, replacing EU IVDD 98/79/EC. It significantly expands the scope of devices requiring Notified Body review — from ~20% to ~80% of IVDs."}},{"@type":"Question","name":"What is a Performance Evaluation Report (PER) under EU IVDR?","acceptedAnswer":{"@type":"Answer","text":"A PER is the EU IVDR equivalent of the Clinical Evaluation Report for medical devices. It documents the analytical performance (accuracy, precision, sensitivity, specificity) and clinical performance (diagnostic sensitivity, specificity, predictive values) of an IVD."}},{"@type":"Question","name":"Are there IVDR transition deadlines for legacy IVDD devices?","acceptedAnswer":{"@type":"Answer","text":"Yes. Class D IVDR devices had a deadline of 26 May 2025. Class C devices: 26 May 2026. Class B and Class A sterile devices: 26 May 2027. Legacy IVDD certificates remain valid only if specific eligibility conditions (MDCG 2022-18) are met."}}]}) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             {
@@ -512,7 +508,7 @@ function EUIVDRPage() {
                   Evidence-Driven PER &amp; Study Protocols
                 </h4>
                 <p className="text-xs sm:text-[13px] text-emerald-100/90 leading-relaxed font-normal mb-6">
-                  Under IVDR, over 85% of IVDs require Notified Body certification. We build the evidence matrix linking each performance claim directly to laboratory data, ensuring effortless Notified Body approval.
+                  Under IVDR, Notified Body involvement depends on the device classification and applicable conformity-assessment route. We build an evidence matrix that links each performance claim to relevant supporting data.
                 </p>
                 <Link
                   to="/contact"
@@ -534,7 +530,7 @@ function EUIVDRPage() {
               IVD Technology Expertise
             </h3>
             <p className="text-xs sm:text-sm text-navy/65 mt-1 font-medium">
-              Proven analytical and clinical track record across advanced assay formats.
+              Analytical and clinical considerations across advanced assay formats.
             </p>
           </div>
 
@@ -549,6 +545,17 @@ function EUIVDRPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-slate-50 border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-extrabold text-navy mb-3">Primary regulatory references</h2>
+          <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">IVDR transition arrangements, EUDAMED obligations, and performance-evaluation requirements depend on the device and its current market status.</p>
+          <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-navy/75">
+            <li><a className="underline" href="https://health.ec.europa.eu/medical-devices-sector/new-regulations_en">European Commission: In Vitro Diagnostic Medical Devices Regulation (EU) 2017/746</a></li>
+            <li><a className="underline" href="https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en">European Commission: EUDAMED mandatory modules from 28 May 2026</a></li>
+          </ul>
         </div>
       </section>
 

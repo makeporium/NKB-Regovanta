@@ -235,20 +235,6 @@ function PredicateDevicesPage() {
           </div>
         </div>
       </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "What is the difference between Form MD-14 and Form MD-15?", "acceptedAnswer": { "@type": "Answer", "text": "Form MD-14 is the application submitted on CDSCO's SUGAM portal to apply for a medical device import licence. Form MD-15 is the actual import licence document granted by CDSCO after the application is reviewed and approved." } },
-            { "@type": "Question", "name": "Who can apply for a CDSCO MD-14 import licence in India?", "acceptedAnswer": { "@type": "Answer", "text": "Only an Indian entity — either an Indian Authorized Agent (IAA) or Authorized Indian Representative (AIR) — holding a valid wholesale drug licence and appointed by the foreign manufacturer via notarized Power of Attorney can file the MD-14 application on SUGAM." } },
-            { "@type": "Question", "name": "How long does CDSCO MD-15 import licence approval take?", "acceptedAnswer": { "@type": "Answer", "text": "For Class A devices: 15–60 days. For Class B, C, D devices with predicates: 3–6 months. Novel devices requiring Expert Committee evaluation: 9–18 months." } },
-            { "@type": "Question", "name": "What documents are required for CDSCO medical device import registration?", "acceptedAnswer": { "@type": "Answer", "text": "Key documents include: SUGAM application, device technical specifications, performance testing reports, ISO 13485 manufacturing certificate, CE or FDA clearance if applicable, predicate device details, Declaration of Conformity, and a notarized Power of Attorney for the Indian agent." } },
-            { "@type": "Question", "name": "Can a foreign company directly apply for an MD-14 licence?", "acceptedAnswer": { "@type": "Answer", "text": "No. CDSCO regulations require all import licence applications to be filed by an Indian Authorized Agent (IAA) or Authorized Indian Representative (AIR) appointed by the foreign manufacturer." } }
-          ]
-        }) }}
-      />
     </div>
   );
 }

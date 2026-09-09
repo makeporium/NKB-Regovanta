@@ -7,7 +7,7 @@ import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.optimized.w
 export const Route = createFileRoute("/industries/ivd_/india")({
     head: () => ({
         meta: [
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
             { title: "India CDSCO IVD Regulatory Services | NKB Regovanta" },
             { name: "description", content: "India CDSCO IVD consulting: test licences (MD-16/17), import licences (MD-14/15), performance evaluations, and novel IVD approvals under MDR 2017." },
             { property: "og:title", content: "India CDSCO IVD Regulatory Services | NKB Regovanta" },
@@ -53,7 +53,7 @@ const services = [
     {
         icon: <Microscope className="h-6 w-6 text-accent mb-4" />,
         title: "In-Country Performance Evaluation",
-        desc: "We coordinate mandatory local clinical performance evaluations at ICMR/AIIMS-designated laboratories to meet strict CDSCO requirements.",
+        desc: "We assess whether performance evaluation, testing permission, or other product-specific evidence is required for your CDSCO pathway.",
     },
     {
         icon: <ShieldCheck className="h-6 w-6 text-accent mb-4" />,
@@ -63,7 +63,7 @@ const services = [
     {
         icon: <FileCheck2 className="h-6 w-6 text-accent mb-4" />,
         title: "Dossier Preparation",
-        desc: "Comprehensive preparation of Forms MD-14, MD-7, and MD-4, aligning your technical documents with the latest 2025/2026 MDR 2017 guidelines.",
+        desc: "Comprehensive preparation of the applicable licensing dossier, forms, and supporting technical documentation under MDR 2017.",
     },
 ];
 
@@ -85,7 +85,7 @@ function IVDIndia() {
                         IVD Regulation in India - CDSCO Under MDR 2017
                     </h1>
                     <p className="mt-4 text-[15px] leading-relaxed text-navy/70 font-medium max-w-3xl">
-                        In-Vitro Diagnostic (IVD) devices in India are stringently governed by the Medical Devices Rules (MDR) 2017. As the regulatory landscape matures, the Central Drugs Standard Control Organization (CDSCO) has implemented rigorous classification parameters and mandatory local performance evaluations for higher-risk devices, making expert guidance essential for successful market entry.
+                        In-vitro diagnostic (IVD) devices in India are regulated under the Medical Devices Rules, 2017. The appropriate pathway depends on the device classification, intended purpose, whether it is new in India, and whether the activity is import, manufacture, testing, or clinical performance evaluation. A product-specific regulatory assessment should establish the applicable evidence and licensing route before filing.
                     </p>
                 </div>
             </section>
@@ -145,34 +145,34 @@ function IVDIndia() {
                             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-md text-[14.5px] text-amber-900 my-6 shadow-sm flex items-start gap-3">
                                 <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
                                 <div>
-                                    <strong className="font-bold block mb-1">Critical 2025 Classification Update</strong>
-                                    Following an October 2025 CDSCO directive, SLAs are strictly prohibited from issuing licenses for unclassified IVDs. The CLA must explicitly classify a device before any SLA licensing can proceed. Before initiating an application, you must verify your IVD's status using the new Risk Classification Module on the CDSCO SUGAM portal.
+                                    <strong className="font-bold block mb-1">Start with classification and applicable rules</strong>
+                                    Classification and the applicable licensing authority should be confirmed against the Medical Devices Rules, 2017 and current CDSCO guidance. A device-specific assessment is especially important where the intended purpose, technology, or market status creates uncertainty.
                                 </div>
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">The India-Specific Requirement: In-Country Performance Evaluation</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">Clinical Performance Evaluation: Assess Applicability Before Filing</h2>
                             <p className="text-[15px] leading-relaxed">
-                                India's regulatory framework features a unique and pivotal requirement: <strong>mandatory in-country clinical performance evaluation for new Class B, C, and D IVD devices</strong>. Unlike many markets that rely on mutual recognition, India strictly requires local performance data, even if your device holds CE marking under the IVDR or FDA 510(k) clearance.
+                                Clinical performance evaluation and test-licence requirements are not interchangeable with ordinary import or manufacturing licensing. For an IVD that is new in India or otherwise requires additional evidence, the required study design, permissions, laboratories, and documentation must be confirmed from the current CDSCO route and the device facts. Existing CE or FDA documentation can inform a dossier, but does not by itself determine the Indian pathway.
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-6 my-8">
                                 <div className="bg-surface p-6 rounded-lg border border-border relative overflow-hidden group">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500"></div>
-                                    <h3 className="font-bold text-navy text-lg mb-3 relative z-10">Evaluation Criteria</h3>
+                                    <h3 className="font-bold text-navy text-lg mb-3 relative z-10">Assessment questions</h3>
                                     <ul className="space-y-2 relative z-10">
-                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Testing must be conducted at CDSCO-authorised and ICMR-designated labs.</li>
-                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Sensitivity, specificity, and accuracy are assessed against strict CDSCO acceptance thresholds.</li>
-                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Minimum sample requirements are strictly enforced according to ICMR protocols.</li>
+                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Is the device classified and is its intended purpose clearly defined?</li>
+                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Is the product new in India or subject to an additional permission route?</li>
+                                        <li className="flex gap-2 text-sm text-navy/80"><CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" /> What evidence, permissions, and test arrangements are applicable to this product?</li>
                                     </ul>
                                 </div>
                                 <div className="bg-surface p-6 rounded-lg border border-border relative overflow-hidden group">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500"></div>
-                                    <h3 className="font-bold text-navy text-lg mb-3 relative z-10">Standardized Thresholds</h3>
-                                    <p className="text-sm text-navy/80 mb-3 relative z-10">Examples of ICMR-CDSCO minimum acceptance criteria:</p>
+                                    <h3 className="font-bold text-navy text-lg mb-3 relative z-10">Evidence planning</h3>
+                                    <p className="text-sm text-navy/80 mb-3 relative z-10">The evidence plan should be documented before samples are imported or studies begin:</p>
                                     <ul className="space-y-2 relative z-10">
-                                        <li className="flex gap-2 text-sm text-navy/80 justify-between border-b border-border/50 pb-1"><span><strong>ELISA</strong></span> <span>Sens: ≥90% | Spec: ≥95%</span></li>
-                                        <li className="flex gap-2 text-sm text-navy/80 justify-between border-b border-border/50 pb-1"><span><strong>Rapid Test (RDT)</strong></span> <span>Sens: ≥80% | Spec: ≥90%</span></li>
-                                        <li className="flex gap-2 text-sm text-navy/80 justify-between pb-1"><span><strong>PCR Assay</strong></span> <span>Sens: ≥95% | Spec: ≥98%</span></li>
+                                        <li className="flex gap-2 text-sm text-navy/80 border-b border-border/50 pb-1"><span><strong>Performance claim</strong></span><span>Define the intended use, analyte, user, and setting.</span></li>
+                                        <li className="flex gap-2 text-sm text-navy/80 border-b border-border/50 pb-1"><span><strong>Supporting data</strong></span><span>Map analytical and clinical evidence to the applicable pathway.</span></li>
+                                        <li className="flex gap-2 text-sm text-navy/80"><span><strong>Submission route</strong></span><span>Confirm the form, authority, and permissions before submission.</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -182,23 +182,33 @@ function IVDIndia() {
                                 <img width={2720} height={2800} src={cdscoFlowchart} alt="CDSCO IVD Application Flowchart" className="w-full h-auto object-contain rounded-md" />
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">Key 2025–2026 Regulatory Updates</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold text-navy mt-10 mb-4">Official references for India IVD pathways</h2>
                             <ul className="space-y-4">
                                 <li className="bg-surface/30 p-5 rounded-md border border-border/50">
-                                    <strong className="text-navy block mb-1">CDSCO Authorised Laboratories List (Jan 2026)</strong>
-                                    <span className="text-[14.5px] text-navy/80 block">An updated nationwide list of authorised laboratories for IVD evaluation was published, mapping critical disease categories (HIV, TB, SARS-CoV-2, dengue, etc.) to specific government and ICMR/AIIMS facilities. Use of these exact labs is now mandatory.</span>
+                                    <strong className="text-navy block mb-1">Medical Devices Rules, 2017</strong>
+                                    <span className="text-[14.5px] text-navy/80 block">Use the rules and current notifications as the primary reference for classification, licensing, testing, and clinical-investigation obligations.</span>
                                 </li>
                                 <li className="bg-surface/30 p-5 rounded-md border border-border/50">
-                                    <strong className="text-navy block mb-1">ICMR-CDSCO IVD Innovators Handbook</strong>
-                                    <span className="text-[14.5px] text-navy/80 block">MedTech Mitra released a stage-wise roadmap covering proof of principle, clinical performance evaluation, QMS implementation, and MDR 2017 form checklists.</span>
+                                    <strong className="text-navy block mb-1">CDSCO IVD FAQ and import guidance</strong>
+                                    <span className="text-[14.5px] text-navy/80 block">CDSCO publications explain forms such as MD-14 and MD-15 and distinguish import, test-licence, and new-device considerations.</span>
                                 </li>
                                 <li className="bg-surface/30 p-5 rounded-md border border-border/50">
-                                    <strong className="text-navy block mb-1">Draft Guidance for IVD Import (Jan 2026)</strong>
-                                    <span className="text-[14.5px] text-navy/80 block">A new guidance document was released covering application pathways, timelines, and common non-compliances seen in IVD import applications.</span>
+                                    <strong className="text-navy block mb-1">Confirm current requirements before acting</strong>
+                                    <span className="text-[14.5px] text-navy/80 block">CDSCO guidance and forms can change. Validate the current route with the regulator’s latest publication before relying on a timeline or document checklist.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section className="py-10 bg-white border-t border-border">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm text-navy/75">
+                    <h2 className="text-2xl font-bold text-navy mb-4">Primary regulatory sources</h2>
+                    <ul className="list-disc pl-5 space-y-2">
+                        <li><a className="underline" href="https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2018/UploadImmunization/FAQ_IVD_MDR_2018.pdf">CDSCO: FAQ on IVDs under the Medical Devices Rules, 2017</a></li>
+                        <li><a className="underline" href="https://cdsco.gov.in/opencms/export/sites/CDSCO_WEB/Pdf-documents/Draft-Guidance-document-for-Import-of-In-vitro-diagnostic-Medical-device-for-stakeholders-comment.pdf">CDSCO: Guidance for IVD import</a></li>
+                    </ul>
                 </div>
             </section>
 
