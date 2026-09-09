@@ -361,6 +361,12 @@ function EUIVDRPage() {
                 >
                   Discuss Your IVDR Strategy <ArrowRight className="h-4 w-4" />
                 </Link>
+                <Link
+                  to="/industries/ivd/eu"
+                  className="inline-flex items-center gap-2 border border-emerald-200/40 bg-white/5 hover:bg-white/10 text-white text-[13px] font-bold px-6 py-3.5 rounded-md transition-all"
+                >
+                  Read the EU IVDR Guide <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
 

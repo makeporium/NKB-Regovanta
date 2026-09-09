@@ -9,15 +9,15 @@ export const Route = createFileRoute("/industries/ivd_/eu")({
         meta: [
       { name: "robots", content: "index, follow, max-image-preview:large" },
             { title: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-            { name: "description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { name: "description", content: "A practical guide to EU IVDR 2017/746 covering IVD classification, conformity assessment, performance evaluation, EUDAMED, GSPR, and transition requirements." },
             { property: "og:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-            { property: "og:description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { property: "og:description", content: "A practical guide to EU IVDR 2017/746 covering IVD classification, conformity assessment, performance evaluation, EUDAMED, GSPR, and transition requirements." },
             { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/eu" },
             { property: "og:type", content: "website" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
             { name: "twitter:title", content: "IVD Regulation in the EU | IVDR 2017/746 | NKB Regovanta" },
-            { name: "twitter:description", content: "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance." },
+            { name: "twitter:description", content: "A practical guide to EU IVDR 2017/746 covering IVD classification, conformity assessment, performance evaluation, EUDAMED, GSPR, and transition requirements." },
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
@@ -26,18 +26,34 @@ export const Route = createFileRoute("/industries/ivd_/eu")({
         scripts: [
             {
                 type: "application/ld+json",
-                children: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Service",
-                    "name": "IVD Regulation in the EU (IVDR 2017/746)",
-                    "provider": {
-                        "@type": "Organization",
-                        "name": "NKB Regovanta",
-                        "url": "https://www.nkbregovanta.com"
+                children: JSON.stringify([
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "IVD Regulation in the EU (IVDR 2017/746)",
+                        "url": "https://www.nkbregovanta.com/industries/ivd/eu",
+                        "description": "A practical guide to EU IVDR 2017/746 covering IVD classification, conformity assessment, performance evaluation, EUDAMED, GSPR, and transition requirements.",
+                        "about": {
+                            "@type": "Thing",
+                            "name": "Regulation (EU) 2017/746 on in vitro diagnostic medical devices"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "NKB Regovanta Solutions Pvt. Ltd.",
+                            "url": "https://www.nkbregovanta.com"
+                        }
                     },
-                    "description": "EU IVDR 2017/746 regulatory consulting: Performance Evaluation (PEP/PER), Notified Body coordination, EUDAMED registration, and Annex I GSPR compliance.",
-                    "serviceType": "In Vitro Diagnostics Regulatory Affairs"
-                })
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" },
+                            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.nkbregovanta.com/industries" },
+                            { "@type": "ListItem", "position": 3, "name": "In Vitro Diagnostics", "item": "https://www.nkbregovanta.com/industries/ivd" },
+                            { "@type": "ListItem", "position": 4, "name": "European Union IVDR", "item": "https://www.nkbregovanta.com/industries/ivd/eu" }
+                        ]
+                    }
+                ])
             }
         ],
     }),
