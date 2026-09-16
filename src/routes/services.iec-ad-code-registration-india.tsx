@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/iec-ad-code")({
+export const Route = createFileRoute("/services/iec-ad-code-registration-india")({
   head: () => ({
     meta: [
       { title: "DGFT IEC & ICEGATE AD Code Registration | NKB Regovanta" },
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/services/iec-ad-code")({
         content:
           "DGFT IEC Code and ICEGATE AD Code customs registration in India. Bank authority letters, port registrations, and fast-track clearance setup.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/iec-ad-code" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/iec-ad-code-registration-india" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "DGFT IEC & ICEGATE AD Code Registration | NKB Regovanta" },
@@ -48,7 +48,7 @@ export const Route = createFileRoute("/services/iec-ad-code")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iec-ad-code" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iec-ad-code-registration-india" },
     ],
     scripts: [
       {

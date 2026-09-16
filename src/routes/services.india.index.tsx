@@ -69,10 +69,10 @@ const cdscoCertificates = [
 ] as const;
 
 const crossFunctionalServices = [
-  { icon: Pill, name: "Drug Licenses for Importers (Form 10 & Form 41)", desc: "CDSCO registration certificates, import permits & AIR representation.", link: "/services/drug-licenses-for-importers" },
-  { icon: Radio, name: "WPC Framework & ETA for Wireless Medical Devices", desc: "Equipment Type Approval (ETA), DPL licenses & RF test compliance.", link: "/services/wpc-wireless-medical-devices" },
-  { icon: Activity, name: "PC-PNDT Certificate for Ultrasound & Imaging Devices", desc: "Statutory Form A & Form B registration under the PC-PNDT Act, 1994.", link: "/services/pc-pndt-certificate" },
-  { icon: Landmark, name: "Import Export Code (IEC) & AD Code Registration", desc: "DGFT registration and ICEGATE port-wise bank AD code linking.", link: "/services/iec-ad-code" },
+  { icon: Pill, name: "Drug Licenses for Importers (Form 10 & Form 41)", desc: "CDSCO registration certificates, import permits & AIR representation.", link: "/services/drug-licenses-importers-india-form-10-form-41" },
+  { icon: Radio, name: "WPC Framework & ETA for Wireless Medical Devices", desc: "Equipment Type Approval (ETA), DPL licenses & RF test compliance.", link: "/services/wpc-approval-wireless-medical-devices-india" },
+  { icon: Activity, name: "PC-PNDT Certificate for Ultrasound & Imaging Devices", desc: "Statutory Form A & Form B registration under the PC-PNDT Act, 1994.", link: "/services/pc-pndt-registration-consultant-certificate-india" },
+  { icon: Landmark, name: "Import Export Code (IEC) & AD Code Registration", desc: "DGFT registration and ICEGATE port-wise bank AD code linking.", link: "/services/iec-ad-code-registration-india" },
 ] as const;
 
 type ServiceItem = { icon: LucideIcon; name: string; desc: string; link: string };

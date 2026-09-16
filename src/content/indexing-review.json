@@ -430,8 +430,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.audit-compliance.tsx",
-    "route": "/services/audit-compliance",
+    "file": "services.medical-device-audit-compliance-support.tsx",
+    "route": "/services/medical-device-audit-compliance-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2542,8 +2542,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.technical-documentation.tsx",
-    "route": "/services/technical-documentation",
+    "file": "services.medical-device-technical-documentation-consulting.tsx",
+    "route": "/services/medical-device-technical-documentation-consulting",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,

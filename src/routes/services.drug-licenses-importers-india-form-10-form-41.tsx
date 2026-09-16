@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/drug-licenses-for-importers")({
+export const Route = createFileRoute("/services/drug-licenses-importers-india-form-10-form-41")({
   head: () => ({
     meta: [
       { title: "Drug Licenses for Importers in India | NKB Regovanta" },
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/services/drug-licenses-for-importers")({
         content:
           "CDSCO pharmaceutical import licensing in India: Form 41 RC, Form 10/10-A licence, Form 40, Plant Master Files (PMF), Drug Master Files (DMF), and APIs.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-licenses-importers-india-form-10-form-41" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/services/drug-licenses-for-importers")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-for-importers" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-licenses-importers-india-form-10-form-41" },
     ],
     scripts: [
       {

@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, ClipboardCheck, Cog, LineChart, Search, ShieldCheck, Users, Globe2 } from "lucide-react";
 import imgISO from "@/assets/iso.optimized.webp";
 
-export const Route = createFileRoute("/services/iso-13485")({
+export const Route = createFileRoute("/services/iso-13485-implementation-certification-consulting")({
   head: () => ({
     meta: [
       { title: "ISO 13485 Implementation Consultant | NKB Regovanta" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/services/iso-13485")({
         content:
           "Expert ISO 13485:2016 QMS implementation, certification consulting, FDA QMSR alignment, ISO 14971 risk management, and mock audits.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/iso-13485" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/iso-13485-implementation-certification-consulting" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "ISO 13485 Implementation Consultant | NKB Regovanta" },
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/services/iso-13485")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iso-13485" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/iso-13485-implementation-certification-consulting" },
     ],
   }),
   component: Iso13485,

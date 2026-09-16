@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
+export const Route = createFileRoute("/services/wpc-approval-wireless-medical-devices-india")({
   head: () => ({
     meta: [
       { title: "WPC ETA Wireless Medical Devices India | NKB Regovanta" },
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
         content:
           "WPC ETA approval, Saral Sanchar import permissions, and DPL licensing for wireless and telemetry medical devices in India. End-to-end WPC compliance.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/wpc-approval-wireless-medical-devices-india" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "WPC ETA Wireless Medical Devices India | NKB Regovanta" },
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/services/wpc-wireless-medical-devices")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/wpc-approval-wireless-medical-devices-india" },
     ],
     scripts: [
       {

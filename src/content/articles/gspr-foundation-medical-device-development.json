@@ -2,7 +2,7 @@
   "slug": "gspr-foundation-medical-device-development",
   "title": "Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs",
   "description": "Use GSPRs during device development to define measurable design inputs, evidence dependencies, and review gates before testing begins.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "A late GSPR review often finds a predictable problem: the team has completed substantial testing, but some of it does not support the final claims or configuration. Using the relevant requirements during development helps identify those gaps earlier. The objective is to influence product decisions while they are still affordable to change, not to add another end-stage checklist.",
   "sections": [
     {

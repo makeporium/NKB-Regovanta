@@ -35,7 +35,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/drug-device-combination-products")({
+export const Route = createFileRoute("/services/drug-device-combination-product-consulting")({
   head: () => ({
     meta: [
       {
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/services/drug-device-combination-products
         content:
           "Drug-device combination consulting: FDA 21 CFR Part 4, QMSR, EU MDR Article 117, Notified Body Opinions (NBOp), ISO 14971 risk management, and DHF.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-device-combination-products" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/drug-device-combination-product-consulting" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/services/drug-device-combination-products
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-device-combination-products" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/drug-device-combination-product-consulting" },
     ],
     scripts: [
       {
@@ -334,14 +334,14 @@ function DrugDeviceCombinationPage() {
   ];
 
   const relatedServices = [
-    { label: "Design History File (DHF)", to: "/services/technical-documentation" },
+    { label: "Design History File (DHF)", to: "/services/medical-device-technical-documentation-consulting" },
     { label: "CE Marking & EU MDR Compliance", to: "/services/eu" },
     { label: "UKCA Marking & UKRP Support", to: "/services/uk" },
     { label: "US FDA 510(k), PMA & Agent Services", to: "/services/usa" },
     { label: "Saudi Arabia SFDA Registration", to: "/services/saudi-arabia" },
     { label: "CDSCO India Medical Device & Drug Licensing", to: "/services/india" },
-    { label: "ISO 13485 & MDSAP Quality Systems", to: "/services/iso-13485" },
-    { label: "Global Medical Device Classification", to: "/services/regulatory-affairs" },
+    { label: "ISO 13485 & MDSAP Quality Systems", to: "/services/iso-13485-implementation-certification-consulting" },
+    { label: "Global Medical Device Classification", to: "/services/global-medical-device-ivd-regulatory-affairs-consulting" },
   ];
 
   const faqs = [

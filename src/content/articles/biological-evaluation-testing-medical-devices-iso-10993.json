@@ -2,7 +2,7 @@
   "slug": "biological-evaluation-testing-medical-devices-iso-10993",
   "title": "ISO 10993 Biological Evaluation: Define the Question Before Ordering Tests",
   "description": "Plan biological evaluation using finished-device contact, materials, processing, available evidence, and current standards-recognition requirements.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "Biological evaluation starts with understanding the device that contacts the body, not with selecting a standard test package. Material composition, manufacturing residues, processing, contact conditions, and existing evidence all affect the questions to be answered. A justified plan helps avoid both unnecessary testing and important gaps hidden by a familiar checklist.",
   "sections": [
     {

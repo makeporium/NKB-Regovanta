@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight, User, Globe2, Handshake } from "lucide-react"
 import imgReg from "@/assets/regu.png";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/regulatory-affairs")({
+export const Route = createFileRoute("/services/global-medical-device-ivd-regulatory-affairs-consulting")({
     head: () => ({
         meta: [
             { title: "Global Medical Device & IVD Registration | NKB Regovanta" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/services/regulatory-affairs")({
                 content:
                     "Strategic regulatory affairs consulting for medical devices and IVDs: submission strategy, dossier compilation, and global market approvals worldwide.",
             },
-            { property: "og:url", content: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+            { property: "og:url", content: "https://www.nkbregovanta.com/services/global-medical-device-ivd-regulatory-affairs-consulting" },
             { property: "og:type", content: "website" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/services/regulatory-affairs")({
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
     links: [
-        { rel: "canonical", href: "https://www.nkbregovanta.com/services/regulatory-affairs" },
+        { rel: "canonical", href: "https://www.nkbregovanta.com/services/global-medical-device-ivd-regulatory-affairs-consulting" },
     ],
         scripts: [
       {

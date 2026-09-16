@@ -74,7 +74,7 @@ const industries = [
         title: "Pharmaceutical & Drug Regulatory Services",
         description: "CDSCO drug import licensing, Form 41 / Form 10, foreign manufacturer registration, AIR representation and post-approval compliance.",
         img: imgPharma,
-        route: "/services/drug-licenses-for-importers",
+        route: "/services/drug-licenses-importers-india-form-10-form-41",
     },
     {
         title: "Cosmetics",

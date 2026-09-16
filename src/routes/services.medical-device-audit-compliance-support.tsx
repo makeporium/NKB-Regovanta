@@ -3,7 +3,7 @@ import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgPlaceholder from "@/assets/iso-cleanroom.jpg";
 
-export const Route = createFileRoute("/services/audit-compliance")({
+export const Route = createFileRoute("/services/medical-device-audit-compliance-support")({
   head: () => ({
     meta: [
       { name: "robots", content: "index, follow, max-image-preview:large" },
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/services/audit-compliance")({
         content:
           "Medical device audit readiness and compliance consulting: MDSAP, ISO 13485, FDA QMSR, EU MDR Annex IX, authority inspections, and CAPA remediation.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/audit-compliance" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/medical-device-audit-compliance-support" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/services/audit-compliance")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/audit-compliance" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/medical-device-audit-compliance-support" },
     ],
     scripts: [
       {

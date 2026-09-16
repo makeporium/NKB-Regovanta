@@ -2,7 +2,7 @@
   "slug": "human-factors-engineering-medical-device-design",
   "title": "Human Factors in Device Design: Find Use Problems Before Validation",
   "description": "Integrate human factors into early device design through user research, task analysis, formative evaluation, and traceable design decisions.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "Human factors is most valuable while the product can still change. Waiting until a final study to discover confusing controls or unrealistic assumptions creates expensive choices: redesign, restrict the claim, or attempt to justify a difficult result. Integrating observations into development gives the team more useful options.",
   "sections": [
     {

@@ -5,6 +5,66 @@
       "source": "/ai_news",
       "destination": "/ai-news",
       "permanent": true
+    },
+    {
+      "source": "/services/regulatory-affairs",
+      "destination": "/services/global-medical-device-ivd-regulatory-affairs-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/drug-device-combination-products",
+      "destination": "/services/drug-device-combination-product-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/regulatory-due-diligence",
+      "destination": "/services/medical-device-ivd-regulatory-due-diligence",
+      "permanent": true
+    },
+    {
+      "source": "/services/wpc-wireless-medical-devices",
+      "destination": "/services/wpc-approval-wireless-medical-devices-india",
+      "permanent": true
+    },
+    {
+      "source": "/services/pc-pndt-certificate",
+      "destination": "/services/pc-pndt-registration-consultant-certificate-india",
+      "permanent": true
+    },
+    {
+      "source": "/services/iec-ad-code",
+      "destination": "/services/iec-ad-code-registration-india",
+      "permanent": true
+    },
+    {
+      "source": "/services/drug-licenses-for-importers",
+      "destination": "/services/drug-licenses-importers-india-form-10-form-41",
+      "permanent": true
+    },
+    {
+      "source": "/services/manufacturing",
+      "destination": "/services/pharmaceutical-cleanroom-manufacturing-equipment",
+      "permanent": true
+    },
+    {
+      "source": "/services/iso-13485",
+      "destination": "/services/iso-13485-implementation-certification-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/technical-documentation",
+      "destination": "/services/medical-device-technical-documentation-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/market-access",
+      "destination": "/services/global-market-access-consulting-medical-devices",
+      "permanent": true
+    },
+    {
+      "source": "/services/audit-compliance",
+      "destination": "/services/medical-device-audit-compliance-support",
+      "permanent": true
     }
   ],
   "headers": [

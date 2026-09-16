@@ -2,7 +2,7 @@
   "slug": "dental-scanners-manufacturing-regulatory-standards",
   "title": "Dental Scanner Development: Validate the Scan-to-Decision Workflow",
   "description": "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "A dental scanner produces more than a visually attractive model. Its output may inform a restoration, appliance, treatment plan, or another clinical decision. The regulatory and development questions therefore depend on the claimed use of the scan and the workflow that turns it into a result. A demonstration that the device captures an image is only one part of that assessment.",
   "sections": [
     {

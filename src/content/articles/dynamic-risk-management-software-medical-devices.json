@@ -2,7 +2,7 @@
   "slug": "dynamic-risk-management-software-medical-devices",
   "title": "Software Risk Management After Release: Turn New Signals Into Decisions",
   "description": "Connect software incidents, dependency updates, and clinical feedback to risk assessment, change control, and verified release decisions.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "Software risk management often looks strongest immediately before a submission, when the risk file and test reports are aligned. The harder work begins after release. Operating systems change, users find unexpected workflows, and field data exposes assumptions that were invisible in development. The manufacturer needs a repeatable way to decide which signals change the safety assessment.",
   "sections": [
     {

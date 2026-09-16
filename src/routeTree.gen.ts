@@ -68,29 +68,29 @@ import { Route as InsightsUnderstandingPrrcEuMdrIvdrRouteImport } from './routes
 import { Route as InsightsUsabilityTestingMedicalDevicesIec62366RouteImport } from './routes/insights.usability-testing-medical-devices-iec-62366'
 import { Route as MarketsIndexRouteImport } from './routes/markets.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
-import { Route as ServicesAuditComplianceRouteImport } from './routes/services.audit-compliance'
 import { Route as ServicesAustraliaRouteImport } from './routes/services.australia'
 import { Route as ServicesBrazilRouteImport } from './routes/services.brazil'
 import { Route as ServicesCanadaRouteImport } from './routes/services.canada'
-import { Route as ServicesDrugDeviceCombinationProductsRouteImport } from './routes/services.drug-device-combination-products'
-import { Route as ServicesDrugLicensesForImportersRouteImport } from './routes/services.drug-licenses-for-importers'
+import { Route as ServicesDrugDeviceCombinationProductConsultingRouteImport } from './routes/services.drug-device-combination-product-consulting'
+import { Route as ServicesDrugLicensesImportersIndiaForm10Form41RouteImport } from './routes/services.drug-licenses-importers-india-form-10-form-41'
 import { Route as ServicesEuRouteImport } from './routes/services.eu'
-import { Route as ServicesIecAdCodeRouteImport } from './routes/services.iec-ad-code'
+import { Route as ServicesGlobalMarketAccessConsultingMedicalDevicesRouteImport } from './routes/services.global-market-access-consulting-medical-devices'
+import { Route as ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRouteImport } from './routes/services.global-medical-device-ivd-regulatory-affairs-consulting'
+import { Route as ServicesIecAdCodeRegistrationIndiaRouteImport } from './routes/services.iec-ad-code-registration-india'
 import { Route as ServicesIndiaRouteImport } from './routes/services.india'
-import { Route as ServicesIso13485RouteImport } from './routes/services.iso-13485'
-import { Route as ServicesManufacturingRouteImport } from './routes/services.manufacturing'
-import { Route as ServicesMarketAccessRouteImport } from './routes/services.market-access'
+import { Route as ServicesIso13485ImplementationCertificationConsultingRouteImport } from './routes/services.iso-13485-implementation-certification-consulting'
 import { Route as ServicesMdsapRouteImport } from './routes/services.mdsap'
+import { Route as ServicesMedicalDeviceAuditComplianceSupportRouteImport } from './routes/services.medical-device-audit-compliance-support'
+import { Route as ServicesMedicalDeviceIvdRegulatoryDueDiligenceRouteImport } from './routes/services.medical-device-ivd-regulatory-due-diligence'
+import { Route as ServicesMedicalDeviceTechnicalDocumentationConsultingRouteImport } from './routes/services.medical-device-technical-documentation-consulting'
 import { Route as ServicesNewZealandRouteImport } from './routes/services.new-zealand'
-import { Route as ServicesPcPndtCertificateRouteImport } from './routes/services.pc-pndt-certificate'
-import { Route as ServicesRegulatoryAffairsRouteImport } from './routes/services.regulatory-affairs'
-import { Route as ServicesRegulatoryDueDiligenceRouteImport } from './routes/services.regulatory-due-diligence'
+import { Route as ServicesPcPndtRegistrationConsultantCertificateIndiaRouteImport } from './routes/services.pc-pndt-registration-consultant-certificate-india'
+import { Route as ServicesPharmaceuticalCleanroomManufacturingEquipmentRouteImport } from './routes/services.pharmaceutical-cleanroom-manufacturing-equipment'
 import { Route as ServicesSaudiArabiaRouteImport } from './routes/services.saudi-arabia'
-import { Route as ServicesTechnicalDocumentationRouteImport } from './routes/services.technical-documentation'
 import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
-import { Route as ServicesWpcWirelessMedicalDevicesRouteImport } from './routes/services.wpc-wireless-medical-devices'
+import { Route as ServicesWpcApprovalWirelessMedicalDevicesIndiaRouteImport } from './routes/services.wpc-approval-wireless-medical-devices-india'
 import { Route as IndustriesCosmeticsEuRouteImport } from './routes/industries.cosmetics_.eu'
 import { Route as IndustriesCosmeticsUkRouteImport } from './routes/industries.cosmetics_.uk'
 import { Route as IndustriesCosmeticsUsaRouteImport } from './routes/industries.cosmetics_.usa'
@@ -626,11 +626,6 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesAuditComplianceRoute = ServicesAuditComplianceRouteImport.update({
-  id: '/services/audit-compliance',
-  path: '/services/audit-compliance',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServicesAustraliaRoute = ServicesAustraliaRouteImport.update({
   id: '/services/australia',
   path: '/services/australia',
@@ -646,16 +641,16 @@ const ServicesCanadaRoute = ServicesCanadaRouteImport.update({
   path: '/services/canada',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesDrugDeviceCombinationProductsRoute =
-  ServicesDrugDeviceCombinationProductsRouteImport.update({
-    id: '/services/drug-device-combination-products',
-    path: '/services/drug-device-combination-products',
+const ServicesDrugDeviceCombinationProductConsultingRoute =
+  ServicesDrugDeviceCombinationProductConsultingRouteImport.update({
+    id: '/services/drug-device-combination-product-consulting',
+    path: '/services/drug-device-combination-product-consulting',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesDrugLicensesForImportersRoute =
-  ServicesDrugLicensesForImportersRouteImport.update({
-    id: '/services/drug-licenses-for-importers',
-    path: '/services/drug-licenses-for-importers',
+const ServicesDrugLicensesImportersIndiaForm10Form41Route =
+  ServicesDrugLicensesImportersIndiaForm10Form41RouteImport.update({
+    id: '/services/drug-licenses-importers-india-form-10-form-41',
+    path: '/services/drug-licenses-importers-india-form-10-form-41',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesEuRoute = ServicesEuRouteImport.update({
@@ -663,57 +658,73 @@ const ServicesEuRoute = ServicesEuRouteImport.update({
   path: '/services/eu',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesIecAdCodeRoute = ServicesIecAdCodeRouteImport.update({
-  id: '/services/iec-ad-code',
-  path: '/services/iec-ad-code',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const ServicesGlobalMarketAccessConsultingMedicalDevicesRoute =
+  ServicesGlobalMarketAccessConsultingMedicalDevicesRouteImport.update({
+    id: '/services/global-market-access-consulting-medical-devices',
+    path: '/services/global-market-access-consulting-medical-devices',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute =
+  ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRouteImport.update({
+    id: '/services/global-medical-device-ivd-regulatory-affairs-consulting',
+    path: '/services/global-medical-device-ivd-regulatory-affairs-consulting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesIecAdCodeRegistrationIndiaRoute =
+  ServicesIecAdCodeRegistrationIndiaRouteImport.update({
+    id: '/services/iec-ad-code-registration-india',
+    path: '/services/iec-ad-code-registration-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesIndiaRoute = ServicesIndiaRouteImport.update({
   id: '/services/india',
   path: '/services/india',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesIso13485Route = ServicesIso13485RouteImport.update({
-  id: '/services/iso-13485',
-  path: '/services/iso-13485',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesManufacturingRoute = ServicesManufacturingRouteImport.update({
-  id: '/services/manufacturing',
-  path: '/services/manufacturing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesMarketAccessRoute = ServicesMarketAccessRouteImport.update({
-  id: '/services/market-access',
-  path: '/services/market-access',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const ServicesIso13485ImplementationCertificationConsultingRoute =
+  ServicesIso13485ImplementationCertificationConsultingRouteImport.update({
+    id: '/services/iso-13485-implementation-certification-consulting',
+    path: '/services/iso-13485-implementation-certification-consulting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesMdsapRoute = ServicesMdsapRouteImport.update({
   id: '/services/mdsap',
   path: '/services/mdsap',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesMedicalDeviceAuditComplianceSupportRoute =
+  ServicesMedicalDeviceAuditComplianceSupportRouteImport.update({
+    id: '/services/medical-device-audit-compliance-support',
+    path: '/services/medical-device-audit-compliance-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute =
+  ServicesMedicalDeviceIvdRegulatoryDueDiligenceRouteImport.update({
+    id: '/services/medical-device-ivd-regulatory-due-diligence',
+    path: '/services/medical-device-ivd-regulatory-due-diligence',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesMedicalDeviceTechnicalDocumentationConsultingRoute =
+  ServicesMedicalDeviceTechnicalDocumentationConsultingRouteImport.update({
+    id: '/services/medical-device-technical-documentation-consulting',
+    path: '/services/medical-device-technical-documentation-consulting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesNewZealandRoute = ServicesNewZealandRouteImport.update({
   id: '/services/new-zealand',
   path: '/services/new-zealand',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesPcPndtCertificateRoute =
-  ServicesPcPndtCertificateRouteImport.update({
-    id: '/services/pc-pndt-certificate',
-    path: '/services/pc-pndt-certificate',
+const ServicesPcPndtRegistrationConsultantCertificateIndiaRoute =
+  ServicesPcPndtRegistrationConsultantCertificateIndiaRouteImport.update({
+    id: '/services/pc-pndt-registration-consultant-certificate-india',
+    path: '/services/pc-pndt-registration-consultant-certificate-india',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesRegulatoryAffairsRoute =
-  ServicesRegulatoryAffairsRouteImport.update({
-    id: '/services/regulatory-affairs',
-    path: '/services/regulatory-affairs',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesRegulatoryDueDiligenceRoute =
-  ServicesRegulatoryDueDiligenceRouteImport.update({
-    id: '/services/regulatory-due-diligence',
-    path: '/services/regulatory-due-diligence',
+const ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute =
+  ServicesPharmaceuticalCleanroomManufacturingEquipmentRouteImport.update({
+    id: '/services/pharmaceutical-cleanroom-manufacturing-equipment',
+    path: '/services/pharmaceutical-cleanroom-manufacturing-equipment',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesSaudiArabiaRoute = ServicesSaudiArabiaRouteImport.update({
@@ -721,12 +732,6 @@ const ServicesSaudiArabiaRoute = ServicesSaudiArabiaRouteImport.update({
   path: '/services/saudi-arabia',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesTechnicalDocumentationRoute =
-  ServicesTechnicalDocumentationRouteImport.update({
-    id: '/services/technical-documentation',
-    path: '/services/technical-documentation',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ServicesUaeRoute = ServicesUaeRouteImport.update({
   id: '/services/uae',
   path: '/services/uae',
@@ -742,10 +747,10 @@ const ServicesUsaRoute = ServicesUsaRouteImport.update({
   path: '/services/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesWpcWirelessMedicalDevicesRoute =
-  ServicesWpcWirelessMedicalDevicesRouteImport.update({
-    id: '/services/wpc-wireless-medical-devices',
-    path: '/services/wpc-wireless-medical-devices',
+const ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute =
+  ServicesWpcApprovalWirelessMedicalDevicesIndiaRouteImport.update({
+    id: '/services/wpc-approval-wireless-medical-devices-india',
+    path: '/services/wpc-approval-wireless-medical-devices-india',
     getParentRoute: () => rootRouteImport,
   } as any)
 const IndustriesCosmeticsEuRoute = IndustriesCosmeticsEuRouteImport.update({
@@ -1893,29 +1898,29 @@ export interface FileRoutesByFullPath {
   '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
   '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
   '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
-  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
-  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
-  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
+  '/services/drug-device-combination-product-consulting': typeof ServicesDrugDeviceCombinationProductConsultingRoute
+  '/services/drug-licenses-importers-india-form-10-form-41': typeof ServicesDrugLicensesImportersIndiaForm10Form41Route
   '/services/eu': typeof ServicesEuRouteWithChildren
-  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
+  '/services/global-market-access-consulting-medical-devices': typeof ServicesGlobalMarketAccessConsultingMedicalDevicesRoute
+  '/services/global-medical-device-ivd-regulatory-affairs-consulting': typeof ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute
+  '/services/iec-ad-code-registration-india': typeof ServicesIecAdCodeRegistrationIndiaRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
-  '/services/iso-13485': typeof ServicesIso13485Route
-  '/services/manufacturing': typeof ServicesManufacturingRoute
-  '/services/market-access': typeof ServicesMarketAccessRoute
+  '/services/iso-13485-implementation-certification-consulting': typeof ServicesIso13485ImplementationCertificationConsultingRoute
   '/services/mdsap': typeof ServicesMdsapRouteWithChildren
+  '/services/medical-device-audit-compliance-support': typeof ServicesMedicalDeviceAuditComplianceSupportRoute
+  '/services/medical-device-ivd-regulatory-due-diligence': typeof ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute
+  '/services/medical-device-technical-documentation-consulting': typeof ServicesMedicalDeviceTechnicalDocumentationConsultingRoute
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
-  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
-  '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
+  '/services/pc-pndt-registration-consultant-certificate-india': typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRoute
+  '/services/pharmaceutical-cleanroom-manufacturing-equipment': typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
-  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRouteWithChildren
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
-  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
+  '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -2171,18 +2176,18 @@ export interface FileRoutesByTo {
   '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
   '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
   '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
-  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
-  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
-  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
-  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
-  '/services/iso-13485': typeof ServicesIso13485Route
-  '/services/manufacturing': typeof ServicesManufacturingRoute
-  '/services/market-access': typeof ServicesMarketAccessRoute
-  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
-  '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
-  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
-  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
+  '/services/drug-device-combination-product-consulting': typeof ServicesDrugDeviceCombinationProductConsultingRoute
+  '/services/drug-licenses-importers-india-form-10-form-41': typeof ServicesDrugLicensesImportersIndiaForm10Form41Route
+  '/services/global-market-access-consulting-medical-devices': typeof ServicesGlobalMarketAccessConsultingMedicalDevicesRoute
+  '/services/global-medical-device-ivd-regulatory-affairs-consulting': typeof ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute
+  '/services/iec-ad-code-registration-india': typeof ServicesIecAdCodeRegistrationIndiaRoute
+  '/services/iso-13485-implementation-certification-consulting': typeof ServicesIso13485ImplementationCertificationConsultingRoute
+  '/services/medical-device-audit-compliance-support': typeof ServicesMedicalDeviceAuditComplianceSupportRoute
+  '/services/medical-device-ivd-regulatory-due-diligence': typeof ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute
+  '/services/medical-device-technical-documentation-consulting': typeof ServicesMedicalDeviceTechnicalDocumentationConsultingRoute
+  '/services/pc-pndt-registration-consultant-certificate-india': typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRoute
+  '/services/pharmaceutical-cleanroom-manufacturing-equipment': typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute
+  '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/insights': typeof InsightsIndexRoute
@@ -2440,29 +2445,29 @@ export interface FileRoutesById {
   '/insights/samd-classification-submission-usfda': typeof InsightsSamdClassificationSubmissionUsfdaRoute
   '/insights/understanding-prrc-eu-mdr-ivdr': typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
   '/insights/usability-testing-medical-devices-iec-62366': typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
-  '/services/audit-compliance': typeof ServicesAuditComplianceRoute
   '/services/australia': typeof ServicesAustraliaRouteWithChildren
   '/services/brazil': typeof ServicesBrazilRouteWithChildren
   '/services/canada': typeof ServicesCanadaRouteWithChildren
-  '/services/drug-device-combination-products': typeof ServicesDrugDeviceCombinationProductsRoute
-  '/services/drug-licenses-for-importers': typeof ServicesDrugLicensesForImportersRoute
+  '/services/drug-device-combination-product-consulting': typeof ServicesDrugDeviceCombinationProductConsultingRoute
+  '/services/drug-licenses-importers-india-form-10-form-41': typeof ServicesDrugLicensesImportersIndiaForm10Form41Route
   '/services/eu': typeof ServicesEuRouteWithChildren
-  '/services/iec-ad-code': typeof ServicesIecAdCodeRoute
+  '/services/global-market-access-consulting-medical-devices': typeof ServicesGlobalMarketAccessConsultingMedicalDevicesRoute
+  '/services/global-medical-device-ivd-regulatory-affairs-consulting': typeof ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute
+  '/services/iec-ad-code-registration-india': typeof ServicesIecAdCodeRegistrationIndiaRoute
   '/services/india': typeof ServicesIndiaRouteWithChildren
-  '/services/iso-13485': typeof ServicesIso13485Route
-  '/services/manufacturing': typeof ServicesManufacturingRoute
-  '/services/market-access': typeof ServicesMarketAccessRoute
+  '/services/iso-13485-implementation-certification-consulting': typeof ServicesIso13485ImplementationCertificationConsultingRoute
   '/services/mdsap': typeof ServicesMdsapRouteWithChildren
+  '/services/medical-device-audit-compliance-support': typeof ServicesMedicalDeviceAuditComplianceSupportRoute
+  '/services/medical-device-ivd-regulatory-due-diligence': typeof ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute
+  '/services/medical-device-technical-documentation-consulting': typeof ServicesMedicalDeviceTechnicalDocumentationConsultingRoute
   '/services/new-zealand': typeof ServicesNewZealandRouteWithChildren
-  '/services/pc-pndt-certificate': typeof ServicesPcPndtCertificateRoute
-  '/services/regulatory-affairs': typeof ServicesRegulatoryAffairsRoute
-  '/services/regulatory-due-diligence': typeof ServicesRegulatoryDueDiligenceRoute
+  '/services/pc-pndt-registration-consultant-certificate-india': typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRoute
+  '/services/pharmaceutical-cleanroom-manufacturing-equipment': typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute
   '/services/saudi-arabia': typeof ServicesSaudiArabiaRouteWithChildren
-  '/services/technical-documentation': typeof ServicesTechnicalDocumentationRoute
   '/services/uae': typeof ServicesUaeRouteWithChildren
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
-  '/services/wpc-wireless-medical-devices': typeof ServicesWpcWirelessMedicalDevicesRoute
+  '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
@@ -2721,29 +2726,29 @@ export interface FileRouteTypes {
     | '/insights/samd-classification-submission-usfda'
     | '/insights/understanding-prrc-eu-mdr-ivdr'
     | '/insights/usability-testing-medical-devices-iec-62366'
-    | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
-    | '/services/drug-device-combination-products'
-    | '/services/drug-licenses-for-importers'
+    | '/services/drug-device-combination-product-consulting'
+    | '/services/drug-licenses-importers-india-form-10-form-41'
     | '/services/eu'
-    | '/services/iec-ad-code'
+    | '/services/global-market-access-consulting-medical-devices'
+    | '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+    | '/services/iec-ad-code-registration-india'
     | '/services/india'
-    | '/services/iso-13485'
-    | '/services/manufacturing'
-    | '/services/market-access'
+    | '/services/iso-13485-implementation-certification-consulting'
     | '/services/mdsap'
+    | '/services/medical-device-audit-compliance-support'
+    | '/services/medical-device-ivd-regulatory-due-diligence'
+    | '/services/medical-device-technical-documentation-consulting'
     | '/services/new-zealand'
-    | '/services/pc-pndt-certificate'
-    | '/services/regulatory-affairs'
-    | '/services/regulatory-due-diligence'
+    | '/services/pc-pndt-registration-consultant-certificate-india'
+    | '/services/pharmaceutical-cleanroom-manufacturing-equipment'
     | '/services/saudi-arabia'
-    | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
-    | '/services/wpc-wireless-medical-devices'
+    | '/services/wpc-approval-wireless-medical-devices-india'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
@@ -2999,18 +3004,18 @@ export interface FileRouteTypes {
     | '/insights/samd-classification-submission-usfda'
     | '/insights/understanding-prrc-eu-mdr-ivdr'
     | '/insights/usability-testing-medical-devices-iec-62366'
-    | '/services/audit-compliance'
-    | '/services/drug-device-combination-products'
-    | '/services/drug-licenses-for-importers'
-    | '/services/iec-ad-code'
-    | '/services/iso-13485'
-    | '/services/manufacturing'
-    | '/services/market-access'
-    | '/services/pc-pndt-certificate'
-    | '/services/regulatory-affairs'
-    | '/services/regulatory-due-diligence'
-    | '/services/technical-documentation'
-    | '/services/wpc-wireless-medical-devices'
+    | '/services/drug-device-combination-product-consulting'
+    | '/services/drug-licenses-importers-india-form-10-form-41'
+    | '/services/global-market-access-consulting-medical-devices'
+    | '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+    | '/services/iec-ad-code-registration-india'
+    | '/services/iso-13485-implementation-certification-consulting'
+    | '/services/medical-device-audit-compliance-support'
+    | '/services/medical-device-ivd-regulatory-due-diligence'
+    | '/services/medical-device-technical-documentation-consulting'
+    | '/services/pc-pndt-registration-consultant-certificate-india'
+    | '/services/pharmaceutical-cleanroom-manufacturing-equipment'
+    | '/services/wpc-approval-wireless-medical-devices-india'
     | '/case-studies'
     | '/industries'
     | '/insights'
@@ -3267,29 +3272,29 @@ export interface FileRouteTypes {
     | '/insights/samd-classification-submission-usfda'
     | '/insights/understanding-prrc-eu-mdr-ivdr'
     | '/insights/usability-testing-medical-devices-iec-62366'
-    | '/services/audit-compliance'
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
-    | '/services/drug-device-combination-products'
-    | '/services/drug-licenses-for-importers'
+    | '/services/drug-device-combination-product-consulting'
+    | '/services/drug-licenses-importers-india-form-10-form-41'
     | '/services/eu'
-    | '/services/iec-ad-code'
+    | '/services/global-market-access-consulting-medical-devices'
+    | '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+    | '/services/iec-ad-code-registration-india'
     | '/services/india'
-    | '/services/iso-13485'
-    | '/services/manufacturing'
-    | '/services/market-access'
+    | '/services/iso-13485-implementation-certification-consulting'
     | '/services/mdsap'
+    | '/services/medical-device-audit-compliance-support'
+    | '/services/medical-device-ivd-regulatory-due-diligence'
+    | '/services/medical-device-technical-documentation-consulting'
     | '/services/new-zealand'
-    | '/services/pc-pndt-certificate'
-    | '/services/regulatory-affairs'
-    | '/services/regulatory-due-diligence'
+    | '/services/pc-pndt-registration-consultant-certificate-india'
+    | '/services/pharmaceutical-cleanroom-manufacturing-equipment'
     | '/services/saudi-arabia'
-    | '/services/technical-documentation'
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
-    | '/services/wpc-wireless-medical-devices'
+    | '/services/wpc-approval-wireless-medical-devices-india'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
@@ -3541,29 +3546,29 @@ export interface RootRouteChildren {
   InsightsSamdClassificationSubmissionUsfdaRoute: typeof InsightsSamdClassificationSubmissionUsfdaRoute
   InsightsUnderstandingPrrcEuMdrIvdrRoute: typeof InsightsUnderstandingPrrcEuMdrIvdrRoute
   InsightsUsabilityTestingMedicalDevicesIec62366Route: typeof InsightsUsabilityTestingMedicalDevicesIec62366Route
-  ServicesAuditComplianceRoute: typeof ServicesAuditComplianceRoute
   ServicesAustraliaRoute: typeof ServicesAustraliaRouteWithChildren
   ServicesBrazilRoute: typeof ServicesBrazilRouteWithChildren
   ServicesCanadaRoute: typeof ServicesCanadaRouteWithChildren
-  ServicesDrugDeviceCombinationProductsRoute: typeof ServicesDrugDeviceCombinationProductsRoute
-  ServicesDrugLicensesForImportersRoute: typeof ServicesDrugLicensesForImportersRoute
+  ServicesDrugDeviceCombinationProductConsultingRoute: typeof ServicesDrugDeviceCombinationProductConsultingRoute
+  ServicesDrugLicensesImportersIndiaForm10Form41Route: typeof ServicesDrugLicensesImportersIndiaForm10Form41Route
   ServicesEuRoute: typeof ServicesEuRouteWithChildren
-  ServicesIecAdCodeRoute: typeof ServicesIecAdCodeRoute
+  ServicesGlobalMarketAccessConsultingMedicalDevicesRoute: typeof ServicesGlobalMarketAccessConsultingMedicalDevicesRoute
+  ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute: typeof ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute
+  ServicesIecAdCodeRegistrationIndiaRoute: typeof ServicesIecAdCodeRegistrationIndiaRoute
   ServicesIndiaRoute: typeof ServicesIndiaRouteWithChildren
-  ServicesIso13485Route: typeof ServicesIso13485Route
-  ServicesManufacturingRoute: typeof ServicesManufacturingRoute
-  ServicesMarketAccessRoute: typeof ServicesMarketAccessRoute
+  ServicesIso13485ImplementationCertificationConsultingRoute: typeof ServicesIso13485ImplementationCertificationConsultingRoute
   ServicesMdsapRoute: typeof ServicesMdsapRouteWithChildren
+  ServicesMedicalDeviceAuditComplianceSupportRoute: typeof ServicesMedicalDeviceAuditComplianceSupportRoute
+  ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute: typeof ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute
+  ServicesMedicalDeviceTechnicalDocumentationConsultingRoute: typeof ServicesMedicalDeviceTechnicalDocumentationConsultingRoute
   ServicesNewZealandRoute: typeof ServicesNewZealandRouteWithChildren
-  ServicesPcPndtCertificateRoute: typeof ServicesPcPndtCertificateRoute
-  ServicesRegulatoryAffairsRoute: typeof ServicesRegulatoryAffairsRoute
-  ServicesRegulatoryDueDiligenceRoute: typeof ServicesRegulatoryDueDiligenceRoute
+  ServicesPcPndtRegistrationConsultantCertificateIndiaRoute: typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRoute
+  ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute: typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute
   ServicesSaudiArabiaRoute: typeof ServicesSaudiArabiaRouteWithChildren
-  ServicesTechnicalDocumentationRoute: typeof ServicesTechnicalDocumentationRoute
   ServicesUaeRoute: typeof ServicesUaeRouteWithChildren
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
-  ServicesWpcWirelessMedicalDevicesRoute: typeof ServicesWpcWirelessMedicalDevicesRoute
+  ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute: typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -3996,13 +4001,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/audit-compliance': {
-      id: '/services/audit-compliance'
-      path: '/services/audit-compliance'
-      fullPath: '/services/audit-compliance'
-      preLoaderRoute: typeof ServicesAuditComplianceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/services/australia': {
       id: '/services/australia'
       path: '/services/australia'
@@ -4024,18 +4022,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/drug-device-combination-products': {
-      id: '/services/drug-device-combination-products'
-      path: '/services/drug-device-combination-products'
-      fullPath: '/services/drug-device-combination-products'
-      preLoaderRoute: typeof ServicesDrugDeviceCombinationProductsRouteImport
+    '/services/drug-device-combination-product-consulting': {
+      id: '/services/drug-device-combination-product-consulting'
+      path: '/services/drug-device-combination-product-consulting'
+      fullPath: '/services/drug-device-combination-product-consulting'
+      preLoaderRoute: typeof ServicesDrugDeviceCombinationProductConsultingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/drug-licenses-for-importers': {
-      id: '/services/drug-licenses-for-importers'
-      path: '/services/drug-licenses-for-importers'
-      fullPath: '/services/drug-licenses-for-importers'
-      preLoaderRoute: typeof ServicesDrugLicensesForImportersRouteImport
+    '/services/drug-licenses-importers-india-form-10-form-41': {
+      id: '/services/drug-licenses-importers-india-form-10-form-41'
+      path: '/services/drug-licenses-importers-india-form-10-form-41'
+      fullPath: '/services/drug-licenses-importers-india-form-10-form-41'
+      preLoaderRoute: typeof ServicesDrugLicensesImportersIndiaForm10Form41RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/eu': {
@@ -4045,11 +4043,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/iec-ad-code': {
-      id: '/services/iec-ad-code'
-      path: '/services/iec-ad-code'
-      fullPath: '/services/iec-ad-code'
-      preLoaderRoute: typeof ServicesIecAdCodeRouteImport
+    '/services/global-market-access-consulting-medical-devices': {
+      id: '/services/global-market-access-consulting-medical-devices'
+      path: '/services/global-market-access-consulting-medical-devices'
+      fullPath: '/services/global-market-access-consulting-medical-devices'
+      preLoaderRoute: typeof ServicesGlobalMarketAccessConsultingMedicalDevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/global-medical-device-ivd-regulatory-affairs-consulting': {
+      id: '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+      path: '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+      fullPath: '/services/global-medical-device-ivd-regulatory-affairs-consulting'
+      preLoaderRoute: typeof ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/iec-ad-code-registration-india': {
+      id: '/services/iec-ad-code-registration-india'
+      path: '/services/iec-ad-code-registration-india'
+      fullPath: '/services/iec-ad-code-registration-india'
+      preLoaderRoute: typeof ServicesIecAdCodeRegistrationIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/india': {
@@ -4059,25 +4071,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/iso-13485': {
-      id: '/services/iso-13485'
-      path: '/services/iso-13485'
-      fullPath: '/services/iso-13485'
-      preLoaderRoute: typeof ServicesIso13485RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/manufacturing': {
-      id: '/services/manufacturing'
-      path: '/services/manufacturing'
-      fullPath: '/services/manufacturing'
-      preLoaderRoute: typeof ServicesManufacturingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/market-access': {
-      id: '/services/market-access'
-      path: '/services/market-access'
-      fullPath: '/services/market-access'
-      preLoaderRoute: typeof ServicesMarketAccessRouteImport
+    '/services/iso-13485-implementation-certification-consulting': {
+      id: '/services/iso-13485-implementation-certification-consulting'
+      path: '/services/iso-13485-implementation-certification-consulting'
+      fullPath: '/services/iso-13485-implementation-certification-consulting'
+      preLoaderRoute: typeof ServicesIso13485ImplementationCertificationConsultingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/mdsap': {
@@ -4087,6 +4085,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesMdsapRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/medical-device-audit-compliance-support': {
+      id: '/services/medical-device-audit-compliance-support'
+      path: '/services/medical-device-audit-compliance-support'
+      fullPath: '/services/medical-device-audit-compliance-support'
+      preLoaderRoute: typeof ServicesMedicalDeviceAuditComplianceSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/medical-device-ivd-regulatory-due-diligence': {
+      id: '/services/medical-device-ivd-regulatory-due-diligence'
+      path: '/services/medical-device-ivd-regulatory-due-diligence'
+      fullPath: '/services/medical-device-ivd-regulatory-due-diligence'
+      preLoaderRoute: typeof ServicesMedicalDeviceIvdRegulatoryDueDiligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/medical-device-technical-documentation-consulting': {
+      id: '/services/medical-device-technical-documentation-consulting'
+      path: '/services/medical-device-technical-documentation-consulting'
+      fullPath: '/services/medical-device-technical-documentation-consulting'
+      preLoaderRoute: typeof ServicesMedicalDeviceTechnicalDocumentationConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/new-zealand': {
       id: '/services/new-zealand'
       path: '/services/new-zealand'
@@ -4094,25 +4113,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesNewZealandRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/pc-pndt-certificate': {
-      id: '/services/pc-pndt-certificate'
-      path: '/services/pc-pndt-certificate'
-      fullPath: '/services/pc-pndt-certificate'
-      preLoaderRoute: typeof ServicesPcPndtCertificateRouteImport
+    '/services/pc-pndt-registration-consultant-certificate-india': {
+      id: '/services/pc-pndt-registration-consultant-certificate-india'
+      path: '/services/pc-pndt-registration-consultant-certificate-india'
+      fullPath: '/services/pc-pndt-registration-consultant-certificate-india'
+      preLoaderRoute: typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/regulatory-affairs': {
-      id: '/services/regulatory-affairs'
-      path: '/services/regulatory-affairs'
-      fullPath: '/services/regulatory-affairs'
-      preLoaderRoute: typeof ServicesRegulatoryAffairsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/regulatory-due-diligence': {
-      id: '/services/regulatory-due-diligence'
-      path: '/services/regulatory-due-diligence'
-      fullPath: '/services/regulatory-due-diligence'
-      preLoaderRoute: typeof ServicesRegulatoryDueDiligenceRouteImport
+    '/services/pharmaceutical-cleanroom-manufacturing-equipment': {
+      id: '/services/pharmaceutical-cleanroom-manufacturing-equipment'
+      path: '/services/pharmaceutical-cleanroom-manufacturing-equipment'
+      fullPath: '/services/pharmaceutical-cleanroom-manufacturing-equipment'
+      preLoaderRoute: typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/saudi-arabia': {
@@ -4120,13 +4132,6 @@ declare module '@tanstack/react-router' {
       path: '/services/saudi-arabia'
       fullPath: '/services/saudi-arabia'
       preLoaderRoute: typeof ServicesSaudiArabiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/technical-documentation': {
-      id: '/services/technical-documentation'
-      path: '/services/technical-documentation'
-      fullPath: '/services/technical-documentation'
-      preLoaderRoute: typeof ServicesTechnicalDocumentationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/uae': {
@@ -4150,11 +4155,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/wpc-wireless-medical-devices': {
-      id: '/services/wpc-wireless-medical-devices'
-      path: '/services/wpc-wireless-medical-devices'
-      fullPath: '/services/wpc-wireless-medical-devices'
-      preLoaderRoute: typeof ServicesWpcWirelessMedicalDevicesRouteImport
+    '/services/wpc-approval-wireless-medical-devices-india': {
+      id: '/services/wpc-approval-wireless-medical-devices-india'
+      path: '/services/wpc-approval-wireless-medical-devices-india'
+      fullPath: '/services/wpc-approval-wireless-medical-devices-india'
+      preLoaderRoute: typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries/cosmetics_/eu': {
@@ -6133,31 +6138,41 @@ const rootRouteChildren: RootRouteChildren = {
     InsightsUnderstandingPrrcEuMdrIvdrRoute,
   InsightsUsabilityTestingMedicalDevicesIec62366Route:
     InsightsUsabilityTestingMedicalDevicesIec62366Route,
-  ServicesAuditComplianceRoute: ServicesAuditComplianceRoute,
   ServicesAustraliaRoute: ServicesAustraliaRouteWithChildren,
   ServicesBrazilRoute: ServicesBrazilRouteWithChildren,
   ServicesCanadaRoute: ServicesCanadaRouteWithChildren,
-  ServicesDrugDeviceCombinationProductsRoute:
-    ServicesDrugDeviceCombinationProductsRoute,
-  ServicesDrugLicensesForImportersRoute: ServicesDrugLicensesForImportersRoute,
+  ServicesDrugDeviceCombinationProductConsultingRoute:
+    ServicesDrugDeviceCombinationProductConsultingRoute,
+  ServicesDrugLicensesImportersIndiaForm10Form41Route:
+    ServicesDrugLicensesImportersIndiaForm10Form41Route,
   ServicesEuRoute: ServicesEuRouteWithChildren,
-  ServicesIecAdCodeRoute: ServicesIecAdCodeRoute,
+  ServicesGlobalMarketAccessConsultingMedicalDevicesRoute:
+    ServicesGlobalMarketAccessConsultingMedicalDevicesRoute,
+  ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute:
+    ServicesGlobalMedicalDeviceIvdRegulatoryAffairsConsultingRoute,
+  ServicesIecAdCodeRegistrationIndiaRoute:
+    ServicesIecAdCodeRegistrationIndiaRoute,
   ServicesIndiaRoute: ServicesIndiaRouteWithChildren,
-  ServicesIso13485Route: ServicesIso13485Route,
-  ServicesManufacturingRoute: ServicesManufacturingRoute,
-  ServicesMarketAccessRoute: ServicesMarketAccessRoute,
+  ServicesIso13485ImplementationCertificationConsultingRoute:
+    ServicesIso13485ImplementationCertificationConsultingRoute,
   ServicesMdsapRoute: ServicesMdsapRouteWithChildren,
+  ServicesMedicalDeviceAuditComplianceSupportRoute:
+    ServicesMedicalDeviceAuditComplianceSupportRoute,
+  ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute:
+    ServicesMedicalDeviceIvdRegulatoryDueDiligenceRoute,
+  ServicesMedicalDeviceTechnicalDocumentationConsultingRoute:
+    ServicesMedicalDeviceTechnicalDocumentationConsultingRoute,
   ServicesNewZealandRoute: ServicesNewZealandRouteWithChildren,
-  ServicesPcPndtCertificateRoute: ServicesPcPndtCertificateRoute,
-  ServicesRegulatoryAffairsRoute: ServicesRegulatoryAffairsRoute,
-  ServicesRegulatoryDueDiligenceRoute: ServicesRegulatoryDueDiligenceRoute,
+  ServicesPcPndtRegistrationConsultantCertificateIndiaRoute:
+    ServicesPcPndtRegistrationConsultantCertificateIndiaRoute,
+  ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute:
+    ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute,
   ServicesSaudiArabiaRoute: ServicesSaudiArabiaRouteWithChildren,
-  ServicesTechnicalDocumentationRoute: ServicesTechnicalDocumentationRoute,
   ServicesUaeRoute: ServicesUaeRouteWithChildren,
   ServicesUkRoute: ServicesUkRouteWithChildren,
   ServicesUsaRoute: ServicesUsaRouteWithChildren,
-  ServicesWpcWirelessMedicalDevicesRoute:
-    ServicesWpcWirelessMedicalDevicesRoute,
+  ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute:
+    ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,

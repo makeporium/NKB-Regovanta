@@ -2,7 +2,7 @@
   "slug": "iec-62304-medical-device-software-lifecycle",
   "title": "IEC 62304 in Practice: Keep Requirements, Risk Controls, and Releases Connected",
   "description": "Organise a medical-device software lifecycle around traceable requirements, risk controls, verification, third-party software, and release records.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "A software lifecycle file is most useful when it explains how a released version was produced and why it was considered ready. A large collection of test screenshots cannot answer that question on its own. Teams need a coherent connection between requirements, architecture, risk controls, verification, unresolved issues, and the exact software configuration delivered.",
   "sections": [
     {

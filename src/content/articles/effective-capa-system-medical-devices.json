@@ -2,7 +2,7 @@
   "slug": "effective-capa-system-medical-devices",
   "title": "Medical Device CAPA: Show That the Cause Was Addressed",
   "description": "Build CAPA records around problem definition, investigation, cause-based actions, effectiveness measures, and a justified closure decision.",
-  "service": "/services/iso-13485",
+  "service": "/services/iso-13485-implementation-certification-consulting",
   "intro": "A CAPA system is easy to measure by closed records and harder to judge by recurring problems. Closure is useful only when the investigation supports the action and follow-up shows that the action worked. Start by making the problem precise enough that the team can tell whether it has actually improved.",
   "sections": [
     {

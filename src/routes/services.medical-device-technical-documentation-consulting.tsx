@@ -2,7 +2,7 @@
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/technical-documentation")({
+export const Route = createFileRoute("/services/medical-device-technical-documentation-consulting")({
   head: () => ({
     meta: [
       { name: "robots", content: "index, follow, max-image-preview:large" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/services/technical-documentation")({
         content:
           "Medical device technical documentation consulting: EU MDR Annex II/III files, FDA 510(k) dossiers, ISO 13485 records, and global regulatory submissions.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/technical-documentation" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/medical-device-technical-documentation-consulting" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/services/technical-documentation")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/technical-documentation" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/medical-device-technical-documentation-consulting" },
   ],
         scripts: [
       {

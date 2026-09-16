@@ -98,7 +98,7 @@ const faqs = [
   },
 ];
 
-export const Route = createFileRoute("/services/pc-pndt-certificate")({
+export const Route = createFileRoute("/services/pc-pndt-registration-consultant-certificate-india")({
   head: () => ({
     meta: [
       { title: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
@@ -118,7 +118,7 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
         content:
           "Leading PC-PNDT registration consultant in India. Statutory Form A filing & Form B certificate grant for ultrasound machines, imaging equipment, importers, OEMs & dealers.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
@@ -130,7 +130,7 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-certificate" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india" },
     ],
     scripts: [
       {
@@ -140,7 +140,7 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
           "@graph": [
             {
               "@type": "Service",
-              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#service",
+              "@id": "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india#service",
               name: "PC-PNDT Registration Consultant & Certificate Licensing",
               serviceType: "PC-PNDT Statutory Registration Consulting",
               description:
@@ -154,7 +154,7 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": "https://www.nkbregovanta.com/services/pc-pndt-certificate#breadcrumb",
+              "@id": "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india#breadcrumb",
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -172,7 +172,7 @@ export const Route = createFileRoute("/services/pc-pndt-certificate")({
                   "@type": "ListItem",
                   position: 3,
                   name: "PC-PNDT Registration Consultant",
-                  item: "https://www.nkbregovanta.com/services/pc-pndt-certificate",
+                  item: "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india",
                 },
               ],
             },

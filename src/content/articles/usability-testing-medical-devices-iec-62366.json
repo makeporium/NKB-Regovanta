@@ -2,7 +2,7 @@
   "slug": "usability-testing-medical-devices-iec-62366",
   "title": "Medical Device Usability Testing: Design a Study That Answers the Safety Question",
   "description": "Plan usability evaluations around representative users, critical tasks, realistic conditions, observations, and justified interpretation.",
-  "service": "/services/technical-documentation",
+  "service": "/services/medical-device-technical-documentation-consulting",
   "intro": "A usability study should reveal whether intended users can perform the important tasks safely under realistic conditions. It is not simply a demonstration that participants like the interface. The study becomes more informative when its tasks, user groups, and observations are connected to the product's use-related risks and intended environment.",
   "sections": [
     {

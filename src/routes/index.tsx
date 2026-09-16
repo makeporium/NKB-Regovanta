@@ -104,7 +104,7 @@ const expertise = [
     {
         title: "Pharmaceuticals & Drugs",
         icon: Pill,
-        link: "/services/drug-licenses-for-importers" as const,
+        link: "/services/drug-licenses-importers-india-form-10-form-41" as const,
         items: [
             "CDSCO Drug Import Licensing",
             "Registration Certificate (Form 41)",
@@ -118,7 +118,7 @@ const expertise = [
     {
         title: "Quality Systems",
         icon: ShieldCheck,
-        link: "/services/iso-13485" as const,
+        link: "/services/iso-13485-implementation-certification-consulting" as const,
         items: [
             "ISO 13485 Implementation",
             "MDSAP Support",
@@ -132,7 +132,7 @@ const expertise = [
     {
         title: "Product & Market Access",
         icon: TrendingUp,
-        link: "/services/market-access" as const,
+        link: "/services/global-market-access-consulting-medical-devices" as const,
         items: [
             "Design Controls",
             "ISO 14971 Risk Management",
@@ -498,7 +498,7 @@ function Index() {
                                     Explore Our Services <ArrowRight className="h-3.5 w-3.5" />
                                 </Link>
                                 <Link
-                                    to="/services/manufacturing"
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
                                     className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white px-4.5 py-2.5 text-[12.5px] font-semibold transition-all shadow-2xs hover:shadow-xs rounded-[2px]"
                                 >
                                     Manufacturing Solutions <ArrowRight className="h-3.5 w-3.5" />
@@ -710,7 +710,7 @@ function Index() {
                             </div>
                             <div>
                                 <Link
-                                    to="/services/manufacturing"
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
                                     className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white font-bold text-xs sm:text-[13.5px] px-6 py-3 rounded-md shadow-sm transition-all hover:shadow-md shrink-0 group whitespace-nowrap"
                                 >
                                     Explore Manufacturing Solutions

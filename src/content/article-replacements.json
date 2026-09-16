@@ -11,14 +11,14 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "49b3b66ce632372824488221adbab36e1f5ad28e07091c622522a31c217fc78f"
+    "contentSha256": "45d3accf0b56e4d495b8239009d010fbd992fdb87bfb8416a11eac3a80f896e2"
   },
   {
     "slug": "dynamic-risk-management-software-medical-devices",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "81d0f9dfa4dec6a566177b5909fe7567fcba3808033d8cec82dbd890ee7aac46"
+    "contentSha256": "c66367d9c1a7155dec71feb5ede8f6f834586c2a1a87f32dcd8bd1dd9d6f05ca"
   },
   {
     "slug": "understanding-prrc-eu-mdr-ivdr",
@@ -32,7 +32,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "81aa0c90afca5e5583a4a613466d58c56b85623891305edd3709912b7e4a5984"
+    "contentSha256": "71b07f830be092f59ed59def0e3be84c6e101cb6224710fd2922a2ad324805b3"
   },
   {
     "slug": "clinical-evaluation-equivalence-medical-devices",
@@ -67,7 +67,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "99b3b3fb4b4acd464e46c9cfd2e7b40c1327bad044691c6a0903d894d4149013"
+    "contentSha256": "4cbde4661557370d993dc3b61b33733d80127ca2f066dcd39d80a70eabac2526"
   },
   {
     "slug": "ce-marking-cardiovascular-medical-devices",
@@ -81,7 +81,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "ad2bfe3ee76cc160c2f406a1330fd74d91499616901e3853a97143b2177d1448"
+    "contentSha256": "1e11a71a1a024e8e0d05529fa5415b9141582a0a6fd45138622f4473e7a98717"
   },
   {
     "slug": "remote-patient-monitoring-devices-regulatory-framework",
@@ -102,14 +102,14 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "8e438a2b669f19afc251bae4ddc8e4abfc07cdb56e13822ba5ec75b565f1c5f1"
+    "contentSha256": "e61e3f3b59facb521f08422c1cc58f776fe81a9d16314a8bf45795755714fd99"
   },
   {
     "slug": "borderline-medical-device-classification-strategy",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "85b6dd1dd6383be5ee1337d0ef506abc8a4a31fbaa5e4990013447911d3dd868"
+    "contentSha256": "cbdc5f126acd4b81546a1664cf46b2534bdb877fe162e416b4d1dc6aa1729503"
   },
   {
     "slug": "notified-body-expectations-eu-mdr-technical-documentation",
@@ -130,14 +130,14 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "bc8d43ceefd1776b93e766d7138fc942dfa01a50a5328188d8200f72acfc4d5e"
+    "contentSha256": "7fa1de0d6b6fadfadb37c6fa480214bb458d60da1fce1af7b98a18e816620422"
   },
   {
     "slug": "regulatory-compliance-strategy-global-medtech",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "411dd19d31173d443556813387240089ba0347be94674d661fac9ca3efe4f17b"
+    "contentSha256": "aadc198cfb30ccf3d85a048c3c76882f87db01536fdd5a23e6601c73144056e8"
   },
   {
     "slug": "regulation-eu-2024-1860-mdr-ivdr-transition",
@@ -151,14 +151,14 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "d1a09577d44e7b202e22e8c66b3dfa09afbd425d73048a1d182b09d0b9ce5f68"
+    "contentSha256": "610fb3f1c7179ae9db4db390172a0bc0589b87007469e5cbb04704764dc34cdf"
   },
   {
     "slug": "core-regulations-medical-device-global-compliance",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "87600eb2e10b9d333488e90735b9176fdf52a697cb879b3d1a92a39095fb16b1"
+    "contentSha256": "c7e792691b676b8c570214a7e3846818396f8e748f80a34e54565bba385a5035"
   },
   {
     "slug": "optimal-timing-usfda-510k-submission",
@@ -172,7 +172,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "126394119247f3a697e2e7c3be4fc2f0024c8139f4f301fba46a5dec9f351046"
+    "contentSha256": "b1fc063c045bc8050e1535d4c05f219c3385937229db74657175b9b7ac29f1aa"
   },
   {
     "slug": "fda-510k-program-modernization-safety-standards",
@@ -186,7 +186,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "a80912c6f2b70df0321b7f509cde6ee89c2714f5c6a1a49b01599c52d5c75076"
+    "contentSha256": "4d5b98d07efd2c158bd70791eb9cbf853336cf958c62ae93e69e4e0a940512b3"
   },
   {
     "slug": "cdsco-medical-device-registration-guidelines-india",

@@ -379,7 +379,7 @@ function About() {
                                     <p className="text-[12px] text-navy leading-relaxed mb-3">
                                         CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
                                     </p>
-                                    <Link to="/services/drug-licenses-for-importers" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                    <Link to="/services/drug-licenses-importers-india-form-10-form-41" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
                                     </Link>
                                 </div>
@@ -421,7 +421,7 @@ function About() {
                                     <p className="text-[12px] text-navy leading-relaxed mb-3">
                                         cGMP machinery, cleanroom furniture, SS equipment and containment solutions.
                                     </p>
-                                    <Link to="/services/manufacturing" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
+                                    <Link to="/services/pharmaceutical-cleanroom-manufacturing-equipment" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
                                         Explore <ArrowRight className="h-3 w-3" />
                                     </Link>
                                 </div>

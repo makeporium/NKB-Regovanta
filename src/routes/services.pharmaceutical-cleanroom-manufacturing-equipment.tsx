@@ -32,7 +32,7 @@ function getProductImage(relPath: string): string {
   return imgPharmaEquipment;
 }
 
-export const Route = createFileRoute("/services/manufacturing")({
+export const Route = createFileRoute("/services/pharmaceutical-cleanroom-manufacturing-equipment")({
   head: () => ({
     meta: [
       { title: "Pharmaceutical & Cleanroom Equipment | NKB Regovanta" },
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/services/manufacturing")({
         content:
           "SS 304/316 machinery, cleanroom furniture, blenders, trolleys, lifting devices, and ancillary equipment for pharma and healthcare manufacturing.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/manufacturing" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/pharmaceutical-cleanroom-manufacturing-equipment" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Pharmaceutical & Cleanroom Equipment | NKB Regovanta" },
@@ -58,7 +58,7 @@ export const Route = createFileRoute("/services/manufacturing")({
       },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/manufacturing" }],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/pharmaceutical-cleanroom-manufacturing-equipment" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -1164,7 +1164,7 @@ function MedicalDevicesIndiaPage() {
                 </p>
               </div>
               <div className="mt-5 pt-4 border-t border-gray-200 flex items-center justify-between">
-                <Link to="/services/iso-13485" className="text-xs font-bold text-[#0b3a96] hover:underline">
+                <Link to="/services/iso-13485-implementation-certification-consulting" className="text-xs font-bold text-[#0b3a96] hover:underline">
                   Read More
                 </Link>
                 <a href="#enquiry-form" className="px-3 py-1.5 rounded-lg bg-[#0b3a96] text-white text-xs font-bold hover:bg-[#082b70] transition-colors">
@@ -1187,7 +1187,7 @@ function MedicalDevicesIndiaPage() {
                 </p>
               </div>
               <div className="mt-5 pt-4 border-t border-gray-200 flex items-center justify-between">
-                <Link to="/services/pc-pndt-certificate" className="text-xs font-bold text-[#0b3a96] hover:underline">
+                <Link to="/services/pc-pndt-registration-consultant-certificate-india" className="text-xs font-bold text-[#0b3a96] hover:underline">
                   Read More
                 </Link>
                 <a href="#enquiry-form" className="px-3 py-1.5 rounded-lg bg-[#0b3a96] text-white text-xs font-bold hover:bg-[#082b70] transition-colors">
@@ -1210,7 +1210,7 @@ function MedicalDevicesIndiaPage() {
                 </p>
               </div>
               <div className="mt-5 pt-4 border-t border-gray-200 flex items-center justify-between">
-                <Link to="/services/wpc-wireless-medical-devices" className="text-xs font-bold text-[#0b3a96] hover:underline">
+                <Link to="/services/wpc-approval-wireless-medical-devices-india" className="text-xs font-bold text-[#0b3a96] hover:underline">
                   Read More
                 </Link>
                 <a href="#enquiry-form" className="px-3 py-1.5 rounded-lg bg-[#0b3a96] text-white text-xs font-bold hover:bg-[#082b70] transition-colors">

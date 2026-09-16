@@ -42,7 +42,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute("/services/regulatory-due-diligence")({
+export const Route = createFileRoute("/services/medical-device-ivd-regulatory-due-diligence")({
   head: () => ({
     meta: [
       {
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
       },
       {
         property: "og:url",
-        content: "https://www.nkbregovanta.com/services/regulatory-due-diligence",
+        content: "https://www.nkbregovanta.com/services/medical-device-ivd-regulatory-due-diligence",
       },
       {
         property: "og:image",
@@ -91,7 +91,7 @@ export const Route = createFileRoute("/services/regulatory-due-diligence")({
     links: [
       {
         rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/regulatory-due-diligence",
+        href: "https://www.nkbregovanta.com/services/medical-device-ivd-regulatory-due-diligence",
       },
     ],
         scripts: [
@@ -355,14 +355,14 @@ function RegulatoryDueDiligencePage() {
   ];
 
   const relatedServices = [
-    { label: "Design History File (DHF) Audit", to: "/services/technical-documentation" },
+    { label: "Design History File (DHF) Audit", to: "/services/medical-device-technical-documentation-consulting" },
     { label: "CE Marking & EU MDR Compliance", to: "/services/eu" },
     { label: "UKCA Marking & UKRP Support", to: "/services/uk" },
     { label: "US FDA 510(k), PMA & Agent Services", to: "/services/usa" },
-    { label: "Drug-Device Combination Products", to: "/services/drug-device-combination-products" },
+    { label: "Drug-Device Combination Products", to: "/services/drug-device-combination-product-consulting" },
     { label: "CDSCO India Regulatory Licensing", to: "/services/india" },
-    { label: "ISO 13485 & MDSAP Quality Systems", to: "/services/iso-13485" },
-    { label: "Audit & Regulatory Inspection Readiness", to: "/services/audit-compliance" },
+    { label: "ISO 13485 & MDSAP Quality Systems", to: "/services/iso-13485-implementation-certification-consulting" },
+    { label: "Audit & Regulatory Inspection Readiness", to: "/services/medical-device-audit-compliance-support" },
   ];
 
   const faqs = [

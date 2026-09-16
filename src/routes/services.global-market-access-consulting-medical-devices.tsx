@@ -3,7 +3,7 @@ import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 const imgPlaceholder = "/assets/brain/services_market_access_hero_1786440859191.png";
 
-export const Route = createFileRoute("/services/market-access")({
+export const Route = createFileRoute("/services/global-market-access-consulting-medical-devices")({
   head: () => ({
     meta: [
       { title: "Global Market Access Consulting | NKB Regovanta" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/services/market-access")({
         content:
           "Global market access strategy for medical devices across US FDA, EU MDR, UK MHRA, CDSCO India, and Health Canada. Multi-market pathway consulting.",
       },
-      { property: "og:url", content: "https://www.nkbregovanta.com/services/market-access" },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/global-market-access-consulting-medical-devices" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/services/market-access")({
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
   links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com/services/market-access" },
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/global-market-access-consulting-medical-devices" },
   ],
         scripts: [
       {
