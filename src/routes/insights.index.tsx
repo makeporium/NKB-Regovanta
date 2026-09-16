@@ -72,7 +72,7 @@ const allArticles = [
     category: "AI & DIGITAL HEALTH",
     title: "EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right",
     desc: "A practical regulatory perspective for manufacturers developing AI-enabled medical devices and medical software for the European market.",
-    img: "/assets/brain/cs_algorithm_claim_1786441224937.png",
+    img: "/assets/insights/digital_health_tablet.jpg",
     route: "/insights/eu-ai-act-medical-devices",
   },
   {
@@ -80,7 +80,7 @@ const allArticles = [
     category: "EU MDR STRATEGY",
     title: "EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck",
     desc: "A practical regulatory perspective on the issues that can delay CE marking and EU market entry under Regulation (EU) 2017/745.",
-    img: "/assets/brain/eu_mdr_market_1786306179767.png",
+    img: "/assets/insights/medical_audit_consult.jpg",
     route: "/insights/eu-mdr-compliance-challenges",
   },
   {
@@ -88,7 +88,7 @@ const allArticles = [
     category: "CDSCO INDIA UPDATE",
     title: "India Medical Device Rules 2026: EU-Approved Devices Gain Recognition Under Rule 63",
     desc: "What the latest MDR amendment (G.S.R. 744(E)) means for medical device manufacturers, EU companies and Indian importers.",
-    img: "/assets/brain/india_cdsco_market_1786307143373.png",
+    img: "/assets/insights/clinical_research_facility.jpg",
     route: "/insights/india-mdr-2026-rule-63",
   },
   {
@@ -96,7 +96,7 @@ const allArticles = [
     category: "AUDIT & TECHNICAL EVIDENCE",
     title: "Medical Device Documentation: From Compliance Records to Regulatory Evidence",
     desc: "Why auditors look for lifecycle traceability and how to turn static technical files into defensible regulatory evidence during inspections.",
-    img: "/assets/brain/technical_documentation_hero_1786399660256.png",
+    img: "/assets/insights/regulatory_dossier_review.jpg",
     route: "/insights/medical-device-documentation-compliance-to-evidence",
   },
   {
@@ -104,7 +104,7 @@ const allArticles = [
     category: "DIGITAL HEALTH & SAMD",
     title: "CE Marking for Digital Health: Define the Product Before Planning the Evidence",
     desc: "Plan EU medical software qualification, classification, clinical evidence, and release controls around a clearly defined intended purpose.",
-    img: "/assets/brain/cs_algorithm_claim_1786441224937.png",
+    img: "/assets/insights/software_medical_screen.jpg",
     route: "/insights/ce-marking-digital-health-technologies",
   },
   {
@@ -112,7 +112,7 @@ const allArticles = [
     category: "US FDA QUALITY SYSTEMS",
     title: "FDA QMSR Readiness: Follow a Product Record Through the Quality System",
     desc: "Assess FDA QMSR readiness through connected product records, supplier controls, complaints, and management decisions rather than a document count.",
-    img: "/assets/brain/insight_fda_qmsr_1786440932587.png",
+    img: "/assets/insights/quality_assurance_meeting.jpg",
     route: "/insights/fda-qmsr-compliance-guide",
   },
   {
@@ -120,7 +120,7 @@ const allArticles = [
     category: "RISK MANAGEMENT & SAMD",
     title: "Software Risk Management After Release: Turn New Signals Into Decisions",
     desc: "Connect software incidents, dependency updates, and clinical feedback to risk assessment, change control, and verified release decisions.",
-    img: "/assets/brain/cs_algorithm_claim_1786441224937.png",
+    img: "/assets/insights/risk_assessment_analytics.jpg",
     route: "/insights/dynamic-risk-management-software-medical-devices",
   },
   {
@@ -128,7 +128,7 @@ const allArticles = [
     category: "EU REGULATORY COMPLIANCE",
     title: "Appointing a PRRC: Make the Responsibility Work Beyond the Contract",
     desc: "Define a workable PRRC arrangement with appropriate qualifications, access to evidence, escalation routes, and clear manufacturer responsibilities.",
-    img: "/assets/brain/eu_compliance_1786396542227.png",
+    img: "/assets/insights/regulatory_compliance_officer.jpg",
     route: "/insights/understanding-prrc-eu-mdr-ivdr",
   },
   {
@@ -136,7 +136,7 @@ const allArticles = [
     category: "QUALITY MANAGEMENT",
     title: "ISO 13485 Documentation: Build a System People Can Use and Auditors Can Trace",
     desc: "Organise medical-device QMS documentation around process ownership, controlled records, traceability, and reliable retrieval.",
-    img: "/assets/brain/qms_inspection_office.jpg",
+    img: "/assets/insights/iso_audit_binder_prep.jpg",
     route: "/insights/qms-documentation-iso-13485-compliance",
   },
   {
@@ -144,7 +144,7 @@ const allArticles = [
     category: "CLINICAL EVALUATION",
     title: "Clinical Equivalence Under EU MDR: Establish What the Comparison Can Support",
     desc: "Evaluate technical, biological, and clinical equivalence, data access, and evidence gaps before relying on another device's clinical data.",
-    img: "/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
+    img: "/assets/insights/clinical_evaluation_doctor.jpg",
     route: "/insights/clinical-evaluation-equivalence-medical-devices",
   },
   {
@@ -152,7 +152,7 @@ const allArticles = [
     category: "EU TECHNICAL FILES",
     title: "GSPR Compliance: Turn the Checklist Into an Evidence Map",
     desc: "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps.",
-    img: "/assets/brain/eu_mdr_market_1786306179767.png",
+    img: "/assets/insights/biomedical_engineering_bench.jpg",
     route: "/insights/gspr-compliance-eu-mdr-ivdr",
   },
   {
@@ -160,7 +160,7 @@ const allArticles = [
     category: "CDSCO INDIA REGULATIONS",
     title: "CDSCO Manufacturing Licences: Prepare the Product and Site Evidence Together",
     desc: "Plan an Indian medical-device manufacturing application around classification, site scope, product evidence, and consistent licence documentation.",
-    img: "/assets/brain/india_cdsco_market_1786307143373.png",
+    img: "/assets/insights/pharma_cleanroom_line.jpg",
     route: "/insights/cdsco-medical-device-manufacturing-license-india",
   },
   {
@@ -168,7 +168,7 @@ const allArticles = [
     category: "FDA & GLOBAL CLASSIFICATION",
     title: "FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies",
     desc: "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA.",
-    img: "/assets/brain/industry_medical_devices_1786310566137.png",
+    img: "/assets/insights/cardiovascular_surgical_implant.jpg",
     route: "/insights/class-iii-medical-device-classification-strategy",
   },
   {
@@ -176,7 +176,7 @@ const allArticles = [
     category: "REGULATORY BY DESIGN",
     title: "Use GSPRs Early: Convert Regulatory Expectations Into Design Inputs",
     desc: "Use GSPRs during device development to define measurable design inputs, evidence dependencies, and review gates before testing begins.",
-    img: "/assets/brain/eu_compliance_1786396542227.png",
+    img: "/assets/insights/medtech_cad_design.jpg",
     route: "/insights/gspr-foundation-medical-device-development",
   },
   {
@@ -184,7 +184,7 @@ const allArticles = [
     category: "CARDIOVASCULAR MEDTECH",
     title: "Cardiovascular Device CE Marking: Organise Evidence Around the Clinical Claim",
     desc: "Plan cardiovascular-device evidence across design performance, patient contact, clinical benefit, and follow-up without assuming one route fits all products.",
-    img: "/assets/brain/medtech_reg_lab.jpg",
+    img: "/assets/insights/cardiac_monitor_ecg.jpg",
     route: "/insights/ce-marking-cardiovascular-medical-devices",
   },
   {
@@ -192,7 +192,7 @@ const allArticles = [
     category: "SOFTWARE COMPLIANCE",
     title: "IEC 62304 in Practice: Keep Requirements, Risk Controls, and Releases Connected",
     desc: "Organise a medical-device software lifecycle around traceable requirements, risk controls, verification, third-party software, and release records.",
-    img: "/assets/brain/cs_algorithm_claim_1786441224937.png",
+    img: "/assets/insights/software_code_validation.jpg",
     route: "/insights/iec-62304-medical-device-software-lifecycle",
   },
   {
@@ -200,7 +200,7 @@ const allArticles = [
     category: "CONNECTED HEALTH",
     title: "Remote Patient Monitoring: Define the Clinical Workflow Before the Device Boundary",
     desc: "Assess remote-monitoring systems through their measurement claims, alerts, data flow, home-use conditions, and clinical responsibilities.",
-    img: "/assets/brain/medtech_reg_lab.jpg",
+    img: "/assets/insights/connected_patient_care.jpg",
     route: "/insights/remote-patient-monitoring-devices-regulatory-framework",
   },
   {
@@ -208,7 +208,7 @@ const allArticles = [
     category: "EU IVDR & DIAGNOSTICS",
     title: "Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow",
     desc: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces.",
-    img: "/assets/brain/industry_ivd_1786310578306.png",
+    img: "/assets/insights/laboratory_test_tubes_pipette.jpg",
     route: "/insights/ivdr-class-d-verification-notified-bodies",
   },
   {
@@ -216,7 +216,7 @@ const allArticles = [
     category: "MEDTECH MANUFACTURING",
     title: "Dental Scanner Development: Validate the Scan-to-Decision Workflow",
     desc: "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows.",
-    img: "/assets/brain/cleanroom_manufacturing.jpg",
+    img: "/assets/insights/digital_dental_clinic.jpg",
     route: "/insights/dental-scanners-manufacturing-regulatory-standards",
   },
   {
@@ -224,7 +224,7 @@ const allArticles = [
     category: "REGULATORY BORDERLINES",
     title: "Borderline Products: Separate Device Qualification From Risk Classification",
     desc: "Assess borderline products using intended purpose, mode of action, claims, and jurisdiction-specific reasoning before selecting a device class.",
-    img: "/assets/brain/industry_cosmetics_1786310589050.png",
+    img: "/assets/insights/pharmaceutical_vials_capsules.jpg",
     route: "/insights/borderline-medical-device-classification-strategy",
   },
   {
@@ -232,7 +232,7 @@ const allArticles = [
     category: "TECHNICAL FILES",
     title: "EU MDR Technical Documentation: Make the Evidence Trail Clear",
     desc: "Prepare an MDR technical file with consistent scope, claim-to-evidence links, controlled revisions, and traceable responses to review questions.",
-    img: "/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
+    img: "/assets/insights/audit_checklist_calculator.jpg",
     route: "/insights/notified-body-expectations-eu-mdr-technical-documentation",
   },
   {
@@ -240,7 +240,7 @@ const allArticles = [
     category: "US FDA 510(K)",
     title: "FDA 510(k) Problems: Diagnose the Evidence Gap Before Responding",
     desc: "Address 510(k) obstacles by distinguishing pathway, intended-use, performance-evidence, and submission-consistency problems.",
-    img: "/assets/brain/usa_fda_market_1786305218141.png",
+    img: "/assets/insights/us_regulatory_headquarters.jpg",
     route: "/insights/overcoming-fda-510k-clearance-barriers",
   },
   {
@@ -248,7 +248,7 @@ const allArticles = [
     category: "QUALITY SYSTEMS",
     title: "Medical Device CAPA: Show That the Cause Was Addressed",
     desc: "Build CAPA records around problem definition, investigation, cause-based actions, effectiveness measures, and a justified closure decision.",
-    img: "/assets/brain/qms_inspection_office.jpg",
+    img: "/assets/insights/capa_investigation_team.jpg",
     route: "/insights/effective-capa-system-medical-devices",
   },
   {
@@ -256,7 +256,7 @@ const allArticles = [
     category: "GLOBAL MARKET ACCESS",
     title: "Global MedTech Strategy: Sequence Markets Around Reusable Evidence",
     desc: "Separate reusable product evidence from market-specific classification, representation, and submission needs in a global regulatory plan.",
-    img: "/assets/brain/media__1786282925761.optimized.webp",
+    img: "/assets/insights/global_map_logistics.jpg",
     route: "/insights/regulatory-compliance-strategy-global-medtech",
   },
   {
@@ -264,7 +264,7 @@ const allArticles = [
     category: "EU REGULATORY UPDATES",
     title: "IVDR Transition Planning: Check Eligibility Before Relying on the Deadline",
     desc: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates.",
-    img: "/assets/brain/eu_mdr_market_1786306179767.png",
+    img: "/assets/insights/laptop_regulatory_search.jpg",
     route: "/insights/regulation-eu-2024-1860-mdr-ivdr-transition",
   },
   {
@@ -272,7 +272,7 @@ const allArticles = [
     category: "BIOCOMPATIBILITY & TESTING",
     title: "ISO 10993 Biological Evaluation: Define the Question Before Ordering Tests",
     desc: "Plan biological evaluation using finished-device contact, materials, processing, available evidence, and current standards-recognition requirements.",
-    img: "/assets/brain/cs_fda_biocompatibility_1786441176273.png",
+    img: "/assets/insights/petri_dish_biocompatibility.jpg",
     route: "/insights/biological-evaluation-testing-medical-devices-iso-10993",
   },
   {
@@ -280,7 +280,7 @@ const allArticles = [
     category: "INTERNATIONAL COMPLIANCE",
     title: "Build a Medical Device Requirements Register Across Regulatory Disciplines",
     desc: "Create a product-specific register linking device rules, software, electrical safety, biological evaluation, and other applicable obligations.",
-    img: "/assets/brain/media__1786282925761.optimized.webp",
+    img: "/assets/insights/legal_compliance_gavel.jpg",
     route: "/insights/core-regulations-medical-device-global-compliance",
   },
   {
@@ -288,7 +288,7 @@ const allArticles = [
     category: "US FDA 510(K)",
     title: "When to Submit a 510(k): Use Readiness Gates Instead of a Calendar Target",
     desc: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions.",
-    img: "/assets/brain/usa_fda_regulatory_1786305043898.png",
+    img: "/assets/insights/project_milestone_calendar.jpg",
     route: "/insights/optimal-timing-usfda-510k-submission",
   },
   {
@@ -296,7 +296,7 @@ const allArticles = [
     category: "HUMAN FACTORS & USABILITY",
     title: "Medical Device Usability Testing: Design a Study That Answers the Safety Question",
     desc: "Plan usability evaluations around representative users, critical tasks, realistic conditions, observations, and justified interpretation.",
-    img: "/assets/brain/cs_fda_simulated_use_1786441155542.png",
+    img: "/assets/insights/usability_observation_lab.jpg",
     route: "/insights/usability-testing-medical-devices-iec-62366",
   },
   {
@@ -304,7 +304,7 @@ const allArticles = [
     category: "FDA REGULATORY POLICY",
     title: "510(k) Modernisation: Assess Predicate Relevance and Performance Evidence",
     desc: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway.",
-    img: "/assets/brain/usa_fda_market_1786305218141.png",
+    img: "/assets/insights/digital_security_compliance.jpg",
     route: "/insights/fda-510k-program-modernization-safety-standards",
   },
   {
@@ -312,7 +312,7 @@ const allArticles = [
     category: "HUMAN FACTORS",
     title: "Human Factors in Device Design: Find Use Problems Before Validation",
     desc: "Integrate human factors into early device design through user research, task analysis, formative evaluation, and traceable design decisions.",
-    img: "/assets/brain/cs_fda_simulated_use_1786441155542.png",
+    img: "/assets/insights/medical_ergonomics_device.jpg",
     route: "/insights/human-factors-engineering-medical-device-design",
   },
   {
@@ -320,7 +320,7 @@ const allArticles = [
     category: "CDSCO INDIA REGULATIONS",
     title: "Medical Device Registration in India: Define the Applicant, Product, and Route",
     desc: "Prepare an Indian medical-device registration strategy using product classification, applicant roles, manufacturing or import scope, and current rules.",
-    img: "/assets/brain/india_cdsco_market_1786307143373.png",
+    img: "/assets/insights/sterile_blister_packaging.jpg",
     route: "/insights/cdsco-medical-device-registration-guidelines-india",
   },
   {
@@ -328,7 +328,7 @@ const allArticles = [
     category: "EU CE MARKING",
     title: "The EU MDR CE-Marking Process: Plan the Decisions and Handoffs",
     desc: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan.",
-    img: "/assets/brain/eu_mdr_market_1786306179767.png",
+    img: "/assets/insights/biochemical_laboratory_flask.jpg",
     route: "/insights/ce-marking-process-medical-devices-eu-mdr",
   },
   {
@@ -336,7 +336,7 @@ const allArticles = [
     category: "SAMD & DIGITAL HEALTH",
     title: "FDA SaMD Planning: Assess the Software Function Before Selecting a Submission",
     desc: "Define medical software functions, assess FDA regulatory treatment, and connect classification and submission evidence to the intended use.",
-    img: "/assets/brain/cs_algorithm_claim_1786441224937.png",
+    img: "/assets/insights/samd_mobile_telehealth.jpg",
     route: "/insights/samd-classification-submission-usfda",
   },
   {
@@ -344,7 +344,7 @@ const allArticles = [
     category: "US FDA STRATEGY",
     title: "FDA Pre-Submissions: Ask Questions That Resolve a Development Decision",
     desc: "Prepare a focused FDA Pre-Submission with a defined device, evidence context, proposed approach, and questions tied to development decisions.",
-    img: "/assets/brain/usa_fda_regulatory_1786305043898.png",
+    img: "/assets/insights/executive_meeting_handshake.jpg",
     route: "/insights/fda-q-sub-pre-submission-meeting-guide",
   },
   {
@@ -352,7 +352,7 @@ const allArticles = [
     category: "EU NOTIFIED BODIES",
     title: "Selecting a Notified Body: Match Designation, Scope, and Project Readiness",
     desc: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone.",
-    img: "/assets/brain/eu_compliance_1786396542227.png",
+    img: "/assets/insights/accreditation_certificate_audit.jpg",
     route: "/insights/notified-body-selection-conformity-assessment-guide",
   },
   {
@@ -360,7 +360,7 @@ const allArticles = [
     category: "REGULATORY NEWS",
     title: "FDA QMSR 2026: What Medical Device Manufacturers Need to Know",
     desc: "QMSR is now effective. Understand the key changes, ISO 13485 alignment, record expectations and practical actions manufacturers should take for ongoing FDA compliance.",
-    img: "/assets/brain/insight_fda_qmsr_1786440932587.png",
+    img: "/assets/insights/fda_laboratory_validation.jpg",
     route: "/insights/fda-qmsr-2026",
   },
   {
@@ -368,7 +368,7 @@ const allArticles = [
     category: "EU MDR UPDATE",
     title: "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
     desc: "EUDAMED’s first four modules are now mandatory. Review the registration, UDI/device, certificate and market-surveillance implications manufacturers should address now.",
-    img: "/assets/brain/eu_mdr_market_1786306179767.png",
+    img: "/assets/insights/database_analytics_eudamed.jpg",
     route: "/insights/eu-mdr-2026",
   },
   {
@@ -376,7 +376,7 @@ const allArticles = [
     category: "BEST PRACTICES",
     title: "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
     desc: "FDA has moved away from QSIT to the QMSR-aligned inspection process. Learn what investigators may review and how to strengthen inspection readiness.",
-    img: "/assets/brain/insight_fda_inspections_1786440998246.png",
+    img: "/assets/insights/inspection_clean_facility.jpg",
     route: "/insights/fda-inspections-2026",
   },
 ];

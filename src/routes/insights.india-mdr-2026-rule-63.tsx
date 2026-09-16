@@ -22,11 +22,11 @@ export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/clinical_research_facility.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "India MDR 2026 Rule 63 Amendment Guide | NKB Regovanta" },
       { name: "twitter:description", content: "What the Indian MDR amendment (G.S.R. 744(E)) means for medical device makers, EU brands, and Indian importers under Rule 63 and Class A QMS." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/clinical_research_facility.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63" },

@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/gspr-compliance-eu-mdr-ivdr")({
       { property: "og:description", content: "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_mdr_market_1786306179767.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/biomedical_engineering_bench.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "GSPR Compliance: Turn the Checklist Into an Evidence Map" },
       { name: "twitter:description", content: "Build a usable GSPR matrix linking applicable requirements to methods, controlled evidence, product configurations, and unresolved gaps." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_mdr_market_1786306179767.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/biomedical_engineering_bench.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr" }],
   }),

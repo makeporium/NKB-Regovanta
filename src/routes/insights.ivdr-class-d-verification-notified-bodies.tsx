@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/ivdr-class-d-verification-notifi
       { property: "og:description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/industry_ivd_1786310578306.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/laboratory_test_tubes_pipette.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Class D IVD Verification: Coordinate the Product Evidence and Batch Workflow" },
       { name: "twitter:description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/industry_ivd_1786310578306.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/laboratory_test_tubes_pipette.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies" }],
   }),

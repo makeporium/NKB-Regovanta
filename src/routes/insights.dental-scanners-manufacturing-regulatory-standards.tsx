@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/dental-scanners-manufacturing-re
       { property: "og:description", content: "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cleanroom_manufacturing.jpg" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/digital_dental_clinic.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Dental Scanner Development: Validate the Scan-to-Decision Workflow" },
       { name: "twitter:description", content: "Plan dental-scanner evidence for intended use, scan accuracy, software processing, reprocessing, and downstream digital workflows." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cleanroom_manufacturing.jpg" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/digital_dental_clinic.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards" }],
   }),

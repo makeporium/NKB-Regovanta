@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/class-iii-medical-device-classif
       { property: "og:description", content: "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/industry_medical_devices_1786310566137.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/cardiovascular_surgical_implant.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA Class III Strategy: Establish the Regulatory Path Before Committing to Studies" },
       { name: "twitter:description", content: "Investigate FDA classification, product codes, and evidence requirements before assuming that a device needs a 510(k) or a PMA." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/industry_medical_devices_1786310566137.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/cardiovascular_surgical_implant.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy" }],
   }),

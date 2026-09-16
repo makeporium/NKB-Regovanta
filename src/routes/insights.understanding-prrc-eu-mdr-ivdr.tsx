@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/understanding-prrc-eu-mdr-ivdr")
       { property: "og:description", content: "Define a workable PRRC arrangement with appropriate qualifications, access to evidence, escalation routes, and clear manufacturer responsibilities." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/regulatory_compliance_officer.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Appointing a PRRC: Make the Responsibility Work Beyond the Contract" },
       { name: "twitter:description", content: "Define a workable PRRC arrangement with appropriate qualifications, access to evidence, escalation routes, and clear manufacturer responsibilities." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/regulatory_compliance_officer.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr" }],
   }),

@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/optimal-timing-usfda-510k-submis
       { property: "og:description", content: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/usa_fda_regulatory_1786305043898.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/project_milestone_calendar.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "When to Submit a 510(k): Use Readiness Gates Instead of a Calendar Target" },
       { name: "twitter:description", content: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/usa_fda_regulatory_1786305043898.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/project_milestone_calendar.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission" }],
   }),

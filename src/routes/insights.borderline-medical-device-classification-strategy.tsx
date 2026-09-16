@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/borderline-medical-device-classi
       { property: "og:description", content: "Assess borderline products using intended purpose, mode of action, claims, and jurisdiction-specific reasoning before selecting a device class." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/industry_cosmetics_1786310589050.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/pharmaceutical_vials_capsules.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Borderline Products: Separate Device Qualification From Risk Classification" },
       { name: "twitter:description", content: "Assess borderline products using intended purpose, mode of action, claims, and jurisdiction-specific reasoning before selecting a device class." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/industry_cosmetics_1786310589050.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/pharmaceutical_vials_capsules.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy" }],
   }),

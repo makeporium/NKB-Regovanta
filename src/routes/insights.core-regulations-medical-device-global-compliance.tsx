@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/core-regulations-medical-device-
       { property: "og:description", content: "Create a product-specific register linking device rules, software, electrical safety, biological evaluation, and other applicable obligations." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/media__1786282925761.optimized.webp" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/legal_compliance_gavel.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Build a Medical Device Requirements Register Across Regulatory Disciplines" },
       { name: "twitter:description", content: "Create a product-specific register linking device rules, software, electrical safety, biological evaluation, and other applicable obligations." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/media__1786282925761.optimized.webp" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/legal_compliance_gavel.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance" }],
   }),

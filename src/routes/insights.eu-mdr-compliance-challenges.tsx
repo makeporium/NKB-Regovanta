@@ -21,11 +21,11 @@ export const Route = createFileRoute("/insights/eu-mdr-compliance-challenges")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/medical_audit_consult.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "EU MDR Medical Device Compliance Guide | NKB Regovanta" },
       { name: "twitter:description", content: "A practical regulatory perspective on the critical issues that delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR)." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/medical_audit_consult.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges" },

@@ -17,11 +17,11 @@ export const Route = createFileRoute("/insights/eu-mdr-2026")({
       { property: "og:description", content: "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-mdr-2026" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/database_analytics_eudamed.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "EU MDR 2026 EUDAMED & Priorities | NKB Regovanta" },
       { name: "twitter:description", content: "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/database_analytics_eudamed.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/eu-mdr-2026" },

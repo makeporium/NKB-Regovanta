@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/samd-classification-submission-u
       { property: "og:description", content: "Define medical software functions, assess FDA regulatory treatment, and connect classification and submission evidence to the intended use." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/samd-classification-submission-usfda" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/samd_mobile_telehealth.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA SaMD Planning: Assess the Software Function Before Selecting a Submission" },
       { name: "twitter:description", content: "Define medical software functions, assess FDA regulatory treatment, and connect classification and submission evidence to the intended use." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/samd_mobile_telehealth.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/samd-classification-submission-usfda" }],
   }),

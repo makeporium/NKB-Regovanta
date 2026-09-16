@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/fda-qmsr-compliance-guide")({
       { property: "og:description", content: "Assess FDA QMSR readiness through connected product records, supplier controls, complaints, and management decisions rather than a document count." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA QMSR Readiness: Follow a Product Record Through the Quality System" },
       { name: "twitter:description", content: "Assess FDA QMSR readiness through connected product records, supplier controls, complaints, and management decisions rather than a document count." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide" }],
   }),

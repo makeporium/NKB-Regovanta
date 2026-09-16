@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/overcoming-fda-510k-clearance-ba
       { property: "og:description", content: "Address 510(k) obstacles by distinguishing pathway, intended-use, performance-evidence, and submission-consistency problems." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/usa_fda_market_1786305218141.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/us_regulatory_headquarters.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA 510(k) Problems: Diagnose the Evidence Gap Before Responding" },
       { name: "twitter:description", content: "Address 510(k) obstacles by distinguishing pathway, intended-use, performance-evidence, and submission-consistency problems." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/usa_fda_market_1786305218141.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/us_regulatory_headquarters.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers" }],
   }),

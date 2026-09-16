@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/effective-capa-system-medical-de
       { property: "og:description", content: "Build CAPA records around problem definition, investigation, cause-based actions, effectiveness measures, and a justified closure decision." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/qms_inspection_office.jpg" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/capa_investigation_team.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Medical Device CAPA: Show That the Cause Was Addressed" },
       { name: "twitter:description", content: "Build CAPA records around problem definition, investigation, cause-based actions, effectiveness measures, and a justified closure decision." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/qms_inspection_office.jpg" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/capa_investigation_team.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices" }],
   }),

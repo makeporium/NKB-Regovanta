@@ -22,11 +22,11 @@ export const Route = createFileRoute("/insights/medical-device-documentation-com
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/regulatory_dossier_review.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Medical Device Regulatory Evidence | NKB Regovanta" },
       { name: "twitter:description", content: "Documentation is objective evidence of quality control. Learn how to avoid audit disconnects across design, risk management, validation, and PMS." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/regulatory_dossier_review.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence" },

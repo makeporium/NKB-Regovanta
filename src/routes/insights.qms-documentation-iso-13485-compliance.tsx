@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/qms-documentation-iso-13485-comp
       { property: "og:description", content: "Organise medical-device QMS documentation around process ownership, controlled records, traceability, and reliable retrieval." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/qms_inspection_office.jpg" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/iso_audit_binder_prep.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "ISO 13485 Documentation: Build a System People Can Use and Auditors Can Trace" },
       { name: "twitter:description", content: "Organise medical-device QMS documentation around process ownership, controlled records, traceability, and reliable retrieval." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/qms_inspection_office.jpg" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/iso_audit_binder_prep.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance" }],
   }),

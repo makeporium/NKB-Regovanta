@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/cdsco-medical-device-manufacturi
       { property: "og:description", content: "Plan an Indian medical-device manufacturing application around classification, site scope, product evidence, and consistent licence documentation." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/pharma_cleanroom_line.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "CDSCO Manufacturing Licences: Prepare the Product and Site Evidence Together" },
       { name: "twitter:description", content: "Plan an Indian medical-device manufacturing application around classification, site scope, product evidence, and consistent licence documentation." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/pharma_cleanroom_line.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india" }],
   }),

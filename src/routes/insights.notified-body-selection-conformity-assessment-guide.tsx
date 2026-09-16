@@ -12,11 +12,11 @@ export const Route = createFileRoute("/insights/notified-body-selection-conformi
       { property: "og:description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/accreditation_certificate_audit.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Selecting a Notified Body: Match Designation, Scope, and Project Readiness" },
       { name: "twitter:description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/brain/eu_compliance_1786396542227.png" }
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/accreditation_certificate_audit.jpg" }
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide" }],
   }),

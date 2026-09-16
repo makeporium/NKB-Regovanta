@@ -21,11 +21,11 @@ export const Route = createFileRoute("/insights/eu-ai-act-medical-devices")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/digital_health_tablet.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "EU AI Act for Medical Devices Guide | NKB Regovanta" },
       { name: "twitter:description", content: "A practical regulatory guide for manufacturers developing AI-enabled medical devices and software under the EU AI Act and EU MDR/IVDR." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/digital_health_tablet.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices" },
