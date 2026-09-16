@@ -44,7 +44,7 @@ import {
   Search,
   Sparkles,
 } from "lucide-react";
-import canadaHero3dImg from "@/assets/canada-hero-3d.png";
+import canadaHero3dImg from "@/assets/canada-hero-clean.jpg";
 import canadaMapShieldImg from "@/assets/canada-map-shield.png";
 import canadaMapleBottomImg from "@/assets/canada-maple-leaf-bottom.png";
 import canadaMdsapLogoImg from "@/assets/canada-mdsap-logo.png";
@@ -368,30 +368,36 @@ function CanadaMarketCompletePage() {
       />
 
       {/* ══════════════════════════════════════════════════════════════════
-          1. HERO SECTION (Identical to Picture Mockup)
+          1. HERO SECTION (Matching Picture Mockup)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#03152d] via-[#071f43] to-[#0c2a57] text-white pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-border/20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[radial-gradient(ellipse_at_top_right,rgba(224,49,49,0.3),transparent_70%)] pointer-events-none" />
+      <section className="relative bg-white pt-8 pb-12 border-b border-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-1.5 text-[11px] text-gray-500 font-semibold mb-4">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <span className="text-navy font-bold">Canada</span>
+          </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Col */}
             <div className="lg:col-span-7">
-              <h1 className="font-display font-extrabold text-white text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] leading-[1.12] mb-2 tracking-tight">
-                Health Canada Medical Device<br />
-                Regulatory Consultant
+              <h1 className="font-display font-extrabold text-[#051833] text-2xl sm:text-3xl lg:text-[36px] leading-[1.12] mb-2 tracking-tight">
+                Health Canada MDL &amp; MDEL Registration Consultant
               </h1>
-              <p className="text-sm sm:text-base font-bold text-[#e03131] mb-2">
-                MDL &amp; MDEL Registration • MDSAP Canada Certification
+              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#e03131] mb-2">
+                MDSAP Canada | Your Partner for Canadian Market Access
               </p>
-              <p className="text-xs sm:text-[13.5px] text-blue-100/90 font-medium mb-6 leading-relaxed max-w-2xl">
+              <p className="text-[12.5px] sm:text-[13px] text-gray-600 font-medium leading-relaxed mb-6 max-w-2xl">
                 End-to-end regulatory, quality and compliance support for Medical Devices, IVDs and Combination Products in Canada.
               </p>
 
               {/* 6 Checkmark Bullets (2 cols x 3 rows) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-7">
                 {heroChecklist.map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-[12px] sm:text-[12.5px] text-white/90 font-medium">
+                  <div key={item} className="flex items-center gap-2 text-[11.5px] sm:text-[12px] text-gray-700 font-medium">
                     <CheckCircle2 className="h-3.5 w-3.5 text-[#e03131] shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -402,13 +408,13 @@ function CanadaMarketCompletePage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-xs"
                 >
                   Discuss Your Canada Strategy <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <a
                   href="#sec-1"
-                  className="inline-flex items-center gap-2 bg-[#0c2a57]/70 hover:bg-[#0c2a57] border border-white/30 text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all backdrop-blur-xs"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-gray-300 text-navy text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all"
                 >
                   Our Canada Services <ArrowRight className="h-3.5 w-3.5" />
                 </a>
@@ -417,11 +423,14 @@ function CanadaMarketCompletePage() {
 
             {/* Right 3D Visual with Parliament, MDSAP Medal, Health Canada Binder & Maple Leaf */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
-                <img width={285} height={197}
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
+                <img
+                  width={1792}
+                  height={1195}
                   src={canadaHero3dImg}
-                  alt="Health Canada MDL MDEL MDSAP Canada"
-                  className="w-full h-auto object-contain rounded-xl"
+                  alt="Health Canada MDL MDEL MDSAP Canada Registration"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>

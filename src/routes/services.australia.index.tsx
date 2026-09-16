@@ -41,7 +41,7 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import sydneyHeroImg from "@/assets/australia-hero-sydney.png";
+import sydneyHeroImg from "@/assets/australia-hero-clean.jpg";
 import australiaMapGraphic from "@/assets/australia-map-graphic.png";
 
 export const Route = createFileRoute("/services/australia/")({
@@ -402,11 +402,14 @@ function AustraliaHubPage() {
 
             {/* Right Sydney Opera House, Harbour Bridge & Flag Graphic */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img width={355} height={225}
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
+                <img
+                  width={1792}
+                  height={1195}
                   src={sydneyHeroImg}
-                  alt="Australia TGA ARTG Inclusion Sydney Opera House"
+                  alt="Australia TGA ARTG Inclusion Sydney Opera House, Harbour Bridge and Australian Flag"
                   className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>

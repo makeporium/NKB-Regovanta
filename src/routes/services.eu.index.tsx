@@ -27,9 +27,9 @@ import {
   Send,
   HelpCircle,
 } from "lucide-react";
-import euHeroMapImg from "@/assets/eu-hero-map.png";
-import euMdrDeviceImg from "@/assets/eu-mdr-device.png";
-import euIvdrDeviceImg from "@/assets/eu-ivdr-device.png";
+import euHeroMapImg from "@/assets/eu-hero-clean.jpg";
+import euMdrDeviceImg from "@/assets/eu-mdr-device-clean.jpg";
+import euIvdrDeviceImg from "@/assets/eu-ivdr-device-clean.jpg";
 
 export const Route = createFileRoute("/services/eu/")({
   head: () => ({
@@ -290,11 +290,14 @@ function EUMarketHubPage() {
 
             {/* Right Graphic: 3D EU Map & MDR / IVDR Badges */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[420px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#0e2a54] to-[#081832] p-2">
-                <img width={303} height={193}
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900/40">
+                <img
+                  width={1792}
+                  height={1195}
                   src={euHeroMapImg}
                   alt="European Union 3D Map with EU MDR 2017/745 & EU IVDR 2017/746"
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>

@@ -45,7 +45,7 @@ import {
   BookOpen,
   Boxes,
 } from "lucide-react";
-import ukHero3dImg from "@/assets/uk-hero-3d.png";
+import ukHero3dImg from "@/assets/uk-hero-clean.jpg";
 import ukMapShieldImg from "@/assets/uk-map-shield.png";
 import ukBigBenImg from "@/assets/uk-big-ben-bottom.png";
 import { CTABand } from "@/components/site/Bits";
@@ -344,28 +344,35 @@ function UKMarketCompletePage() {
       />
 
       {/* ══════════════════════════════════════════════════════════════════
-          1. HERO SECTION (Identical to Picture 1)
+          1. HERO SECTION (Matching Picture Mockup)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#03152d] via-[#071f43] to-[#0c2a57] text-white pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-border/20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[radial-gradient(ellipse_at_top_right,rgba(224,49,49,0.3),transparent_70%)] pointer-events-none" />
+      <section className="relative bg-white pt-8 pb-12 border-b border-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-1.5 text-[11px] text-gray-500 font-semibold mb-4">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <span className="text-navy font-bold">United Kingdom</span>
+          </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Col */}
             <div className="lg:col-span-7">
-              <h1 className="font-display font-extrabold text-white text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.12] mb-2 tracking-tight">
+              <h1 className="font-display font-extrabold text-[#051833] text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.12] mb-2 tracking-tight">
                 UK MHRA Medical Device<br />
                 Registration &amp;<br />
                 <span className="text-[#e03131]">UK Responsible Person (UKRP)</span>
               </h1>
-              <p className="text-base sm:text-lg font-bold text-white/95 mb-5 tracking-tight">
+              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#051833] mb-5 tracking-tight">
                 Your Partner for UK Market Access
               </p>
 
               {/* 4 Checkmark Bullets */}
-              <div className="space-y-2 mb-7">
+              <div className="space-y-2.5 mb-7">
                 {heroChecklist.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5 text-[12.5px] sm:text-[13px] text-white/90 font-medium">
+                  <div key={item} className="flex items-center gap-2.5 text-[12px] sm:text-[12.5px] text-gray-700 font-medium">
                     <CheckCircle2 className="h-4 w-4 text-[#e03131] shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -376,13 +383,13 @@ function UKMarketCompletePage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-xs"
                 >
                   Discuss Your UK Market Access Strategy <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
                   to="/services/uk/ukrp"
-                  className="inline-flex items-center gap-2 bg-[#0c2a57]/70 hover:bg-[#0c2a57] border border-white/30 text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all backdrop-blur-xs"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-gray-300 text-navy text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all"
                 >
                   Our UKRP Services <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -391,11 +398,14 @@ function UKMarketCompletePage() {
 
             {/* Right 3D Visual with Big Ben, UKRP Shield, MHRA Book & UKCA */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
-                <img width={341} height={236}
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
+                <img
+                  width={1792}
+                  height={1195}
                   src={ukHero3dImg}
                   alt="UK MHRA Medical Device Registration & UK Responsible Person (UKRP)"
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>

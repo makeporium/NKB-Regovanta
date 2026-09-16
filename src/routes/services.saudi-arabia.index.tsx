@@ -41,7 +41,7 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import saudiHeroImg from "@/assets/saudi-hero-riyadh.png";
+import saudiHeroImg from "@/assets/saudi-hero-clean.jpg";
 
 export const Route = createFileRoute("/services/saudi-arabia/")({
   head: () => ({
@@ -432,11 +432,14 @@ function SaudiArabiaHubPage() {
 
             {/* Right Riyadh Graphic with Flag and SFDA Shield */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[440px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img width={341} height={204}
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
+                <img
+                  width={1792}
+                  height={1195}
                   src={saudiHeroImg}
-                  alt="SFDA Medical Device Registration Saudi Arabia Riyadh"
+                  alt="SFDA Medical Device Registration Saudi Arabia Riyadh Flag and Shield"
                   className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>
