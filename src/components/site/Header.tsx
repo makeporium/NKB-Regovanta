@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight, ArrowRight, Mail, Phone, Linkedin, Twitter } from "lucide-react";
 import { Logo } from "./Logo";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const serviceCategories = [
   {
@@ -230,6 +231,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher variant="header" />
             <Link
               to="/contact"
               className="hidden rounded-sm bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-deep sm:inline-flex items-center gap-1.5"
@@ -341,6 +343,8 @@ export function Header() {
               >
                 Book a Consultation / Contact
               </Link>
+
+              <LanguageSwitcher variant="mobile" />
 
               <div className="pt-4 pb-2 space-y-2">
                 <div className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">Direct Call</div>

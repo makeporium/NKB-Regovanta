@@ -172,3 +172,39 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Multi-Language Headless Translation & RTL Styling
+───────────────────────────────────────────────────────────── */
+
+/* Suppress all Google Translate default widgets, popups, and banners */
+.skiptranslate:not(.keep-visible),
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+#google_translate_element {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* Bi-directional (RTL) Layout for Arabic */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .ltr-keep {
+  direction: ltr;
+  text-align: left;
+}
+

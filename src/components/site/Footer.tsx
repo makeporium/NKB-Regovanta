@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const columns = [
   { title: "Company", links: [{ label: "About Us", to: "/about" }, { label: "Contact", to: "/contact" }, { label: "Case Studies", to: "/case-studies" }, { label: "Insights", to: "/insights" }] },
@@ -25,7 +26,15 @@ export function Footer() {
           </div>
           {columns.map((column) => <div key={column.title}><h2 className="text-xs font-semibold uppercase tracking-wider text-navy-foreground/50">{column.title}</h2><ul className="mt-4 space-y-3">{column.links.map((link) => <li key={link.label}><Link to={link.to} className="text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors">{link.label}</Link></li>)}</ul></div>)}
         </div>
-        <div className="mt-12 border-t border-navy-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-navy-foreground/50"><p>&copy; {new Date().getFullYear()} NKB Regovanta Solutions Private Limited. All rights reserved.</p><div className="mt-4 md:mt-0 flex gap-6"><Link to="/about" className="hover:text-navy-foreground">Privacy Policy</Link><Link to="/about" className="hover:text-navy-foreground">Terms of Service</Link><Link to="/contact" className="hover:text-navy-foreground">Contact Us</Link></div></div>
+        <div className="mt-12 border-t border-navy-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-navy-foreground/50 gap-4">
+          <p>&copy; {new Date().getFullYear()} NKB Regovanta Solutions Private Limited. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-6">
+            <Link to="/about" className="hover:text-navy-foreground">Privacy Policy</Link>
+            <Link to="/about" className="hover:text-navy-foreground">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-navy-foreground">Contact Us</Link>
+            <LanguageSwitcher variant="footer" />
+          </div>
+        </div>
       </div>
     </footer>
   );

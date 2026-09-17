@@ -224,6 +224,11 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var l=localStorage.getItem("nkb_selected_lang");if(l==="ar"){document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");}}catch(e){}`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
         />
