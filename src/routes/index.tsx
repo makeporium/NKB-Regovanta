@@ -60,13 +60,13 @@ import logoWipro from "@/assets/clients/wipro.svg";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Medical Device Regulatory Consultants | NKB Regovanta" },
+            { title: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             {
                 name: "description",
                 content:
                     "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
-            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
+            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             {
                 property: "og:description",
                 content:
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/")({
             { property: "og:url", content: "https://www.nkbregovanta.com" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
-            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
+            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             { name: "twitter:description", content: "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide." },
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],

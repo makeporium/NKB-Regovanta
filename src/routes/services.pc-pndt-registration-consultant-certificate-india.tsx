@@ -101,7 +101,7 @@ const faqs = [
 export const Route = createFileRoute("/services/pc-pndt-registration-consultant-certificate-india")({
   head: () => ({
     meta: [
-      { title: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      { title: "Ultrasound & Imaging Importers" },
       {
         name: "description",
         content:
@@ -112,7 +112,7 @@ export const Route = createFileRoute("/services/pc-pndt-registration-consultant-
         content:
           "PC PNDT registration consultant, PCPNDT consultant India, PC PNDT certificate registration, ultrasound machine registration India, Form A and Form B PCPNDT, PNDT license India, NKB Regovanta",
       },
-      { property: "og:title", content: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      { property: "og:title", content: "Ultrasound & Imaging Importers" },
       {
         property: "og:description",
         content:
@@ -121,7 +121,7 @@ export const Route = createFileRoute("/services/pc-pndt-registration-consultant-
       { property: "og:url", content: "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "PC PNDT Registration Consultant India | Certificate Form A & B | NKB Regovanta" },
+      { name: "twitter:title", content: "Ultrasound & Imaging Importers" },
       {
         name: "twitter:description",
         content:

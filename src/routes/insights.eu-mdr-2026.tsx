@@ -1,6 +1,7 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
 
 export const Route = createFileRoute("/insights/eu-mdr-2026")({
@@ -32,7 +33,11 @@ export const Route = createFileRoute("/insights/eu-mdr-2026")({
 
 function Article() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="eu-mdr-2026"
+      defaultCategory="EU MDR STRATEGY"
+      defaultImage="/assets/insights/database_analytics_eudamed.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -123,6 +128,6 @@ function Article() {
         description="NKB Regovanta can support classification reviews, technical documentation, UDI/device data preparation and regulatory compliance planning."
         action="Contact Us Today"
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

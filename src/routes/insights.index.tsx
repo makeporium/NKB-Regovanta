@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
 
 // Curated realistic editorial and corporate medical device assets
 const imgMedLab = "/assets/brain/medtech_reg_lab.jpg";
@@ -384,10 +385,69 @@ const allArticles = [
 function Insights() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("ALL");
+  const [mergedArticles, setMergedArticles] = useState<any[]>(allArticles);
+
+  useEffect(() => {
+    async function loadSupabaseArticles() {
+      try {
+        const { data, error } = await supabase
+          .from("blog_posts")
+          .select("id, title, slug, excerpt, featured_image, category_id, blog_categories(name)")
+          .eq("status", "published")
+          .order("publish_date_ist", { ascending: false });
+
+        if (error) {
+          console.warn("Notice: unable to load dynamic insights articles:", error.message);
+          return;
+        }
+
+        if (data && data.length > 0) {
+          const dbMap = new Map<string, any>();
+          for (const item of data) {
+            dbMap.set(item.slug, item);
+          }
+
+          // Update existing static articles with database changes (titles, excerpts, images, categories)
+          const updatedStatic = allArticles.map((art) => {
+            const slug = art.route.replace(/^\/insights\//, "");
+            const dbItem = dbMap.get(slug);
+            if (dbItem) {
+              return {
+                ...art,
+                title: dbItem.title || art.title,
+                desc: dbItem.excerpt || art.desc,
+                img: dbItem.featured_image || art.img,
+                category: (dbItem as any).blog_categories?.name?.toUpperCase() || art.category,
+              };
+            }
+            return art;
+          });
+
+          // Prepend any brand new articles that are in Supabase but not in static allArticles
+          const staticSlugs = new Set(allArticles.map((a) => a.route.replace(/^\/insights\//, "")));
+          const brandNew = data
+            .filter((p) => !staticSlugs.has(p.slug))
+            .map((p) => ({
+              id: `db-${p.id}`,
+              category: (p as any).blog_categories?.name?.toUpperCase() || "REGULATORY INSIGHT",
+              title: p.title,
+              desc: p.excerpt || "",
+              img: p.featured_image || "/assets/insights/digital_health_tablet.jpg",
+              route: `/insights/${p.slug}`,
+            }));
+
+          setMergedArticles([...brandNew, ...updatedStatic]);
+        }
+      } catch (err) {
+        console.warn("Error fetching Supabase articles:", err);
+      }
+    }
+    loadSupabaseArticles();
+  }, []);
 
   const categories = ["ALL", "US FDA", "EU MDR & IVDR", "CDSCO INDIA", "AI & SAMD", "QUALITY & AUDIT"];
 
-  const filteredArticles = allArticles.filter((art) => {
+  const filteredArticles = mergedArticles.filter((art) => {
     const matchesSearch =
       art.title.toLowerCase().includes(search.toLowerCase()) ||
       art.desc.toLowerCase().includes(search.toLowerCase()) ||

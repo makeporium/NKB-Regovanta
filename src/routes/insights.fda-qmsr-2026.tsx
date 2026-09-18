@@ -1,6 +1,7 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
@@ -17,11 +18,11 @@ export const Route = createFileRoute("/insights/fda-qmsr-2026")({
       { property: "og:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
       { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/fda_laboratory_validation.jpg" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
       { name: "twitter:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/fda_laboratory_validation.jpg" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
@@ -32,7 +33,11 @@ export const Route = createFileRoute("/insights/fda-qmsr-2026")({
 
 function Article() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="fda-qmsr-2026"
+      defaultCategory="US FDA QUALITY SYSTEMS"
+      defaultImage="/assets/insights/quality_assurance_meeting.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -118,6 +123,6 @@ function Article() {
         description="NKB Regovanta can help with gap assessment, procedure alignment, internal audits and inspection-readiness support."
         action="Contact Us Today"
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

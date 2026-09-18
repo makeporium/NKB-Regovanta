@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, ShieldAlert, Cpu, Layers } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
 const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
 
@@ -36,7 +37,11 @@ export const Route = createFileRoute("/insights/eu-ai-act-medical-devices")({
 
 function ArticlePage() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="eu-ai-act-medical-devices"
+      defaultCategory="AI & DIGITAL HEALTH"
+      defaultImage="/assets/insights/digital_health_tablet.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -388,6 +393,6 @@ function ArticlePage() {
         description="NKB Regovanta provides specialized regulatory and quality-system guidance aligning the EU AI Act with EU MDR and IVDR requirements." 
         action="Contact Our AI Regulatory Experts" 
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

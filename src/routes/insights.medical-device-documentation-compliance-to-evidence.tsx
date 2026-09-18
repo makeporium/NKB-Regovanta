@@ -1,6 +1,7 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, CheckCircle2, FileCheck, Layers, ShieldCheck, HelpCircle } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeft, CheckCircle2, ShieldCheck, FileText, FileCheck, ClipboardList, Layers } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
 const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.png";
 
@@ -37,7 +38,11 @@ export const Route = createFileRoute("/insights/medical-device-documentation-com
 
 function ArticlePage() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="medical-device-documentation-compliance-to-evidence"
+      defaultCategory="AUDIT & TECHNICAL EVIDENCE"
+      defaultImage="/assets/insights/regulatory_dossier_review.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -232,6 +237,6 @@ function ArticlePage() {
         description="Connect with NKB Regovanta's senior technical documentation and audit readiness specialists today." 
         action="Schedule a Technical Documentation Review" 
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

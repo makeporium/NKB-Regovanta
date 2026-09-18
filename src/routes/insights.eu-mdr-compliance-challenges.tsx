@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, AlertTriangle, CheckCircle2, FileCheck2, ShieldAlert } from "lucide-react";
+import { ArrowLeft, CheckCircle2, AlertTriangle, HelpCircle, FileText, Layers } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
-const imgArticle = "/assets/brain/eu_mdr_market_1786306179767.png";
+const imgArticle = "/assets/brain/insight_eu_mdr_1786440985783.png";
 
 export const Route = createFileRoute("/insights/eu-mdr-compliance-challenges")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "EU MDR Medical Device Compliance Guide | NKB Regovanta" },
       {
         name: "description",
@@ -36,7 +38,11 @@ export const Route = createFileRoute("/insights/eu-mdr-compliance-challenges")({
 
 function ArticlePage() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="eu-mdr-compliance-challenges"
+      defaultCategory="EU MDR STRATEGY"
+      defaultImage="/assets/insights/medical_audit_consult.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -319,6 +325,6 @@ function ArticlePage() {
         description="NKB Regovanta conducts thorough MDR gap assessments and remediation to secure CE marking with confidence." 
         action="Schedule an MDR Strategy Session" 
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

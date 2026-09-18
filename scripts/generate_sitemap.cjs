@@ -7,7 +7,7 @@ const origin = "https://www.nkbregovanta.com";
 
 function inventory(routesDir = path.join(project, "src/routes")) {
   return fs.readdirSync(routesDir)
-    .filter((file) => file.endsWith(".tsx") && !file.startsWith("__"))
+    .filter((file) => file.endsWith(".tsx") && !file.startsWith("__") && !file.startsWith("admin.") && !file.startsWith("blog.") && !file.includes("$"))
     .map((file) => {
       const source = fs.readFileSync(path.join(routesDir, file), "utf8");
       const ast = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);

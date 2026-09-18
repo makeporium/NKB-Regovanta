@@ -1,6 +1,7 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
 const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
 
@@ -37,7 +38,11 @@ export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
 
 function ArticlePage() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="india-mdr-2026-rule-63"
+      defaultCategory="CDSCO INDIA UPDATE"
+      defaultImage="/assets/insights/clinical_research_facility.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -262,6 +267,6 @@ function ArticlePage() {
         description="NKB Regovanta evaluates Rule 63 eligibility, prepares CDSCO dossiers, and acts as your Authorized Indian Representative." 
         action="Consult Our CDSCO Specialists" 
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

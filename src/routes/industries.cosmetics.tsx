@@ -11,8 +11,8 @@ export const Route = createFileRoute("/industries/cosmetics")({
         content:
           "Global cosmetics regulatory consulting: CDSCO COS-1/2 registration, US MoCRA facility listing, EU/UK Responsible Person representation, and CPSR support.",
       },
-      { property: "og:title", content: "Cosmetics Regulatory Compliance Consulting | NKB Regovanta" },
-      { property: "og:description", content: "End-to-end cosmetics regulatory support for India CDSCO, US MoCRA, EU & UK CPNP/SCPN and Responsible Person representation." },
+      { property: "og:title", content: "Cosmetics Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global cosmetics regulatory consulting: CDSCO COS-1/2 registration, US MoCRA facility listing, EU/UK Responsible Person representation, and CPSR support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics" },
 { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },

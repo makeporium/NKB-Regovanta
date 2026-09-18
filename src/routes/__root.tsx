@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -15,6 +16,7 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { QueryPopup } from "../components/site/QueryPopup";
 import { Toaster } from "../components/ui/sonner";
+import { supabase } from "../lib/supabase";
 
 function NotFoundComponent() {
   return (
@@ -95,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "application-name", content: "NKB Regovanta" },
       { name: "apple-mobile-web-app-title", content: "NKB Regovanta" },
+      { name: "mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
       { name: "theme-color", content: "#0b3a96" },
@@ -241,11 +244,91 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function ClientSeoManager() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (pathname.startsWith("/admin")) return;
+
+    const cleanPath = pathname.replace(/\/$/, "") || "/";
+    async function loadSeo() {
+      try {
+        const { data } = await supabase
+          .from("seo_meta")
+          .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description")
+          .eq("target_url", cleanPath)
+          .maybeSingle();
+
+        if (!data) return;
+
+        if (data.seo_title) {
+          document.title = data.seo_title;
+        }
+
+        if (data.meta_description) {
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) {
+            metaDesc.setAttribute("content", data.meta_description);
+          }
+        }
+
+        if (data.og_title || data.seo_title) {
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) {
+            ogTitle.setAttribute("content", data.og_title || data.seo_title);
+          }
+        }
+
+        if (data.og_description || data.meta_description) {
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) {
+            ogDesc.setAttribute("content", data.og_description || data.meta_description);
+          }
+        }
+
+        if (data.twitter_title || data.seo_title) {
+          const twTitle = document.querySelector('meta[name="twitter:title"]');
+          if (twTitle) {
+            twTitle.setAttribute("content", data.twitter_title || data.seo_title);
+          }
+        }
+
+        if (data.twitter_description || data.meta_description) {
+          const twDesc = document.querySelector('meta[name="twitter:description"]');
+          if (twDesc) {
+            twDesc.setAttribute("content", data.twitter_description || data.meta_description);
+          }
+        }
+      } catch {
+        // Silently continue if Supabase is offline
+      }
+    }
+
+    loadSeo();
+  }, [pathname]);
+
+  return null;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
+
+  if (isAdmin) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <div className="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+          <Outlet />
+        </div>
+        <Toaster position="top-right" richColors />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ClientSeoManager />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

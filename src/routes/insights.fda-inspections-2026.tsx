@@ -1,6 +1,7 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
 
 export const Route = createFileRoute("/insights/fda-inspections-2026")({
@@ -32,7 +33,11 @@ export const Route = createFileRoute("/insights/fda-inspections-2026")({
 
 function Article() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="fda-inspections-2026"
+      defaultCategory="US FDA QUALITY SYSTEMS"
+      defaultImage="/assets/insights/inspection_clean_facility.jpg"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -123,6 +128,6 @@ function Article() {
         description="NKB Regovanta can support QMSR gap assessments, mock inspections, CAPA remediation, supplier-quality reviews and inspection-readiness programs."
         action="Contact Us Today"
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

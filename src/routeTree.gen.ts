@@ -11,10 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AiNewsRouteImport } from './routes/ai-news'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as RegulatoryUpdatesRouteImport } from './routes/regulatory-updates'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesAlgorithmClaimRouteImport } from './routes/case-studies.algorithm-claim'
 import { Route as CaseStudiesAustraliaTgaRouteImport } from './routes/case-studies.australia-tga'
@@ -27,6 +33,7 @@ import { Route as IndustriesCosmeticsRouteImport } from './routes/industries.cos
 import { Route as IndustriesIvdRouteImport } from './routes/industries.ivd'
 import { Route as IndustriesMedicalDevicesRouteImport } from './routes/industries.medical-devices'
 import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
 import { Route as InsightsBiologicalEvaluationTestingMedicalDevicesIso10993RouteImport } from './routes/insights.biological-evaluation-testing-medical-devices-iso-10993'
 import { Route as InsightsBorderlineMedicalDeviceClassificationStrategyRouteImport } from './routes/insights.borderline-medical-device-classification-strategy'
 import { Route as InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRouteImport } from './routes/insights.cdsco-medical-device-manufacturing-license-india'
@@ -91,6 +98,27 @@ import { Route as ServicesUaeRouteImport } from './routes/services.uae'
 import { Route as ServicesUkRouteImport } from './routes/services.uk'
 import { Route as ServicesUsaRouteImport } from './routes/services.usa'
 import { Route as ServicesWpcApprovalWirelessMedicalDevicesIndiaRouteImport } from './routes/services.wpc-approval-wireless-medical-devices-india'
+import { Route as AdminBlogCategoriesRouteImport } from './routes/admin.blog.categories'
+import { Route as AdminBlogNewRouteImport } from './routes/admin.blog.new'
+import { Route as AdminBlogPostsRouteImport } from './routes/admin.blog.posts'
+import { Route as AdminBlogTagsRouteImport } from './routes/admin.blog.tags'
+import { Route as AdminSeoBrokenLinksRouteImport } from './routes/admin.seo.broken-links'
+import { Route as AdminSeoCanonicalsRouteImport } from './routes/admin.seo.canonicals'
+import { Route as AdminSeoDashboardRouteImport } from './routes/admin.seo.dashboard'
+import { Route as AdminSeoImagesRouteImport } from './routes/admin.seo.images'
+import { Route as AdminSeoInternalLinksRouteImport } from './routes/admin.seo.internal-links'
+import { Route as AdminSeoKeywordsRouteImport } from './routes/admin.seo.keywords'
+import { Route as AdminSeoPagesRouteImport } from './routes/admin.seo.pages'
+import { Route as AdminSeoRedirectsRouteImport } from './routes/admin.seo.redirects'
+import { Route as AdminSeoSchemaRouteImport } from './routes/admin.seo.schema'
+import { Route as AdminSeoTechnicalRouteImport } from './routes/admin.seo.technical'
+import { Route as AdminSettingsAnalyticsRouteImport } from './routes/admin.settings.analytics'
+import { Route as AdminSettingsGeneralRouteImport } from './routes/admin.settings.general'
+import { Route as AdminSettingsGtmRouteImport } from './routes/admin.settings.gtm'
+import { Route as AdminSettingsRobotsRouteImport } from './routes/admin.settings.robots'
+import { Route as AdminSettingsSearchConsoleRouteImport } from './routes/admin.settings.search-console'
+import { Route as AdminSettingsSitemapRouteImport } from './routes/admin.settings.sitemap'
+import { Route as AdminSettingsUsersRouteImport } from './routes/admin.settings.users'
 import { Route as IndustriesCosmeticsEuRouteImport } from './routes/industries.cosmetics_.eu'
 import { Route as IndustriesCosmeticsUkRouteImport } from './routes/industries.cosmetics_.uk'
 import { Route as IndustriesCosmeticsUsaRouteImport } from './routes/industries.cosmetics_.usa'
@@ -297,6 +325,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AiNewsRoute = AiNewsRouteImport.update({
   id: '/ai-news',
   path: '/ai-news',
@@ -315,6 +348,31 @@ const ContactRoute = ContactRouteImport.update({
 const RegulatoryUpdatesRoute = RegulatoryUpdatesRouteImport.update({
   id: '/regulatory-updates',
   path: '/regulatory-updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => AdminRoute,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -380,6 +438,11 @@ const IndustriesMedicalDevicesRoute =
 const InsightsIndexRoute = InsightsIndexRouteImport.update({
   id: '/insights/',
   path: '/insights/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/insights/$slug',
+  path: '/insights/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route =
@@ -753,6 +816,112 @@ const ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute =
     path: '/services/wpc-approval-wireless-medical-devices-india',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AdminBlogCategoriesRoute = AdminBlogCategoriesRouteImport.update({
+  id: '/blog/categories',
+  path: '/blog/categories',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminBlogNewRoute = AdminBlogNewRouteImport.update({
+  id: '/blog/new',
+  path: '/blog/new',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminBlogPostsRoute = AdminBlogPostsRouteImport.update({
+  id: '/blog/posts',
+  path: '/blog/posts',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminBlogTagsRoute = AdminBlogTagsRouteImport.update({
+  id: '/blog/tags',
+  path: '/blog/tags',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoBrokenLinksRoute = AdminSeoBrokenLinksRouteImport.update({
+  id: '/seo/broken-links',
+  path: '/seo/broken-links',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoCanonicalsRoute = AdminSeoCanonicalsRouteImport.update({
+  id: '/seo/canonicals',
+  path: '/seo/canonicals',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoDashboardRoute = AdminSeoDashboardRouteImport.update({
+  id: '/seo/dashboard',
+  path: '/seo/dashboard',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoImagesRoute = AdminSeoImagesRouteImport.update({
+  id: '/seo/images',
+  path: '/seo/images',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoInternalLinksRoute = AdminSeoInternalLinksRouteImport.update({
+  id: '/seo/internal-links',
+  path: '/seo/internal-links',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoKeywordsRoute = AdminSeoKeywordsRouteImport.update({
+  id: '/seo/keywords',
+  path: '/seo/keywords',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoPagesRoute = AdminSeoPagesRouteImport.update({
+  id: '/seo/pages',
+  path: '/seo/pages',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoRedirectsRoute = AdminSeoRedirectsRouteImport.update({
+  id: '/seo/redirects',
+  path: '/seo/redirects',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoSchemaRoute = AdminSeoSchemaRouteImport.update({
+  id: '/seo/schema',
+  path: '/seo/schema',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSeoTechnicalRoute = AdminSeoTechnicalRouteImport.update({
+  id: '/seo/technical',
+  path: '/seo/technical',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsAnalyticsRoute = AdminSettingsAnalyticsRouteImport.update({
+  id: '/settings/analytics',
+  path: '/settings/analytics',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsGeneralRoute = AdminSettingsGeneralRouteImport.update({
+  id: '/settings/general',
+  path: '/settings/general',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsGtmRoute = AdminSettingsGtmRouteImport.update({
+  id: '/settings/gtm',
+  path: '/settings/gtm',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsRobotsRoute = AdminSettingsRobotsRouteImport.update({
+  id: '/settings/robots',
+  path: '/settings/robots',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsSearchConsoleRoute =
+  AdminSettingsSearchConsoleRouteImport.update({
+    id: '/settings/search-console',
+    path: '/settings/search-console',
+    getParentRoute: () => AdminRoute,
+  } as any)
+const AdminSettingsSitemapRoute = AdminSettingsSitemapRouteImport.update({
+  id: '/settings/sitemap',
+  path: '/settings/sitemap',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsUsersRoute = AdminSettingsUsersRouteImport.update({
+  id: '/settings/users',
+  path: '/settings/users',
+  getParentRoute: () => AdminRoute,
+} as any)
 const IndustriesCosmeticsEuRoute = IndustriesCosmeticsEuRouteImport.update({
   id: '/industries/cosmetics_/eu',
   path: '/industries/cosmetics/eu',
@@ -1846,10 +2015,14 @@ const IndustriesMedicalDevicesIndiaForManufacturerRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin': typeof AdminRouteWithChildren
   '/ai-news': typeof AiNewsRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -1859,6 +2032,7 @@ export interface FileRoutesByFullPath {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/$slug': typeof InsightsSlugRoute
   '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
   '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
   '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
@@ -1921,11 +2095,34 @@ export interface FileRoutesByFullPath {
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/admin/blog/categories': typeof AdminBlogCategoriesRoute
+  '/admin/blog/new': typeof AdminBlogNewRoute
+  '/admin/blog/posts': typeof AdminBlogPostsRoute
+  '/admin/blog/tags': typeof AdminBlogTagsRoute
+  '/admin/seo/broken-links': typeof AdminSeoBrokenLinksRoute
+  '/admin/seo/canonicals': typeof AdminSeoCanonicalsRoute
+  '/admin/seo/dashboard': typeof AdminSeoDashboardRoute
+  '/admin/seo/images': typeof AdminSeoImagesRoute
+  '/admin/seo/internal-links': typeof AdminSeoInternalLinksRoute
+  '/admin/seo/keywords': typeof AdminSeoKeywordsRoute
+  '/admin/seo/pages': typeof AdminSeoPagesRoute
+  '/admin/seo/redirects': typeof AdminSeoRedirectsRoute
+  '/admin/seo/schema': typeof AdminSeoSchemaRoute
+  '/admin/seo/technical': typeof AdminSeoTechnicalRoute
+  '/admin/settings/analytics': typeof AdminSettingsAnalyticsRoute
+  '/admin/settings/general': typeof AdminSettingsGeneralRoute
+  '/admin/settings/gtm': typeof AdminSettingsGtmRoute
+  '/admin/settings/robots': typeof AdminSettingsRobotsRoute
+  '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
+  '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
+  '/admin/settings/users': typeof AdminSettingsUsersRoute
   '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
@@ -2128,6 +2325,9 @@ export interface FileRoutesByTo {
   '/ai-news': typeof AiNewsRoute
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -2137,6 +2337,7 @@ export interface FileRoutesByTo {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/$slug': typeof InsightsSlugRoute
   '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
   '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
   '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
@@ -2188,11 +2389,34 @@ export interface FileRoutesByTo {
   '/services/pc-pndt-registration-consultant-certificate-india': typeof ServicesPcPndtRegistrationConsultantCertificateIndiaRoute
   '/services/pharmaceutical-cleanroom-manufacturing-equipment': typeof ServicesPharmaceuticalCleanroomManufacturingEquipmentRoute
   '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
+  '/admin': typeof AdminIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/insights': typeof InsightsIndexRoute
   '/markets': typeof MarketsIndexRoute
   '/services': typeof ServicesIndexRoute
+  '/admin/blog/categories': typeof AdminBlogCategoriesRoute
+  '/admin/blog/new': typeof AdminBlogNewRoute
+  '/admin/blog/posts': typeof AdminBlogPostsRoute
+  '/admin/blog/tags': typeof AdminBlogTagsRoute
+  '/admin/seo/broken-links': typeof AdminSeoBrokenLinksRoute
+  '/admin/seo/canonicals': typeof AdminSeoCanonicalsRoute
+  '/admin/seo/dashboard': typeof AdminSeoDashboardRoute
+  '/admin/seo/images': typeof AdminSeoImagesRoute
+  '/admin/seo/internal-links': typeof AdminSeoInternalLinksRoute
+  '/admin/seo/keywords': typeof AdminSeoKeywordsRoute
+  '/admin/seo/pages': typeof AdminSeoPagesRoute
+  '/admin/seo/redirects': typeof AdminSeoRedirectsRoute
+  '/admin/seo/schema': typeof AdminSeoSchemaRoute
+  '/admin/seo/technical': typeof AdminSeoTechnicalRoute
+  '/admin/settings/analytics': typeof AdminSettingsAnalyticsRoute
+  '/admin/settings/general': typeof AdminSettingsGeneralRoute
+  '/admin/settings/gtm': typeof AdminSettingsGtmRoute
+  '/admin/settings/robots': typeof AdminSettingsRobotsRoute
+  '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
+  '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
+  '/admin/settings/users': typeof AdminSettingsUsersRoute
   '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
@@ -2393,10 +2617,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin': typeof AdminRouteWithChildren
   '/ai-news': typeof AiNewsRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
   '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
   '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
@@ -2406,6 +2634,7 @@ export interface FileRoutesById {
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
+  '/insights/$slug': typeof InsightsSlugRoute
   '/insights/biological-evaluation-testing-medical-devices-iso-10993': typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
   '/insights/borderline-medical-device-classification-strategy': typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
   '/insights/cdsco-medical-device-manufacturing-license-india': typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
@@ -2468,11 +2697,34 @@ export interface FileRoutesById {
   '/services/uk': typeof ServicesUkRouteWithChildren
   '/services/usa': typeof ServicesUsaRouteWithChildren
   '/services/wpc-approval-wireless-medical-devices-india': typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/insights/': typeof InsightsIndexRoute
   '/markets/': typeof MarketsIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/admin/blog/categories': typeof AdminBlogCategoriesRoute
+  '/admin/blog/new': typeof AdminBlogNewRoute
+  '/admin/blog/posts': typeof AdminBlogPostsRoute
+  '/admin/blog/tags': typeof AdminBlogTagsRoute
+  '/admin/seo/broken-links': typeof AdminSeoBrokenLinksRoute
+  '/admin/seo/canonicals': typeof AdminSeoCanonicalsRoute
+  '/admin/seo/dashboard': typeof AdminSeoDashboardRoute
+  '/admin/seo/images': typeof AdminSeoImagesRoute
+  '/admin/seo/internal-links': typeof AdminSeoInternalLinksRoute
+  '/admin/seo/keywords': typeof AdminSeoKeywordsRoute
+  '/admin/seo/pages': typeof AdminSeoPagesRoute
+  '/admin/seo/redirects': typeof AdminSeoRedirectsRoute
+  '/admin/seo/schema': typeof AdminSeoSchemaRoute
+  '/admin/seo/technical': typeof AdminSeoTechnicalRoute
+  '/admin/settings/analytics': typeof AdminSettingsAnalyticsRoute
+  '/admin/settings/general': typeof AdminSettingsGeneralRoute
+  '/admin/settings/gtm': typeof AdminSettingsGtmRoute
+  '/admin/settings/robots': typeof AdminSettingsRobotsRoute
+  '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
+  '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
+  '/admin/settings/users': typeof AdminSettingsUsersRoute
   '/industries/cosmetics_/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics_/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics_/usa': typeof IndustriesCosmeticsUsaRoute
@@ -2674,10 +2926,14 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/admin'
     | '/ai-news'
     | '/case-studies'
     | '/contact'
     | '/regulatory-updates'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/blog/$slug'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -2687,6 +2943,7 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/$slug'
     | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
     | '/insights/borderline-medical-device-classification-strategy'
     | '/insights/cdsco-medical-device-manufacturing-license-india'
@@ -2749,11 +3006,34 @@ export interface FileRouteTypes {
     | '/services/uk'
     | '/services/usa'
     | '/services/wpc-approval-wireless-medical-devices-india'
+    | '/admin/'
+    | '/blog/'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/admin/blog/categories'
+    | '/admin/blog/new'
+    | '/admin/blog/posts'
+    | '/admin/blog/tags'
+    | '/admin/seo/broken-links'
+    | '/admin/seo/canonicals'
+    | '/admin/seo/dashboard'
+    | '/admin/seo/images'
+    | '/admin/seo/internal-links'
+    | '/admin/seo/keywords'
+    | '/admin/seo/pages'
+    | '/admin/seo/redirects'
+    | '/admin/seo/schema'
+    | '/admin/seo/technical'
+    | '/admin/settings/analytics'
+    | '/admin/settings/general'
+    | '/admin/settings/gtm'
+    | '/admin/settings/robots'
+    | '/admin/settings/search-console'
+    | '/admin/settings/sitemap'
+    | '/admin/settings/users'
     | '/industries/cosmetics/eu'
     | '/industries/cosmetics/uk'
     | '/industries/cosmetics/usa'
@@ -2956,6 +3236,9 @@ export interface FileRouteTypes {
     | '/ai-news'
     | '/contact'
     | '/regulatory-updates'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/blog/$slug'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -2965,6 +3248,7 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/$slug'
     | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
     | '/insights/borderline-medical-device-classification-strategy'
     | '/insights/cdsco-medical-device-manufacturing-license-india'
@@ -3016,11 +3300,34 @@ export interface FileRouteTypes {
     | '/services/pc-pndt-registration-consultant-certificate-india'
     | '/services/pharmaceutical-cleanroom-manufacturing-equipment'
     | '/services/wpc-approval-wireless-medical-devices-india'
+    | '/admin'
+    | '/blog'
     | '/case-studies'
     | '/industries'
     | '/insights'
     | '/markets'
     | '/services'
+    | '/admin/blog/categories'
+    | '/admin/blog/new'
+    | '/admin/blog/posts'
+    | '/admin/blog/tags'
+    | '/admin/seo/broken-links'
+    | '/admin/seo/canonicals'
+    | '/admin/seo/dashboard'
+    | '/admin/seo/images'
+    | '/admin/seo/internal-links'
+    | '/admin/seo/keywords'
+    | '/admin/seo/pages'
+    | '/admin/seo/redirects'
+    | '/admin/seo/schema'
+    | '/admin/seo/technical'
+    | '/admin/settings/analytics'
+    | '/admin/settings/general'
+    | '/admin/settings/gtm'
+    | '/admin/settings/robots'
+    | '/admin/settings/search-console'
+    | '/admin/settings/sitemap'
+    | '/admin/settings/users'
     | '/industries/cosmetics/eu'
     | '/industries/cosmetics/uk'
     | '/industries/cosmetics/usa'
@@ -3220,10 +3527,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/admin'
     | '/ai-news'
     | '/case-studies'
     | '/contact'
     | '/regulatory-updates'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/blog/$slug'
     | '/case-studies/algorithm-claim'
     | '/case-studies/australia-tga'
     | '/case-studies/eu-mdr-remediation'
@@ -3233,6 +3544,7 @@ export interface FileRouteTypes {
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
+    | '/insights/$slug'
     | '/insights/biological-evaluation-testing-medical-devices-iso-10993'
     | '/insights/borderline-medical-device-classification-strategy'
     | '/insights/cdsco-medical-device-manufacturing-license-india'
@@ -3295,11 +3607,34 @@ export interface FileRouteTypes {
     | '/services/uk'
     | '/services/usa'
     | '/services/wpc-approval-wireless-medical-devices-india'
+    | '/admin/'
+    | '/blog/'
     | '/case-studies/'
     | '/industries/'
     | '/insights/'
     | '/markets/'
     | '/services/'
+    | '/admin/blog/categories'
+    | '/admin/blog/new'
+    | '/admin/blog/posts'
+    | '/admin/blog/tags'
+    | '/admin/seo/broken-links'
+    | '/admin/seo/canonicals'
+    | '/admin/seo/dashboard'
+    | '/admin/seo/images'
+    | '/admin/seo/internal-links'
+    | '/admin/seo/keywords'
+    | '/admin/seo/pages'
+    | '/admin/seo/redirects'
+    | '/admin/seo/schema'
+    | '/admin/seo/technical'
+    | '/admin/settings/analytics'
+    | '/admin/settings/general'
+    | '/admin/settings/gtm'
+    | '/admin/settings/robots'
+    | '/admin/settings/search-console'
+    | '/admin/settings/sitemap'
+    | '/admin/settings/users'
     | '/industries/cosmetics_/eu'
     | '/industries/cosmetics_/uk'
     | '/industries/cosmetics_/usa'
@@ -3500,13 +3835,16 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AdminRoute: typeof AdminRouteWithChildren
   AiNewsRoute: typeof AiNewsRoute
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   RegulatoryUpdatesRoute: typeof RegulatoryUpdatesRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   IndustriesCosmeticsRoute: typeof IndustriesCosmeticsRoute
   IndustriesIvdRoute: typeof IndustriesIvdRoute
   IndustriesMedicalDevicesRoute: typeof IndustriesMedicalDevicesRoute
+  InsightsSlugRoute: typeof InsightsSlugRoute
   InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route: typeof InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route
   InsightsBorderlineMedicalDeviceClassificationStrategyRoute: typeof InsightsBorderlineMedicalDeviceClassificationStrategyRoute
   InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute: typeof InsightsCdscoMedicalDeviceManufacturingLicenseIndiaRoute
@@ -3569,6 +3907,7 @@ export interface RootRouteChildren {
   ServicesUkRoute: typeof ServicesUkRouteWithChildren
   ServicesUsaRoute: typeof ServicesUsaRouteWithChildren
   ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute: typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -3602,6 +3941,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ai-news': {
       id: '/ai-news'
       path: '/ai-news'
@@ -3628,6 +3974,41 @@ declare module '@tanstack/react-router' {
       path: '/regulatory-updates'
       fullPath: '/regulatory-updates'
       preLoaderRoute: typeof RegulatoryUpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -3712,6 +4093,13 @@ declare module '@tanstack/react-router' {
       path: '/insights'
       fullPath: '/insights/'
       preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/insights/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights/biological-evaluation-testing-medical-devices-iso-10993': {
@@ -4161,6 +4549,153 @@ declare module '@tanstack/react-router' {
       fullPath: '/services/wpc-approval-wireless-medical-devices-india'
       preLoaderRoute: typeof ServicesWpcApprovalWirelessMedicalDevicesIndiaRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/admin/blog/categories': {
+      id: '/admin/blog/categories'
+      path: '/blog/categories'
+      fullPath: '/admin/blog/categories'
+      preLoaderRoute: typeof AdminBlogCategoriesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/blog/new': {
+      id: '/admin/blog/new'
+      path: '/blog/new'
+      fullPath: '/admin/blog/new'
+      preLoaderRoute: typeof AdminBlogNewRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/blog/posts': {
+      id: '/admin/blog/posts'
+      path: '/blog/posts'
+      fullPath: '/admin/blog/posts'
+      preLoaderRoute: typeof AdminBlogPostsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/blog/tags': {
+      id: '/admin/blog/tags'
+      path: '/blog/tags'
+      fullPath: '/admin/blog/tags'
+      preLoaderRoute: typeof AdminBlogTagsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/broken-links': {
+      id: '/admin/seo/broken-links'
+      path: '/seo/broken-links'
+      fullPath: '/admin/seo/broken-links'
+      preLoaderRoute: typeof AdminSeoBrokenLinksRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/canonicals': {
+      id: '/admin/seo/canonicals'
+      path: '/seo/canonicals'
+      fullPath: '/admin/seo/canonicals'
+      preLoaderRoute: typeof AdminSeoCanonicalsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/dashboard': {
+      id: '/admin/seo/dashboard'
+      path: '/seo/dashboard'
+      fullPath: '/admin/seo/dashboard'
+      preLoaderRoute: typeof AdminSeoDashboardRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/images': {
+      id: '/admin/seo/images'
+      path: '/seo/images'
+      fullPath: '/admin/seo/images'
+      preLoaderRoute: typeof AdminSeoImagesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/internal-links': {
+      id: '/admin/seo/internal-links'
+      path: '/seo/internal-links'
+      fullPath: '/admin/seo/internal-links'
+      preLoaderRoute: typeof AdminSeoInternalLinksRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/keywords': {
+      id: '/admin/seo/keywords'
+      path: '/seo/keywords'
+      fullPath: '/admin/seo/keywords'
+      preLoaderRoute: typeof AdminSeoKeywordsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/pages': {
+      id: '/admin/seo/pages'
+      path: '/seo/pages'
+      fullPath: '/admin/seo/pages'
+      preLoaderRoute: typeof AdminSeoPagesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/redirects': {
+      id: '/admin/seo/redirects'
+      path: '/seo/redirects'
+      fullPath: '/admin/seo/redirects'
+      preLoaderRoute: typeof AdminSeoRedirectsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/schema': {
+      id: '/admin/seo/schema'
+      path: '/seo/schema'
+      fullPath: '/admin/seo/schema'
+      preLoaderRoute: typeof AdminSeoSchemaRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/seo/technical': {
+      id: '/admin/seo/technical'
+      path: '/seo/technical'
+      fullPath: '/admin/seo/technical'
+      preLoaderRoute: typeof AdminSeoTechnicalRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/analytics': {
+      id: '/admin/settings/analytics'
+      path: '/settings/analytics'
+      fullPath: '/admin/settings/analytics'
+      preLoaderRoute: typeof AdminSettingsAnalyticsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/general': {
+      id: '/admin/settings/general'
+      path: '/settings/general'
+      fullPath: '/admin/settings/general'
+      preLoaderRoute: typeof AdminSettingsGeneralRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/gtm': {
+      id: '/admin/settings/gtm'
+      path: '/settings/gtm'
+      fullPath: '/admin/settings/gtm'
+      preLoaderRoute: typeof AdminSettingsGtmRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/robots': {
+      id: '/admin/settings/robots'
+      path: '/settings/robots'
+      fullPath: '/admin/settings/robots'
+      preLoaderRoute: typeof AdminSettingsRobotsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/search-console': {
+      id: '/admin/settings/search-console'
+      path: '/settings/search-console'
+      fullPath: '/admin/settings/search-console'
+      preLoaderRoute: typeof AdminSettingsSearchConsoleRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/sitemap': {
+      id: '/admin/settings/sitemap'
+      path: '/settings/sitemap'
+      fullPath: '/admin/settings/sitemap'
+      preLoaderRoute: typeof AdminSettingsSitemapRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/users': {
+      id: '/admin/settings/users'
+      path: '/settings/users'
+      fullPath: '/admin/settings/users'
+      preLoaderRoute: typeof AdminSettingsUsersRouteImport
+      parentRoute: typeof AdminRoute
     }
     '/industries/cosmetics_/eu': {
       id: '/industries/cosmetics_/eu'
@@ -5530,6 +6065,62 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AdminRouteChildren {
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  AdminBlogCategoriesRoute: typeof AdminBlogCategoriesRoute
+  AdminBlogNewRoute: typeof AdminBlogNewRoute
+  AdminBlogPostsRoute: typeof AdminBlogPostsRoute
+  AdminBlogTagsRoute: typeof AdminBlogTagsRoute
+  AdminSeoBrokenLinksRoute: typeof AdminSeoBrokenLinksRoute
+  AdminSeoCanonicalsRoute: typeof AdminSeoCanonicalsRoute
+  AdminSeoDashboardRoute: typeof AdminSeoDashboardRoute
+  AdminSeoImagesRoute: typeof AdminSeoImagesRoute
+  AdminSeoInternalLinksRoute: typeof AdminSeoInternalLinksRoute
+  AdminSeoKeywordsRoute: typeof AdminSeoKeywordsRoute
+  AdminSeoPagesRoute: typeof AdminSeoPagesRoute
+  AdminSeoRedirectsRoute: typeof AdminSeoRedirectsRoute
+  AdminSeoSchemaRoute: typeof AdminSeoSchemaRoute
+  AdminSeoTechnicalRoute: typeof AdminSeoTechnicalRoute
+  AdminSettingsAnalyticsRoute: typeof AdminSettingsAnalyticsRoute
+  AdminSettingsGeneralRoute: typeof AdminSettingsGeneralRoute
+  AdminSettingsGtmRoute: typeof AdminSettingsGtmRoute
+  AdminSettingsRobotsRoute: typeof AdminSettingsRobotsRoute
+  AdminSettingsSearchConsoleRoute: typeof AdminSettingsSearchConsoleRoute
+  AdminSettingsSitemapRoute: typeof AdminSettingsSitemapRoute
+  AdminSettingsUsersRoute: typeof AdminSettingsUsersRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  AdminBlogCategoriesRoute: AdminBlogCategoriesRoute,
+  AdminBlogNewRoute: AdminBlogNewRoute,
+  AdminBlogPostsRoute: AdminBlogPostsRoute,
+  AdminBlogTagsRoute: AdminBlogTagsRoute,
+  AdminSeoBrokenLinksRoute: AdminSeoBrokenLinksRoute,
+  AdminSeoCanonicalsRoute: AdminSeoCanonicalsRoute,
+  AdminSeoDashboardRoute: AdminSeoDashboardRoute,
+  AdminSeoImagesRoute: AdminSeoImagesRoute,
+  AdminSeoInternalLinksRoute: AdminSeoInternalLinksRoute,
+  AdminSeoKeywordsRoute: AdminSeoKeywordsRoute,
+  AdminSeoPagesRoute: AdminSeoPagesRoute,
+  AdminSeoRedirectsRoute: AdminSeoRedirectsRoute,
+  AdminSeoSchemaRoute: AdminSeoSchemaRoute,
+  AdminSeoTechnicalRoute: AdminSeoTechnicalRoute,
+  AdminSettingsAnalyticsRoute: AdminSettingsAnalyticsRoute,
+  AdminSettingsGeneralRoute: AdminSettingsGeneralRoute,
+  AdminSettingsGtmRoute: AdminSettingsGtmRoute,
+  AdminSettingsRobotsRoute: AdminSettingsRobotsRoute,
+  AdminSettingsSearchConsoleRoute: AdminSettingsSearchConsoleRoute,
+  AdminSettingsSitemapRoute: AdminSettingsSitemapRoute,
+  AdminSettingsUsersRoute: AdminSettingsUsersRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+
 interface CaseStudiesRouteChildren {
   CaseStudiesAlgorithmClaimRoute: typeof CaseStudiesAlgorithmClaimRoute
   CaseStudiesAustraliaTgaRoute: typeof CaseStudiesAustraliaTgaRoute
@@ -6060,13 +6651,16 @@ const ServicesUsaRouteWithChildren = ServicesUsaRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AdminRoute: AdminRouteWithChildren,
   AiNewsRoute: AiNewsRoute,
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
   RegulatoryUpdatesRoute: RegulatoryUpdatesRoute,
+  BlogSlugRoute: BlogSlugRoute,
   IndustriesCosmeticsRoute: IndustriesCosmeticsRoute,
   IndustriesIvdRoute: IndustriesIvdRoute,
   IndustriesMedicalDevicesRoute: IndustriesMedicalDevicesRoute,
+  InsightsSlugRoute: InsightsSlugRoute,
   InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route:
     InsightsBiologicalEvaluationTestingMedicalDevicesIso10993Route,
   InsightsBorderlineMedicalDeviceClassificationStrategyRoute:
@@ -6173,6 +6767,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesUsaRoute: ServicesUsaRouteWithChildren,
   ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute:
     ServicesWpcApprovalWirelessMedicalDevicesIndiaRoute,
+  BlogIndexRoute: BlogIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,
