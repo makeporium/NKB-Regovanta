@@ -182,14 +182,24 @@ const structuredDataGraph = {
       "email": "contact@nkbregovanta.com",
       "telephone": ["+919513699000", "+919180351425", "+918400039062"],
       "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
-        "addressLocality": "Lucknow",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "226015",
-        "addressCountry": "IN"
-      },
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "226015",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "16192 Coastal Highway",
+          "addressLocality": "Lewes",
+          "addressRegion": "Delaware",
+          "postalCode": "19958",
+          "addressCountry": "US"
+        }
+      ],
       "areaServed": [
         "Worldwide",
         "India",

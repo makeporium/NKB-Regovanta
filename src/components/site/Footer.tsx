@@ -21,7 +21,19 @@ export function Footer() {
             <div className="mt-8 space-y-4 text-sm text-navy-foreground/70">
               <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-3 hover:text-navy-foreground transition-colors"><Mail className="h-4 w-4 shrink-0" /> contact@nkbregovanta.com</a>
               <div className="flex items-start gap-3"><Phone className="h-4 w-4 shrink-0 mt-1" /><div className="flex flex-col gap-1.5"><a href="tel:+919513699000" className="hover:text-navy-foreground transition-colors">+91 95136 99000</a><a href="tel:+919180351425" className="hover:text-navy-foreground transition-colors">+91 91803 51425</a><a href="tel:+918400039062" className="hover:text-navy-foreground transition-colors">+91 84000 39062</a></div></div>
-              <div className="flex items-start gap-3"><MapPin className="h-4 w-4 shrink-0 mt-0.5" /><span>Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,<br />Lucknow, Uttar Pradesh, 226015, India</span></div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 shrink-0 mt-1" />
+                <div className="space-y-2">
+                  <div>
+                    <span className="font-semibold text-navy-foreground/90 text-xs block">India Office:</span>
+                    <span>Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,<br />Lucknow, Uttar Pradesh, 226015, India</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-navy-foreground/90 text-xs block">USA Office:</span>
+                    <span>16192 Coastal Highway,<br />Lewes, Delaware 19958, USA</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {columns.map((column) => <div key={column.title}><h2 className="text-xs font-semibold uppercase tracking-wider text-navy-foreground/50">{column.title}</h2><ul className="mt-4 space-y-3">{column.links.map((link) => <li key={link.label}><Link to={link.to} className="text-sm text-navy-foreground/70 hover:text-navy-foreground transition-colors">{link.label}</Link></li>)}</ul></div>)}

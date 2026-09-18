@@ -158,10 +158,18 @@ function Contact() {
                       <MapPin className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Location</div>
-                      <div className="mt-1 text-sm text-navy leading-relaxed">
-                        Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,<br/>
-                        Lucknow, Uttar Pradesh, India, 226015
+                      <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Office Locations</div>
+                      <div className="mt-2 space-y-3 text-sm text-navy leading-relaxed">
+                        <div>
+                          <strong className="block text-xs font-bold text-navy uppercase tracking-wider text-accent">India (HQ)</strong>
+                          Building No 20, Awadh Kunj, Faridi Nagar, CIMAP,<br/>
+                          Lucknow, Uttar Pradesh, India, 226015
+                        </div>
+                        <div>
+                          <strong className="block text-xs font-bold text-navy uppercase tracking-wider text-accent">United States</strong>
+                          16192 Coastal Highway,<br/>
+                          Lewes, Delaware, USA, 19958
+                        </div>
                       </div>
                     </div>
                   </div>
