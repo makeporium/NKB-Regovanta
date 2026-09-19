@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, BarChart3, ShieldCheck, Globe2, Trophy, Users } from "lucide-react";
 import caseHero from "@/assets/case.optimized.webp";
-const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";
-const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
-const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
-const imgEU = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
-const imgAustralia = "/assets/brain/cs_australia_tga_1786441211612.png";
-const imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";
+const imgTestSmarter = "/assets/case-studies/cs-test-smarter.jpg";
+const imgSimulatedUse = "/assets/case-studies/cs-fda-simulated-use.jpg";
+const imgBiocompatibility = "/assets/case-studies/cs-fda-biocompatibility.jpg";
+const imgEU = "/assets/case-studies/cs-eu-mdr-remediation.jpg";
+const imgAustralia = "/assets/case-studies/cs-australia-tga.jpg";
+const imgAlgorithm = "/assets/case-studies/cs-algorithm-claim.jpg";
 
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({

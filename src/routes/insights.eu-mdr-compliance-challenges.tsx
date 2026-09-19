@@ -51,7 +51,7 @@ function ArticlePage() {
             "@type": "BlogPosting",
             "headline": "EU MDR Compliance: Where Medical Device Manufacturers Commonly Get Stuck",
             "description": "A practical regulatory perspective on the issues that can delay CE marking and EU market entry under Regulation (EU) 2017/745 (MDR).",
-            "image": "https://www.nkbregovanta.com/assets/brain/cs_eu_mdr_remediation_1786441191745.png",
+            "image": "https://www.nkbregovanta.com/assets/case-studies/cs-eu-mdr-remediation.jpg",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",

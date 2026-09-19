@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-const imgPlaceholder = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
+const imgPlaceholder = "/assets/case-studies/cs-eu-mdr-remediation.jpg";
 
 export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-eu-mdr-remediation.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "EU MDR Technical File Remediation | NKB Regovanta" },
       {
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/case-studies/eu-mdr-remediation")({
         content:
           "Case study: How NKB Regovanta remediated a rejected EU MDR technical dossier, closing GSPR and clinical gaps for successful Notified Body approval.",
       },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-eu-mdr-remediation.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/eu-mdr-remediation" },

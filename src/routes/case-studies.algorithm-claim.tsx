@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-const imgPlaceholder = "/assets/brain/cs_algorithm_claim_1786441224937.png";
+const imgPlaceholder = "/assets/case-studies/cs-algorithm-claim.jpg";
 
 export const Route = createFileRoute("/case-studies/algorithm-claim")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/case-studies/algorithm-claim")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-algorithm-claim.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "AI Algorithm Label Expansion Case Study | NKB Regovanta" },
       {
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/case-studies/algorithm-claim")({
         content:
           "Case study: Expanding an AI medical software label through validation, PCCP change protocols, and clinical evidence under FDA and EU MDR frameworks.",
       },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-algorithm-claim.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/algorithm-claim" },

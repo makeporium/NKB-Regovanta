@@ -78,9 +78,11 @@ async function run() {
   const rootPublic = path.resolve(__dirname, "../public");
   const brainDir = path.resolve(rootPublic, "assets/brain");
   const insightsDir = path.resolve(rootPublic, "assets/insights");
+  const caseStudiesDir = path.resolve(rootPublic, "assets/case-studies");
 
   const brainImages = await scanDirectory(brainDir, "/assets/brain");
   const insightImages = await scanDirectory(insightsDir, "/assets/insights");
+  const caseStudiesImages = await scanDirectory(caseStudiesDir, "/assets/case-studies");
 
   // Root public images
   const rootImages = [];
@@ -110,7 +112,7 @@ async function run() {
     }
   }
 
-  const allImages = [...brainImages, ...insightImages, ...rootImages];
+  const allImages = [...brainImages, ...insightImages, ...caseStudiesImages, ...rootImages];
   console.log(`Scanned ${allImages.length} real images from disk.`);
 
   // Upsert in batches of 25

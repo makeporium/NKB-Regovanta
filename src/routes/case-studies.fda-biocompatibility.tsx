@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-const imgPlaceholder = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
+const imgPlaceholder = "/assets/case-studies/cs-fda-biocompatibility.jpg";
 
 export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-fda-biocompatibility.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FDA 510(k) Biocompatibility Case Study | NKB Regovanta" },
       {
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/case-studies/fda-biocompatibility")({
         content:
           "Case study: How NKB Regovanta resolved an FDA 510(k) biocompatibility deficiency using material equivalence, saving $120,000 and clearing within 45 days.",
       },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-fda-biocompatibility.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/fda-biocompatibility" },

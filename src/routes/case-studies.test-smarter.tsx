@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-const imgPlaceholder = "/assets/brain/cs_test_smarter_1786441137220.png";
+const imgPlaceholder = "/assets/case-studies/cs-test-smarter.jpg";
 
 export const Route = createFileRoute("/case-studies/test-smarter")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/case-studies/test-smarter")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/test-smarter" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-test-smarter.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Global Device Testing Strategy Case Study | NKB Regovanta" },
       {
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/case-studies/test-smarter")({
         content:
           "Case study: A unified test strategy for FDA 510(k), EU MDR, and TGA ARTG that eliminated duplicate testing and reduced testing budgets by 40%.",
       },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-test-smarter.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/test-smarter" },

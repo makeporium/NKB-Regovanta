@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-const imgPlaceholder = "/assets/brain/cs_australia_tga_1786441211612.png";
+const imgPlaceholder = "/assets/case-studies/cs-australia-tga.jpg";
 
 export const Route = createFileRoute("/case-studies/australia-tga")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/case-studies/australia-tga")({
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies/australia-tga" },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-australia-tga.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Australia TGA ARTG Inclusion Case Study | NKB Regovanta" },
       {
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/case-studies/australia-tga")({
         content:
           "Case study: How NKB Regovanta secured TGA ARTG Inclusion for a Class IIb device by leveraging overseas approvals and targeted conformity assessment.",
       },
-      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/case-studies/cs-australia-tga.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies/australia-tga" },

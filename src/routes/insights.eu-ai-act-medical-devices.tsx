@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle2, ShieldAlert, Cpu, Layers } from "lucide-react"
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
-const imgArticle = "/assets/brain/cs_algorithm_claim_1786441224937.png";
+const imgArticle = "/assets/case-studies/cs-algorithm-claim.jpg";
 
 export const Route = createFileRoute("/insights/eu-ai-act-medical-devices")({
   head: () => ({
@@ -50,7 +50,7 @@ function ArticlePage() {
             "@type": "BlogPosting",
             "headline": "EU AI Act and Medical Devices: What MedTech Manufacturers Need to Get Right",
             "description": "A practical regulatory perspective for manufacturers developing AI-enabled medical devices and medical software for the European market.",
-            "image": "https://www.nkbregovanta.com/assets/brain/cs_algorithm_claim_1786441224937.png",
+            "image": "https://www.nkbregovanta.com/assets/case-studies/cs-algorithm-claim.jpg",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",
