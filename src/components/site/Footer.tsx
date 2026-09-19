@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const columns = [
-  { title: "Company", links: [{ label: "About Us", to: "/about" }, { label: "Contact", to: "/contact" }, { label: "Case Studies", to: "/case-studies" }, { label: "Insights", to: "/insights" }] },
+  { title: "Company", links: [{ label: "About Us", to: "/about" }, { label: "Contact", to: "/contact" }, { label: "Case Studies", to: "/case-studies" }, { label: "Global Regulatory Insights", to: "/insights" }] },
   { title: "Priority services", links: [{ label: "India CDSCO", to: "/services/india" }, { label: "US FDA", to: "/services/usa" }, { label: "EU MDR & IVDR", to: "/services/eu" }, { label: "ISO 13485 & QMS", to: "/services/iso-13485-implementation-certification-consulting" }, { label: "Technical Documentation", to: "/services/medical-device-technical-documentation-consulting" }] },
   { title: "Industries", links: [{ label: "Medical Devices", to: "/industries/medical-devices" }, { label: "In Vitro Diagnostics", to: "/industries/ivd" }, { label: "Pharmaceuticals", to: "/services/drug-licenses-importers-india-form-10-form-41" }, { label: "Cosmetics", to: "/industries/cosmetics" }] },
 ];

@@ -53,7 +53,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/industries", label: "Industries" },
   { to: "/about", label: "About Us" },
-  { to: "/insights", label: "Insights" },
+  { to: "/insights", label: "Global Regulatory Insights" },
   { to: "/case-studies", label: "Case Studies" },
 ];
 
@@ -109,7 +109,7 @@ export function Header() {
             <Logo />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-5 xl:gap-6 lg:flex">
             <Link to="/" className={linkClass} activeProps={{ className: "text-navy font-semibold" }}>
               Home
             </Link>
@@ -224,10 +224,10 @@ export function Header() {
                   <Link
                     key={n.to}
                     to={n.to}
-                    className="insights-blinking-tab relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-400 font-bold text-xs uppercase tracking-wider text-[#0b3a96] transition-transform hover:scale-105"
+                    className="insights-blinking-tab relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-400 font-bold text-xs text-[#0b3a96] transition-transform hover:scale-105 whitespace-nowrap"
                     activeProps={{ className: "ring-2 ring-[#0b3a96]" }}
                   >
-                    <span className="relative flex h-2 w-2">
+                    <span className="relative flex h-2 w-2 shrink-0">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0b3a96] opacity-75" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0b3a96]" />
                     </span>
