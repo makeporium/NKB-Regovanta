@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────
 // Multi-Language Translation Engine (Client-Side Headless Layer)
-// Supports: English, Arabic (RTL), French, Portuguese, German, Spanish, Hindi
+// Supports: English, Arabic (RTL), French, Portuguese, German, Spanish, Hindi, Chinese, Japanese, Korean
 // ─────────────────────────────────────────────────────────────
 
 export interface LanguageOption {
@@ -15,6 +15,9 @@ export interface LanguageOption {
 export const SUPPORTED_LANGUAGES: LanguageOption[] = [
   { code: "en", name: "English", nativeName: "English", flag: "🇬🇧", dir: "ltr", region: "Global / US / UK / AU" },
   { code: "ar", name: "Arabic", nativeName: "العربية", flag: "🇸🇦", dir: "rtl", region: "Saudi Arabia (SFDA) & UAE (MOHAP)" },
+  { code: "zh-CN", name: "Chinese", nativeName: "中文", flag: "🇨🇳", dir: "ltr", region: "China (NMPA) / East Asia" },
+  { code: "ja", name: "Japanese", nativeName: "日本語", flag: "🇯🇵", dir: "ltr", region: "Japan (PMDA / MHLW)" },
+  { code: "ko", name: "Korean", nativeName: "한국어", flag: "🇰🇷", dir: "ltr", region: "South Korea (MFDS)" },
   { code: "fr", name: "French", nativeName: "Français", flag: "🇫🇷", dir: "ltr", region: "Canada (Health Canada) & EU" },
   { code: "pt", name: "Portuguese", nativeName: "Português", flag: "🇧🇷", dir: "ltr", region: "Brazil (ANVISA)" },
   { code: "de", name: "German", nativeName: "Deutsch", flag: "🇩🇪", dir: "ltr", region: "Germany / EU (MDR/IVDR)" },
@@ -48,7 +51,7 @@ export function getStoredLanguage(): string {
       return stored;
     }
     // Check googtrans cookie if localStorage was empty
-    const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-z]{2})/);
+    const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-zA-Z\-]{2,10})/);
     if (match && match[1] && SUPPORTED_LANGUAGES.some((l) => l.code === match[1])) {
       return match[1];
     }

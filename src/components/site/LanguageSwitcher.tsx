@@ -123,7 +123,7 @@ export function LanguageSwitcher({ variant = "header", className = "" }: Languag
             <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400 px-2 py-1 mb-1">
               Select Regional Language
             </div>
-            <div className="space-y-1">
+            <div className="space-y-1 max-h-72 overflow-y-auto pr-1">
               {SUPPORTED_LANGUAGES.map((lang) => {
                 const isSelected = lang.code === currentLang;
                 return (
@@ -184,7 +184,7 @@ export function LanguageSwitcher({ variant = "header", className = "" }: Languag
             <span className="text-[10px] text-gray-400 font-medium">All 265+ Pages</span>
           </div>
 
-          <div className="space-y-1">
+          <div className="space-y-1 max-h-[420px] overflow-y-auto pr-1">
             {SUPPORTED_LANGUAGES.map((lang) => {
               const isSelected = lang.code === currentLang;
               return (
