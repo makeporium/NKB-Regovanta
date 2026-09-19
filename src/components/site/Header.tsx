@@ -218,16 +218,34 @@ export function Header() {
               </div>
             </div>
 
-            {nav.slice(1).map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                className={linkClass}
-                activeProps={{ className: "text-navy font-semibold" }}
-              >
-                {n.label}
-              </Link>
-            ))}
+            {nav.slice(1).map((n) => {
+              if (n.to === "/insights") {
+                return (
+                  <Link
+                    key={n.to}
+                    to={n.to}
+                    className="insights-blinking-tab relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-400 font-bold text-xs uppercase tracking-wider text-[#0b3a96] transition-transform hover:scale-105"
+                    activeProps={{ className: "ring-2 ring-[#0b3a96]" }}
+                  >
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0b3a96] opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0b3a96]" />
+                    </span>
+                    <span>{n.label}</span>
+                  </Link>
+                );
+              }
+              return (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  className={linkClass}
+                  activeProps={{ className: "text-navy font-semibold" }}
+                >
+                  {n.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -323,17 +341,41 @@ export function Header() {
                 )}
               </div>
 
-              {nav.slice(1).map((n) => (
-                <Link
-                  key={n.to}
-                  to={n.to}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-border py-3 text-sm font-medium text-foreground/80"
-                  activeProps={{ className: "text-navy font-bold" }}
-                >
-                  {n.label}
-                </Link>
-              ))}
+              {nav.slice(1).map((n) => {
+                if (n.to === "/insights") {
+                  return (
+                    <Link
+                      key={n.to}
+                      to={n.to}
+                      onClick={() => setOpen(false)}
+                      className="insights-blinking-tab border-b border-border py-2.5 px-3 my-1 rounded-lg border border-blue-400 text-sm font-bold text-[#0b3a96] flex items-center justify-between"
+                      activeProps={{ className: "text-navy font-extrabold" }}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0b3a96] opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0b3a96]" />
+                        </span>
+                        {n.label}
+                      </span>
+                      <span className="text-[10px] font-black uppercase tracking-wider bg-[#0b3a96] text-white px-2 py-0.5 rounded-full">
+                        Updates
+                      </span>
+                    </Link>
+                  );
+                }
+                return (
+                  <Link
+                    key={n.to}
+                    to={n.to}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border py-3 text-sm font-medium text-foreground/80"
+                    activeProps={{ className: "text-navy font-bold" }}
+                  >
+                    {n.label}
+                  </Link>
+                );
+              })}
 
               <Link
                 to="/contact"
