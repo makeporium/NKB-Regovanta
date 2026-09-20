@@ -59,6 +59,59 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+import { supabase } from "./lib/supabase";
+
+async function handleDynamicSitemap(): Promise<Response> {
+  try {
+    const origin = "https://www.nkbregovanta.com";
+    const { data: posts } = await supabase
+      .from("blog_posts")
+      .select("slug, updated_at, publish_date_ist")
+      .eq("status", "published");
+
+    const dynamicUrls = (posts || []).map((p) => `${origin}/insights/${p.slug}`);
+
+    // Read static sitemap or parse URLs from disk
+    const baseUrls: string[] = [];
+    try {
+      const fs = await import("node:fs");
+      const path = await import("node:path");
+      const sitemapPath = path.resolve(process.cwd(), "public/sitemap.xml");
+      if (fs.existsSync(sitemapPath)) {
+        const content = fs.readFileSync(sitemapPath, "utf8");
+        const locRegex = /<loc>(.*?)<\/loc>/g;
+        let match;
+        while ((match = locRegex.exec(content)) !== null) {
+          if (match[1]) baseUrls.push(match[1]);
+        }
+      }
+    } catch {
+      // Fallback if fs is restricted
+    }
+
+    const allUrls = Array.from(new Set([...baseUrls, ...dynamicUrls])).sort();
+    const escape = (text: string) => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      allUrls.map((url) => `  <url><loc>${escape(url)}</loc></url>`).join("\n") +
+      "\n</urlset>\n";
+
+    return new Response(xml, {
+      status: 200,
+      headers: {
+        "content-type": "application/xml; charset=utf-8",
+        "cache-control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600",
+      },
+    });
+  } catch (error) {
+    console.error("Dynamic sitemap generation error:", error);
+    return new Response("<error>Failed to generate sitemap</error>", {
+      status: 500,
+      headers: { "content-type": "application/xml; charset=utf-8" },
+    });
+  }
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     const url = new URL(request.url);
@@ -67,6 +120,11 @@ export default {
     if (redirectTarget) {
       return Response.redirect(new URL(redirectTarget + url.search, request.url), 301);
     }
+
+    if (cleanPath === "/sitemap.xml" || cleanPath === "/api/sitemap") {
+      return await handleDynamicSitemap();
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

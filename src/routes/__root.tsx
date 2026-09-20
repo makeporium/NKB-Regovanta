@@ -269,6 +269,15 @@ function ClientSeoManager() {
           .eq("target_url", cleanPath)
           .maybeSingle();
 
+        const targetCanonical = data?.canonical_url || `https://www.nkbregovanta.com${cleanPath}`;
+        let canonicalEl = document.querySelector('link[rel="canonical"]');
+        if (!canonicalEl) {
+          canonicalEl = document.createElement("link");
+          canonicalEl.setAttribute("rel", "canonical");
+          document.head.appendChild(canonicalEl);
+        }
+        canonicalEl.setAttribute("href", targetCanonical);
+
         if (!data) return;
 
         if (data.seo_title) {
