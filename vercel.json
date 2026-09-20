@@ -67,12 +67,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
