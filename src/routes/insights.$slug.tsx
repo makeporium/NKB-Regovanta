@@ -17,6 +17,7 @@ import {
   MessageCircle,
   HelpCircle,
   Sparkles,
+  Tag,
 } from "lucide-react";
 import { toast } from "sonner";
 import { CTABand } from "@/components/site/Bits";
@@ -64,6 +65,10 @@ interface ArticleDetail {
     og_description?: string | undefined;
     og_image?: string | undefined;
   } | undefined;
+  tags?: Array<{
+    name: string;
+    slug: string;
+  }> | undefined;
 }
 
 /**
@@ -180,6 +185,16 @@ export const Route = createFileRoute("/insights/$slug")({
       const cleanedHtml = cleanArticleHtml(data.content_html || "");
       const faqs = extractFaqs(cleanedHtml);
 
+      // Fetch attached Tags
+      const { data: tagRows } = await supabase
+        .from("blog_post_tags")
+        .select("blog_tags(name, slug)")
+        .eq("post_id", data.id);
+
+      const tags = (tagRows || [])
+        .map((r: any) => r.blog_tags)
+        .filter(Boolean);
+
       const item: ArticleDetail = {
         id: data.id,
         title: data.title,
@@ -207,6 +222,7 @@ export const Route = createFileRoute("/insights/$slug")({
             }
           : undefined,
         seo_meta: seoMeta || undefined,
+        tags,
       };
 
       return { post: item, faqs };
@@ -255,7 +271,10 @@ export const Route = createFileRoute("/insights/$slug")({
         datePublished: post.publish_date_ist || new Date().toISOString(),
         dateModified: post.updated_at || post.publish_date_ist || new Date().toISOString(),
         articleSection: categoryName,
-        keywords: post.seo_meta?.focus_keyword || undefined,
+        keywords: [
+          post.seo_meta?.focus_keyword,
+          ...(post.tags || []).map((t) => t.name),
+        ].filter(Boolean).join(", "),
         author: {
           "@type": "Person",
           name: authorName,
@@ -300,11 +319,17 @@ export const Route = createFileRoute("/insights/$slug")({
       "@graph": schemaList,
     };
 
+    const keywordList = [
+      post.seo_meta?.focus_keyword,
+      ...(post.tags || []).map((t) => t.name),
+    ].filter(Boolean).join(", ");
+
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { name: "author", content: authorName },
+        ...(keywordList ? [{ name: "keywords", content: keywordList }] : []),
         {
           name: "robots",
           content:
@@ -322,6 +347,7 @@ export const Route = createFileRoute("/insights/$slug")({
         { property: "article:modified_time", content: post.updated_at || post.publish_date_ist },
         { property: "article:author", content: authorName },
         { property: "article:section", content: categoryName },
+        ...(post.tags || []).map((t) => ({ property: "article:tag", content: t.name })),
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
@@ -586,6 +612,26 @@ function DynamicInsightArticlePage() {
               className="dynamic-article-prose prose prose-lg prose-navy max-w-none text-[#1f2937] leading-relaxed space-y-6 prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:pt-8 prose-h2:pb-2 prose-h2:border-t prose-h2:border-gray-100 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-6 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-strong:text-[#0a192f] prose-img:rounded-xl prose-table:border prose-table:border-slate-200 prose-th:bg-slate-100 prose-th:p-3 prose-td:p-3 prose-td:border-t prose-td:border-slate-200"
               dangerouslySetInnerHTML={{ __html: htmlWithIds }}
             />
+
+            {/* Topic Tags Badges */}
+            {article.tags && article.tags.length > 0 && (
+              <div className="my-10 pt-6 border-t border-slate-200">
+                <div className="flex items-center gap-2 mb-3 text-xs font-bold uppercase tracking-wider text-slate-600">
+                  <Tag className="h-3.5 w-3.5 text-[#0b3a96]" />
+                  <span>Related Topics &amp; Regulatory Focus:</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {article.tags.map((tag) => (
+                    <span
+                      key={tag.slug}
+                      className="inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:border-[#0b3a96] hover:bg-blue-50 hover:text-[#0b3a96] transition-all"
+                    >
+                      #{tag.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Structured FAQ Section Accordion if extracted */}
             {faqs.length > 0 && (
