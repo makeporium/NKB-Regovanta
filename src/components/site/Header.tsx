@@ -58,7 +58,7 @@ const nav = [
 ];
 
 const linkClass =
-  "text-sm font-medium text-foreground/80 transition-colors hover:text-navy";
+  "whitespace-nowrap text-[13px] xl:text-[13.5px] 2xl:text-sm font-medium text-foreground/80 transition-colors hover:text-navy";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -68,7 +68,7 @@ export function Header() {
   return (
     <>
       <div className="bg-navy-deep text-white text-xs py-2 border-b border-white/10 hidden md:block">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-4 lg:gap-6">
             <a href="mailto:contact@nkbregovanta.com" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
               <Mail className="h-3.5 w-3.5" />
@@ -104,12 +104,12 @@ export function Header() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link to="/" aria-label="NKB Regovanta home">
+        <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
+          <Link to="/" aria-label="NKB Regovanta home" className="shrink-0 mr-3.5 xl:mr-7 flex items-center">
             <Logo />
           </Link>
 
-          <nav className="hidden items-center gap-5 xl:gap-6 lg:flex">
+          <nav className="hidden items-center gap-3 lg:gap-3.5 xl:gap-5 2xl:gap-6 lg:flex shrink-0">
             <Link to="/" className={linkClass} activeProps={{ className: "text-navy font-semibold" }}>
               Home
             </Link>
@@ -224,7 +224,7 @@ export function Header() {
                   <Link
                     key={n.to}
                     to={n.to}
-                    className="insights-blinking-tab relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-400 font-bold text-xs text-[#0b3a96] transition-transform hover:scale-105 whitespace-nowrap"
+                    className="insights-blinking-tab relative inline-flex items-center gap-1.5 px-2.5 py-1 xl:px-3 rounded-full border border-blue-400 font-bold text-[11.5px] xl:text-xs text-[#0b3a96] transition-transform hover:scale-105 whitespace-nowrap shrink-0"
                     activeProps={{ className: "ring-2 ring-[#0b3a96]" }}
                   >
                     <span className="relative flex h-2 w-2 shrink-0">
@@ -248,13 +248,13 @@ export function Header() {
             })}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 xl:gap-3 shrink-0 ml-auto lg:ml-3 xl:ml-6">
             <LanguageSwitcher variant="header" />
             <Link
               to="/contact"
-              className="hidden rounded-sm bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-deep sm:inline-flex items-center gap-1.5"
+              className="hidden rounded-md bg-navy px-3.5 py-2 text-xs xl:px-4.5 xl:py-2.5 xl:text-sm font-semibold text-white transition-colors hover:bg-navy-deep sm:inline-flex items-center gap-1.5 whitespace-nowrap shadow-xs"
             >
-              Book a Consultation / Contact
+              Book Consultation
             </Link>
             <button
               className="lg:hidden"
