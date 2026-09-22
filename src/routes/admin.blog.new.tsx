@@ -21,6 +21,7 @@ import {
   ArrowLeft,
   Calendar,
   Sparkles,
+  Link2,
 } from "lucide-react";
 import { RichBlogEditor, sanitizeArticleContent } from "@/components/admin/RichBlogEditor";
 import { DirectImageUploader } from "@/components/admin/DirectImageUploader";
@@ -184,9 +185,19 @@ function BlogPostEditorPage() {
   };
 
   // Pre-publish validation checklist per Section 18.11
+  const internalLinksCount = useMemo(() => {
+    return (
+      (contentHtml || "").match(
+        /href=["'](?:\/|https?:\/\/(?:www\.)?nkbregovanta\.com\/)(?:services|about|case-studies|insights|blog|markets|industries|contact)[^"']*["']/gi
+      ) || []
+    ).length;
+  }, [contentHtml]);
+
   const checklist = useMemo(() => {
-    const hasInternalLink = /href=["']\/(?:services|about|case-studies|insights|blog)/i.test(contentHtml);
-    const hasExternalLink = /href=["']https?:\/\/(?:cdsco|fda|ec\.europa\.eu|mhra)/i.test(contentHtml) || /href=["']https?:\/\//i.test(contentHtml);
+    const hasInternalLink = internalLinksCount > 0;
+    const hasExternalLink =
+      /href=["']https?:\/\/(?:cdsco|fda|ec\.europa\.eu|mhra)/i.test(contentHtml) ||
+      /href=["']https?:\/\/(?!www\.nkbregovanta\.com|nkbregovanta\.com)/i.test(contentHtml);
 
     return [
       { label: "SEO Title Set", passed: Boolean(seoTitle.trim()), critical: false },
@@ -196,12 +207,12 @@ function BlogPostEditorPage() {
       { label: "H1 Heading (Blog Title)", passed: Boolean(title.trim()), critical: true },
       { label: "Featured Image Uploaded", passed: Boolean(featuredImage.trim()), critical: false },
       { label: "Featured Image ALT Text Provided", passed: Boolean(featuredImageAlt.trim()), critical: false },
-      { label: "Internal Links Present in Body", passed: hasInternalLink, critical: false },
+      { label: `Internal Links Present in Body (${internalLinksCount} found)`, passed: hasInternalLink, critical: false },
       { label: "Authoritative External References", passed: hasExternalLink, critical: false },
       { label: "Article Schema Valid", passed: true, critical: false },
       { label: "Index / Follow Enabled", passed: robotsIndex === "index", critical: false },
     ];
-  }, [title, slug, seoTitle, metaDescription, focusKeyword, featuredImage, featuredImageAlt, contentHtml, robotsIndex]);
+  }, [title, slug, seoTitle, metaDescription, focusKeyword, featuredImage, featuredImageAlt, contentHtml, robotsIndex, internalLinksCount]);
 
   const canPublish = Boolean(title.trim() && slug.trim() && contentHtml.trim());
 
@@ -305,6 +316,46 @@ function BlogPostEditorPage() {
         },
         { onConflict: "target_url" }
       );
+
+      // Automatically sync detected internal links to internal_links table
+      try {
+        const linkRegex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1[^>]*>(.*?)<\/a>/gi;
+        let match;
+        const detectedInternalLinks: Array<{
+          source_url: string;
+          anchor_text: string;
+          target_url: string;
+          status: "Live";
+        }> = [];
+
+        while ((match = linkRegex.exec(contentHtml)) !== null) {
+          let target = match[2]?.trim() || "";
+          const anchor = match[3]?.replace(/<[^>]+>/g, "").trim() || "Link";
+          if (!target) continue;
+          if (target.startsWith("https://www.nkbregovanta.com")) {
+            target = target.replace("https://www.nkbregovanta.com", "") || "/";
+          } else if (target.startsWith("http://www.nkbregovanta.com")) {
+            target = target.replace("http://www.nkbregovanta.com", "") || "/";
+          }
+
+          if (target.startsWith("/")) {
+            detectedInternalLinks.push({
+              source_url: blogUrl,
+              anchor_text: anchor,
+              target_url: target,
+              status: "Live",
+            });
+          }
+        }
+
+        // Clean up previous records for this article and insert updated ones
+        await supabase.from("internal_links").delete().eq("source_url", blogUrl);
+        if (detectedInternalLinks.length > 0) {
+          await supabase.from("internal_links").insert(detectedInternalLinks);
+        }
+      } catch {
+        // Silently continue if table has restricted RLS
+      }
 
       toast.success(
         resolvedEditId
@@ -674,6 +725,31 @@ function BlogPostEditorPage() {
               onCaptionChange={setFeaturedImageCaption}
               suggestedAltFallback={title ? `${title} - NKB Regovanta` : undefined}
             />
+          </div>
+
+          {/* Internal Links Health Card */}
+          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-xs space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+                <Link2 className="h-4 w-4 text-[#0b3a96]" />
+                Internal Links Status
+              </h3>
+              <span
+                className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
+                  internalLinksCount > 0
+                    ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                    : "bg-amber-50 text-amber-700 border border-amber-200"
+                }`}
+              >
+                {internalLinksCount} {internalLinksCount === 1 ? "Link" : "Links"}
+              </span>
+            </div>
+
+            <p className="text-xs text-slate-500 leading-relaxed">
+              {internalLinksCount > 0
+                ? "Excellent! Google and AI search engines use internal hyperlinks to index and rank your regulatory services."
+                : "No internal links detected. Use 'Internal Links' in the editor toolbar to auto-link regulatory keywords."}
+            </p>
           </div>
         </div>
       </div>

@@ -230,4 +230,68 @@ body {
   animation: insight-blink-pulse 1.5s ease-in-out infinite;
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Article & Rich Editor Hyperlinks & Typography Styling
+───────────────────────────────────────────────────────────── */
+.dynamic-article-prose a,
+.rich-editor-content a,
+.prose a,
+article a.inline-link,
+article p a,
+article li a,
+.article-content a {
+  color: #0b3a96 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #3b82f6 !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 3px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.dynamic-article-prose a:hover,
+.rich-editor-content a:hover,
+.prose a:hover,
+article a.inline-link:hover,
+article p a:hover,
+article li a:hover,
+.article-content a:hover {
+  color: #1d4ed8 !important;
+  text-decoration-color: #1d4ed8 !important;
+  background-color: rgba(219, 234, 254, 0.4) !important;
+  border-radius: 2px !important;
+}
+
+/* Clear distinction for tables in dynamic articles & editor */
+.dynamic-article-prose table,
+.rich-editor-content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.dynamic-article-prose th,
+.rich-editor-content th {
+  background-color: #f1f5f9 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #cbd5e1 !important;
+  text-align: left !important;
+}
+
+.dynamic-article-prose td,
+.rich-editor-content td {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.dynamic-article-prose tr:nth-child(even),
+.rich-editor-content tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
 

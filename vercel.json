@@ -7,6 +7,11 @@
       "permanent": true
     },
     {
+      "source": "/insights/how-to-register-a-medical-device-in-india-2026-guide",
+      "destination": "/insights/how-to-register-medical-device-in-india",
+      "permanent": true
+    },
+    {
       "source": "/services/regulatory-affairs",
       "destination": "/services/global-medical-device-ivd-regulatory-affairs-consulting",
       "permanent": true
