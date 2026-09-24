@@ -145,7 +145,7 @@ const services10 = [
       "UK based point of contact for MHRA & authorities",
       "Obligations under UK MDR 2002 Regulation 40",
     ],
-    to: "/services/uk/ukrp",
+    to: "/services/uk/uk-responsible-person-ukrp-services",
   },
   {
     num: "3",
@@ -156,7 +156,7 @@ const services10 = [
       "GSPR mapping & evidence assessment",
       "Labeling, IFU & UDI alignment",
     ],
-    to: "/services/uk/technical-file",
+    to: "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
   },
   {
     num: "4",
@@ -167,7 +167,7 @@ const services10 = [
       "Trend reporting",
       "Field Safety Corrective Actions (FSCAs)",
     ],
-    to: "/services/uk/vigilance",
+    to: "/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
   },
   {
     num: "5",
@@ -178,7 +178,7 @@ const services10 = [
       "PSUR support (where applicable)",
       "Record retention & data protection",
     ],
-    to: "/services/uk/pms",
+    to: "/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
   },
   {
     num: "6",
@@ -189,7 +189,7 @@ const services10 = [
       "Determine need for new submission to MHRA",
       "Ongoing lifecycle compliance",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "7",
@@ -200,7 +200,7 @@ const services10 = [
       "Actor registration support",
       "Data accuracy & consistency",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "8",
@@ -211,7 +211,7 @@ const services10 = [
       "Importer obligations",
       "Supply chain documentation review",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "9",
@@ -222,7 +222,7 @@ const services10 = [
       "IEC 62304 alignment",
       "Cybersecurity risk management support",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "10",
@@ -233,7 +233,7 @@ const services10 = [
       "GSPR & technical documentation support",
       "Notified Body Opinion readiness",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
 ];
 
@@ -388,7 +388,7 @@ function UKMarketCompletePage() {
                   Discuss Your UK Market Access Strategy <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
-                  to="/services/uk/ukrp"
+                  to="/services/uk/uk-responsible-person-ukrp-services"
                   className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-gray-300 text-navy text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all"
                 >
                   Our UKRP Services <ArrowRight className="h-3.5 w-3.5" />
@@ -592,7 +592,7 @@ function UKMarketCompletePage() {
                 </p>
               </div>
               <Link
-                to="/services/uk/conformity-assurance"
+                to="/services/uk/ce-recognition-and-ukca-market-access-strategy"
                 className="inline-flex items-center gap-1 text-[11px] font-bold text-[#e03131] hover:text-[#c92a2a]"
               >
                 Learn more about UK MDR 2002 →

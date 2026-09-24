@@ -249,7 +249,7 @@ function IVDIndia() {
                             </p>
                         </div>
                         <Link
-                            to="/services/india/ivd"
+                            to="/services/india/in-vitro-diagnostic-regulatory-services"
                             className="shrink-0 inline-flex items-center gap-2 bg-[#0b3a96] hover:bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-all shadow-xs hover:shadow-md group"
                         >
                             <span>Explore India IVD Regulatory Services</span>

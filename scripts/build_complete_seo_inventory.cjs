@@ -96,7 +96,7 @@ function getRoleRationale(fileName, isNoindex) {
       return 'Country sub-service template. Noindexed to eliminate duplicate doorway page penalties and consolidate keyword authority into the regional parent hub.';
     }
     if (fileName.startsWith('services.india.')) {
-      return 'Specific procedural filing route (MD forms/rules). Noindexed to prevent cannibalizing the core India CDSCO pillar pages (/services/india and /services/india/medical-devices).';
+      return 'Specific procedural filing route (MD forms/rules). Noindexed to prevent cannibalizing the core India CDSCO pillar pages (/services/india and /services/india/medical-device-licensing-and-regulatory-approvals-in-india).';
     }
     if (fileName.startsWith('services.usa.')) {
       return 'Procedural FDA sub-tier route. Noindexed to funnel 100% of premarket authority into the flagship 510(k) and USA hub pages.';

@@ -8,7 +8,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -363,6 +363,50 @@ function ClientSeoManager() {
   return null;
 }
 
+function TopProgressBar() {
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+  const [visible, setVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let t1: ReturnType<typeof setTimeout> | undefined;
+    let t2: ReturnType<typeof setTimeout> | undefined;
+
+    if (isLoading) {
+      setVisible(true);
+      setProgress(20);
+      t1 = setTimeout(() => setProgress(50), 100);
+      t2 = setTimeout(() => setProgress(80), 300);
+    } else if (visible) {
+      setProgress(100);
+      timer = setTimeout(() => {
+        setVisible(false);
+        setProgress(0);
+      }, 250);
+    }
+
+    return () => {
+      if (t1) clearTimeout(t1);
+      if (t2) clearTimeout(t2);
+      if (timer) clearTimeout(timer);
+    };
+  }, [isLoading, visible]);
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className="fixed top-0 left-0 right-0 h-[3px] z-[99999] pointer-events-none transition-all duration-300 ease-out"
+      style={{
+        width: `${progress}%`,
+        background: "linear-gradient(90deg, #dca85b, #3b82f6, #0b3a96)",
+        boxShadow: "0 0 10px rgba(11, 58, 150, 0.7)",
+      }}
+    />
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -381,6 +425,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <TopProgressBar />
       <ClientSeoManager />
       <div className="flex min-h-screen flex-col">
         <Header />

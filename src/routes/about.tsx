@@ -178,9 +178,9 @@ function About() {
                             </div>
                         </div>
 
-                        <button className="bg-[#dca85b] text-navy font-bold py-3.5 px-8 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-sm flex items-center gap-2">
+                        <Link to="/contact" className="bg-[#dca85b] text-navy font-bold py-3.5 px-8 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-sm flex items-center gap-2 inline-flex">
                             Talk To Our Experts <ArrowRight className="h-4 w-4" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -487,9 +487,9 @@ function About() {
                             <span className="text-border">|</span>
                             <span>GLOBAL MARKET ACCESS</span>
                         </div>
-                        <button className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-md hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <Link to="/services" className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-md hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
                             EXPLORE OUR EXPERTISE <ArrowRight className="h-3 w-3" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -570,9 +570,9 @@ function About() {
                                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Established Manufacturers</span>
                             </div>
 
-                            <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2">
+                            <Link to="/services" className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
                                 LEARN MORE <ArrowRight className="h-3 w-3" />
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Right */}
@@ -821,9 +821,9 @@ function About() {
                         Regulatory complexity shouldn't slow responsible innovation.<br />
                         <span className="text-cyan-400 font-bold">Let's build the pathway together.</span>
                     </p>
-                    <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
+                    <Link to="/contact" className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
                         TALK TO OUR EXPERTS <ArrowRight className="h-3 w-3" />
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

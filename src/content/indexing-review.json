@@ -16,8 +16,8 @@
     "searchConsole": null
   },
   {
-    "file": "industries.cosmetics_.india.for-importer.tsx",
-    "route": "/industries/cosmetics/india/for-importer",
+    "file": "industries.cosmetics_.india.cosmetics-registration-for-importers-in-india.tsx",
+    "route": "/industries/cosmetics/india/cosmetics-registration-for-importers-in-india",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -32,8 +32,8 @@
     "searchConsole": null
   },
   {
-    "file": "industries.cosmetics_.india.for-manufacturer.tsx",
-    "route": "/industries/cosmetics/india/for-manufacturer",
+    "file": "industries.cosmetics_.india.cosmetic-manufacturing-license-in-india.tsx",
+    "route": "/industries/cosmetics/india/cosmetic-manufacturing-license-in-india",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -204,8 +204,8 @@
     "searchConsole": null
   },
   {
-    "file": "insights.eu-mdr-2026.tsx",
-    "route": "/insights/eu-mdr-2026",
+    "file": "insights.eu-mdr-2026-eudamed-classification-and-compliance-priorities.tsx",
+    "route": "/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -236,8 +236,8 @@
     "searchConsole": null
   },
   {
-    "file": "insights.fda-inspections-2026.tsx",
-    "route": "/insights/fda-inspections-2026",
+    "file": "insights.fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework.tsx",
+    "route": "/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -446,8 +446,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.artg-inclusion.tsx",
-    "route": "/services/australia/artg-inclusion",
+    "file": "services.australia.tga-artg-inclusion-strategy-and-application-preparation.tsx",
+    "route": "/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -466,8 +466,8 @@
     }
   },
   {
-    "file": "services.australia.australian-sponsor.tsx",
-    "route": "/services/australia/australian-sponsor",
+    "file": "services.australia.tga-australian-sponsor-services-and-governance.tsx",
+    "route": "/services/australia/tga-australian-sponsor-services-and-governance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -482,8 +482,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.change-management.tsx",
-    "route": "/services/australia/change-management",
+    "file": "services.australia.tga-artg-variations-and-significant-change-support.tsx",
+    "route": "/services/australia/tga-artg-variations-and-significant-change-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -498,8 +498,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.classification.tsx",
-    "route": "/services/australia/classification",
+    "file": "services.australia.tga-medical-device-and-ivd-classification.tsx",
+    "route": "/services/australia/tga-medical-device-and-ivd-classification",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -514,8 +514,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.clinical-evidence.tsx",
-    "route": "/services/australia/clinical-evidence",
+    "file": "services.australia.tga-clinical-evidence-and-benefit-risk-strategy.tsx",
+    "route": "/services/australia/tga-clinical-evidence-and-benefit-risk-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -530,14 +530,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.conformity-assessment.tsx",
-    "route": "/services/australia/conformity-assessment",
+    "file": "services.australia.tga-conformity-assessment-support.tsx",
+    "route": "/services/australia/tga-conformity-assessment-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic regulatory template without conformity-assessment-specific evidence or process; manufacturer-evidence page is substantive.",
-    "relatedPage": "/services/australia/manufacturer-evidence",
+    "relatedPage": "/services/australia/tga-manufacturer-evidence-and-conformity-assessment",
     "contentEvidence": [
       "Navigate the complexities of the Australia regulatory landscape with our comprehensive Conformity Assessment Support support.",
       "The regulatory authority in Australia maintains strict requirements for Conformity Assessment Support. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Australia market.",
@@ -546,8 +546,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.ivd.tsx",
-    "route": "/services/australia/ivd",
+    "file": "services.australia.tga-ivd-regulatory-strategy-and-artg-inclusion.tsx",
+    "route": "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -562,8 +562,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.labeling.tsx",
-    "route": "/services/australia/labeling",
+    "file": "services.australia.australian-labelling-ifu-and-ausudid-compliance.tsx",
+    "route": "/services/australia/australian-labelling-ifu-and-ausudid-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -578,8 +578,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.manufacturer-evidence.tsx",
-    "route": "/services/australia/manufacturer-evidence",
+    "file": "services.australia.tga-manufacturer-evidence-and-conformity-assessment.tsx",
+    "route": "/services/australia/tga-manufacturer-evidence-and-conformity-assessment",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -594,14 +594,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.pms.tsx",
-    "route": "/services/australia/pms",
+    "file": "services.australia.tga-post-market-surveillance-pms-plans.tsx",
+    "route": "/services/australia/tga-post-market-surveillance-pms-plans",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic PMS template; detailed post-market page covers the same service.",
-    "relatedPage": "/services/australia/post-market",
+    "relatedPage": "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
     "contentEvidence": [
       "TGA Post-Market Surveillance (PMS) Plans",
       "Navigate the complexities of the Australia regulatory landscape with our comprehensive Post-Market Surveillance (PMS) support.",
@@ -614,8 +614,8 @@
     }
   },
   {
-    "file": "services.australia.post-market.tsx",
-    "route": "/services/australia/post-market",
+    "file": "services.australia.tga-post-market-vigilance-mdir-and-recall-management.tsx",
+    "route": "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -630,8 +630,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.software.tsx",
-    "route": "/services/australia/software",
+    "file": "services.australia.australia-tga-samd-ai-and-cybersecurity-support.tsx",
+    "route": "/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -646,14 +646,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.sponsor.tsx",
-    "route": "/services/australia/sponsor",
+    "file": "services.australia.independent-tga-sponsor-representation.tsx",
+    "route": "/services/australia/independent-tga-sponsor-representation",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic sponsor template; detailed Australian Sponsor page covers governance and obligations.",
-    "relatedPage": "/services/australia/australian-sponsor",
+    "relatedPage": "/services/australia/tga-australian-sponsor-services-and-governance",
     "contentEvidence": [
       "Independent TGA Sponsor Representation",
       "Navigate the complexities of the Australia regulatory landscape with our comprehensive Australian Sponsor Services support.",
@@ -666,8 +666,8 @@
     }
   },
   {
-    "file": "services.australia.supply-chain.tsx",
-    "route": "/services/australia/supply-chain",
+    "file": "services.australia.australia-importer-distributor-and-supply-chain-compliance.tsx",
+    "route": "/services/australia/australia-importer-distributor-and-supply-chain-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -682,8 +682,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.technical-documentation.tsx",
-    "route": "/services/australia/technical-documentation",
+    "file": "services.australia.tga-technical-documentation-and-essential-principles.tsx",
+    "route": "/services/australia/tga-technical-documentation-and-essential-principles",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -698,8 +698,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.testing-strategy.tsx",
-    "route": "/services/australia/testing-strategy",
+    "file": "services.australia.tga-testing-strategy-and-laboratory-coordination-australia.tsx",
+    "route": "/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -714,8 +714,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.australia.tga-audit.tsx",
-    "route": "/services/australia/tga-audit",
+    "file": "services.australia.tga-application-audit-defense-and-rfi-support.tsx",
+    "route": "/services/australia/tga-application-audit-defense-and-rfi-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -730,8 +730,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.anvisa-queries.tsx",
-    "route": "/services/brazil/anvisa-queries",
+    "file": "services.brazil.anvisa-exigencia-and-inspection-response-strategy.tsx",
+    "route": "/services/brazil/anvisa-exigencia-and-inspection-response-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -746,8 +746,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.bgmp.tsx",
-    "route": "/services/brazil/bgmp",
+    "file": "services.brazil.anvisa-bgmp-and-cbpf-compliance-rdc-665-2022.tsx",
+    "route": "/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -766,8 +766,8 @@
     }
   },
   {
-    "file": "services.brazil.brh.tsx",
-    "route": "/services/brazil/brh",
+    "file": "services.brazil.brazil-registration-holder-brh-and-anvisa-interface.tsx",
+    "route": "/services/brazil/brazil-registration-holder-brh-and-anvisa-interface",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -782,8 +782,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.change-management.tsx",
-    "route": "/services/brazil/change-management",
+    "file": "services.brazil.anvisa-changes-variations-and-revalidacao-support.tsx",
+    "route": "/services/brazil/anvisa-changes-variations-and-revalidacao-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -798,8 +798,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.classification.tsx",
-    "route": "/services/brazil/classification",
+    "file": "services.brazil.anvisa-medical-device-and-ivd-classification-brazil.tsx",
+    "route": "/services/brazil/anvisa-medical-device-and-ivd-classification-brazil",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -814,8 +814,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.ivd.tsx",
-    "route": "/services/brazil/ivd",
+    "file": "services.brazil.anvisa-ivd-registration-and-performance-evidence-rdc-830-2023.tsx",
+    "route": "/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -830,8 +830,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.labeling.tsx",
-    "route": "/services/brazil/labeling",
+    "file": "services.brazil.anvisa-portuguese-labeling-udi-and-siud-compliance.tsx",
+    "route": "/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -846,14 +846,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.notificacao.tsx",
-    "route": "/services/brazil/notificacao",
+    "file": "services.brazil.anvisa-notificacao-pathway-brazil.tsx",
+    "route": "/services/brazil/anvisa-notificacao-pathway-brazil",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic notification template; combined registration page explains actual pathways.",
-    "relatedPage": "/services/brazil/registration",
+    "relatedPage": "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
     "contentEvidence": [
       "Navigate the complexities of the Brazil regulatory landscape with our comprehensive NotificaÃ§Ã£o Pathway support.",
       "The regulatory authority in Brazil maintains strict requirements for NotificaÃ§Ã£o Pathway. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Brazil market.",
@@ -862,8 +862,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.registration.tsx",
-    "route": "/services/brazil/registration",
+    "file": "services.brazil.anvisa-notification-and-registration-cadastro-and-registro.tsx",
+    "route": "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -878,14 +878,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.registro.tsx",
-    "route": "/services/brazil/registro",
+    "file": "services.brazil.anvisa-registro-pathway-brazil.tsx",
+    "route": "/services/brazil/anvisa-registro-pathway-brazil",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic registration template; combined registration page explains actual pathways.",
-    "relatedPage": "/services/brazil/registration",
+    "relatedPage": "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
     "contentEvidence": [
       "Navigate the complexities of the Brazil regulatory landscape with our comprehensive Registro Pathway support.",
       "The regulatory authority in Brazil maintains strict requirements for Registro Pathway. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the Brazil market.",
@@ -894,8 +894,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.software.tsx",
-    "route": "/services/brazil/software",
+    "file": "services.brazil.anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting.tsx",
+    "route": "/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -910,8 +910,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.technical-documentation.tsx",
-    "route": "/services/brazil/technical-documentation",
+    "file": "services.brazil.anvisa-technical-dossier-and-safety-performance-evidence.tsx",
+    "route": "/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -926,14 +926,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.technovigilance.tsx",
-    "route": "/services/brazil/technovigilance",
+    "file": "services.brazil.anvisa-technovigilance-services-brazil.tsx",
+    "route": "/services/brazil/anvisa-technovigilance-services-brazil",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic alternate-spelling page; tecnovigilance page has the substantive incident workflow.",
-    "relatedPage": "/services/brazil/tecnovigilance",
+    "relatedPage": "/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
     "contentEvidence": [
       "ANVISA Technovigilance Services (Brazil)",
       "Navigate the complexities of the Brazil regulatory landscape with our comprehensive Technovigilance Services support.",
@@ -942,8 +942,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.tecnovigilance.tsx",
-    "route": "/services/brazil/tecnovigilance",
+    "file": "services.brazil.anvisa-tecnovigilancia-and-post-market-surveillance.tsx",
+    "route": "/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -958,8 +958,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.brazil.testing-strategy.tsx",
-    "route": "/services/brazil/testing-strategy",
+    "file": "services.brazil.anvisa-testing-strategy-and-laboratory-coordination.tsx",
+    "route": "/services/brazil/anvisa-testing-strategy-and-laboratory-coordination",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -974,8 +974,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.change-management.tsx",
-    "route": "/services/canada/change-management",
+    "file": "services.canada.health-canada-mdl-amendments-and-significant-changes.tsx",
+    "route": "/services/canada/health-canada-mdl-amendments-and-significant-changes",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -990,8 +990,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.classification.tsx",
-    "route": "/services/canada/classification",
+    "file": "services.canada.health-canada-medical-device-and-ivd-classification.tsx",
+    "route": "/services/canada/health-canada-medical-device-and-ivd-classification",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1006,8 +1006,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.inspection.tsx",
-    "route": "/services/canada/inspection",
+    "file": "services.canada.health-canada-inspection-readiness-and-defense.tsx",
+    "route": "/services/canada/health-canada-inspection-readiness-and-defense",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1022,8 +1022,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.ivd.tsx",
-    "route": "/services/canada/ivd",
+    "file": "services.canada.health-canada-ivd-registration-and-performance-strategy.tsx",
+    "route": "/services/canada/health-canada-ivd-registration-and-performance-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1038,8 +1038,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.labeling.tsx",
-    "route": "/services/canada/labeling",
+    "file": "services.canada.health-canada-labelling-and-bilingual-ifu-compliance.tsx",
+    "route": "/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1054,8 +1054,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.liaison.tsx",
-    "route": "/services/canada/liaison",
+    "file": "services.canada.health-canada-regulatory-liaison-support.tsx",
+    "route": "/services/canada/health-canada-regulatory-liaison-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -1070,8 +1070,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.mdel.tsx",
-    "route": "/services/canada/mdel",
+    "file": "services.canada.health-canada-medical-device-establishment-licence-mdel.tsx",
+    "route": "/services/canada/health-canada-medical-device-establishment-licence-mdel",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1086,8 +1086,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.mdl.tsx",
-    "route": "/services/canada/mdl",
+    "file": "services.canada.health-canada-medical-device-licence-mdl-application.tsx",
+    "route": "/services/canada/health-canada-medical-device-licence-mdl-application",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1102,8 +1102,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.mdsap.tsx",
-    "route": "/services/canada/mdsap",
+    "file": "services.canada.mdsap-canada-and-iso-13485-quality-system-readiness.tsx",
+    "route": "/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1118,8 +1118,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.pms.tsx",
-    "route": "/services/canada/pms",
+    "file": "services.canada.health-canada-post-market-surveillance-and-mpr.tsx",
+    "route": "/services/canada/health-canada-post-market-surveillance-and-mpr",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1134,8 +1134,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.renewals.tsx",
-    "route": "/services/canada/renewals",
+    "file": "services.canada.health-canada-mdl-and-mdel-annual-renewals.tsx",
+    "route": "/services/canada/health-canada-mdl-and-mdel-annual-renewals",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -1150,8 +1150,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.software.tsx",
-    "route": "/services/canada/software",
+    "file": "services.canada.health-canada-samd-and-cybersecurity-compliance.tsx",
+    "route": "/services/canada/health-canada-samd-and-cybersecurity-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1166,8 +1166,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.supply-chain.tsx",
-    "route": "/services/canada/supply-chain",
+    "file": "services.canada.canada-medical-device-supply-chain-and-importer-compliance.tsx",
+    "route": "/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1182,8 +1182,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.technical-documentation.tsx",
-    "route": "/services/canada/technical-documentation",
+    "file": "services.canada.health-canada-technical-documentation-and-evidence-strategy.tsx",
+    "route": "/services/canada/health-canada-technical-documentation-and-evidence-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1198,8 +1198,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.canada.testing-strategy.tsx",
-    "route": "/services/canada/testing-strategy",
+    "file": "services.canada.health-canada-testing-strategy-and-laboratory-coordination.tsx",
+    "route": "/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1282,8 +1282,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.classification.tsx",
-    "route": "/services/eu/classification",
+    "file": "services.eu.eu-mdr-and-ivdr-qualification-and-classification.tsx",
+    "route": "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1298,8 +1298,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.clinical-evaluation.tsx",
-    "route": "/services/eu/clinical-evaluation",
+    "file": "services.eu.eu-mdr-clinical-evaluation-and-cer-strategy.tsx",
+    "route": "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1318,8 +1318,8 @@
     }
   },
   {
-    "file": "services.eu.deficiency-response.tsx",
-    "route": "/services/eu/deficiency-response",
+    "file": "services.eu.eu-notified-body-technical-review-and-deficiency-response.tsx",
+    "route": "/services/eu/eu-notified-body-technical-review-and-deficiency-response",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1334,8 +1334,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.ear.tsx",
-    "route": "/services/eu/ear",
+    "file": "services.eu.european-authorized-representative-ec-rep-ear-services.tsx",
+    "route": "/services/eu/european-authorized-representative-ec-rep-ear-services",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1350,8 +1350,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.eudamed.tsx",
-    "route": "/services/eu/eudamed",
+    "file": "services.eu.eudamed-udi-and-economic-operator-compliance.tsx",
+    "route": "/services/eu/eudamed-udi-and-economic-operator-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1450,8 +1450,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.labeling.tsx",
-    "route": "/services/eu/labeling",
+    "file": "services.eu.eu-mdr-and-ivdr-labeling-and-ifu-compliance.tsx",
+    "route": "/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1502,8 +1502,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.pms-pmcf.tsx",
-    "route": "/services/eu/pms-pmcf",
+    "file": "services.eu.post-market-clinical-follow-up-pmcf-strategy-and-execution.tsx",
+    "route": "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1518,14 +1518,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.eu.pms.tsx",
-    "route": "/services/eu/pms",
+    "file": "services.eu.eu-post-market-surveillance-pms-and-vigilance-support.tsx",
+    "route": "/services/eu/eu-post-market-surveillance-pms-and-vigilance-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "navigation-bridge",
     "reason": "Brief introduction links to the full PMS/PMCF service rather than answering a separate need.",
-    "relatedPage": "/services/eu/pms-pmcf",
+    "relatedPage": "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
     "contentEvidence": [
       "EU Post-Market Surveillance (PMS) &amp; Vigilance Support",
       "Post-market compliance is an active clinical and quality evidence system. We connect complaints, safety signals, risk management updates, and clinical evaluations into one unified lifecycle process.",
@@ -1538,8 +1538,8 @@
     }
   },
   {
-    "file": "services.eu.qms.tsx",
-    "route": "/services/eu/qms",
+    "file": "services.eu.eu-mdr-and-ivdr-qms-integration-and-prrc.tsx",
+    "route": "/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1558,8 +1558,8 @@
     }
   },
   {
-    "file": "services.eu.software.tsx",
-    "route": "/services/eu/software",
+    "file": "services.eu.eu-mdr-software-and-samd-regulatory-consulting.tsx",
+    "route": "/services/eu/eu-mdr-software-and-samd-regulatory-consulting",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1594,8 +1594,8 @@
     }
   },
   {
-    "file": "services.eu.testing-strategy.tsx",
-    "route": "/services/eu/testing-strategy",
+    "file": "services.eu.eu-mdr-testing-strategy-and-laboratory-coordination.tsx",
+    "route": "/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1610,8 +1610,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.india.class-a-import.tsx",
-    "route": "/services/india/class-a-import",
+    "file": "services.india.class-a-import-registration-as-per-gsr-777e.tsx",
+    "route": "/services/india/class-a-import-registration-as-per-gsr-777e",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1630,8 +1630,8 @@
     }
   },
   {
-    "file": "services.india.free-sale.tsx",
-    "route": "/services/india/free-sale",
+    "file": "services.india.free-sale-certificate-fsc.tsx",
+    "route": "/services/india/free-sale-certificate-fsc",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1650,8 +1650,8 @@
     }
   },
   {
-    "file": "services.india.investigational-devices.tsx",
-    "route": "/services/india/investigational-devices",
+    "file": "services.india.investigational-devices-in-govt-hospitals-forms-md-18-md-19.tsx",
+    "route": "/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1670,8 +1670,8 @@
     }
   },
   {
-    "file": "services.india.ivd-clinical-performance.tsx",
-    "route": "/services/india/ivd-clinical-performance",
+    "file": "services.india.ivd-clinical-performance-evaluations-forms-md-24-md-25.tsx",
+    "route": "/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1690,8 +1690,8 @@
     }
   },
   {
-    "file": "services.india.ivd-testing.tsx",
-    "route": "/services/india/ivd-testing",
+    "file": "services.india.test-license-for-ivd-devices-forms-md-16-md-17.tsx",
+    "route": "/services/india/test-license-for-ivd-devices-forms-md-16-md-17",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1710,8 +1710,8 @@
     }
   },
   {
-    "file": "services.india.loan-class-a-b.tsx",
-    "route": "/services/india/loan-class-a-b",
+    "file": "services.india.loan-licenses-for-class-a-and-b-forms-md-4-and-md-6.tsx",
+    "route": "/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1726,8 +1726,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.india.loan-class-c-d.tsx",
-    "route": "/services/india/loan-class-c-d",
+    "file": "services.india.loan-licenses-for-class-c-and-d-forms-md-8-and-md-10.tsx",
+    "route": "/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1742,8 +1742,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.india.market-standing.tsx",
-    "route": "/services/india/market-standing",
+    "file": "services.india.market-standing-certificate-msc.tsx",
+    "route": "/services/india/market-standing-certificate-msc",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1762,8 +1762,8 @@
     }
   },
   {
-    "file": "services.india.md-42.tsx",
-    "route": "/services/india/md-42",
+    "file": "services.india.md-42-medical-device-registration-certificate.tsx",
+    "route": "/services/india/md-42-medical-device-registration-certificate",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1782,8 +1782,8 @@
     }
   },
   {
-    "file": "services.india.mfg-class-a-b.tsx",
-    "route": "/services/india/mfg-class-a-b",
+    "file": "services.india.class-a-and-b-manufacturing-forms-md-3-and-md-5.tsx",
+    "route": "/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1802,8 +1802,8 @@
     }
   },
   {
-    "file": "services.india.mfg-class-a-gsr.tsx",
-    "route": "/services/india/mfg-class-a-gsr",
+    "file": "services.india.class-a-manufacturing-registration-gsr-777e.tsx",
+    "route": "/services/india/class-a-manufacturing-registration-gsr-777e",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1818,8 +1818,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.india.mfg-class-c-d.tsx",
-    "route": "/services/india/mfg-class-c-d",
+    "file": "services.india.class-c-and-d-manufacturing-forms-md-7-and-md-9.tsx",
+    "route": "/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1834,8 +1834,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.india.neutral-code.tsx",
-    "route": "/services/india/neutral-code",
+    "file": "services.india.neutral-code-certificate-special-code.tsx",
+    "route": "/services/india/neutral-code-certificate-special-code",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1854,8 +1854,8 @@
     }
   },
   {
-    "file": "services.india.non-conviction.tsx",
-    "route": "/services/india/non-conviction",
+    "file": "services.india.non-conviction-certificate-ncc.tsx",
+    "route": "/services/india/non-conviction-certificate-ncc",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1874,8 +1874,8 @@
     }
   },
   {
-    "file": "services.india.novel-ivds.tsx",
-    "route": "/services/india/novel-ivds",
+    "file": "services.india.import-authorization-for-novel-ivds-md-26-and-md-27.tsx",
+    "route": "/services/india/import-authorization-for-novel-ivds-md-26-and-md-27",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1894,8 +1894,8 @@
     }
   },
   {
-    "file": "services.india.personal-use.tsx",
-    "route": "/services/india/personal-use",
+    "file": "services.india.patient-personal-use-device-import-forms-md-20-md-21.tsx",
+    "route": "/services/india/patient-personal-use-device-import-forms-md-20-md-21",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -1914,8 +1914,8 @@
     }
   },
   {
-    "file": "services.india.predicate-devices.tsx",
-    "route": "/services/india/predicate-devices",
+    "file": "services.india.import-license-for-predicate-medical-devices-forms-md-14-md-15.tsx",
+    "route": "/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2126,8 +2126,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.change-management.tsx",
-    "route": "/services/new-zealand/change-management",
+    "file": "services.new-zealand.change-notification-and-lifecycle-support-new-zealand.tsx",
+    "route": "/services/new-zealand/change-notification-and-lifecycle-support-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2142,8 +2142,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.classification.tsx",
-    "route": "/services/new-zealand/classification",
+    "file": "services.new-zealand.regulatory-strategy-and-product-classification-new-zealand.tsx",
+    "route": "/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2158,8 +2158,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.ivd.tsx",
-    "route": "/services/new-zealand/ivd",
+    "file": "services.new-zealand.ivd-regulatory-and-performance-evidence-support-new-zealand.tsx",
+    "route": "/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2174,8 +2174,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.labeling.tsx",
-    "route": "/services/new-zealand/labeling",
+    "file": "services.new-zealand.labelling-ifu-and-advertising-compliance-new-zealand.tsx",
+    "route": "/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2190,8 +2190,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.medsafe-queries.tsx",
-    "route": "/services/new-zealand/medsafe-queries",
+    "file": "services.new-zealand.medsafe-queries-safety-review-and-technical-response.tsx",
+    "route": "/services/new-zealand/medsafe-queries-safety-review-and-technical-response",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2206,8 +2206,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.post-market.tsx",
-    "route": "/services/new-zealand/post-market",
+    "file": "services.new-zealand.post-market-surveillance-adverse-events-and-recall-support-new-zealand.tsx",
+    "route": "/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2238,8 +2238,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.software.tsx",
-    "route": "/services/new-zealand/software",
+    "file": "services.new-zealand.samd-software-ai-and-cybersecurity-new-zealand.tsx",
+    "route": "/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2270,8 +2270,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.supply-chain.tsx",
-    "route": "/services/new-zealand/supply-chain",
+    "file": "services.new-zealand.importer-distributor-and-supply-chain-compliance-new-zealand.tsx",
+    "route": "/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2286,8 +2286,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.technical-documentation.tsx",
-    "route": "/services/new-zealand/technical-documentation",
+    "file": "services.new-zealand.medsafe-technical-documentation-and-evidence-new-zealand.tsx",
+    "route": "/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2302,8 +2302,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.new-zealand.testing-strategy.tsx",
-    "route": "/services/new-zealand/testing-strategy",
+    "file": "services.new-zealand.testing-strategy-and-laboratory-coordination-new-zealand.tsx",
+    "route": "/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2350,8 +2350,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.change-management.tsx",
-    "route": "/services/saudi-arabia/change-management",
+    "file": "services.saudi-arabia.changes-renewal-and-lifecycle-support-sfda.tsx",
+    "route": "/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2366,8 +2366,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.classification.tsx",
-    "route": "/services/saudi-arabia/classification",
+    "file": "services.saudi-arabia.sfda-regulatory-strategy-and-product-classification.tsx",
+    "route": "/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2382,8 +2382,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.establishment-licensing.tsx",
-    "route": "/services/saudi-arabia/establishment-licensing",
+    "file": "services.saudi-arabia.medical-device-establishment-licensing-and-local-supply-chain.tsx",
+    "route": "/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2398,8 +2398,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.inspection.tsx",
-    "route": "/services/saudi-arabia/inspection",
+    "file": "services.saudi-arabia.sfda-inspection-and-quality-system-readiness.tsx",
+    "route": "/services/saudi-arabia/sfda-inspection-and-quality-system-readiness",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2414,8 +2414,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.ivd.tsx",
-    "route": "/services/saudi-arabia/ivd",
+    "file": "services.saudi-arabia.ivd-registration-and-performance-evidence-sfda.tsx",
+    "route": "/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2430,8 +2430,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.labeling.tsx",
-    "route": "/services/saudi-arabia/labeling",
+    "file": "services.saudi-arabia.labeling-ifu-udi-and-advertising-compliance-sfda.tsx",
+    "route": "/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2446,8 +2446,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.mdma.tsx",
-    "route": "/services/saudi-arabia/mdma",
+    "file": "services.saudi-arabia.mdma-application-and-technical-file-strategy.tsx",
+    "route": "/services/saudi-arabia/mdma-application-and-technical-file-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2462,8 +2462,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.post-market.tsx",
-    "route": "/services/saudi-arabia/post-market",
+    "file": "services.saudi-arabia.post-market-surveillance-vigilance-and-field-safety-actions-sfda.tsx",
+    "route": "/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2478,8 +2478,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.sfda-queries.tsx",
-    "route": "/services/saudi-arabia/sfda-queries",
+    "file": "services.saudi-arabia.sfda-queries-deficiency-response-and-technical-review-support.tsx",
+    "route": "/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2494,8 +2494,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.software.tsx",
-    "route": "/services/saudi-arabia/software",
+    "file": "services.saudi-arabia.samd-software-ai-and-cybersecurity-sfda.tsx",
+    "route": "/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2510,8 +2510,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.technical-documentation.tsx",
-    "route": "/services/saudi-arabia/technical-documentation",
+    "file": "services.saudi-arabia.technical-documentation-and-essential-principles-sfda.tsx",
+    "route": "/services/saudi-arabia/technical-documentation-and-essential-principles-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2526,8 +2526,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.saudi-arabia.testing-strategy.tsx",
-    "route": "/services/saudi-arabia/testing-strategy",
+    "file": "services.saudi-arabia.testing-strategy-and-laboratory-coordination-sfda.tsx",
+    "route": "/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2558,8 +2558,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.change-management.tsx",
-    "route": "/services/uae/change-management",
+    "file": "services.uae.changes-variations-renewal-and-lifecycle-support-uae.tsx",
+    "route": "/services/uae/changes-variations-renewal-and-lifecycle-support-uae",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2574,8 +2574,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.classification.tsx",
-    "route": "/services/uae/classification",
+    "file": "services.uae.uae-mohap-regulatory-strategy-and-product-classification.tsx",
+    "route": "/services/uae/uae-mohap-regulatory-strategy-and-product-classification",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2590,8 +2590,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.ecas.tsx",
-    "route": "/services/uae/ecas",
+    "file": "services.uae.ecas-moiat-conformity-assessment-where-separately-applicable.tsx",
+    "route": "/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2606,8 +2606,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.ivd.tsx",
-    "route": "/services/uae/ivd",
+    "file": "services.uae.ivd-registration-and-performance-evidence-uae.tsx",
+    "route": "/services/uae/ivd-registration-and-performance-evidence-uae",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2622,8 +2622,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.labeling.tsx",
-    "route": "/services/uae/labeling",
+    "file": "services.uae.labeling-ifu-packaging-and-market-claim-compliance-uae.tsx",
+    "route": "/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2638,8 +2638,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.local-applicant.tsx",
-    "route": "/services/uae/local-applicant",
+    "file": "services.uae.uae-local-applicant-marketing-authorization-holder-and-regulatory-interface.tsx",
+    "route": "/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2654,8 +2654,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.mohap-queries.tsx",
-    "route": "/services/uae/mohap-queries",
+    "file": "services.uae.mohap-queries-deficiency-response-and-technical-review-support.tsx",
+    "route": "/services/uae/mohap-queries-deficiency-response-and-technical-review-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2670,8 +2670,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.mohap-registration.tsx",
-    "route": "/services/uae/mohap-registration",
+    "file": "services.uae.mohap-medical-device-registration-and-dossier-strategy.tsx",
+    "route": "/services/uae/mohap-medical-device-registration-and-dossier-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2686,8 +2686,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.post-market.tsx",
-    "route": "/services/uae/post-market",
+    "file": "services.uae.post-market-monitoring-vigilance-and-field-actions-uae.tsx",
+    "route": "/services/uae/post-market-monitoring-vigilance-and-field-actions-uae",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2718,8 +2718,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.software.tsx",
-    "route": "/services/uae/software",
+    "file": "services.uae.samd-software-ai-and-cybersecurity-uae-mohap.tsx",
+    "route": "/services/uae/samd-software-ai-and-cybersecurity-uae-mohap",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2734,8 +2734,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.supply-chain.tsx",
-    "route": "/services/uae/supply-chain",
+    "file": "services.uae.medical-warehouse-local-supply-chain-and-commercial-readiness.tsx",
+    "route": "/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2750,8 +2750,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.technical-documentation.tsx",
-    "route": "/services/uae/technical-documentation",
+    "file": "services.uae.technical-documentation-and-safety-performance-evidence-uae-mohap.tsx",
+    "route": "/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2766,8 +2766,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uae.testing-strategy.tsx",
-    "route": "/services/uae/testing-strategy",
+    "file": "services.uae.testing-strategy-and-laboratory-coordination-uae.tsx",
+    "route": "/services/uae/testing-strategy-and-laboratory-coordination-uae",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2782,8 +2782,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uk.audit-readiness.tsx",
-    "route": "/services/uk/audit-readiness",
+    "file": "services.uk.uk-approved-body-and-conformity-assessment-readiness.tsx",
+    "route": "/services/uk/uk-approved-body-and-conformity-assessment-readiness",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2802,8 +2802,8 @@
     }
   },
   {
-    "file": "services.uk.conformity-assurance.tsx",
-    "route": "/services/uk/conformity-assurance",
+    "file": "services.uk.ce-recognition-and-ukca-market-access-strategy.tsx",
+    "route": "/services/uk/ce-recognition-and-ukca-market-access-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2822,8 +2822,8 @@
     }
   },
   {
-    "file": "services.uk.dors-registration.tsx",
-    "route": "/services/uk/dors-registration",
+    "file": "services.uk.mhra-dors-device-registration-system.tsx",
+    "route": "/services/uk/mhra-dors-device-registration-system",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
@@ -2842,14 +2842,14 @@
     }
   },
   {
-    "file": "services.uk.labeling.tsx",
-    "route": "/services/uk/labeling",
+    "file": "services.uk.ukca-labeling-and-artwork-compliance.tsx",
+    "route": "/services/uk/ukca-labeling-and-artwork-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "underdeveloped",
     "reason": "Five broad artwork bullets and a pointer to technical-file review; needs route-specific labelling detail and examples.",
-    "relatedPage": "/services/uk/technical-file",
+    "relatedPage": "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
     "contentEvidence": [
       "UKCA marking symbol placement, proportions and legibility on primary/secondary packaging",
       "UK Responsible Person (UKRP) legal name and address identification requirements",
@@ -2869,7 +2869,7 @@
     "indexable": false,
     "category": "navigation-bridge",
     "reason": "Brief liaison pointer directs users to full UKRP representation; no independent service explanation.",
-    "relatedPage": "/services/uk/ukrp",
+    "relatedPage": "/services/uk/uk-responsible-person-ukrp-services",
     "contentEvidence": [
       "MHRA Communication Liaison &amp; Regulatory Representation",
       "As your appointed UK Responsible Person, we act as your definitive point of contact for all regulatory communications, inspections, and inquiries from the MHRA.",
@@ -2894,8 +2894,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uk.pms.tsx",
-    "route": "/services/uk/pms",
+    "file": "services.uk.uk-post-market-surveillance-pms-pmsr-and-psur.tsx",
+    "route": "/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2914,14 +2914,14 @@
     }
   },
   {
-    "file": "services.uk.qms.tsx",
-    "route": "/services/uk/qms",
+    "file": "services.uk.qms-implementation-and-uk-mdr-alignment.tsx",
+    "route": "/services/uk/qms-implementation-and-uk-mdr-alignment",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "underdeveloped",
     "reason": "Short ISO/QMS list and a link to audit readiness; needs implementation process and distinct deliverables.",
-    "relatedPage": "/services/uk/audit-readiness",
+    "relatedPage": "/services/uk/uk-approved-body-and-conformity-assessment-readiness",
     "contentEvidence": [
       "ISO 13485:2016 quality management system adaptation for UK MDR 2002",
       "Post-market surveillance and UK vigilance reporting standard operating procedures",
@@ -2934,14 +2934,14 @@
     }
   },
   {
-    "file": "services.uk.regulatory-writing.tsx",
-    "route": "/services/uk/regulatory-writing",
+    "file": "services.uk.uk-regulatory-and-clinical-writing-services.tsx",
+    "route": "/services/uk/uk-regulatory-and-clinical-writing-services",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "underdeveloped",
     "reason": "Short list of documents and a technical-file pointer; needs a distinct authoring process and scope.",
-    "relatedPage": "/services/uk/technical-file",
+    "relatedPage": "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
     "contentEvidence": [
       "Clinical Evaluation Reports (CER) and clinical literature search protocols",
       "Post-Market Surveillance Plans, PMSR and Periodic Safety Update Reports (PSUR)",
@@ -2954,8 +2954,8 @@
     }
   },
   {
-    "file": "services.uk.technical-file.tsx",
-    "route": "/services/uk/technical-file",
+    "file": "services.uk.uk-mdr-technical-documentation-and-gap-assessment.tsx",
+    "route": "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2970,8 +2970,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.uk.vigilance.tsx",
-    "route": "/services/uk/vigilance",
+    "file": "services.uk.uk-vigilance-and-field-safety-corrective-action-fsca.tsx",
+    "route": "/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -2990,14 +2990,14 @@
     }
   },
   {
-    "file": "services.usa.513g.tsx",
-    "route": "/services/usa/513g",
+    "file": "services.usa.fda-513g-requests-for-information.tsx",
+    "route": "/services/usa/fda-513g-requests-for-information",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic template does not explain the 513(g) request, inputs or limitations.",
-    "relatedPage": "/services/usa/classification",
+    "relatedPage": "/services/usa/fda-medical-device-classification-and-pathway-assessment",
     "contentEvidence": [
       "Navigate the complexities of the US FDA regulatory landscape with our comprehensive 513(g) Requests for Information support.",
       "The FDA has rigorous expectations when it comes to 513(g) Requests for Information. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the US market.",
@@ -3006,8 +3006,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.classification.tsx",
-    "route": "/services/usa/classification",
+    "file": "services.usa.fda-medical-device-classification-and-pathway-assessment.tsx",
+    "route": "/services/usa/fda-medical-device-classification-and-pathway-assessment",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3022,8 +3022,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.de-novo.tsx",
-    "route": "/services/usa/de-novo",
+    "file": "services.usa.us-fda-de-novo-classification-pathway.tsx",
+    "route": "/services/usa/us-fda-de-novo-classification-pathway",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3038,8 +3038,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.deficiency-response.tsx",
-    "route": "/services/usa/deficiency-response",
+    "file": "services.usa.fda-additional-information-and-deficiency-response.tsx",
+    "route": "/services/usa/fda-additional-information-and-deficiency-response",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3054,8 +3054,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.e-star.tsx",
-    "route": "/services/usa/e-star",
+    "file": "services.usa.fda-estar-dossier-preparation-and-submission.tsx",
+    "route": "/services/usa/fda-estar-dossier-preparation-and-submission",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3074,8 +3074,8 @@
     }
   },
   {
-    "file": "services.usa.establishment-registration.tsx",
-    "route": "/services/usa/establishment-registration",
+    "file": "services.usa.fda-establishment-registration-and-device-listing.tsx",
+    "route": "/services/usa/fda-establishment-registration-and-device-listing",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3106,14 +3106,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.pma.tsx",
-    "route": "/services/usa/pma",
+    "file": "services.usa.us-fda-premarket-approval-pma-support.tsx",
+    "route": "/services/usa/us-fda-premarket-approval-pma-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "overlapping-content",
     "reason": "Shares approximately 78% of shorter-page eight-word sequences with De Novo and repeats Class I/II De Novo eligibility on the PMA page; needs a dedicated PMA rewrite.",
-    "relatedPage": "/services/usa/de-novo",
+    "relatedPage": "/services/usa/us-fda-de-novo-classification-pathway",
     "contentEvidence": [
       "No appropriate legally marketed predicate exists",
       "The device is novel but may be suitable for Class I or Class II controls",
@@ -3122,8 +3122,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.post-clearance-lifecycle.tsx",
-    "route": "/services/usa/post-clearance-lifecycle",
+    "file": "services.usa.fda-post-clearance-and-device-lifecycle-support.tsx",
+    "route": "/services/usa/fda-post-clearance-and-device-lifecycle-support",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3138,8 +3138,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.predicate-strategy.tsx",
-    "route": "/services/usa/predicate-strategy",
+    "file": "services.usa.fda-predicate-and-substantial-equivalence-strategy.tsx",
+    "route": "/services/usa/fda-predicate-and-substantial-equivalence-strategy",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3154,8 +3154,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.q-submission.tsx",
-    "route": "/services/usa/q-submission",
+    "file": "services.usa.fda-q-submission-and-pre-submission-consulting.tsx",
+    "route": "/services/usa/fda-q-submission-and-pre-submission-consulting",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3174,8 +3174,8 @@
     }
   },
   {
-    "file": "services.usa.qmsr-inspection.tsx",
-    "route": "/services/usa/qmsr-inspection",
+    "file": "services.usa.fda-qmsr-and-inspection-preparation.tsx",
+    "route": "/services/usa/fda-qmsr-and-inspection-preparation",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3190,14 +3190,14 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.rfd-pre-rfd.tsx",
-    "route": "/services/usa/rfd-pre-rfd",
+    "file": "services.usa.fda-rfd-and-pre-rfd-designations.tsx",
+    "route": "/services/usa/fda-rfd-and-pre-rfd-designations",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,
     "category": "placeholder",
     "reason": "Generic template lacks RFD versus Pre-RFD jurisdiction detail.",
-    "relatedPage": "/services/usa/classification",
+    "relatedPage": "/services/usa/fda-medical-device-classification-and-pathway-assessment",
     "contentEvidence": [
       "Navigate the complexities of the US FDA regulatory landscape with our comprehensive RFD & Pre-RFD Designations support.",
       "The FDA has rigorous expectations when it comes to RFD & Pre-RFD Designations. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the US market.",
@@ -3206,8 +3206,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.testing-strategy.tsx",
-    "route": "/services/usa/testing-strategy",
+    "file": "services.usa.us-fda-medical-device-testing-strategy-and-standards-compliance.tsx",
+    "route": "/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": true,
@@ -3222,8 +3222,8 @@
     "searchConsole": null
   },
   {
-    "file": "services.usa.udi-gudid.tsx",
-    "route": "/services/usa/udi-gudid",
+    "file": "services.usa.fda-udi-and-gudid-compliance-solutions.tsx",
+    "route": "/services/usa/fda-udi-and-gudid-compliance-solutions",
     "reviewDate": "2026-09-07",
     "previouslyNoindex": true,
     "indexable": false,

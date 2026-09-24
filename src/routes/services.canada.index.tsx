@@ -130,7 +130,7 @@ const services12 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/canada/classification",
+    to: "/services/canada/health-canada-medical-device-and-ivd-classification",
     icon: Target,
     title: "1. Regulatory Strategy &\nProduct Classification",
     bullets: [
@@ -142,7 +142,7 @@ const services12 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/canada/mdl",
+    to: "/services/canada/health-canada-medical-device-licence-mdl-application",
     icon: FileText,
     title: "2. MDL & MDEL\nRegistration",
     bullets: [
@@ -154,7 +154,7 @@ const services12 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/canada/mdsap",
+    to: "/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
     icon: ShieldCheck,
     title: "3. MDSAP Canada\nCertification",
     bullets: [
@@ -166,7 +166,7 @@ const services12 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/canada/technical-documentation",
+    to: "/services/canada/health-canada-technical-documentation-and-evidence-strategy",
     icon: BookOpen,
     title: "4. Technical Documentation\nReview",
     bullets: [
@@ -178,7 +178,7 @@ const services12 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/canada/testing-strategy",
+    to: "/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLab Coordination",
     bullets: [
@@ -190,7 +190,7 @@ const services12 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/canada/labeling",
+    to: "/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
     icon: Languages,
     title: "6. Labelling & Bilingual\nRequirements",
     bullets: [
@@ -202,7 +202,7 @@ const services12 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/canada/pms",
+    to: "/services/canada/health-canada-post-market-surveillance-and-mpr",
     icon: RefreshCw,
     title: "7. Post-Market Surveillance\n& Vigilance",
     bullets: [
@@ -214,7 +214,7 @@ const services12 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/canada/change-management",
+    to: "/services/canada/health-canada-mdl-amendments-and-significant-changes",
     icon: Layers,
     title: "8. Licence Maintenance\n& Changes",
     bullets: [
@@ -226,7 +226,7 @@ const services12 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/canada/supply-chain",
+    to: "/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
     icon: Factory,
     title: "9. Manufacturer & Importer\nObligations",
     bullets: [
@@ -238,7 +238,7 @@ const services12 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/canada/ivd",
+    to: "/services/canada/health-canada-ivd-registration-and-performance-strategy",
     icon: Syringe,
     title: "10. IVD Registration\nSupport",
     bullets: [
@@ -250,7 +250,7 @@ const services12 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/canada/software",
+    to: "/services/canada/health-canada-samd-and-cybersecurity-compliance",
     icon: Monitor,
     title: "11. Software & Cybersecurity\nCompliance",
     bullets: [
@@ -262,7 +262,7 @@ const services12 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/canada/inspection",
+    to: "/services/canada/health-canada-inspection-readiness-and-defense",
     icon: Search,
     title: "12. Compliance Audits &\nInspection Support",
     bullets: [

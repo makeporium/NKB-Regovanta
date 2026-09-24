@@ -1,7 +1,7 @@
 {
   "timestamp": "2026-09-04T17:14:41.259Z",
   "patched": [
-    "case-studies.fda-biocompatibility.tsx (desc updated)",
+    "case-studies.using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need.tsx (desc updated)",
     "industries.ivd.tsx",
     "industries.medical-devices.tsx",
     "markets.index.tsx",
@@ -138,7 +138,7 @@
     "case-studies.algorithm-claim.tsx (nothing new)",
     "case-studies.australia-tga.tsx (nothing new)",
     "case-studies.eu-mdr-remediation.tsx (nothing new)",
-    "case-studies.fda-simulated-use.tsx (nothing new)",
+    "case-studies.avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature.tsx (nothing new)",
     "case-studies.index.tsx (complete)",
     "case-studies.test-smarter.tsx (nothing new)",
     "case-studies.tsx (complete)",

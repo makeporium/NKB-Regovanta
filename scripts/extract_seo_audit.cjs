@@ -17,7 +17,7 @@ function extractSEO(filePath, content) {
   };
 
   // Determine route URL from filename
-  // e.g., services.usa.510k.tsx -> /services/usa/510k
+  // e.g., services.usa.510k.tsx -> /services/usa/fda-510k-premarket-notification-and-clearance-consulting
   // index.tsx -> /
   // services.usa.index.tsx -> /services/usa
   let routePart = fileName.replace(/\.tsx$/, '');

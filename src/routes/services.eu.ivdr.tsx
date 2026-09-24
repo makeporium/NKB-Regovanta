@@ -230,7 +230,7 @@ const ivdrCards = [
       "EC REP, Importer, Distributor mandates",
       "UDI-DI & Basic UDI-DI management",
     ],
-    to: "/services/eu/eudamed",
+    to: "/services/eu/eudamed-udi-and-economic-operator-compliance",
   },
   {
     icon: RefreshCw,

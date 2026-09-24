@@ -113,21 +113,21 @@ const trustBarItems = [
 ];
 
 const quickNavItems = [
-  { title: "Regulatory Strategy", to: "/services/new-zealand/classification", icon: Target },
+  { title: "Regulatory Strategy", to: "/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand", icon: Target },
   { title: "WAND Notification", to: "/services/new-zealand/wand-notification", icon: FileText },
   { title: "NZ Sponsor Services", to: "/services/new-zealand/sponsor", icon: Users },
-  { title: "Technical Documentation", to: "/services/new-zealand/technical-documentation", icon: BookOpen },
-  { title: "Testing & Laboratory", to: "/services/new-zealand/testing-strategy", icon: FlaskConical },
-  { title: "Post-Market Compliance", to: "/services/new-zealand/post-market", icon: ShieldCheck },
-  { title: "Change & Lifecycle", to: "/services/new-zealand/change-management", icon: RefreshCw },
-  { title: "Supply Chain & Importer", to: "/services/new-zealand/supply-chain", icon: Building2 },
+  { title: "Technical Documentation", to: "/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand", icon: BookOpen },
+  { title: "Testing & Laboratory", to: "/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand", icon: FlaskConical },
+  { title: "Post-Market Compliance", to: "/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand", icon: ShieldCheck },
+  { title: "Change & Lifecycle", to: "/services/new-zealand/change-notification-and-lifecycle-support-new-zealand", icon: RefreshCw },
+  { title: "Supply Chain & Importer", to: "/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand", icon: Building2 },
 ];
 
 const services13 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/new-zealand/classification",
+    to: "/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand",
     icon: Target,
     title: "1. Regulatory Strategy\n& Product Classification",
     bullets: [
@@ -166,7 +166,7 @@ const services13 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/new-zealand/technical-documentation",
+    to: "/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand",
     icon: BookOpen,
     title: "4. Technical Documentation\n& Review",
     bullets: [
@@ -179,7 +179,7 @@ const services13 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/new-zealand/testing-strategy",
+    to: "/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -192,7 +192,7 @@ const services13 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/new-zealand/ivd",
+    to: "/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand",
     icon: Syringe,
     title: "6. IVD Regulatory &\nPerformance Evidence",
     bullets: [
@@ -205,7 +205,7 @@ const services13 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/new-zealand/software",
+    to: "/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand",
     icon: Monitor,
     title: "7. SaMD / Software /\nAI & Cybersecurity",
     bullets: [
@@ -218,7 +218,7 @@ const services13 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/new-zealand/labeling",
+    to: "/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand",
     icon: Languages,
     title: "8. Labeling, IFU &\nAdvertising Compliance",
     bullets: [
@@ -231,7 +231,7 @@ const services13 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/new-zealand/post-market",
+    to: "/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand",
     icon: ShieldCheck,
     title: "9. Post-Market Surveillance,\nVigilance & Recalls",
     bullets: [
@@ -257,7 +257,7 @@ const services13 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/new-zealand/change-management",
+    to: "/services/new-zealand/change-notification-and-lifecycle-support-new-zealand",
     icon: RefreshCw,
     title: "11. Change, Variation &\nLifecycle Support",
     bullets: [
@@ -270,7 +270,7 @@ const services13 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/new-zealand/medsafe-queries",
+    to: "/services/new-zealand/medsafe-queries-safety-review-and-technical-response",
     icon: AlertTriangle,
     title: "12. Medsafe Queries,\nDeficiency & Response",
     bullets: [
@@ -283,7 +283,7 @@ const services13 = [
   {
     num: "13",
     id: "sec-13",
-    to: "/services/new-zealand/supply-chain",
+    to: "/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand",
     icon: Building2,
     title: "13. Importer, Distributor\n& Supply Chain",
     bullets: [
@@ -729,7 +729,7 @@ function NZHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/new-zealand/classification"
+                to="/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your NZ Regulatory Pathway →

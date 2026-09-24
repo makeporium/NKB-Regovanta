@@ -100,7 +100,7 @@ const coreServices = [
     icon: Search,
     title: "Regulatory Strategy\n& Classification",
     desc: "Define regulatory pathway, classification, applicable rules and conformity assessment route under MDR or IVDR.",
-    to: "/services/eu/classification",
+    to: "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
     cta: "Define Your EU Regulatory Pathway",
   },
   {
@@ -114,7 +114,7 @@ const coreServices = [
     icon: Activity,
     title: "Clinical Evaluation\n& MDR Evidence Strategy",
     desc: "CEP, CER, literature strategy, clinical evidence gap analysis and PMCF planning tailored to device risk and claims.",
-    to: "/services/eu/clinical-evaluation",
+    to: "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
     cta: "Review Your MDR Clinical Evidence",
   },
   {
@@ -142,14 +142,14 @@ const coreServices = [
     icon: Shield,
     title: "PMS, PMCF/PMPF\n& Vigilance",
     desc: "PMS planning, PMCF/PMPF execution, PSUR, trend reporting, vigilance and FSCA support.",
-    to: "/services/eu/pms-pmcf",
+    to: "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
     cta: "Strengthen Your Post-Market System",
   },
   {
     icon: Database,
     title: "EUDAMED & Economic\nOperator Support",
     desc: "SRN, actor registration, EUDAMED modules, data submission and UDI support for devices & IVDs.",
-    to: "/services/eu/eudamed",
+    to: "/services/eu/eudamed-udi-and-economic-operator-compliance",
     cta: "Prepare Your EU Registration Strategy",
   },
   {

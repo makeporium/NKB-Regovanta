@@ -370,7 +370,7 @@ const allArticles = [
     title: "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
     desc: "EUDAMED’s first four modules are now mandatory. Review the registration, UDI/device, certificate and market-surveillance implications manufacturers should address now.",
     img: "/assets/insights/database_analytics_eudamed.jpg",
-    route: "/insights/eu-mdr-2026",
+    route: "/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
   },
   {
     id: "39",
@@ -378,7 +378,7 @@ const allArticles = [
     title: "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
     desc: "FDA has moved away from QSIT to the QMSR-aligned inspection process. Learn what investigators may review and how to strengthen inspection readiness.",
     img: "/assets/insights/inspection_clean_facility.jpg",
-    route: "/insights/fda-inspections-2026",
+    route: "/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
   },
 ];
 
@@ -520,7 +520,7 @@ function Insights() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredArticles.map((article) => (
               <div key={article.id} className="card-elevated overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 bg-white rounded-xl border border-border/50 group">
-                <Link to={article.route} className="block overflow-hidden relative">
+                <Link to={article.route} preload="intent" className="block overflow-hidden relative">
                   <div className="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-sm shadow-sm z-10">
                     {article.category}
                   </div>
@@ -532,7 +532,7 @@ function Insights() {
                   />
                 </Link>
                 <div className="p-7 flex flex-col flex-1">
-                  <Link to={article.route}>
+                  <Link to={article.route} preload="intent">
                     <h2 className="text-lg font-bold text-navy leading-snug group-hover:text-accent transition-colors line-clamp-2">
                       {article.title}
                     </h2>
@@ -540,7 +540,7 @@ function Insights() {
                   <p className="mt-3 text-[13.5px] leading-relaxed text-navy/70 flex-1 line-clamp-3">
                     {article.desc}
                   </p>
-                  <Link to={article.route} className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#0b3a96] hover:text-accent transition-colors uppercase tracking-wide">
+                  <Link to={article.route} preload="intent" className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-bold text-[#0b3a96] hover:text-accent transition-colors uppercase tracking-wide">
                     Read Full Guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>

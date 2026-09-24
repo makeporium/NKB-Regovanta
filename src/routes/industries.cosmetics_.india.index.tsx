@@ -103,7 +103,7 @@ function IndiaCosmetics() {
               <p className="text-sm text-navy/70 leading-relaxed mb-8 flex-1">
                 Are you a foreign cosmetic brand looking to expand into India? Navigate the complexities of SUGAM registration, Form COS-1 applications, and Authorized Agent requirements to secure your Form COS-2 Import Registration Certificate.
               </p>
-              <Link to="/industries/cosmetics/india/for-importer" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
+              <Link to="/industries/cosmetics/india/cosmetics-registration-for-importers-in-india" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
                 Read More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -114,7 +114,7 @@ function IndiaCosmetics() {
               <p className="text-sm text-navy/70 leading-relaxed mb-8 flex-1">
                 Are you establishing a cosmetic manufacturing facility in India? We provide comprehensive support for obtaining your Form COS-8 manufacturing license, facility compliance audits, and local regulatory strategies.
               </p>
-              <Link to="/industries/cosmetics/india/for-manufacturer" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
+              <Link to="/industries/cosmetics/india/cosmetic-manufacturing-license-in-india" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
                 Read More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -5,8 +5,8 @@ file,title_len,desc_len,has_canonical,h1_count,has_schema,has_faq,has_og,has_bre
 "case-studies.algorithm-claim.tsx",75,0,1,1,0,0,0,0,19
 "case-studies.australia-tga.tsx",61,0,1,1,0,0,0,0,17
 "case-studies.eu-mdr-remediation.tsx",75,0,1,1,0,0,0,0,19
-"case-studies.fda-biocompatibility.tsx",75,0,1,1,0,0,0,0,19
-"case-studies.fda-simulated-use.tsx",70,0,1,1,0,0,0,0,17
+"case-studies.using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need.tsx",75,0,1,1,0,0,0,0,19
+"case-studies.avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature.tsx",70,0,1,1,0,0,0,0,17
 "case-studies.index.tsx",53,170,1,1,0,0,1,0,9
 "case-studies.test-smarter.tsx",56,0,1,1,0,0,0,0,17
 "case-studies.tsx",7,0,0,0,0,0,0,0,40

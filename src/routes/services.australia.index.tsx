@@ -122,7 +122,7 @@ const services12 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/australia/classification",
+    to: "/services/australia/tga-medical-device-and-ivd-classification",
     icon: Target,
     title: "1. Australia Regulatory\nStrategy & Classification",
     bullets: [
@@ -134,7 +134,7 @@ const services12 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/australia/artg-inclusion",
+    to: "/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
     icon: FileText,
     title: "2. ARTG Inclusion\n& Application Support",
     bullets: [
@@ -146,7 +146,7 @@ const services12 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/australia/australian-sponsor",
+    to: "/services/australia/tga-australian-sponsor-services-and-governance",
     icon: UserCheck,
     title: "3. Australian\nSponsor Services",
     bullets: [
@@ -158,7 +158,7 @@ const services12 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/australia/technical-documentation",
+    to: "/services/australia/tga-technical-documentation-and-essential-principles",
     icon: BookOpen,
     title: "4. Technical Documentation\n& Essential Principles",
     bullets: [
@@ -170,7 +170,7 @@ const services12 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/australia/testing-strategy",
+    to: "/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -182,7 +182,7 @@ const services12 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/australia/tga-audit",
+    to: "/services/australia/tga-application-audit-defense-and-rfi-support",
     icon: Search,
     title: "6. TGA Application Audit\n& Submission Support",
     bullets: [
@@ -194,7 +194,7 @@ const services12 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/australia/ivd",
+    to: "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
     icon: Syringe,
     title: "7. IVD Market Access\n& Performance Evidence",
     bullets: [
@@ -206,7 +206,7 @@ const services12 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/australia/software",
+    to: "/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
     icon: Monitor,
     title: "8. SaMD / Software\n& Cybersecurity Compliance",
     bullets: [
@@ -218,7 +218,7 @@ const services12 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/australia/post-market",
+    to: "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
     icon: RefreshCw,
     title: "9. Post-Market Surveillance\n& Vigilance (IRIS)",
     bullets: [
@@ -230,7 +230,7 @@ const services12 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/australia/labeling",
+    to: "/services/australia/australian-labelling-ifu-and-ausudid-compliance",
     icon: Languages,
     title: "10. Labelling, IFU &\nAdvertising Compliance",
     bullets: [
@@ -242,7 +242,7 @@ const services12 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/australia/supply-chain",
+    to: "/services/australia/australia-importer-distributor-and-supply-chain-compliance",
     icon: Factory,
     title: "11. Manufacturer, Importer\n& Supply Chain Compliance",
     bullets: [
@@ -254,7 +254,7 @@ const services12 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/australia/change-management",
+    to: "/services/australia/tga-artg-variations-and-significant-change-support",
     icon: Layers,
     title: "12. Change Management\n& Variations",
     bullets: [
@@ -787,7 +787,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/classification"
+                to="/services/australia/tga-medical-device-and-ivd-classification"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your TGA Regulatory Pathway →
@@ -843,7 +843,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/manufacturer-evidence"
+                to="/services/australia/tga-manufacturer-evidence-and-conformity-assessment"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Review Your Manufacturer Evidence →
@@ -898,7 +898,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/artg-inclusion"
+                to="/services/australia/tga-artg-inclusion-strategy-and-application-preparation"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare Your ARTG Inclusion →
@@ -954,7 +954,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/australian-sponsor"
+                to="/services/australia/tga-australian-sponsor-services-and-governance"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Discuss Australian Sponsor Support →

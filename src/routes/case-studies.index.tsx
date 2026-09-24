@@ -48,7 +48,7 @@ const studies = [
     title: "Test Smarter. Cover More.",
     desc: "A hypodermic syringe family included multiple syringe sizes and needle gauges. Testing every possible configuration could have meant unnecessary duplication...",
     img: imgTestSmarter,
-    route: "/case-studies/test-smarter",
+    route: "/case-studies/medical-device-testing-strategy-test-smarter-cover-more",
     metrics: [
       { icon: Clock, value: "Faster", label: "Time to Market" },
       { icon: CheckCircle2, value: "100%", label: "Defensible Strategy" },
@@ -61,7 +61,7 @@ const studies = [
     title: "Avoiding Duplicate Simulated-Use Work",
     desc: "Leveraging an already marketed safety feature to prevent an automatic repeat usability study for a sharps-injury-prevention feature.",
     img: imgSimulatedUse,
-    route: "/case-studies/fda-simulated-use",
+    route: "/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature",
     metrics: [
       { icon: CheckCircle2, value: "Accepted", label: "By FDA" },
       { icon: Clock, value: "Saved", label: "Study Time" },
@@ -74,7 +74,7 @@ const studies = [
     title: "Predicate + Biocompatibility Equivalence",
     desc: "Using predicate and material equivalence to avoid repeating biocompatibility testing without regulatory need for a medical device.",
     img: imgBiocompatibility,
-    route: "/case-studies/fda-biocompatibility",
+    route: "/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need",
     metrics: [
       { icon: ShieldCheck, value: "Proven", label: "Safety Argument" },
       { icon: CheckCircle2, value: "Avoided", label: "Repeat Testing" },
@@ -87,7 +87,7 @@ const studies = [
     title: "Technical Documentation Remediation",
     desc: "Converting a legacy technical file to MDR without rebuilding everything from zero. Treating it as evidence remediation and traceability engineering.",
     img: imgEU,
-    route: "/case-studies/eu-mdr-remediation",
+    route: "/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero",
     metrics: [
       { icon: Trophy, value: "Retained", label: "Valid Evidence" },
       { icon: Clock, value: "Reduced", label: "Document Rework" },
@@ -100,7 +100,7 @@ const studies = [
     title: "Reuse What’s Accepted. Rebuild Only What’s Needed.",
     desc: "Leveraging existing overseas regulatory approvals and evidence to support Australian ARTG inclusion without unnecessary duplication.",
     img: imgAustralia,
-    route: "/case-studies/australia-tga",
+    route: "/case-studies/australia-tga-artg-inclusion-case-study",
     metrics: [
       { icon: Clock, value: "Faster", label: "Preparation" },
       { icon: BarChart3, value: "Less", label: "Duplication" },
@@ -113,7 +113,7 @@ const studies = [
     title: "The Algorithm Can Do More. Should the Label?",
     desc: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose...",
     img: imgAlgorithm,
-    route: "/case-studies/algorithm-claim",
+    route: "/case-studies/the-algorithm-can-do-more-should-the-label",
     metrics: [
       { icon: CheckCircle2, value: "Clear", label: "Intended Purpose" },
       { icon: ShieldCheck, value: "Targeted", label: "Evidence Plan" },

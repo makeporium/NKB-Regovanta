@@ -147,41 +147,48 @@ export function extractTableOfContents(html: string): { toc: TocItem[]; htmlWith
   return { toc, htmlWithIds };
 }
 
+const articleCache = new Map<string, { post: ArticleDetail | null; faqs: FaqItem[] }>();
+
 export const Route = createFileRoute("/insights/$slug")({
   loader: async ({ params }) => {
     const slug = params.slug;
+    if (articleCache.has(slug)) {
+      return articleCache.get(slug)!;
+    }
     try {
-      const { data, error } = await supabase
-        .from("blog_posts")
-        .select(`
-          id,
-          title,
-          slug,
-          content_html,
-          excerpt,
-          featured_image,
-          featured_image_alt,
-          featured_image_caption,
-          publish_date_ist,
-          updated_at,
-          status,
-          authors (name, credentials, photo_url, bio),
-          blog_categories (name, slug)
-        `)
-        .eq("slug", slug)
-        .maybeSingle();
+      const [postResult, seoResult] = await Promise.all([
+        supabase
+          .from("blog_posts")
+          .select(`
+            id,
+            title,
+            slug,
+            content_html,
+            excerpt,
+            featured_image,
+            featured_image_alt,
+            featured_image_caption,
+            publish_date_ist,
+            updated_at,
+            status,
+            authors (name, credentials, photo_url, bio),
+            blog_categories (name, slug)
+          `)
+          .eq("slug", slug)
+          .maybeSingle(),
+        supabase
+          .from("seo_meta")
+          .select("*")
+          .eq("target_url", `/insights/${slug}`)
+          .maybeSingle(),
+      ]);
 
-      if (error || !data) {
+      const data = postResult.data;
+      if (postResult.error || !data) {
         return { post: null, faqs: [] };
       }
 
-      // Fetch attached SEO Meta
-      const { data: seoMeta } = await supabase
-        .from("seo_meta")
-        .select("*")
-        .eq("target_url", `/insights/${slug}`)
-        .maybeSingle();
-
+      const seoMeta = seoResult.data;
       const cleanedHtml = cleanArticleHtml(data.content_html || "");
       const faqs = extractFaqs(cleanedHtml);
 
@@ -225,11 +232,14 @@ export const Route = createFileRoute("/insights/$slug")({
         tags,
       };
 
-      return { post: item, faqs };
+      const result = { post: item, faqs };
+      articleCache.set(slug, result);
+      return result;
     } catch {
       return { post: null, faqs: [] };
     }
   },
+  pendingComponent: DynamicArticleSkeleton,
 
   head: ({ loaderData, params }) => {
     const post = loaderData?.post;
@@ -772,3 +782,49 @@ function DynamicInsightArticlePage() {
     </article>
   );
 }
+
+function DynamicArticleSkeleton() {
+  return (
+    <article className="min-h-screen bg-white py-12 lg:py-16 text-slate-900 animate-pulse">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 flex items-center justify-between">
+          <div className="h-4 w-44 bg-slate-200 rounded" />
+          <div className="h-4 w-32 bg-slate-200 rounded hidden sm:block" />
+        </div>
+
+        <header className="mb-10 max-w-4xl">
+          <div className="h-6 w-32 bg-blue-100 rounded-full mb-4" />
+          <div className="h-9 w-full bg-slate-200 rounded-lg mb-3" />
+          <div className="h-9 w-4/5 bg-slate-200 rounded-lg mb-5" />
+          <div className="h-4 w-2/3 bg-slate-100 rounded mb-8" />
+
+          <div className="flex items-center gap-4 py-4 border-y border-slate-100">
+            <div className="w-11 h-11 rounded-full bg-slate-200 shrink-0" />
+            <div className="space-y-2 flex-1">
+              <div className="h-3.5 w-36 bg-slate-200 rounded" />
+              <div className="h-3 w-52 bg-slate-100 rounded" />
+            </div>
+          </div>
+        </header>
+
+        <div className="w-full h-64 sm:h-96 bg-slate-100 rounded-2xl mb-12" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 space-y-4">
+            <div className="h-4 w-full bg-slate-100 rounded" />
+            <div className="h-4 w-full bg-slate-100 rounded" />
+            <div className="h-4 w-5/6 bg-slate-100 rounded" />
+            <div className="h-7 w-1/2 bg-slate-200 rounded mt-8 mb-4" />
+            <div className="h-4 w-full bg-slate-100 rounded" />
+            <div className="h-4 w-11/12 bg-slate-100 rounded" />
+            <div className="h-4 w-full bg-slate-100 rounded" />
+          </div>
+          <div className="hidden lg:block lg:col-span-4">
+            <div className="h-64 w-full bg-slate-50 border border-slate-100 rounded-2xl p-6" />
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+

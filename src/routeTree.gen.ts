@@ -22,12 +22,12 @@ import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
-import { Route as CaseStudiesAlgorithmClaimRouteImport } from './routes/case-studies.algorithm-claim'
-import { Route as CaseStudiesAustraliaTgaRouteImport } from './routes/case-studies.australia-tga'
-import { Route as CaseStudiesEuMdrRemediationRouteImport } from './routes/case-studies.eu-mdr-remediation'
-import { Route as CaseStudiesFdaBiocompatibilityRouteImport } from './routes/case-studies.fda-biocompatibility'
-import { Route as CaseStudiesFdaSimulatedUseRouteImport } from './routes/case-studies.fda-simulated-use'
-import { Route as CaseStudiesTestSmarterRouteImport } from './routes/case-studies.test-smarter'
+import { Route as CaseStudiesAustraliaTgaArtgInclusionCaseStudyRouteImport } from './routes/case-studies.australia-tga-artg-inclusion-case-study'
+import { Route as CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRouteImport } from './routes/case-studies.avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+import { Route as CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRouteImport } from './routes/case-studies.converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+import { Route as CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRouteImport } from './routes/case-studies.medical-device-testing-strategy-test-smarter-cover-more'
+import { Route as CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRouteImport } from './routes/case-studies.the-algorithm-can-do-more-should-the-label'
+import { Route as CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRouteImport } from './routes/case-studies.using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
 import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as IndustriesCosmeticsRouteImport } from './routes/industries.cosmetics'
 import { Route as IndustriesIvdRouteImport } from './routes/industries.ivd'
@@ -48,10 +48,10 @@ import { Route as InsightsDentalScannersManufacturingRegulatoryStandardsRouteImp
 import { Route as InsightsDynamicRiskManagementSoftwareMedicalDevicesRouteImport } from './routes/insights.dynamic-risk-management-software-medical-devices'
 import { Route as InsightsEffectiveCapaSystemMedicalDevicesRouteImport } from './routes/insights.effective-capa-system-medical-devices'
 import { Route as InsightsEuAiActMedicalDevicesRouteImport } from './routes/insights.eu-ai-act-medical-devices'
-import { Route as InsightsEuMdr2026RouteImport } from './routes/insights.eu-mdr-2026'
+import { Route as InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRouteImport } from './routes/insights.eu-mdr-2026-eudamed-classification-and-compliance-priorities'
 import { Route as InsightsEuMdrComplianceChallengesRouteImport } from './routes/insights.eu-mdr-compliance-challenges'
 import { Route as InsightsFda510kProgramModernizationSafetyStandardsRouteImport } from './routes/insights.fda-510k-program-modernization-safety-standards'
-import { Route as InsightsFdaInspections2026RouteImport } from './routes/insights.fda-inspections-2026'
+import { Route as InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRouteImport } from './routes/insights.fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
 import { Route as InsightsFdaQSubPreSubmissionMeetingGuideRouteImport } from './routes/insights.fda-q-sub-pre-submission-meeting-guide'
 import { Route as InsightsFdaQmsr2026RouteImport } from './routes/insights.fda-qmsr-2026'
 import { Route as InsightsFdaQmsrComplianceGuideRouteImport } from './routes/insights.fda-qmsr-compliance-guide'
@@ -126,102 +126,102 @@ import { Route as IndustriesIvdEuRouteImport } from './routes/industries.ivd_.eu
 import { Route as IndustriesIvdIndiaRouteImport } from './routes/industries.ivd_.india'
 import { Route as IndustriesIvdUsaRouteImport } from './routes/industries.ivd_.usa'
 import { Route as ServicesAustraliaIndexRouteImport } from './routes/services.australia.index'
-import { Route as ServicesAustraliaArtgInclusionRouteImport } from './routes/services.australia.artg-inclusion'
-import { Route as ServicesAustraliaAustralianSponsorRouteImport } from './routes/services.australia.australian-sponsor'
-import { Route as ServicesAustraliaChangeManagementRouteImport } from './routes/services.australia.change-management'
-import { Route as ServicesAustraliaClassificationRouteImport } from './routes/services.australia.classification'
-import { Route as ServicesAustraliaClinicalEvidenceRouteImport } from './routes/services.australia.clinical-evidence'
-import { Route as ServicesAustraliaConformityAssessmentRouteImport } from './routes/services.australia.conformity-assessment'
-import { Route as ServicesAustraliaIvdRouteImport } from './routes/services.australia.ivd'
-import { Route as ServicesAustraliaLabelingRouteImport } from './routes/services.australia.labeling'
-import { Route as ServicesAustraliaManufacturerEvidenceRouteImport } from './routes/services.australia.manufacturer-evidence'
-import { Route as ServicesAustraliaPmsRouteImport } from './routes/services.australia.pms'
-import { Route as ServicesAustraliaPostMarketRouteImport } from './routes/services.australia.post-market'
-import { Route as ServicesAustraliaSoftwareRouteImport } from './routes/services.australia.software'
-import { Route as ServicesAustraliaSponsorRouteImport } from './routes/services.australia.sponsor'
-import { Route as ServicesAustraliaSupplyChainRouteImport } from './routes/services.australia.supply-chain'
-import { Route as ServicesAustraliaTechnicalDocumentationRouteImport } from './routes/services.australia.technical-documentation'
-import { Route as ServicesAustraliaTestingStrategyRouteImport } from './routes/services.australia.testing-strategy'
-import { Route as ServicesAustraliaTgaAuditRouteImport } from './routes/services.australia.tga-audit'
+import { Route as ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRouteImport } from './routes/services.australia.australia-importer-distributor-and-supply-chain-compliance'
+import { Route as ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRouteImport } from './routes/services.australia.australia-tga-samd-ai-and-cybersecurity-support'
+import { Route as ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRouteImport } from './routes/services.australia.australian-labelling-ifu-and-ausudid-compliance'
+import { Route as ServicesAustraliaIndependentTgaSponsorRepresentationRouteImport } from './routes/services.australia.independent-tga-sponsor-representation'
+import { Route as ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRouteImport } from './routes/services.australia.tga-application-audit-defense-and-rfi-support'
+import { Route as ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRouteImport } from './routes/services.australia.tga-artg-inclusion-strategy-and-application-preparation'
+import { Route as ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRouteImport } from './routes/services.australia.tga-artg-variations-and-significant-change-support'
+import { Route as ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRouteImport } from './routes/services.australia.tga-australian-sponsor-services-and-governance'
+import { Route as ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRouteImport } from './routes/services.australia.tga-clinical-evidence-and-benefit-risk-strategy'
+import { Route as ServicesAustraliaTgaConformityAssessmentSupportRouteImport } from './routes/services.australia.tga-conformity-assessment-support'
+import { Route as ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRouteImport } from './routes/services.australia.tga-ivd-regulatory-strategy-and-artg-inclusion'
+import { Route as ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRouteImport } from './routes/services.australia.tga-manufacturer-evidence-and-conformity-assessment'
+import { Route as ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRouteImport } from './routes/services.australia.tga-medical-device-and-ivd-classification'
+import { Route as ServicesAustraliaTgaPostMarketSurveillancePmsPlansRouteImport } from './routes/services.australia.tga-post-market-surveillance-pms-plans'
+import { Route as ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRouteImport } from './routes/services.australia.tga-post-market-vigilance-mdir-and-recall-management'
+import { Route as ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRouteImport } from './routes/services.australia.tga-technical-documentation-and-essential-principles'
+import { Route as ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRouteImport } from './routes/services.australia.tga-testing-strategy-and-laboratory-coordination-australia'
 import { Route as ServicesBrazilIndexRouteImport } from './routes/services.brazil.index'
-import { Route as ServicesBrazilAnvisaQueriesRouteImport } from './routes/services.brazil.anvisa-queries'
-import { Route as ServicesBrazilBgmpRouteImport } from './routes/services.brazil.bgmp'
-import { Route as ServicesBrazilBrhRouteImport } from './routes/services.brazil.brh'
-import { Route as ServicesBrazilChangeManagementRouteImport } from './routes/services.brazil.change-management'
-import { Route as ServicesBrazilClassificationRouteImport } from './routes/services.brazil.classification'
-import { Route as ServicesBrazilIvdRouteImport } from './routes/services.brazil.ivd'
-import { Route as ServicesBrazilLabelingRouteImport } from './routes/services.brazil.labeling'
-import { Route as ServicesBrazilNotificacaoRouteImport } from './routes/services.brazil.notificacao'
-import { Route as ServicesBrazilRegistrationRouteImport } from './routes/services.brazil.registration'
-import { Route as ServicesBrazilRegistroRouteImport } from './routes/services.brazil.registro'
-import { Route as ServicesBrazilSoftwareRouteImport } from './routes/services.brazil.software'
-import { Route as ServicesBrazilTechnicalDocumentationRouteImport } from './routes/services.brazil.technical-documentation'
-import { Route as ServicesBrazilTechnovigilanceRouteImport } from './routes/services.brazil.technovigilance'
-import { Route as ServicesBrazilTecnovigilanceRouteImport } from './routes/services.brazil.tecnovigilance'
-import { Route as ServicesBrazilTestingStrategyRouteImport } from './routes/services.brazil.testing-strategy'
+import { Route as ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022RouteImport } from './routes/services.brazil.anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+import { Route as ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRouteImport } from './routes/services.brazil.anvisa-changes-variations-and-revalidacao-support'
+import { Route as ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRouteImport } from './routes/services.brazil.anvisa-exigencia-and-inspection-response-strategy'
+import { Route as ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023RouteImport } from './routes/services.brazil.anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+import { Route as ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRouteImport } from './routes/services.brazil.anvisa-medical-device-and-ivd-classification-brazil'
+import { Route as ServicesBrazilAnvisaNotificacaoPathwayBrazilRouteImport } from './routes/services.brazil.anvisa-notificacao-pathway-brazil'
+import { Route as ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRouteImport } from './routes/services.brazil.anvisa-notification-and-registration-cadastro-and-registro'
+import { Route as ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRouteImport } from './routes/services.brazil.anvisa-portuguese-labeling-udi-and-siud-compliance'
+import { Route as ServicesBrazilAnvisaRegistroPathwayBrazilRouteImport } from './routes/services.brazil.anvisa-registro-pathway-brazil'
+import { Route as ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRouteImport } from './routes/services.brazil.anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+import { Route as ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRouteImport } from './routes/services.brazil.anvisa-technical-dossier-and-safety-performance-evidence'
+import { Route as ServicesBrazilAnvisaTechnovigilanceServicesBrazilRouteImport } from './routes/services.brazil.anvisa-technovigilance-services-brazil'
+import { Route as ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRouteImport } from './routes/services.brazil.anvisa-tecnovigilancia-and-post-market-surveillance'
+import { Route as ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRouteImport } from './routes/services.brazil.anvisa-testing-strategy-and-laboratory-coordination'
+import { Route as ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRouteImport } from './routes/services.brazil.brazil-registration-holder-brh-and-anvisa-interface'
 import { Route as ServicesCanadaIndexRouteImport } from './routes/services.canada.index'
-import { Route as ServicesCanadaChangeManagementRouteImport } from './routes/services.canada.change-management'
-import { Route as ServicesCanadaClassificationRouteImport } from './routes/services.canada.classification'
-import { Route as ServicesCanadaInspectionRouteImport } from './routes/services.canada.inspection'
-import { Route as ServicesCanadaIvdRouteImport } from './routes/services.canada.ivd'
-import { Route as ServicesCanadaLabelingRouteImport } from './routes/services.canada.labeling'
-import { Route as ServicesCanadaLiaisonRouteImport } from './routes/services.canada.liaison'
-import { Route as ServicesCanadaMdelRouteImport } from './routes/services.canada.mdel'
-import { Route as ServicesCanadaMdlRouteImport } from './routes/services.canada.mdl'
-import { Route as ServicesCanadaMdsapRouteImport } from './routes/services.canada.mdsap'
-import { Route as ServicesCanadaPmsRouteImport } from './routes/services.canada.pms'
-import { Route as ServicesCanadaRenewalsRouteImport } from './routes/services.canada.renewals'
-import { Route as ServicesCanadaSoftwareRouteImport } from './routes/services.canada.software'
-import { Route as ServicesCanadaSupplyChainRouteImport } from './routes/services.canada.supply-chain'
-import { Route as ServicesCanadaTechnicalDocumentationRouteImport } from './routes/services.canada.technical-documentation'
-import { Route as ServicesCanadaTestingStrategyRouteImport } from './routes/services.canada.testing-strategy'
+import { Route as ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRouteImport } from './routes/services.canada.canada-medical-device-supply-chain-and-importer-compliance'
+import { Route as ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRouteImport } from './routes/services.canada.health-canada-inspection-readiness-and-defense'
+import { Route as ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRouteImport } from './routes/services.canada.health-canada-ivd-registration-and-performance-strategy'
+import { Route as ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRouteImport } from './routes/services.canada.health-canada-labelling-and-bilingual-ifu-compliance'
+import { Route as ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRouteImport } from './routes/services.canada.health-canada-mdl-amendments-and-significant-changes'
+import { Route as ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRouteImport } from './routes/services.canada.health-canada-mdl-and-mdel-annual-renewals'
+import { Route as ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRouteImport } from './routes/services.canada.health-canada-medical-device-and-ivd-classification'
+import { Route as ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRouteImport } from './routes/services.canada.health-canada-medical-device-establishment-licence-mdel'
+import { Route as ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRouteImport } from './routes/services.canada.health-canada-medical-device-licence-mdl-application'
+import { Route as ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRouteImport } from './routes/services.canada.health-canada-post-market-surveillance-and-mpr'
+import { Route as ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRouteImport } from './routes/services.canada.health-canada-regulatory-liaison-support'
+import { Route as ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRouteImport } from './routes/services.canada.health-canada-samd-and-cybersecurity-compliance'
+import { Route as ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRouteImport } from './routes/services.canada.health-canada-technical-documentation-and-evidence-strategy'
+import { Route as ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRouteImport } from './routes/services.canada.health-canada-testing-strategy-and-laboratory-coordination'
+import { Route as ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRouteImport } from './routes/services.canada.mdsap-canada-and-iso-13485-quality-system-readiness'
 import { Route as ServicesEuIndexRouteImport } from './routes/services.eu.index'
 import { Route as ServicesEuArticle117RouteImport } from './routes/services.eu.article-117'
 import { Route as ServicesEuCeMarkingRouteImport } from './routes/services.eu.ce-marking'
 import { Route as ServicesEuCeRegistrationRouteImport } from './routes/services.eu.ce-registration'
 import { Route as ServicesEuChangeAssessmentRouteImport } from './routes/services.eu.change-assessment'
 import { Route as ServicesEuClassDIvdrRouteImport } from './routes/services.eu.class-d-ivdr'
-import { Route as ServicesEuClassificationRouteImport } from './routes/services.eu.classification'
-import { Route as ServicesEuClinicalEvaluationRouteImport } from './routes/services.eu.clinical-evaluation'
-import { Route as ServicesEuDeficiencyResponseRouteImport } from './routes/services.eu.deficiency-response'
-import { Route as ServicesEuEarRouteImport } from './routes/services.eu.ear'
-import { Route as ServicesEuEudamedRouteImport } from './routes/services.eu.eudamed'
+import { Route as ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRouteImport } from './routes/services.eu.eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+import { Route as ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRouteImport } from './routes/services.eu.eu-mdr-and-ivdr-qms-integration-and-prrc'
+import { Route as ServicesEuEuMdrAndIvdrQualificationAndClassificationRouteImport } from './routes/services.eu.eu-mdr-and-ivdr-qualification-and-classification'
+import { Route as ServicesEuEuMdrClinicalEvaluationAndCerStrategyRouteImport } from './routes/services.eu.eu-mdr-clinical-evaluation-and-cer-strategy'
+import { Route as ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRouteImport } from './routes/services.eu.eu-mdr-software-and-samd-regulatory-consulting'
+import { Route as ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRouteImport } from './routes/services.eu.eu-mdr-testing-strategy-and-laboratory-coordination'
+import { Route as ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRouteImport } from './routes/services.eu.eu-notified-body-technical-review-and-deficiency-response'
+import { Route as ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRouteImport } from './routes/services.eu.eu-post-market-surveillance-pms-and-vigilance-support'
+import { Route as ServicesEuEudamedUdiAndEconomicOperatorComplianceRouteImport } from './routes/services.eu.eudamed-udi-and-economic-operator-compliance'
+import { Route as ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRouteImport } from './routes/services.eu.european-authorized-representative-ec-rep-ear-services'
 import { Route as ServicesEuIvdrRouteImport } from './routes/services.eu.ivdr'
 import { Route as ServicesEuIvdrAnalyticalPerformanceRouteImport } from './routes/services.eu.ivdr-analytical-performance'
 import { Route as ServicesEuIvdrClassificationRouteImport } from './routes/services.eu.ivdr-classification'
 import { Route as ServicesEuIvdrClinicalPerformanceRouteImport } from './routes/services.eu.ivdr-clinical-performance'
 import { Route as ServicesEuIvdrPerformanceEvaluationRouteImport } from './routes/services.eu.ivdr-performance-evaluation'
 import { Route as ServicesEuIvdrPmpfRouteImport } from './routes/services.eu.ivdr-pmpf'
-import { Route as ServicesEuLabelingRouteImport } from './routes/services.eu.labeling'
 import { Route as ServicesEuMdrRouteImport } from './routes/services.eu.mdr'
 import { Route as ServicesEuMdrIvdrTransitionRouteImport } from './routes/services.eu.mdr-ivdr-transition'
 import { Route as ServicesEuNotifiedBodyRouteImport } from './routes/services.eu.notified-body'
-import { Route as ServicesEuPmsRouteImport } from './routes/services.eu.pms'
-import { Route as ServicesEuPmsPmcfRouteImport } from './routes/services.eu.pms-pmcf'
-import { Route as ServicesEuQmsRouteImport } from './routes/services.eu.qms'
-import { Route as ServicesEuSoftwareRouteImport } from './routes/services.eu.software'
+import { Route as ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRouteImport } from './routes/services.eu.post-market-clinical-follow-up-pmcf-strategy-and-execution'
 import { Route as ServicesEuTechnicalDocumentationRouteImport } from './routes/services.eu.technical-documentation'
-import { Route as ServicesEuTestingStrategyRouteImport } from './routes/services.eu.testing-strategy'
 import { Route as ServicesIndiaIndexRouteImport } from './routes/services.india.index'
-import { Route as ServicesIndiaClassAImportRouteImport } from './routes/services.india.class-a-import'
-import { Route as ServicesIndiaFreeSaleRouteImport } from './routes/services.india.free-sale'
-import { Route as ServicesIndiaInvestigationalDevicesRouteImport } from './routes/services.india.investigational-devices'
-import { Route as ServicesIndiaIvdRouteImport } from './routes/services.india.ivd'
-import { Route as ServicesIndiaIvdClinicalPerformanceRouteImport } from './routes/services.india.ivd-clinical-performance'
-import { Route as ServicesIndiaIvdTestingRouteImport } from './routes/services.india.ivd-testing'
-import { Route as ServicesIndiaLoanClassABRouteImport } from './routes/services.india.loan-class-a-b'
-import { Route as ServicesIndiaLoanClassCDRouteImport } from './routes/services.india.loan-class-c-d'
-import { Route as ServicesIndiaMarketStandingRouteImport } from './routes/services.india.market-standing'
-import { Route as ServicesIndiaMd42RouteImport } from './routes/services.india.md-42'
-import { Route as ServicesIndiaMedicalDevicesRouteImport } from './routes/services.india.medical-devices'
-import { Route as ServicesIndiaMfgClassABRouteImport } from './routes/services.india.mfg-class-a-b'
-import { Route as ServicesIndiaMfgClassAGsrRouteImport } from './routes/services.india.mfg-class-a-gsr'
-import { Route as ServicesIndiaMfgClassCDRouteImport } from './routes/services.india.mfg-class-c-d'
-import { Route as ServicesIndiaNeutralCodeRouteImport } from './routes/services.india.neutral-code'
-import { Route as ServicesIndiaNonConvictionRouteImport } from './routes/services.india.non-conviction'
-import { Route as ServicesIndiaNovelIvdsRouteImport } from './routes/services.india.novel-ivds'
-import { Route as ServicesIndiaPersonalUseRouteImport } from './routes/services.india.personal-use'
-import { Route as ServicesIndiaPredicateDevicesRouteImport } from './routes/services.india.predicate-devices'
+import { Route as ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5RouteImport } from './routes/services.india.class-a-and-b-manufacturing-forms-md-3-and-md-5'
+import { Route as ServicesIndiaClassAImportRegistrationAsPerGsr777eRouteImport } from './routes/services.india.class-a-import-registration-as-per-gsr-777e'
+import { Route as ServicesIndiaClassAManufacturingRegistrationGsr777eRouteImport } from './routes/services.india.class-a-manufacturing-registration-gsr-777e'
+import { Route as ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9RouteImport } from './routes/services.india.class-c-and-d-manufacturing-forms-md-7-and-md-9'
+import { Route as ServicesIndiaFreeSaleCertificateFscRouteImport } from './routes/services.india.free-sale-certificate-fsc'
+import { Route as ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27RouteImport } from './routes/services.india.import-authorization-for-novel-ivds-md-26-and-md-27'
+import { Route as ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15RouteImport } from './routes/services.india.import-license-for-predicate-medical-devices-forms-md-14-md-15'
+import { Route as ServicesIndiaInVitroDiagnosticRegulatoryServicesRouteImport } from './routes/services.india.in-vitro-diagnostic-regulatory-services'
+import { Route as ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19RouteImport } from './routes/services.india.investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+import { Route as ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25RouteImport } from './routes/services.india.ivd-clinical-performance-evaluations-forms-md-24-md-25'
+import { Route as ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6RouteImport } from './routes/services.india.loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+import { Route as ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10RouteImport } from './routes/services.india.loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+import { Route as ServicesIndiaMarketStandingCertificateMscRouteImport } from './routes/services.india.market-standing-certificate-msc'
+import { Route as ServicesIndiaMd42MedicalDeviceRegistrationCertificateRouteImport } from './routes/services.india.md-42-medical-device-registration-certificate'
+import { Route as ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRouteImport } from './routes/services.india.medical-device-licensing-and-regulatory-approvals-in-india'
+import { Route as ServicesIndiaNeutralCodeCertificateSpecialCodeRouteImport } from './routes/services.india.neutral-code-certificate-special-code'
+import { Route as ServicesIndiaNonConvictionCertificateNccRouteImport } from './routes/services.india.non-conviction-certificate-ncc'
+import { Route as ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21RouteImport } from './routes/services.india.patient-personal-use-device-import-forms-md-20-md-21'
+import { Route as ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17RouteImport } from './routes/services.india.test-license-for-ivd-devices-forms-md-16-md-17'
 import { Route as ServicesMdsapIndexRouteImport } from './routes/services.mdsap.index'
 import { Route as ServicesMdsapAuditDocumentationRouteImport } from './routes/services.mdsap.audit-documentation'
 import { Route as ServicesMdsapCapaRemediationRouteImport } from './routes/services.mdsap.capa-remediation'
@@ -236,84 +236,84 @@ import { Route as ServicesMdsapProductionSupplierValidationRouteImport } from '.
 import { Route as ServicesMdsapQmsAlignmentRouteImport } from './routes/services.mdsap.qms-alignment'
 import { Route as ServicesMdsapStrategyScopeRouteImport } from './routes/services.mdsap.strategy-scope'
 import { Route as ServicesNewZealandIndexRouteImport } from './routes/services.new-zealand.index'
-import { Route as ServicesNewZealandChangeManagementRouteImport } from './routes/services.new-zealand.change-management'
-import { Route as ServicesNewZealandClassificationRouteImport } from './routes/services.new-zealand.classification'
-import { Route as ServicesNewZealandIvdRouteImport } from './routes/services.new-zealand.ivd'
-import { Route as ServicesNewZealandLabelingRouteImport } from './routes/services.new-zealand.labeling'
-import { Route as ServicesNewZealandMedsafeQueriesRouteImport } from './routes/services.new-zealand.medsafe-queries'
-import { Route as ServicesNewZealandPostMarketRouteImport } from './routes/services.new-zealand.post-market'
+import { Route as ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRouteImport } from './routes/services.new-zealand.change-notification-and-lifecycle-support-new-zealand'
+import { Route as ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRouteImport } from './routes/services.new-zealand.importer-distributor-and-supply-chain-compliance-new-zealand'
+import { Route as ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRouteImport } from './routes/services.new-zealand.ivd-regulatory-and-performance-evidence-support-new-zealand'
+import { Route as ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRouteImport } from './routes/services.new-zealand.labelling-ifu-and-advertising-compliance-new-zealand'
+import { Route as ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRouteImport } from './routes/services.new-zealand.medsafe-queries-safety-review-and-technical-response'
+import { Route as ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRouteImport } from './routes/services.new-zealand.medsafe-technical-documentation-and-evidence-new-zealand'
+import { Route as ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRouteImport } from './routes/services.new-zealand.post-market-surveillance-adverse-events-and-recall-support-new-zealand'
 import { Route as ServicesNewZealandQmsComplianceRouteImport } from './routes/services.new-zealand.qms-compliance'
-import { Route as ServicesNewZealandSoftwareRouteImport } from './routes/services.new-zealand.software'
+import { Route as ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRouteImport } from './routes/services.new-zealand.regulatory-strategy-and-product-classification-new-zealand'
+import { Route as ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRouteImport } from './routes/services.new-zealand.samd-software-ai-and-cybersecurity-new-zealand'
 import { Route as ServicesNewZealandSponsorRouteImport } from './routes/services.new-zealand.sponsor'
-import { Route as ServicesNewZealandSupplyChainRouteImport } from './routes/services.new-zealand.supply-chain'
-import { Route as ServicesNewZealandTechnicalDocumentationRouteImport } from './routes/services.new-zealand.technical-documentation'
-import { Route as ServicesNewZealandTestingStrategyRouteImport } from './routes/services.new-zealand.testing-strategy'
+import { Route as ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRouteImport } from './routes/services.new-zealand.testing-strategy-and-laboratory-coordination-new-zealand'
 import { Route as ServicesNewZealandWandNotificationRouteImport } from './routes/services.new-zealand.wand-notification'
 import { Route as ServicesSaudiArabiaIndexRouteImport } from './routes/services.saudi-arabia.index'
 import { Route as ServicesSaudiArabiaAuthorizedRepresentativeRouteImport } from './routes/services.saudi-arabia.authorized-representative'
-import { Route as ServicesSaudiArabiaChangeManagementRouteImport } from './routes/services.saudi-arabia.change-management'
-import { Route as ServicesSaudiArabiaClassificationRouteImport } from './routes/services.saudi-arabia.classification'
-import { Route as ServicesSaudiArabiaEstablishmentLicensingRouteImport } from './routes/services.saudi-arabia.establishment-licensing'
-import { Route as ServicesSaudiArabiaInspectionRouteImport } from './routes/services.saudi-arabia.inspection'
-import { Route as ServicesSaudiArabiaIvdRouteImport } from './routes/services.saudi-arabia.ivd'
-import { Route as ServicesSaudiArabiaLabelingRouteImport } from './routes/services.saudi-arabia.labeling'
-import { Route as ServicesSaudiArabiaMdmaRouteImport } from './routes/services.saudi-arabia.mdma'
-import { Route as ServicesSaudiArabiaPostMarketRouteImport } from './routes/services.saudi-arabia.post-market'
-import { Route as ServicesSaudiArabiaSfdaQueriesRouteImport } from './routes/services.saudi-arabia.sfda-queries'
-import { Route as ServicesSaudiArabiaSoftwareRouteImport } from './routes/services.saudi-arabia.software'
-import { Route as ServicesSaudiArabiaTechnicalDocumentationRouteImport } from './routes/services.saudi-arabia.technical-documentation'
-import { Route as ServicesSaudiArabiaTestingStrategyRouteImport } from './routes/services.saudi-arabia.testing-strategy'
+import { Route as ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRouteImport } from './routes/services.saudi-arabia.changes-renewal-and-lifecycle-support-sfda'
+import { Route as ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRouteImport } from './routes/services.saudi-arabia.ivd-registration-and-performance-evidence-sfda'
+import { Route as ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRouteImport } from './routes/services.saudi-arabia.labeling-ifu-udi-and-advertising-compliance-sfda'
+import { Route as ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRouteImport } from './routes/services.saudi-arabia.mdma-application-and-technical-file-strategy'
+import { Route as ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRouteImport } from './routes/services.saudi-arabia.medical-device-establishment-licensing-and-local-supply-chain'
+import { Route as ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRouteImport } from './routes/services.saudi-arabia.post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+import { Route as ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRouteImport } from './routes/services.saudi-arabia.samd-software-ai-and-cybersecurity-sfda'
+import { Route as ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRouteImport } from './routes/services.saudi-arabia.sfda-inspection-and-quality-system-readiness'
+import { Route as ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport } from './routes/services.saudi-arabia.sfda-queries-deficiency-response-and-technical-review-support'
+import { Route as ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRouteImport } from './routes/services.saudi-arabia.sfda-regulatory-strategy-and-product-classification'
+import { Route as ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRouteImport } from './routes/services.saudi-arabia.technical-documentation-and-essential-principles-sfda'
+import { Route as ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRouteImport } from './routes/services.saudi-arabia.testing-strategy-and-laboratory-coordination-sfda'
 import { Route as ServicesUaeIndexRouteImport } from './routes/services.uae.index'
-import { Route as ServicesUaeChangeManagementRouteImport } from './routes/services.uae.change-management'
-import { Route as ServicesUaeClassificationRouteImport } from './routes/services.uae.classification'
-import { Route as ServicesUaeEcasRouteImport } from './routes/services.uae.ecas'
-import { Route as ServicesUaeIvdRouteImport } from './routes/services.uae.ivd'
-import { Route as ServicesUaeLabelingRouteImport } from './routes/services.uae.labeling'
-import { Route as ServicesUaeLocalApplicantRouteImport } from './routes/services.uae.local-applicant'
-import { Route as ServicesUaeMohapQueriesRouteImport } from './routes/services.uae.mohap-queries'
-import { Route as ServicesUaeMohapRegistrationRouteImport } from './routes/services.uae.mohap-registration'
-import { Route as ServicesUaePostMarketRouteImport } from './routes/services.uae.post-market'
+import { Route as ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRouteImport } from './routes/services.uae.changes-variations-renewal-and-lifecycle-support-uae'
+import { Route as ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRouteImport } from './routes/services.uae.ecas-moiat-conformity-assessment-where-separately-applicable'
+import { Route as ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRouteImport } from './routes/services.uae.ivd-registration-and-performance-evidence-uae'
+import { Route as ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRouteImport } from './routes/services.uae.labeling-ifu-packaging-and-market-claim-compliance-uae'
+import { Route as ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRouteImport } from './routes/services.uae.medical-warehouse-local-supply-chain-and-commercial-readiness'
+import { Route as ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRouteImport } from './routes/services.uae.mohap-medical-device-registration-and-dossier-strategy'
+import { Route as ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport } from './routes/services.uae.mohap-queries-deficiency-response-and-technical-review-support'
+import { Route as ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRouteImport } from './routes/services.uae.post-market-monitoring-vigilance-and-field-actions-uae'
 import { Route as ServicesUaeQmsInspectionRouteImport } from './routes/services.uae.qms-inspection'
-import { Route as ServicesUaeSoftwareRouteImport } from './routes/services.uae.software'
-import { Route as ServicesUaeSupplyChainRouteImport } from './routes/services.uae.supply-chain'
-import { Route as ServicesUaeTechnicalDocumentationRouteImport } from './routes/services.uae.technical-documentation'
-import { Route as ServicesUaeTestingStrategyRouteImport } from './routes/services.uae.testing-strategy'
+import { Route as ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRouteImport } from './routes/services.uae.samd-software-ai-and-cybersecurity-uae-mohap'
+import { Route as ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRouteImport } from './routes/services.uae.technical-documentation-and-safety-performance-evidence-uae-mohap'
+import { Route as ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRouteImport } from './routes/services.uae.testing-strategy-and-laboratory-coordination-uae'
+import { Route as ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRouteImport } from './routes/services.uae.uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+import { Route as ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRouteImport } from './routes/services.uae.uae-mohap-regulatory-strategy-and-product-classification'
 import { Route as ServicesUkIndexRouteImport } from './routes/services.uk.index'
-import { Route as ServicesUkAuditReadinessRouteImport } from './routes/services.uk.audit-readiness'
-import { Route as ServicesUkConformityAssuranceRouteImport } from './routes/services.uk.conformity-assurance'
-import { Route as ServicesUkDorsRegistrationRouteImport } from './routes/services.uk.dors-registration'
-import { Route as ServicesUkLabelingRouteImport } from './routes/services.uk.labeling'
+import { Route as ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRouteImport } from './routes/services.uk.ce-recognition-and-ukca-market-access-strategy'
+import { Route as ServicesUkMhraDorsDeviceRegistrationSystemRouteImport } from './routes/services.uk.mhra-dors-device-registration-system'
 import { Route as ServicesUkMhraLiaisonRouteImport } from './routes/services.uk.mhra-liaison'
 import { Route as ServicesUkMhraRegistrationRouteImport } from './routes/services.uk.mhra-registration'
-import { Route as ServicesUkPmsRouteImport } from './routes/services.uk.pms'
-import { Route as ServicesUkQmsRouteImport } from './routes/services.uk.qms'
-import { Route as ServicesUkRegulatoryWritingRouteImport } from './routes/services.uk.regulatory-writing'
-import { Route as ServicesUkTechnicalFileRouteImport } from './routes/services.uk.technical-file'
-import { Route as ServicesUkUkrpRouteImport } from './routes/services.uk.ukrp'
-import { Route as ServicesUkVigilanceRouteImport } from './routes/services.uk.vigilance'
+import { Route as ServicesUkQmsImplementationAndUkMdrAlignmentRouteImport } from './routes/services.uk.qms-implementation-and-uk-mdr-alignment'
+import { Route as ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRouteImport } from './routes/services.uk.uk-approved-body-and-conformity-assessment-readiness'
+import { Route as ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRouteImport } from './routes/services.uk.uk-mdr-technical-documentation-and-gap-assessment'
+import { Route as ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRouteImport } from './routes/services.uk.uk-post-market-surveillance-pms-pmsr-and-psur'
+import { Route as ServicesUkUkRegulatoryAndClinicalWritingServicesRouteImport } from './routes/services.uk.uk-regulatory-and-clinical-writing-services'
+import { Route as ServicesUkUkResponsiblePersonUkrpServicesRouteImport } from './routes/services.uk.uk-responsible-person-ukrp-services'
+import { Route as ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRouteImport } from './routes/services.uk.uk-vigilance-and-field-safety-corrective-action-fsca'
+import { Route as ServicesUkUkcaLabelingAndArtworkComplianceRouteImport } from './routes/services.uk.ukca-labeling-and-artwork-compliance'
 import { Route as ServicesUsaIndexRouteImport } from './routes/services.usa.index'
-import { Route as ServicesUsa510kRouteImport } from './routes/services.usa.510k'
-import { Route as ServicesUsa513gRouteImport } from './routes/services.usa.513g'
-import { Route as ServicesUsaAgentServiceRouteImport } from './routes/services.usa.agent-service'
-import { Route as ServicesUsaClassificationRouteImport } from './routes/services.usa.classification'
-import { Route as ServicesUsaDeNovoRouteImport } from './routes/services.usa.de-novo'
-import { Route as ServicesUsaDeficiencyResponseRouteImport } from './routes/services.usa.deficiency-response'
-import { Route as ServicesUsaEStarRouteImport } from './routes/services.usa.e-star'
-import { Route as ServicesUsaEstablishmentRegistrationRouteImport } from './routes/services.usa.establishment-registration'
+import { Route as ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRouteImport } from './routes/services.usa.fda-510k-premarket-notification-and-clearance-consulting'
+import { Route as ServicesUsaFda513gRequestsForInformationRouteImport } from './routes/services.usa.fda-513g-requests-for-information'
+import { Route as ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRouteImport } from './routes/services.usa.fda-additional-information-and-deficiency-response'
+import { Route as ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRouteImport } from './routes/services.usa.fda-establishment-registration-and-device-listing'
+import { Route as ServicesUsaFdaEstarDossierPreparationAndSubmissionRouteImport } from './routes/services.usa.fda-estar-dossier-preparation-and-submission'
+import { Route as ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRouteImport } from './routes/services.usa.fda-medical-device-classification-and-pathway-assessment'
+import { Route as ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRouteImport } from './routes/services.usa.fda-post-clearance-and-device-lifecycle-support'
+import { Route as ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRouteImport } from './routes/services.usa.fda-predicate-and-substantial-equivalence-strategy'
+import { Route as ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRouteImport } from './routes/services.usa.fda-q-submission-and-pre-submission-consulting'
+import { Route as ServicesUsaFdaQmsrAndInspectionPreparationRouteImport } from './routes/services.usa.fda-qmsr-and-inspection-preparation'
+import { Route as ServicesUsaFdaRfdAndPreRfdDesignationsRouteImport } from './routes/services.usa.fda-rfd-and-pre-rfd-designations'
+import { Route as ServicesUsaFdaUdiAndGudidComplianceSolutionsRouteImport } from './routes/services.usa.fda-udi-and-gudid-compliance-solutions'
 import { Route as ServicesUsaGlobalMarketAccessRouteImport } from './routes/services.usa.global-market-access'
-import { Route as ServicesUsaPmaRouteImport } from './routes/services.usa.pma'
-import { Route as ServicesUsaPostClearanceLifecycleRouteImport } from './routes/services.usa.post-clearance-lifecycle'
-import { Route as ServicesUsaPredicateStrategyRouteImport } from './routes/services.usa.predicate-strategy'
-import { Route as ServicesUsaQSubmissionRouteImport } from './routes/services.usa.q-submission'
-import { Route as ServicesUsaQmsrInspectionRouteImport } from './routes/services.usa.qmsr-inspection'
-import { Route as ServicesUsaRfdPreRfdRouteImport } from './routes/services.usa.rfd-pre-rfd'
-import { Route as ServicesUsaTestingStrategyRouteImport } from './routes/services.usa.testing-strategy'
-import { Route as ServicesUsaUdiGudidRouteImport } from './routes/services.usa.udi-gudid'
+import { Route as ServicesUsaUsAgentServicesForForeignEstablishmentsRouteImport } from './routes/services.usa.us-agent-services-for-foreign-establishments'
+import { Route as ServicesUsaUsFdaDeNovoClassificationPathwayRouteImport } from './routes/services.usa.us-fda-de-novo-classification-pathway'
+import { Route as ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRouteImport } from './routes/services.usa.us-fda-medical-device-testing-strategy-and-standards-compliance'
+import { Route as ServicesUsaUsFdaPremarketApprovalPmaSupportRouteImport } from './routes/services.usa.us-fda-premarket-approval-pma-support'
 import { Route as IndustriesCosmeticsIndiaIndexRouteImport } from './routes/industries.cosmetics_.india.index'
-import { Route as IndustriesCosmeticsIndiaForImporterRouteImport } from './routes/industries.cosmetics_.india.for-importer'
-import { Route as IndustriesCosmeticsIndiaForManufacturerRouteImport } from './routes/industries.cosmetics_.india.for-manufacturer'
-import { Route as IndustriesMedicalDevicesIndiaForImporterRouteImport } from './routes/industries.medical-devices_.india.for-importer'
-import { Route as IndustriesMedicalDevicesIndiaForManufacturerRouteImport } from './routes/industries.medical-devices_.india.for-manufacturer'
+import { Route as IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRouteImport } from './routes/industries.cosmetics_.india.cosmetic-manufacturing-license-in-india'
+import { Route as IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRouteImport } from './routes/industries.cosmetics_.india.cosmetics-registration-for-importers-in-india'
+import { Route as IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRouteImport } from './routes/industries.medical-devices_.india.medical-device-manufacturing-and-loan-licensing-in-india'
+import { Route as IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRouteImport } from './routes/industries.medical-devices_.india.medical-device-regulatory-solutions-for-importers-in-india'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -380,40 +380,50 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
-const CaseStudiesAlgorithmClaimRoute =
-  CaseStudiesAlgorithmClaimRouteImport.update({
-    id: '/algorithm-claim',
-    path: '/algorithm-claim',
+const CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute =
+  CaseStudiesAustraliaTgaArtgInclusionCaseStudyRouteImport.update({
+    id: '/australia-tga-artg-inclusion-case-study',
+    path: '/australia-tga-artg-inclusion-case-study',
     getParentRoute: () => CaseStudiesRoute,
   } as any)
-const CaseStudiesAustraliaTgaRoute = CaseStudiesAustraliaTgaRouteImport.update({
-  id: '/australia-tga',
-  path: '/australia-tga',
-  getParentRoute: () => CaseStudiesRoute,
-} as any)
-const CaseStudiesEuMdrRemediationRoute =
-  CaseStudiesEuMdrRemediationRouteImport.update({
-    id: '/eu-mdr-remediation',
-    path: '/eu-mdr-remediation',
+const CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute =
+  CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRouteImport.update(
+    {
+      id: '/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature',
+      path: '/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature',
+      getParentRoute: () => CaseStudiesRoute,
+    } as any,
+  )
+const CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute =
+  CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRouteImport.update(
+    {
+      id: '/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero',
+      path: '/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero',
+      getParentRoute: () => CaseStudiesRoute,
+    } as any,
+  )
+const CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute =
+  CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRouteImport.update(
+    {
+      id: '/medical-device-testing-strategy-test-smarter-cover-more',
+      path: '/medical-device-testing-strategy-test-smarter-cover-more',
+      getParentRoute: () => CaseStudiesRoute,
+    } as any,
+  )
+const CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute =
+  CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRouteImport.update({
+    id: '/the-algorithm-can-do-more-should-the-label',
+    path: '/the-algorithm-can-do-more-should-the-label',
     getParentRoute: () => CaseStudiesRoute,
   } as any)
-const CaseStudiesFdaBiocompatibilityRoute =
-  CaseStudiesFdaBiocompatibilityRouteImport.update({
-    id: '/fda-biocompatibility',
-    path: '/fda-biocompatibility',
-    getParentRoute: () => CaseStudiesRoute,
-  } as any)
-const CaseStudiesFdaSimulatedUseRoute =
-  CaseStudiesFdaSimulatedUseRouteImport.update({
-    id: '/fda-simulated-use',
-    path: '/fda-simulated-use',
-    getParentRoute: () => CaseStudiesRoute,
-  } as any)
-const CaseStudiesTestSmarterRoute = CaseStudiesTestSmarterRouteImport.update({
-  id: '/test-smarter',
-  path: '/test-smarter',
-  getParentRoute: () => CaseStudiesRoute,
-} as any)
+const CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute =
+  CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRouteImport.update(
+    {
+      id: '/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need',
+      path: '/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need',
+      getParentRoute: () => CaseStudiesRoute,
+    } as any,
+  )
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/industries/',
   path: '/industries/',
@@ -529,11 +539,14 @@ const InsightsEuAiActMedicalDevicesRoute =
     path: '/insights/eu-ai-act-medical-devices',
     getParentRoute: () => rootRouteImport,
   } as any)
-const InsightsEuMdr2026Route = InsightsEuMdr2026RouteImport.update({
-  id: '/insights/eu-mdr-2026',
-  path: '/insights/eu-mdr-2026',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute =
+  InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRouteImport.update(
+    {
+      id: '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities',
+      path: '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
 const InsightsEuMdrComplianceChallengesRoute =
   InsightsEuMdrComplianceChallengesRouteImport.update({
     id: '/insights/eu-mdr-compliance-challenges',
@@ -546,12 +559,14 @@ const InsightsFda510kProgramModernizationSafetyStandardsRoute =
     path: '/insights/fda-510k-program-modernization-safety-standards',
     getParentRoute: () => rootRouteImport,
   } as any)
-const InsightsFdaInspections2026Route =
-  InsightsFdaInspections2026RouteImport.update({
-    id: '/insights/fda-inspections-2026',
-    path: '/insights/fda-inspections-2026',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute =
+  InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRouteImport.update(
+    {
+      id: '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework',
+      path: '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
 const InsightsFdaQSubPreSubmissionMeetingGuideRoute =
   InsightsFdaQSubPreSubmissionMeetingGuideRouteImport.update({
     id: '/insights/fda-q-sub-pre-submission-meeting-guide',
@@ -957,279 +972,346 @@ const ServicesAustraliaIndexRoute = ServicesAustraliaIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesAustraliaRoute,
 } as any)
-const ServicesAustraliaArtgInclusionRoute =
-  ServicesAustraliaArtgInclusionRouteImport.update({
-    id: '/artg-inclusion',
-    path: '/artg-inclusion',
+const ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute =
+  ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRouteImport.update(
+    {
+      id: '/australia-importer-distributor-and-supply-chain-compliance',
+      path: '/australia-importer-distributor-and-supply-chain-compliance',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute =
+  ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRouteImport.update({
+    id: '/australia-tga-samd-ai-and-cybersecurity-support',
+    path: '/australia-tga-samd-ai-and-cybersecurity-support',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaAustralianSponsorRoute =
-  ServicesAustraliaAustralianSponsorRouteImport.update({
-    id: '/australian-sponsor',
-    path: '/australian-sponsor',
+const ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute =
+  ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRouteImport.update(
+    {
+      id: '/australian-labelling-ifu-and-ausudid-compliance',
+      path: '/australian-labelling-ifu-and-ausudid-compliance',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaIndependentTgaSponsorRepresentationRoute =
+  ServicesAustraliaIndependentTgaSponsorRepresentationRouteImport.update({
+    id: '/independent-tga-sponsor-representation',
+    path: '/independent-tga-sponsor-representation',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaChangeManagementRoute =
-  ServicesAustraliaChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
+const ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute =
+  ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRouteImport.update({
+    id: '/tga-application-audit-defense-and-rfi-support',
+    path: '/tga-application-audit-defense-and-rfi-support',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaClassificationRoute =
-  ServicesAustraliaClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute =
+  ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRouteImport.update(
+    {
+      id: '/tga-artg-inclusion-strategy-and-application-preparation',
+      path: '/tga-artg-inclusion-strategy-and-application-preparation',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute =
+  ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRouteImport.update(
+    {
+      id: '/tga-artg-variations-and-significant-change-support',
+      path: '/tga-artg-variations-and-significant-change-support',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute =
+  ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRouteImport.update({
+    id: '/tga-australian-sponsor-services-and-governance',
+    path: '/tga-australian-sponsor-services-and-governance',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaClinicalEvidenceRoute =
-  ServicesAustraliaClinicalEvidenceRouteImport.update({
-    id: '/clinical-evidence',
-    path: '/clinical-evidence',
+const ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute =
+  ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRouteImport.update({
+    id: '/tga-clinical-evidence-and-benefit-risk-strategy',
+    path: '/tga-clinical-evidence-and-benefit-risk-strategy',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaConformityAssessmentRoute =
-  ServicesAustraliaConformityAssessmentRouteImport.update({
-    id: '/conformity-assessment',
-    path: '/conformity-assessment',
+const ServicesAustraliaTgaConformityAssessmentSupportRoute =
+  ServicesAustraliaTgaConformityAssessmentSupportRouteImport.update({
+    id: '/tga-conformity-assessment-support',
+    path: '/tga-conformity-assessment-support',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaIvdRoute = ServicesAustraliaIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesAustraliaRoute,
-} as any)
-const ServicesAustraliaLabelingRoute =
-  ServicesAustraliaLabelingRouteImport.update({
-    id: '/labeling',
-    path: '/labeling',
+const ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute =
+  ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRouteImport.update({
+    id: '/tga-ivd-regulatory-strategy-and-artg-inclusion',
+    path: '/tga-ivd-regulatory-strategy-and-artg-inclusion',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaManufacturerEvidenceRoute =
-  ServicesAustraliaManufacturerEvidenceRouteImport.update({
-    id: '/manufacturer-evidence',
-    path: '/manufacturer-evidence',
+const ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute =
+  ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRouteImport.update(
+    {
+      id: '/tga-manufacturer-evidence-and-conformity-assessment',
+      path: '/tga-manufacturer-evidence-and-conformity-assessment',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute =
+  ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRouteImport.update({
+    id: '/tga-medical-device-and-ivd-classification',
+    path: '/tga-medical-device-and-ivd-classification',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaPmsRoute = ServicesAustraliaPmsRouteImport.update({
-  id: '/pms',
-  path: '/pms',
-  getParentRoute: () => ServicesAustraliaRoute,
-} as any)
-const ServicesAustraliaPostMarketRoute =
-  ServicesAustraliaPostMarketRouteImport.update({
-    id: '/post-market',
-    path: '/post-market',
+const ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute =
+  ServicesAustraliaTgaPostMarketSurveillancePmsPlansRouteImport.update({
+    id: '/tga-post-market-surveillance-pms-plans',
+    path: '/tga-post-market-surveillance-pms-plans',
     getParentRoute: () => ServicesAustraliaRoute,
   } as any)
-const ServicesAustraliaSoftwareRoute =
-  ServicesAustraliaSoftwareRouteImport.update({
-    id: '/software',
-    path: '/software',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
-const ServicesAustraliaSponsorRoute =
-  ServicesAustraliaSponsorRouteImport.update({
-    id: '/sponsor',
-    path: '/sponsor',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
-const ServicesAustraliaSupplyChainRoute =
-  ServicesAustraliaSupplyChainRouteImport.update({
-    id: '/supply-chain',
-    path: '/supply-chain',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
-const ServicesAustraliaTechnicalDocumentationRoute =
-  ServicesAustraliaTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
-const ServicesAustraliaTestingStrategyRoute =
-  ServicesAustraliaTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
-const ServicesAustraliaTgaAuditRoute =
-  ServicesAustraliaTgaAuditRouteImport.update({
-    id: '/tga-audit',
-    path: '/tga-audit',
-    getParentRoute: () => ServicesAustraliaRoute,
-  } as any)
+const ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute =
+  ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRouteImport.update(
+    {
+      id: '/tga-post-market-vigilance-mdir-and-recall-management',
+      path: '/tga-post-market-vigilance-mdir-and-recall-management',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute =
+  ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRouteImport.update(
+    {
+      id: '/tga-technical-documentation-and-essential-principles',
+      path: '/tga-technical-documentation-and-essential-principles',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
+const ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute =
+  ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRouteImport.update(
+    {
+      id: '/tga-testing-strategy-and-laboratory-coordination-australia',
+      path: '/tga-testing-strategy-and-laboratory-coordination-australia',
+      getParentRoute: () => ServicesAustraliaRoute,
+    } as any,
+  )
 const ServicesBrazilIndexRoute = ServicesBrazilIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesBrazilRoute,
 } as any)
-const ServicesBrazilAnvisaQueriesRoute =
-  ServicesBrazilAnvisaQueriesRouteImport.update({
-    id: '/anvisa-queries',
-    path: '/anvisa-queries',
+const ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route =
+  ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022RouteImport.update({
+    id: '/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022',
+    path: '/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilBgmpRoute = ServicesBrazilBgmpRouteImport.update({
-  id: '/bgmp',
-  path: '/bgmp',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilBrhRoute = ServicesBrazilBrhRouteImport.update({
-  id: '/brh',
-  path: '/brh',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilChangeManagementRoute =
-  ServicesBrazilChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
+const ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute =
+  ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRouteImport.update({
+    id: '/anvisa-changes-variations-and-revalidacao-support',
+    path: '/anvisa-changes-variations-and-revalidacao-support',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilClassificationRoute =
-  ServicesBrazilClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute =
+  ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRouteImport.update({
+    id: '/anvisa-exigencia-and-inspection-response-strategy',
+    path: '/anvisa-exigencia-and-inspection-response-strategy',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilIvdRoute = ServicesBrazilIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilLabelingRoute = ServicesBrazilLabelingRouteImport.update({
-  id: '/labeling',
-  path: '/labeling',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilNotificacaoRoute =
-  ServicesBrazilNotificacaoRouteImport.update({
-    id: '/notificacao',
-    path: '/notificacao',
+const ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route =
+  ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023RouteImport.update(
+    {
+      id: '/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023',
+      path: '/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute =
+  ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRouteImport.update(
+    {
+      id: '/anvisa-medical-device-and-ivd-classification-brazil',
+      path: '/anvisa-medical-device-and-ivd-classification-brazil',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute =
+  ServicesBrazilAnvisaNotificacaoPathwayBrazilRouteImport.update({
+    id: '/anvisa-notificacao-pathway-brazil',
+    path: '/anvisa-notificacao-pathway-brazil',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilRegistrationRoute =
-  ServicesBrazilRegistrationRouteImport.update({
-    id: '/registration',
-    path: '/registration',
+const ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute =
+  ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRouteImport.update(
+    {
+      id: '/anvisa-notification-and-registration-cadastro-and-registro',
+      path: '/anvisa-notification-and-registration-cadastro-and-registro',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute =
+  ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRouteImport.update({
+    id: '/anvisa-portuguese-labeling-udi-and-siud-compliance',
+    path: '/anvisa-portuguese-labeling-udi-and-siud-compliance',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilRegistroRoute = ServicesBrazilRegistroRouteImport.update({
-  id: '/registro',
-  path: '/registro',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilSoftwareRoute = ServicesBrazilSoftwareRouteImport.update({
-  id: '/software',
-  path: '/software',
-  getParentRoute: () => ServicesBrazilRoute,
-} as any)
-const ServicesBrazilTechnicalDocumentationRoute =
-  ServicesBrazilTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
+const ServicesBrazilAnvisaRegistroPathwayBrazilRoute =
+  ServicesBrazilAnvisaRegistroPathwayBrazilRouteImport.update({
+    id: '/anvisa-registro-pathway-brazil',
+    path: '/anvisa-registro-pathway-brazil',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilTechnovigilanceRoute =
-  ServicesBrazilTechnovigilanceRouteImport.update({
-    id: '/technovigilance',
-    path: '/technovigilance',
+const ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute =
+  ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRouteImport.update(
+    {
+      id: '/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting',
+      path: '/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute =
+  ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRouteImport.update(
+    {
+      id: '/anvisa-technical-dossier-and-safety-performance-evidence',
+      path: '/anvisa-technical-dossier-and-safety-performance-evidence',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute =
+  ServicesBrazilAnvisaTechnovigilanceServicesBrazilRouteImport.update({
+    id: '/anvisa-technovigilance-services-brazil',
+    path: '/anvisa-technovigilance-services-brazil',
     getParentRoute: () => ServicesBrazilRoute,
   } as any)
-const ServicesBrazilTecnovigilanceRoute =
-  ServicesBrazilTecnovigilanceRouteImport.update({
-    id: '/tecnovigilance',
-    path: '/tecnovigilance',
-    getParentRoute: () => ServicesBrazilRoute,
-  } as any)
-const ServicesBrazilTestingStrategyRoute =
-  ServicesBrazilTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
-    getParentRoute: () => ServicesBrazilRoute,
-  } as any)
+const ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute =
+  ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRouteImport.update(
+    {
+      id: '/anvisa-tecnovigilancia-and-post-market-surveillance',
+      path: '/anvisa-tecnovigilancia-and-post-market-surveillance',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute =
+  ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRouteImport.update(
+    {
+      id: '/anvisa-testing-strategy-and-laboratory-coordination',
+      path: '/anvisa-testing-strategy-and-laboratory-coordination',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
+const ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute =
+  ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRouteImport.update(
+    {
+      id: '/brazil-registration-holder-brh-and-anvisa-interface',
+      path: '/brazil-registration-holder-brh-and-anvisa-interface',
+      getParentRoute: () => ServicesBrazilRoute,
+    } as any,
+  )
 const ServicesCanadaIndexRoute = ServicesCanadaIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesCanadaRoute,
 } as any)
-const ServicesCanadaChangeManagementRoute =
-  ServicesCanadaChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
+const ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute =
+  ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRouteImport.update(
+    {
+      id: '/canada-medical-device-supply-chain-and-importer-compliance',
+      path: '/canada-medical-device-supply-chain-and-importer-compliance',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute =
+  ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRouteImport.update({
+    id: '/health-canada-inspection-readiness-and-defense',
+    path: '/health-canada-inspection-readiness-and-defense',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
-const ServicesCanadaClassificationRoute =
-  ServicesCanadaClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute =
+  ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRouteImport.update(
+    {
+      id: '/health-canada-ivd-registration-and-performance-strategy',
+      path: '/health-canada-ivd-registration-and-performance-strategy',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute =
+  ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRouteImport.update(
+    {
+      id: '/health-canada-labelling-and-bilingual-ifu-compliance',
+      path: '/health-canada-labelling-and-bilingual-ifu-compliance',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute =
+  ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRouteImport.update(
+    {
+      id: '/health-canada-mdl-amendments-and-significant-changes',
+      path: '/health-canada-mdl-amendments-and-significant-changes',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute =
+  ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRouteImport.update({
+    id: '/health-canada-mdl-and-mdel-annual-renewals',
+    path: '/health-canada-mdl-and-mdel-annual-renewals',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
-const ServicesCanadaInspectionRoute =
-  ServicesCanadaInspectionRouteImport.update({
-    id: '/inspection',
-    path: '/inspection',
+const ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute =
+  ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRouteImport.update(
+    {
+      id: '/health-canada-medical-device-and-ivd-classification',
+      path: '/health-canada-medical-device-and-ivd-classification',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute =
+  ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRouteImport.update(
+    {
+      id: '/health-canada-medical-device-establishment-licence-mdel',
+      path: '/health-canada-medical-device-establishment-licence-mdel',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute =
+  ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRouteImport.update(
+    {
+      id: '/health-canada-medical-device-licence-mdl-application',
+      path: '/health-canada-medical-device-licence-mdl-application',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute =
+  ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRouteImport.update({
+    id: '/health-canada-post-market-surveillance-and-mpr',
+    path: '/health-canada-post-market-surveillance-and-mpr',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
-const ServicesCanadaIvdRoute = ServicesCanadaIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaLabelingRoute = ServicesCanadaLabelingRouteImport.update({
-  id: '/labeling',
-  path: '/labeling',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaLiaisonRoute = ServicesCanadaLiaisonRouteImport.update({
-  id: '/liaison',
-  path: '/liaison',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaMdelRoute = ServicesCanadaMdelRouteImport.update({
-  id: '/mdel',
-  path: '/mdel',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaMdlRoute = ServicesCanadaMdlRouteImport.update({
-  id: '/mdl',
-  path: '/mdl',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaMdsapRoute = ServicesCanadaMdsapRouteImport.update({
-  id: '/mdsap',
-  path: '/mdsap',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaPmsRoute = ServicesCanadaPmsRouteImport.update({
-  id: '/pms',
-  path: '/pms',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaRenewalsRoute = ServicesCanadaRenewalsRouteImport.update({
-  id: '/renewals',
-  path: '/renewals',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaSoftwareRoute = ServicesCanadaSoftwareRouteImport.update({
-  id: '/software',
-  path: '/software',
-  getParentRoute: () => ServicesCanadaRoute,
-} as any)
-const ServicesCanadaSupplyChainRoute =
-  ServicesCanadaSupplyChainRouteImport.update({
-    id: '/supply-chain',
-    path: '/supply-chain',
+const ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute =
+  ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRouteImport.update({
+    id: '/health-canada-regulatory-liaison-support',
+    path: '/health-canada-regulatory-liaison-support',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
-const ServicesCanadaTechnicalDocumentationRoute =
-  ServicesCanadaTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
+const ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute =
+  ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRouteImport.update({
+    id: '/health-canada-samd-and-cybersecurity-compliance',
+    path: '/health-canada-samd-and-cybersecurity-compliance',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
-const ServicesCanadaTestingStrategyRoute =
-  ServicesCanadaTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
+const ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute =
+  ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRouteImport.update(
+    {
+      id: '/health-canada-technical-documentation-and-evidence-strategy',
+      path: '/health-canada-technical-documentation-and-evidence-strategy',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute =
+  ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRouteImport.update(
+    {
+      id: '/health-canada-testing-strategy-and-laboratory-coordination',
+      path: '/health-canada-testing-strategy-and-laboratory-coordination',
+      getParentRoute: () => ServicesCanadaRoute,
+    } as any,
+  )
+const ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute =
+  ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRouteImport.update({
+    id: '/mdsap-canada-and-iso-13485-quality-system-readiness',
+    path: '/mdsap-canada-and-iso-13485-quality-system-readiness',
     getParentRoute: () => ServicesCanadaRoute,
   } as any)
 const ServicesEuIndexRoute = ServicesEuIndexRouteImport.update({
@@ -1264,34 +1346,68 @@ const ServicesEuClassDIvdrRoute = ServicesEuClassDIvdrRouteImport.update({
   path: '/class-d-ivdr',
   getParentRoute: () => ServicesEuRoute,
 } as any)
-const ServicesEuClassificationRoute =
-  ServicesEuClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute =
+  ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRouteImport.update({
+    id: '/eu-mdr-and-ivdr-labeling-and-ifu-compliance',
+    path: '/eu-mdr-and-ivdr-labeling-and-ifu-compliance',
     getParentRoute: () => ServicesEuRoute,
   } as any)
-const ServicesEuClinicalEvaluationRoute =
-  ServicesEuClinicalEvaluationRouteImport.update({
-    id: '/clinical-evaluation',
-    path: '/clinical-evaluation',
+const ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute =
+  ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRouteImport.update({
+    id: '/eu-mdr-and-ivdr-qms-integration-and-prrc',
+    path: '/eu-mdr-and-ivdr-qms-integration-and-prrc',
     getParentRoute: () => ServicesEuRoute,
   } as any)
-const ServicesEuDeficiencyResponseRoute =
-  ServicesEuDeficiencyResponseRouteImport.update({
-    id: '/deficiency-response',
-    path: '/deficiency-response',
+const ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute =
+  ServicesEuEuMdrAndIvdrQualificationAndClassificationRouteImport.update({
+    id: '/eu-mdr-and-ivdr-qualification-and-classification',
+    path: '/eu-mdr-and-ivdr-qualification-and-classification',
     getParentRoute: () => ServicesEuRoute,
   } as any)
-const ServicesEuEarRoute = ServicesEuEarRouteImport.update({
-  id: '/ear',
-  path: '/ear',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
-const ServicesEuEudamedRoute = ServicesEuEudamedRouteImport.update({
-  id: '/eudamed',
-  path: '/eudamed',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
+const ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute =
+  ServicesEuEuMdrClinicalEvaluationAndCerStrategyRouteImport.update({
+    id: '/eu-mdr-clinical-evaluation-and-cer-strategy',
+    path: '/eu-mdr-clinical-evaluation-and-cer-strategy',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute =
+  ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRouteImport.update({
+    id: '/eu-mdr-software-and-samd-regulatory-consulting',
+    path: '/eu-mdr-software-and-samd-regulatory-consulting',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute =
+  ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRouteImport.update({
+    id: '/eu-mdr-testing-strategy-and-laboratory-coordination',
+    path: '/eu-mdr-testing-strategy-and-laboratory-coordination',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute =
+  ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRouteImport.update(
+    {
+      id: '/eu-notified-body-technical-review-and-deficiency-response',
+      path: '/eu-notified-body-technical-review-and-deficiency-response',
+      getParentRoute: () => ServicesEuRoute,
+    } as any,
+  )
+const ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute =
+  ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRouteImport.update({
+    id: '/eu-post-market-surveillance-pms-and-vigilance-support',
+    path: '/eu-post-market-surveillance-pms-and-vigilance-support',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute =
+  ServicesEuEudamedUdiAndEconomicOperatorComplianceRouteImport.update({
+    id: '/eudamed-udi-and-economic-operator-compliance',
+    path: '/eudamed-udi-and-economic-operator-compliance',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
+const ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute =
+  ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRouteImport.update({
+    id: '/european-authorized-representative-ec-rep-ear-services',
+    path: '/european-authorized-representative-ec-rep-ear-services',
+    getParentRoute: () => ServicesEuRoute,
+  } as any)
 const ServicesEuIvdrRoute = ServicesEuIvdrRouteImport.update({
   id: '/ivdr',
   path: '/ivdr',
@@ -1326,11 +1442,6 @@ const ServicesEuIvdrPmpfRoute = ServicesEuIvdrPmpfRouteImport.update({
   path: '/ivdr-pmpf',
   getParentRoute: () => ServicesEuRoute,
 } as any)
-const ServicesEuLabelingRoute = ServicesEuLabelingRouteImport.update({
-  id: '/labeling',
-  path: '/labeling',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
 const ServicesEuMdrRoute = ServicesEuMdrRouteImport.update({
   id: '/mdr',
   path: '/mdr',
@@ -1347,36 +1458,18 @@ const ServicesEuNotifiedBodyRoute = ServicesEuNotifiedBodyRouteImport.update({
   path: '/notified-body',
   getParentRoute: () => ServicesEuRoute,
 } as any)
-const ServicesEuPmsRoute = ServicesEuPmsRouteImport.update({
-  id: '/pms',
-  path: '/pms',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
-const ServicesEuPmsPmcfRoute = ServicesEuPmsPmcfRouteImport.update({
-  id: '/pms-pmcf',
-  path: '/pms-pmcf',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
-const ServicesEuQmsRoute = ServicesEuQmsRouteImport.update({
-  id: '/qms',
-  path: '/qms',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
-const ServicesEuSoftwareRoute = ServicesEuSoftwareRouteImport.update({
-  id: '/software',
-  path: '/software',
-  getParentRoute: () => ServicesEuRoute,
-} as any)
+const ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute =
+  ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRouteImport.update(
+    {
+      id: '/post-market-clinical-follow-up-pmcf-strategy-and-execution',
+      path: '/post-market-clinical-follow-up-pmcf-strategy-and-execution',
+      getParentRoute: () => ServicesEuRoute,
+    } as any,
+  )
 const ServicesEuTechnicalDocumentationRoute =
   ServicesEuTechnicalDocumentationRouteImport.update({
     id: '/technical-documentation',
     path: '/technical-documentation',
-    getParentRoute: () => ServicesEuRoute,
-  } as any)
-const ServicesEuTestingStrategyRoute =
-  ServicesEuTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
     getParentRoute: () => ServicesEuRoute,
   } as any)
 const ServicesIndiaIndexRoute = ServicesIndiaIndexRouteImport.update({
@@ -1384,111 +1477,126 @@ const ServicesIndiaIndexRoute = ServicesIndiaIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesIndiaRoute,
 } as any)
-const ServicesIndiaClassAImportRoute =
-  ServicesIndiaClassAImportRouteImport.update({
-    id: '/class-a-import',
-    path: '/class-a-import',
+const ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route =
+  ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5RouteImport.update({
+    id: '/class-a-and-b-manufacturing-forms-md-3-and-md-5',
+    path: '/class-a-and-b-manufacturing-forms-md-3-and-md-5',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaFreeSaleRoute = ServicesIndiaFreeSaleRouteImport.update({
-  id: '/free-sale',
-  path: '/free-sale',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaInvestigationalDevicesRoute =
-  ServicesIndiaInvestigationalDevicesRouteImport.update({
-    id: '/investigational-devices',
-    path: '/investigational-devices',
+const ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute =
+  ServicesIndiaClassAImportRegistrationAsPerGsr777eRouteImport.update({
+    id: '/class-a-import-registration-as-per-gsr-777e',
+    path: '/class-a-import-registration-as-per-gsr-777e',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaIvdRoute = ServicesIndiaIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaIvdClinicalPerformanceRoute =
-  ServicesIndiaIvdClinicalPerformanceRouteImport.update({
-    id: '/ivd-clinical-performance',
-    path: '/ivd-clinical-performance',
+const ServicesIndiaClassAManufacturingRegistrationGsr777eRoute =
+  ServicesIndiaClassAManufacturingRegistrationGsr777eRouteImport.update({
+    id: '/class-a-manufacturing-registration-gsr-777e',
+    path: '/class-a-manufacturing-registration-gsr-777e',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaIvdTestingRoute = ServicesIndiaIvdTestingRouteImport.update({
-  id: '/ivd-testing',
-  path: '/ivd-testing',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaLoanClassABRoute =
-  ServicesIndiaLoanClassABRouteImport.update({
-    id: '/loan-class-a-b',
-    path: '/loan-class-a-b',
+const ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route =
+  ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9RouteImport.update({
+    id: '/class-c-and-d-manufacturing-forms-md-7-and-md-9',
+    path: '/class-c-and-d-manufacturing-forms-md-7-and-md-9',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaLoanClassCDRoute =
-  ServicesIndiaLoanClassCDRouteImport.update({
-    id: '/loan-class-c-d',
-    path: '/loan-class-c-d',
+const ServicesIndiaFreeSaleCertificateFscRoute =
+  ServicesIndiaFreeSaleCertificateFscRouteImport.update({
+    id: '/free-sale-certificate-fsc',
+    path: '/free-sale-certificate-fsc',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaMarketStandingRoute =
-  ServicesIndiaMarketStandingRouteImport.update({
-    id: '/market-standing',
-    path: '/market-standing',
+const ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route =
+  ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27RouteImport.update({
+    id: '/import-authorization-for-novel-ivds-md-26-and-md-27',
+    path: '/import-authorization-for-novel-ivds-md-26-and-md-27',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaMd42Route = ServicesIndiaMd42RouteImport.update({
-  id: '/md-42',
-  path: '/md-42',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaMedicalDevicesRoute =
-  ServicesIndiaMedicalDevicesRouteImport.update({
-    id: '/medical-devices',
-    path: '/medical-devices',
+const ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route =
+  ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15RouteImport.update(
+    {
+      id: '/import-license-for-predicate-medical-devices-forms-md-14-md-15',
+      path: '/import-license-for-predicate-medical-devices-forms-md-14-md-15',
+      getParentRoute: () => ServicesIndiaRoute,
+    } as any,
+  )
+const ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute =
+  ServicesIndiaInVitroDiagnosticRegulatoryServicesRouteImport.update({
+    id: '/in-vitro-diagnostic-regulatory-services',
+    path: '/in-vitro-diagnostic-regulatory-services',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaMfgClassABRoute = ServicesIndiaMfgClassABRouteImport.update({
-  id: '/mfg-class-a-b',
-  path: '/mfg-class-a-b',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaMfgClassAGsrRoute =
-  ServicesIndiaMfgClassAGsrRouteImport.update({
-    id: '/mfg-class-a-gsr',
-    path: '/mfg-class-a-gsr',
+const ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route =
+  ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19RouteImport.update(
+    {
+      id: '/investigational-devices-in-govt-hospitals-forms-md-18-md-19',
+      path: '/investigational-devices-in-govt-hospitals-forms-md-18-md-19',
+      getParentRoute: () => ServicesIndiaRoute,
+    } as any,
+  )
+const ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route =
+  ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25RouteImport.update(
+    {
+      id: '/ivd-clinical-performance-evaluations-forms-md-24-md-25',
+      path: '/ivd-clinical-performance-evaluations-forms-md-24-md-25',
+      getParentRoute: () => ServicesIndiaRoute,
+    } as any,
+  )
+const ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route =
+  ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6RouteImport.update({
+    id: '/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6',
+    path: '/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaMfgClassCDRoute = ServicesIndiaMfgClassCDRouteImport.update({
-  id: '/mfg-class-c-d',
-  path: '/mfg-class-c-d',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaNeutralCodeRoute =
-  ServicesIndiaNeutralCodeRouteImport.update({
-    id: '/neutral-code',
-    path: '/neutral-code',
+const ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route =
+  ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10RouteImport.update({
+    id: '/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10',
+    path: '/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaNonConvictionRoute =
-  ServicesIndiaNonConvictionRouteImport.update({
-    id: '/non-conviction',
-    path: '/non-conviction',
+const ServicesIndiaMarketStandingCertificateMscRoute =
+  ServicesIndiaMarketStandingCertificateMscRouteImport.update({
+    id: '/market-standing-certificate-msc',
+    path: '/market-standing-certificate-msc',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaNovelIvdsRoute = ServicesIndiaNovelIvdsRouteImport.update({
-  id: '/novel-ivds',
-  path: '/novel-ivds',
-  getParentRoute: () => ServicesIndiaRoute,
-} as any)
-const ServicesIndiaPersonalUseRoute =
-  ServicesIndiaPersonalUseRouteImport.update({
-    id: '/personal-use',
-    path: '/personal-use',
+const ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute =
+  ServicesIndiaMd42MedicalDeviceRegistrationCertificateRouteImport.update({
+    id: '/md-42-medical-device-registration-certificate',
+    path: '/md-42-medical-device-registration-certificate',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
-const ServicesIndiaPredicateDevicesRoute =
-  ServicesIndiaPredicateDevicesRouteImport.update({
-    id: '/predicate-devices',
-    path: '/predicate-devices',
+const ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute =
+  ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRouteImport.update(
+    {
+      id: '/medical-device-licensing-and-regulatory-approvals-in-india',
+      path: '/medical-device-licensing-and-regulatory-approvals-in-india',
+      getParentRoute: () => ServicesIndiaRoute,
+    } as any,
+  )
+const ServicesIndiaNeutralCodeCertificateSpecialCodeRoute =
+  ServicesIndiaNeutralCodeCertificateSpecialCodeRouteImport.update({
+    id: '/neutral-code-certificate-special-code',
+    path: '/neutral-code-certificate-special-code',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaNonConvictionCertificateNccRoute =
+  ServicesIndiaNonConvictionCertificateNccRouteImport.update({
+    id: '/non-conviction-certificate-ncc',
+    path: '/non-conviction-certificate-ncc',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route =
+  ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21RouteImport.update({
+    id: '/patient-personal-use-device-import-forms-md-20-md-21',
+    path: '/patient-personal-use-device-import-forms-md-20-md-21',
+    getParentRoute: () => ServicesIndiaRoute,
+  } as any)
+const ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route =
+  ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17RouteImport.update({
+    id: '/test-license-for-ivd-devices-forms-md-16-md-17',
+    path: '/test-license-for-ivd-devices-forms-md-16-md-17',
     getParentRoute: () => ServicesIndiaRoute,
   } as any)
 const ServicesMdsapIndexRoute = ServicesMdsapIndexRouteImport.update({
@@ -1572,51 +1680,80 @@ const ServicesNewZealandIndexRoute = ServicesNewZealandIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ServicesNewZealandRoute,
 } as any)
-const ServicesNewZealandChangeManagementRoute =
-  ServicesNewZealandChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandClassificationRoute =
-  ServicesNewZealandClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandIvdRoute = ServicesNewZealandIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesNewZealandRoute,
-} as any)
-const ServicesNewZealandLabelingRoute =
-  ServicesNewZealandLabelingRouteImport.update({
-    id: '/labeling',
-    path: '/labeling',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandMedsafeQueriesRoute =
-  ServicesNewZealandMedsafeQueriesRouteImport.update({
-    id: '/medsafe-queries',
-    path: '/medsafe-queries',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandPostMarketRoute =
-  ServicesNewZealandPostMarketRouteImport.update({
-    id: '/post-market',
-    path: '/post-market',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
+const ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute =
+  ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRouteImport.update(
+    {
+      id: '/change-notification-and-lifecycle-support-new-zealand',
+      path: '/change-notification-and-lifecycle-support-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute =
+  ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRouteImport.update(
+    {
+      id: '/importer-distributor-and-supply-chain-compliance-new-zealand',
+      path: '/importer-distributor-and-supply-chain-compliance-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute =
+  ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRouteImport.update(
+    {
+      id: '/ivd-regulatory-and-performance-evidence-support-new-zealand',
+      path: '/ivd-regulatory-and-performance-evidence-support-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute =
+  ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRouteImport.update(
+    {
+      id: '/labelling-ifu-and-advertising-compliance-new-zealand',
+      path: '/labelling-ifu-and-advertising-compliance-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute =
+  ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRouteImport.update(
+    {
+      id: '/medsafe-queries-safety-review-and-technical-response',
+      path: '/medsafe-queries-safety-review-and-technical-response',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute =
+  ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRouteImport.update(
+    {
+      id: '/medsafe-technical-documentation-and-evidence-new-zealand',
+      path: '/medsafe-technical-documentation-and-evidence-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute =
+  ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRouteImport.update(
+    {
+      id: '/post-market-surveillance-adverse-events-and-recall-support-new-zealand',
+      path: '/post-market-surveillance-adverse-events-and-recall-support-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
 const ServicesNewZealandQmsComplianceRoute =
   ServicesNewZealandQmsComplianceRouteImport.update({
     id: '/qms-compliance',
     path: '/qms-compliance',
     getParentRoute: () => ServicesNewZealandRoute,
   } as any)
-const ServicesNewZealandSoftwareRoute =
-  ServicesNewZealandSoftwareRouteImport.update({
-    id: '/software',
-    path: '/software',
+const ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute =
+  ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRouteImport.update(
+    {
+      id: '/regulatory-strategy-and-product-classification-new-zealand',
+      path: '/regulatory-strategy-and-product-classification-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
+const ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute =
+  ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRouteImport.update({
+    id: '/samd-software-ai-and-cybersecurity-new-zealand',
+    path: '/samd-software-ai-and-cybersecurity-new-zealand',
     getParentRoute: () => ServicesNewZealandRoute,
   } as any)
 const ServicesNewZealandSponsorRoute =
@@ -1625,24 +1762,14 @@ const ServicesNewZealandSponsorRoute =
     path: '/sponsor',
     getParentRoute: () => ServicesNewZealandRoute,
   } as any)
-const ServicesNewZealandSupplyChainRoute =
-  ServicesNewZealandSupplyChainRouteImport.update({
-    id: '/supply-chain',
-    path: '/supply-chain',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandTechnicalDocumentationRoute =
-  ServicesNewZealandTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
-const ServicesNewZealandTestingStrategyRoute =
-  ServicesNewZealandTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
-    getParentRoute: () => ServicesNewZealandRoute,
-  } as any)
+const ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute =
+  ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRouteImport.update(
+    {
+      id: '/testing-strategy-and-laboratory-coordination-new-zealand',
+      path: '/testing-strategy-and-laboratory-coordination-new-zealand',
+      getParentRoute: () => ServicesNewZealandRoute,
+    } as any,
+  )
 const ServicesNewZealandWandNotificationRoute =
   ServicesNewZealandWandNotificationRouteImport.update({
     id: '/wand-notification',
@@ -1661,186 +1788,214 @@ const ServicesSaudiArabiaAuthorizedRepresentativeRoute =
     path: '/authorized-representative',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
-const ServicesSaudiArabiaChangeManagementRoute =
-  ServicesSaudiArabiaChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
+const ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute =
+  ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRouteImport.update({
+    id: '/changes-renewal-and-lifecycle-support-sfda',
+    path: '/changes-renewal-and-lifecycle-support-sfda',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
-const ServicesSaudiArabiaClassificationRoute =
-  ServicesSaudiArabiaClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute =
+  ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRouteImport.update(
+    {
+      id: '/ivd-registration-and-performance-evidence-sfda',
+      path: '/ivd-registration-and-performance-evidence-sfda',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute =
+  ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRouteImport.update(
+    {
+      id: '/labeling-ifu-udi-and-advertising-compliance-sfda',
+      path: '/labeling-ifu-udi-and-advertising-compliance-sfda',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute =
+  ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRouteImport.update({
+    id: '/mdma-application-and-technical-file-strategy',
+    path: '/mdma-application-and-technical-file-strategy',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
-const ServicesSaudiArabiaEstablishmentLicensingRoute =
-  ServicesSaudiArabiaEstablishmentLicensingRouteImport.update({
-    id: '/establishment-licensing',
-    path: '/establishment-licensing',
+const ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute =
+  ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRouteImport.update(
+    {
+      id: '/medical-device-establishment-licensing-and-local-supply-chain',
+      path: '/medical-device-establishment-licensing-and-local-supply-chain',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute =
+  ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRouteImport.update(
+    {
+      id: '/post-market-surveillance-vigilance-and-field-safety-actions-sfda',
+      path: '/post-market-surveillance-vigilance-and-field-safety-actions-sfda',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute =
+  ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRouteImport.update({
+    id: '/samd-software-ai-and-cybersecurity-sfda',
+    path: '/samd-software-ai-and-cybersecurity-sfda',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
-const ServicesSaudiArabiaInspectionRoute =
-  ServicesSaudiArabiaInspectionRouteImport.update({
-    id: '/inspection',
-    path: '/inspection',
+const ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute =
+  ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRouteImport.update({
+    id: '/sfda-inspection-and-quality-system-readiness',
+    path: '/sfda-inspection-and-quality-system-readiness',
     getParentRoute: () => ServicesSaudiArabiaRoute,
   } as any)
-const ServicesSaudiArabiaIvdRoute = ServicesSaudiArabiaIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesSaudiArabiaRoute,
-} as any)
-const ServicesSaudiArabiaLabelingRoute =
-  ServicesSaudiArabiaLabelingRouteImport.update({
-    id: '/labeling',
-    path: '/labeling',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
-const ServicesSaudiArabiaMdmaRoute = ServicesSaudiArabiaMdmaRouteImport.update({
-  id: '/mdma',
-  path: '/mdma',
-  getParentRoute: () => ServicesSaudiArabiaRoute,
-} as any)
-const ServicesSaudiArabiaPostMarketRoute =
-  ServicesSaudiArabiaPostMarketRouteImport.update({
-    id: '/post-market',
-    path: '/post-market',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
-const ServicesSaudiArabiaSfdaQueriesRoute =
-  ServicesSaudiArabiaSfdaQueriesRouteImport.update({
-    id: '/sfda-queries',
-    path: '/sfda-queries',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
-const ServicesSaudiArabiaSoftwareRoute =
-  ServicesSaudiArabiaSoftwareRouteImport.update({
-    id: '/software',
-    path: '/software',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
-const ServicesSaudiArabiaTechnicalDocumentationRoute =
-  ServicesSaudiArabiaTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
-const ServicesSaudiArabiaTestingStrategyRoute =
-  ServicesSaudiArabiaTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
-    getParentRoute: () => ServicesSaudiArabiaRoute,
-  } as any)
+const ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute =
+  ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport.update(
+    {
+      id: '/sfda-queries-deficiency-response-and-technical-review-support',
+      path: '/sfda-queries-deficiency-response-and-technical-review-support',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute =
+  ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRouteImport.update(
+    {
+      id: '/sfda-regulatory-strategy-and-product-classification',
+      path: '/sfda-regulatory-strategy-and-product-classification',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute =
+  ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRouteImport.update(
+    {
+      id: '/technical-documentation-and-essential-principles-sfda',
+      path: '/technical-documentation-and-essential-principles-sfda',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
+const ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute =
+  ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRouteImport.update(
+    {
+      id: '/testing-strategy-and-laboratory-coordination-sfda',
+      path: '/testing-strategy-and-laboratory-coordination-sfda',
+      getParentRoute: () => ServicesSaudiArabiaRoute,
+    } as any,
+  )
 const ServicesUaeIndexRoute = ServicesUaeIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesUaeRoute,
 } as any)
-const ServicesUaeChangeManagementRoute =
-  ServicesUaeChangeManagementRouteImport.update({
-    id: '/change-management',
-    path: '/change-management',
+const ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute =
+  ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRouteImport.update({
+    id: '/changes-variations-renewal-and-lifecycle-support-uae',
+    path: '/changes-variations-renewal-and-lifecycle-support-uae',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaeClassificationRoute =
-  ServicesUaeClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute =
+  ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRouteImport.update(
+    {
+      id: '/ecas-moiat-conformity-assessment-where-separately-applicable',
+      path: '/ecas-moiat-conformity-assessment-where-separately-applicable',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute =
+  ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRouteImport.update({
+    id: '/ivd-registration-and-performance-evidence-uae',
+    path: '/ivd-registration-and-performance-evidence-uae',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaeEcasRoute = ServicesUaeEcasRouteImport.update({
-  id: '/ecas',
-  path: '/ecas',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeIvdRoute = ServicesUaeIvdRouteImport.update({
-  id: '/ivd',
-  path: '/ivd',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeLabelingRoute = ServicesUaeLabelingRouteImport.update({
-  id: '/labeling',
-  path: '/labeling',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeLocalApplicantRoute =
-  ServicesUaeLocalApplicantRouteImport.update({
-    id: '/local-applicant',
-    path: '/local-applicant',
+const ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute =
+  ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRouteImport.update({
+    id: '/labeling-ifu-packaging-and-market-claim-compliance-uae',
+    path: '/labeling-ifu-packaging-and-market-claim-compliance-uae',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaeMohapQueriesRoute = ServicesUaeMohapQueriesRouteImport.update({
-  id: '/mohap-queries',
-  path: '/mohap-queries',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeMohapRegistrationRoute =
-  ServicesUaeMohapRegistrationRouteImport.update({
-    id: '/mohap-registration',
-    path: '/mohap-registration',
+const ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute =
+  ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRouteImport.update(
+    {
+      id: '/medical-warehouse-local-supply-chain-and-commercial-readiness',
+      path: '/medical-warehouse-local-supply-chain-and-commercial-readiness',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute =
+  ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRouteImport.update(
+    {
+      id: '/mohap-medical-device-registration-and-dossier-strategy',
+      path: '/mohap-medical-device-registration-and-dossier-strategy',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute =
+  ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport.update(
+    {
+      id: '/mohap-queries-deficiency-response-and-technical-review-support',
+      path: '/mohap-queries-deficiency-response-and-technical-review-support',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute =
+  ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRouteImport.update({
+    id: '/post-market-monitoring-vigilance-and-field-actions-uae',
+    path: '/post-market-monitoring-vigilance-and-field-actions-uae',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaePostMarketRoute = ServicesUaePostMarketRouteImport.update({
-  id: '/post-market',
-  path: '/post-market',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
 const ServicesUaeQmsInspectionRoute =
   ServicesUaeQmsInspectionRouteImport.update({
     id: '/qms-inspection',
     path: '/qms-inspection',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaeSoftwareRoute = ServicesUaeSoftwareRouteImport.update({
-  id: '/software',
-  path: '/software',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeSupplyChainRoute = ServicesUaeSupplyChainRouteImport.update({
-  id: '/supply-chain',
-  path: '/supply-chain',
-  getParentRoute: () => ServicesUaeRoute,
-} as any)
-const ServicesUaeTechnicalDocumentationRoute =
-  ServicesUaeTechnicalDocumentationRouteImport.update({
-    id: '/technical-documentation',
-    path: '/technical-documentation',
+const ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute =
+  ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRouteImport.update({
+    id: '/samd-software-ai-and-cybersecurity-uae-mohap',
+    path: '/samd-software-ai-and-cybersecurity-uae-mohap',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
-const ServicesUaeTestingStrategyRoute =
-  ServicesUaeTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
+const ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute =
+  ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRouteImport.update(
+    {
+      id: '/technical-documentation-and-safety-performance-evidence-uae-mohap',
+      path: '/technical-documentation-and-safety-performance-evidence-uae-mohap',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute =
+  ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRouteImport.update({
+    id: '/testing-strategy-and-laboratory-coordination-uae',
+    path: '/testing-strategy-and-laboratory-coordination-uae',
     getParentRoute: () => ServicesUaeRoute,
   } as any)
+const ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute =
+  ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRouteImport.update(
+    {
+      id: '/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface',
+      path: '/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
+const ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute =
+  ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRouteImport.update(
+    {
+      id: '/uae-mohap-regulatory-strategy-and-product-classification',
+      path: '/uae-mohap-regulatory-strategy-and-product-classification',
+      getParentRoute: () => ServicesUaeRoute,
+    } as any,
+  )
 const ServicesUkIndexRoute = ServicesUkIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesUkRoute,
 } as any)
-const ServicesUkAuditReadinessRoute =
-  ServicesUkAuditReadinessRouteImport.update({
-    id: '/audit-readiness',
-    path: '/audit-readiness',
+const ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute =
+  ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRouteImport.update({
+    id: '/ce-recognition-and-ukca-market-access-strategy',
+    path: '/ce-recognition-and-ukca-market-access-strategy',
     getParentRoute: () => ServicesUkRoute,
   } as any)
-const ServicesUkConformityAssuranceRoute =
-  ServicesUkConformityAssuranceRouteImport.update({
-    id: '/conformity-assurance',
-    path: '/conformity-assurance',
+const ServicesUkMhraDorsDeviceRegistrationSystemRoute =
+  ServicesUkMhraDorsDeviceRegistrationSystemRouteImport.update({
+    id: '/mhra-dors-device-registration-system',
+    path: '/mhra-dors-device-registration-system',
     getParentRoute: () => ServicesUkRoute,
   } as any)
-const ServicesUkDorsRegistrationRoute =
-  ServicesUkDorsRegistrationRouteImport.update({
-    id: '/dors-registration',
-    path: '/dors-registration',
-    getParentRoute: () => ServicesUkRoute,
-  } as any)
-const ServicesUkLabelingRoute = ServicesUkLabelingRouteImport.update({
-  id: '/labeling',
-  path: '/labeling',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
 const ServicesUkMhraLiaisonRoute = ServicesUkMhraLiaisonRouteImport.update({
   id: '/mhra-liaison',
   path: '/mhra-liaison',
@@ -1852,83 +2007,133 @@ const ServicesUkMhraRegistrationRoute =
     path: '/mhra-registration',
     getParentRoute: () => ServicesUkRoute,
   } as any)
-const ServicesUkPmsRoute = ServicesUkPmsRouteImport.update({
-  id: '/pms',
-  path: '/pms',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
-const ServicesUkQmsRoute = ServicesUkQmsRouteImport.update({
-  id: '/qms',
-  path: '/qms',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
-const ServicesUkRegulatoryWritingRoute =
-  ServicesUkRegulatoryWritingRouteImport.update({
-    id: '/regulatory-writing',
-    path: '/regulatory-writing',
+const ServicesUkQmsImplementationAndUkMdrAlignmentRoute =
+  ServicesUkQmsImplementationAndUkMdrAlignmentRouteImport.update({
+    id: '/qms-implementation-and-uk-mdr-alignment',
+    path: '/qms-implementation-and-uk-mdr-alignment',
     getParentRoute: () => ServicesUkRoute,
   } as any)
-const ServicesUkTechnicalFileRoute = ServicesUkTechnicalFileRouteImport.update({
-  id: '/technical-file',
-  path: '/technical-file',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
-const ServicesUkUkrpRoute = ServicesUkUkrpRouteImport.update({
-  id: '/ukrp',
-  path: '/ukrp',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
-const ServicesUkVigilanceRoute = ServicesUkVigilanceRouteImport.update({
-  id: '/vigilance',
-  path: '/vigilance',
-  getParentRoute: () => ServicesUkRoute,
-} as any)
+const ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute =
+  ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRouteImport.update({
+    id: '/uk-approved-body-and-conformity-assessment-readiness',
+    path: '/uk-approved-body-and-conformity-assessment-readiness',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute =
+  ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRouteImport.update({
+    id: '/uk-mdr-technical-documentation-and-gap-assessment',
+    path: '/uk-mdr-technical-documentation-and-gap-assessment',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute =
+  ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRouteImport.update({
+    id: '/uk-post-market-surveillance-pms-pmsr-and-psur',
+    path: '/uk-post-market-surveillance-pms-pmsr-and-psur',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkRegulatoryAndClinicalWritingServicesRoute =
+  ServicesUkUkRegulatoryAndClinicalWritingServicesRouteImport.update({
+    id: '/uk-regulatory-and-clinical-writing-services',
+    path: '/uk-regulatory-and-clinical-writing-services',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkResponsiblePersonUkrpServicesRoute =
+  ServicesUkUkResponsiblePersonUkrpServicesRouteImport.update({
+    id: '/uk-responsible-person-ukrp-services',
+    path: '/uk-responsible-person-ukrp-services',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute =
+  ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRouteImport.update({
+    id: '/uk-vigilance-and-field-safety-corrective-action-fsca',
+    path: '/uk-vigilance-and-field-safety-corrective-action-fsca',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
+const ServicesUkUkcaLabelingAndArtworkComplianceRoute =
+  ServicesUkUkcaLabelingAndArtworkComplianceRouteImport.update({
+    id: '/ukca-labeling-and-artwork-compliance',
+    path: '/ukca-labeling-and-artwork-compliance',
+    getParentRoute: () => ServicesUkRoute,
+  } as any)
 const ServicesUsaIndexRoute = ServicesUsaIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesUsaRoute,
 } as any)
-const ServicesUsa510kRoute = ServicesUsa510kRouteImport.update({
-  id: '/510k',
-  path: '/510k',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsa513gRoute = ServicesUsa513gRouteImport.update({
-  id: '/513g',
-  path: '/513g',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaAgentServiceRoute = ServicesUsaAgentServiceRouteImport.update({
-  id: '/agent-service',
-  path: '/agent-service',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaClassificationRoute =
-  ServicesUsaClassificationRouteImport.update({
-    id: '/classification',
-    path: '/classification',
+const ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute =
+  ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRouteImport.update(
+    {
+      id: '/fda-510k-premarket-notification-and-clearance-consulting',
+      path: '/fda-510k-premarket-notification-and-clearance-consulting',
+      getParentRoute: () => ServicesUsaRoute,
+    } as any,
+  )
+const ServicesUsaFda513gRequestsForInformationRoute =
+  ServicesUsaFda513gRequestsForInformationRouteImport.update({
+    id: '/fda-513g-requests-for-information',
+    path: '/fda-513g-requests-for-information',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaDeNovoRoute = ServicesUsaDeNovoRouteImport.update({
-  id: '/de-novo',
-  path: '/de-novo',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaDeficiencyResponseRoute =
-  ServicesUsaDeficiencyResponseRouteImport.update({
-    id: '/deficiency-response',
-    path: '/deficiency-response',
+const ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute =
+  ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRouteImport.update({
+    id: '/fda-additional-information-and-deficiency-response',
+    path: '/fda-additional-information-and-deficiency-response',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaEStarRoute = ServicesUsaEStarRouteImport.update({
-  id: '/e-star',
-  path: '/e-star',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaEstablishmentRegistrationRoute =
-  ServicesUsaEstablishmentRegistrationRouteImport.update({
-    id: '/establishment-registration',
-    path: '/establishment-registration',
+const ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute =
+  ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRouteImport.update({
+    id: '/fda-establishment-registration-and-device-listing',
+    path: '/fda-establishment-registration-and-device-listing',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute =
+  ServicesUsaFdaEstarDossierPreparationAndSubmissionRouteImport.update({
+    id: '/fda-estar-dossier-preparation-and-submission',
+    path: '/fda-estar-dossier-preparation-and-submission',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute =
+  ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRouteImport.update(
+    {
+      id: '/fda-medical-device-classification-and-pathway-assessment',
+      path: '/fda-medical-device-classification-and-pathway-assessment',
+      getParentRoute: () => ServicesUsaRoute,
+    } as any,
+  )
+const ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute =
+  ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRouteImport.update({
+    id: '/fda-post-clearance-and-device-lifecycle-support',
+    path: '/fda-post-clearance-and-device-lifecycle-support',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute =
+  ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRouteImport.update({
+    id: '/fda-predicate-and-substantial-equivalence-strategy',
+    path: '/fda-predicate-and-substantial-equivalence-strategy',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute =
+  ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRouteImport.update({
+    id: '/fda-q-submission-and-pre-submission-consulting',
+    path: '/fda-q-submission-and-pre-submission-consulting',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaQmsrAndInspectionPreparationRoute =
+  ServicesUsaFdaQmsrAndInspectionPreparationRouteImport.update({
+    id: '/fda-qmsr-and-inspection-preparation',
+    path: '/fda-qmsr-and-inspection-preparation',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaRfdAndPreRfdDesignationsRoute =
+  ServicesUsaFdaRfdAndPreRfdDesignationsRouteImport.update({
+    id: '/fda-rfd-and-pre-rfd-designations',
+    path: '/fda-rfd-and-pre-rfd-designations',
+    getParentRoute: () => ServicesUsaRoute,
+  } as any)
+const ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute =
+  ServicesUsaFdaUdiAndGudidComplianceSolutionsRouteImport.update({
+    id: '/fda-udi-and-gudid-compliance-solutions',
+    path: '/fda-udi-and-gudid-compliance-solutions',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
 const ServicesUsaGlobalMarketAccessRoute =
@@ -1937,80 +2142,70 @@ const ServicesUsaGlobalMarketAccessRoute =
     path: '/global-market-access',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaPmaRoute = ServicesUsaPmaRouteImport.update({
-  id: '/pma',
-  path: '/pma',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaPostClearanceLifecycleRoute =
-  ServicesUsaPostClearanceLifecycleRouteImport.update({
-    id: '/post-clearance-lifecycle',
-    path: '/post-clearance-lifecycle',
+const ServicesUsaUsAgentServicesForForeignEstablishmentsRoute =
+  ServicesUsaUsAgentServicesForForeignEstablishmentsRouteImport.update({
+    id: '/us-agent-services-for-foreign-establishments',
+    path: '/us-agent-services-for-foreign-establishments',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaPredicateStrategyRoute =
-  ServicesUsaPredicateStrategyRouteImport.update({
-    id: '/predicate-strategy',
-    path: '/predicate-strategy',
+const ServicesUsaUsFdaDeNovoClassificationPathwayRoute =
+  ServicesUsaUsFdaDeNovoClassificationPathwayRouteImport.update({
+    id: '/us-fda-de-novo-classification-pathway',
+    path: '/us-fda-de-novo-classification-pathway',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaQSubmissionRoute = ServicesUsaQSubmissionRouteImport.update({
-  id: '/q-submission',
-  path: '/q-submission',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaQmsrInspectionRoute =
-  ServicesUsaQmsrInspectionRouteImport.update({
-    id: '/qmsr-inspection',
-    path: '/qmsr-inspection',
+const ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute =
+  ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRouteImport.update(
+    {
+      id: '/us-fda-medical-device-testing-strategy-and-standards-compliance',
+      path: '/us-fda-medical-device-testing-strategy-and-standards-compliance',
+      getParentRoute: () => ServicesUsaRoute,
+    } as any,
+  )
+const ServicesUsaUsFdaPremarketApprovalPmaSupportRoute =
+  ServicesUsaUsFdaPremarketApprovalPmaSupportRouteImport.update({
+    id: '/us-fda-premarket-approval-pma-support',
+    path: '/us-fda-premarket-approval-pma-support',
     getParentRoute: () => ServicesUsaRoute,
   } as any)
-const ServicesUsaRfdPreRfdRoute = ServicesUsaRfdPreRfdRouteImport.update({
-  id: '/rfd-pre-rfd',
-  path: '/rfd-pre-rfd',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
-const ServicesUsaTestingStrategyRoute =
-  ServicesUsaTestingStrategyRouteImport.update({
-    id: '/testing-strategy',
-    path: '/testing-strategy',
-    getParentRoute: () => ServicesUsaRoute,
-  } as any)
-const ServicesUsaUdiGudidRoute = ServicesUsaUdiGudidRouteImport.update({
-  id: '/udi-gudid',
-  path: '/udi-gudid',
-  getParentRoute: () => ServicesUsaRoute,
-} as any)
 const IndustriesCosmeticsIndiaIndexRoute =
   IndustriesCosmeticsIndiaIndexRouteImport.update({
     id: '/industries/cosmetics_/india/',
     path: '/industries/cosmetics/india/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndustriesCosmeticsIndiaForImporterRoute =
-  IndustriesCosmeticsIndiaForImporterRouteImport.update({
-    id: '/industries/cosmetics_/india/for-importer',
-    path: '/industries/cosmetics/india/for-importer',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IndustriesCosmeticsIndiaForManufacturerRoute =
-  IndustriesCosmeticsIndiaForManufacturerRouteImport.update({
-    id: '/industries/cosmetics_/india/for-manufacturer',
-    path: '/industries/cosmetics/india/for-manufacturer',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IndustriesMedicalDevicesIndiaForImporterRoute =
-  IndustriesMedicalDevicesIndiaForImporterRouteImport.update({
-    id: '/industries/medical-devices_/india/for-importer',
-    path: '/industries/medical-devices/india/for-importer',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IndustriesMedicalDevicesIndiaForManufacturerRoute =
-  IndustriesMedicalDevicesIndiaForManufacturerRouteImport.update({
-    id: '/industries/medical-devices_/india/for-manufacturer',
-    path: '/industries/medical-devices/india/for-manufacturer',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute =
+  IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRouteImport.update(
+    {
+      id: '/industries/cosmetics_/india/cosmetic-manufacturing-license-in-india',
+      path: '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute =
+  IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRouteImport.update(
+    {
+      id: '/industries/cosmetics_/india/cosmetics-registration-for-importers-in-india',
+      path: '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute =
+  IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRouteImport.update(
+    {
+      id: '/industries/medical-devices_/india/medical-device-manufacturing-and-loan-licensing-in-india',
+      path: '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute =
+  IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRouteImport.update(
+    {
+      id: '/industries/medical-devices_/india/medical-device-regulatory-solutions-for-importers-in-india',
+      path: '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -2023,12 +2218,12 @@ export interface FileRoutesByFullPath {
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
-  '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
-  '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
-  '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
-  '/case-studies/fda-simulated-use': typeof CaseStudiesFdaSimulatedUseRoute
-  '/case-studies/test-smarter': typeof CaseStudiesTestSmarterRoute
+  '/case-studies/australia-tga-artg-inclusion-case-study': typeof CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute
+  '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature': typeof CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute
+  '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero': typeof CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute
+  '/case-studies/medical-device-testing-strategy-test-smarter-cover-more': typeof CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute
+  '/case-studies/the-algorithm-can-do-more-should-the-label': typeof CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute
+  '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need': typeof CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
@@ -2047,10 +2242,10 @@ export interface FileRoutesByFullPath {
   '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
   '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
   '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
-  '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities': typeof InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute
   '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
   '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
-  '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework': typeof InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute
   '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
   '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
@@ -2129,98 +2324,98 @@ export interface FileRoutesByFullPath {
   '/industries/ivd/eu': typeof IndustriesIvdEuRoute
   '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
-  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
-  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
-  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
-  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
-  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
-  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
-  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
-  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
-  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
-  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
-  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
-  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
-  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
-  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
-  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
-  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
-  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
-  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
-  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
-  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
-  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
-  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
-  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
-  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
-  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
-  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
-  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
-  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
-  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
-  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
-  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
-  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
-  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
-  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
-  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
-  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
-  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
-  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
-  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
-  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
-  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
-  '/services/canada/pms': typeof ServicesCanadaPmsRoute
-  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
-  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
-  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
-  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
-  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
+  '/services/australia/australia-importer-distributor-and-supply-chain-compliance': typeof ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute
+  '/services/australia/australia-tga-samd-ai-and-cybersecurity-support': typeof ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute
+  '/services/australia/australian-labelling-ifu-and-ausudid-compliance': typeof ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute
+  '/services/australia/independent-tga-sponsor-representation': typeof ServicesAustraliaIndependentTgaSponsorRepresentationRoute
+  '/services/australia/tga-application-audit-defense-and-rfi-support': typeof ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute
+  '/services/australia/tga-artg-inclusion-strategy-and-application-preparation': typeof ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute
+  '/services/australia/tga-artg-variations-and-significant-change-support': typeof ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute
+  '/services/australia/tga-australian-sponsor-services-and-governance': typeof ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute
+  '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy': typeof ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute
+  '/services/australia/tga-conformity-assessment-support': typeof ServicesAustraliaTgaConformityAssessmentSupportRoute
+  '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion': typeof ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute
+  '/services/australia/tga-manufacturer-evidence-and-conformity-assessment': typeof ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute
+  '/services/australia/tga-medical-device-and-ivd-classification': typeof ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute
+  '/services/australia/tga-post-market-surveillance-pms-plans': typeof ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute
+  '/services/australia/tga-post-market-vigilance-mdir-and-recall-management': typeof ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute
+  '/services/australia/tga-technical-documentation-and-essential-principles': typeof ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute
+  '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia': typeof ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute
+  '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022': typeof ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route
+  '/services/brazil/anvisa-changes-variations-and-revalidacao-support': typeof ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute
+  '/services/brazil/anvisa-exigencia-and-inspection-response-strategy': typeof ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute
+  '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023': typeof ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route
+  '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil': typeof ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute
+  '/services/brazil/anvisa-notificacao-pathway-brazil': typeof ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute
+  '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro': typeof ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute
+  '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance': typeof ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute
+  '/services/brazil/anvisa-registro-pathway-brazil': typeof ServicesBrazilAnvisaRegistroPathwayBrazilRoute
+  '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting': typeof ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute
+  '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence': typeof ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute
+  '/services/brazil/anvisa-technovigilance-services-brazil': typeof ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute
+  '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance': typeof ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute
+  '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination': typeof ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface': typeof ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute
+  '/services/canada/canada-medical-device-supply-chain-and-importer-compliance': typeof ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute
+  '/services/canada/health-canada-inspection-readiness-and-defense': typeof ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute
+  '/services/canada/health-canada-ivd-registration-and-performance-strategy': typeof ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute
+  '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance': typeof ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute
+  '/services/canada/health-canada-mdl-amendments-and-significant-changes': typeof ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute
+  '/services/canada/health-canada-mdl-and-mdel-annual-renewals': typeof ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute
+  '/services/canada/health-canada-medical-device-and-ivd-classification': typeof ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute
+  '/services/canada/health-canada-medical-device-establishment-licence-mdel': typeof ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute
+  '/services/canada/health-canada-medical-device-licence-mdl-application': typeof ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute
+  '/services/canada/health-canada-post-market-surveillance-and-mpr': typeof ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute
+  '/services/canada/health-canada-regulatory-liaison-support': typeof ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute
+  '/services/canada/health-canada-samd-and-cybersecurity-compliance': typeof ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute
+  '/services/canada/health-canada-technical-documentation-and-evidence-strategy': typeof ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute
+  '/services/canada/health-canada-testing-strategy-and-laboratory-coordination': typeof ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness': typeof ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
   '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
   '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
-  '/services/eu/classification': typeof ServicesEuClassificationRoute
-  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
-  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
-  '/services/eu/ear': typeof ServicesEuEarRoute
-  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance': typeof ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute
+  '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc': typeof ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute
+  '/services/eu/eu-mdr-and-ivdr-qualification-and-classification': typeof ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute
+  '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy': typeof ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute
+  '/services/eu/eu-mdr-software-and-samd-regulatory-consulting': typeof ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute
+  '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination': typeof ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/eu/eu-notified-body-technical-review-and-deficiency-response': typeof ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute
+  '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support': typeof ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute
+  '/services/eu/eudamed-udi-and-economic-operator-compliance': typeof ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute
+  '/services/eu/european-authorized-representative-ec-rep-ear-services': typeof ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute
   '/services/eu/ivdr': typeof ServicesEuIvdrRoute
   '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
   '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
   '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
   '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
   '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
-  '/services/eu/labeling': typeof ServicesEuLabelingRoute
   '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
   '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
-  '/services/eu/pms': typeof ServicesEuPmsRoute
-  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
-  '/services/eu/qms': typeof ServicesEuQmsRoute
-  '/services/eu/software': typeof ServicesEuSoftwareRoute
+  '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution': typeof ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
-  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
-  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
-  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
-  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
-  '/services/india/ivd': typeof ServicesIndiaIvdRoute
-  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
-  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
-  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
-  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
-  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
-  '/services/india/md-42': typeof ServicesIndiaMd42Route
-  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
-  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
-  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
-  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
-  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
-  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
-  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
-  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
-  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5': typeof ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route
+  '/services/india/class-a-import-registration-as-per-gsr-777e': typeof ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute
+  '/services/india/class-a-manufacturing-registration-gsr-777e': typeof ServicesIndiaClassAManufacturingRegistrationGsr777eRoute
+  '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9': typeof ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route
+  '/services/india/free-sale-certificate-fsc': typeof ServicesIndiaFreeSaleCertificateFscRoute
+  '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27': typeof ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route
+  '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15': typeof ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route
+  '/services/india/in-vitro-diagnostic-regulatory-services': typeof ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute
+  '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19': typeof ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route
+  '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25': typeof ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route
+  '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6': typeof ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route
+  '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10': typeof ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route
+  '/services/india/market-standing-certificate-msc': typeof ServicesIndiaMarketStandingCertificateMscRoute
+  '/services/india/md-42-medical-device-registration-certificate': typeof ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute
+  '/services/india/medical-device-licensing-and-regulatory-approvals-in-india': typeof ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute
+  '/services/india/neutral-code-certificate-special-code': typeof ServicesIndiaNeutralCodeCertificateSpecialCodeRoute
+  '/services/india/non-conviction-certificate-ncc': typeof ServicesIndiaNonConvictionCertificateNccRoute
+  '/services/india/patient-personal-use-device-import-forms-md-20-md-21': typeof ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route
+  '/services/india/test-license-for-ivd-devices-forms-md-16-md-17': typeof ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route
   '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
   '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
   '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
@@ -2233,75 +2428,75 @@ export interface FileRoutesByFullPath {
   '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
   '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
   '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
-  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
-  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
-  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
-  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
-  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
-  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand': typeof ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute
+  '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand': typeof ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute
+  '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand': typeof ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute
+  '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand': typeof ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute
+  '/services/new-zealand/medsafe-queries-safety-review-and-technical-response': typeof ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute
+  '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand': typeof ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute
+  '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand': typeof ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute
   '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
-  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand': typeof ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute
+  '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand': typeof ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute
   '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
-  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
-  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
-  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand': typeof ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute
   '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
-  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
-  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
-  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
-  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
-  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
-  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
-  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
-  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
-  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
-  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
-  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
-  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
-  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
-  '/services/uae/classification': typeof ServicesUaeClassificationRoute
-  '/services/uae/ecas': typeof ServicesUaeEcasRoute
-  '/services/uae/ivd': typeof ServicesUaeIvdRoute
-  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
-  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
-  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
-  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
-  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda': typeof ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute
+  '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda': typeof ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute
+  '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda': typeof ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute
+  '/services/saudi-arabia/mdma-application-and-technical-file-strategy': typeof ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute
+  '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain': typeof ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute
+  '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda': typeof ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute
+  '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda': typeof ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute
+  '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness': typeof ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute
+  '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support': typeof ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification': typeof ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute
+  '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda': typeof ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute
+  '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda': typeof ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute
+  '/services/uae/changes-variations-renewal-and-lifecycle-support-uae': typeof ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute
+  '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable': typeof ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute
+  '/services/uae/ivd-registration-and-performance-evidence-uae': typeof ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute
+  '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae': typeof ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute
+  '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness': typeof ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute
+  '/services/uae/mohap-medical-device-registration-and-dossier-strategy': typeof ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute
+  '/services/uae/mohap-queries-deficiency-response-and-technical-review-support': typeof ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae': typeof ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute
   '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
-  '/services/uae/software': typeof ServicesUaeSoftwareRoute
-  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
-  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
-  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
-  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
-  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
-  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
-  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap': typeof ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute
+  '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap': typeof ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute
+  '/services/uae/testing-strategy-and-laboratory-coordination-uae': typeof ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute
+  '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface': typeof ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute
+  '/services/uae/uae-mohap-regulatory-strategy-and-product-classification': typeof ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute
+  '/services/uk/ce-recognition-and-ukca-market-access-strategy': typeof ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute
+  '/services/uk/mhra-dors-device-registration-system': typeof ServicesUkMhraDorsDeviceRegistrationSystemRoute
   '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
   '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
-  '/services/uk/pms': typeof ServicesUkPmsRoute
-  '/services/uk/qms': typeof ServicesUkQmsRoute
-  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
-  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
-  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
-  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
-  '/services/usa/510k': typeof ServicesUsa510kRoute
-  '/services/usa/513g': typeof ServicesUsa513gRoute
-  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
-  '/services/usa/classification': typeof ServicesUsaClassificationRoute
-  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
-  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
-  '/services/usa/e-star': typeof ServicesUsaEStarRoute
-  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/uk/qms-implementation-and-uk-mdr-alignment': typeof ServicesUkQmsImplementationAndUkMdrAlignmentRoute
+  '/services/uk/uk-approved-body-and-conformity-assessment-readiness': typeof ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute
+  '/services/uk/uk-mdr-technical-documentation-and-gap-assessment': typeof ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute
+  '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur': typeof ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute
+  '/services/uk/uk-regulatory-and-clinical-writing-services': typeof ServicesUkUkRegulatoryAndClinicalWritingServicesRoute
+  '/services/uk/uk-responsible-person-ukrp-services': typeof ServicesUkUkResponsiblePersonUkrpServicesRoute
+  '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca': typeof ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute
+  '/services/uk/ukca-labeling-and-artwork-compliance': typeof ServicesUkUkcaLabelingAndArtworkComplianceRoute
+  '/services/usa/fda-510k-premarket-notification-and-clearance-consulting': typeof ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute
+  '/services/usa/fda-513g-requests-for-information': typeof ServicesUsaFda513gRequestsForInformationRoute
+  '/services/usa/fda-additional-information-and-deficiency-response': typeof ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute
+  '/services/usa/fda-establishment-registration-and-device-listing': typeof ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute
+  '/services/usa/fda-estar-dossier-preparation-and-submission': typeof ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute
+  '/services/usa/fda-medical-device-classification-and-pathway-assessment': typeof ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute
+  '/services/usa/fda-post-clearance-and-device-lifecycle-support': typeof ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute
+  '/services/usa/fda-predicate-and-substantial-equivalence-strategy': typeof ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute
+  '/services/usa/fda-q-submission-and-pre-submission-consulting': typeof ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute
+  '/services/usa/fda-qmsr-and-inspection-preparation': typeof ServicesUsaFdaQmsrAndInspectionPreparationRoute
+  '/services/usa/fda-rfd-and-pre-rfd-designations': typeof ServicesUsaFdaRfdAndPreRfdDesignationsRoute
+  '/services/usa/fda-udi-and-gudid-compliance-solutions': typeof ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute
   '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
-  '/services/usa/pma': typeof ServicesUsaPmaRoute
-  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
-  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
-  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
-  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
-  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
-  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
-  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/usa/us-agent-services-for-foreign-establishments': typeof ServicesUsaUsAgentServicesForForeignEstablishmentsRoute
+  '/services/usa/us-fda-de-novo-classification-pathway': typeof ServicesUsaUsFdaDeNovoClassificationPathwayRoute
+  '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance': typeof ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute
+  '/services/usa/us-fda-premarket-approval-pma-support': typeof ServicesUsaUsFdaPremarketApprovalPmaSupportRoute
   '/services/australia/': typeof ServicesAustraliaIndexRoute
   '/services/brazil/': typeof ServicesBrazilIndexRoute
   '/services/canada/': typeof ServicesCanadaIndexRoute
@@ -2313,10 +2508,10 @@ export interface FileRoutesByFullPath {
   '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
-  '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
-  '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
-  '/industries/medical-devices/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
-  '/industries/medical-devices/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
+  '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india': typeof IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute
+  '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india': typeof IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute
+  '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute
+  '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute
   '/industries/cosmetics/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesByTo {
@@ -2328,12 +2523,12 @@ export interface FileRoutesByTo {
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
-  '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
-  '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
-  '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
-  '/case-studies/fda-simulated-use': typeof CaseStudiesFdaSimulatedUseRoute
-  '/case-studies/test-smarter': typeof CaseStudiesTestSmarterRoute
+  '/case-studies/australia-tga-artg-inclusion-case-study': typeof CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute
+  '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature': typeof CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute
+  '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero': typeof CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute
+  '/case-studies/medical-device-testing-strategy-test-smarter-cover-more': typeof CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute
+  '/case-studies/the-algorithm-can-do-more-should-the-label': typeof CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute
+  '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need': typeof CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
@@ -2352,10 +2547,10 @@ export interface FileRoutesByTo {
   '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
   '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
   '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
-  '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities': typeof InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute
   '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
   '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
-  '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework': typeof InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute
   '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
   '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
@@ -2423,98 +2618,98 @@ export interface FileRoutesByTo {
   '/industries/ivd/eu': typeof IndustriesIvdEuRoute
   '/industries/ivd/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd/usa': typeof IndustriesIvdUsaRoute
-  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
-  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
-  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
-  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
-  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
-  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
-  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
-  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
-  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
-  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
-  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
-  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
-  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
-  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
-  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
-  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
-  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
-  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
-  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
-  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
-  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
-  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
-  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
-  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
-  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
-  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
-  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
-  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
-  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
-  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
-  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
-  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
-  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
-  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
-  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
-  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
-  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
-  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
-  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
-  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
-  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
-  '/services/canada/pms': typeof ServicesCanadaPmsRoute
-  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
-  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
-  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
-  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
-  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
+  '/services/australia/australia-importer-distributor-and-supply-chain-compliance': typeof ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute
+  '/services/australia/australia-tga-samd-ai-and-cybersecurity-support': typeof ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute
+  '/services/australia/australian-labelling-ifu-and-ausudid-compliance': typeof ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute
+  '/services/australia/independent-tga-sponsor-representation': typeof ServicesAustraliaIndependentTgaSponsorRepresentationRoute
+  '/services/australia/tga-application-audit-defense-and-rfi-support': typeof ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute
+  '/services/australia/tga-artg-inclusion-strategy-and-application-preparation': typeof ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute
+  '/services/australia/tga-artg-variations-and-significant-change-support': typeof ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute
+  '/services/australia/tga-australian-sponsor-services-and-governance': typeof ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute
+  '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy': typeof ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute
+  '/services/australia/tga-conformity-assessment-support': typeof ServicesAustraliaTgaConformityAssessmentSupportRoute
+  '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion': typeof ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute
+  '/services/australia/tga-manufacturer-evidence-and-conformity-assessment': typeof ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute
+  '/services/australia/tga-medical-device-and-ivd-classification': typeof ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute
+  '/services/australia/tga-post-market-surveillance-pms-plans': typeof ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute
+  '/services/australia/tga-post-market-vigilance-mdir-and-recall-management': typeof ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute
+  '/services/australia/tga-technical-documentation-and-essential-principles': typeof ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute
+  '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia': typeof ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute
+  '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022': typeof ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route
+  '/services/brazil/anvisa-changes-variations-and-revalidacao-support': typeof ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute
+  '/services/brazil/anvisa-exigencia-and-inspection-response-strategy': typeof ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute
+  '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023': typeof ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route
+  '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil': typeof ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute
+  '/services/brazil/anvisa-notificacao-pathway-brazil': typeof ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute
+  '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro': typeof ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute
+  '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance': typeof ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute
+  '/services/brazil/anvisa-registro-pathway-brazil': typeof ServicesBrazilAnvisaRegistroPathwayBrazilRoute
+  '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting': typeof ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute
+  '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence': typeof ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute
+  '/services/brazil/anvisa-technovigilance-services-brazil': typeof ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute
+  '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance': typeof ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute
+  '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination': typeof ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface': typeof ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute
+  '/services/canada/canada-medical-device-supply-chain-and-importer-compliance': typeof ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute
+  '/services/canada/health-canada-inspection-readiness-and-defense': typeof ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute
+  '/services/canada/health-canada-ivd-registration-and-performance-strategy': typeof ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute
+  '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance': typeof ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute
+  '/services/canada/health-canada-mdl-amendments-and-significant-changes': typeof ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute
+  '/services/canada/health-canada-mdl-and-mdel-annual-renewals': typeof ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute
+  '/services/canada/health-canada-medical-device-and-ivd-classification': typeof ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute
+  '/services/canada/health-canada-medical-device-establishment-licence-mdel': typeof ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute
+  '/services/canada/health-canada-medical-device-licence-mdl-application': typeof ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute
+  '/services/canada/health-canada-post-market-surveillance-and-mpr': typeof ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute
+  '/services/canada/health-canada-regulatory-liaison-support': typeof ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute
+  '/services/canada/health-canada-samd-and-cybersecurity-compliance': typeof ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute
+  '/services/canada/health-canada-technical-documentation-and-evidence-strategy': typeof ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute
+  '/services/canada/health-canada-testing-strategy-and-laboratory-coordination': typeof ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness': typeof ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
   '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
   '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
-  '/services/eu/classification': typeof ServicesEuClassificationRoute
-  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
-  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
-  '/services/eu/ear': typeof ServicesEuEarRoute
-  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance': typeof ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute
+  '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc': typeof ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute
+  '/services/eu/eu-mdr-and-ivdr-qualification-and-classification': typeof ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute
+  '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy': typeof ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute
+  '/services/eu/eu-mdr-software-and-samd-regulatory-consulting': typeof ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute
+  '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination': typeof ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/eu/eu-notified-body-technical-review-and-deficiency-response': typeof ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute
+  '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support': typeof ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute
+  '/services/eu/eudamed-udi-and-economic-operator-compliance': typeof ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute
+  '/services/eu/european-authorized-representative-ec-rep-ear-services': typeof ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute
   '/services/eu/ivdr': typeof ServicesEuIvdrRoute
   '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
   '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
   '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
   '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
   '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
-  '/services/eu/labeling': typeof ServicesEuLabelingRoute
   '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
   '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
-  '/services/eu/pms': typeof ServicesEuPmsRoute
-  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
-  '/services/eu/qms': typeof ServicesEuQmsRoute
-  '/services/eu/software': typeof ServicesEuSoftwareRoute
+  '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution': typeof ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
-  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
-  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
-  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
-  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
-  '/services/india/ivd': typeof ServicesIndiaIvdRoute
-  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
-  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
-  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
-  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
-  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
-  '/services/india/md-42': typeof ServicesIndiaMd42Route
-  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
-  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
-  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
-  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
-  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
-  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
-  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
-  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
-  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5': typeof ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route
+  '/services/india/class-a-import-registration-as-per-gsr-777e': typeof ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute
+  '/services/india/class-a-manufacturing-registration-gsr-777e': typeof ServicesIndiaClassAManufacturingRegistrationGsr777eRoute
+  '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9': typeof ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route
+  '/services/india/free-sale-certificate-fsc': typeof ServicesIndiaFreeSaleCertificateFscRoute
+  '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27': typeof ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route
+  '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15': typeof ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route
+  '/services/india/in-vitro-diagnostic-regulatory-services': typeof ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute
+  '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19': typeof ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route
+  '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25': typeof ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route
+  '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6': typeof ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route
+  '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10': typeof ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route
+  '/services/india/market-standing-certificate-msc': typeof ServicesIndiaMarketStandingCertificateMscRoute
+  '/services/india/md-42-medical-device-registration-certificate': typeof ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute
+  '/services/india/medical-device-licensing-and-regulatory-approvals-in-india': typeof ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute
+  '/services/india/neutral-code-certificate-special-code': typeof ServicesIndiaNeutralCodeCertificateSpecialCodeRoute
+  '/services/india/non-conviction-certificate-ncc': typeof ServicesIndiaNonConvictionCertificateNccRoute
+  '/services/india/patient-personal-use-device-import-forms-md-20-md-21': typeof ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route
+  '/services/india/test-license-for-ivd-devices-forms-md-16-md-17': typeof ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route
   '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
   '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
   '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
@@ -2527,75 +2722,75 @@ export interface FileRoutesByTo {
   '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
   '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
   '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
-  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
-  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
-  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
-  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
-  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
-  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand': typeof ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute
+  '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand': typeof ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute
+  '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand': typeof ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute
+  '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand': typeof ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute
+  '/services/new-zealand/medsafe-queries-safety-review-and-technical-response': typeof ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute
+  '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand': typeof ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute
+  '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand': typeof ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute
   '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
-  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand': typeof ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute
+  '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand': typeof ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute
   '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
-  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
-  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
-  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand': typeof ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute
   '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
-  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
-  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
-  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
-  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
-  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
-  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
-  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
-  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
-  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
-  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
-  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
-  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
-  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
-  '/services/uae/classification': typeof ServicesUaeClassificationRoute
-  '/services/uae/ecas': typeof ServicesUaeEcasRoute
-  '/services/uae/ivd': typeof ServicesUaeIvdRoute
-  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
-  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
-  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
-  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
-  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda': typeof ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute
+  '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda': typeof ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute
+  '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda': typeof ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute
+  '/services/saudi-arabia/mdma-application-and-technical-file-strategy': typeof ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute
+  '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain': typeof ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute
+  '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda': typeof ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute
+  '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda': typeof ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute
+  '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness': typeof ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute
+  '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support': typeof ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification': typeof ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute
+  '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda': typeof ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute
+  '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda': typeof ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute
+  '/services/uae/changes-variations-renewal-and-lifecycle-support-uae': typeof ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute
+  '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable': typeof ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute
+  '/services/uae/ivd-registration-and-performance-evidence-uae': typeof ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute
+  '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae': typeof ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute
+  '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness': typeof ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute
+  '/services/uae/mohap-medical-device-registration-and-dossier-strategy': typeof ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute
+  '/services/uae/mohap-queries-deficiency-response-and-technical-review-support': typeof ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae': typeof ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute
   '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
-  '/services/uae/software': typeof ServicesUaeSoftwareRoute
-  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
-  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
-  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
-  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
-  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
-  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
-  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap': typeof ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute
+  '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap': typeof ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute
+  '/services/uae/testing-strategy-and-laboratory-coordination-uae': typeof ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute
+  '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface': typeof ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute
+  '/services/uae/uae-mohap-regulatory-strategy-and-product-classification': typeof ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute
+  '/services/uk/ce-recognition-and-ukca-market-access-strategy': typeof ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute
+  '/services/uk/mhra-dors-device-registration-system': typeof ServicesUkMhraDorsDeviceRegistrationSystemRoute
   '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
   '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
-  '/services/uk/pms': typeof ServicesUkPmsRoute
-  '/services/uk/qms': typeof ServicesUkQmsRoute
-  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
-  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
-  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
-  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
-  '/services/usa/510k': typeof ServicesUsa510kRoute
-  '/services/usa/513g': typeof ServicesUsa513gRoute
-  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
-  '/services/usa/classification': typeof ServicesUsaClassificationRoute
-  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
-  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
-  '/services/usa/e-star': typeof ServicesUsaEStarRoute
-  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/uk/qms-implementation-and-uk-mdr-alignment': typeof ServicesUkQmsImplementationAndUkMdrAlignmentRoute
+  '/services/uk/uk-approved-body-and-conformity-assessment-readiness': typeof ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute
+  '/services/uk/uk-mdr-technical-documentation-and-gap-assessment': typeof ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute
+  '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur': typeof ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute
+  '/services/uk/uk-regulatory-and-clinical-writing-services': typeof ServicesUkUkRegulatoryAndClinicalWritingServicesRoute
+  '/services/uk/uk-responsible-person-ukrp-services': typeof ServicesUkUkResponsiblePersonUkrpServicesRoute
+  '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca': typeof ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute
+  '/services/uk/ukca-labeling-and-artwork-compliance': typeof ServicesUkUkcaLabelingAndArtworkComplianceRoute
+  '/services/usa/fda-510k-premarket-notification-and-clearance-consulting': typeof ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute
+  '/services/usa/fda-513g-requests-for-information': typeof ServicesUsaFda513gRequestsForInformationRoute
+  '/services/usa/fda-additional-information-and-deficiency-response': typeof ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute
+  '/services/usa/fda-establishment-registration-and-device-listing': typeof ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute
+  '/services/usa/fda-estar-dossier-preparation-and-submission': typeof ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute
+  '/services/usa/fda-medical-device-classification-and-pathway-assessment': typeof ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute
+  '/services/usa/fda-post-clearance-and-device-lifecycle-support': typeof ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute
+  '/services/usa/fda-predicate-and-substantial-equivalence-strategy': typeof ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute
+  '/services/usa/fda-q-submission-and-pre-submission-consulting': typeof ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute
+  '/services/usa/fda-qmsr-and-inspection-preparation': typeof ServicesUsaFdaQmsrAndInspectionPreparationRoute
+  '/services/usa/fda-rfd-and-pre-rfd-designations': typeof ServicesUsaFdaRfdAndPreRfdDesignationsRoute
+  '/services/usa/fda-udi-and-gudid-compliance-solutions': typeof ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute
   '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
-  '/services/usa/pma': typeof ServicesUsaPmaRoute
-  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
-  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
-  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
-  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
-  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
-  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
-  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/usa/us-agent-services-for-foreign-establishments': typeof ServicesUsaUsAgentServicesForForeignEstablishmentsRoute
+  '/services/usa/us-fda-de-novo-classification-pathway': typeof ServicesUsaUsFdaDeNovoClassificationPathwayRoute
+  '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance': typeof ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute
+  '/services/usa/us-fda-premarket-approval-pma-support': typeof ServicesUsaUsFdaPremarketApprovalPmaSupportRoute
   '/services/australia': typeof ServicesAustraliaIndexRoute
   '/services/brazil': typeof ServicesBrazilIndexRoute
   '/services/canada': typeof ServicesCanadaIndexRoute
@@ -2607,10 +2802,10 @@ export interface FileRoutesByTo {
   '/services/uae': typeof ServicesUaeIndexRoute
   '/services/uk': typeof ServicesUkIndexRoute
   '/services/usa': typeof ServicesUsaIndexRoute
-  '/industries/cosmetics/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
-  '/industries/cosmetics/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
-  '/industries/medical-devices/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
-  '/industries/medical-devices/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
+  '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india': typeof IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute
+  '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india': typeof IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute
+  '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute
+  '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute
   '/industries/cosmetics/india': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRoutesById {
@@ -2625,12 +2820,12 @@ export interface FileRoutesById {
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/case-studies/algorithm-claim': typeof CaseStudiesAlgorithmClaimRoute
-  '/case-studies/australia-tga': typeof CaseStudiesAustraliaTgaRoute
-  '/case-studies/eu-mdr-remediation': typeof CaseStudiesEuMdrRemediationRoute
-  '/case-studies/fda-biocompatibility': typeof CaseStudiesFdaBiocompatibilityRoute
-  '/case-studies/fda-simulated-use': typeof CaseStudiesFdaSimulatedUseRoute
-  '/case-studies/test-smarter': typeof CaseStudiesTestSmarterRoute
+  '/case-studies/australia-tga-artg-inclusion-case-study': typeof CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute
+  '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature': typeof CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute
+  '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero': typeof CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute
+  '/case-studies/medical-device-testing-strategy-test-smarter-cover-more': typeof CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute
+  '/case-studies/the-algorithm-can-do-more-should-the-label': typeof CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute
+  '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need': typeof CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute
   '/industries/cosmetics': typeof IndustriesCosmeticsRoute
   '/industries/ivd': typeof IndustriesIvdRoute
   '/industries/medical-devices': typeof IndustriesMedicalDevicesRoute
@@ -2649,10 +2844,10 @@ export interface FileRoutesById {
   '/insights/dynamic-risk-management-software-medical-devices': typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
   '/insights/effective-capa-system-medical-devices': typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
   '/insights/eu-ai-act-medical-devices': typeof InsightsEuAiActMedicalDevicesRoute
-  '/insights/eu-mdr-2026': typeof InsightsEuMdr2026Route
+  '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities': typeof InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute
   '/insights/eu-mdr-compliance-challenges': typeof InsightsEuMdrComplianceChallengesRoute
   '/insights/fda-510k-program-modernization-safety-standards': typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
-  '/insights/fda-inspections-2026': typeof InsightsFdaInspections2026Route
+  '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework': typeof InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute
   '/insights/fda-q-sub-pre-submission-meeting-guide': typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   '/insights/fda-qmsr-2026': typeof InsightsFdaQmsr2026Route
   '/insights/fda-qmsr-compliance-guide': typeof InsightsFdaQmsrComplianceGuideRoute
@@ -2731,98 +2926,98 @@ export interface FileRoutesById {
   '/industries/ivd_/eu': typeof IndustriesIvdEuRoute
   '/industries/ivd_/india': typeof IndustriesIvdIndiaRoute
   '/industries/ivd_/usa': typeof IndustriesIvdUsaRoute
-  '/services/australia/artg-inclusion': typeof ServicesAustraliaArtgInclusionRoute
-  '/services/australia/australian-sponsor': typeof ServicesAustraliaAustralianSponsorRoute
-  '/services/australia/change-management': typeof ServicesAustraliaChangeManagementRoute
-  '/services/australia/classification': typeof ServicesAustraliaClassificationRoute
-  '/services/australia/clinical-evidence': typeof ServicesAustraliaClinicalEvidenceRoute
-  '/services/australia/conformity-assessment': typeof ServicesAustraliaConformityAssessmentRoute
-  '/services/australia/ivd': typeof ServicesAustraliaIvdRoute
-  '/services/australia/labeling': typeof ServicesAustraliaLabelingRoute
-  '/services/australia/manufacturer-evidence': typeof ServicesAustraliaManufacturerEvidenceRoute
-  '/services/australia/pms': typeof ServicesAustraliaPmsRoute
-  '/services/australia/post-market': typeof ServicesAustraliaPostMarketRoute
-  '/services/australia/software': typeof ServicesAustraliaSoftwareRoute
-  '/services/australia/sponsor': typeof ServicesAustraliaSponsorRoute
-  '/services/australia/supply-chain': typeof ServicesAustraliaSupplyChainRoute
-  '/services/australia/technical-documentation': typeof ServicesAustraliaTechnicalDocumentationRoute
-  '/services/australia/testing-strategy': typeof ServicesAustraliaTestingStrategyRoute
-  '/services/australia/tga-audit': typeof ServicesAustraliaTgaAuditRoute
-  '/services/brazil/anvisa-queries': typeof ServicesBrazilAnvisaQueriesRoute
-  '/services/brazil/bgmp': typeof ServicesBrazilBgmpRoute
-  '/services/brazil/brh': typeof ServicesBrazilBrhRoute
-  '/services/brazil/change-management': typeof ServicesBrazilChangeManagementRoute
-  '/services/brazil/classification': typeof ServicesBrazilClassificationRoute
-  '/services/brazil/ivd': typeof ServicesBrazilIvdRoute
-  '/services/brazil/labeling': typeof ServicesBrazilLabelingRoute
-  '/services/brazil/notificacao': typeof ServicesBrazilNotificacaoRoute
-  '/services/brazil/registration': typeof ServicesBrazilRegistrationRoute
-  '/services/brazil/registro': typeof ServicesBrazilRegistroRoute
-  '/services/brazil/software': typeof ServicesBrazilSoftwareRoute
-  '/services/brazil/technical-documentation': typeof ServicesBrazilTechnicalDocumentationRoute
-  '/services/brazil/technovigilance': typeof ServicesBrazilTechnovigilanceRoute
-  '/services/brazil/tecnovigilance': typeof ServicesBrazilTecnovigilanceRoute
-  '/services/brazil/testing-strategy': typeof ServicesBrazilTestingStrategyRoute
-  '/services/canada/change-management': typeof ServicesCanadaChangeManagementRoute
-  '/services/canada/classification': typeof ServicesCanadaClassificationRoute
-  '/services/canada/inspection': typeof ServicesCanadaInspectionRoute
-  '/services/canada/ivd': typeof ServicesCanadaIvdRoute
-  '/services/canada/labeling': typeof ServicesCanadaLabelingRoute
-  '/services/canada/liaison': typeof ServicesCanadaLiaisonRoute
-  '/services/canada/mdel': typeof ServicesCanadaMdelRoute
-  '/services/canada/mdl': typeof ServicesCanadaMdlRoute
-  '/services/canada/mdsap': typeof ServicesCanadaMdsapRoute
-  '/services/canada/pms': typeof ServicesCanadaPmsRoute
-  '/services/canada/renewals': typeof ServicesCanadaRenewalsRoute
-  '/services/canada/software': typeof ServicesCanadaSoftwareRoute
-  '/services/canada/supply-chain': typeof ServicesCanadaSupplyChainRoute
-  '/services/canada/technical-documentation': typeof ServicesCanadaTechnicalDocumentationRoute
-  '/services/canada/testing-strategy': typeof ServicesCanadaTestingStrategyRoute
+  '/services/australia/australia-importer-distributor-and-supply-chain-compliance': typeof ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute
+  '/services/australia/australia-tga-samd-ai-and-cybersecurity-support': typeof ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute
+  '/services/australia/australian-labelling-ifu-and-ausudid-compliance': typeof ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute
+  '/services/australia/independent-tga-sponsor-representation': typeof ServicesAustraliaIndependentTgaSponsorRepresentationRoute
+  '/services/australia/tga-application-audit-defense-and-rfi-support': typeof ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute
+  '/services/australia/tga-artg-inclusion-strategy-and-application-preparation': typeof ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute
+  '/services/australia/tga-artg-variations-and-significant-change-support': typeof ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute
+  '/services/australia/tga-australian-sponsor-services-and-governance': typeof ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute
+  '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy': typeof ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute
+  '/services/australia/tga-conformity-assessment-support': typeof ServicesAustraliaTgaConformityAssessmentSupportRoute
+  '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion': typeof ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute
+  '/services/australia/tga-manufacturer-evidence-and-conformity-assessment': typeof ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute
+  '/services/australia/tga-medical-device-and-ivd-classification': typeof ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute
+  '/services/australia/tga-post-market-surveillance-pms-plans': typeof ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute
+  '/services/australia/tga-post-market-vigilance-mdir-and-recall-management': typeof ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute
+  '/services/australia/tga-technical-documentation-and-essential-principles': typeof ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute
+  '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia': typeof ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute
+  '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022': typeof ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route
+  '/services/brazil/anvisa-changes-variations-and-revalidacao-support': typeof ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute
+  '/services/brazil/anvisa-exigencia-and-inspection-response-strategy': typeof ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute
+  '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023': typeof ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route
+  '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil': typeof ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute
+  '/services/brazil/anvisa-notificacao-pathway-brazil': typeof ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute
+  '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro': typeof ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute
+  '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance': typeof ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute
+  '/services/brazil/anvisa-registro-pathway-brazil': typeof ServicesBrazilAnvisaRegistroPathwayBrazilRoute
+  '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting': typeof ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute
+  '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence': typeof ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute
+  '/services/brazil/anvisa-technovigilance-services-brazil': typeof ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute
+  '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance': typeof ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute
+  '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination': typeof ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface': typeof ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute
+  '/services/canada/canada-medical-device-supply-chain-and-importer-compliance': typeof ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute
+  '/services/canada/health-canada-inspection-readiness-and-defense': typeof ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute
+  '/services/canada/health-canada-ivd-registration-and-performance-strategy': typeof ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute
+  '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance': typeof ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute
+  '/services/canada/health-canada-mdl-amendments-and-significant-changes': typeof ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute
+  '/services/canada/health-canada-mdl-and-mdel-annual-renewals': typeof ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute
+  '/services/canada/health-canada-medical-device-and-ivd-classification': typeof ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute
+  '/services/canada/health-canada-medical-device-establishment-licence-mdel': typeof ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute
+  '/services/canada/health-canada-medical-device-licence-mdl-application': typeof ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute
+  '/services/canada/health-canada-post-market-surveillance-and-mpr': typeof ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute
+  '/services/canada/health-canada-regulatory-liaison-support': typeof ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute
+  '/services/canada/health-canada-samd-and-cybersecurity-compliance': typeof ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute
+  '/services/canada/health-canada-technical-documentation-and-evidence-strategy': typeof ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute
+  '/services/canada/health-canada-testing-strategy-and-laboratory-coordination': typeof ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness': typeof ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute
   '/services/eu/article-117': typeof ServicesEuArticle117Route
   '/services/eu/ce-marking': typeof ServicesEuCeMarkingRoute
   '/services/eu/ce-registration': typeof ServicesEuCeRegistrationRoute
   '/services/eu/change-assessment': typeof ServicesEuChangeAssessmentRoute
   '/services/eu/class-d-ivdr': typeof ServicesEuClassDIvdrRoute
-  '/services/eu/classification': typeof ServicesEuClassificationRoute
-  '/services/eu/clinical-evaluation': typeof ServicesEuClinicalEvaluationRoute
-  '/services/eu/deficiency-response': typeof ServicesEuDeficiencyResponseRoute
-  '/services/eu/ear': typeof ServicesEuEarRoute
-  '/services/eu/eudamed': typeof ServicesEuEudamedRoute
+  '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance': typeof ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute
+  '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc': typeof ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute
+  '/services/eu/eu-mdr-and-ivdr-qualification-and-classification': typeof ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute
+  '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy': typeof ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute
+  '/services/eu/eu-mdr-software-and-samd-regulatory-consulting': typeof ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute
+  '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination': typeof ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute
+  '/services/eu/eu-notified-body-technical-review-and-deficiency-response': typeof ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute
+  '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support': typeof ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute
+  '/services/eu/eudamed-udi-and-economic-operator-compliance': typeof ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute
+  '/services/eu/european-authorized-representative-ec-rep-ear-services': typeof ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute
   '/services/eu/ivdr': typeof ServicesEuIvdrRoute
   '/services/eu/ivdr-analytical-performance': typeof ServicesEuIvdrAnalyticalPerformanceRoute
   '/services/eu/ivdr-classification': typeof ServicesEuIvdrClassificationRoute
   '/services/eu/ivdr-clinical-performance': typeof ServicesEuIvdrClinicalPerformanceRoute
   '/services/eu/ivdr-performance-evaluation': typeof ServicesEuIvdrPerformanceEvaluationRoute
   '/services/eu/ivdr-pmpf': typeof ServicesEuIvdrPmpfRoute
-  '/services/eu/labeling': typeof ServicesEuLabelingRoute
   '/services/eu/mdr': typeof ServicesEuMdrRoute
   '/services/eu/mdr-ivdr-transition': typeof ServicesEuMdrIvdrTransitionRoute
   '/services/eu/notified-body': typeof ServicesEuNotifiedBodyRoute
-  '/services/eu/pms': typeof ServicesEuPmsRoute
-  '/services/eu/pms-pmcf': typeof ServicesEuPmsPmcfRoute
-  '/services/eu/qms': typeof ServicesEuQmsRoute
-  '/services/eu/software': typeof ServicesEuSoftwareRoute
+  '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution': typeof ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute
   '/services/eu/technical-documentation': typeof ServicesEuTechnicalDocumentationRoute
-  '/services/eu/testing-strategy': typeof ServicesEuTestingStrategyRoute
-  '/services/india/class-a-import': typeof ServicesIndiaClassAImportRoute
-  '/services/india/free-sale': typeof ServicesIndiaFreeSaleRoute
-  '/services/india/investigational-devices': typeof ServicesIndiaInvestigationalDevicesRoute
-  '/services/india/ivd': typeof ServicesIndiaIvdRoute
-  '/services/india/ivd-clinical-performance': typeof ServicesIndiaIvdClinicalPerformanceRoute
-  '/services/india/ivd-testing': typeof ServicesIndiaIvdTestingRoute
-  '/services/india/loan-class-a-b': typeof ServicesIndiaLoanClassABRoute
-  '/services/india/loan-class-c-d': typeof ServicesIndiaLoanClassCDRoute
-  '/services/india/market-standing': typeof ServicesIndiaMarketStandingRoute
-  '/services/india/md-42': typeof ServicesIndiaMd42Route
-  '/services/india/medical-devices': typeof ServicesIndiaMedicalDevicesRoute
-  '/services/india/mfg-class-a-b': typeof ServicesIndiaMfgClassABRoute
-  '/services/india/mfg-class-a-gsr': typeof ServicesIndiaMfgClassAGsrRoute
-  '/services/india/mfg-class-c-d': typeof ServicesIndiaMfgClassCDRoute
-  '/services/india/neutral-code': typeof ServicesIndiaNeutralCodeRoute
-  '/services/india/non-conviction': typeof ServicesIndiaNonConvictionRoute
-  '/services/india/novel-ivds': typeof ServicesIndiaNovelIvdsRoute
-  '/services/india/personal-use': typeof ServicesIndiaPersonalUseRoute
-  '/services/india/predicate-devices': typeof ServicesIndiaPredicateDevicesRoute
+  '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5': typeof ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route
+  '/services/india/class-a-import-registration-as-per-gsr-777e': typeof ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute
+  '/services/india/class-a-manufacturing-registration-gsr-777e': typeof ServicesIndiaClassAManufacturingRegistrationGsr777eRoute
+  '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9': typeof ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route
+  '/services/india/free-sale-certificate-fsc': typeof ServicesIndiaFreeSaleCertificateFscRoute
+  '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27': typeof ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route
+  '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15': typeof ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route
+  '/services/india/in-vitro-diagnostic-regulatory-services': typeof ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute
+  '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19': typeof ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route
+  '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25': typeof ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route
+  '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6': typeof ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route
+  '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10': typeof ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route
+  '/services/india/market-standing-certificate-msc': typeof ServicesIndiaMarketStandingCertificateMscRoute
+  '/services/india/md-42-medical-device-registration-certificate': typeof ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute
+  '/services/india/medical-device-licensing-and-regulatory-approvals-in-india': typeof ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute
+  '/services/india/neutral-code-certificate-special-code': typeof ServicesIndiaNeutralCodeCertificateSpecialCodeRoute
+  '/services/india/non-conviction-certificate-ncc': typeof ServicesIndiaNonConvictionCertificateNccRoute
+  '/services/india/patient-personal-use-device-import-forms-md-20-md-21': typeof ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route
+  '/services/india/test-license-for-ivd-devices-forms-md-16-md-17': typeof ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route
   '/services/mdsap/audit-documentation': typeof ServicesMdsapAuditDocumentationRoute
   '/services/mdsap/capa-remediation': typeof ServicesMdsapCapaRemediationRoute
   '/services/mdsap/complaint-vigilance': typeof ServicesMdsapComplaintVigilanceRoute
@@ -2835,75 +3030,75 @@ export interface FileRoutesById {
   '/services/mdsap/production-supplier-validation': typeof ServicesMdsapProductionSupplierValidationRoute
   '/services/mdsap/qms-alignment': typeof ServicesMdsapQmsAlignmentRoute
   '/services/mdsap/strategy-scope': typeof ServicesMdsapStrategyScopeRoute
-  '/services/new-zealand/change-management': typeof ServicesNewZealandChangeManagementRoute
-  '/services/new-zealand/classification': typeof ServicesNewZealandClassificationRoute
-  '/services/new-zealand/ivd': typeof ServicesNewZealandIvdRoute
-  '/services/new-zealand/labeling': typeof ServicesNewZealandLabelingRoute
-  '/services/new-zealand/medsafe-queries': typeof ServicesNewZealandMedsafeQueriesRoute
-  '/services/new-zealand/post-market': typeof ServicesNewZealandPostMarketRoute
+  '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand': typeof ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute
+  '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand': typeof ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute
+  '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand': typeof ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute
+  '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand': typeof ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute
+  '/services/new-zealand/medsafe-queries-safety-review-and-technical-response': typeof ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute
+  '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand': typeof ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute
+  '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand': typeof ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute
   '/services/new-zealand/qms-compliance': typeof ServicesNewZealandQmsComplianceRoute
-  '/services/new-zealand/software': typeof ServicesNewZealandSoftwareRoute
+  '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand': typeof ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute
+  '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand': typeof ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute
   '/services/new-zealand/sponsor': typeof ServicesNewZealandSponsorRoute
-  '/services/new-zealand/supply-chain': typeof ServicesNewZealandSupplyChainRoute
-  '/services/new-zealand/technical-documentation': typeof ServicesNewZealandTechnicalDocumentationRoute
-  '/services/new-zealand/testing-strategy': typeof ServicesNewZealandTestingStrategyRoute
+  '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand': typeof ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute
   '/services/new-zealand/wand-notification': typeof ServicesNewZealandWandNotificationRoute
   '/services/saudi-arabia/authorized-representative': typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
-  '/services/saudi-arabia/change-management': typeof ServicesSaudiArabiaChangeManagementRoute
-  '/services/saudi-arabia/classification': typeof ServicesSaudiArabiaClassificationRoute
-  '/services/saudi-arabia/establishment-licensing': typeof ServicesSaudiArabiaEstablishmentLicensingRoute
-  '/services/saudi-arabia/inspection': typeof ServicesSaudiArabiaInspectionRoute
-  '/services/saudi-arabia/ivd': typeof ServicesSaudiArabiaIvdRoute
-  '/services/saudi-arabia/labeling': typeof ServicesSaudiArabiaLabelingRoute
-  '/services/saudi-arabia/mdma': typeof ServicesSaudiArabiaMdmaRoute
-  '/services/saudi-arabia/post-market': typeof ServicesSaudiArabiaPostMarketRoute
-  '/services/saudi-arabia/sfda-queries': typeof ServicesSaudiArabiaSfdaQueriesRoute
-  '/services/saudi-arabia/software': typeof ServicesSaudiArabiaSoftwareRoute
-  '/services/saudi-arabia/technical-documentation': typeof ServicesSaudiArabiaTechnicalDocumentationRoute
-  '/services/saudi-arabia/testing-strategy': typeof ServicesSaudiArabiaTestingStrategyRoute
-  '/services/uae/change-management': typeof ServicesUaeChangeManagementRoute
-  '/services/uae/classification': typeof ServicesUaeClassificationRoute
-  '/services/uae/ecas': typeof ServicesUaeEcasRoute
-  '/services/uae/ivd': typeof ServicesUaeIvdRoute
-  '/services/uae/labeling': typeof ServicesUaeLabelingRoute
-  '/services/uae/local-applicant': typeof ServicesUaeLocalApplicantRoute
-  '/services/uae/mohap-queries': typeof ServicesUaeMohapQueriesRoute
-  '/services/uae/mohap-registration': typeof ServicesUaeMohapRegistrationRoute
-  '/services/uae/post-market': typeof ServicesUaePostMarketRoute
+  '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda': typeof ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute
+  '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda': typeof ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute
+  '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda': typeof ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute
+  '/services/saudi-arabia/mdma-application-and-technical-file-strategy': typeof ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute
+  '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain': typeof ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute
+  '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda': typeof ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute
+  '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda': typeof ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute
+  '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness': typeof ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute
+  '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support': typeof ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification': typeof ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute
+  '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda': typeof ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute
+  '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda': typeof ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute
+  '/services/uae/changes-variations-renewal-and-lifecycle-support-uae': typeof ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute
+  '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable': typeof ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute
+  '/services/uae/ivd-registration-and-performance-evidence-uae': typeof ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute
+  '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae': typeof ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute
+  '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness': typeof ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute
+  '/services/uae/mohap-medical-device-registration-and-dossier-strategy': typeof ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute
+  '/services/uae/mohap-queries-deficiency-response-and-technical-review-support': typeof ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae': typeof ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute
   '/services/uae/qms-inspection': typeof ServicesUaeQmsInspectionRoute
-  '/services/uae/software': typeof ServicesUaeSoftwareRoute
-  '/services/uae/supply-chain': typeof ServicesUaeSupplyChainRoute
-  '/services/uae/technical-documentation': typeof ServicesUaeTechnicalDocumentationRoute
-  '/services/uae/testing-strategy': typeof ServicesUaeTestingStrategyRoute
-  '/services/uk/audit-readiness': typeof ServicesUkAuditReadinessRoute
-  '/services/uk/conformity-assurance': typeof ServicesUkConformityAssuranceRoute
-  '/services/uk/dors-registration': typeof ServicesUkDorsRegistrationRoute
-  '/services/uk/labeling': typeof ServicesUkLabelingRoute
+  '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap': typeof ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute
+  '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap': typeof ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute
+  '/services/uae/testing-strategy-and-laboratory-coordination-uae': typeof ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute
+  '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface': typeof ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute
+  '/services/uae/uae-mohap-regulatory-strategy-and-product-classification': typeof ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute
+  '/services/uk/ce-recognition-and-ukca-market-access-strategy': typeof ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute
+  '/services/uk/mhra-dors-device-registration-system': typeof ServicesUkMhraDorsDeviceRegistrationSystemRoute
   '/services/uk/mhra-liaison': typeof ServicesUkMhraLiaisonRoute
   '/services/uk/mhra-registration': typeof ServicesUkMhraRegistrationRoute
-  '/services/uk/pms': typeof ServicesUkPmsRoute
-  '/services/uk/qms': typeof ServicesUkQmsRoute
-  '/services/uk/regulatory-writing': typeof ServicesUkRegulatoryWritingRoute
-  '/services/uk/technical-file': typeof ServicesUkTechnicalFileRoute
-  '/services/uk/ukrp': typeof ServicesUkUkrpRoute
-  '/services/uk/vigilance': typeof ServicesUkVigilanceRoute
-  '/services/usa/510k': typeof ServicesUsa510kRoute
-  '/services/usa/513g': typeof ServicesUsa513gRoute
-  '/services/usa/agent-service': typeof ServicesUsaAgentServiceRoute
-  '/services/usa/classification': typeof ServicesUsaClassificationRoute
-  '/services/usa/de-novo': typeof ServicesUsaDeNovoRoute
-  '/services/usa/deficiency-response': typeof ServicesUsaDeficiencyResponseRoute
-  '/services/usa/e-star': typeof ServicesUsaEStarRoute
-  '/services/usa/establishment-registration': typeof ServicesUsaEstablishmentRegistrationRoute
+  '/services/uk/qms-implementation-and-uk-mdr-alignment': typeof ServicesUkQmsImplementationAndUkMdrAlignmentRoute
+  '/services/uk/uk-approved-body-and-conformity-assessment-readiness': typeof ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute
+  '/services/uk/uk-mdr-technical-documentation-and-gap-assessment': typeof ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute
+  '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur': typeof ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute
+  '/services/uk/uk-regulatory-and-clinical-writing-services': typeof ServicesUkUkRegulatoryAndClinicalWritingServicesRoute
+  '/services/uk/uk-responsible-person-ukrp-services': typeof ServicesUkUkResponsiblePersonUkrpServicesRoute
+  '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca': typeof ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute
+  '/services/uk/ukca-labeling-and-artwork-compliance': typeof ServicesUkUkcaLabelingAndArtworkComplianceRoute
+  '/services/usa/fda-510k-premarket-notification-and-clearance-consulting': typeof ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute
+  '/services/usa/fda-513g-requests-for-information': typeof ServicesUsaFda513gRequestsForInformationRoute
+  '/services/usa/fda-additional-information-and-deficiency-response': typeof ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute
+  '/services/usa/fda-establishment-registration-and-device-listing': typeof ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute
+  '/services/usa/fda-estar-dossier-preparation-and-submission': typeof ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute
+  '/services/usa/fda-medical-device-classification-and-pathway-assessment': typeof ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute
+  '/services/usa/fda-post-clearance-and-device-lifecycle-support': typeof ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute
+  '/services/usa/fda-predicate-and-substantial-equivalence-strategy': typeof ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute
+  '/services/usa/fda-q-submission-and-pre-submission-consulting': typeof ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute
+  '/services/usa/fda-qmsr-and-inspection-preparation': typeof ServicesUsaFdaQmsrAndInspectionPreparationRoute
+  '/services/usa/fda-rfd-and-pre-rfd-designations': typeof ServicesUsaFdaRfdAndPreRfdDesignationsRoute
+  '/services/usa/fda-udi-and-gudid-compliance-solutions': typeof ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute
   '/services/usa/global-market-access': typeof ServicesUsaGlobalMarketAccessRoute
-  '/services/usa/pma': typeof ServicesUsaPmaRoute
-  '/services/usa/post-clearance-lifecycle': typeof ServicesUsaPostClearanceLifecycleRoute
-  '/services/usa/predicate-strategy': typeof ServicesUsaPredicateStrategyRoute
-  '/services/usa/q-submission': typeof ServicesUsaQSubmissionRoute
-  '/services/usa/qmsr-inspection': typeof ServicesUsaQmsrInspectionRoute
-  '/services/usa/rfd-pre-rfd': typeof ServicesUsaRfdPreRfdRoute
-  '/services/usa/testing-strategy': typeof ServicesUsaTestingStrategyRoute
-  '/services/usa/udi-gudid': typeof ServicesUsaUdiGudidRoute
+  '/services/usa/us-agent-services-for-foreign-establishments': typeof ServicesUsaUsAgentServicesForForeignEstablishmentsRoute
+  '/services/usa/us-fda-de-novo-classification-pathway': typeof ServicesUsaUsFdaDeNovoClassificationPathwayRoute
+  '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance': typeof ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute
+  '/services/usa/us-fda-premarket-approval-pma-support': typeof ServicesUsaUsFdaPremarketApprovalPmaSupportRoute
   '/services/australia/': typeof ServicesAustraliaIndexRoute
   '/services/brazil/': typeof ServicesBrazilIndexRoute
   '/services/canada/': typeof ServicesCanadaIndexRoute
@@ -2915,10 +3110,10 @@ export interface FileRoutesById {
   '/services/uae/': typeof ServicesUaeIndexRoute
   '/services/uk/': typeof ServicesUkIndexRoute
   '/services/usa/': typeof ServicesUsaIndexRoute
-  '/industries/cosmetics_/india/for-importer': typeof IndustriesCosmeticsIndiaForImporterRoute
-  '/industries/cosmetics_/india/for-manufacturer': typeof IndustriesCosmeticsIndiaForManufacturerRoute
-  '/industries/medical-devices_/india/for-importer': typeof IndustriesMedicalDevicesIndiaForImporterRoute
-  '/industries/medical-devices_/india/for-manufacturer': typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
+  '/industries/cosmetics_/india/cosmetic-manufacturing-license-in-india': typeof IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute
+  '/industries/cosmetics_/india/cosmetics-registration-for-importers-in-india': typeof IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute
+  '/industries/medical-devices_/india/medical-device-manufacturing-and-loan-licensing-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute
+  '/industries/medical-devices_/india/medical-device-regulatory-solutions-for-importers-in-india': typeof IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute
   '/industries/cosmetics_/india/': typeof IndustriesCosmeticsIndiaIndexRoute
 }
 export interface FileRouteTypes {
@@ -2934,12 +3129,12 @@ export interface FileRouteTypes {
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
-    | '/case-studies/algorithm-claim'
-    | '/case-studies/australia-tga'
-    | '/case-studies/eu-mdr-remediation'
-    | '/case-studies/fda-biocompatibility'
-    | '/case-studies/fda-simulated-use'
-    | '/case-studies/test-smarter'
+    | '/case-studies/australia-tga-artg-inclusion-case-study'
+    | '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+    | '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+    | '/case-studies/medical-device-testing-strategy-test-smarter-cover-more'
+    | '/case-studies/the-algorithm-can-do-more-should-the-label'
+    | '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
@@ -2958,10 +3153,10 @@ export interface FileRouteTypes {
     | '/insights/dynamic-risk-management-software-medical-devices'
     | '/insights/effective-capa-system-medical-devices'
     | '/insights/eu-ai-act-medical-devices'
-    | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
     | '/insights/eu-mdr-compliance-challenges'
     | '/insights/fda-510k-program-modernization-safety-standards'
-    | '/insights/fda-inspections-2026'
+    | '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
     | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
     | '/insights/fda-qmsr-compliance-guide'
@@ -3040,98 +3235,98 @@ export interface FileRouteTypes {
     | '/industries/ivd/eu'
     | '/industries/ivd/india'
     | '/industries/ivd/usa'
-    | '/services/australia/artg-inclusion'
-    | '/services/australia/australian-sponsor'
-    | '/services/australia/change-management'
-    | '/services/australia/classification'
-    | '/services/australia/clinical-evidence'
-    | '/services/australia/conformity-assessment'
-    | '/services/australia/ivd'
-    | '/services/australia/labeling'
-    | '/services/australia/manufacturer-evidence'
-    | '/services/australia/pms'
-    | '/services/australia/post-market'
-    | '/services/australia/software'
-    | '/services/australia/sponsor'
-    | '/services/australia/supply-chain'
-    | '/services/australia/technical-documentation'
-    | '/services/australia/testing-strategy'
-    | '/services/australia/tga-audit'
-    | '/services/brazil/anvisa-queries'
-    | '/services/brazil/bgmp'
-    | '/services/brazil/brh'
-    | '/services/brazil/change-management'
-    | '/services/brazil/classification'
-    | '/services/brazil/ivd'
-    | '/services/brazil/labeling'
-    | '/services/brazil/notificacao'
-    | '/services/brazil/registration'
-    | '/services/brazil/registro'
-    | '/services/brazil/software'
-    | '/services/brazil/technical-documentation'
-    | '/services/brazil/technovigilance'
-    | '/services/brazil/tecnovigilance'
-    | '/services/brazil/testing-strategy'
-    | '/services/canada/change-management'
-    | '/services/canada/classification'
-    | '/services/canada/inspection'
-    | '/services/canada/ivd'
-    | '/services/canada/labeling'
-    | '/services/canada/liaison'
-    | '/services/canada/mdel'
-    | '/services/canada/mdl'
-    | '/services/canada/mdsap'
-    | '/services/canada/pms'
-    | '/services/canada/renewals'
-    | '/services/canada/software'
-    | '/services/canada/supply-chain'
-    | '/services/canada/technical-documentation'
-    | '/services/canada/testing-strategy'
+    | '/services/australia/australia-importer-distributor-and-supply-chain-compliance'
+    | '/services/australia/australia-tga-samd-ai-and-cybersecurity-support'
+    | '/services/australia/australian-labelling-ifu-and-ausudid-compliance'
+    | '/services/australia/independent-tga-sponsor-representation'
+    | '/services/australia/tga-application-audit-defense-and-rfi-support'
+    | '/services/australia/tga-artg-inclusion-strategy-and-application-preparation'
+    | '/services/australia/tga-artg-variations-and-significant-change-support'
+    | '/services/australia/tga-australian-sponsor-services-and-governance'
+    | '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy'
+    | '/services/australia/tga-conformity-assessment-support'
+    | '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion'
+    | '/services/australia/tga-manufacturer-evidence-and-conformity-assessment'
+    | '/services/australia/tga-medical-device-and-ivd-classification'
+    | '/services/australia/tga-post-market-surveillance-pms-plans'
+    | '/services/australia/tga-post-market-vigilance-mdir-and-recall-management'
+    | '/services/australia/tga-technical-documentation-and-essential-principles'
+    | '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia'
+    | '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+    | '/services/brazil/anvisa-changes-variations-and-revalidacao-support'
+    | '/services/brazil/anvisa-exigencia-and-inspection-response-strategy'
+    | '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+    | '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil'
+    | '/services/brazil/anvisa-notificacao-pathway-brazil'
+    | '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro'
+    | '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance'
+    | '/services/brazil/anvisa-registro-pathway-brazil'
+    | '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+    | '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence'
+    | '/services/brazil/anvisa-technovigilance-services-brazil'
+    | '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance'
+    | '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination'
+    | '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface'
+    | '/services/canada/canada-medical-device-supply-chain-and-importer-compliance'
+    | '/services/canada/health-canada-inspection-readiness-and-defense'
+    | '/services/canada/health-canada-ivd-registration-and-performance-strategy'
+    | '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance'
+    | '/services/canada/health-canada-mdl-amendments-and-significant-changes'
+    | '/services/canada/health-canada-mdl-and-mdel-annual-renewals'
+    | '/services/canada/health-canada-medical-device-and-ivd-classification'
+    | '/services/canada/health-canada-medical-device-establishment-licence-mdel'
+    | '/services/canada/health-canada-medical-device-licence-mdl-application'
+    | '/services/canada/health-canada-post-market-surveillance-and-mpr'
+    | '/services/canada/health-canada-regulatory-liaison-support'
+    | '/services/canada/health-canada-samd-and-cybersecurity-compliance'
+    | '/services/canada/health-canada-technical-documentation-and-evidence-strategy'
+    | '/services/canada/health-canada-testing-strategy-and-laboratory-coordination'
+    | '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
     | '/services/eu/change-assessment'
     | '/services/eu/class-d-ivdr'
-    | '/services/eu/classification'
-    | '/services/eu/clinical-evaluation'
-    | '/services/eu/deficiency-response'
-    | '/services/eu/ear'
-    | '/services/eu/eudamed'
+    | '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+    | '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc'
+    | '/services/eu/eu-mdr-and-ivdr-qualification-and-classification'
+    | '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy'
+    | '/services/eu/eu-mdr-software-and-samd-regulatory-consulting'
+    | '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination'
+    | '/services/eu/eu-notified-body-technical-review-and-deficiency-response'
+    | '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support'
+    | '/services/eu/eudamed-udi-and-economic-operator-compliance'
+    | '/services/eu/european-authorized-representative-ec-rep-ear-services'
     | '/services/eu/ivdr'
     | '/services/eu/ivdr-analytical-performance'
     | '/services/eu/ivdr-classification'
     | '/services/eu/ivdr-clinical-performance'
     | '/services/eu/ivdr-performance-evaluation'
     | '/services/eu/ivdr-pmpf'
-    | '/services/eu/labeling'
     | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
     | '/services/eu/notified-body'
-    | '/services/eu/pms'
-    | '/services/eu/pms-pmcf'
-    | '/services/eu/qms'
-    | '/services/eu/software'
+    | '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution'
     | '/services/eu/technical-documentation'
-    | '/services/eu/testing-strategy'
-    | '/services/india/class-a-import'
-    | '/services/india/free-sale'
-    | '/services/india/investigational-devices'
-    | '/services/india/ivd'
-    | '/services/india/ivd-clinical-performance'
-    | '/services/india/ivd-testing'
-    | '/services/india/loan-class-a-b'
-    | '/services/india/loan-class-c-d'
-    | '/services/india/market-standing'
-    | '/services/india/md-42'
-    | '/services/india/medical-devices'
-    | '/services/india/mfg-class-a-b'
-    | '/services/india/mfg-class-a-gsr'
-    | '/services/india/mfg-class-c-d'
-    | '/services/india/neutral-code'
-    | '/services/india/non-conviction'
-    | '/services/india/novel-ivds'
-    | '/services/india/personal-use'
-    | '/services/india/predicate-devices'
+    | '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+    | '/services/india/class-a-import-registration-as-per-gsr-777e'
+    | '/services/india/class-a-manufacturing-registration-gsr-777e'
+    | '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+    | '/services/india/free-sale-certificate-fsc'
+    | '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27'
+    | '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+    | '/services/india/in-vitro-diagnostic-regulatory-services'
+    | '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+    | '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+    | '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+    | '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+    | '/services/india/market-standing-certificate-msc'
+    | '/services/india/md-42-medical-device-registration-certificate'
+    | '/services/india/medical-device-licensing-and-regulatory-approvals-in-india'
+    | '/services/india/neutral-code-certificate-special-code'
+    | '/services/india/non-conviction-certificate-ncc'
+    | '/services/india/patient-personal-use-device-import-forms-md-20-md-21'
+    | '/services/india/test-license-for-ivd-devices-forms-md-16-md-17'
     | '/services/mdsap/audit-documentation'
     | '/services/mdsap/capa-remediation'
     | '/services/mdsap/complaint-vigilance'
@@ -3144,75 +3339,75 @@ export interface FileRouteTypes {
     | '/services/mdsap/production-supplier-validation'
     | '/services/mdsap/qms-alignment'
     | '/services/mdsap/strategy-scope'
-    | '/services/new-zealand/change-management'
-    | '/services/new-zealand/classification'
-    | '/services/new-zealand/ivd'
-    | '/services/new-zealand/labeling'
-    | '/services/new-zealand/medsafe-queries'
-    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand'
+    | '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand'
+    | '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand'
+    | '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand'
+    | '/services/new-zealand/medsafe-queries-safety-review-and-technical-response'
+    | '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand'
+    | '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
     | '/services/new-zealand/qms-compliance'
-    | '/services/new-zealand/software'
+    | '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand'
+    | '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand'
     | '/services/new-zealand/sponsor'
-    | '/services/new-zealand/supply-chain'
-    | '/services/new-zealand/technical-documentation'
-    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand'
     | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
-    | '/services/saudi-arabia/change-management'
-    | '/services/saudi-arabia/classification'
-    | '/services/saudi-arabia/establishment-licensing'
-    | '/services/saudi-arabia/inspection'
-    | '/services/saudi-arabia/ivd'
-    | '/services/saudi-arabia/labeling'
-    | '/services/saudi-arabia/mdma'
-    | '/services/saudi-arabia/post-market'
-    | '/services/saudi-arabia/sfda-queries'
-    | '/services/saudi-arabia/software'
-    | '/services/saudi-arabia/technical-documentation'
-    | '/services/saudi-arabia/testing-strategy'
-    | '/services/uae/change-management'
-    | '/services/uae/classification'
-    | '/services/uae/ecas'
-    | '/services/uae/ivd'
-    | '/services/uae/labeling'
-    | '/services/uae/local-applicant'
-    | '/services/uae/mohap-queries'
-    | '/services/uae/mohap-registration'
-    | '/services/uae/post-market'
+    | '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda'
+    | '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda'
+    | '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda'
+    | '/services/saudi-arabia/mdma-application-and-technical-file-strategy'
+    | '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain'
+    | '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+    | '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda'
+    | '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness'
+    | '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support'
+    | '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification'
+    | '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda'
+    | '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda'
+    | '/services/uae/changes-variations-renewal-and-lifecycle-support-uae'
+    | '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable'
+    | '/services/uae/ivd-registration-and-performance-evidence-uae'
+    | '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae'
+    | '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness'
+    | '/services/uae/mohap-medical-device-registration-and-dossier-strategy'
+    | '/services/uae/mohap-queries-deficiency-response-and-technical-review-support'
+    | '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae'
     | '/services/uae/qms-inspection'
-    | '/services/uae/software'
-    | '/services/uae/supply-chain'
-    | '/services/uae/technical-documentation'
-    | '/services/uae/testing-strategy'
-    | '/services/uk/audit-readiness'
-    | '/services/uk/conformity-assurance'
-    | '/services/uk/dors-registration'
-    | '/services/uk/labeling'
+    | '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap'
+    | '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap'
+    | '/services/uae/testing-strategy-and-laboratory-coordination-uae'
+    | '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+    | '/services/uae/uae-mohap-regulatory-strategy-and-product-classification'
+    | '/services/uk/ce-recognition-and-ukca-market-access-strategy'
+    | '/services/uk/mhra-dors-device-registration-system'
     | '/services/uk/mhra-liaison'
     | '/services/uk/mhra-registration'
-    | '/services/uk/pms'
-    | '/services/uk/qms'
-    | '/services/uk/regulatory-writing'
-    | '/services/uk/technical-file'
-    | '/services/uk/ukrp'
-    | '/services/uk/vigilance'
-    | '/services/usa/510k'
-    | '/services/usa/513g'
-    | '/services/usa/agent-service'
-    | '/services/usa/classification'
-    | '/services/usa/de-novo'
-    | '/services/usa/deficiency-response'
-    | '/services/usa/e-star'
-    | '/services/usa/establishment-registration'
+    | '/services/uk/qms-implementation-and-uk-mdr-alignment'
+    | '/services/uk/uk-approved-body-and-conformity-assessment-readiness'
+    | '/services/uk/uk-mdr-technical-documentation-and-gap-assessment'
+    | '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur'
+    | '/services/uk/uk-regulatory-and-clinical-writing-services'
+    | '/services/uk/uk-responsible-person-ukrp-services'
+    | '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca'
+    | '/services/uk/ukca-labeling-and-artwork-compliance'
+    | '/services/usa/fda-510k-premarket-notification-and-clearance-consulting'
+    | '/services/usa/fda-513g-requests-for-information'
+    | '/services/usa/fda-additional-information-and-deficiency-response'
+    | '/services/usa/fda-establishment-registration-and-device-listing'
+    | '/services/usa/fda-estar-dossier-preparation-and-submission'
+    | '/services/usa/fda-medical-device-classification-and-pathway-assessment'
+    | '/services/usa/fda-post-clearance-and-device-lifecycle-support'
+    | '/services/usa/fda-predicate-and-substantial-equivalence-strategy'
+    | '/services/usa/fda-q-submission-and-pre-submission-consulting'
+    | '/services/usa/fda-qmsr-and-inspection-preparation'
+    | '/services/usa/fda-rfd-and-pre-rfd-designations'
+    | '/services/usa/fda-udi-and-gudid-compliance-solutions'
     | '/services/usa/global-market-access'
-    | '/services/usa/pma'
-    | '/services/usa/post-clearance-lifecycle'
-    | '/services/usa/predicate-strategy'
-    | '/services/usa/q-submission'
-    | '/services/usa/qmsr-inspection'
-    | '/services/usa/rfd-pre-rfd'
-    | '/services/usa/testing-strategy'
-    | '/services/usa/udi-gudid'
+    | '/services/usa/us-agent-services-for-foreign-establishments'
+    | '/services/usa/us-fda-de-novo-classification-pathway'
+    | '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance'
+    | '/services/usa/us-fda-premarket-approval-pma-support'
     | '/services/australia/'
     | '/services/brazil/'
     | '/services/canada/'
@@ -3224,10 +3419,10 @@ export interface FileRouteTypes {
     | '/services/uae/'
     | '/services/uk/'
     | '/services/usa/'
-    | '/industries/cosmetics/india/for-importer'
-    | '/industries/cosmetics/india/for-manufacturer'
-    | '/industries/medical-devices/india/for-importer'
-    | '/industries/medical-devices/india/for-manufacturer'
+    | '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india'
+    | '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india'
+    | '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india'
+    | '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india'
     | '/industries/cosmetics/india/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -3239,12 +3434,12 @@ export interface FileRouteTypes {
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
-    | '/case-studies/algorithm-claim'
-    | '/case-studies/australia-tga'
-    | '/case-studies/eu-mdr-remediation'
-    | '/case-studies/fda-biocompatibility'
-    | '/case-studies/fda-simulated-use'
-    | '/case-studies/test-smarter'
+    | '/case-studies/australia-tga-artg-inclusion-case-study'
+    | '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+    | '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+    | '/case-studies/medical-device-testing-strategy-test-smarter-cover-more'
+    | '/case-studies/the-algorithm-can-do-more-should-the-label'
+    | '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
@@ -3263,10 +3458,10 @@ export interface FileRouteTypes {
     | '/insights/dynamic-risk-management-software-medical-devices'
     | '/insights/effective-capa-system-medical-devices'
     | '/insights/eu-ai-act-medical-devices'
-    | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
     | '/insights/eu-mdr-compliance-challenges'
     | '/insights/fda-510k-program-modernization-safety-standards'
-    | '/insights/fda-inspections-2026'
+    | '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
     | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
     | '/insights/fda-qmsr-compliance-guide'
@@ -3334,98 +3529,98 @@ export interface FileRouteTypes {
     | '/industries/ivd/eu'
     | '/industries/ivd/india'
     | '/industries/ivd/usa'
-    | '/services/australia/artg-inclusion'
-    | '/services/australia/australian-sponsor'
-    | '/services/australia/change-management'
-    | '/services/australia/classification'
-    | '/services/australia/clinical-evidence'
-    | '/services/australia/conformity-assessment'
-    | '/services/australia/ivd'
-    | '/services/australia/labeling'
-    | '/services/australia/manufacturer-evidence'
-    | '/services/australia/pms'
-    | '/services/australia/post-market'
-    | '/services/australia/software'
-    | '/services/australia/sponsor'
-    | '/services/australia/supply-chain'
-    | '/services/australia/technical-documentation'
-    | '/services/australia/testing-strategy'
-    | '/services/australia/tga-audit'
-    | '/services/brazil/anvisa-queries'
-    | '/services/brazil/bgmp'
-    | '/services/brazil/brh'
-    | '/services/brazil/change-management'
-    | '/services/brazil/classification'
-    | '/services/brazil/ivd'
-    | '/services/brazil/labeling'
-    | '/services/brazil/notificacao'
-    | '/services/brazil/registration'
-    | '/services/brazil/registro'
-    | '/services/brazil/software'
-    | '/services/brazil/technical-documentation'
-    | '/services/brazil/technovigilance'
-    | '/services/brazil/tecnovigilance'
-    | '/services/brazil/testing-strategy'
-    | '/services/canada/change-management'
-    | '/services/canada/classification'
-    | '/services/canada/inspection'
-    | '/services/canada/ivd'
-    | '/services/canada/labeling'
-    | '/services/canada/liaison'
-    | '/services/canada/mdel'
-    | '/services/canada/mdl'
-    | '/services/canada/mdsap'
-    | '/services/canada/pms'
-    | '/services/canada/renewals'
-    | '/services/canada/software'
-    | '/services/canada/supply-chain'
-    | '/services/canada/technical-documentation'
-    | '/services/canada/testing-strategy'
+    | '/services/australia/australia-importer-distributor-and-supply-chain-compliance'
+    | '/services/australia/australia-tga-samd-ai-and-cybersecurity-support'
+    | '/services/australia/australian-labelling-ifu-and-ausudid-compliance'
+    | '/services/australia/independent-tga-sponsor-representation'
+    | '/services/australia/tga-application-audit-defense-and-rfi-support'
+    | '/services/australia/tga-artg-inclusion-strategy-and-application-preparation'
+    | '/services/australia/tga-artg-variations-and-significant-change-support'
+    | '/services/australia/tga-australian-sponsor-services-and-governance'
+    | '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy'
+    | '/services/australia/tga-conformity-assessment-support'
+    | '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion'
+    | '/services/australia/tga-manufacturer-evidence-and-conformity-assessment'
+    | '/services/australia/tga-medical-device-and-ivd-classification'
+    | '/services/australia/tga-post-market-surveillance-pms-plans'
+    | '/services/australia/tga-post-market-vigilance-mdir-and-recall-management'
+    | '/services/australia/tga-technical-documentation-and-essential-principles'
+    | '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia'
+    | '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+    | '/services/brazil/anvisa-changes-variations-and-revalidacao-support'
+    | '/services/brazil/anvisa-exigencia-and-inspection-response-strategy'
+    | '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+    | '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil'
+    | '/services/brazil/anvisa-notificacao-pathway-brazil'
+    | '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro'
+    | '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance'
+    | '/services/brazil/anvisa-registro-pathway-brazil'
+    | '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+    | '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence'
+    | '/services/brazil/anvisa-technovigilance-services-brazil'
+    | '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance'
+    | '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination'
+    | '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface'
+    | '/services/canada/canada-medical-device-supply-chain-and-importer-compliance'
+    | '/services/canada/health-canada-inspection-readiness-and-defense'
+    | '/services/canada/health-canada-ivd-registration-and-performance-strategy'
+    | '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance'
+    | '/services/canada/health-canada-mdl-amendments-and-significant-changes'
+    | '/services/canada/health-canada-mdl-and-mdel-annual-renewals'
+    | '/services/canada/health-canada-medical-device-and-ivd-classification'
+    | '/services/canada/health-canada-medical-device-establishment-licence-mdel'
+    | '/services/canada/health-canada-medical-device-licence-mdl-application'
+    | '/services/canada/health-canada-post-market-surveillance-and-mpr'
+    | '/services/canada/health-canada-regulatory-liaison-support'
+    | '/services/canada/health-canada-samd-and-cybersecurity-compliance'
+    | '/services/canada/health-canada-technical-documentation-and-evidence-strategy'
+    | '/services/canada/health-canada-testing-strategy-and-laboratory-coordination'
+    | '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
     | '/services/eu/change-assessment'
     | '/services/eu/class-d-ivdr'
-    | '/services/eu/classification'
-    | '/services/eu/clinical-evaluation'
-    | '/services/eu/deficiency-response'
-    | '/services/eu/ear'
-    | '/services/eu/eudamed'
+    | '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+    | '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc'
+    | '/services/eu/eu-mdr-and-ivdr-qualification-and-classification'
+    | '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy'
+    | '/services/eu/eu-mdr-software-and-samd-regulatory-consulting'
+    | '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination'
+    | '/services/eu/eu-notified-body-technical-review-and-deficiency-response'
+    | '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support'
+    | '/services/eu/eudamed-udi-and-economic-operator-compliance'
+    | '/services/eu/european-authorized-representative-ec-rep-ear-services'
     | '/services/eu/ivdr'
     | '/services/eu/ivdr-analytical-performance'
     | '/services/eu/ivdr-classification'
     | '/services/eu/ivdr-clinical-performance'
     | '/services/eu/ivdr-performance-evaluation'
     | '/services/eu/ivdr-pmpf'
-    | '/services/eu/labeling'
     | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
     | '/services/eu/notified-body'
-    | '/services/eu/pms'
-    | '/services/eu/pms-pmcf'
-    | '/services/eu/qms'
-    | '/services/eu/software'
+    | '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution'
     | '/services/eu/technical-documentation'
-    | '/services/eu/testing-strategy'
-    | '/services/india/class-a-import'
-    | '/services/india/free-sale'
-    | '/services/india/investigational-devices'
-    | '/services/india/ivd'
-    | '/services/india/ivd-clinical-performance'
-    | '/services/india/ivd-testing'
-    | '/services/india/loan-class-a-b'
-    | '/services/india/loan-class-c-d'
-    | '/services/india/market-standing'
-    | '/services/india/md-42'
-    | '/services/india/medical-devices'
-    | '/services/india/mfg-class-a-b'
-    | '/services/india/mfg-class-a-gsr'
-    | '/services/india/mfg-class-c-d'
-    | '/services/india/neutral-code'
-    | '/services/india/non-conviction'
-    | '/services/india/novel-ivds'
-    | '/services/india/personal-use'
-    | '/services/india/predicate-devices'
+    | '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+    | '/services/india/class-a-import-registration-as-per-gsr-777e'
+    | '/services/india/class-a-manufacturing-registration-gsr-777e'
+    | '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+    | '/services/india/free-sale-certificate-fsc'
+    | '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27'
+    | '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+    | '/services/india/in-vitro-diagnostic-regulatory-services'
+    | '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+    | '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+    | '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+    | '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+    | '/services/india/market-standing-certificate-msc'
+    | '/services/india/md-42-medical-device-registration-certificate'
+    | '/services/india/medical-device-licensing-and-regulatory-approvals-in-india'
+    | '/services/india/neutral-code-certificate-special-code'
+    | '/services/india/non-conviction-certificate-ncc'
+    | '/services/india/patient-personal-use-device-import-forms-md-20-md-21'
+    | '/services/india/test-license-for-ivd-devices-forms-md-16-md-17'
     | '/services/mdsap/audit-documentation'
     | '/services/mdsap/capa-remediation'
     | '/services/mdsap/complaint-vigilance'
@@ -3438,75 +3633,75 @@ export interface FileRouteTypes {
     | '/services/mdsap/production-supplier-validation'
     | '/services/mdsap/qms-alignment'
     | '/services/mdsap/strategy-scope'
-    | '/services/new-zealand/change-management'
-    | '/services/new-zealand/classification'
-    | '/services/new-zealand/ivd'
-    | '/services/new-zealand/labeling'
-    | '/services/new-zealand/medsafe-queries'
-    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand'
+    | '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand'
+    | '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand'
+    | '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand'
+    | '/services/new-zealand/medsafe-queries-safety-review-and-technical-response'
+    | '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand'
+    | '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
     | '/services/new-zealand/qms-compliance'
-    | '/services/new-zealand/software'
+    | '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand'
+    | '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand'
     | '/services/new-zealand/sponsor'
-    | '/services/new-zealand/supply-chain'
-    | '/services/new-zealand/technical-documentation'
-    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand'
     | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
-    | '/services/saudi-arabia/change-management'
-    | '/services/saudi-arabia/classification'
-    | '/services/saudi-arabia/establishment-licensing'
-    | '/services/saudi-arabia/inspection'
-    | '/services/saudi-arabia/ivd'
-    | '/services/saudi-arabia/labeling'
-    | '/services/saudi-arabia/mdma'
-    | '/services/saudi-arabia/post-market'
-    | '/services/saudi-arabia/sfda-queries'
-    | '/services/saudi-arabia/software'
-    | '/services/saudi-arabia/technical-documentation'
-    | '/services/saudi-arabia/testing-strategy'
-    | '/services/uae/change-management'
-    | '/services/uae/classification'
-    | '/services/uae/ecas'
-    | '/services/uae/ivd'
-    | '/services/uae/labeling'
-    | '/services/uae/local-applicant'
-    | '/services/uae/mohap-queries'
-    | '/services/uae/mohap-registration'
-    | '/services/uae/post-market'
+    | '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda'
+    | '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda'
+    | '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda'
+    | '/services/saudi-arabia/mdma-application-and-technical-file-strategy'
+    | '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain'
+    | '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+    | '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda'
+    | '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness'
+    | '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support'
+    | '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification'
+    | '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda'
+    | '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda'
+    | '/services/uae/changes-variations-renewal-and-lifecycle-support-uae'
+    | '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable'
+    | '/services/uae/ivd-registration-and-performance-evidence-uae'
+    | '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae'
+    | '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness'
+    | '/services/uae/mohap-medical-device-registration-and-dossier-strategy'
+    | '/services/uae/mohap-queries-deficiency-response-and-technical-review-support'
+    | '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae'
     | '/services/uae/qms-inspection'
-    | '/services/uae/software'
-    | '/services/uae/supply-chain'
-    | '/services/uae/technical-documentation'
-    | '/services/uae/testing-strategy'
-    | '/services/uk/audit-readiness'
-    | '/services/uk/conformity-assurance'
-    | '/services/uk/dors-registration'
-    | '/services/uk/labeling'
+    | '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap'
+    | '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap'
+    | '/services/uae/testing-strategy-and-laboratory-coordination-uae'
+    | '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+    | '/services/uae/uae-mohap-regulatory-strategy-and-product-classification'
+    | '/services/uk/ce-recognition-and-ukca-market-access-strategy'
+    | '/services/uk/mhra-dors-device-registration-system'
     | '/services/uk/mhra-liaison'
     | '/services/uk/mhra-registration'
-    | '/services/uk/pms'
-    | '/services/uk/qms'
-    | '/services/uk/regulatory-writing'
-    | '/services/uk/technical-file'
-    | '/services/uk/ukrp'
-    | '/services/uk/vigilance'
-    | '/services/usa/510k'
-    | '/services/usa/513g'
-    | '/services/usa/agent-service'
-    | '/services/usa/classification'
-    | '/services/usa/de-novo'
-    | '/services/usa/deficiency-response'
-    | '/services/usa/e-star'
-    | '/services/usa/establishment-registration'
+    | '/services/uk/qms-implementation-and-uk-mdr-alignment'
+    | '/services/uk/uk-approved-body-and-conformity-assessment-readiness'
+    | '/services/uk/uk-mdr-technical-documentation-and-gap-assessment'
+    | '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur'
+    | '/services/uk/uk-regulatory-and-clinical-writing-services'
+    | '/services/uk/uk-responsible-person-ukrp-services'
+    | '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca'
+    | '/services/uk/ukca-labeling-and-artwork-compliance'
+    | '/services/usa/fda-510k-premarket-notification-and-clearance-consulting'
+    | '/services/usa/fda-513g-requests-for-information'
+    | '/services/usa/fda-additional-information-and-deficiency-response'
+    | '/services/usa/fda-establishment-registration-and-device-listing'
+    | '/services/usa/fda-estar-dossier-preparation-and-submission'
+    | '/services/usa/fda-medical-device-classification-and-pathway-assessment'
+    | '/services/usa/fda-post-clearance-and-device-lifecycle-support'
+    | '/services/usa/fda-predicate-and-substantial-equivalence-strategy'
+    | '/services/usa/fda-q-submission-and-pre-submission-consulting'
+    | '/services/usa/fda-qmsr-and-inspection-preparation'
+    | '/services/usa/fda-rfd-and-pre-rfd-designations'
+    | '/services/usa/fda-udi-and-gudid-compliance-solutions'
     | '/services/usa/global-market-access'
-    | '/services/usa/pma'
-    | '/services/usa/post-clearance-lifecycle'
-    | '/services/usa/predicate-strategy'
-    | '/services/usa/q-submission'
-    | '/services/usa/qmsr-inspection'
-    | '/services/usa/rfd-pre-rfd'
-    | '/services/usa/testing-strategy'
-    | '/services/usa/udi-gudid'
+    | '/services/usa/us-agent-services-for-foreign-establishments'
+    | '/services/usa/us-fda-de-novo-classification-pathway'
+    | '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance'
+    | '/services/usa/us-fda-premarket-approval-pma-support'
     | '/services/australia'
     | '/services/brazil'
     | '/services/canada'
@@ -3518,10 +3713,10 @@ export interface FileRouteTypes {
     | '/services/uae'
     | '/services/uk'
     | '/services/usa'
-    | '/industries/cosmetics/india/for-importer'
-    | '/industries/cosmetics/india/for-manufacturer'
-    | '/industries/medical-devices/india/for-importer'
-    | '/industries/medical-devices/india/for-manufacturer'
+    | '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india'
+    | '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india'
+    | '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india'
+    | '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india'
     | '/industries/cosmetics/india'
   id:
     | '__root__'
@@ -3535,12 +3730,12 @@ export interface FileRouteTypes {
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
-    | '/case-studies/algorithm-claim'
-    | '/case-studies/australia-tga'
-    | '/case-studies/eu-mdr-remediation'
-    | '/case-studies/fda-biocompatibility'
-    | '/case-studies/fda-simulated-use'
-    | '/case-studies/test-smarter'
+    | '/case-studies/australia-tga-artg-inclusion-case-study'
+    | '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+    | '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+    | '/case-studies/medical-device-testing-strategy-test-smarter-cover-more'
+    | '/case-studies/the-algorithm-can-do-more-should-the-label'
+    | '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
     | '/industries/cosmetics'
     | '/industries/ivd'
     | '/industries/medical-devices'
@@ -3559,10 +3754,10 @@ export interface FileRouteTypes {
     | '/insights/dynamic-risk-management-software-medical-devices'
     | '/insights/effective-capa-system-medical-devices'
     | '/insights/eu-ai-act-medical-devices'
-    | '/insights/eu-mdr-2026'
+    | '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
     | '/insights/eu-mdr-compliance-challenges'
     | '/insights/fda-510k-program-modernization-safety-standards'
-    | '/insights/fda-inspections-2026'
+    | '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
     | '/insights/fda-q-sub-pre-submission-meeting-guide'
     | '/insights/fda-qmsr-2026'
     | '/insights/fda-qmsr-compliance-guide'
@@ -3641,98 +3836,98 @@ export interface FileRouteTypes {
     | '/industries/ivd_/eu'
     | '/industries/ivd_/india'
     | '/industries/ivd_/usa'
-    | '/services/australia/artg-inclusion'
-    | '/services/australia/australian-sponsor'
-    | '/services/australia/change-management'
-    | '/services/australia/classification'
-    | '/services/australia/clinical-evidence'
-    | '/services/australia/conformity-assessment'
-    | '/services/australia/ivd'
-    | '/services/australia/labeling'
-    | '/services/australia/manufacturer-evidence'
-    | '/services/australia/pms'
-    | '/services/australia/post-market'
-    | '/services/australia/software'
-    | '/services/australia/sponsor'
-    | '/services/australia/supply-chain'
-    | '/services/australia/technical-documentation'
-    | '/services/australia/testing-strategy'
-    | '/services/australia/tga-audit'
-    | '/services/brazil/anvisa-queries'
-    | '/services/brazil/bgmp'
-    | '/services/brazil/brh'
-    | '/services/brazil/change-management'
-    | '/services/brazil/classification'
-    | '/services/brazil/ivd'
-    | '/services/brazil/labeling'
-    | '/services/brazil/notificacao'
-    | '/services/brazil/registration'
-    | '/services/brazil/registro'
-    | '/services/brazil/software'
-    | '/services/brazil/technical-documentation'
-    | '/services/brazil/technovigilance'
-    | '/services/brazil/tecnovigilance'
-    | '/services/brazil/testing-strategy'
-    | '/services/canada/change-management'
-    | '/services/canada/classification'
-    | '/services/canada/inspection'
-    | '/services/canada/ivd'
-    | '/services/canada/labeling'
-    | '/services/canada/liaison'
-    | '/services/canada/mdel'
-    | '/services/canada/mdl'
-    | '/services/canada/mdsap'
-    | '/services/canada/pms'
-    | '/services/canada/renewals'
-    | '/services/canada/software'
-    | '/services/canada/supply-chain'
-    | '/services/canada/technical-documentation'
-    | '/services/canada/testing-strategy'
+    | '/services/australia/australia-importer-distributor-and-supply-chain-compliance'
+    | '/services/australia/australia-tga-samd-ai-and-cybersecurity-support'
+    | '/services/australia/australian-labelling-ifu-and-ausudid-compliance'
+    | '/services/australia/independent-tga-sponsor-representation'
+    | '/services/australia/tga-application-audit-defense-and-rfi-support'
+    | '/services/australia/tga-artg-inclusion-strategy-and-application-preparation'
+    | '/services/australia/tga-artg-variations-and-significant-change-support'
+    | '/services/australia/tga-australian-sponsor-services-and-governance'
+    | '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy'
+    | '/services/australia/tga-conformity-assessment-support'
+    | '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion'
+    | '/services/australia/tga-manufacturer-evidence-and-conformity-assessment'
+    | '/services/australia/tga-medical-device-and-ivd-classification'
+    | '/services/australia/tga-post-market-surveillance-pms-plans'
+    | '/services/australia/tga-post-market-vigilance-mdir-and-recall-management'
+    | '/services/australia/tga-technical-documentation-and-essential-principles'
+    | '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia'
+    | '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+    | '/services/brazil/anvisa-changes-variations-and-revalidacao-support'
+    | '/services/brazil/anvisa-exigencia-and-inspection-response-strategy'
+    | '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+    | '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil'
+    | '/services/brazil/anvisa-notificacao-pathway-brazil'
+    | '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro'
+    | '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance'
+    | '/services/brazil/anvisa-registro-pathway-brazil'
+    | '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+    | '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence'
+    | '/services/brazil/anvisa-technovigilance-services-brazil'
+    | '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance'
+    | '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination'
+    | '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface'
+    | '/services/canada/canada-medical-device-supply-chain-and-importer-compliance'
+    | '/services/canada/health-canada-inspection-readiness-and-defense'
+    | '/services/canada/health-canada-ivd-registration-and-performance-strategy'
+    | '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance'
+    | '/services/canada/health-canada-mdl-amendments-and-significant-changes'
+    | '/services/canada/health-canada-mdl-and-mdel-annual-renewals'
+    | '/services/canada/health-canada-medical-device-and-ivd-classification'
+    | '/services/canada/health-canada-medical-device-establishment-licence-mdel'
+    | '/services/canada/health-canada-medical-device-licence-mdl-application'
+    | '/services/canada/health-canada-post-market-surveillance-and-mpr'
+    | '/services/canada/health-canada-regulatory-liaison-support'
+    | '/services/canada/health-canada-samd-and-cybersecurity-compliance'
+    | '/services/canada/health-canada-technical-documentation-and-evidence-strategy'
+    | '/services/canada/health-canada-testing-strategy-and-laboratory-coordination'
+    | '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness'
     | '/services/eu/article-117'
     | '/services/eu/ce-marking'
     | '/services/eu/ce-registration'
     | '/services/eu/change-assessment'
     | '/services/eu/class-d-ivdr'
-    | '/services/eu/classification'
-    | '/services/eu/clinical-evaluation'
-    | '/services/eu/deficiency-response'
-    | '/services/eu/ear'
-    | '/services/eu/eudamed'
+    | '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+    | '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc'
+    | '/services/eu/eu-mdr-and-ivdr-qualification-and-classification'
+    | '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy'
+    | '/services/eu/eu-mdr-software-and-samd-regulatory-consulting'
+    | '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination'
+    | '/services/eu/eu-notified-body-technical-review-and-deficiency-response'
+    | '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support'
+    | '/services/eu/eudamed-udi-and-economic-operator-compliance'
+    | '/services/eu/european-authorized-representative-ec-rep-ear-services'
     | '/services/eu/ivdr'
     | '/services/eu/ivdr-analytical-performance'
     | '/services/eu/ivdr-classification'
     | '/services/eu/ivdr-clinical-performance'
     | '/services/eu/ivdr-performance-evaluation'
     | '/services/eu/ivdr-pmpf'
-    | '/services/eu/labeling'
     | '/services/eu/mdr'
     | '/services/eu/mdr-ivdr-transition'
     | '/services/eu/notified-body'
-    | '/services/eu/pms'
-    | '/services/eu/pms-pmcf'
-    | '/services/eu/qms'
-    | '/services/eu/software'
+    | '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution'
     | '/services/eu/technical-documentation'
-    | '/services/eu/testing-strategy'
-    | '/services/india/class-a-import'
-    | '/services/india/free-sale'
-    | '/services/india/investigational-devices'
-    | '/services/india/ivd'
-    | '/services/india/ivd-clinical-performance'
-    | '/services/india/ivd-testing'
-    | '/services/india/loan-class-a-b'
-    | '/services/india/loan-class-c-d'
-    | '/services/india/market-standing'
-    | '/services/india/md-42'
-    | '/services/india/medical-devices'
-    | '/services/india/mfg-class-a-b'
-    | '/services/india/mfg-class-a-gsr'
-    | '/services/india/mfg-class-c-d'
-    | '/services/india/neutral-code'
-    | '/services/india/non-conviction'
-    | '/services/india/novel-ivds'
-    | '/services/india/personal-use'
-    | '/services/india/predicate-devices'
+    | '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+    | '/services/india/class-a-import-registration-as-per-gsr-777e'
+    | '/services/india/class-a-manufacturing-registration-gsr-777e'
+    | '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+    | '/services/india/free-sale-certificate-fsc'
+    | '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27'
+    | '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+    | '/services/india/in-vitro-diagnostic-regulatory-services'
+    | '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+    | '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+    | '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+    | '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+    | '/services/india/market-standing-certificate-msc'
+    | '/services/india/md-42-medical-device-registration-certificate'
+    | '/services/india/medical-device-licensing-and-regulatory-approvals-in-india'
+    | '/services/india/neutral-code-certificate-special-code'
+    | '/services/india/non-conviction-certificate-ncc'
+    | '/services/india/patient-personal-use-device-import-forms-md-20-md-21'
+    | '/services/india/test-license-for-ivd-devices-forms-md-16-md-17'
     | '/services/mdsap/audit-documentation'
     | '/services/mdsap/capa-remediation'
     | '/services/mdsap/complaint-vigilance'
@@ -3745,75 +3940,75 @@ export interface FileRouteTypes {
     | '/services/mdsap/production-supplier-validation'
     | '/services/mdsap/qms-alignment'
     | '/services/mdsap/strategy-scope'
-    | '/services/new-zealand/change-management'
-    | '/services/new-zealand/classification'
-    | '/services/new-zealand/ivd'
-    | '/services/new-zealand/labeling'
-    | '/services/new-zealand/medsafe-queries'
-    | '/services/new-zealand/post-market'
+    | '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand'
+    | '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand'
+    | '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand'
+    | '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand'
+    | '/services/new-zealand/medsafe-queries-safety-review-and-technical-response'
+    | '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand'
+    | '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
     | '/services/new-zealand/qms-compliance'
-    | '/services/new-zealand/software'
+    | '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand'
+    | '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand'
     | '/services/new-zealand/sponsor'
-    | '/services/new-zealand/supply-chain'
-    | '/services/new-zealand/technical-documentation'
-    | '/services/new-zealand/testing-strategy'
+    | '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand'
     | '/services/new-zealand/wand-notification'
     | '/services/saudi-arabia/authorized-representative'
-    | '/services/saudi-arabia/change-management'
-    | '/services/saudi-arabia/classification'
-    | '/services/saudi-arabia/establishment-licensing'
-    | '/services/saudi-arabia/inspection'
-    | '/services/saudi-arabia/ivd'
-    | '/services/saudi-arabia/labeling'
-    | '/services/saudi-arabia/mdma'
-    | '/services/saudi-arabia/post-market'
-    | '/services/saudi-arabia/sfda-queries'
-    | '/services/saudi-arabia/software'
-    | '/services/saudi-arabia/technical-documentation'
-    | '/services/saudi-arabia/testing-strategy'
-    | '/services/uae/change-management'
-    | '/services/uae/classification'
-    | '/services/uae/ecas'
-    | '/services/uae/ivd'
-    | '/services/uae/labeling'
-    | '/services/uae/local-applicant'
-    | '/services/uae/mohap-queries'
-    | '/services/uae/mohap-registration'
-    | '/services/uae/post-market'
+    | '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda'
+    | '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda'
+    | '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda'
+    | '/services/saudi-arabia/mdma-application-and-technical-file-strategy'
+    | '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain'
+    | '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+    | '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda'
+    | '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness'
+    | '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support'
+    | '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification'
+    | '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda'
+    | '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda'
+    | '/services/uae/changes-variations-renewal-and-lifecycle-support-uae'
+    | '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable'
+    | '/services/uae/ivd-registration-and-performance-evidence-uae'
+    | '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae'
+    | '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness'
+    | '/services/uae/mohap-medical-device-registration-and-dossier-strategy'
+    | '/services/uae/mohap-queries-deficiency-response-and-technical-review-support'
+    | '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae'
     | '/services/uae/qms-inspection'
-    | '/services/uae/software'
-    | '/services/uae/supply-chain'
-    | '/services/uae/technical-documentation'
-    | '/services/uae/testing-strategy'
-    | '/services/uk/audit-readiness'
-    | '/services/uk/conformity-assurance'
-    | '/services/uk/dors-registration'
-    | '/services/uk/labeling'
+    | '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap'
+    | '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap'
+    | '/services/uae/testing-strategy-and-laboratory-coordination-uae'
+    | '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+    | '/services/uae/uae-mohap-regulatory-strategy-and-product-classification'
+    | '/services/uk/ce-recognition-and-ukca-market-access-strategy'
+    | '/services/uk/mhra-dors-device-registration-system'
     | '/services/uk/mhra-liaison'
     | '/services/uk/mhra-registration'
-    | '/services/uk/pms'
-    | '/services/uk/qms'
-    | '/services/uk/regulatory-writing'
-    | '/services/uk/technical-file'
-    | '/services/uk/ukrp'
-    | '/services/uk/vigilance'
-    | '/services/usa/510k'
-    | '/services/usa/513g'
-    | '/services/usa/agent-service'
-    | '/services/usa/classification'
-    | '/services/usa/de-novo'
-    | '/services/usa/deficiency-response'
-    | '/services/usa/e-star'
-    | '/services/usa/establishment-registration'
+    | '/services/uk/qms-implementation-and-uk-mdr-alignment'
+    | '/services/uk/uk-approved-body-and-conformity-assessment-readiness'
+    | '/services/uk/uk-mdr-technical-documentation-and-gap-assessment'
+    | '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur'
+    | '/services/uk/uk-regulatory-and-clinical-writing-services'
+    | '/services/uk/uk-responsible-person-ukrp-services'
+    | '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca'
+    | '/services/uk/ukca-labeling-and-artwork-compliance'
+    | '/services/usa/fda-510k-premarket-notification-and-clearance-consulting'
+    | '/services/usa/fda-513g-requests-for-information'
+    | '/services/usa/fda-additional-information-and-deficiency-response'
+    | '/services/usa/fda-establishment-registration-and-device-listing'
+    | '/services/usa/fda-estar-dossier-preparation-and-submission'
+    | '/services/usa/fda-medical-device-classification-and-pathway-assessment'
+    | '/services/usa/fda-post-clearance-and-device-lifecycle-support'
+    | '/services/usa/fda-predicate-and-substantial-equivalence-strategy'
+    | '/services/usa/fda-q-submission-and-pre-submission-consulting'
+    | '/services/usa/fda-qmsr-and-inspection-preparation'
+    | '/services/usa/fda-rfd-and-pre-rfd-designations'
+    | '/services/usa/fda-udi-and-gudid-compliance-solutions'
     | '/services/usa/global-market-access'
-    | '/services/usa/pma'
-    | '/services/usa/post-clearance-lifecycle'
-    | '/services/usa/predicate-strategy'
-    | '/services/usa/q-submission'
-    | '/services/usa/qmsr-inspection'
-    | '/services/usa/rfd-pre-rfd'
-    | '/services/usa/testing-strategy'
-    | '/services/usa/udi-gudid'
+    | '/services/usa/us-agent-services-for-foreign-establishments'
+    | '/services/usa/us-fda-de-novo-classification-pathway'
+    | '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance'
+    | '/services/usa/us-fda-premarket-approval-pma-support'
     | '/services/australia/'
     | '/services/brazil/'
     | '/services/canada/'
@@ -3825,10 +4020,10 @@ export interface FileRouteTypes {
     | '/services/uae/'
     | '/services/uk/'
     | '/services/usa/'
-    | '/industries/cosmetics_/india/for-importer'
-    | '/industries/cosmetics_/india/for-manufacturer'
-    | '/industries/medical-devices_/india/for-importer'
-    | '/industries/medical-devices_/india/for-manufacturer'
+    | '/industries/cosmetics_/india/cosmetic-manufacturing-license-in-india'
+    | '/industries/cosmetics_/india/cosmetics-registration-for-importers-in-india'
+    | '/industries/medical-devices_/india/medical-device-manufacturing-and-loan-licensing-in-india'
+    | '/industries/medical-devices_/india/medical-device-regulatory-solutions-for-importers-in-india'
     | '/industries/cosmetics_/india/'
   fileRoutesById: FileRoutesById
 }
@@ -3859,10 +4054,10 @@ export interface RootRouteChildren {
   InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute: typeof InsightsDynamicRiskManagementSoftwareMedicalDevicesRoute
   InsightsEffectiveCapaSystemMedicalDevicesRoute: typeof InsightsEffectiveCapaSystemMedicalDevicesRoute
   InsightsEuAiActMedicalDevicesRoute: typeof InsightsEuAiActMedicalDevicesRoute
-  InsightsEuMdr2026Route: typeof InsightsEuMdr2026Route
+  InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute: typeof InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute
   InsightsEuMdrComplianceChallengesRoute: typeof InsightsEuMdrComplianceChallengesRoute
   InsightsFda510kProgramModernizationSafetyStandardsRoute: typeof InsightsFda510kProgramModernizationSafetyStandardsRoute
-  InsightsFdaInspections2026Route: typeof InsightsFdaInspections2026Route
+  InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute: typeof InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute
   InsightsFdaQSubPreSubmissionMeetingGuideRoute: typeof InsightsFdaQSubPreSubmissionMeetingGuideRoute
   InsightsFdaQmsr2026Route: typeof InsightsFdaQmsr2026Route
   InsightsFdaQmsrComplianceGuideRoute: typeof InsightsFdaQmsrComplianceGuideRoute
@@ -3918,10 +4113,10 @@ export interface RootRouteChildren {
   IndustriesIvdEuRoute: typeof IndustriesIvdEuRoute
   IndustriesIvdIndiaRoute: typeof IndustriesIvdIndiaRoute
   IndustriesIvdUsaRoute: typeof IndustriesIvdUsaRoute
-  IndustriesCosmeticsIndiaForImporterRoute: typeof IndustriesCosmeticsIndiaForImporterRoute
-  IndustriesCosmeticsIndiaForManufacturerRoute: typeof IndustriesCosmeticsIndiaForManufacturerRoute
-  IndustriesMedicalDevicesIndiaForImporterRoute: typeof IndustriesMedicalDevicesIndiaForImporterRoute
-  IndustriesMedicalDevicesIndiaForManufacturerRoute: typeof IndustriesMedicalDevicesIndiaForManufacturerRoute
+  IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute: typeof IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute
+  IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute: typeof IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute
+  IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute: typeof IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute
+  IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute: typeof IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute
   IndustriesCosmeticsIndiaIndexRoute: typeof IndustriesCosmeticsIndiaIndexRoute
 }
 
@@ -4018,46 +4213,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/algorithm-claim': {
-      id: '/case-studies/algorithm-claim'
-      path: '/algorithm-claim'
-      fullPath: '/case-studies/algorithm-claim'
-      preLoaderRoute: typeof CaseStudiesAlgorithmClaimRouteImport
+    '/case-studies/australia-tga-artg-inclusion-case-study': {
+      id: '/case-studies/australia-tga-artg-inclusion-case-study'
+      path: '/australia-tga-artg-inclusion-case-study'
+      fullPath: '/case-studies/australia-tga-artg-inclusion-case-study'
+      preLoaderRoute: typeof CaseStudiesAustraliaTgaArtgInclusionCaseStudyRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/australia-tga': {
-      id: '/case-studies/australia-tga'
-      path: '/australia-tga'
-      fullPath: '/case-studies/australia-tga'
-      preLoaderRoute: typeof CaseStudiesAustraliaTgaRouteImport
+    '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature': {
+      id: '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+      path: '/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+      fullPath: '/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature'
+      preLoaderRoute: typeof CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/eu-mdr-remediation': {
-      id: '/case-studies/eu-mdr-remediation'
-      path: '/eu-mdr-remediation'
-      fullPath: '/case-studies/eu-mdr-remediation'
-      preLoaderRoute: typeof CaseStudiesEuMdrRemediationRouteImport
+    '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero': {
+      id: '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+      path: '/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+      fullPath: '/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero'
+      preLoaderRoute: typeof CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/fda-biocompatibility': {
-      id: '/case-studies/fda-biocompatibility'
-      path: '/fda-biocompatibility'
-      fullPath: '/case-studies/fda-biocompatibility'
-      preLoaderRoute: typeof CaseStudiesFdaBiocompatibilityRouteImport
+    '/case-studies/medical-device-testing-strategy-test-smarter-cover-more': {
+      id: '/case-studies/medical-device-testing-strategy-test-smarter-cover-more'
+      path: '/medical-device-testing-strategy-test-smarter-cover-more'
+      fullPath: '/case-studies/medical-device-testing-strategy-test-smarter-cover-more'
+      preLoaderRoute: typeof CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/fda-simulated-use': {
-      id: '/case-studies/fda-simulated-use'
-      path: '/fda-simulated-use'
-      fullPath: '/case-studies/fda-simulated-use'
-      preLoaderRoute: typeof CaseStudiesFdaSimulatedUseRouteImport
+    '/case-studies/the-algorithm-can-do-more-should-the-label': {
+      id: '/case-studies/the-algorithm-can-do-more-should-the-label'
+      path: '/the-algorithm-can-do-more-should-the-label'
+      fullPath: '/case-studies/the-algorithm-can-do-more-should-the-label'
+      preLoaderRoute: typeof CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/test-smarter': {
-      id: '/case-studies/test-smarter'
-      path: '/test-smarter'
-      fullPath: '/case-studies/test-smarter'
-      preLoaderRoute: typeof CaseStudiesTestSmarterRouteImport
+    '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need': {
+      id: '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
+      path: '/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
+      fullPath: '/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need'
+      preLoaderRoute: typeof CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/industries/': {
@@ -4200,11 +4395,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsEuAiActMedicalDevicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/insights/eu-mdr-2026': {
-      id: '/insights/eu-mdr-2026'
-      path: '/insights/eu-mdr-2026'
-      fullPath: '/insights/eu-mdr-2026'
-      preLoaderRoute: typeof InsightsEuMdr2026RouteImport
+    '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities': {
+      id: '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
+      path: '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
+      fullPath: '/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities'
+      preLoaderRoute: typeof InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights/eu-mdr-compliance-challenges': {
@@ -4221,11 +4416,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsFda510kProgramModernizationSafetyStandardsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/insights/fda-inspections-2026': {
-      id: '/insights/fda-inspections-2026'
-      path: '/insights/fda-inspections-2026'
-      fullPath: '/insights/fda-inspections-2026'
-      preLoaderRoute: typeof InsightsFdaInspections2026RouteImport
+    '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework': {
+      id: '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
+      path: '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
+      fullPath: '/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework'
+      preLoaderRoute: typeof InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights/fda-q-sub-pre-submission-meeting-guide': {
@@ -4746,123 +4941,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAustraliaIndexRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/artg-inclusion': {
-      id: '/services/australia/artg-inclusion'
-      path: '/artg-inclusion'
-      fullPath: '/services/australia/artg-inclusion'
-      preLoaderRoute: typeof ServicesAustraliaArtgInclusionRouteImport
+    '/services/australia/australia-importer-distributor-and-supply-chain-compliance': {
+      id: '/services/australia/australia-importer-distributor-and-supply-chain-compliance'
+      path: '/australia-importer-distributor-and-supply-chain-compliance'
+      fullPath: '/services/australia/australia-importer-distributor-and-supply-chain-compliance'
+      preLoaderRoute: typeof ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/australian-sponsor': {
-      id: '/services/australia/australian-sponsor'
-      path: '/australian-sponsor'
-      fullPath: '/services/australia/australian-sponsor'
-      preLoaderRoute: typeof ServicesAustraliaAustralianSponsorRouteImport
+    '/services/australia/australia-tga-samd-ai-and-cybersecurity-support': {
+      id: '/services/australia/australia-tga-samd-ai-and-cybersecurity-support'
+      path: '/australia-tga-samd-ai-and-cybersecurity-support'
+      fullPath: '/services/australia/australia-tga-samd-ai-and-cybersecurity-support'
+      preLoaderRoute: typeof ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/change-management': {
-      id: '/services/australia/change-management'
-      path: '/change-management'
-      fullPath: '/services/australia/change-management'
-      preLoaderRoute: typeof ServicesAustraliaChangeManagementRouteImport
+    '/services/australia/australian-labelling-ifu-and-ausudid-compliance': {
+      id: '/services/australia/australian-labelling-ifu-and-ausudid-compliance'
+      path: '/australian-labelling-ifu-and-ausudid-compliance'
+      fullPath: '/services/australia/australian-labelling-ifu-and-ausudid-compliance'
+      preLoaderRoute: typeof ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/classification': {
-      id: '/services/australia/classification'
-      path: '/classification'
-      fullPath: '/services/australia/classification'
-      preLoaderRoute: typeof ServicesAustraliaClassificationRouteImport
+    '/services/australia/independent-tga-sponsor-representation': {
+      id: '/services/australia/independent-tga-sponsor-representation'
+      path: '/independent-tga-sponsor-representation'
+      fullPath: '/services/australia/independent-tga-sponsor-representation'
+      preLoaderRoute: typeof ServicesAustraliaIndependentTgaSponsorRepresentationRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/clinical-evidence': {
-      id: '/services/australia/clinical-evidence'
-      path: '/clinical-evidence'
-      fullPath: '/services/australia/clinical-evidence'
-      preLoaderRoute: typeof ServicesAustraliaClinicalEvidenceRouteImport
+    '/services/australia/tga-application-audit-defense-and-rfi-support': {
+      id: '/services/australia/tga-application-audit-defense-and-rfi-support'
+      path: '/tga-application-audit-defense-and-rfi-support'
+      fullPath: '/services/australia/tga-application-audit-defense-and-rfi-support'
+      preLoaderRoute: typeof ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/conformity-assessment': {
-      id: '/services/australia/conformity-assessment'
-      path: '/conformity-assessment'
-      fullPath: '/services/australia/conformity-assessment'
-      preLoaderRoute: typeof ServicesAustraliaConformityAssessmentRouteImport
+    '/services/australia/tga-artg-inclusion-strategy-and-application-preparation': {
+      id: '/services/australia/tga-artg-inclusion-strategy-and-application-preparation'
+      path: '/tga-artg-inclusion-strategy-and-application-preparation'
+      fullPath: '/services/australia/tga-artg-inclusion-strategy-and-application-preparation'
+      preLoaderRoute: typeof ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/ivd': {
-      id: '/services/australia/ivd'
-      path: '/ivd'
-      fullPath: '/services/australia/ivd'
-      preLoaderRoute: typeof ServicesAustraliaIvdRouteImport
+    '/services/australia/tga-artg-variations-and-significant-change-support': {
+      id: '/services/australia/tga-artg-variations-and-significant-change-support'
+      path: '/tga-artg-variations-and-significant-change-support'
+      fullPath: '/services/australia/tga-artg-variations-and-significant-change-support'
+      preLoaderRoute: typeof ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/labeling': {
-      id: '/services/australia/labeling'
-      path: '/labeling'
-      fullPath: '/services/australia/labeling'
-      preLoaderRoute: typeof ServicesAustraliaLabelingRouteImport
+    '/services/australia/tga-australian-sponsor-services-and-governance': {
+      id: '/services/australia/tga-australian-sponsor-services-and-governance'
+      path: '/tga-australian-sponsor-services-and-governance'
+      fullPath: '/services/australia/tga-australian-sponsor-services-and-governance'
+      preLoaderRoute: typeof ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/manufacturer-evidence': {
-      id: '/services/australia/manufacturer-evidence'
-      path: '/manufacturer-evidence'
-      fullPath: '/services/australia/manufacturer-evidence'
-      preLoaderRoute: typeof ServicesAustraliaManufacturerEvidenceRouteImport
+    '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy': {
+      id: '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy'
+      path: '/tga-clinical-evidence-and-benefit-risk-strategy'
+      fullPath: '/services/australia/tga-clinical-evidence-and-benefit-risk-strategy'
+      preLoaderRoute: typeof ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/pms': {
-      id: '/services/australia/pms'
-      path: '/pms'
-      fullPath: '/services/australia/pms'
-      preLoaderRoute: typeof ServicesAustraliaPmsRouteImport
+    '/services/australia/tga-conformity-assessment-support': {
+      id: '/services/australia/tga-conformity-assessment-support'
+      path: '/tga-conformity-assessment-support'
+      fullPath: '/services/australia/tga-conformity-assessment-support'
+      preLoaderRoute: typeof ServicesAustraliaTgaConformityAssessmentSupportRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/post-market': {
-      id: '/services/australia/post-market'
-      path: '/post-market'
-      fullPath: '/services/australia/post-market'
-      preLoaderRoute: typeof ServicesAustraliaPostMarketRouteImport
+    '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion': {
+      id: '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion'
+      path: '/tga-ivd-regulatory-strategy-and-artg-inclusion'
+      fullPath: '/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion'
+      preLoaderRoute: typeof ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/software': {
-      id: '/services/australia/software'
-      path: '/software'
-      fullPath: '/services/australia/software'
-      preLoaderRoute: typeof ServicesAustraliaSoftwareRouteImport
+    '/services/australia/tga-manufacturer-evidence-and-conformity-assessment': {
+      id: '/services/australia/tga-manufacturer-evidence-and-conformity-assessment'
+      path: '/tga-manufacturer-evidence-and-conformity-assessment'
+      fullPath: '/services/australia/tga-manufacturer-evidence-and-conformity-assessment'
+      preLoaderRoute: typeof ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/sponsor': {
-      id: '/services/australia/sponsor'
-      path: '/sponsor'
-      fullPath: '/services/australia/sponsor'
-      preLoaderRoute: typeof ServicesAustraliaSponsorRouteImport
+    '/services/australia/tga-medical-device-and-ivd-classification': {
+      id: '/services/australia/tga-medical-device-and-ivd-classification'
+      path: '/tga-medical-device-and-ivd-classification'
+      fullPath: '/services/australia/tga-medical-device-and-ivd-classification'
+      preLoaderRoute: typeof ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/supply-chain': {
-      id: '/services/australia/supply-chain'
-      path: '/supply-chain'
-      fullPath: '/services/australia/supply-chain'
-      preLoaderRoute: typeof ServicesAustraliaSupplyChainRouteImport
+    '/services/australia/tga-post-market-surveillance-pms-plans': {
+      id: '/services/australia/tga-post-market-surveillance-pms-plans'
+      path: '/tga-post-market-surveillance-pms-plans'
+      fullPath: '/services/australia/tga-post-market-surveillance-pms-plans'
+      preLoaderRoute: typeof ServicesAustraliaTgaPostMarketSurveillancePmsPlansRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/technical-documentation': {
-      id: '/services/australia/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/australia/technical-documentation'
-      preLoaderRoute: typeof ServicesAustraliaTechnicalDocumentationRouteImport
+    '/services/australia/tga-post-market-vigilance-mdir-and-recall-management': {
+      id: '/services/australia/tga-post-market-vigilance-mdir-and-recall-management'
+      path: '/tga-post-market-vigilance-mdir-and-recall-management'
+      fullPath: '/services/australia/tga-post-market-vigilance-mdir-and-recall-management'
+      preLoaderRoute: typeof ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/testing-strategy': {
-      id: '/services/australia/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/australia/testing-strategy'
-      preLoaderRoute: typeof ServicesAustraliaTestingStrategyRouteImport
+    '/services/australia/tga-technical-documentation-and-essential-principles': {
+      id: '/services/australia/tga-technical-documentation-and-essential-principles'
+      path: '/tga-technical-documentation-and-essential-principles'
+      fullPath: '/services/australia/tga-technical-documentation-and-essential-principles'
+      preLoaderRoute: typeof ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
-    '/services/australia/tga-audit': {
-      id: '/services/australia/tga-audit'
-      path: '/tga-audit'
-      fullPath: '/services/australia/tga-audit'
-      preLoaderRoute: typeof ServicesAustraliaTgaAuditRouteImport
+    '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia': {
+      id: '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia'
+      path: '/tga-testing-strategy-and-laboratory-coordination-australia'
+      fullPath: '/services/australia/tga-testing-strategy-and-laboratory-coordination-australia'
+      preLoaderRoute: typeof ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRouteImport
       parentRoute: typeof ServicesAustraliaRoute
     }
     '/services/brazil/': {
@@ -4872,109 +5067,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBrazilIndexRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/anvisa-queries': {
-      id: '/services/brazil/anvisa-queries'
-      path: '/anvisa-queries'
-      fullPath: '/services/brazil/anvisa-queries'
-      preLoaderRoute: typeof ServicesBrazilAnvisaQueriesRouteImport
+    '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022': {
+      id: '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+      path: '/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+      fullPath: '/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022'
+      preLoaderRoute: typeof ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022RouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/bgmp': {
-      id: '/services/brazil/bgmp'
-      path: '/bgmp'
-      fullPath: '/services/brazil/bgmp'
-      preLoaderRoute: typeof ServicesBrazilBgmpRouteImport
+    '/services/brazil/anvisa-changes-variations-and-revalidacao-support': {
+      id: '/services/brazil/anvisa-changes-variations-and-revalidacao-support'
+      path: '/anvisa-changes-variations-and-revalidacao-support'
+      fullPath: '/services/brazil/anvisa-changes-variations-and-revalidacao-support'
+      preLoaderRoute: typeof ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/brh': {
-      id: '/services/brazil/brh'
-      path: '/brh'
-      fullPath: '/services/brazil/brh'
-      preLoaderRoute: typeof ServicesBrazilBrhRouteImport
+    '/services/brazil/anvisa-exigencia-and-inspection-response-strategy': {
+      id: '/services/brazil/anvisa-exigencia-and-inspection-response-strategy'
+      path: '/anvisa-exigencia-and-inspection-response-strategy'
+      fullPath: '/services/brazil/anvisa-exigencia-and-inspection-response-strategy'
+      preLoaderRoute: typeof ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/change-management': {
-      id: '/services/brazil/change-management'
-      path: '/change-management'
-      fullPath: '/services/brazil/change-management'
-      preLoaderRoute: typeof ServicesBrazilChangeManagementRouteImport
+    '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023': {
+      id: '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+      path: '/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+      fullPath: '/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023'
+      preLoaderRoute: typeof ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023RouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/classification': {
-      id: '/services/brazil/classification'
-      path: '/classification'
-      fullPath: '/services/brazil/classification'
-      preLoaderRoute: typeof ServicesBrazilClassificationRouteImport
+    '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil': {
+      id: '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil'
+      path: '/anvisa-medical-device-and-ivd-classification-brazil'
+      fullPath: '/services/brazil/anvisa-medical-device-and-ivd-classification-brazil'
+      preLoaderRoute: typeof ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/ivd': {
-      id: '/services/brazil/ivd'
-      path: '/ivd'
-      fullPath: '/services/brazil/ivd'
-      preLoaderRoute: typeof ServicesBrazilIvdRouteImport
+    '/services/brazil/anvisa-notificacao-pathway-brazil': {
+      id: '/services/brazil/anvisa-notificacao-pathway-brazil'
+      path: '/anvisa-notificacao-pathway-brazil'
+      fullPath: '/services/brazil/anvisa-notificacao-pathway-brazil'
+      preLoaderRoute: typeof ServicesBrazilAnvisaNotificacaoPathwayBrazilRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/labeling': {
-      id: '/services/brazil/labeling'
-      path: '/labeling'
-      fullPath: '/services/brazil/labeling'
-      preLoaderRoute: typeof ServicesBrazilLabelingRouteImport
+    '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro': {
+      id: '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro'
+      path: '/anvisa-notification-and-registration-cadastro-and-registro'
+      fullPath: '/services/brazil/anvisa-notification-and-registration-cadastro-and-registro'
+      preLoaderRoute: typeof ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/notificacao': {
-      id: '/services/brazil/notificacao'
-      path: '/notificacao'
-      fullPath: '/services/brazil/notificacao'
-      preLoaderRoute: typeof ServicesBrazilNotificacaoRouteImport
+    '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance': {
+      id: '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance'
+      path: '/anvisa-portuguese-labeling-udi-and-siud-compliance'
+      fullPath: '/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance'
+      preLoaderRoute: typeof ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/registration': {
-      id: '/services/brazil/registration'
-      path: '/registration'
-      fullPath: '/services/brazil/registration'
-      preLoaderRoute: typeof ServicesBrazilRegistrationRouteImport
+    '/services/brazil/anvisa-registro-pathway-brazil': {
+      id: '/services/brazil/anvisa-registro-pathway-brazil'
+      path: '/anvisa-registro-pathway-brazil'
+      fullPath: '/services/brazil/anvisa-registro-pathway-brazil'
+      preLoaderRoute: typeof ServicesBrazilAnvisaRegistroPathwayBrazilRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/registro': {
-      id: '/services/brazil/registro'
-      path: '/registro'
-      fullPath: '/services/brazil/registro'
-      preLoaderRoute: typeof ServicesBrazilRegistroRouteImport
+    '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting': {
+      id: '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+      path: '/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+      fullPath: '/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting'
+      preLoaderRoute: typeof ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/software': {
-      id: '/services/brazil/software'
-      path: '/software'
-      fullPath: '/services/brazil/software'
-      preLoaderRoute: typeof ServicesBrazilSoftwareRouteImport
+    '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence': {
+      id: '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence'
+      path: '/anvisa-technical-dossier-and-safety-performance-evidence'
+      fullPath: '/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence'
+      preLoaderRoute: typeof ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/technical-documentation': {
-      id: '/services/brazil/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/brazil/technical-documentation'
-      preLoaderRoute: typeof ServicesBrazilTechnicalDocumentationRouteImport
+    '/services/brazil/anvisa-technovigilance-services-brazil': {
+      id: '/services/brazil/anvisa-technovigilance-services-brazil'
+      path: '/anvisa-technovigilance-services-brazil'
+      fullPath: '/services/brazil/anvisa-technovigilance-services-brazil'
+      preLoaderRoute: typeof ServicesBrazilAnvisaTechnovigilanceServicesBrazilRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/technovigilance': {
-      id: '/services/brazil/technovigilance'
-      path: '/technovigilance'
-      fullPath: '/services/brazil/technovigilance'
-      preLoaderRoute: typeof ServicesBrazilTechnovigilanceRouteImport
+    '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance': {
+      id: '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance'
+      path: '/anvisa-tecnovigilancia-and-post-market-surveillance'
+      fullPath: '/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance'
+      preLoaderRoute: typeof ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/tecnovigilance': {
-      id: '/services/brazil/tecnovigilance'
-      path: '/tecnovigilance'
-      fullPath: '/services/brazil/tecnovigilance'
-      preLoaderRoute: typeof ServicesBrazilTecnovigilanceRouteImport
+    '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination': {
+      id: '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination'
+      path: '/anvisa-testing-strategy-and-laboratory-coordination'
+      fullPath: '/services/brazil/anvisa-testing-strategy-and-laboratory-coordination'
+      preLoaderRoute: typeof ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
-    '/services/brazil/testing-strategy': {
-      id: '/services/brazil/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/brazil/testing-strategy'
-      preLoaderRoute: typeof ServicesBrazilTestingStrategyRouteImport
+    '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface': {
+      id: '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface'
+      path: '/brazil-registration-holder-brh-and-anvisa-interface'
+      fullPath: '/services/brazil/brazil-registration-holder-brh-and-anvisa-interface'
+      preLoaderRoute: typeof ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRouteImport
       parentRoute: typeof ServicesBrazilRoute
     }
     '/services/canada/': {
@@ -4984,109 +5179,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCanadaIndexRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/change-management': {
-      id: '/services/canada/change-management'
-      path: '/change-management'
-      fullPath: '/services/canada/change-management'
-      preLoaderRoute: typeof ServicesCanadaChangeManagementRouteImport
+    '/services/canada/canada-medical-device-supply-chain-and-importer-compliance': {
+      id: '/services/canada/canada-medical-device-supply-chain-and-importer-compliance'
+      path: '/canada-medical-device-supply-chain-and-importer-compliance'
+      fullPath: '/services/canada/canada-medical-device-supply-chain-and-importer-compliance'
+      preLoaderRoute: typeof ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/classification': {
-      id: '/services/canada/classification'
-      path: '/classification'
-      fullPath: '/services/canada/classification'
-      preLoaderRoute: typeof ServicesCanadaClassificationRouteImport
+    '/services/canada/health-canada-inspection-readiness-and-defense': {
+      id: '/services/canada/health-canada-inspection-readiness-and-defense'
+      path: '/health-canada-inspection-readiness-and-defense'
+      fullPath: '/services/canada/health-canada-inspection-readiness-and-defense'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/inspection': {
-      id: '/services/canada/inspection'
-      path: '/inspection'
-      fullPath: '/services/canada/inspection'
-      preLoaderRoute: typeof ServicesCanadaInspectionRouteImport
+    '/services/canada/health-canada-ivd-registration-and-performance-strategy': {
+      id: '/services/canada/health-canada-ivd-registration-and-performance-strategy'
+      path: '/health-canada-ivd-registration-and-performance-strategy'
+      fullPath: '/services/canada/health-canada-ivd-registration-and-performance-strategy'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/ivd': {
-      id: '/services/canada/ivd'
-      path: '/ivd'
-      fullPath: '/services/canada/ivd'
-      preLoaderRoute: typeof ServicesCanadaIvdRouteImport
+    '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance': {
+      id: '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance'
+      path: '/health-canada-labelling-and-bilingual-ifu-compliance'
+      fullPath: '/services/canada/health-canada-labelling-and-bilingual-ifu-compliance'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/labeling': {
-      id: '/services/canada/labeling'
-      path: '/labeling'
-      fullPath: '/services/canada/labeling'
-      preLoaderRoute: typeof ServicesCanadaLabelingRouteImport
+    '/services/canada/health-canada-mdl-amendments-and-significant-changes': {
+      id: '/services/canada/health-canada-mdl-amendments-and-significant-changes'
+      path: '/health-canada-mdl-amendments-and-significant-changes'
+      fullPath: '/services/canada/health-canada-mdl-amendments-and-significant-changes'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/liaison': {
-      id: '/services/canada/liaison'
-      path: '/liaison'
-      fullPath: '/services/canada/liaison'
-      preLoaderRoute: typeof ServicesCanadaLiaisonRouteImport
+    '/services/canada/health-canada-mdl-and-mdel-annual-renewals': {
+      id: '/services/canada/health-canada-mdl-and-mdel-annual-renewals'
+      path: '/health-canada-mdl-and-mdel-annual-renewals'
+      fullPath: '/services/canada/health-canada-mdl-and-mdel-annual-renewals'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/mdel': {
-      id: '/services/canada/mdel'
-      path: '/mdel'
-      fullPath: '/services/canada/mdel'
-      preLoaderRoute: typeof ServicesCanadaMdelRouteImport
+    '/services/canada/health-canada-medical-device-and-ivd-classification': {
+      id: '/services/canada/health-canada-medical-device-and-ivd-classification'
+      path: '/health-canada-medical-device-and-ivd-classification'
+      fullPath: '/services/canada/health-canada-medical-device-and-ivd-classification'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/mdl': {
-      id: '/services/canada/mdl'
-      path: '/mdl'
-      fullPath: '/services/canada/mdl'
-      preLoaderRoute: typeof ServicesCanadaMdlRouteImport
+    '/services/canada/health-canada-medical-device-establishment-licence-mdel': {
+      id: '/services/canada/health-canada-medical-device-establishment-licence-mdel'
+      path: '/health-canada-medical-device-establishment-licence-mdel'
+      fullPath: '/services/canada/health-canada-medical-device-establishment-licence-mdel'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/mdsap': {
-      id: '/services/canada/mdsap'
-      path: '/mdsap'
-      fullPath: '/services/canada/mdsap'
-      preLoaderRoute: typeof ServicesCanadaMdsapRouteImport
+    '/services/canada/health-canada-medical-device-licence-mdl-application': {
+      id: '/services/canada/health-canada-medical-device-licence-mdl-application'
+      path: '/health-canada-medical-device-licence-mdl-application'
+      fullPath: '/services/canada/health-canada-medical-device-licence-mdl-application'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/pms': {
-      id: '/services/canada/pms'
-      path: '/pms'
-      fullPath: '/services/canada/pms'
-      preLoaderRoute: typeof ServicesCanadaPmsRouteImport
+    '/services/canada/health-canada-post-market-surveillance-and-mpr': {
+      id: '/services/canada/health-canada-post-market-surveillance-and-mpr'
+      path: '/health-canada-post-market-surveillance-and-mpr'
+      fullPath: '/services/canada/health-canada-post-market-surveillance-and-mpr'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/renewals': {
-      id: '/services/canada/renewals'
-      path: '/renewals'
-      fullPath: '/services/canada/renewals'
-      preLoaderRoute: typeof ServicesCanadaRenewalsRouteImport
+    '/services/canada/health-canada-regulatory-liaison-support': {
+      id: '/services/canada/health-canada-regulatory-liaison-support'
+      path: '/health-canada-regulatory-liaison-support'
+      fullPath: '/services/canada/health-canada-regulatory-liaison-support'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/software': {
-      id: '/services/canada/software'
-      path: '/software'
-      fullPath: '/services/canada/software'
-      preLoaderRoute: typeof ServicesCanadaSoftwareRouteImport
+    '/services/canada/health-canada-samd-and-cybersecurity-compliance': {
+      id: '/services/canada/health-canada-samd-and-cybersecurity-compliance'
+      path: '/health-canada-samd-and-cybersecurity-compliance'
+      fullPath: '/services/canada/health-canada-samd-and-cybersecurity-compliance'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/supply-chain': {
-      id: '/services/canada/supply-chain'
-      path: '/supply-chain'
-      fullPath: '/services/canada/supply-chain'
-      preLoaderRoute: typeof ServicesCanadaSupplyChainRouteImport
+    '/services/canada/health-canada-technical-documentation-and-evidence-strategy': {
+      id: '/services/canada/health-canada-technical-documentation-and-evidence-strategy'
+      path: '/health-canada-technical-documentation-and-evidence-strategy'
+      fullPath: '/services/canada/health-canada-technical-documentation-and-evidence-strategy'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/technical-documentation': {
-      id: '/services/canada/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/canada/technical-documentation'
-      preLoaderRoute: typeof ServicesCanadaTechnicalDocumentationRouteImport
+    '/services/canada/health-canada-testing-strategy-and-laboratory-coordination': {
+      id: '/services/canada/health-canada-testing-strategy-and-laboratory-coordination'
+      path: '/health-canada-testing-strategy-and-laboratory-coordination'
+      fullPath: '/services/canada/health-canada-testing-strategy-and-laboratory-coordination'
+      preLoaderRoute: typeof ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
-    '/services/canada/testing-strategy': {
-      id: '/services/canada/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/canada/testing-strategy'
-      preLoaderRoute: typeof ServicesCanadaTestingStrategyRouteImport
+    '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness': {
+      id: '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness'
+      path: '/mdsap-canada-and-iso-13485-quality-system-readiness'
+      fullPath: '/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness'
+      preLoaderRoute: typeof ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRouteImport
       parentRoute: typeof ServicesCanadaRoute
     }
     '/services/eu/': {
@@ -5131,39 +5326,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuClassDIvdrRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/classification': {
-      id: '/services/eu/classification'
-      path: '/classification'
-      fullPath: '/services/eu/classification'
-      preLoaderRoute: typeof ServicesEuClassificationRouteImport
+    '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance': {
+      id: '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+      path: '/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+      fullPath: '/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance'
+      preLoaderRoute: typeof ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/clinical-evaluation': {
-      id: '/services/eu/clinical-evaluation'
-      path: '/clinical-evaluation'
-      fullPath: '/services/eu/clinical-evaluation'
-      preLoaderRoute: typeof ServicesEuClinicalEvaluationRouteImport
+    '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc': {
+      id: '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc'
+      path: '/eu-mdr-and-ivdr-qms-integration-and-prrc'
+      fullPath: '/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc'
+      preLoaderRoute: typeof ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/deficiency-response': {
-      id: '/services/eu/deficiency-response'
-      path: '/deficiency-response'
-      fullPath: '/services/eu/deficiency-response'
-      preLoaderRoute: typeof ServicesEuDeficiencyResponseRouteImport
+    '/services/eu/eu-mdr-and-ivdr-qualification-and-classification': {
+      id: '/services/eu/eu-mdr-and-ivdr-qualification-and-classification'
+      path: '/eu-mdr-and-ivdr-qualification-and-classification'
+      fullPath: '/services/eu/eu-mdr-and-ivdr-qualification-and-classification'
+      preLoaderRoute: typeof ServicesEuEuMdrAndIvdrQualificationAndClassificationRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/ear': {
-      id: '/services/eu/ear'
-      path: '/ear'
-      fullPath: '/services/eu/ear'
-      preLoaderRoute: typeof ServicesEuEarRouteImport
+    '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy': {
+      id: '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy'
+      path: '/eu-mdr-clinical-evaluation-and-cer-strategy'
+      fullPath: '/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy'
+      preLoaderRoute: typeof ServicesEuEuMdrClinicalEvaluationAndCerStrategyRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/eudamed': {
-      id: '/services/eu/eudamed'
-      path: '/eudamed'
-      fullPath: '/services/eu/eudamed'
-      preLoaderRoute: typeof ServicesEuEudamedRouteImport
+    '/services/eu/eu-mdr-software-and-samd-regulatory-consulting': {
+      id: '/services/eu/eu-mdr-software-and-samd-regulatory-consulting'
+      path: '/eu-mdr-software-and-samd-regulatory-consulting'
+      fullPath: '/services/eu/eu-mdr-software-and-samd-regulatory-consulting'
+      preLoaderRoute: typeof ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination': {
+      id: '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination'
+      path: '/eu-mdr-testing-strategy-and-laboratory-coordination'
+      fullPath: '/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination'
+      preLoaderRoute: typeof ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/eu-notified-body-technical-review-and-deficiency-response': {
+      id: '/services/eu/eu-notified-body-technical-review-and-deficiency-response'
+      path: '/eu-notified-body-technical-review-and-deficiency-response'
+      fullPath: '/services/eu/eu-notified-body-technical-review-and-deficiency-response'
+      preLoaderRoute: typeof ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support': {
+      id: '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support'
+      path: '/eu-post-market-surveillance-pms-and-vigilance-support'
+      fullPath: '/services/eu/eu-post-market-surveillance-pms-and-vigilance-support'
+      preLoaderRoute: typeof ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/eudamed-udi-and-economic-operator-compliance': {
+      id: '/services/eu/eudamed-udi-and-economic-operator-compliance'
+      path: '/eudamed-udi-and-economic-operator-compliance'
+      fullPath: '/services/eu/eudamed-udi-and-economic-operator-compliance'
+      preLoaderRoute: typeof ServicesEuEudamedUdiAndEconomicOperatorComplianceRouteImport
+      parentRoute: typeof ServicesEuRoute
+    }
+    '/services/eu/european-authorized-representative-ec-rep-ear-services': {
+      id: '/services/eu/european-authorized-representative-ec-rep-ear-services'
+      path: '/european-authorized-representative-ec-rep-ear-services'
+      fullPath: '/services/eu/european-authorized-representative-ec-rep-ear-services'
+      preLoaderRoute: typeof ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/eu/ivdr': {
@@ -5208,13 +5438,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuIvdrPmpfRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/labeling': {
-      id: '/services/eu/labeling'
-      path: '/labeling'
-      fullPath: '/services/eu/labeling'
-      preLoaderRoute: typeof ServicesEuLabelingRouteImport
-      parentRoute: typeof ServicesEuRoute
-    }
     '/services/eu/mdr': {
       id: '/services/eu/mdr'
       path: '/mdr'
@@ -5236,32 +5459,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuNotifiedBodyRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/pms': {
-      id: '/services/eu/pms'
-      path: '/pms'
-      fullPath: '/services/eu/pms'
-      preLoaderRoute: typeof ServicesEuPmsRouteImport
-      parentRoute: typeof ServicesEuRoute
-    }
-    '/services/eu/pms-pmcf': {
-      id: '/services/eu/pms-pmcf'
-      path: '/pms-pmcf'
-      fullPath: '/services/eu/pms-pmcf'
-      preLoaderRoute: typeof ServicesEuPmsPmcfRouteImport
-      parentRoute: typeof ServicesEuRoute
-    }
-    '/services/eu/qms': {
-      id: '/services/eu/qms'
-      path: '/qms'
-      fullPath: '/services/eu/qms'
-      preLoaderRoute: typeof ServicesEuQmsRouteImport
-      parentRoute: typeof ServicesEuRoute
-    }
-    '/services/eu/software': {
-      id: '/services/eu/software'
-      path: '/software'
-      fullPath: '/services/eu/software'
-      preLoaderRoute: typeof ServicesEuSoftwareRouteImport
+    '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution': {
+      id: '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution'
+      path: '/post-market-clinical-follow-up-pmcf-strategy-and-execution'
+      fullPath: '/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution'
+      preLoaderRoute: typeof ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRouteImport
       parentRoute: typeof ServicesEuRoute
     }
     '/services/eu/technical-documentation': {
@@ -5271,13 +5473,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesEuTechnicalDocumentationRouteImport
       parentRoute: typeof ServicesEuRoute
     }
-    '/services/eu/testing-strategy': {
-      id: '/services/eu/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/eu/testing-strategy'
-      preLoaderRoute: typeof ServicesEuTestingStrategyRouteImport
-      parentRoute: typeof ServicesEuRoute
-    }
     '/services/india/': {
       id: '/services/india/'
       path: '/'
@@ -5285,137 +5480,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndiaIndexRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/class-a-import': {
-      id: '/services/india/class-a-import'
-      path: '/class-a-import'
-      fullPath: '/services/india/class-a-import'
-      preLoaderRoute: typeof ServicesIndiaClassAImportRouteImport
+    '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5': {
+      id: '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+      path: '/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+      fullPath: '/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5'
+      preLoaderRoute: typeof ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/free-sale': {
-      id: '/services/india/free-sale'
-      path: '/free-sale'
-      fullPath: '/services/india/free-sale'
-      preLoaderRoute: typeof ServicesIndiaFreeSaleRouteImport
+    '/services/india/class-a-import-registration-as-per-gsr-777e': {
+      id: '/services/india/class-a-import-registration-as-per-gsr-777e'
+      path: '/class-a-import-registration-as-per-gsr-777e'
+      fullPath: '/services/india/class-a-import-registration-as-per-gsr-777e'
+      preLoaderRoute: typeof ServicesIndiaClassAImportRegistrationAsPerGsr777eRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/investigational-devices': {
-      id: '/services/india/investigational-devices'
-      path: '/investigational-devices'
-      fullPath: '/services/india/investigational-devices'
-      preLoaderRoute: typeof ServicesIndiaInvestigationalDevicesRouteImport
+    '/services/india/class-a-manufacturing-registration-gsr-777e': {
+      id: '/services/india/class-a-manufacturing-registration-gsr-777e'
+      path: '/class-a-manufacturing-registration-gsr-777e'
+      fullPath: '/services/india/class-a-manufacturing-registration-gsr-777e'
+      preLoaderRoute: typeof ServicesIndiaClassAManufacturingRegistrationGsr777eRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/ivd': {
-      id: '/services/india/ivd'
-      path: '/ivd'
-      fullPath: '/services/india/ivd'
-      preLoaderRoute: typeof ServicesIndiaIvdRouteImport
+    '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9': {
+      id: '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+      path: '/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+      fullPath: '/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9'
+      preLoaderRoute: typeof ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/ivd-clinical-performance': {
-      id: '/services/india/ivd-clinical-performance'
-      path: '/ivd-clinical-performance'
-      fullPath: '/services/india/ivd-clinical-performance'
-      preLoaderRoute: typeof ServicesIndiaIvdClinicalPerformanceRouteImport
+    '/services/india/free-sale-certificate-fsc': {
+      id: '/services/india/free-sale-certificate-fsc'
+      path: '/free-sale-certificate-fsc'
+      fullPath: '/services/india/free-sale-certificate-fsc'
+      preLoaderRoute: typeof ServicesIndiaFreeSaleCertificateFscRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/ivd-testing': {
-      id: '/services/india/ivd-testing'
-      path: '/ivd-testing'
-      fullPath: '/services/india/ivd-testing'
-      preLoaderRoute: typeof ServicesIndiaIvdTestingRouteImport
+    '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27': {
+      id: '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27'
+      path: '/import-authorization-for-novel-ivds-md-26-and-md-27'
+      fullPath: '/services/india/import-authorization-for-novel-ivds-md-26-and-md-27'
+      preLoaderRoute: typeof ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/loan-class-a-b': {
-      id: '/services/india/loan-class-a-b'
-      path: '/loan-class-a-b'
-      fullPath: '/services/india/loan-class-a-b'
-      preLoaderRoute: typeof ServicesIndiaLoanClassABRouteImport
+    '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15': {
+      id: '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+      path: '/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+      fullPath: '/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15'
+      preLoaderRoute: typeof ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/loan-class-c-d': {
-      id: '/services/india/loan-class-c-d'
-      path: '/loan-class-c-d'
-      fullPath: '/services/india/loan-class-c-d'
-      preLoaderRoute: typeof ServicesIndiaLoanClassCDRouteImport
+    '/services/india/in-vitro-diagnostic-regulatory-services': {
+      id: '/services/india/in-vitro-diagnostic-regulatory-services'
+      path: '/in-vitro-diagnostic-regulatory-services'
+      fullPath: '/services/india/in-vitro-diagnostic-regulatory-services'
+      preLoaderRoute: typeof ServicesIndiaInVitroDiagnosticRegulatoryServicesRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/market-standing': {
-      id: '/services/india/market-standing'
-      path: '/market-standing'
-      fullPath: '/services/india/market-standing'
-      preLoaderRoute: typeof ServicesIndiaMarketStandingRouteImport
+    '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19': {
+      id: '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+      path: '/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+      fullPath: '/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19'
+      preLoaderRoute: typeof ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/md-42': {
-      id: '/services/india/md-42'
-      path: '/md-42'
-      fullPath: '/services/india/md-42'
-      preLoaderRoute: typeof ServicesIndiaMd42RouteImport
+    '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25': {
+      id: '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+      path: '/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+      fullPath: '/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25'
+      preLoaderRoute: typeof ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/medical-devices': {
-      id: '/services/india/medical-devices'
-      path: '/medical-devices'
-      fullPath: '/services/india/medical-devices'
-      preLoaderRoute: typeof ServicesIndiaMedicalDevicesRouteImport
+    '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6': {
+      id: '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+      path: '/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+      fullPath: '/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6'
+      preLoaderRoute: typeof ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/mfg-class-a-b': {
-      id: '/services/india/mfg-class-a-b'
-      path: '/mfg-class-a-b'
-      fullPath: '/services/india/mfg-class-a-b'
-      preLoaderRoute: typeof ServicesIndiaMfgClassABRouteImport
+    '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10': {
+      id: '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+      path: '/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+      fullPath: '/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10'
+      preLoaderRoute: typeof ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/mfg-class-a-gsr': {
-      id: '/services/india/mfg-class-a-gsr'
-      path: '/mfg-class-a-gsr'
-      fullPath: '/services/india/mfg-class-a-gsr'
-      preLoaderRoute: typeof ServicesIndiaMfgClassAGsrRouteImport
+    '/services/india/market-standing-certificate-msc': {
+      id: '/services/india/market-standing-certificate-msc'
+      path: '/market-standing-certificate-msc'
+      fullPath: '/services/india/market-standing-certificate-msc'
+      preLoaderRoute: typeof ServicesIndiaMarketStandingCertificateMscRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/mfg-class-c-d': {
-      id: '/services/india/mfg-class-c-d'
-      path: '/mfg-class-c-d'
-      fullPath: '/services/india/mfg-class-c-d'
-      preLoaderRoute: typeof ServicesIndiaMfgClassCDRouteImport
+    '/services/india/md-42-medical-device-registration-certificate': {
+      id: '/services/india/md-42-medical-device-registration-certificate'
+      path: '/md-42-medical-device-registration-certificate'
+      fullPath: '/services/india/md-42-medical-device-registration-certificate'
+      preLoaderRoute: typeof ServicesIndiaMd42MedicalDeviceRegistrationCertificateRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/neutral-code': {
-      id: '/services/india/neutral-code'
-      path: '/neutral-code'
-      fullPath: '/services/india/neutral-code'
-      preLoaderRoute: typeof ServicesIndiaNeutralCodeRouteImport
+    '/services/india/medical-device-licensing-and-regulatory-approvals-in-india': {
+      id: '/services/india/medical-device-licensing-and-regulatory-approvals-in-india'
+      path: '/medical-device-licensing-and-regulatory-approvals-in-india'
+      fullPath: '/services/india/medical-device-licensing-and-regulatory-approvals-in-india'
+      preLoaderRoute: typeof ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/non-conviction': {
-      id: '/services/india/non-conviction'
-      path: '/non-conviction'
-      fullPath: '/services/india/non-conviction'
-      preLoaderRoute: typeof ServicesIndiaNonConvictionRouteImport
+    '/services/india/neutral-code-certificate-special-code': {
+      id: '/services/india/neutral-code-certificate-special-code'
+      path: '/neutral-code-certificate-special-code'
+      fullPath: '/services/india/neutral-code-certificate-special-code'
+      preLoaderRoute: typeof ServicesIndiaNeutralCodeCertificateSpecialCodeRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/novel-ivds': {
-      id: '/services/india/novel-ivds'
-      path: '/novel-ivds'
-      fullPath: '/services/india/novel-ivds'
-      preLoaderRoute: typeof ServicesIndiaNovelIvdsRouteImport
+    '/services/india/non-conviction-certificate-ncc': {
+      id: '/services/india/non-conviction-certificate-ncc'
+      path: '/non-conviction-certificate-ncc'
+      fullPath: '/services/india/non-conviction-certificate-ncc'
+      preLoaderRoute: typeof ServicesIndiaNonConvictionCertificateNccRouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/personal-use': {
-      id: '/services/india/personal-use'
-      path: '/personal-use'
-      fullPath: '/services/india/personal-use'
-      preLoaderRoute: typeof ServicesIndiaPersonalUseRouteImport
+    '/services/india/patient-personal-use-device-import-forms-md-20-md-21': {
+      id: '/services/india/patient-personal-use-device-import-forms-md-20-md-21'
+      path: '/patient-personal-use-device-import-forms-md-20-md-21'
+      fullPath: '/services/india/patient-personal-use-device-import-forms-md-20-md-21'
+      preLoaderRoute: typeof ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
-    '/services/india/predicate-devices': {
-      id: '/services/india/predicate-devices'
-      path: '/predicate-devices'
-      fullPath: '/services/india/predicate-devices'
-      preLoaderRoute: typeof ServicesIndiaPredicateDevicesRouteImport
+    '/services/india/test-license-for-ivd-devices-forms-md-16-md-17': {
+      id: '/services/india/test-license-for-ivd-devices-forms-md-16-md-17'
+      path: '/test-license-for-ivd-devices-forms-md-16-md-17'
+      fullPath: '/services/india/test-license-for-ivd-devices-forms-md-16-md-17'
+      preLoaderRoute: typeof ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17RouteImport
       parentRoute: typeof ServicesIndiaRoute
     }
     '/services/mdsap/': {
@@ -5516,46 +5711,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesNewZealandIndexRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/change-management': {
-      id: '/services/new-zealand/change-management'
-      path: '/change-management'
-      fullPath: '/services/new-zealand/change-management'
-      preLoaderRoute: typeof ServicesNewZealandChangeManagementRouteImport
+    '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand': {
+      id: '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand'
+      path: '/change-notification-and-lifecycle-support-new-zealand'
+      fullPath: '/services/new-zealand/change-notification-and-lifecycle-support-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/classification': {
-      id: '/services/new-zealand/classification'
-      path: '/classification'
-      fullPath: '/services/new-zealand/classification'
-      preLoaderRoute: typeof ServicesNewZealandClassificationRouteImport
+    '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand': {
+      id: '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand'
+      path: '/importer-distributor-and-supply-chain-compliance-new-zealand'
+      fullPath: '/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/ivd': {
-      id: '/services/new-zealand/ivd'
-      path: '/ivd'
-      fullPath: '/services/new-zealand/ivd'
-      preLoaderRoute: typeof ServicesNewZealandIvdRouteImport
+    '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand': {
+      id: '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand'
+      path: '/ivd-regulatory-and-performance-evidence-support-new-zealand'
+      fullPath: '/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/labeling': {
-      id: '/services/new-zealand/labeling'
-      path: '/labeling'
-      fullPath: '/services/new-zealand/labeling'
-      preLoaderRoute: typeof ServicesNewZealandLabelingRouteImport
+    '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand': {
+      id: '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand'
+      path: '/labelling-ifu-and-advertising-compliance-new-zealand'
+      fullPath: '/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/medsafe-queries': {
-      id: '/services/new-zealand/medsafe-queries'
-      path: '/medsafe-queries'
-      fullPath: '/services/new-zealand/medsafe-queries'
-      preLoaderRoute: typeof ServicesNewZealandMedsafeQueriesRouteImport
+    '/services/new-zealand/medsafe-queries-safety-review-and-technical-response': {
+      id: '/services/new-zealand/medsafe-queries-safety-review-and-technical-response'
+      path: '/medsafe-queries-safety-review-and-technical-response'
+      fullPath: '/services/new-zealand/medsafe-queries-safety-review-and-technical-response'
+      preLoaderRoute: typeof ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/post-market': {
-      id: '/services/new-zealand/post-market'
-      path: '/post-market'
-      fullPath: '/services/new-zealand/post-market'
-      preLoaderRoute: typeof ServicesNewZealandPostMarketRouteImport
+    '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand': {
+      id: '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand'
+      path: '/medsafe-technical-documentation-and-evidence-new-zealand'
+      fullPath: '/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand': {
+      id: '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
+      path: '/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
+      fullPath: '/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
     '/services/new-zealand/qms-compliance': {
@@ -5565,11 +5767,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesNewZealandQmsComplianceRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/software': {
-      id: '/services/new-zealand/software'
-      path: '/software'
-      fullPath: '/services/new-zealand/software'
-      preLoaderRoute: typeof ServicesNewZealandSoftwareRouteImport
+    '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand': {
+      id: '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand'
+      path: '/regulatory-strategy-and-product-classification-new-zealand'
+      fullPath: '/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRouteImport
+      parentRoute: typeof ServicesNewZealandRoute
+    }
+    '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand': {
+      id: '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand'
+      path: '/samd-software-ai-and-cybersecurity-new-zealand'
+      fullPath: '/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
     '/services/new-zealand/sponsor': {
@@ -5579,25 +5788,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesNewZealandSponsorRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
-    '/services/new-zealand/supply-chain': {
-      id: '/services/new-zealand/supply-chain'
-      path: '/supply-chain'
-      fullPath: '/services/new-zealand/supply-chain'
-      preLoaderRoute: typeof ServicesNewZealandSupplyChainRouteImport
-      parentRoute: typeof ServicesNewZealandRoute
-    }
-    '/services/new-zealand/technical-documentation': {
-      id: '/services/new-zealand/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/new-zealand/technical-documentation'
-      preLoaderRoute: typeof ServicesNewZealandTechnicalDocumentationRouteImport
-      parentRoute: typeof ServicesNewZealandRoute
-    }
-    '/services/new-zealand/testing-strategy': {
-      id: '/services/new-zealand/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/new-zealand/testing-strategy'
-      preLoaderRoute: typeof ServicesNewZealandTestingStrategyRouteImport
+    '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand': {
+      id: '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand'
+      path: '/testing-strategy-and-laboratory-coordination-new-zealand'
+      fullPath: '/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand'
+      preLoaderRoute: typeof ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRouteImport
       parentRoute: typeof ServicesNewZealandRoute
     }
     '/services/new-zealand/wand-notification': {
@@ -5621,88 +5816,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSaudiArabiaAuthorizedRepresentativeRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/change-management': {
-      id: '/services/saudi-arabia/change-management'
-      path: '/change-management'
-      fullPath: '/services/saudi-arabia/change-management'
-      preLoaderRoute: typeof ServicesSaudiArabiaChangeManagementRouteImport
+    '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda': {
+      id: '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda'
+      path: '/changes-renewal-and-lifecycle-support-sfda'
+      fullPath: '/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/classification': {
-      id: '/services/saudi-arabia/classification'
-      path: '/classification'
-      fullPath: '/services/saudi-arabia/classification'
-      preLoaderRoute: typeof ServicesSaudiArabiaClassificationRouteImport
+    '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda': {
+      id: '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda'
+      path: '/ivd-registration-and-performance-evidence-sfda'
+      fullPath: '/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/establishment-licensing': {
-      id: '/services/saudi-arabia/establishment-licensing'
-      path: '/establishment-licensing'
-      fullPath: '/services/saudi-arabia/establishment-licensing'
-      preLoaderRoute: typeof ServicesSaudiArabiaEstablishmentLicensingRouteImport
+    '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda': {
+      id: '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda'
+      path: '/labeling-ifu-udi-and-advertising-compliance-sfda'
+      fullPath: '/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/inspection': {
-      id: '/services/saudi-arabia/inspection'
-      path: '/inspection'
-      fullPath: '/services/saudi-arabia/inspection'
-      preLoaderRoute: typeof ServicesSaudiArabiaInspectionRouteImport
+    '/services/saudi-arabia/mdma-application-and-technical-file-strategy': {
+      id: '/services/saudi-arabia/mdma-application-and-technical-file-strategy'
+      path: '/mdma-application-and-technical-file-strategy'
+      fullPath: '/services/saudi-arabia/mdma-application-and-technical-file-strategy'
+      preLoaderRoute: typeof ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/ivd': {
-      id: '/services/saudi-arabia/ivd'
-      path: '/ivd'
-      fullPath: '/services/saudi-arabia/ivd'
-      preLoaderRoute: typeof ServicesSaudiArabiaIvdRouteImport
+    '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain': {
+      id: '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain'
+      path: '/medical-device-establishment-licensing-and-local-supply-chain'
+      fullPath: '/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain'
+      preLoaderRoute: typeof ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/labeling': {
-      id: '/services/saudi-arabia/labeling'
-      path: '/labeling'
-      fullPath: '/services/saudi-arabia/labeling'
-      preLoaderRoute: typeof ServicesSaudiArabiaLabelingRouteImport
+    '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda': {
+      id: '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+      path: '/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+      fullPath: '/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/mdma': {
-      id: '/services/saudi-arabia/mdma'
-      path: '/mdma'
-      fullPath: '/services/saudi-arabia/mdma'
-      preLoaderRoute: typeof ServicesSaudiArabiaMdmaRouteImport
+    '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda': {
+      id: '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda'
+      path: '/samd-software-ai-and-cybersecurity-sfda'
+      fullPath: '/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/post-market': {
-      id: '/services/saudi-arabia/post-market'
-      path: '/post-market'
-      fullPath: '/services/saudi-arabia/post-market'
-      preLoaderRoute: typeof ServicesSaudiArabiaPostMarketRouteImport
+    '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness': {
+      id: '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness'
+      path: '/sfda-inspection-and-quality-system-readiness'
+      fullPath: '/services/saudi-arabia/sfda-inspection-and-quality-system-readiness'
+      preLoaderRoute: typeof ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/sfda-queries': {
-      id: '/services/saudi-arabia/sfda-queries'
-      path: '/sfda-queries'
-      fullPath: '/services/saudi-arabia/sfda-queries'
-      preLoaderRoute: typeof ServicesSaudiArabiaSfdaQueriesRouteImport
+    '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support': {
+      id: '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support'
+      path: '/sfda-queries-deficiency-response-and-technical-review-support'
+      fullPath: '/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support'
+      preLoaderRoute: typeof ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/software': {
-      id: '/services/saudi-arabia/software'
-      path: '/software'
-      fullPath: '/services/saudi-arabia/software'
-      preLoaderRoute: typeof ServicesSaudiArabiaSoftwareRouteImport
+    '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification': {
+      id: '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification'
+      path: '/sfda-regulatory-strategy-and-product-classification'
+      fullPath: '/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification'
+      preLoaderRoute: typeof ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/technical-documentation': {
-      id: '/services/saudi-arabia/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/saudi-arabia/technical-documentation'
-      preLoaderRoute: typeof ServicesSaudiArabiaTechnicalDocumentationRouteImport
+    '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda': {
+      id: '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda'
+      path: '/technical-documentation-and-essential-principles-sfda'
+      fullPath: '/services/saudi-arabia/technical-documentation-and-essential-principles-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
-    '/services/saudi-arabia/testing-strategy': {
-      id: '/services/saudi-arabia/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/saudi-arabia/testing-strategy'
-      preLoaderRoute: typeof ServicesSaudiArabiaTestingStrategyRouteImport
+    '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda': {
+      id: '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda'
+      path: '/testing-strategy-and-laboratory-coordination-sfda'
+      fullPath: '/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda'
+      preLoaderRoute: typeof ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRouteImport
       parentRoute: typeof ServicesSaudiArabiaRoute
     }
     '/services/uae/': {
@@ -5712,67 +5907,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUaeIndexRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/change-management': {
-      id: '/services/uae/change-management'
-      path: '/change-management'
-      fullPath: '/services/uae/change-management'
-      preLoaderRoute: typeof ServicesUaeChangeManagementRouteImport
+    '/services/uae/changes-variations-renewal-and-lifecycle-support-uae': {
+      id: '/services/uae/changes-variations-renewal-and-lifecycle-support-uae'
+      path: '/changes-variations-renewal-and-lifecycle-support-uae'
+      fullPath: '/services/uae/changes-variations-renewal-and-lifecycle-support-uae'
+      preLoaderRoute: typeof ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/classification': {
-      id: '/services/uae/classification'
-      path: '/classification'
-      fullPath: '/services/uae/classification'
-      preLoaderRoute: typeof ServicesUaeClassificationRouteImport
+    '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable': {
+      id: '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable'
+      path: '/ecas-moiat-conformity-assessment-where-separately-applicable'
+      fullPath: '/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable'
+      preLoaderRoute: typeof ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/ecas': {
-      id: '/services/uae/ecas'
-      path: '/ecas'
-      fullPath: '/services/uae/ecas'
-      preLoaderRoute: typeof ServicesUaeEcasRouteImport
+    '/services/uae/ivd-registration-and-performance-evidence-uae': {
+      id: '/services/uae/ivd-registration-and-performance-evidence-uae'
+      path: '/ivd-registration-and-performance-evidence-uae'
+      fullPath: '/services/uae/ivd-registration-and-performance-evidence-uae'
+      preLoaderRoute: typeof ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/ivd': {
-      id: '/services/uae/ivd'
-      path: '/ivd'
-      fullPath: '/services/uae/ivd'
-      preLoaderRoute: typeof ServicesUaeIvdRouteImport
+    '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae': {
+      id: '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae'
+      path: '/labeling-ifu-packaging-and-market-claim-compliance-uae'
+      fullPath: '/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae'
+      preLoaderRoute: typeof ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/labeling': {
-      id: '/services/uae/labeling'
-      path: '/labeling'
-      fullPath: '/services/uae/labeling'
-      preLoaderRoute: typeof ServicesUaeLabelingRouteImport
+    '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness': {
+      id: '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness'
+      path: '/medical-warehouse-local-supply-chain-and-commercial-readiness'
+      fullPath: '/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness'
+      preLoaderRoute: typeof ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/local-applicant': {
-      id: '/services/uae/local-applicant'
-      path: '/local-applicant'
-      fullPath: '/services/uae/local-applicant'
-      preLoaderRoute: typeof ServicesUaeLocalApplicantRouteImport
+    '/services/uae/mohap-medical-device-registration-and-dossier-strategy': {
+      id: '/services/uae/mohap-medical-device-registration-and-dossier-strategy'
+      path: '/mohap-medical-device-registration-and-dossier-strategy'
+      fullPath: '/services/uae/mohap-medical-device-registration-and-dossier-strategy'
+      preLoaderRoute: typeof ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/mohap-queries': {
-      id: '/services/uae/mohap-queries'
-      path: '/mohap-queries'
-      fullPath: '/services/uae/mohap-queries'
-      preLoaderRoute: typeof ServicesUaeMohapQueriesRouteImport
+    '/services/uae/mohap-queries-deficiency-response-and-technical-review-support': {
+      id: '/services/uae/mohap-queries-deficiency-response-and-technical-review-support'
+      path: '/mohap-queries-deficiency-response-and-technical-review-support'
+      fullPath: '/services/uae/mohap-queries-deficiency-response-and-technical-review-support'
+      preLoaderRoute: typeof ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/mohap-registration': {
-      id: '/services/uae/mohap-registration'
-      path: '/mohap-registration'
-      fullPath: '/services/uae/mohap-registration'
-      preLoaderRoute: typeof ServicesUaeMohapRegistrationRouteImport
-      parentRoute: typeof ServicesUaeRoute
-    }
-    '/services/uae/post-market': {
-      id: '/services/uae/post-market'
-      path: '/post-market'
-      fullPath: '/services/uae/post-market'
-      preLoaderRoute: typeof ServicesUaePostMarketRouteImport
+    '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae': {
+      id: '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae'
+      path: '/post-market-monitoring-vigilance-and-field-actions-uae'
+      fullPath: '/services/uae/post-market-monitoring-vigilance-and-field-actions-uae'
+      preLoaderRoute: typeof ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
     '/services/uae/qms-inspection': {
@@ -5782,32 +5970,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUaeQmsInspectionRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/software': {
-      id: '/services/uae/software'
-      path: '/software'
-      fullPath: '/services/uae/software'
-      preLoaderRoute: typeof ServicesUaeSoftwareRouteImport
+    '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap': {
+      id: '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap'
+      path: '/samd-software-ai-and-cybersecurity-uae-mohap'
+      fullPath: '/services/uae/samd-software-ai-and-cybersecurity-uae-mohap'
+      preLoaderRoute: typeof ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/supply-chain': {
-      id: '/services/uae/supply-chain'
-      path: '/supply-chain'
-      fullPath: '/services/uae/supply-chain'
-      preLoaderRoute: typeof ServicesUaeSupplyChainRouteImport
+    '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap': {
+      id: '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap'
+      path: '/technical-documentation-and-safety-performance-evidence-uae-mohap'
+      fullPath: '/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap'
+      preLoaderRoute: typeof ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/technical-documentation': {
-      id: '/services/uae/technical-documentation'
-      path: '/technical-documentation'
-      fullPath: '/services/uae/technical-documentation'
-      preLoaderRoute: typeof ServicesUaeTechnicalDocumentationRouteImport
+    '/services/uae/testing-strategy-and-laboratory-coordination-uae': {
+      id: '/services/uae/testing-strategy-and-laboratory-coordination-uae'
+      path: '/testing-strategy-and-laboratory-coordination-uae'
+      fullPath: '/services/uae/testing-strategy-and-laboratory-coordination-uae'
+      preLoaderRoute: typeof ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
-    '/services/uae/testing-strategy': {
-      id: '/services/uae/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/uae/testing-strategy'
-      preLoaderRoute: typeof ServicesUaeTestingStrategyRouteImport
+    '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface': {
+      id: '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+      path: '/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+      fullPath: '/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface'
+      preLoaderRoute: typeof ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRouteImport
+      parentRoute: typeof ServicesUaeRoute
+    }
+    '/services/uae/uae-mohap-regulatory-strategy-and-product-classification': {
+      id: '/services/uae/uae-mohap-regulatory-strategy-and-product-classification'
+      path: '/uae-mohap-regulatory-strategy-and-product-classification'
+      fullPath: '/services/uae/uae-mohap-regulatory-strategy-and-product-classification'
+      preLoaderRoute: typeof ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRouteImport
       parentRoute: typeof ServicesUaeRoute
     }
     '/services/uk/': {
@@ -5817,32 +6012,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUkIndexRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/audit-readiness': {
-      id: '/services/uk/audit-readiness'
-      path: '/audit-readiness'
-      fullPath: '/services/uk/audit-readiness'
-      preLoaderRoute: typeof ServicesUkAuditReadinessRouteImport
+    '/services/uk/ce-recognition-and-ukca-market-access-strategy': {
+      id: '/services/uk/ce-recognition-and-ukca-market-access-strategy'
+      path: '/ce-recognition-and-ukca-market-access-strategy'
+      fullPath: '/services/uk/ce-recognition-and-ukca-market-access-strategy'
+      preLoaderRoute: typeof ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/conformity-assurance': {
-      id: '/services/uk/conformity-assurance'
-      path: '/conformity-assurance'
-      fullPath: '/services/uk/conformity-assurance'
-      preLoaderRoute: typeof ServicesUkConformityAssuranceRouteImport
-      parentRoute: typeof ServicesUkRoute
-    }
-    '/services/uk/dors-registration': {
-      id: '/services/uk/dors-registration'
-      path: '/dors-registration'
-      fullPath: '/services/uk/dors-registration'
-      preLoaderRoute: typeof ServicesUkDorsRegistrationRouteImport
-      parentRoute: typeof ServicesUkRoute
-    }
-    '/services/uk/labeling': {
-      id: '/services/uk/labeling'
-      path: '/labeling'
-      fullPath: '/services/uk/labeling'
-      preLoaderRoute: typeof ServicesUkLabelingRouteImport
+    '/services/uk/mhra-dors-device-registration-system': {
+      id: '/services/uk/mhra-dors-device-registration-system'
+      path: '/mhra-dors-device-registration-system'
+      fullPath: '/services/uk/mhra-dors-device-registration-system'
+      preLoaderRoute: typeof ServicesUkMhraDorsDeviceRegistrationSystemRouteImport
       parentRoute: typeof ServicesUkRoute
     }
     '/services/uk/mhra-liaison': {
@@ -5859,46 +6040,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUkMhraRegistrationRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/pms': {
-      id: '/services/uk/pms'
-      path: '/pms'
-      fullPath: '/services/uk/pms'
-      preLoaderRoute: typeof ServicesUkPmsRouteImport
+    '/services/uk/qms-implementation-and-uk-mdr-alignment': {
+      id: '/services/uk/qms-implementation-and-uk-mdr-alignment'
+      path: '/qms-implementation-and-uk-mdr-alignment'
+      fullPath: '/services/uk/qms-implementation-and-uk-mdr-alignment'
+      preLoaderRoute: typeof ServicesUkQmsImplementationAndUkMdrAlignmentRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/qms': {
-      id: '/services/uk/qms'
-      path: '/qms'
-      fullPath: '/services/uk/qms'
-      preLoaderRoute: typeof ServicesUkQmsRouteImport
+    '/services/uk/uk-approved-body-and-conformity-assessment-readiness': {
+      id: '/services/uk/uk-approved-body-and-conformity-assessment-readiness'
+      path: '/uk-approved-body-and-conformity-assessment-readiness'
+      fullPath: '/services/uk/uk-approved-body-and-conformity-assessment-readiness'
+      preLoaderRoute: typeof ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/regulatory-writing': {
-      id: '/services/uk/regulatory-writing'
-      path: '/regulatory-writing'
-      fullPath: '/services/uk/regulatory-writing'
-      preLoaderRoute: typeof ServicesUkRegulatoryWritingRouteImport
+    '/services/uk/uk-mdr-technical-documentation-and-gap-assessment': {
+      id: '/services/uk/uk-mdr-technical-documentation-and-gap-assessment'
+      path: '/uk-mdr-technical-documentation-and-gap-assessment'
+      fullPath: '/services/uk/uk-mdr-technical-documentation-and-gap-assessment'
+      preLoaderRoute: typeof ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/technical-file': {
-      id: '/services/uk/technical-file'
-      path: '/technical-file'
-      fullPath: '/services/uk/technical-file'
-      preLoaderRoute: typeof ServicesUkTechnicalFileRouteImport
+    '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur': {
+      id: '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur'
+      path: '/uk-post-market-surveillance-pms-pmsr-and-psur'
+      fullPath: '/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur'
+      preLoaderRoute: typeof ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/ukrp': {
-      id: '/services/uk/ukrp'
-      path: '/ukrp'
-      fullPath: '/services/uk/ukrp'
-      preLoaderRoute: typeof ServicesUkUkrpRouteImport
+    '/services/uk/uk-regulatory-and-clinical-writing-services': {
+      id: '/services/uk/uk-regulatory-and-clinical-writing-services'
+      path: '/uk-regulatory-and-clinical-writing-services'
+      fullPath: '/services/uk/uk-regulatory-and-clinical-writing-services'
+      preLoaderRoute: typeof ServicesUkUkRegulatoryAndClinicalWritingServicesRouteImport
       parentRoute: typeof ServicesUkRoute
     }
-    '/services/uk/vigilance': {
-      id: '/services/uk/vigilance'
-      path: '/vigilance'
-      fullPath: '/services/uk/vigilance'
-      preLoaderRoute: typeof ServicesUkVigilanceRouteImport
+    '/services/uk/uk-responsible-person-ukrp-services': {
+      id: '/services/uk/uk-responsible-person-ukrp-services'
+      path: '/uk-responsible-person-ukrp-services'
+      fullPath: '/services/uk/uk-responsible-person-ukrp-services'
+      preLoaderRoute: typeof ServicesUkUkResponsiblePersonUkrpServicesRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca': {
+      id: '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca'
+      path: '/uk-vigilance-and-field-safety-corrective-action-fsca'
+      fullPath: '/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca'
+      preLoaderRoute: typeof ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRouteImport
+      parentRoute: typeof ServicesUkRoute
+    }
+    '/services/uk/ukca-labeling-and-artwork-compliance': {
+      id: '/services/uk/ukca-labeling-and-artwork-compliance'
+      path: '/ukca-labeling-and-artwork-compliance'
+      fullPath: '/services/uk/ukca-labeling-and-artwork-compliance'
+      preLoaderRoute: typeof ServicesUkUkcaLabelingAndArtworkComplianceRouteImport
       parentRoute: typeof ServicesUkRoute
     }
     '/services/usa/': {
@@ -5908,60 +6103,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaIndexRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/510k': {
-      id: '/services/usa/510k'
-      path: '/510k'
-      fullPath: '/services/usa/510k'
-      preLoaderRoute: typeof ServicesUsa510kRouteImport
+    '/services/usa/fda-510k-premarket-notification-and-clearance-consulting': {
+      id: '/services/usa/fda-510k-premarket-notification-and-clearance-consulting'
+      path: '/fda-510k-premarket-notification-and-clearance-consulting'
+      fullPath: '/services/usa/fda-510k-premarket-notification-and-clearance-consulting'
+      preLoaderRoute: typeof ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/513g': {
-      id: '/services/usa/513g'
-      path: '/513g'
-      fullPath: '/services/usa/513g'
-      preLoaderRoute: typeof ServicesUsa513gRouteImport
+    '/services/usa/fda-513g-requests-for-information': {
+      id: '/services/usa/fda-513g-requests-for-information'
+      path: '/fda-513g-requests-for-information'
+      fullPath: '/services/usa/fda-513g-requests-for-information'
+      preLoaderRoute: typeof ServicesUsaFda513gRequestsForInformationRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/agent-service': {
-      id: '/services/usa/agent-service'
-      path: '/agent-service'
-      fullPath: '/services/usa/agent-service'
-      preLoaderRoute: typeof ServicesUsaAgentServiceRouteImport
+    '/services/usa/fda-additional-information-and-deficiency-response': {
+      id: '/services/usa/fda-additional-information-and-deficiency-response'
+      path: '/fda-additional-information-and-deficiency-response'
+      fullPath: '/services/usa/fda-additional-information-and-deficiency-response'
+      preLoaderRoute: typeof ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/classification': {
-      id: '/services/usa/classification'
-      path: '/classification'
-      fullPath: '/services/usa/classification'
-      preLoaderRoute: typeof ServicesUsaClassificationRouteImport
+    '/services/usa/fda-establishment-registration-and-device-listing': {
+      id: '/services/usa/fda-establishment-registration-and-device-listing'
+      path: '/fda-establishment-registration-and-device-listing'
+      fullPath: '/services/usa/fda-establishment-registration-and-device-listing'
+      preLoaderRoute: typeof ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/de-novo': {
-      id: '/services/usa/de-novo'
-      path: '/de-novo'
-      fullPath: '/services/usa/de-novo'
-      preLoaderRoute: typeof ServicesUsaDeNovoRouteImport
+    '/services/usa/fda-estar-dossier-preparation-and-submission': {
+      id: '/services/usa/fda-estar-dossier-preparation-and-submission'
+      path: '/fda-estar-dossier-preparation-and-submission'
+      fullPath: '/services/usa/fda-estar-dossier-preparation-and-submission'
+      preLoaderRoute: typeof ServicesUsaFdaEstarDossierPreparationAndSubmissionRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/deficiency-response': {
-      id: '/services/usa/deficiency-response'
-      path: '/deficiency-response'
-      fullPath: '/services/usa/deficiency-response'
-      preLoaderRoute: typeof ServicesUsaDeficiencyResponseRouteImport
+    '/services/usa/fda-medical-device-classification-and-pathway-assessment': {
+      id: '/services/usa/fda-medical-device-classification-and-pathway-assessment'
+      path: '/fda-medical-device-classification-and-pathway-assessment'
+      fullPath: '/services/usa/fda-medical-device-classification-and-pathway-assessment'
+      preLoaderRoute: typeof ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/e-star': {
-      id: '/services/usa/e-star'
-      path: '/e-star'
-      fullPath: '/services/usa/e-star'
-      preLoaderRoute: typeof ServicesUsaEStarRouteImport
+    '/services/usa/fda-post-clearance-and-device-lifecycle-support': {
+      id: '/services/usa/fda-post-clearance-and-device-lifecycle-support'
+      path: '/fda-post-clearance-and-device-lifecycle-support'
+      fullPath: '/services/usa/fda-post-clearance-and-device-lifecycle-support'
+      preLoaderRoute: typeof ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/establishment-registration': {
-      id: '/services/usa/establishment-registration'
-      path: '/establishment-registration'
-      fullPath: '/services/usa/establishment-registration'
-      preLoaderRoute: typeof ServicesUsaEstablishmentRegistrationRouteImport
+    '/services/usa/fda-predicate-and-substantial-equivalence-strategy': {
+      id: '/services/usa/fda-predicate-and-substantial-equivalence-strategy'
+      path: '/fda-predicate-and-substantial-equivalence-strategy'
+      fullPath: '/services/usa/fda-predicate-and-substantial-equivalence-strategy'
+      preLoaderRoute: typeof ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/fda-q-submission-and-pre-submission-consulting': {
+      id: '/services/usa/fda-q-submission-and-pre-submission-consulting'
+      path: '/fda-q-submission-and-pre-submission-consulting'
+      fullPath: '/services/usa/fda-q-submission-and-pre-submission-consulting'
+      preLoaderRoute: typeof ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/fda-qmsr-and-inspection-preparation': {
+      id: '/services/usa/fda-qmsr-and-inspection-preparation'
+      path: '/fda-qmsr-and-inspection-preparation'
+      fullPath: '/services/usa/fda-qmsr-and-inspection-preparation'
+      preLoaderRoute: typeof ServicesUsaFdaQmsrAndInspectionPreparationRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/fda-rfd-and-pre-rfd-designations': {
+      id: '/services/usa/fda-rfd-and-pre-rfd-designations'
+      path: '/fda-rfd-and-pre-rfd-designations'
+      fullPath: '/services/usa/fda-rfd-and-pre-rfd-designations'
+      preLoaderRoute: typeof ServicesUsaFdaRfdAndPreRfdDesignationsRouteImport
+      parentRoute: typeof ServicesUsaRoute
+    }
+    '/services/usa/fda-udi-and-gudid-compliance-solutions': {
+      id: '/services/usa/fda-udi-and-gudid-compliance-solutions'
+      path: '/fda-udi-and-gudid-compliance-solutions'
+      fullPath: '/services/usa/fda-udi-and-gudid-compliance-solutions'
+      preLoaderRoute: typeof ServicesUsaFdaUdiAndGudidComplianceSolutionsRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
     '/services/usa/global-market-access': {
@@ -5971,60 +6194,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesUsaGlobalMarketAccessRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/pma': {
-      id: '/services/usa/pma'
-      path: '/pma'
-      fullPath: '/services/usa/pma'
-      preLoaderRoute: typeof ServicesUsaPmaRouteImport
+    '/services/usa/us-agent-services-for-foreign-establishments': {
+      id: '/services/usa/us-agent-services-for-foreign-establishments'
+      path: '/us-agent-services-for-foreign-establishments'
+      fullPath: '/services/usa/us-agent-services-for-foreign-establishments'
+      preLoaderRoute: typeof ServicesUsaUsAgentServicesForForeignEstablishmentsRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/post-clearance-lifecycle': {
-      id: '/services/usa/post-clearance-lifecycle'
-      path: '/post-clearance-lifecycle'
-      fullPath: '/services/usa/post-clearance-lifecycle'
-      preLoaderRoute: typeof ServicesUsaPostClearanceLifecycleRouteImport
+    '/services/usa/us-fda-de-novo-classification-pathway': {
+      id: '/services/usa/us-fda-de-novo-classification-pathway'
+      path: '/us-fda-de-novo-classification-pathway'
+      fullPath: '/services/usa/us-fda-de-novo-classification-pathway'
+      preLoaderRoute: typeof ServicesUsaUsFdaDeNovoClassificationPathwayRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/predicate-strategy': {
-      id: '/services/usa/predicate-strategy'
-      path: '/predicate-strategy'
-      fullPath: '/services/usa/predicate-strategy'
-      preLoaderRoute: typeof ServicesUsaPredicateStrategyRouteImport
+    '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance': {
+      id: '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance'
+      path: '/us-fda-medical-device-testing-strategy-and-standards-compliance'
+      fullPath: '/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance'
+      preLoaderRoute: typeof ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
-    '/services/usa/q-submission': {
-      id: '/services/usa/q-submission'
-      path: '/q-submission'
-      fullPath: '/services/usa/q-submission'
-      preLoaderRoute: typeof ServicesUsaQSubmissionRouteImport
-      parentRoute: typeof ServicesUsaRoute
-    }
-    '/services/usa/qmsr-inspection': {
-      id: '/services/usa/qmsr-inspection'
-      path: '/qmsr-inspection'
-      fullPath: '/services/usa/qmsr-inspection'
-      preLoaderRoute: typeof ServicesUsaQmsrInspectionRouteImport
-      parentRoute: typeof ServicesUsaRoute
-    }
-    '/services/usa/rfd-pre-rfd': {
-      id: '/services/usa/rfd-pre-rfd'
-      path: '/rfd-pre-rfd'
-      fullPath: '/services/usa/rfd-pre-rfd'
-      preLoaderRoute: typeof ServicesUsaRfdPreRfdRouteImport
-      parentRoute: typeof ServicesUsaRoute
-    }
-    '/services/usa/testing-strategy': {
-      id: '/services/usa/testing-strategy'
-      path: '/testing-strategy'
-      fullPath: '/services/usa/testing-strategy'
-      preLoaderRoute: typeof ServicesUsaTestingStrategyRouteImport
-      parentRoute: typeof ServicesUsaRoute
-    }
-    '/services/usa/udi-gudid': {
-      id: '/services/usa/udi-gudid'
-      path: '/udi-gudid'
-      fullPath: '/services/usa/udi-gudid'
-      preLoaderRoute: typeof ServicesUsaUdiGudidRouteImport
+    '/services/usa/us-fda-premarket-approval-pma-support': {
+      id: '/services/usa/us-fda-premarket-approval-pma-support'
+      path: '/us-fda-premarket-approval-pma-support'
+      fullPath: '/services/usa/us-fda-premarket-approval-pma-support'
+      preLoaderRoute: typeof ServicesUsaUsFdaPremarketApprovalPmaSupportRouteImport
       parentRoute: typeof ServicesUsaRoute
     }
     '/industries/cosmetics_/india/': {
@@ -6034,32 +6229,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesCosmeticsIndiaIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/industries/cosmetics_/india/for-importer': {
-      id: '/industries/cosmetics_/india/for-importer'
-      path: '/industries/cosmetics/india/for-importer'
-      fullPath: '/industries/cosmetics/india/for-importer'
-      preLoaderRoute: typeof IndustriesCosmeticsIndiaForImporterRouteImport
+    '/industries/cosmetics_/india/cosmetic-manufacturing-license-in-india': {
+      id: '/industries/cosmetics_/india/cosmetic-manufacturing-license-in-india'
+      path: '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india'
+      fullPath: '/industries/cosmetics/india/cosmetic-manufacturing-license-in-india'
+      preLoaderRoute: typeof IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/industries/cosmetics_/india/for-manufacturer': {
-      id: '/industries/cosmetics_/india/for-manufacturer'
-      path: '/industries/cosmetics/india/for-manufacturer'
-      fullPath: '/industries/cosmetics/india/for-manufacturer'
-      preLoaderRoute: typeof IndustriesCosmeticsIndiaForManufacturerRouteImport
+    '/industries/cosmetics_/india/cosmetics-registration-for-importers-in-india': {
+      id: '/industries/cosmetics_/india/cosmetics-registration-for-importers-in-india'
+      path: '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india'
+      fullPath: '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india'
+      preLoaderRoute: typeof IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/industries/medical-devices_/india/for-importer': {
-      id: '/industries/medical-devices_/india/for-importer'
-      path: '/industries/medical-devices/india/for-importer'
-      fullPath: '/industries/medical-devices/india/for-importer'
-      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaForImporterRouteImport
+    '/industries/medical-devices_/india/medical-device-manufacturing-and-loan-licensing-in-india': {
+      id: '/industries/medical-devices_/india/medical-device-manufacturing-and-loan-licensing-in-india'
+      path: '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india'
+      fullPath: '/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india'
+      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/industries/medical-devices_/india/for-manufacturer': {
-      id: '/industries/medical-devices_/india/for-manufacturer'
-      path: '/industries/medical-devices/india/for-manufacturer'
-      fullPath: '/industries/medical-devices/india/for-manufacturer'
-      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaForManufacturerRouteImport
+    '/industries/medical-devices_/india/medical-device-regulatory-solutions-for-importers-in-india': {
+      id: '/industries/medical-devices_/india/medical-device-regulatory-solutions-for-importers-in-india'
+      path: '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india'
+      fullPath: '/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india'
+      preLoaderRoute: typeof IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -6122,22 +6317,28 @@ const AdminRouteChildren: AdminRouteChildren = {
 const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
 interface CaseStudiesRouteChildren {
-  CaseStudiesAlgorithmClaimRoute: typeof CaseStudiesAlgorithmClaimRoute
-  CaseStudiesAustraliaTgaRoute: typeof CaseStudiesAustraliaTgaRoute
-  CaseStudiesEuMdrRemediationRoute: typeof CaseStudiesEuMdrRemediationRoute
-  CaseStudiesFdaBiocompatibilityRoute: typeof CaseStudiesFdaBiocompatibilityRoute
-  CaseStudiesFdaSimulatedUseRoute: typeof CaseStudiesFdaSimulatedUseRoute
-  CaseStudiesTestSmarterRoute: typeof CaseStudiesTestSmarterRoute
+  CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute: typeof CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute
+  CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute: typeof CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute
+  CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute: typeof CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute
+  CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute: typeof CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute
+  CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute: typeof CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute
+  CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute: typeof CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
 
 const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
-  CaseStudiesAlgorithmClaimRoute: CaseStudiesAlgorithmClaimRoute,
-  CaseStudiesAustraliaTgaRoute: CaseStudiesAustraliaTgaRoute,
-  CaseStudiesEuMdrRemediationRoute: CaseStudiesEuMdrRemediationRoute,
-  CaseStudiesFdaBiocompatibilityRoute: CaseStudiesFdaBiocompatibilityRoute,
-  CaseStudiesFdaSimulatedUseRoute: CaseStudiesFdaSimulatedUseRoute,
-  CaseStudiesTestSmarterRoute: CaseStudiesTestSmarterRoute,
+  CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute:
+    CaseStudiesAustraliaTgaArtgInclusionCaseStudyRoute,
+  CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute:
+    CaseStudiesAvoidingDuplicateSimulatedUseWorkByLeveragingAnAlreadyMarketedSafetyFeatureRoute,
+  CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute:
+    CaseStudiesConvertingALegacyTechnicalFileToMdrWithoutRebuildingEverythingFromZeroRoute,
+  CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute:
+    CaseStudiesMedicalDeviceTestingStrategyTestSmarterCoverMoreRoute,
+  CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute:
+    CaseStudiesTheAlgorithmCanDoMoreShouldTheLabelRoute,
+  CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute:
+    CaseStudiesUsingPredicateAndMaterialEquivalenceToAvoidRepeatingBiocompatibilityTestingWithoutRegulatoryNeedRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }
 
@@ -6146,50 +6347,61 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
 )
 
 interface ServicesAustraliaRouteChildren {
-  ServicesAustraliaArtgInclusionRoute: typeof ServicesAustraliaArtgInclusionRoute
-  ServicesAustraliaAustralianSponsorRoute: typeof ServicesAustraliaAustralianSponsorRoute
-  ServicesAustraliaChangeManagementRoute: typeof ServicesAustraliaChangeManagementRoute
-  ServicesAustraliaClassificationRoute: typeof ServicesAustraliaClassificationRoute
-  ServicesAustraliaClinicalEvidenceRoute: typeof ServicesAustraliaClinicalEvidenceRoute
-  ServicesAustraliaConformityAssessmentRoute: typeof ServicesAustraliaConformityAssessmentRoute
-  ServicesAustraliaIvdRoute: typeof ServicesAustraliaIvdRoute
-  ServicesAustraliaLabelingRoute: typeof ServicesAustraliaLabelingRoute
-  ServicesAustraliaManufacturerEvidenceRoute: typeof ServicesAustraliaManufacturerEvidenceRoute
-  ServicesAustraliaPmsRoute: typeof ServicesAustraliaPmsRoute
-  ServicesAustraliaPostMarketRoute: typeof ServicesAustraliaPostMarketRoute
-  ServicesAustraliaSoftwareRoute: typeof ServicesAustraliaSoftwareRoute
-  ServicesAustraliaSponsorRoute: typeof ServicesAustraliaSponsorRoute
-  ServicesAustraliaSupplyChainRoute: typeof ServicesAustraliaSupplyChainRoute
-  ServicesAustraliaTechnicalDocumentationRoute: typeof ServicesAustraliaTechnicalDocumentationRoute
-  ServicesAustraliaTestingStrategyRoute: typeof ServicesAustraliaTestingStrategyRoute
-  ServicesAustraliaTgaAuditRoute: typeof ServicesAustraliaTgaAuditRoute
+  ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute: typeof ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute
+  ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute: typeof ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute
+  ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute: typeof ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute
+  ServicesAustraliaIndependentTgaSponsorRepresentationRoute: typeof ServicesAustraliaIndependentTgaSponsorRepresentationRoute
+  ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute: typeof ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute
+  ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute: typeof ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute
+  ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute: typeof ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute
+  ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute: typeof ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute
+  ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute: typeof ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute
+  ServicesAustraliaTgaConformityAssessmentSupportRoute: typeof ServicesAustraliaTgaConformityAssessmentSupportRoute
+  ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute: typeof ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute
+  ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute: typeof ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute
+  ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute: typeof ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute
+  ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute: typeof ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute
+  ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute: typeof ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute
+  ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute: typeof ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute
+  ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute: typeof ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute
   ServicesAustraliaIndexRoute: typeof ServicesAustraliaIndexRoute
 }
 
 const ServicesAustraliaRouteChildren: ServicesAustraliaRouteChildren = {
-  ServicesAustraliaArtgInclusionRoute: ServicesAustraliaArtgInclusionRoute,
-  ServicesAustraliaAustralianSponsorRoute:
-    ServicesAustraliaAustralianSponsorRoute,
-  ServicesAustraliaChangeManagementRoute:
-    ServicesAustraliaChangeManagementRoute,
-  ServicesAustraliaClassificationRoute: ServicesAustraliaClassificationRoute,
-  ServicesAustraliaClinicalEvidenceRoute:
-    ServicesAustraliaClinicalEvidenceRoute,
-  ServicesAustraliaConformityAssessmentRoute:
-    ServicesAustraliaConformityAssessmentRoute,
-  ServicesAustraliaIvdRoute: ServicesAustraliaIvdRoute,
-  ServicesAustraliaLabelingRoute: ServicesAustraliaLabelingRoute,
-  ServicesAustraliaManufacturerEvidenceRoute:
-    ServicesAustraliaManufacturerEvidenceRoute,
-  ServicesAustraliaPmsRoute: ServicesAustraliaPmsRoute,
-  ServicesAustraliaPostMarketRoute: ServicesAustraliaPostMarketRoute,
-  ServicesAustraliaSoftwareRoute: ServicesAustraliaSoftwareRoute,
-  ServicesAustraliaSponsorRoute: ServicesAustraliaSponsorRoute,
-  ServicesAustraliaSupplyChainRoute: ServicesAustraliaSupplyChainRoute,
-  ServicesAustraliaTechnicalDocumentationRoute:
-    ServicesAustraliaTechnicalDocumentationRoute,
-  ServicesAustraliaTestingStrategyRoute: ServicesAustraliaTestingStrategyRoute,
-  ServicesAustraliaTgaAuditRoute: ServicesAustraliaTgaAuditRoute,
+  ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute:
+    ServicesAustraliaAustraliaImporterDistributorAndSupplyChainComplianceRoute,
+  ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute:
+    ServicesAustraliaAustraliaTgaSamdAiAndCybersecuritySupportRoute,
+  ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute:
+    ServicesAustraliaAustralianLabellingIfuAndAusudidComplianceRoute,
+  ServicesAustraliaIndependentTgaSponsorRepresentationRoute:
+    ServicesAustraliaIndependentTgaSponsorRepresentationRoute,
+  ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute:
+    ServicesAustraliaTgaApplicationAuditDefenseAndRfiSupportRoute,
+  ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute:
+    ServicesAustraliaTgaArtgInclusionStrategyAndApplicationPreparationRoute,
+  ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute:
+    ServicesAustraliaTgaArtgVariationsAndSignificantChangeSupportRoute,
+  ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute:
+    ServicesAustraliaTgaAustralianSponsorServicesAndGovernanceRoute,
+  ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute:
+    ServicesAustraliaTgaClinicalEvidenceAndBenefitRiskStrategyRoute,
+  ServicesAustraliaTgaConformityAssessmentSupportRoute:
+    ServicesAustraliaTgaConformityAssessmentSupportRoute,
+  ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute:
+    ServicesAustraliaTgaIvdRegulatoryStrategyAndArtgInclusionRoute,
+  ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute:
+    ServicesAustraliaTgaManufacturerEvidenceAndConformityAssessmentRoute,
+  ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute:
+    ServicesAustraliaTgaMedicalDeviceAndIvdClassificationRoute,
+  ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute:
+    ServicesAustraliaTgaPostMarketSurveillancePmsPlansRoute,
+  ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute:
+    ServicesAustraliaTgaPostMarketVigilanceMdirAndRecallManagementRoute,
+  ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute:
+    ServicesAustraliaTgaTechnicalDocumentationAndEssentialPrinciplesRoute,
+  ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute:
+    ServicesAustraliaTgaTestingStrategyAndLaboratoryCoordinationAustraliaRoute,
   ServicesAustraliaIndexRoute: ServicesAustraliaIndexRoute,
 }
 
@@ -6197,41 +6409,55 @@ const ServicesAustraliaRouteWithChildren =
   ServicesAustraliaRoute._addFileChildren(ServicesAustraliaRouteChildren)
 
 interface ServicesBrazilRouteChildren {
-  ServicesBrazilAnvisaQueriesRoute: typeof ServicesBrazilAnvisaQueriesRoute
-  ServicesBrazilBgmpRoute: typeof ServicesBrazilBgmpRoute
-  ServicesBrazilBrhRoute: typeof ServicesBrazilBrhRoute
-  ServicesBrazilChangeManagementRoute: typeof ServicesBrazilChangeManagementRoute
-  ServicesBrazilClassificationRoute: typeof ServicesBrazilClassificationRoute
-  ServicesBrazilIvdRoute: typeof ServicesBrazilIvdRoute
-  ServicesBrazilLabelingRoute: typeof ServicesBrazilLabelingRoute
-  ServicesBrazilNotificacaoRoute: typeof ServicesBrazilNotificacaoRoute
-  ServicesBrazilRegistrationRoute: typeof ServicesBrazilRegistrationRoute
-  ServicesBrazilRegistroRoute: typeof ServicesBrazilRegistroRoute
-  ServicesBrazilSoftwareRoute: typeof ServicesBrazilSoftwareRoute
-  ServicesBrazilTechnicalDocumentationRoute: typeof ServicesBrazilTechnicalDocumentationRoute
-  ServicesBrazilTechnovigilanceRoute: typeof ServicesBrazilTechnovigilanceRoute
-  ServicesBrazilTecnovigilanceRoute: typeof ServicesBrazilTecnovigilanceRoute
-  ServicesBrazilTestingStrategyRoute: typeof ServicesBrazilTestingStrategyRoute
+  ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route: typeof ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route
+  ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute: typeof ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute
+  ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute: typeof ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute
+  ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route: typeof ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route
+  ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute: typeof ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute
+  ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute: typeof ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute
+  ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute: typeof ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute
+  ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute: typeof ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute
+  ServicesBrazilAnvisaRegistroPathwayBrazilRoute: typeof ServicesBrazilAnvisaRegistroPathwayBrazilRoute
+  ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute: typeof ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute
+  ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute: typeof ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute
+  ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute: typeof ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute
+  ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute: typeof ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute
+  ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute: typeof ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute
+  ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute: typeof ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute
   ServicesBrazilIndexRoute: typeof ServicesBrazilIndexRoute
 }
 
 const ServicesBrazilRouteChildren: ServicesBrazilRouteChildren = {
-  ServicesBrazilAnvisaQueriesRoute: ServicesBrazilAnvisaQueriesRoute,
-  ServicesBrazilBgmpRoute: ServicesBrazilBgmpRoute,
-  ServicesBrazilBrhRoute: ServicesBrazilBrhRoute,
-  ServicesBrazilChangeManagementRoute: ServicesBrazilChangeManagementRoute,
-  ServicesBrazilClassificationRoute: ServicesBrazilClassificationRoute,
-  ServicesBrazilIvdRoute: ServicesBrazilIvdRoute,
-  ServicesBrazilLabelingRoute: ServicesBrazilLabelingRoute,
-  ServicesBrazilNotificacaoRoute: ServicesBrazilNotificacaoRoute,
-  ServicesBrazilRegistrationRoute: ServicesBrazilRegistrationRoute,
-  ServicesBrazilRegistroRoute: ServicesBrazilRegistroRoute,
-  ServicesBrazilSoftwareRoute: ServicesBrazilSoftwareRoute,
-  ServicesBrazilTechnicalDocumentationRoute:
-    ServicesBrazilTechnicalDocumentationRoute,
-  ServicesBrazilTechnovigilanceRoute: ServicesBrazilTechnovigilanceRoute,
-  ServicesBrazilTecnovigilanceRoute: ServicesBrazilTecnovigilanceRoute,
-  ServicesBrazilTestingStrategyRoute: ServicesBrazilTestingStrategyRoute,
+  ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route:
+    ServicesBrazilAnvisaBgmpAndCbpfComplianceRdc6652022Route,
+  ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute:
+    ServicesBrazilAnvisaChangesVariationsAndRevalidacaoSupportRoute,
+  ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute:
+    ServicesBrazilAnvisaExigenciaAndInspectionResponseStrategyRoute,
+  ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route:
+    ServicesBrazilAnvisaIvdRegistrationAndPerformanceEvidenceRdc8302023Route,
+  ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute:
+    ServicesBrazilAnvisaMedicalDeviceAndIvdClassificationBrazilRoute,
+  ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute:
+    ServicesBrazilAnvisaNotificacaoPathwayBrazilRoute,
+  ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute:
+    ServicesBrazilAnvisaNotificationAndRegistrationCadastroAndRegistroRoute,
+  ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute:
+    ServicesBrazilAnvisaPortugueseLabelingUdiAndSiudComplianceRoute,
+  ServicesBrazilAnvisaRegistroPathwayBrazilRoute:
+    ServicesBrazilAnvisaRegistroPathwayBrazilRoute,
+  ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute:
+    ServicesBrazilAnvisaSamdSoftwareAiAndCybersecurityRegulatoryConsultingRoute,
+  ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute:
+    ServicesBrazilAnvisaTechnicalDossierAndSafetyPerformanceEvidenceRoute,
+  ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute:
+    ServicesBrazilAnvisaTechnovigilanceServicesBrazilRoute,
+  ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute:
+    ServicesBrazilAnvisaTecnovigilanciaAndPostMarketSurveillanceRoute,
+  ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute:
+    ServicesBrazilAnvisaTestingStrategyAndLaboratoryCoordinationRoute,
+  ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute:
+    ServicesBrazilBrazilRegistrationHolderBrhAndAnvisaInterfaceRoute,
   ServicesBrazilIndexRoute: ServicesBrazilIndexRoute,
 }
 
@@ -6240,41 +6466,55 @@ const ServicesBrazilRouteWithChildren = ServicesBrazilRoute._addFileChildren(
 )
 
 interface ServicesCanadaRouteChildren {
-  ServicesCanadaChangeManagementRoute: typeof ServicesCanadaChangeManagementRoute
-  ServicesCanadaClassificationRoute: typeof ServicesCanadaClassificationRoute
-  ServicesCanadaInspectionRoute: typeof ServicesCanadaInspectionRoute
-  ServicesCanadaIvdRoute: typeof ServicesCanadaIvdRoute
-  ServicesCanadaLabelingRoute: typeof ServicesCanadaLabelingRoute
-  ServicesCanadaLiaisonRoute: typeof ServicesCanadaLiaisonRoute
-  ServicesCanadaMdelRoute: typeof ServicesCanadaMdelRoute
-  ServicesCanadaMdlRoute: typeof ServicesCanadaMdlRoute
-  ServicesCanadaMdsapRoute: typeof ServicesCanadaMdsapRoute
-  ServicesCanadaPmsRoute: typeof ServicesCanadaPmsRoute
-  ServicesCanadaRenewalsRoute: typeof ServicesCanadaRenewalsRoute
-  ServicesCanadaSoftwareRoute: typeof ServicesCanadaSoftwareRoute
-  ServicesCanadaSupplyChainRoute: typeof ServicesCanadaSupplyChainRoute
-  ServicesCanadaTechnicalDocumentationRoute: typeof ServicesCanadaTechnicalDocumentationRoute
-  ServicesCanadaTestingStrategyRoute: typeof ServicesCanadaTestingStrategyRoute
+  ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute: typeof ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute
+  ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute: typeof ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute
+  ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute: typeof ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute
+  ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute: typeof ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute
+  ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute: typeof ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute
+  ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute: typeof ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute
+  ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute
+  ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute
+  ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute: typeof ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute
+  ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute: typeof ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute
+  ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute: typeof ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute
+  ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute: typeof ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute
+  ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute: typeof ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute
+  ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute: typeof ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute
+  ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute: typeof ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute
   ServicesCanadaIndexRoute: typeof ServicesCanadaIndexRoute
 }
 
 const ServicesCanadaRouteChildren: ServicesCanadaRouteChildren = {
-  ServicesCanadaChangeManagementRoute: ServicesCanadaChangeManagementRoute,
-  ServicesCanadaClassificationRoute: ServicesCanadaClassificationRoute,
-  ServicesCanadaInspectionRoute: ServicesCanadaInspectionRoute,
-  ServicesCanadaIvdRoute: ServicesCanadaIvdRoute,
-  ServicesCanadaLabelingRoute: ServicesCanadaLabelingRoute,
-  ServicesCanadaLiaisonRoute: ServicesCanadaLiaisonRoute,
-  ServicesCanadaMdelRoute: ServicesCanadaMdelRoute,
-  ServicesCanadaMdlRoute: ServicesCanadaMdlRoute,
-  ServicesCanadaMdsapRoute: ServicesCanadaMdsapRoute,
-  ServicesCanadaPmsRoute: ServicesCanadaPmsRoute,
-  ServicesCanadaRenewalsRoute: ServicesCanadaRenewalsRoute,
-  ServicesCanadaSoftwareRoute: ServicesCanadaSoftwareRoute,
-  ServicesCanadaSupplyChainRoute: ServicesCanadaSupplyChainRoute,
-  ServicesCanadaTechnicalDocumentationRoute:
-    ServicesCanadaTechnicalDocumentationRoute,
-  ServicesCanadaTestingStrategyRoute: ServicesCanadaTestingStrategyRoute,
+  ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute:
+    ServicesCanadaCanadaMedicalDeviceSupplyChainAndImporterComplianceRoute,
+  ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute:
+    ServicesCanadaHealthCanadaInspectionReadinessAndDefenseRoute,
+  ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute:
+    ServicesCanadaHealthCanadaIvdRegistrationAndPerformanceStrategyRoute,
+  ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute:
+    ServicesCanadaHealthCanadaLabellingAndBilingualIfuComplianceRoute,
+  ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute:
+    ServicesCanadaHealthCanadaMdlAmendmentsAndSignificantChangesRoute,
+  ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute:
+    ServicesCanadaHealthCanadaMdlAndMdelAnnualRenewalsRoute,
+  ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute:
+    ServicesCanadaHealthCanadaMedicalDeviceAndIvdClassificationRoute,
+  ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute:
+    ServicesCanadaHealthCanadaMedicalDeviceEstablishmentLicenceMdelRoute,
+  ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute:
+    ServicesCanadaHealthCanadaMedicalDeviceLicenceMdlApplicationRoute,
+  ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute:
+    ServicesCanadaHealthCanadaPostMarketSurveillanceAndMprRoute,
+  ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute:
+    ServicesCanadaHealthCanadaRegulatoryLiaisonSupportRoute,
+  ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute:
+    ServicesCanadaHealthCanadaSamdAndCybersecurityComplianceRoute,
+  ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute:
+    ServicesCanadaHealthCanadaTechnicalDocumentationAndEvidenceStrategyRoute,
+  ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute:
+    ServicesCanadaHealthCanadaTestingStrategyAndLaboratoryCoordinationRoute,
+  ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute:
+    ServicesCanadaMdsapCanadaAndIso13485QualitySystemReadinessRoute,
   ServicesCanadaIndexRoute: ServicesCanadaIndexRoute,
 }
 
@@ -6288,27 +6528,27 @@ interface ServicesEuRouteChildren {
   ServicesEuCeRegistrationRoute: typeof ServicesEuCeRegistrationRoute
   ServicesEuChangeAssessmentRoute: typeof ServicesEuChangeAssessmentRoute
   ServicesEuClassDIvdrRoute: typeof ServicesEuClassDIvdrRoute
-  ServicesEuClassificationRoute: typeof ServicesEuClassificationRoute
-  ServicesEuClinicalEvaluationRoute: typeof ServicesEuClinicalEvaluationRoute
-  ServicesEuDeficiencyResponseRoute: typeof ServicesEuDeficiencyResponseRoute
-  ServicesEuEarRoute: typeof ServicesEuEarRoute
-  ServicesEuEudamedRoute: typeof ServicesEuEudamedRoute
+  ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute: typeof ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute
+  ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute: typeof ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute
+  ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute: typeof ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute
+  ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute: typeof ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute
+  ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute: typeof ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute
+  ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute: typeof ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute
+  ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute: typeof ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute
+  ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute: typeof ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute
+  ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute: typeof ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute
+  ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute: typeof ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute
   ServicesEuIvdrRoute: typeof ServicesEuIvdrRoute
   ServicesEuIvdrAnalyticalPerformanceRoute: typeof ServicesEuIvdrAnalyticalPerformanceRoute
   ServicesEuIvdrClassificationRoute: typeof ServicesEuIvdrClassificationRoute
   ServicesEuIvdrClinicalPerformanceRoute: typeof ServicesEuIvdrClinicalPerformanceRoute
   ServicesEuIvdrPerformanceEvaluationRoute: typeof ServicesEuIvdrPerformanceEvaluationRoute
   ServicesEuIvdrPmpfRoute: typeof ServicesEuIvdrPmpfRoute
-  ServicesEuLabelingRoute: typeof ServicesEuLabelingRoute
   ServicesEuMdrRoute: typeof ServicesEuMdrRoute
   ServicesEuMdrIvdrTransitionRoute: typeof ServicesEuMdrIvdrTransitionRoute
   ServicesEuNotifiedBodyRoute: typeof ServicesEuNotifiedBodyRoute
-  ServicesEuPmsRoute: typeof ServicesEuPmsRoute
-  ServicesEuPmsPmcfRoute: typeof ServicesEuPmsPmcfRoute
-  ServicesEuQmsRoute: typeof ServicesEuQmsRoute
-  ServicesEuSoftwareRoute: typeof ServicesEuSoftwareRoute
+  ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute: typeof ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute
   ServicesEuTechnicalDocumentationRoute: typeof ServicesEuTechnicalDocumentationRoute
-  ServicesEuTestingStrategyRoute: typeof ServicesEuTestingStrategyRoute
   ServicesEuIndexRoute: typeof ServicesEuIndexRoute
 }
 
@@ -6318,11 +6558,26 @@ const ServicesEuRouteChildren: ServicesEuRouteChildren = {
   ServicesEuCeRegistrationRoute: ServicesEuCeRegistrationRoute,
   ServicesEuChangeAssessmentRoute: ServicesEuChangeAssessmentRoute,
   ServicesEuClassDIvdrRoute: ServicesEuClassDIvdrRoute,
-  ServicesEuClassificationRoute: ServicesEuClassificationRoute,
-  ServicesEuClinicalEvaluationRoute: ServicesEuClinicalEvaluationRoute,
-  ServicesEuDeficiencyResponseRoute: ServicesEuDeficiencyResponseRoute,
-  ServicesEuEarRoute: ServicesEuEarRoute,
-  ServicesEuEudamedRoute: ServicesEuEudamedRoute,
+  ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute:
+    ServicesEuEuMdrAndIvdrLabelingAndIfuComplianceRoute,
+  ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute:
+    ServicesEuEuMdrAndIvdrQmsIntegrationAndPrrcRoute,
+  ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute:
+    ServicesEuEuMdrAndIvdrQualificationAndClassificationRoute,
+  ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute:
+    ServicesEuEuMdrClinicalEvaluationAndCerStrategyRoute,
+  ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute:
+    ServicesEuEuMdrSoftwareAndSamdRegulatoryConsultingRoute,
+  ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute:
+    ServicesEuEuMdrTestingStrategyAndLaboratoryCoordinationRoute,
+  ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute:
+    ServicesEuEuNotifiedBodyTechnicalReviewAndDeficiencyResponseRoute,
+  ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute:
+    ServicesEuEuPostMarketSurveillancePmsAndVigilanceSupportRoute,
+  ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute:
+    ServicesEuEudamedUdiAndEconomicOperatorComplianceRoute,
+  ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute:
+    ServicesEuEuropeanAuthorizedRepresentativeEcRepEarServicesRoute,
   ServicesEuIvdrRoute: ServicesEuIvdrRoute,
   ServicesEuIvdrAnalyticalPerformanceRoute:
     ServicesEuIvdrAnalyticalPerformanceRoute,
@@ -6332,16 +6587,12 @@ const ServicesEuRouteChildren: ServicesEuRouteChildren = {
   ServicesEuIvdrPerformanceEvaluationRoute:
     ServicesEuIvdrPerformanceEvaluationRoute,
   ServicesEuIvdrPmpfRoute: ServicesEuIvdrPmpfRoute,
-  ServicesEuLabelingRoute: ServicesEuLabelingRoute,
   ServicesEuMdrRoute: ServicesEuMdrRoute,
   ServicesEuMdrIvdrTransitionRoute: ServicesEuMdrIvdrTransitionRoute,
   ServicesEuNotifiedBodyRoute: ServicesEuNotifiedBodyRoute,
-  ServicesEuPmsRoute: ServicesEuPmsRoute,
-  ServicesEuPmsPmcfRoute: ServicesEuPmsPmcfRoute,
-  ServicesEuQmsRoute: ServicesEuQmsRoute,
-  ServicesEuSoftwareRoute: ServicesEuSoftwareRoute,
+  ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute:
+    ServicesEuPostMarketClinicalFollowUpPmcfStrategyAndExecutionRoute,
   ServicesEuTechnicalDocumentationRoute: ServicesEuTechnicalDocumentationRoute,
-  ServicesEuTestingStrategyRoute: ServicesEuTestingStrategyRoute,
   ServicesEuIndexRoute: ServicesEuIndexRoute,
 }
 
@@ -6350,50 +6601,67 @@ const ServicesEuRouteWithChildren = ServicesEuRoute._addFileChildren(
 )
 
 interface ServicesIndiaRouteChildren {
-  ServicesIndiaClassAImportRoute: typeof ServicesIndiaClassAImportRoute
-  ServicesIndiaFreeSaleRoute: typeof ServicesIndiaFreeSaleRoute
-  ServicesIndiaInvestigationalDevicesRoute: typeof ServicesIndiaInvestigationalDevicesRoute
-  ServicesIndiaIvdRoute: typeof ServicesIndiaIvdRoute
-  ServicesIndiaIvdClinicalPerformanceRoute: typeof ServicesIndiaIvdClinicalPerformanceRoute
-  ServicesIndiaIvdTestingRoute: typeof ServicesIndiaIvdTestingRoute
-  ServicesIndiaLoanClassABRoute: typeof ServicesIndiaLoanClassABRoute
-  ServicesIndiaLoanClassCDRoute: typeof ServicesIndiaLoanClassCDRoute
-  ServicesIndiaMarketStandingRoute: typeof ServicesIndiaMarketStandingRoute
-  ServicesIndiaMd42Route: typeof ServicesIndiaMd42Route
-  ServicesIndiaMedicalDevicesRoute: typeof ServicesIndiaMedicalDevicesRoute
-  ServicesIndiaMfgClassABRoute: typeof ServicesIndiaMfgClassABRoute
-  ServicesIndiaMfgClassAGsrRoute: typeof ServicesIndiaMfgClassAGsrRoute
-  ServicesIndiaMfgClassCDRoute: typeof ServicesIndiaMfgClassCDRoute
-  ServicesIndiaNeutralCodeRoute: typeof ServicesIndiaNeutralCodeRoute
-  ServicesIndiaNonConvictionRoute: typeof ServicesIndiaNonConvictionRoute
-  ServicesIndiaNovelIvdsRoute: typeof ServicesIndiaNovelIvdsRoute
-  ServicesIndiaPersonalUseRoute: typeof ServicesIndiaPersonalUseRoute
-  ServicesIndiaPredicateDevicesRoute: typeof ServicesIndiaPredicateDevicesRoute
+  ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route: typeof ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route
+  ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute: typeof ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute
+  ServicesIndiaClassAManufacturingRegistrationGsr777eRoute: typeof ServicesIndiaClassAManufacturingRegistrationGsr777eRoute
+  ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route: typeof ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route
+  ServicesIndiaFreeSaleCertificateFscRoute: typeof ServicesIndiaFreeSaleCertificateFscRoute
+  ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route: typeof ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route
+  ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route: typeof ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route
+  ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute: typeof ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute
+  ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route: typeof ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route
+  ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route: typeof ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route
+  ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route: typeof ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route
+  ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route: typeof ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route
+  ServicesIndiaMarketStandingCertificateMscRoute: typeof ServicesIndiaMarketStandingCertificateMscRoute
+  ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute: typeof ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute
+  ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute: typeof ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute
+  ServicesIndiaNeutralCodeCertificateSpecialCodeRoute: typeof ServicesIndiaNeutralCodeCertificateSpecialCodeRoute
+  ServicesIndiaNonConvictionCertificateNccRoute: typeof ServicesIndiaNonConvictionCertificateNccRoute
+  ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route: typeof ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route
+  ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route: typeof ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route
   ServicesIndiaIndexRoute: typeof ServicesIndiaIndexRoute
 }
 
 const ServicesIndiaRouteChildren: ServicesIndiaRouteChildren = {
-  ServicesIndiaClassAImportRoute: ServicesIndiaClassAImportRoute,
-  ServicesIndiaFreeSaleRoute: ServicesIndiaFreeSaleRoute,
-  ServicesIndiaInvestigationalDevicesRoute:
-    ServicesIndiaInvestigationalDevicesRoute,
-  ServicesIndiaIvdRoute: ServicesIndiaIvdRoute,
-  ServicesIndiaIvdClinicalPerformanceRoute:
-    ServicesIndiaIvdClinicalPerformanceRoute,
-  ServicesIndiaIvdTestingRoute: ServicesIndiaIvdTestingRoute,
-  ServicesIndiaLoanClassABRoute: ServicesIndiaLoanClassABRoute,
-  ServicesIndiaLoanClassCDRoute: ServicesIndiaLoanClassCDRoute,
-  ServicesIndiaMarketStandingRoute: ServicesIndiaMarketStandingRoute,
-  ServicesIndiaMd42Route: ServicesIndiaMd42Route,
-  ServicesIndiaMedicalDevicesRoute: ServicesIndiaMedicalDevicesRoute,
-  ServicesIndiaMfgClassABRoute: ServicesIndiaMfgClassABRoute,
-  ServicesIndiaMfgClassAGsrRoute: ServicesIndiaMfgClassAGsrRoute,
-  ServicesIndiaMfgClassCDRoute: ServicesIndiaMfgClassCDRoute,
-  ServicesIndiaNeutralCodeRoute: ServicesIndiaNeutralCodeRoute,
-  ServicesIndiaNonConvictionRoute: ServicesIndiaNonConvictionRoute,
-  ServicesIndiaNovelIvdsRoute: ServicesIndiaNovelIvdsRoute,
-  ServicesIndiaPersonalUseRoute: ServicesIndiaPersonalUseRoute,
-  ServicesIndiaPredicateDevicesRoute: ServicesIndiaPredicateDevicesRoute,
+  ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route:
+    ServicesIndiaClassAAndBManufacturingFormsMd3AndMd5Route,
+  ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute:
+    ServicesIndiaClassAImportRegistrationAsPerGsr777eRoute,
+  ServicesIndiaClassAManufacturingRegistrationGsr777eRoute:
+    ServicesIndiaClassAManufacturingRegistrationGsr777eRoute,
+  ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route:
+    ServicesIndiaClassCAndDManufacturingFormsMd7AndMd9Route,
+  ServicesIndiaFreeSaleCertificateFscRoute:
+    ServicesIndiaFreeSaleCertificateFscRoute,
+  ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route:
+    ServicesIndiaImportAuthorizationForNovelIvdsMd26AndMd27Route,
+  ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route:
+    ServicesIndiaImportLicenseForPredicateMedicalDevicesFormsMd14Md15Route,
+  ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute:
+    ServicesIndiaInVitroDiagnosticRegulatoryServicesRoute,
+  ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route:
+    ServicesIndiaInvestigationalDevicesInGovtHospitalsFormsMd18Md19Route,
+  ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route:
+    ServicesIndiaIvdClinicalPerformanceEvaluationsFormsMd24Md25Route,
+  ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route:
+    ServicesIndiaLoanLicensesForClassAAndBFormsMd4AndMd6Route,
+  ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route:
+    ServicesIndiaLoanLicensesForClassCAndDFormsMd8AndMd10Route,
+  ServicesIndiaMarketStandingCertificateMscRoute:
+    ServicesIndiaMarketStandingCertificateMscRoute,
+  ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute:
+    ServicesIndiaMd42MedicalDeviceRegistrationCertificateRoute,
+  ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute:
+    ServicesIndiaMedicalDeviceLicensingAndRegulatoryApprovalsInIndiaRoute,
+  ServicesIndiaNeutralCodeCertificateSpecialCodeRoute:
+    ServicesIndiaNeutralCodeCertificateSpecialCodeRoute,
+  ServicesIndiaNonConvictionCertificateNccRoute:
+    ServicesIndiaNonConvictionCertificateNccRoute,
+  ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route:
+    ServicesIndiaPatientPersonalUseDeviceImportFormsMd20Md21Route,
+  ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route:
+    ServicesIndiaTestLicenseForIvdDevicesFormsMd16Md17Route,
   ServicesIndiaIndexRoute: ServicesIndiaIndexRoute,
 }
 
@@ -6440,38 +6708,45 @@ const ServicesMdsapRouteWithChildren = ServicesMdsapRoute._addFileChildren(
 )
 
 interface ServicesNewZealandRouteChildren {
-  ServicesNewZealandChangeManagementRoute: typeof ServicesNewZealandChangeManagementRoute
-  ServicesNewZealandClassificationRoute: typeof ServicesNewZealandClassificationRoute
-  ServicesNewZealandIvdRoute: typeof ServicesNewZealandIvdRoute
-  ServicesNewZealandLabelingRoute: typeof ServicesNewZealandLabelingRoute
-  ServicesNewZealandMedsafeQueriesRoute: typeof ServicesNewZealandMedsafeQueriesRoute
-  ServicesNewZealandPostMarketRoute: typeof ServicesNewZealandPostMarketRoute
+  ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute: typeof ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute
+  ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute: typeof ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute
+  ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute: typeof ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute
+  ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute: typeof ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute
+  ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute: typeof ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute
+  ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute: typeof ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute
+  ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute: typeof ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute
   ServicesNewZealandQmsComplianceRoute: typeof ServicesNewZealandQmsComplianceRoute
-  ServicesNewZealandSoftwareRoute: typeof ServicesNewZealandSoftwareRoute
+  ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute: typeof ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute
+  ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute: typeof ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute
   ServicesNewZealandSponsorRoute: typeof ServicesNewZealandSponsorRoute
-  ServicesNewZealandSupplyChainRoute: typeof ServicesNewZealandSupplyChainRoute
-  ServicesNewZealandTechnicalDocumentationRoute: typeof ServicesNewZealandTechnicalDocumentationRoute
-  ServicesNewZealandTestingStrategyRoute: typeof ServicesNewZealandTestingStrategyRoute
+  ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute: typeof ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute
   ServicesNewZealandWandNotificationRoute: typeof ServicesNewZealandWandNotificationRoute
   ServicesNewZealandIndexRoute: typeof ServicesNewZealandIndexRoute
 }
 
 const ServicesNewZealandRouteChildren: ServicesNewZealandRouteChildren = {
-  ServicesNewZealandChangeManagementRoute:
-    ServicesNewZealandChangeManagementRoute,
-  ServicesNewZealandClassificationRoute: ServicesNewZealandClassificationRoute,
-  ServicesNewZealandIvdRoute: ServicesNewZealandIvdRoute,
-  ServicesNewZealandLabelingRoute: ServicesNewZealandLabelingRoute,
-  ServicesNewZealandMedsafeQueriesRoute: ServicesNewZealandMedsafeQueriesRoute,
-  ServicesNewZealandPostMarketRoute: ServicesNewZealandPostMarketRoute,
+  ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute:
+    ServicesNewZealandChangeNotificationAndLifecycleSupportNewZealandRoute,
+  ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute:
+    ServicesNewZealandImporterDistributorAndSupplyChainComplianceNewZealandRoute,
+  ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute:
+    ServicesNewZealandIvdRegulatoryAndPerformanceEvidenceSupportNewZealandRoute,
+  ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute:
+    ServicesNewZealandLabellingIfuAndAdvertisingComplianceNewZealandRoute,
+  ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute:
+    ServicesNewZealandMedsafeQueriesSafetyReviewAndTechnicalResponseRoute,
+  ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute:
+    ServicesNewZealandMedsafeTechnicalDocumentationAndEvidenceNewZealandRoute,
+  ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute:
+    ServicesNewZealandPostMarketSurveillanceAdverseEventsAndRecallSupportNewZealandRoute,
   ServicesNewZealandQmsComplianceRoute: ServicesNewZealandQmsComplianceRoute,
-  ServicesNewZealandSoftwareRoute: ServicesNewZealandSoftwareRoute,
+  ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute:
+    ServicesNewZealandRegulatoryStrategyAndProductClassificationNewZealandRoute,
+  ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute:
+    ServicesNewZealandSamdSoftwareAiAndCybersecurityNewZealandRoute,
   ServicesNewZealandSponsorRoute: ServicesNewZealandSponsorRoute,
-  ServicesNewZealandSupplyChainRoute: ServicesNewZealandSupplyChainRoute,
-  ServicesNewZealandTechnicalDocumentationRoute:
-    ServicesNewZealandTechnicalDocumentationRoute,
-  ServicesNewZealandTestingStrategyRoute:
-    ServicesNewZealandTestingStrategyRoute,
+  ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute:
+    ServicesNewZealandTestingStrategyAndLaboratoryCoordinationNewZealandRoute,
   ServicesNewZealandWandNotificationRoute:
     ServicesNewZealandWandNotificationRoute,
   ServicesNewZealandIndexRoute: ServicesNewZealandIndexRoute,
@@ -6482,41 +6757,48 @@ const ServicesNewZealandRouteWithChildren =
 
 interface ServicesSaudiArabiaRouteChildren {
   ServicesSaudiArabiaAuthorizedRepresentativeRoute: typeof ServicesSaudiArabiaAuthorizedRepresentativeRoute
-  ServicesSaudiArabiaChangeManagementRoute: typeof ServicesSaudiArabiaChangeManagementRoute
-  ServicesSaudiArabiaClassificationRoute: typeof ServicesSaudiArabiaClassificationRoute
-  ServicesSaudiArabiaEstablishmentLicensingRoute: typeof ServicesSaudiArabiaEstablishmentLicensingRoute
-  ServicesSaudiArabiaInspectionRoute: typeof ServicesSaudiArabiaInspectionRoute
-  ServicesSaudiArabiaIvdRoute: typeof ServicesSaudiArabiaIvdRoute
-  ServicesSaudiArabiaLabelingRoute: typeof ServicesSaudiArabiaLabelingRoute
-  ServicesSaudiArabiaMdmaRoute: typeof ServicesSaudiArabiaMdmaRoute
-  ServicesSaudiArabiaPostMarketRoute: typeof ServicesSaudiArabiaPostMarketRoute
-  ServicesSaudiArabiaSfdaQueriesRoute: typeof ServicesSaudiArabiaSfdaQueriesRoute
-  ServicesSaudiArabiaSoftwareRoute: typeof ServicesSaudiArabiaSoftwareRoute
-  ServicesSaudiArabiaTechnicalDocumentationRoute: typeof ServicesSaudiArabiaTechnicalDocumentationRoute
-  ServicesSaudiArabiaTestingStrategyRoute: typeof ServicesSaudiArabiaTestingStrategyRoute
+  ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute: typeof ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute
+  ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute: typeof ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute
+  ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute: typeof ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute
+  ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute: typeof ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute
+  ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute: typeof ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute
+  ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute: typeof ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute
+  ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute: typeof ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute
+  ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute: typeof ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute
+  ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute: typeof ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute: typeof ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute
+  ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute: typeof ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute
+  ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute: typeof ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute
   ServicesSaudiArabiaIndexRoute: typeof ServicesSaudiArabiaIndexRoute
 }
 
 const ServicesSaudiArabiaRouteChildren: ServicesSaudiArabiaRouteChildren = {
   ServicesSaudiArabiaAuthorizedRepresentativeRoute:
     ServicesSaudiArabiaAuthorizedRepresentativeRoute,
-  ServicesSaudiArabiaChangeManagementRoute:
-    ServicesSaudiArabiaChangeManagementRoute,
-  ServicesSaudiArabiaClassificationRoute:
-    ServicesSaudiArabiaClassificationRoute,
-  ServicesSaudiArabiaEstablishmentLicensingRoute:
-    ServicesSaudiArabiaEstablishmentLicensingRoute,
-  ServicesSaudiArabiaInspectionRoute: ServicesSaudiArabiaInspectionRoute,
-  ServicesSaudiArabiaIvdRoute: ServicesSaudiArabiaIvdRoute,
-  ServicesSaudiArabiaLabelingRoute: ServicesSaudiArabiaLabelingRoute,
-  ServicesSaudiArabiaMdmaRoute: ServicesSaudiArabiaMdmaRoute,
-  ServicesSaudiArabiaPostMarketRoute: ServicesSaudiArabiaPostMarketRoute,
-  ServicesSaudiArabiaSfdaQueriesRoute: ServicesSaudiArabiaSfdaQueriesRoute,
-  ServicesSaudiArabiaSoftwareRoute: ServicesSaudiArabiaSoftwareRoute,
-  ServicesSaudiArabiaTechnicalDocumentationRoute:
-    ServicesSaudiArabiaTechnicalDocumentationRoute,
-  ServicesSaudiArabiaTestingStrategyRoute:
-    ServicesSaudiArabiaTestingStrategyRoute,
+  ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute:
+    ServicesSaudiArabiaChangesRenewalAndLifecycleSupportSfdaRoute,
+  ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute:
+    ServicesSaudiArabiaIvdRegistrationAndPerformanceEvidenceSfdaRoute,
+  ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute:
+    ServicesSaudiArabiaLabelingIfuUdiAndAdvertisingComplianceSfdaRoute,
+  ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute:
+    ServicesSaudiArabiaMdmaApplicationAndTechnicalFileStrategyRoute,
+  ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute:
+    ServicesSaudiArabiaMedicalDeviceEstablishmentLicensingAndLocalSupplyChainRoute,
+  ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute:
+    ServicesSaudiArabiaPostMarketSurveillanceVigilanceAndFieldSafetyActionsSfdaRoute,
+  ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute:
+    ServicesSaudiArabiaSamdSoftwareAiAndCybersecuritySfdaRoute,
+  ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute:
+    ServicesSaudiArabiaSfdaInspectionAndQualitySystemReadinessRoute,
+  ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute:
+    ServicesSaudiArabiaSfdaQueriesDeficiencyResponseAndTechnicalReviewSupportRoute,
+  ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute:
+    ServicesSaudiArabiaSfdaRegulatoryStrategyAndProductClassificationRoute,
+  ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute:
+    ServicesSaudiArabiaTechnicalDocumentationAndEssentialPrinciplesSfdaRoute,
+  ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute:
+    ServicesSaudiArabiaTestingStrategyAndLaboratoryCoordinationSfdaRoute,
   ServicesSaudiArabiaIndexRoute: ServicesSaudiArabiaIndexRoute,
 }
 
@@ -6524,39 +6806,51 @@ const ServicesSaudiArabiaRouteWithChildren =
   ServicesSaudiArabiaRoute._addFileChildren(ServicesSaudiArabiaRouteChildren)
 
 interface ServicesUaeRouteChildren {
-  ServicesUaeChangeManagementRoute: typeof ServicesUaeChangeManagementRoute
-  ServicesUaeClassificationRoute: typeof ServicesUaeClassificationRoute
-  ServicesUaeEcasRoute: typeof ServicesUaeEcasRoute
-  ServicesUaeIvdRoute: typeof ServicesUaeIvdRoute
-  ServicesUaeLabelingRoute: typeof ServicesUaeLabelingRoute
-  ServicesUaeLocalApplicantRoute: typeof ServicesUaeLocalApplicantRoute
-  ServicesUaeMohapQueriesRoute: typeof ServicesUaeMohapQueriesRoute
-  ServicesUaeMohapRegistrationRoute: typeof ServicesUaeMohapRegistrationRoute
-  ServicesUaePostMarketRoute: typeof ServicesUaePostMarketRoute
+  ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute: typeof ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute
+  ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute: typeof ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute
+  ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute: typeof ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute
+  ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute: typeof ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute
+  ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute: typeof ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute
+  ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute: typeof ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute
+  ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute: typeof ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute
+  ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute: typeof ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute
   ServicesUaeQmsInspectionRoute: typeof ServicesUaeQmsInspectionRoute
-  ServicesUaeSoftwareRoute: typeof ServicesUaeSoftwareRoute
-  ServicesUaeSupplyChainRoute: typeof ServicesUaeSupplyChainRoute
-  ServicesUaeTechnicalDocumentationRoute: typeof ServicesUaeTechnicalDocumentationRoute
-  ServicesUaeTestingStrategyRoute: typeof ServicesUaeTestingStrategyRoute
+  ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute: typeof ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute
+  ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute: typeof ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute
+  ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute: typeof ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute
+  ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute: typeof ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute
+  ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute: typeof ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute
   ServicesUaeIndexRoute: typeof ServicesUaeIndexRoute
 }
 
 const ServicesUaeRouteChildren: ServicesUaeRouteChildren = {
-  ServicesUaeChangeManagementRoute: ServicesUaeChangeManagementRoute,
-  ServicesUaeClassificationRoute: ServicesUaeClassificationRoute,
-  ServicesUaeEcasRoute: ServicesUaeEcasRoute,
-  ServicesUaeIvdRoute: ServicesUaeIvdRoute,
-  ServicesUaeLabelingRoute: ServicesUaeLabelingRoute,
-  ServicesUaeLocalApplicantRoute: ServicesUaeLocalApplicantRoute,
-  ServicesUaeMohapQueriesRoute: ServicesUaeMohapQueriesRoute,
-  ServicesUaeMohapRegistrationRoute: ServicesUaeMohapRegistrationRoute,
-  ServicesUaePostMarketRoute: ServicesUaePostMarketRoute,
+  ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute:
+    ServicesUaeChangesVariationsRenewalAndLifecycleSupportUaeRoute,
+  ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute:
+    ServicesUaeEcasMoiatConformityAssessmentWhereSeparatelyApplicableRoute,
+  ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute:
+    ServicesUaeIvdRegistrationAndPerformanceEvidenceUaeRoute,
+  ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute:
+    ServicesUaeLabelingIfuPackagingAndMarketClaimComplianceUaeRoute,
+  ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute:
+    ServicesUaeMedicalWarehouseLocalSupplyChainAndCommercialReadinessRoute,
+  ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute:
+    ServicesUaeMohapMedicalDeviceRegistrationAndDossierStrategyRoute,
+  ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute:
+    ServicesUaeMohapQueriesDeficiencyResponseAndTechnicalReviewSupportRoute,
+  ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute:
+    ServicesUaePostMarketMonitoringVigilanceAndFieldActionsUaeRoute,
   ServicesUaeQmsInspectionRoute: ServicesUaeQmsInspectionRoute,
-  ServicesUaeSoftwareRoute: ServicesUaeSoftwareRoute,
-  ServicesUaeSupplyChainRoute: ServicesUaeSupplyChainRoute,
-  ServicesUaeTechnicalDocumentationRoute:
-    ServicesUaeTechnicalDocumentationRoute,
-  ServicesUaeTestingStrategyRoute: ServicesUaeTestingStrategyRoute,
+  ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute:
+    ServicesUaeSamdSoftwareAiAndCybersecurityUaeMohapRoute,
+  ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute:
+    ServicesUaeTechnicalDocumentationAndSafetyPerformanceEvidenceUaeMohapRoute,
+  ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute:
+    ServicesUaeTestingStrategyAndLaboratoryCoordinationUaeRoute,
+  ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute:
+    ServicesUaeUaeLocalApplicantMarketingAuthorizationHolderAndRegulatoryInterfaceRoute,
+  ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute:
+    ServicesUaeUaeMohapRegulatoryStrategyAndProductClassificationRoute,
   ServicesUaeIndexRoute: ServicesUaeIndexRoute,
 }
 
@@ -6565,34 +6859,44 @@ const ServicesUaeRouteWithChildren = ServicesUaeRoute._addFileChildren(
 )
 
 interface ServicesUkRouteChildren {
-  ServicesUkAuditReadinessRoute: typeof ServicesUkAuditReadinessRoute
-  ServicesUkConformityAssuranceRoute: typeof ServicesUkConformityAssuranceRoute
-  ServicesUkDorsRegistrationRoute: typeof ServicesUkDorsRegistrationRoute
-  ServicesUkLabelingRoute: typeof ServicesUkLabelingRoute
+  ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute: typeof ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute
+  ServicesUkMhraDorsDeviceRegistrationSystemRoute: typeof ServicesUkMhraDorsDeviceRegistrationSystemRoute
   ServicesUkMhraLiaisonRoute: typeof ServicesUkMhraLiaisonRoute
   ServicesUkMhraRegistrationRoute: typeof ServicesUkMhraRegistrationRoute
-  ServicesUkPmsRoute: typeof ServicesUkPmsRoute
-  ServicesUkQmsRoute: typeof ServicesUkQmsRoute
-  ServicesUkRegulatoryWritingRoute: typeof ServicesUkRegulatoryWritingRoute
-  ServicesUkTechnicalFileRoute: typeof ServicesUkTechnicalFileRoute
-  ServicesUkUkrpRoute: typeof ServicesUkUkrpRoute
-  ServicesUkVigilanceRoute: typeof ServicesUkVigilanceRoute
+  ServicesUkQmsImplementationAndUkMdrAlignmentRoute: typeof ServicesUkQmsImplementationAndUkMdrAlignmentRoute
+  ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute: typeof ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute
+  ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute: typeof ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute
+  ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute: typeof ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute
+  ServicesUkUkRegulatoryAndClinicalWritingServicesRoute: typeof ServicesUkUkRegulatoryAndClinicalWritingServicesRoute
+  ServicesUkUkResponsiblePersonUkrpServicesRoute: typeof ServicesUkUkResponsiblePersonUkrpServicesRoute
+  ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute: typeof ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute
+  ServicesUkUkcaLabelingAndArtworkComplianceRoute: typeof ServicesUkUkcaLabelingAndArtworkComplianceRoute
   ServicesUkIndexRoute: typeof ServicesUkIndexRoute
 }
 
 const ServicesUkRouteChildren: ServicesUkRouteChildren = {
-  ServicesUkAuditReadinessRoute: ServicesUkAuditReadinessRoute,
-  ServicesUkConformityAssuranceRoute: ServicesUkConformityAssuranceRoute,
-  ServicesUkDorsRegistrationRoute: ServicesUkDorsRegistrationRoute,
-  ServicesUkLabelingRoute: ServicesUkLabelingRoute,
+  ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute:
+    ServicesUkCeRecognitionAndUkcaMarketAccessStrategyRoute,
+  ServicesUkMhraDorsDeviceRegistrationSystemRoute:
+    ServicesUkMhraDorsDeviceRegistrationSystemRoute,
   ServicesUkMhraLiaisonRoute: ServicesUkMhraLiaisonRoute,
   ServicesUkMhraRegistrationRoute: ServicesUkMhraRegistrationRoute,
-  ServicesUkPmsRoute: ServicesUkPmsRoute,
-  ServicesUkQmsRoute: ServicesUkQmsRoute,
-  ServicesUkRegulatoryWritingRoute: ServicesUkRegulatoryWritingRoute,
-  ServicesUkTechnicalFileRoute: ServicesUkTechnicalFileRoute,
-  ServicesUkUkrpRoute: ServicesUkUkrpRoute,
-  ServicesUkVigilanceRoute: ServicesUkVigilanceRoute,
+  ServicesUkQmsImplementationAndUkMdrAlignmentRoute:
+    ServicesUkQmsImplementationAndUkMdrAlignmentRoute,
+  ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute:
+    ServicesUkUkApprovedBodyAndConformityAssessmentReadinessRoute,
+  ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute:
+    ServicesUkUkMdrTechnicalDocumentationAndGapAssessmentRoute,
+  ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute:
+    ServicesUkUkPostMarketSurveillancePmsPmsrAndPsurRoute,
+  ServicesUkUkRegulatoryAndClinicalWritingServicesRoute:
+    ServicesUkUkRegulatoryAndClinicalWritingServicesRoute,
+  ServicesUkUkResponsiblePersonUkrpServicesRoute:
+    ServicesUkUkResponsiblePersonUkrpServicesRoute,
+  ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute:
+    ServicesUkUkVigilanceAndFieldSafetyCorrectiveActionFscaRoute,
+  ServicesUkUkcaLabelingAndArtworkComplianceRoute:
+    ServicesUkUkcaLabelingAndArtworkComplianceRoute,
   ServicesUkIndexRoute: ServicesUkIndexRoute,
 }
 
@@ -6601,46 +6905,60 @@ const ServicesUkRouteWithChildren = ServicesUkRoute._addFileChildren(
 )
 
 interface ServicesUsaRouteChildren {
-  ServicesUsa510kRoute: typeof ServicesUsa510kRoute
-  ServicesUsa513gRoute: typeof ServicesUsa513gRoute
-  ServicesUsaAgentServiceRoute: typeof ServicesUsaAgentServiceRoute
-  ServicesUsaClassificationRoute: typeof ServicesUsaClassificationRoute
-  ServicesUsaDeNovoRoute: typeof ServicesUsaDeNovoRoute
-  ServicesUsaDeficiencyResponseRoute: typeof ServicesUsaDeficiencyResponseRoute
-  ServicesUsaEStarRoute: typeof ServicesUsaEStarRoute
-  ServicesUsaEstablishmentRegistrationRoute: typeof ServicesUsaEstablishmentRegistrationRoute
+  ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute: typeof ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute
+  ServicesUsaFda513gRequestsForInformationRoute: typeof ServicesUsaFda513gRequestsForInformationRoute
+  ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute: typeof ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute
+  ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute: typeof ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute
+  ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute: typeof ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute
+  ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute: typeof ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute
+  ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute: typeof ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute
+  ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute: typeof ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute
+  ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute: typeof ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute
+  ServicesUsaFdaQmsrAndInspectionPreparationRoute: typeof ServicesUsaFdaQmsrAndInspectionPreparationRoute
+  ServicesUsaFdaRfdAndPreRfdDesignationsRoute: typeof ServicesUsaFdaRfdAndPreRfdDesignationsRoute
+  ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute: typeof ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute
   ServicesUsaGlobalMarketAccessRoute: typeof ServicesUsaGlobalMarketAccessRoute
-  ServicesUsaPmaRoute: typeof ServicesUsaPmaRoute
-  ServicesUsaPostClearanceLifecycleRoute: typeof ServicesUsaPostClearanceLifecycleRoute
-  ServicesUsaPredicateStrategyRoute: typeof ServicesUsaPredicateStrategyRoute
-  ServicesUsaQSubmissionRoute: typeof ServicesUsaQSubmissionRoute
-  ServicesUsaQmsrInspectionRoute: typeof ServicesUsaQmsrInspectionRoute
-  ServicesUsaRfdPreRfdRoute: typeof ServicesUsaRfdPreRfdRoute
-  ServicesUsaTestingStrategyRoute: typeof ServicesUsaTestingStrategyRoute
-  ServicesUsaUdiGudidRoute: typeof ServicesUsaUdiGudidRoute
+  ServicesUsaUsAgentServicesForForeignEstablishmentsRoute: typeof ServicesUsaUsAgentServicesForForeignEstablishmentsRoute
+  ServicesUsaUsFdaDeNovoClassificationPathwayRoute: typeof ServicesUsaUsFdaDeNovoClassificationPathwayRoute
+  ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute: typeof ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute
+  ServicesUsaUsFdaPremarketApprovalPmaSupportRoute: typeof ServicesUsaUsFdaPremarketApprovalPmaSupportRoute
   ServicesUsaIndexRoute: typeof ServicesUsaIndexRoute
 }
 
 const ServicesUsaRouteChildren: ServicesUsaRouteChildren = {
-  ServicesUsa510kRoute: ServicesUsa510kRoute,
-  ServicesUsa513gRoute: ServicesUsa513gRoute,
-  ServicesUsaAgentServiceRoute: ServicesUsaAgentServiceRoute,
-  ServicesUsaClassificationRoute: ServicesUsaClassificationRoute,
-  ServicesUsaDeNovoRoute: ServicesUsaDeNovoRoute,
-  ServicesUsaDeficiencyResponseRoute: ServicesUsaDeficiencyResponseRoute,
-  ServicesUsaEStarRoute: ServicesUsaEStarRoute,
-  ServicesUsaEstablishmentRegistrationRoute:
-    ServicesUsaEstablishmentRegistrationRoute,
+  ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute:
+    ServicesUsaFda510kPremarketNotificationAndClearanceConsultingRoute,
+  ServicesUsaFda513gRequestsForInformationRoute:
+    ServicesUsaFda513gRequestsForInformationRoute,
+  ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute:
+    ServicesUsaFdaAdditionalInformationAndDeficiencyResponseRoute,
+  ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute:
+    ServicesUsaFdaEstablishmentRegistrationAndDeviceListingRoute,
+  ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute:
+    ServicesUsaFdaEstarDossierPreparationAndSubmissionRoute,
+  ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute:
+    ServicesUsaFdaMedicalDeviceClassificationAndPathwayAssessmentRoute,
+  ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute:
+    ServicesUsaFdaPostClearanceAndDeviceLifecycleSupportRoute,
+  ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute:
+    ServicesUsaFdaPredicateAndSubstantialEquivalenceStrategyRoute,
+  ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute:
+    ServicesUsaFdaQSubmissionAndPreSubmissionConsultingRoute,
+  ServicesUsaFdaQmsrAndInspectionPreparationRoute:
+    ServicesUsaFdaQmsrAndInspectionPreparationRoute,
+  ServicesUsaFdaRfdAndPreRfdDesignationsRoute:
+    ServicesUsaFdaRfdAndPreRfdDesignationsRoute,
+  ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute:
+    ServicesUsaFdaUdiAndGudidComplianceSolutionsRoute,
   ServicesUsaGlobalMarketAccessRoute: ServicesUsaGlobalMarketAccessRoute,
-  ServicesUsaPmaRoute: ServicesUsaPmaRoute,
-  ServicesUsaPostClearanceLifecycleRoute:
-    ServicesUsaPostClearanceLifecycleRoute,
-  ServicesUsaPredicateStrategyRoute: ServicesUsaPredicateStrategyRoute,
-  ServicesUsaQSubmissionRoute: ServicesUsaQSubmissionRoute,
-  ServicesUsaQmsrInspectionRoute: ServicesUsaQmsrInspectionRoute,
-  ServicesUsaRfdPreRfdRoute: ServicesUsaRfdPreRfdRoute,
-  ServicesUsaTestingStrategyRoute: ServicesUsaTestingStrategyRoute,
-  ServicesUsaUdiGudidRoute: ServicesUsaUdiGudidRoute,
+  ServicesUsaUsAgentServicesForForeignEstablishmentsRoute:
+    ServicesUsaUsAgentServicesForForeignEstablishmentsRoute,
+  ServicesUsaUsFdaDeNovoClassificationPathwayRoute:
+    ServicesUsaUsFdaDeNovoClassificationPathwayRoute,
+  ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute:
+    ServicesUsaUsFdaMedicalDeviceTestingStrategyAndStandardsComplianceRoute,
+  ServicesUsaUsFdaPremarketApprovalPmaSupportRoute:
+    ServicesUsaUsFdaPremarketApprovalPmaSupportRoute,
   ServicesUsaIndexRoute: ServicesUsaIndexRoute,
 }
 
@@ -6688,12 +7006,14 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsEffectiveCapaSystemMedicalDevicesRoute:
     InsightsEffectiveCapaSystemMedicalDevicesRoute,
   InsightsEuAiActMedicalDevicesRoute: InsightsEuAiActMedicalDevicesRoute,
-  InsightsEuMdr2026Route: InsightsEuMdr2026Route,
+  InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute:
+    InsightsEuMdr2026EudamedClassificationAndCompliancePrioritiesRoute,
   InsightsEuMdrComplianceChallengesRoute:
     InsightsEuMdrComplianceChallengesRoute,
   InsightsFda510kProgramModernizationSafetyStandardsRoute:
     InsightsFda510kProgramModernizationSafetyStandardsRoute,
-  InsightsFdaInspections2026Route: InsightsFdaInspections2026Route,
+  InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute:
+    InsightsFdaMedicalDeviceInspectionsIn2026PreparingForTheNewQmsrFrameworkRoute,
   InsightsFdaQSubPreSubmissionMeetingGuideRoute:
     InsightsFdaQSubPreSubmissionMeetingGuideRoute,
   InsightsFdaQmsr2026Route: InsightsFdaQmsr2026Route,
@@ -6778,14 +7098,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesIvdEuRoute: IndustriesIvdEuRoute,
   IndustriesIvdIndiaRoute: IndustriesIvdIndiaRoute,
   IndustriesIvdUsaRoute: IndustriesIvdUsaRoute,
-  IndustriesCosmeticsIndiaForImporterRoute:
-    IndustriesCosmeticsIndiaForImporterRoute,
-  IndustriesCosmeticsIndiaForManufacturerRoute:
-    IndustriesCosmeticsIndiaForManufacturerRoute,
-  IndustriesMedicalDevicesIndiaForImporterRoute:
-    IndustriesMedicalDevicesIndiaForImporterRoute,
-  IndustriesMedicalDevicesIndiaForManufacturerRoute:
-    IndustriesMedicalDevicesIndiaForManufacturerRoute,
+  IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute:
+    IndustriesCosmeticsIndiaCosmeticManufacturingLicenseInIndiaRoute,
+  IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute:
+    IndustriesCosmeticsIndiaCosmeticsRegistrationForImportersInIndiaRoute,
+  IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute:
+    IndustriesMedicalDevicesIndiaMedicalDeviceManufacturingAndLoanLicensingInIndiaRoute,
+  IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute:
+    IndustriesMedicalDevicesIndiaMedicalDeviceRegulatorySolutionsForImportersInIndiaRoute,
   IndustriesCosmeticsIndiaIndexRoute: IndustriesCosmeticsIndiaIndexRoute,
 }
 export const routeTree = rootRouteImport

@@ -65,23 +65,23 @@ const keywordsList = [
   ['medical device consultant', 'Primary', '/', 'Active', 'Main service homepage focus keyword'],
   ['medical device consultancy', 'Primary', '/', 'Active', 'Industry service category search term'],
   ['USFDA', 'Primary', '/services/usa', 'Active', 'US FDA regulatory landing page'],
-  ['510 k', 'Primary', '/services/usa/510k', 'Active', 'Spaced 510 k consultant intent'],
-  ['510(k) clearance', 'Secondary', '/services/usa/510k', 'Active', 'Exact FDA 510(k) pathway'],
+  ['510 k', 'Primary', '/services/usa/fda-510k-premarket-notification-and-clearance-consulting', 'Active', 'Spaced 510 k consultant intent'],
+  ['510(k) clearance', 'Secondary', '/services/usa/fda-510k-premarket-notification-and-clearance-consulting', 'Active', 'Exact FDA 510(k) pathway'],
   ['CDSCO medical device registration', 'Primary', '/services/india', 'Active', 'Core India market access pathway'],
-  ['CDSCO manufacturing license', 'Primary', '/services/india/medical-devices', 'Active', 'MD-3, MD-5, MD-7, MD-9 licensing in India'],
+  ['CDSCO manufacturing license', 'Primary', '/services/india/medical-device-licensing-and-regulatory-approvals-in-india', 'Active', 'MD-3, MD-5, MD-7, MD-9 licensing in India'],
   ['EU MDR CE marking', 'Primary', '/services/eu/mdr', 'Active', 'EU MDR 2017/745 technical files and Notified Body approval'],
   ['ISO 13485 implementation', 'Primary', '/services/iso-13485-implementation-certification-consulting', 'Active', 'Quality management system certification'],
   ['MDSAP audit readiness', 'Primary', '/services/mdsap', 'Active', 'Medical Device Single Audit Program global compliance'],
   ['IVDR performance evaluation', 'Primary', '/services/eu/ivdr', 'Active', 'In-Vitro Diagnostic Regulation compliance in Europe'],
   ['medical device technical documentation', 'Primary', '/services/medical-device-technical-documentation-consulting', 'Active', 'Annex II/III and STED dossier consulting'],
   ['medical device authorized representative India', 'Primary', '/services/india', 'Active', 'Authorized Indian Agent / AR representation'],
-  ['UK Responsible Person UKRP', 'Primary', '/services/uk/ukrp', 'Active', 'UK MHRA medical device representation post-Brexit'],
+  ['UK Responsible Person UKRP', 'Primary', '/services/uk/uk-responsible-person-ukrp-services', 'Active', 'UK MHRA medical device representation post-Brexit'],
   ['Health Canada MDEL MDL', 'Primary', '/services/canada', 'Active', 'Medical Device Establishment and Device Licensing in Canada'],
   ['TGA conformity assessment Australia', 'Primary', '/services/australia', 'Active', 'Australian TGA inclusion and sponsor service'],
   ['ANVISA Brazil medical device registration', 'Primary', '/services/brazil', 'Active', 'BGMP and ANVISA registro regulatory compliance'],
   ['SFDA Saudi Arabia medical device approval', 'Primary', '/services/saudi-arabia', 'Active', 'MDMA license and AR service in KSA'],
   ['UAE MoHAP medical device registration', 'Primary', '/services/uae', 'Active', 'Ministry of Health compliance in Emirates'],
-  ['cosmetics import registration India', 'Primary', '/industries/cosmetics/india/for-importer', 'Active', 'Form COS-2 cosmetics import compliance in India']
+  ['cosmetics import registration India', 'Primary', '/industries/cosmetics/india/cosmetics-registration-for-importers-in-india', 'Active', 'Form COS-2 cosmetics import compliance in India']
 ];
 
 sql += `-- 3. Seed Target Keywords\n`;

@@ -132,19 +132,19 @@ export const STATIC_INTERNAL_LINKS: InternalLinkOption[] = [
   // Services - Global & Quality
   {
     title: "US FDA 510(k) Clearance Services",
-    url: "/services/usa/510k",
+    url: "/services/usa/fda-510k-premarket-notification-and-clearance-consulting",
     category: "Services",
     keywords: ["fda 510(k)", "510(k)", "510k", "fda clearance", "substantial equivalence", "predicate device"],
   },
   {
     title: "US FDA QMSR Inspection Readiness",
-    url: "/services/usa/qmsr-inspection",
+    url: "/services/usa/fda-qmsr-and-inspection-preparation",
     category: "Services",
     keywords: ["qmsr", "fda qmsr", "quality management system regulation", "21 cfr part 820"],
   },
   {
     title: "US FDA Q-Submission & Pre-Sub Consulting",
-    url: "/services/usa/q-submission",
+    url: "/services/usa/fda-q-submission-and-pre-submission-consulting",
     category: "Services",
     keywords: ["q-submission", "pre-submission", "q-sub", "fda meeting"],
   },

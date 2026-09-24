@@ -70,6 +70,756 @@
       "source": "/services/audit-compliance",
       "destination": "/services/medical-device-audit-compliance-support",
       "permanent": true
+    },
+    {
+      "source": "/case-studies/algorithm-claim",
+      "destination": "/case-studies/the-algorithm-can-do-more-should-the-label",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/australia-tga",
+      "destination": "/case-studies/australia-tga-artg-inclusion-case-study",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/eu-mdr-remediation",
+      "destination": "/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/test-smarter",
+      "destination": "/case-studies/medical-device-testing-strategy-test-smarter-cover-more",
+      "permanent": true
+    },
+    {
+      "source": "/industries/cosmetics/india/for-importer",
+      "destination": "/industries/cosmetics/india/cosmetics-registration-for-importers-in-india",
+      "permanent": true
+    },
+    {
+      "source": "/industries/cosmetics/india/for-manufacturer",
+      "destination": "/industries/cosmetics/india/cosmetic-manufacturing-license-in-india",
+      "permanent": true
+    },
+    {
+      "source": "/industries/medical-devices/india/for-importer",
+      "destination": "/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india",
+      "permanent": true
+    },
+    {
+      "source": "/industries/medical-devices/india/for-manufacturer",
+      "destination": "/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india",
+      "permanent": true
+    },
+    {
+      "source": "/insights/eu-mdr-2026",
+      "destination": "/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
+      "permanent": true
+    },
+    {
+      "source": "/insights/fda-inspections-2026",
+      "destination": "/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/artg-inclusion",
+      "destination": "/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/australian-sponsor",
+      "destination": "/services/australia/tga-australian-sponsor-services-and-governance",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/change-management",
+      "destination": "/services/australia/tga-artg-variations-and-significant-change-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/classification",
+      "destination": "/services/australia/tga-medical-device-and-ivd-classification",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/clinical-evidence",
+      "destination": "/services/australia/tga-clinical-evidence-and-benefit-risk-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/conformity-assessment",
+      "destination": "/services/australia/tga-conformity-assessment-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/ivd",
+      "destination": "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/labeling",
+      "destination": "/services/australia/australian-labelling-ifu-and-ausudid-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/manufacturer-evidence",
+      "destination": "/services/australia/tga-manufacturer-evidence-and-conformity-assessment",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/pms",
+      "destination": "/services/australia/tga-post-market-surveillance-pms-plans",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/post-market",
+      "destination": "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/software",
+      "destination": "/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/sponsor",
+      "destination": "/services/australia/independent-tga-sponsor-representation",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/supply-chain",
+      "destination": "/services/australia/australia-importer-distributor-and-supply-chain-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/technical-documentation",
+      "destination": "/services/australia/tga-technical-documentation-and-essential-principles",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/testing-strategy",
+      "destination": "/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
+      "permanent": true
+    },
+    {
+      "source": "/services/australia/tga-audit",
+      "destination": "/services/australia/tga-application-audit-defense-and-rfi-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/anvisa-queries",
+      "destination": "/services/brazil/anvisa-exigencia-and-inspection-response-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/bgmp",
+      "destination": "/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/brh",
+      "destination": "/services/brazil/brazil-registration-holder-brh-and-anvisa-interface",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/change-management",
+      "destination": "/services/brazil/anvisa-changes-variations-and-revalidacao-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/classification",
+      "destination": "/services/brazil/anvisa-medical-device-and-ivd-classification-brazil",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/ivd",
+      "destination": "/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/labeling",
+      "destination": "/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/notificacao",
+      "destination": "/services/brazil/anvisa-notificacao-pathway-brazil",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/registration",
+      "destination": "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/registro",
+      "destination": "/services/brazil/anvisa-registro-pathway-brazil",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/software",
+      "destination": "/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/technical-documentation",
+      "destination": "/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/technovigilance",
+      "destination": "/services/brazil/anvisa-technovigilance-services-brazil",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/tecnovigilance",
+      "destination": "/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
+      "permanent": true
+    },
+    {
+      "source": "/services/brazil/testing-strategy",
+      "destination": "/services/brazil/anvisa-testing-strategy-and-laboratory-coordination",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/change-management",
+      "destination": "/services/canada/health-canada-mdl-amendments-and-significant-changes",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/classification",
+      "destination": "/services/canada/health-canada-medical-device-and-ivd-classification",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/inspection",
+      "destination": "/services/canada/health-canada-inspection-readiness-and-defense",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/ivd",
+      "destination": "/services/canada/health-canada-ivd-registration-and-performance-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/labeling",
+      "destination": "/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/liaison",
+      "destination": "/services/canada/health-canada-regulatory-liaison-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/mdel",
+      "destination": "/services/canada/health-canada-medical-device-establishment-licence-mdel",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/mdl",
+      "destination": "/services/canada/health-canada-medical-device-licence-mdl-application",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/mdsap",
+      "destination": "/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/pms",
+      "destination": "/services/canada/health-canada-post-market-surveillance-and-mpr",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/renewals",
+      "destination": "/services/canada/health-canada-mdl-and-mdel-annual-renewals",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/software",
+      "destination": "/services/canada/health-canada-samd-and-cybersecurity-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/supply-chain",
+      "destination": "/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/technical-documentation",
+      "destination": "/services/canada/health-canada-technical-documentation-and-evidence-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/canada/testing-strategy",
+      "destination": "/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/classification",
+      "destination": "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/clinical-evaluation",
+      "destination": "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/deficiency-response",
+      "destination": "/services/eu/eu-notified-body-technical-review-and-deficiency-response",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/ear",
+      "destination": "/services/eu/european-authorized-representative-ec-rep-ear-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/eudamed",
+      "destination": "/services/eu/eudamed-udi-and-economic-operator-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/labeling",
+      "destination": "/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/pms",
+      "destination": "/services/eu/eu-post-market-surveillance-pms-and-vigilance-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/pms-pmcf",
+      "destination": "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/qms",
+      "destination": "/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/software",
+      "destination": "/services/eu/eu-mdr-software-and-samd-regulatory-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/eu/testing-strategy",
+      "destination": "/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/class-a-import",
+      "destination": "/services/india/class-a-import-registration-as-per-gsr-777e",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/free-sale",
+      "destination": "/services/india/free-sale-certificate-fsc",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/investigational-devices",
+      "destination": "/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/ivd",
+      "destination": "/services/india/in-vitro-diagnostic-regulatory-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/ivd-clinical-performance",
+      "destination": "/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/ivd-testing",
+      "destination": "/services/india/test-license-for-ivd-devices-forms-md-16-md-17",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/loan-class-a-b",
+      "destination": "/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/loan-class-c-d",
+      "destination": "/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/market-standing",
+      "destination": "/services/india/market-standing-certificate-msc",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/md-42",
+      "destination": "/services/india/md-42-medical-device-registration-certificate",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/medical-devices",
+      "destination": "/services/india/medical-device-licensing-and-regulatory-approvals-in-india",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/mfg-class-a-b",
+      "destination": "/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/mfg-class-a-gsr",
+      "destination": "/services/india/class-a-manufacturing-registration-gsr-777e",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/mfg-class-c-d",
+      "destination": "/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/neutral-code",
+      "destination": "/services/india/neutral-code-certificate-special-code",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/non-conviction",
+      "destination": "/services/india/non-conviction-certificate-ncc",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/novel-ivds",
+      "destination": "/services/india/import-authorization-for-novel-ivds-md-26-and-md-27",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/personal-use",
+      "destination": "/services/india/patient-personal-use-device-import-forms-md-20-md-21",
+      "permanent": true
+    },
+    {
+      "source": "/services/india/predicate-devices",
+      "destination": "/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/change-management",
+      "destination": "/services/new-zealand/change-notification-and-lifecycle-support-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/classification",
+      "destination": "/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/ivd",
+      "destination": "/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/labeling",
+      "destination": "/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/medsafe-queries",
+      "destination": "/services/new-zealand/medsafe-queries-safety-review-and-technical-response",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/post-market",
+      "destination": "/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/software",
+      "destination": "/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/supply-chain",
+      "destination": "/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/technical-documentation",
+      "destination": "/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/new-zealand/testing-strategy",
+      "destination": "/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/change-management",
+      "destination": "/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/classification",
+      "destination": "/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/establishment-licensing",
+      "destination": "/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/inspection",
+      "destination": "/services/saudi-arabia/sfda-inspection-and-quality-system-readiness",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/ivd",
+      "destination": "/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/labeling",
+      "destination": "/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/mdma",
+      "destination": "/services/saudi-arabia/mdma-application-and-technical-file-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/post-market",
+      "destination": "/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/sfda-queries",
+      "destination": "/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/software",
+      "destination": "/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/technical-documentation",
+      "destination": "/services/saudi-arabia/technical-documentation-and-essential-principles-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/saudi-arabia/testing-strategy",
+      "destination": "/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/change-management",
+      "destination": "/services/uae/changes-variations-renewal-and-lifecycle-support-uae",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/classification",
+      "destination": "/services/uae/uae-mohap-regulatory-strategy-and-product-classification",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/ecas",
+      "destination": "/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/ivd",
+      "destination": "/services/uae/ivd-registration-and-performance-evidence-uae",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/labeling",
+      "destination": "/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/local-applicant",
+      "destination": "/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/mohap-queries",
+      "destination": "/services/uae/mohap-queries-deficiency-response-and-technical-review-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/mohap-registration",
+      "destination": "/services/uae/mohap-medical-device-registration-and-dossier-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/post-market",
+      "destination": "/services/uae/post-market-monitoring-vigilance-and-field-actions-uae",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/software",
+      "destination": "/services/uae/samd-software-ai-and-cybersecurity-uae-mohap",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/supply-chain",
+      "destination": "/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/technical-documentation",
+      "destination": "/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap",
+      "permanent": true
+    },
+    {
+      "source": "/services/uae/testing-strategy",
+      "destination": "/services/uae/testing-strategy-and-laboratory-coordination-uae",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/audit-readiness",
+      "destination": "/services/uk/uk-approved-body-and-conformity-assessment-readiness",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/conformity-assurance",
+      "destination": "/services/uk/ce-recognition-and-ukca-market-access-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/dors-registration",
+      "destination": "/services/uk/mhra-dors-device-registration-system",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/labeling",
+      "destination": "/services/uk/ukca-labeling-and-artwork-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/pms",
+      "destination": "/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/qms",
+      "destination": "/services/uk/qms-implementation-and-uk-mdr-alignment",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/regulatory-writing",
+      "destination": "/services/uk/uk-regulatory-and-clinical-writing-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/technical-file",
+      "destination": "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/ukrp",
+      "destination": "/services/uk/uk-responsible-person-ukrp-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/uk/vigilance",
+      "destination": "/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/510k",
+      "destination": "/services/usa/fda-510k-premarket-notification-and-clearance-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/513g",
+      "destination": "/services/usa/fda-513g-requests-for-information",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/agent-service",
+      "destination": "/services/usa/us-agent-services-for-foreign-establishments",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/classification",
+      "destination": "/services/usa/fda-medical-device-classification-and-pathway-assessment",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/de-novo",
+      "destination": "/services/usa/us-fda-de-novo-classification-pathway",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/deficiency-response",
+      "destination": "/services/usa/fda-additional-information-and-deficiency-response",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/e-star",
+      "destination": "/services/usa/fda-estar-dossier-preparation-and-submission",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/establishment-registration",
+      "destination": "/services/usa/fda-establishment-registration-and-device-listing",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/pma",
+      "destination": "/services/usa/us-fda-premarket-approval-pma-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/post-clearance-lifecycle",
+      "destination": "/services/usa/fda-post-clearance-and-device-lifecycle-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/predicate-strategy",
+      "destination": "/services/usa/fda-predicate-and-substantial-equivalence-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/q-submission",
+      "destination": "/services/usa/fda-q-submission-and-pre-submission-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/qmsr-inspection",
+      "destination": "/services/usa/fda-qmsr-and-inspection-preparation",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/rfd-pre-rfd",
+      "destination": "/services/usa/fda-rfd-and-pre-rfd-designations",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/testing-strategy",
+      "destination": "/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/services/usa/udi-gudid",
+      "destination": "/services/usa/fda-udi-and-gudid-compliance-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/fda-biocompatibility",
+      "destination": "/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/fda-simulated-use",
+      "destination": "/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature",
+      "permanent": true
     }
   ],
   "headers": [

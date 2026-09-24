@@ -92,7 +92,7 @@ function MHRALiaisonPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                to="/services/uk/ukrp"
+                to="/services/uk/uk-responsible-person-ukrp-services"
                 className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
               >
                 View Full UKRP Services <ArrowRight className="h-4 w-4" />

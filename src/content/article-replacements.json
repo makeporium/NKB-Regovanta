@@ -39,7 +39,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "cbbfbaab2ee4d984c08ada096a93102ae3be05fbcfb773941cf5e4e9a72ab51d"
+    "contentSha256": "d5a4bbbdf33ee842f1a33d9be770728f30ca664ccea290262ceb38cc69c78d1c"
   },
   {
     "slug": "gspr-compliance-eu-mdr-ivdr",
@@ -53,14 +53,14 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "99bee0a5c8c45610269ecbf7bbdbd5acd6c102128d00245bdbe638997a84f8a5"
+    "contentSha256": "3490172685c50452319bba4eab5d33d236a446f88464b9fd3ae93a4435fdd5f6"
   },
   {
     "slug": "class-iii-medical-device-classification-strategy",
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "9bb054d2413361902ea5ad720e31b1beef4728f2fd805dc748cfd14819ee363f"
+    "contentSha256": "3fe78208fac66b0bc813fc644d0194a0a0c9e425c345f7de5554e05e3791f7e0"
   },
   {
     "slug": "gspr-foundation-medical-device-development",
@@ -123,7 +123,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "facd4b68e7b3a85e845c66588214d677a57adb3a2baca4ab1299780a957b15e2"
+    "contentSha256": "6c3052acf7cda0ec5927ea69fe7a883391f7758ae259ce3487fb3dad512d74e8"
   },
   {
     "slug": "effective-capa-system-medical-devices",
@@ -165,7 +165,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "0a74d65a456976976e45d1e5c76eafacc2e00d3d2845b098b326ffd0010db902"
+    "contentSha256": "00bc6fb4179be4efa5d8c167ca735b75f719b0046b057cd0b652dcc0c967631c"
   },
   {
     "slug": "usability-testing-medical-devices-iec-62366",
@@ -179,7 +179,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "6166403743300649e1f50855fa208850e09fa6bbb25f52ce1d468d77c97dabeb"
+    "contentSha256": "7829a8a3ec1f5295e1b095ff0f6959ec68a8406c289688336a42fdf124e7e7e5"
   },
   {
     "slug": "human-factors-engineering-medical-device-design",
@@ -193,7 +193,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "42cee7541e249032b3e16b8e8457e7a2b026a7392b66b460936d4a0437c6c817"
+    "contentSha256": "00dbc0a442f337e815be1ec7c185b0a3eeda7f4c3b62a08513cd503a1485b395"
   },
   {
     "slug": "ce-marking-process-medical-devices-eu-mdr",
@@ -214,7 +214,7 @@
     "replacementDate": "2026-09-07",
     "status": "original-source-checked",
     "indexable": true,
-    "contentSha256": "2559669df4dd25002315f706355293475505265e19ef63da9156e3b51b53e1da"
+    "contentSha256": "a12c562437dfcd7dede27b2e2d347bfb85ad2869f2ccd12ec17c729db1e08fcb"
   },
   {
     "slug": "notified-body-selection-conformity-assessment-guide",

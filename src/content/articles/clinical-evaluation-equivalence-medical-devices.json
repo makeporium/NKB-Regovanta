@@ -2,7 +2,7 @@
   "slug": "clinical-evaluation-equivalence-medical-devices",
   "title": "Clinical Equivalence Under EU MDR: Establish What the Comparison Can Support",
   "description": "Evaluate technical, biological, and clinical equivalence, data access, and evidence gaps before relying on another device's clinical data.",
-  "service": "/services/eu/clinical-evaluation",
+  "service": "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
   "intro": "A familiar competitor product can look like an easy starting point for a clinical evaluation. The difficult question is whether its data actually supports the claims of the device being assessed. A credible equivalence argument explains the relevant similarities, the differences, and the evidence available to evaluate those differences. A visual resemblance or matching catalogue description is not enough.",
   "sections": [
     {

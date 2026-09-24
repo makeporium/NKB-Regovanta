@@ -217,7 +217,7 @@ function EUNotifiedBodyPage() {
                   Turn around Notified Body findings within tight official response windows with our regulatory defense team.
                 </p>
                 <Link
-                  to="/services/eu/deficiency-response"
+                  to="/services/eu/eu-notified-body-technical-review-and-deficiency-response"
                   className="inline-flex w-full items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-white text-xs font-bold py-3 rounded-md transition-colors"
                 >
                   Deficiency Support <ArrowRight className="h-3.5 w-3.5" />

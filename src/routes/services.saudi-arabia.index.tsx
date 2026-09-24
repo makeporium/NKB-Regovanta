@@ -113,21 +113,21 @@ const trustBarItems = [
 ];
 
 const quickNavItems = [
-  { title: "Regulatory Strategy & Classification", to: "/services/saudi-arabia/classification", icon: Target },
-  { title: "MDMA Application & Technical File", to: "/services/saudi-arabia/mdma", icon: FileText },
+  { title: "Regulatory Strategy & Classification", to: "/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification", icon: Target },
+  { title: "MDMA Application & Technical File", to: "/services/saudi-arabia/mdma-application-and-technical-file-strategy", icon: FileText },
   { title: "Authorized Representative Services", to: "/services/saudi-arabia/authorized-representative", icon: Users },
-  { title: "Establishment Licensing", to: "/services/saudi-arabia/establishment-licensing", icon: Building2 },
-  { title: "Technical Documentation", to: "/services/saudi-arabia/technical-documentation", icon: BookOpen },
-  { title: "Testing & Laboratory Support", to: "/services/saudi-arabia/testing-strategy", icon: FlaskConical },
-  { title: "Post-Market Compliance", to: "/services/saudi-arabia/post-market", icon: ShieldCheck },
-  { title: "Change, Variation & Renewals", to: "/services/saudi-arabia/change-management", icon: RefreshCw },
+  { title: "Establishment Licensing", to: "/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain", icon: Building2 },
+  { title: "Technical Documentation", to: "/services/saudi-arabia/technical-documentation-and-essential-principles-sfda", icon: BookOpen },
+  { title: "Testing & Laboratory Support", to: "/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda", icon: FlaskConical },
+  { title: "Post-Market Compliance", to: "/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda", icon: ShieldCheck },
+  { title: "Change, Variation & Renewals", to: "/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda", icon: RefreshCw },
 ];
 
 const services13 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/saudi-arabia/classification",
+    to: "/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification",
     icon: Target,
     title: "1. SFDA Regulatory Strategy\n& Product Classification",
     bullets: [
@@ -140,7 +140,7 @@ const services13 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/saudi-arabia/mdma",
+    to: "/services/saudi-arabia/mdma-application-and-technical-file-strategy",
     icon: FileText,
     title: "2. MDMA Application\n& Technical File Strategy",
     bullets: [
@@ -166,7 +166,7 @@ const services13 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/saudi-arabia/establishment-licensing",
+    to: "/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain",
     icon: Building2,
     title: "4. Medical Device Establishment\nLicensing & Local Supply Chain",
     bullets: [
@@ -179,7 +179,7 @@ const services13 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/saudi-arabia/technical-documentation",
+    to: "/services/saudi-arabia/technical-documentation-and-essential-principles-sfda",
     icon: BookOpen,
     title: "5. Technical Documentation\n& Essential Principles",
     bullets: [
@@ -192,7 +192,7 @@ const services13 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/saudi-arabia/testing-strategy",
+    to: "/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda",
     icon: FlaskConical,
     title: "6. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -205,7 +205,7 @@ const services13 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/saudi-arabia/ivd",
+    to: "/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda",
     icon: Syringe,
     title: "7. IVD Registration &\nPerformance Evidence",
     bullets: [
@@ -218,7 +218,7 @@ const services13 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/saudi-arabia/software",
+    to: "/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda",
     icon: Monitor,
     title: "8. SaMD / Software /\nAI & Cybersecurity",
     bullets: [
@@ -231,7 +231,7 @@ const services13 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/saudi-arabia/labeling",
+    to: "/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda",
     icon: Languages,
     title: "9. Labeling, IFU, UDI &\nAdvertising Compliance",
     bullets: [
@@ -244,7 +244,7 @@ const services13 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/saudi-arabia/post-market",
+    to: "/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda",
     icon: ShieldCheck,
     title: "10. Post-Market Surveillance,\nVigilance & FSCA",
     bullets: [
@@ -257,7 +257,7 @@ const services13 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/saudi-arabia/inspection",
+    to: "/services/saudi-arabia/sfda-inspection-and-quality-system-readiness",
     icon: Search,
     title: "11. SFDA Inspection &\nQMS Readiness",
     bullets: [
@@ -270,7 +270,7 @@ const services13 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/saudi-arabia/change-management",
+    to: "/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda",
     icon: RefreshCw,
     title: "12. Changes, Variations,\nRenewal & Lifecycle Support",
     bullets: [
@@ -283,7 +283,7 @@ const services13 = [
   {
     num: "13",
     id: "sec-13",
-    to: "/services/saudi-arabia/sfda-queries",
+    to: "/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support",
     icon: AlertTriangle,
     title: "13. SFDA Queries, Deficiency\nResponse & Technical Review",
     bullets: [
@@ -670,7 +670,7 @@ function SaudiArabiaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/saudi-arabia/classification"
+                to="/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your SFDA Regulatory Pathway →
@@ -722,7 +722,7 @@ function SaudiArabiaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/saudi-arabia/mdma"
+                to="/services/saudi-arabia/mdma-application-and-technical-file-strategy"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare Your MDMA Submission →

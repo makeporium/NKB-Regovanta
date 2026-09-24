@@ -83,7 +83,7 @@ const mdrCards = [
       "Notified Body involvement planning",
       "Borderline & combination product considerations",
     ],
-    to: "/services/eu/classification",
+    to: "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
   },
   {
     icon: FileText,
@@ -118,7 +118,7 @@ const mdrCards = [
       "Usability (IEC 62366), Packaging & Shelf life",
       "Bench & mechanical performance testing",
     ],
-    to: "/services/eu/testing-strategy",
+    to: "/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
   },
   {
     icon: Activity,
@@ -130,7 +130,7 @@ const mdrCards = [
       "Equivalence assessment across tech/bio/clinical",
       "Clinical evidence gap analysis & sufficiency",
     ],
-    to: "/services/eu/clinical-evaluation",
+    to: "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
   },
   {
     icon: Shield,
@@ -141,7 +141,7 @@ const mdrCards = [
       "PMCF user survey & registry strategy",
       "Post-market clinical data collection governance",
     ],
-    to: "/services/eu/pms-pmcf",
+    to: "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
   },
   {
     icon: Building2,
@@ -176,7 +176,7 @@ const mdrCards = [
       "Vigilance & serious incident trend reporting",
       "Field Safety Corrective Action (FSCA) support",
     ],
-    to: "/services/eu/pms-pmcf",
+    to: "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
   },
   {
     icon: Database,
@@ -187,7 +187,7 @@ const mdrCards = [
       "EC REP, Importer, Distributor mandates",
       "UDI-DI & Basic UDI-DI management",
     ],
-    to: "/services/eu/eudamed",
+    to: "/services/eu/eudamed-udi-and-economic-operator-compliance",
   },
   {
     icon: RefreshCw,

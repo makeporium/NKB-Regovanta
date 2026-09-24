@@ -338,7 +338,7 @@
     "title": "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
     "desc": "EUDAMED’s first four modules are now mandatory. Review the registration, UDI/device, certificate and market-surveillance implications manufacturers should address now.",
     "currentImg": "/assets/brain/eu_mdr_market_1786306179767.png",
-    "route": "/insights/eu-mdr-2026",
+    "route": "/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
     "slug": "eu-mdr-2026"
   },
   {
@@ -347,7 +347,7 @@
     "title": "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
     "desc": "FDA has moved away from QSIT to the QMSR-aligned inspection process. Learn what investigators may review and how to strengthen inspection readiness.",
     "currentImg": "/assets/brain/insight_fda_inspections_1786440998246.png",
-    "route": "/insights/fda-inspections-2026",
+    "route": "/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
     "slug": "fda-inspections-2026"
   }
 ]
