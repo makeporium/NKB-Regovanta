@@ -154,7 +154,7 @@ function About() {
                             About NKB Regovanta
                         </p>
                         <h1 className="text-white text-3xl sm:text-4xl lg:text-[40px] font-extrabold leading-[1.15] mb-4">
-                            About NKB Regovanta — Global Medical Device Regulatory Consultants
+                            About NKB Regovanta - Global Medical Device Regulatory Consultants
                         </h1>
                         <p className="text-lg sm:text-xl font-bold tracking-tight text-cyan-400 mb-6">
                             GLOBAL EXPERTISE. STRATEGIC EXECUTION. HEALTHCARE WITHOUT BORDERS.

@@ -164,7 +164,7 @@ const whyChoose = [
 
 const homeStats = [
     { icon: CalendarDays, value: "2018", label: "Experience Since", sub: "Regulatory & Quality\nExperience" },
-    { icon: CheckCircle, value: "151+", label: "Completed", sub: "Regulatory & Quality\nProjects" },
+    { icon: CheckCircle, value: "350+", label: "Completed", sub: "Regulatory & Quality\nProjects" },
     { icon: Users, value: "21+", label: "Supported", sub: "Global\nClients" },
     { icon: Globe2, value: "15+", label: "Supported", sub: "International\nCountries" },
     { icon: Layers, value: "4", label: "Focus Areas", sub: "Core\nIndustries" },

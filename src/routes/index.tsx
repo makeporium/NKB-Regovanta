@@ -56,6 +56,10 @@ import logoKusum from "@/assets/clients/kusum.png";
 import logoTcs from "@/assets/clients/tcs.png";
 import logoGenpact from "@/assets/clients/genpact.svg";
 import logoWipro from "@/assets/clients/wipro.svg";
+import logoUngm from "@/assets/clients/ungm.png";
+import logoFieo from "@/assets/clients/fieo.png";
+import logoAsq from "@/assets/clients/asq.png";
+import logoDuns from "@/assets/clients/duns.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -262,6 +266,11 @@ const clientPartners = [
     { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
     { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
+    { name: "TCS", subtitle: "Tata Consultancy Services", badge: "Life Sciences & Tech", logo: logoTcs },
+    { name: "UNGM", subtitle: "United Nations Global Marketplace", badge: "UN Procurement", logo: logoUngm },
+    { name: "FIEO", subtitle: "Federation of Indian Export Organisations", badge: "Govt. of India / ISO 9001", logo: logoFieo },
+    { name: "ASQ", subtitle: "American Society for Quality™", badge: "Quality & Standards", logo: logoAsq },
+    { name: "Dun & Bradstreet", subtitle: "D-U-N-S® Registered™", badge: "Verified Business", logo: logoDuns },
 ];
 
 const supportedCountries = [
@@ -592,7 +601,7 @@ function Index() {
                         {/* Projects Completed */}
                         <div className="flex flex-col items-center text-center p-6 xl:p-8">
                             <CheckCircle className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
-                            <p className="text-[26px] font-bold leading-none mb-2">151+</p>
+                            <p className="text-[26px] font-bold leading-none mb-2">350+</p>
                             <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">Completed</p>
                             <p className="text-[12px] opacity-80 leading-snug">Regulatory &amp; Quality<br/>Projects</p>
                         </div>
@@ -1042,7 +1051,7 @@ function Index() {
                             <div className="text-center lg:text-left">
                                 <div className="inline-flex items-center gap-2 text-[#dca85b] text-xs font-black uppercase tracking-wider mb-2">
                                     <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
-                                    <span>Experience Since 2018 · 151+ Projects Completed</span>
+                                    <span>Experience Since 2018 · 350+ Projects Completed</span>
                                 </div>
                                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                                     Ready to Experience the Same High Standard of Regulatory Support?
