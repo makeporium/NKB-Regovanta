@@ -56,7 +56,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to US FDA Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">FDA UDI &amp; GUDID Compliance Solutions</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">FDA UDI &amp; GUDID Compliance Solutions</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the US FDA regulatory landscape with our comprehensive UDI & GUDID Solutions support.
             </p>

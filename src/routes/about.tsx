@@ -318,111 +318,136 @@ function About() {
             <section className="py-10 lg:py-14 bg-white border-b border-border">
                 <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
-                        ONE PARTNER. FOUR INDUSTRIES.
+                        ONE PARTNER. FIVE INDUSTRIES.
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
 
                         {/* MEDICAL DEVICES */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <HeartPulse className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <HeartPulse className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        MEDICAL DEVICES
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">MEDICAL DEVICES</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Regulatory, quality, scientific and market-access support across the product lifecycle.
-                                    </p>
-                                    <Link to="/industries/medical-devices" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Regulatory, quality, scientific and market-access support across the product lifecycle.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/medical-devices" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* IVDs */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img width={1024} height={1024} src={imgIvd} alt="IVDs" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgIvd} alt="IVDs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <FlaskConical className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <FlaskConical className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        IVDs
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">IVDs</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
-                                    </p>
-                                    <Link to="/industries/ivd" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/ivd" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* PHARMACEUTICALS */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <Pill className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <Pill className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        PHARMACEUTICALS
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">PHARMACEUTICALS</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
-                                    </p>
-                                    <Link to="/services/drug-licenses-importers-india-form-10-form-41" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/services/drug-licenses-importers-india-form-10-form-41" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* COSMETICS */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-amber-50/70 text-[#dca85b] shadow-2xs">
+                                        <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        COSMETICS
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">COSMETICS</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Product safety, regulatory compliance, quality and market requirements.
-                                    </p>
-                                    <Link to="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Product safety, regulatory compliance, quality and market requirements.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/cosmetics" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* MANUFACTURING */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <Factory className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <Factory className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        MANUFACTURING
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">MANUFACTURING</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        cGMP machinery, cleanroom furniture, SS equipment and containment solutions.
-                                    </p>
-                                    <Link to="/services/pharmaceutical-cleanroom-manufacturing-equipment" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    cGMP machinery, cleanroom furniture, SS equipment and containment solutions.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/services/pharmaceutical-cleanroom-manufacturing-equipment" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>

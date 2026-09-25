@@ -68,7 +68,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Australia Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">TGA Conformity Assessment Support</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">TGA Conformity Assessment Support</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Australia regulatory landscape with our comprehensive Conformity Assessment Support support.
             </p>

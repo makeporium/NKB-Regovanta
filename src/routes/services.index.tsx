@@ -170,7 +170,7 @@ function ServicesOverview() {
       <section className="bg-navy text-navy-foreground py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
            <div>
-             <h2 className="text-2xl font-bold">Have a unique regulatory challenge?</h2>
+             <h2 className="text-2xl font-bold text-white">Have a unique regulatory challenge?</h2>
              <p className="mt-2 text-navy-foreground/80 text-lg">Let's build the right solution for your product.</p>
            </div>
            <Link to="/contact" className="inline-flex items-center justify-center rounded-sm bg-white text-navy font-semibold px-8 py-4 transition-colors hover:bg-white/90 shrink-0">

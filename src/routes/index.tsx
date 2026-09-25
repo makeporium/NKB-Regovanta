@@ -56,6 +56,7 @@ import logoKusum from "@/assets/clients/kusum.png";
 import logoTcs from "@/assets/clients/tcs.png";
 import logoGenpact from "@/assets/clients/genpact.svg";
 import logoWipro from "@/assets/clients/wipro.svg";
+import logoIso9001 from "@/assets/clients/iso-9001.png";
 import logoUngm from "@/assets/clients/ungm.png";
 import logoFieo from "@/assets/clients/fieo.png";
 import logoAsq from "@/assets/clients/asq.png";
@@ -267,6 +268,7 @@ const clientPartners = [
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
     { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
     { name: "TCS", subtitle: "Tata Consultancy Services", badge: "Life Sciences & Tech", logo: logoTcs },
+    { name: "ISO 9001:2015", subtitle: "Quality Management Certified", badge: "QMS Certified", logo: logoIso9001 },
     { name: "UNGM", subtitle: "United Nations Global Marketplace", badge: "UN Procurement", logo: logoUngm },
     { name: "FIEO", subtitle: "Federation of Indian Export Organisations", badge: "Govt. of India / ISO 9001", logo: logoFieo },
     { name: "ASQ", subtitle: "American Society for Quality™", badge: "Quality & Standards", logo: logoAsq },
@@ -817,7 +819,7 @@ function Index() {
                     </div>
 
                     {/* Client Cards Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
                         {clientPartners.map((client) => (
                             <div
                                 key={client.name}
@@ -865,15 +867,15 @@ function Index() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header with Navigation Controls */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-                        <div className="max-w-2xl">
+                        <div className="flex-1 max-w-4xl">
                             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
                                 <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
                                 Client Testimonials &amp; Endorsements
                             </span>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1 lg:whitespace-nowrap">
                                 What Industry Leaders Say About Us
                             </h2>
-                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed max-w-2xl">
                                 Direct feedback from pharmaceutical executives, enterprise life-science leaders, and medical device innovators who trust NKB Regovanta for regulatory clearance, QMS readiness, and market access.
                             </p>
                         </div>

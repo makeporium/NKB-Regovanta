@@ -1222,7 +1222,7 @@ function ManufacturingPage() {
       <section className="bg-navy text-white py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Need Custom Stainless Steel or Pharmaceutical Machinery?
             </h2>
             <p className="mt-2 text-sm sm:text-base text-white/80 max-w-2xl font-normal">

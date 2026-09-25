@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { ArrowRight } from "lucide-react";
 
 export function PageHero({
   eyebrow,
@@ -59,27 +60,45 @@ export function SectionHeading({
 export function CTABand({
   title,
   description,
-  action = "Book a Consultation",
+  action,
+  btnText,
 }: {
   title: string;
   description?: string;
   action?: string;
+  btnText?: string;
 }) {
+  const buttonLabel = action || btnText || "Book a Consultation";
+
   return (
-    <section className="bg-navy text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div>
-          <h2 className="text-xl font-bold sm:text-2xl">{title}</h2>
-          {description && (
-            <p className="mt-2 text-sm text-navy-foreground/75">{description}</p>
-          )}
+    <section className="bg-gradient-to-b from-slate-50 to-blue-50/40 py-12 sm:py-16 border-t border-slate-200/80 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative rounded-3xl bg-gradient-to-r from-navy via-[#0d2857] to-[#0a1e3f] p-8 sm:p-12 shadow-xl border border-blue-900/60 overflow-hidden text-white flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          {/* Subtle luminous background accents */}
+          <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-[#dca85b]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -left-16 -top-16 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+              {title}
+            </h2>
+            {description && (
+              <p className="mt-2.5 text-sm sm:text-base text-blue-100/90 font-medium leading-relaxed">
+                {description}
+              </p>
+            )}
+          </div>
+
+          <div className="relative z-10 shrink-0">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#dca85b] hover:bg-[#c9954a] px-7 py-3.5 text-sm font-extrabold text-navy shadow-md hover:shadow-lg transition-all duration-300 group"
+            >
+              <span>{buttonLabel}</span>
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
-        <Link
-          to="/contact"
-          className="inline-flex w-fit items-center rounded-sm bg-navy-foreground px-6 py-3 text-sm font-semibold text-navy transition-opacity hover:opacity-90"
-        >
-          {action}
-        </Link>
       </div>
     </section>
   );

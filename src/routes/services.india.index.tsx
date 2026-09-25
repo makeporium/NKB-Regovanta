@@ -333,7 +333,7 @@ function IndiaCDSCOPage() {
           }}
         ></div>
         <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6">CDSCO MDONLINE SUGAM Registration</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">CDSCO MDONLINE SUGAM Registration</h2>
           <p className="text-lg text-white/80 leading-relaxed">
             In India’s evolving medical device sector, the <strong>CDSCOMDONLINE Portal</strong> stands as the indispensable online platform for all regulatory interactions. This intuitive system is designed to simplify and accelerate your licensing journey, enabling efficient application submissions, real-time status tracking, and secure approval acquisition. Our team expertly navigates this portal on your behalf.
           </p>

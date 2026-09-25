@@ -68,7 +68,7 @@ function ServicePage() {
             <ArrowLeft className="h-4 w-4" /> Back to Canada Services
           </Link>
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Canada Regulatory Liaison Support</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Health Canada Regulatory Liaison Support</h1>
             <p className="text-lg text-white/80 leading-relaxed">
               Navigate the complexities of the Canada regulatory landscape with our comprehensive Health Canada Liaison Support support.
             </p>
