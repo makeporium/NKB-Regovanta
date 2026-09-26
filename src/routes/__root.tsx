@@ -16,6 +16,8 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { QueryPopup } from "../components/site/QueryPopup";
 import { Toaster } from "../components/ui/sonner";
+import { toast } from "sonner";
+import { WifiOff } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
 function NotFoundComponent() {
@@ -47,24 +49,36 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
+  const isNetworkError =
+    error?.message?.includes("Failed to fetch") ||
+    error?.message?.includes("dynamically imported module") ||
+    error?.message?.includes("Loading chunk") ||
+    error?.name === "ChunkLoadError";
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          {isNetworkError ? "Connection Slow or Interrupted" : "This page didn't load"}
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          {isNetworkError
+            ? "Your internet connection experienced a delay or packet drop while loading website resources."
+            : "Something went wrong on our end. You can try refreshing or head back home."}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
-              router.invalidate();
-              reset();
+              if (isNetworkError) {
+                window.location.reload();
+              } else {
+                router.invalidate();
+                reset();
+              }
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            {isNetworkError ? "Reload page" : "Try again"}
           </button>
           <a
             href="/"
@@ -407,10 +421,107 @@ function TopProgressBar() {
   );
 }
 
+function NetworkStatusMonitor() {
+  const [isOffline, setIsOffline] = useState(false);
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleOffline = () => {
+      setIsOffline(true);
+      toast.error("You are offline. Please check your internet connection.", {
+        id: "offline-status",
+        duration: 8000,
+      });
+    };
+
+    const handleOnline = () => {
+      setIsOffline(false);
+      toast.success("Internet connection restored.", {
+        id: "offline-status",
+        duration: 4000,
+      });
+    };
+
+    if (!navigator.onLine) {
+      setIsOffline(true);
+    }
+
+    // Network Information API check for slow 2G/3G connections
+    const conn = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+    if (conn) {
+      const checkSpeed = () => {
+        if (conn.effectiveType === "slow-2g" || conn.effectiveType === "2g") {
+          toast.warning("Slow internet detected. Pages and media may take longer to load.", {
+            id: "slow-conn-notice",
+            duration: 6000,
+          });
+        }
+      };
+      checkSpeed();
+      conn.addEventListener?.("change", checkSpeed);
+      window.addEventListener("offline", handleOffline);
+      window.addEventListener("online", handleOnline);
+
+      return () => {
+        window.removeEventListener("offline", handleOffline);
+        window.removeEventListener("online", handleOnline);
+        conn.removeEventListener?.("change", checkSpeed);
+      };
+    }
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
+  }, []);
+
+  // Show helpful prompt if route navigation takes longer than 4 seconds
+  useEffect(() => {
+    if (!isLoading) return;
+    const slowTimer = setTimeout(() => {
+      toast.info("Connection seems slow. Loading page resources...", {
+        id: "nav-slow-toast",
+        duration: 4500,
+      });
+    }, 4000);
+
+    return () => clearTimeout(slowTimer);
+  }, [isLoading]);
+
+  if (!isOffline) return null;
+
+  return (
+    <div className="fixed bottom-4 left-4 z-[99999] flex items-center gap-2.5 rounded-lg bg-red-600 px-4 py-2.5 text-xs font-semibold text-white shadow-xl animate-in slide-in-from-bottom-3 duration-300">
+      <WifiOff className="h-4 w-4 animate-pulse shrink-0" />
+      <span>You are offline. Please check your internet connection.</span>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isAdmin = pathname.startsWith("/admin");
+
+  useEffect(() => {
+    // Automatically recover from temporary network glitches or stale chunk preloads
+    const handlePreloadError = () => {
+      const key = "nkb_preload_retry";
+      const lastRetry = sessionStorage.getItem(key);
+      const now = Date.now();
+      if (!lastRetry || now - parseInt(lastRetry, 10) > 15000) {
+        sessionStorage.setItem(key, now.toString());
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener("vite:preloadError", handlePreloadError);
+    return () => window.removeEventListener("vite:preloadError", handlePreloadError);
+  }, []);
 
   if (isAdmin) {
     return (
@@ -426,6 +537,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <TopProgressBar />
+      <NetworkStatusMonitor />
       <ClientSeoManager />
       <div className="flex min-h-screen flex-col">
         <Header />

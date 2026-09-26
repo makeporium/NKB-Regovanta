@@ -105,6 +105,10 @@ export function initTranslationEngine() {
     script.type = "text/javascript";
     script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     script.async = true;
+    script.onerror = () => {
+      // Silently catch blocking by privacy extensions (e.g. uBlock, German firewalls)
+      console.warn("Translation service unreachable or blocked by client privacy settings.");
+    };
     document.body.appendChild(script);
   }
 }
