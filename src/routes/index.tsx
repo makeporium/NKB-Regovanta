@@ -63,11 +63,11 @@ import logoAsq from "@/assets/clients/asq.png";
 import logoDuns from "@/assets/clients/duns.png";
 
 // Trust & Credential Logos
-import logoIso from "@/assets/trust/iso-9001.svg";
-import logoUngm from "@/assets/trust/ungm.png";
-import logoFieo from "@/assets/trust/fieo.png";
-import logoAsq from "@/assets/trust/asq.png";
-import logoDnb from "@/assets/trust/dnb.png";
+import logoTrustIso from "@/assets/trust/iso-9001.svg";
+import logoTrustUngm from "@/assets/trust/ungm.png";
+import logoTrustFieo from "@/assets/trust/fieo.png";
+import logoTrustAsq from "@/assets/trust/asq.png";
+import logoTrustDnb from "@/assets/trust/dnb.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
@@ -285,31 +285,31 @@ const clientPartners = [
 const trustCredentials = [
     {
         name: "ISO 9001:2015",
-        logo: logoIso,
+        logo: logoTrustIso,
         alt: "ISO 9001:2015 quality management certification",
         imgClass: "h-16 sm:h-20 w-auto max-w-[85%] object-contain",
     },
     {
         name: "United Nations Global Marketplace (UNGM)",
-        logo: logoUngm,
+        logo: logoTrustUngm,
         alt: "United Nations Global Marketplace (UNGM) logo",
         imgClass: "h-12 sm:h-14 w-auto max-w-[94%] object-contain",
     },
     {
         name: "Federation of Indian Export Organisations (FIEO)",
-        logo: logoFieo,
+        logo: logoTrustFieo,
         alt: "Federation of Indian Export Organisations (FIEO) logo",
         imgClass: "h-12 sm:h-15 w-auto max-w-[94%] object-contain",
     },
     {
         name: "American Society for Quality (ASQ)",
-        logo: logoAsq,
+        logo: logoTrustAsq,
         alt: "American Society for Quality (ASQ) logo",
         imgClass: "h-11 sm:h-14 w-auto max-w-[94%] object-contain",
     },
     {
         name: "Dun & Bradstreet",
-        logo: logoDnb,
+        logo: logoTrustDnb,
         alt: "Dun & Bradstreet business verification logo",
         imgClass: "h-16 sm:h-20 w-auto max-w-[85%] object-contain",
     },
