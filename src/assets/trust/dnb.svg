@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 120" width="140" height="120" fill="none">
+  <!-- Outer Arch -->
+  <path d="M 22 75 A 48 48 0 0 1 118 75" stroke="#1d5479" stroke-width="4.5" stroke-linecap="round" fill="none" />
+  
+  <!-- Curved Text along Arch: DUN & BRADSTREET -->
+  <path id="archPath" d="M 27 74 A 43 43 0 0 1 113 74" fill="none" />
+  <text font-family="'Montserrat', 'Inter', Arial, sans-serif" font-size="8.8" font-weight="800" fill="#1d5479" letter-spacing="2.5">
+    <textPath href="#archPath" startOffset="50%" text-anchor="middle">
+      DUN &amp; BRADSTREET
+    </textPath>
+  </text>
+  
+  <!-- Central Ampersand & Symbol -->
+  <text x="70" y="67" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-style="italic" font-size="38" fill="#1d5479">&amp;</text>
+  
+  <!-- Bottom Pill Badge -->
+  <rect x="18" y="78" width="104" height="28" rx="6" fill="#1d5479" />
+  
+  <!-- White text inside Pill -->
+  <text x="70" y="90" text-anchor="middle" font-family="'Montserrat', 'Inter', Arial, sans-serif" font-weight="900" font-size="9" letter-spacing="1.5" fill="#ffffff">D&amp;B</text>
+  <text x="70" y="101" text-anchor="middle" font-family="'Montserrat', 'Inter', Arial, sans-serif" font-weight="800" font-size="7.5" letter-spacing="2" fill="#ffffff">REGISTERED™</text>
+</svg>

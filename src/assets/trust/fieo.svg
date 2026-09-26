@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" fill="none">
+  <!-- Diamond Emblem -->
+  <g transform="translate(10, 5)">
+    <!-- 4 Diamond Quads -->
+    <polygon points="30,0 60,30 30,30" fill="#f59e0b" />
+    <polygon points="30,0 0,30 30,30" fill="#e11d48" />
+    <polygon points="0,30 30,60 30,30" fill="#8b5cf6" />
+    <polygon points="60,30 30,60 30,30" fill="#0ea5e9" />
+    <polygon points="30,10 50,30 30,50 10,30" fill="#10b981" />
+    
+    <!-- Central Cyan Banner with FIEO text -->
+    <rect x="0" y="22" width="60" height="16" fill="#0284c7" rx="2" />
+    <!-- White text inside banner -->
+    <text x="30" y="34.5" text-anchor="middle" font-family="'Inter', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="11.5" letter-spacing="1" fill="#ffffff">FIEO</text>
+    <!-- Arrow accents -->
+    <polygon points="3,30 7,26 7,34" fill="#ffffff" />
+    <polygon points="57,30 53,26 53,34" fill="#ffffff" />
+  </g>
+
+  <!-- Text on Right -->
+  <g transform="translate(85, 0)">
+    <text x="0" y="24" font-family="'Montserrat', 'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.8" fill="#0284c7">FEDERATION OF INDIAN</text>
+    <text x="0" y="41" font-family="'Montserrat', 'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.8" fill="#0284c7">EXPORT ORGANISATIONS</text>
+    <text x="0" y="54" font-family="'Inter', Arial, sans-serif" font-weight="600" font-size="8" fill="#334155">भारतीय निर्यात संगठनों का महासंघ</text>
+    <text x="0" y="63" font-family="'Inter', Arial, sans-serif" font-weight="500" font-size="6.8" fill="#64748b">Set up by Ministry of Commerce, Govt. of India</text>
+  </g>
+</svg>

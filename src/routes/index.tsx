@@ -57,6 +57,13 @@ import logoTcs from "@/assets/clients/tcs.png";
 import logoGenpact from "@/assets/clients/genpact.svg";
 import logoWipro from "@/assets/clients/wipro.svg";
 
+// Trust & Credential Logos
+import logoIso from "@/assets/trust/iso-9001.svg";
+import logoUngm from "@/assets/trust/ungm.png";
+import logoFieo from "@/assets/trust/fieo.png";
+import logoAsq from "@/assets/trust/asq.png";
+import logoDnb from "@/assets/trust/dnb.png";
+
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
@@ -257,6 +264,39 @@ const clientPartners = [
     { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
     { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
+];
+
+const trustCredentials = [
+    {
+        name: "ISO 9001:2015",
+        logo: logoIso,
+        alt: "ISO 9001:2015 quality management certification",
+        imgClass: "h-16 sm:h-20 w-auto max-w-[85%] object-contain",
+    },
+    {
+        name: "United Nations Global Marketplace (UNGM)",
+        logo: logoUngm,
+        alt: "United Nations Global Marketplace (UNGM) logo",
+        imgClass: "h-12 sm:h-14 w-auto max-w-[94%] object-contain",
+    },
+    {
+        name: "Federation of Indian Export Organisations (FIEO)",
+        logo: logoFieo,
+        alt: "Federation of Indian Export Organisations (FIEO) logo",
+        imgClass: "h-12 sm:h-15 w-auto max-w-[94%] object-contain",
+    },
+    {
+        name: "American Society for Quality (ASQ)",
+        logo: logoAsq,
+        alt: "American Society for Quality (ASQ) logo",
+        imgClass: "h-11 sm:h-14 w-auto max-w-[94%] object-contain",
+    },
+    {
+        name: "Dun & Bradstreet",
+        logo: logoDnb,
+        alt: "Dun & Bradstreet business verification logo",
+        imgClass: "h-16 sm:h-20 w-auto max-w-[85%] object-contain",
+    },
 ];
 
 const supportedCountries = [
@@ -466,6 +506,43 @@ function Index() {
                                 className="w-full max-w-[580px] object-contain"
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── OUR TRUST (CREDENTIALS & AFFILIATIONS) ── */}
+            <section
+                aria-labelledby="our-trust-heading"
+                className="bg-white py-10 sm:py-14 lg:py-16 border-b border-gray-200/80 relative overflow-hidden"
+            >
+                {/* Subtle warm golden ambient glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#dca85b]/5 rounded-full blur-3xl pointer-events-none -z-0" />
+
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center">
+                        <h2
+                            id="our-trust-heading"
+                            className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-center bg-gradient-to-r from-[#8e5d16] via-[#dca85b] to-[#8e5d16] bg-clip-text text-transparent inline-block drop-shadow-xs"
+                        >
+                            Our Trust
+                        </h2>
+                        <div className="w-12 h-0.5 bg-gradient-to-r from-[#8e5d16] via-[#dca85b] to-[#8e5d16] mx-auto mt-2.5 rounded-full" />
+                    </div>
+
+                    <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-wrap justify-center items-center gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto">
+                        {trustCredentials.map((item) => (
+                            <div
+                                key={item.name}
+                                className="w-[calc(50%-0.6rem)] sm:w-[calc(33.333%-0.9rem)] lg:w-[calc(20%-1.2rem)] max-w-[215px] min-w-[145px] h-28 sm:h-32 flex items-center justify-center p-3 sm:p-3.5 rounded-2xl bg-white border border-gray-200/90 shadow-2xs hover:shadow-lg hover:border-[#dca85b]/60 hover:-translate-y-1 transition-all duration-300 group"
+                            >
+                                <img
+                                    src={item.logo}
+                                    alt={item.alt}
+                                    className={`${item.imgClass} select-none transition-transform duration-300 group-hover:scale-105`}
+                                    loading="lazy"
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
