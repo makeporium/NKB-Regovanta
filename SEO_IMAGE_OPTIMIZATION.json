@@ -1,0 +1,206 @@
+[
+  {
+    "source": "src\\assets\\saurav.png",
+    "output": "src\\assets\\saurav.optimized.webp",
+    "before": 655812,
+    "after": 288842
+  },
+  {
+    "source": "src\\assets\\daniel.png",
+    "output": "src\\assets\\daniel.optimized.webp",
+    "before": 898112,
+    "after": 435612
+  },
+  {
+    "source": "src\\assets\\satish.png",
+    "output": "src\\assets\\satish.optimized.webp",
+    "before": 686016,
+    "after": 321128
+  },
+  {
+    "source": "src\\assets\\Global Healthcare Expertise in Action.png",
+    "output": "src\\assets\\Global Healthcare Expertise in Action.optimized.webp",
+    "before": 1770467,
+    "after": 1353028
+  },
+  {
+    "source": "src\\assets\\Futuristic Globe Cityscape at Dawn.png",
+    "output": "src\\assets\\Futuristic Globe Cityscape at Dawn.optimized.webp",
+    "before": 1685414,
+    "after": 1269042
+  },
+  {
+    "source": "src\\assets\\Earth\u2019s Night Lights at Sunrise From Space.png",
+    "output": "src\\assets\\Earth\u2019s Night Lights at Sunrise From Space.optimized.webp",
+    "before": 1827194,
+    "after": 1427888
+  },
+  {
+    "source": "src\\assets\\Global Network Map with Golden Connections.png",
+    "output": "src\\assets\\Global Network Map with Golden Connections.optimized.webp",
+    "before": 2052005,
+    "after": 1521156
+  },
+  {
+    "source": "src\\assets\\industry-pharma.png",
+    "output": "src\\assets\\industry-pharma.optimized.webp",
+    "before": 1134586,
+    "after": 848218
+  },
+  {
+    "source": "src\\assets\\Elegant Neutral Skincare Still Life.png",
+    "output": "src\\assets\\Elegant Neutral Skincare Still Life.optimized.webp",
+    "before": 1484512,
+    "after": 1040792
+  },
+  {
+    "source": "src\\assets\\Glossy Blue Globe UI Icon.png",
+    "output": "src\\assets\\Glossy Blue Globe UI Icon.optimized.webp",
+    "before": 1089103,
+    "after": 785368
+  },
+  {
+    "source": "src\\assets\\Blue Security Shield UI Card.png",
+    "output": "src\\assets\\Blue Security Shield UI Card.optimized.webp",
+    "before": 1085215,
+    "after": 780236
+  },
+  {
+    "source": "src\\assets\\Microscope Icon on Floating Blue Panel.png",
+    "output": "src\\assets\\Microscope Icon on Floating Blue Panel.optimized.webp",
+    "before": 1098591,
+    "after": 791560
+  },
+  {
+    "source": "src\\assets\\Document Inspection Icon Banner.png",
+    "output": "src\\assets\\Document Inspection Icon Banner.optimized.webp",
+    "before": 1059635,
+    "after": 758320
+  },
+  {
+    "source": "src\\assets\\Puzzle Piece in Blue Badge.png",
+    "output": "src\\assets\\Puzzle Piece in Blue Badge.optimized.webp",
+    "before": 1035348,
+    "after": 717434
+  },
+  {
+    "source": "src\\assets\\Riseing Growth Bar Graph Blue.png",
+    "output": "src\\assets\\Riseing Growth Bar Graph Blue.optimized.webp",
+    "before": 1058955,
+    "after": 764168
+  },
+  {
+    "source": "src\\assets\\Tech Growth Meets Compassionate Care.png",
+    "output": "src\\assets\\Tech Growth Meets Compassionate Care.optimized.webp",
+    "before": 1686603,
+    "after": 1231724
+  },
+  {
+    "source": "src\\assets\\case.png",
+    "output": "src\\assets\\case.optimized.webp",
+    "before": 495785,
+    "after": 278154
+  },
+  {
+    "source": "src\\assets\\hero-global.png",
+    "output": "src\\assets\\hero-global.optimized.webp",
+    "before": 334150,
+    "after": 191850
+  },
+  {
+    "source": "src\\assets\\mfg-compliance-support.png",
+    "output": "src\\assets\\mfg-compliance-support.optimized.webp",
+    "before": 1566355,
+    "after": 1128040
+  },
+  {
+    "source": "src\\assets\\Taking Liquid Out of Test Tubes.png",
+    "output": "src\\assets\\Taking Liquid Out of Test Tubes.optimized.webp",
+    "before": 1596501,
+    "after": 1154650
+  },
+  {
+    "source": "src\\assets\\world-map.png",
+    "output": "src\\assets\\world-map.optimized.webp",
+    "before": 1464167,
+    "after": 913572
+  },
+  {
+    "source": "src\\assets\\us.png",
+    "output": "src\\assets\\us.optimized.webp",
+    "before": 242266,
+    "after": 187756
+  },
+  {
+    "source": "src\\assets\\ivd2.png",
+    "output": "src\\assets\\ivd2.optimized.webp",
+    "before": 1535138,
+    "after": 1138086
+  },
+  {
+    "source": "src\\assets\\eudamed_registration_workflow.png",
+    "output": "src\\assets\\eudamed_registration_workflow.optimized.webp",
+    "before": 463058,
+    "after": 86346
+  },
+  {
+    "source": "src\\assets\\cdsco_ivd_application_flowchart.png",
+    "output": "src\\assets\\cdsco_ivd_application_flowchart.optimized.webp",
+    "before": 418614,
+    "after": 124022
+  },
+  {
+    "source": "src\\assets\\fda_ivd_regulatory_pathway_flowchart.png",
+    "output": "src\\assets\\fda_ivd_regulatory_pathway_flowchart.optimized.webp",
+    "before": 441342,
+    "after": 82674
+  },
+  {
+    "source": "public\\assets\\brain\\media__1786282925761.png",
+    "output": "public\\assets\\brain\\media__1786282925761.optimized.webp",
+    "before": 547531,
+    "after": 284092
+  },
+  {
+    "source": "src\\assets\\map2.png",
+    "output": "src\\assets\\map2.optimized.webp",
+    "before": 2212348,
+    "after": 1335358
+  },
+  {
+    "source": "src\\assets\\cdsco-india-hero.png",
+    "output": "src\\assets\\cdsco-india-hero.optimized.webp",
+    "before": 1464167,
+    "after": 913572
+  },
+  {
+    "source": "src\\assets\\India on World Map Accesing.png",
+    "output": "src\\assets\\India on World Map Accesing.optimized.webp",
+    "before": 1575276,
+    "after": 1184150
+  },
+  {
+    "source": "src\\assets\\Ethereal Global Network Globe.png",
+    "output": "src\\assets\\Ethereal Global Network Globe.optimized.webp",
+    "before": 1434037,
+    "after": 1060986
+  },
+  {
+    "source": "src\\assets\\Medtech Manufacturing Network Illustration.png",
+    "output": "src\\assets\\Medtech Manufacturing Network Illustration.optimized.webp",
+    "before": 1467014,
+    "after": 1065112
+  },
+  {
+    "source": "src\\assets\\CDSCO Certification Compliance Network.png",
+    "output": "src\\assets\\CDSCO Certification Compliance Network.optimized.webp",
+    "before": 1566355,
+    "after": 1128040
+  },
+  {
+    "source": "src\\assets\\iso.png",
+    "output": "src\\assets\\iso.optimized.webp",
+    "before": 455626,
+    "after": 240274
+  }
+]

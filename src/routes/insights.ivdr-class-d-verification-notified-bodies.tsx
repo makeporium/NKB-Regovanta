@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/ivdr-class-d-verification-notified-bodies.json";
+
+export const Route = createFileRoute("/insights/ivdr-class-d-verification-notified-bodies")({
+  head: () => ({
+    meta: [
+      { title: "EU IVDR Class D Verification Guide | NKB Regovanta" },
+      { name: "description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "EU IVDR Class D Verification Guide | NKB Regovanta" },
+      { property: "og:description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/laboratory_test_tubes_pipette.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU IVDR Class D Verification Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "Prepare Class D IVD verification with clear configurations, performance evidence, batch records, and notified-body or reference-laboratory interfaces." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/laboratory_test_tubes_pipette.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

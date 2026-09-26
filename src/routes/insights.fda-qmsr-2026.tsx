@@ -1,17 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
 
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
     meta: [
-      { title: "FDA QMSR 2026 | Insights | NKB Regovanta" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
       {
         name: "description",
         content:
-          "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations and actions medical device manufacturers should take to maintain compliance.",
+          "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance.",
       },
+      { property: "og:title", content: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
+      { property: "og:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FDA QMSR 2026 Compliance Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/quality_assurance_meeting.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-qmsr-2026" },
     ],
   }),
   component: Article,
@@ -19,10 +33,41 @@ export const Route = createFileRoute("/insights/fda-qmsr-2026")({
 
 function Article() {
   return (
-    <>
+    <DynamicOrStaticArticle
+      slug="fda-qmsr-2026"
+      defaultCategory="US FDA QUALITY SYSTEMS"
+      defaultImage="/assets/insights/quality_assurance_meeting.jpg"
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "FDA QMSR 2026: What Medical Device Manufacturers Need to Know",
+            "description": "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance.",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png",
+            "author": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NKB Regovanta Solutions Pvt. Ltd.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.nkbregovanta.com/favicon.png"
+              }
+            },
+            "datePublished": "2026-05-15",
+            "mainEntityOfPage": "https://www.nkbregovanta.com/insights/fda-qmsr-2026"
+          })
+        }}
+      />
       <article className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <Link to="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-navy/70 hover:text-navy transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" /> Back to Insights
           </Link>
@@ -73,11 +118,11 @@ function Article() {
         </div>
       </article>
 
-      <CTABand 
-        title="Need support assessing your QMS against the FDA QMSR?" 
-        description="NKB Regovanta can help with gap assessment, procedure alignment, internal audits and inspection-readiness support." 
-        btnText="Contact Us Today" 
+      <CTABand
+        title="Need support assessing your QMS against the FDA QMSR?"
+        description="NKB Regovanta can help with gap assessment, procedure alignment, internal audits and inspection-readiness support."
+        action="Contact Us Today"
       />
-    </>
+    </DynamicOrStaticArticle>
   );
 }

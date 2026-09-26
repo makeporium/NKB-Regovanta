@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/fda-510k-program-modernization-safety-standards.json";
+
+export const Route = createFileRoute("/insights/fda-510k-program-modernization-safety-standards")({
+  head: () => ({
+    meta: [
+      { title: "FDA 510(k) Modernization Guide | NKB Regovanta" },
+      { name: "description", content: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "FDA 510(k) Modernization Guide | NKB Regovanta" },
+      { property: "og:description", content: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/digital_security_compliance.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FDA 510(k) Modernization Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "Understand predicate relevance, final versus draft guidance, and the limited scope of FDA's Safety and Performance Based Pathway." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/digital_security_compliance.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

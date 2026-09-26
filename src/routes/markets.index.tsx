@@ -1,16 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2, Users, FileCheck2, Handshake } from "lucide-react";
-import mapImage from "@/assets/map2.png";
+import mapImage from "@/assets/map2.optimized.webp";
 
 export const Route = createFileRoute("/markets/")({
     head: () => ({
         meta: [
-            { title: "Global Markets | NKB Regovanta" },
+            { title: "Global Medical Device Regulatory Markets | NKB Regovanta" },
             {
                 name: "description",
-                content:
-                    "We help you navigate regulatory requirements and market-access pathways across key international markets.",
+                content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC.",
             },
+            { property: "og:title", content: "Global Medical Device Regulatory Markets | NKB Regovanta" },
+            {
+                property: "og:description",
+                content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/markets" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Global Medical Device Regulatory Markets | NKB Regovanta" },
+            { name: "twitter:description", content: "Global medical device regulatory consulting across 15+ markets: US FDA, EU MDR/IVDR, India CDSCO, UK MHRA, Australia TGA, Canada, and APAC." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/markets" },
         ],
     }),
     component: Markets,
@@ -47,7 +61,7 @@ const flagMarkets = [
 const stats = [
     { icon: Globe2, value: "15+", label: "Countries\nSupported" },
     { icon: Users, value: "21+", label: "Global Clients\nServed" },
-    { icon: FileCheck2, value: "51+", label: "Regulatory & Quality Projects Completed" },
+    { icon: FileCheck2, value: "350+", label: "Regulatory & Quality Projects Completed" },
     { icon: Handshake, value: "2018", label: "Experience Since\nRegulatory & Quality" },
 ];
 
@@ -61,8 +75,11 @@ function Markets() {
                     <div className="flex flex-col justify-start py-6 shrink-0 w-full lg:w-[42%]">
                         <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">Global Markets</p>
                         <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(26px, 6vw, 40px)" }}>
-                            Access Multiple Global Markets.
+                            Global Medical Device Regulatory Markets
                         </h1>
+                        <p className="mt-2 text-sm font-bold text-accent">
+                            Access Multiple Global Healthcare Markets
+                        </p>
                         <p className="mt-3 text-[13.5px] text-navy/70 leading-relaxed max-w-sm">
                             We help you expand your global footprint with regulatory expertise and local knowledge.
                         </p>
@@ -80,7 +97,7 @@ function Markets() {
 
                     {/* Right — break out to right viewport edge, no crop */}
                     <div className="flex-1 w-full lg:-mr-8 -mr-4 mt-6 lg:mt-0">
-                        <img
+                        <img width={1672} height={940}
                             src={mapImage}
                             alt="Global Markets Map"
                             className="w-full h-auto object-cover"

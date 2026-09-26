@@ -155,9 +155,11 @@
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 700;
     letter-spacing: -0.02em;
+    color: inherit;
   }
 }
 
@@ -172,3 +174,224 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Multi-Language Headless Translation & RTL Styling
+───────────────────────────────────────────────────────────── */
+
+/* Suppress all Google Translate default widgets, popups, and banners */
+.skiptranslate:not(.keep-visible),
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+#google_translate_element {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* Bi-directional (RTL) Layout for Arabic */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .ltr-keep {
+  direction: ltr;
+  text-align: left;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Insights Tab Blinking & Highlighting
+───────────────────────────────────────────────────────────── */
+@keyframes insight-blink-pulse {
+  0%, 100% {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #0b3a96;
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4), 0 0 8px rgba(11, 58, 150, 0.15);
+  }
+  50% {
+    background-color: #dbeafe;
+    border-color: #1d4ed8;
+    color: #1e40af;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3), 0 0 14px rgba(37, 99, 235, 0.4);
+  }
+}
+
+.insights-blinking-tab {
+  animation: insight-blink-pulse 1.5s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Article & Rich Editor Hyperlinks & Typography Styling
+───────────────────────────────────────────────────────────── */
+.dynamic-article-prose a,
+.rich-editor-content a,
+.prose a,
+article a.inline-link,
+article p a,
+article li a,
+.article-content a {
+  color: #0b3a96 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #3b82f6 !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 3px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.dynamic-article-prose a:hover,
+.rich-editor-content a:hover,
+.prose a:hover,
+article a.inline-link:hover,
+article p a:hover,
+article li a:hover,
+.article-content a:hover {
+  color: #1d4ed8 !important;
+  text-decoration-color: #1d4ed8 !important;
+  background-color: rgba(219, 234, 254, 0.4) !important;
+  border-radius: 2px !important;
+}
+
+/* Clear distinction for tables in dynamic articles & editor */
+.dynamic-article-prose table,
+.rich-editor-content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.dynamic-article-prose th,
+.rich-editor-content th {
+  background-color: #f1f5f9 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #cbd5e1 !important;
+  text-align: left !important;
+}
+
+.dynamic-article-prose td,
+.rich-editor-content td {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.dynamic-article-prose tr:nth-child(even),
+.rich-editor-content tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+/* Explicit Heading Hierarchy & Font Weights for Dynamic Articles & Editor */
+.dynamic-article-prose h1,
+.rich-editor-content h1 {
+  font-family: var(--font-display), "Montserrat", sans-serif !important;
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #0a192f !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.25 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.dynamic-article-prose h2,
+.rich-editor-content h2 {
+  font-family: var(--font-display), "Montserrat", sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  color: #0a192f !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.3 !important;
+  margin-top: 2.75rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 1.25rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+.dynamic-article-prose h3,
+.rich-editor-content h3 {
+  font-family: var(--font-display), "Montserrat", sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.35 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.dynamic-article-prose h4,
+.rich-editor-content h4 {
+  font-family: var(--font-display), "Montserrat", sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.dynamic-article-prose p,
+.rich-editor-content p {
+  font-size: 1.0625rem !important;
+  line-height: 1.8 !important;
+  color: #334155 !important;
+  margin-top: 1.125rem !important;
+  margin-bottom: 1.125rem !important;
+}
+
+.dynamic-article-prose p.lead {
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  color: #1e293b !important;
+  font-weight: 500 !important;
+}
+
+.dynamic-article-prose strong,
+.dynamic-article-prose b,
+.rich-editor-content strong,
+.rich-editor-content b {
+  font-weight: 700 !important;
+  color: #0a192f !important;
+}
+
+.dynamic-article-prose ul,
+.rich-editor-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.dynamic-article-prose ol,
+.rich-editor-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.dynamic-article-prose li,
+.rich-editor-content li {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.7 !important;
+  color: #334155 !important;
+}
+
+
+

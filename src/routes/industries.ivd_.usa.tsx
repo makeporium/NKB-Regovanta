@@ -1,14 +1,44 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale } from "lucide-react";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Network, Scale, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-ivd.png";
-import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.png";
+import fdaIvdFlowchart from "@/assets/fda_ivd_regulatory_pathway_flowchart.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd_/usa")({
     head: () => ({
         meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large" },
             { title: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
-            { name: "description", content: "Expert assistance with US FDA regulations for IVD devices, including 510(k), De Novo, PMA submissions, and CLIA waivers for Point-of-Care testing." },
+            { name: "description", content: "US FDA IVD regulatory consulting: 510(k) clearance, De Novo classification, CLIA waivers, LDT compliance, and eSTAR submissions from NKB Regovanta." },
+            { property: "og:title", content: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
+            { property: "og:description", content: "US FDA IVD regulatory consulting: 510(k) clearance, De Novo classification, CLIA waivers, LDT compliance, and eSTAR submissions from NKB Regovanta." },
+            { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd/usa" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "IVD Regulation in the USA | US FDA Framework | NKB Regovanta" },
+            { name: "twitter:description", content: "US FDA IVD regulatory consulting: 510(k) clearance, De Novo classification, CLIA waivers, LDT compliance, and eSTAR submissions from NKB Regovanta." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd/usa" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "IVD Regulation in the USA (US FDA Framework)",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "NKB Regovanta",
+                        "url": "https://www.nkbregovanta.com"
+                    },
+                    "description": "US FDA IVD regulatory consulting: 510(k) clearance, De Novo classification, CLIA waivers, LDT compliance, and eSTAR submissions from NKB Regovanta.",
+                    "serviceType": "In Vitro Diagnostics Regulatory Affairs"
+                })
+            }
         ],
     }),
     component: IVDUsa,
@@ -101,13 +131,13 @@ function IVDUsa() {
 
                             <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-md text-[14.5px] text-blue-900 my-8 shadow-sm">
                                 <strong className="font-bold block mb-2 text-lg">The Importance of CLIA Waivers for POC Testing</strong>
-                                <p className="mb-2">If your Point-of-Care (POC) IVD is intended for use outside of a highly regulated, traditional laboratory—such as in pharmacies, physician offices, or for at-home use—securing a <strong>CLIA (Clinical Laboratory Improvement Amendments) waiver</strong> is an absolute commercial necessity.</p>
-                                <p>Without this waiver, your diagnostic test is legally restricted to certified laboratories, drastically limiting market adoption. Securing a waiver requires specialized analytical studies proving the test is foolproof and poses minimal risk of harm from erroneous results in non-laboratory settings.</p>
+                                <p className="mb-2">For point-of-care testing, assess the test's CLIA categorization and the testing site's certificate. A <strong>CLIA waiver</strong> allows a test to be performed by sites holding a Certificate of Waiver, subject to the applicable conditions.</p>
+                                <p>A waiver application must support the statutory simplicity and erroneous-result risk criteria; it does not establish that a test is foolproof. Tests cleared or approved for home use are automatically categorized as waived. <a className="underline" href="https://www.fda.gov/medical-devices/ivd-regulatory-assistance/clia-waiver-application">See FDA's CLIA waiver guidance</a>.</p>
                             </div>
 
                             {/* FDA Pathway Diagram */}
                             <div className="w-full rounded-lg shadow-sm border border-border flex items-center justify-center my-10 overflow-hidden bg-white p-2">
-                                <img src={fdaIvdFlowchart} alt="US FDA IVD Regulatory Pathway Flowchart" className="w-full h-auto object-contain rounded-md" />
+                                <img width={2720} height={3040} src={fdaIvdFlowchart} alt="US FDA IVD Regulatory Pathway Flowchart" className="w-full h-auto object-contain rounded-md" />
                             </div>
 
                             <h2 className="text-2xl md:text-3xl font-bold text-navy mt-12 mb-6">Key FDA Regulatory Shifts (2025–2026)</h2>
@@ -119,7 +149,7 @@ function IVDUsa() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-navy text-lg mb-1">Laboratory Developed Tests (LDT) Final Rule</h3>
-                                        <p className="text-[14.5px] text-navy/80 leading-relaxed">Finalized in 2024, the FDA is aggressively phasing in requirements for laboratories that develop and utilize their own in-house diagnostic tests. This historic shift dramatically expands FDA oversight over hospital and reference lab diagnostics.</p>
+                                        <p className="text-[14.5px] text-navy/80 leading-relaxed">FDA states that a federal district court vacated its 2024 LDT final rule on 31 March 2025. The cancelled rule should not be used as an active phase-in schedule. Assess the test, laboratory activities and current applicable requirements individually. <a className="underline" href="https://www.fda.gov/medical-devices/in-vitro-diagnostics/laboratory-developed-tests">Read FDA's current LDT information</a>.</p>
                                     </div>
                                 </div>
 
@@ -139,7 +169,7 @@ function IVDUsa() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-navy text-lg mb-1">QMSR Alignment (2026 Deadline)</h3>
-                                        <p className="text-[14.5px] text-navy/80 leading-relaxed">The FDA’s updated Quality Management System Regulation (21 CFR Part 820) will take full effect in 2026. All medical device and IVD manufacturers must align their existing quality systems with the international <strong>ISO 13485:2016</strong> standard.</p>
+                                        <p className="text-[14.5px] text-navy/80 leading-relaxed">FDA's Quality Management System Regulation became effective on 2 February 2026. Manufacturers subject to its requirements must address the incorporated <strong>ISO 13485:2016</strong> framework together with applicable FDA-specific obligations.</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +200,32 @@ function IVDUsa() {
                 </div>
             </section>
 
-            <CTABand title="Accelerate your FDA clearance timeline" btnText="Contact Our FDA Experts" />
+            {/* Link to Main USA Regulatory Services Hub */}
+            <section className="py-12 bg-slate-50 border-t border-border">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="rounded-2xl bg-white border border-blue-100 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div>
+                            <div className="flex items-center gap-2 mb-1.5">
+                                <span className="h-2 w-2 rounded-full bg-[#0b3a96]" />
+                                <span className="text-[11px] font-bold uppercase tracking-widest text-[#0b3a96]">For More Details</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-navy">Looking for Full US FDA Medical Device &amp; IVD Services?</h3>
+                            <p className="text-sm text-navy/70 mt-1.5 max-w-2xl leading-relaxed">
+                                Access our dedicated US regulatory services including official US Agent representation, 510(k) clearances, De Novo petitions, Q-Submissions, 513(g) requests, and 21 CFR 820 QMSR compliance services.
+                            </p>
+                        </div>
+                        <Link
+                            to="/services/usa"
+                            className="shrink-0 inline-flex items-center gap-2 bg-[#0b3a96] hover:bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-all shadow-xs hover:shadow-md group"
+                        >
+                            <span>Explore US FDA Regulatory Services</span>
+                            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            <CTABand title="Accelerate your FDA clearance timeline" action="Contact Our FDA Experts" />
         </>
     );
 }

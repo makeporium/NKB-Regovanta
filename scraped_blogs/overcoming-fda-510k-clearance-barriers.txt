@@ -1,0 +1,87 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## How to Overcome FDA 510k Clearance Barriers?
+
+## Overview
+
+A FDA 510k clearance or premarket submission demonstrates that the device which is marketed is safe and effective as a predicate. The FDA 510k process is necessary to enter into the US market / or to sell your device in the US market. The FDA is responsible for authoring and enforcing the medical device quality system regulations (QSR), found in 21 CFR Part 820 of the Code of Federal Regulations. The FDA 510 k clearance process is the most common pre-market pathway for medical device companies.  There are certain reasons due to which the 510k process gets delayed or the FDA 510k gets rejected, termed as FDA 510k Clearance Barriers.  
+
+					Regulatory Excellence for Global Medical Device Markets
+
+					The barriers faced during the FDA 510(k) clearance process: 
+
+You might have designed a useful and wonderful product to manufacture but the first important thing is to get approval for the product or get the clearance from FDA to market it. FDA I.e, Food and Drug Administration has set strict rules for medical device companies to market their product in the US. To commercialize the product manufacturer can follow the two ways first is premarket notification and the other is FDA 510(k). Premarket approval is needed for clinical and laboratory studies. The other path to commercialize your product is 510(k).  
+
+The majority of medical devices approved in the US are cleared through the 510(k)process.  As an FDA 510(k) clearance process consultant we have guided and created a 510(k) dossier for many of them, which helped them in getting 510(k) clearance easily. Getting FDA 510(k) clearance is easy only if you submit the correct documents and follow proper guidelines.  
+
+Let’s check out some FDA 510(k) clearance barriers and solutions to overcome them. 
+
+* Wrong selection of Predicate Device. 
+* The device does not comply with specific requirements. 
+* Non-Technical Error. 
+* Errors in the review process. 								
+				
+					FDA 510k clearance barriers and their solution: 
+
+* Selection of Predicate Device-
+
+Application to the FDA, which demonstrates that a device is safe and effective by demonstrating that the device is equivalent to another device which is on the market called as “Substantial equivalent (Predicate device)”.  In short these are the devices which have the same intended use which a proposed manufacturing device is having. 
+
+The manufacturers need to identify another device already on the market that shares the same intended use and is technologically similar to the device they wish to market. (Predicate comparison or Substantial equivalence comparison). The biggest mistake during the selection process is not selecting a predicate device which is NSE (Not substantially equivalent). 
+
+To overcome this barrier: 
+
+Follow the guidance published by the FDA – The 510k Program: Evaluating Substantial Equivalence in Premarket Notifications [510(k)]  
+* The predicate device must be similar to your device with regard to its intended use and its technological characteristics. It becomes a challenge for manufacturers to identify the predicate device so a consultant like us helps them in identification, the medical device regulatory consultant, They are the people who guide you and help you to confirm the predicate devices.
+* Device Doesn’t comply with specific requirements- 
+
+Sometimes the product code is not identified correctly which can lead to the implementation of incorrect standards. The manufacturers also Can’t justify properly whether the particular standard is not applicable to a device or not.  
+
+The solution to this barrier: 
+
+ Classify and identify their device correctly. 
+*  Work through the FDA’s special control guidelines. 
+*  Searching in the FDA guidance documents database for the respective device to identify any guidance documents with information about device-specific requirements of Searching the FD.  
+* A product classification database to identify any recognized consensus standards that apply to the product code.
+* Non-Technical Barriers- 
+
+If you have not registered your company properly on the portal or if you face some error in device listing your 510(k)-clearance process might be delayed. 
+
+The solutions can be: 
+
+Create an online account from FDA website   
+* Register your establishment with the FDA and list your devices. If one is not sure how to do consult with the medical device consultant, they can guide you in the process 
+* Provides FDA with the location of medical device establishments and the devices manufactured at those establishments 
+* Knowing where devices are made increases their nation’s ability to prepare for and respond to public health emergencies 
+* US Agent and initial importer have to be nominated during establishment registration (For foreign manufacturers)
+* Errors in Acknowledgement letter, e copy submission and review process –
+
+The submitter may face issues regarding the proper technical document submission, and review process. If the acceptance review of the application gives results whether the 510 (k) is accepted or not or whether it is on RTA hold.   
+
+To avoid delays in the clearance process while submitting the e copy of your technical documents Guidelines provided by FDA need to be followed. FDA 510(k) clearance barriers can be resolved with the proper guidance and knowledge of the procedure. Many times, the FDA asks for some additional information (AI) or puts the application on hold, in that case a correct and proper reply needs to be submitted.   
+
+The manufacturers came to us and asked for the solutions. Our expert team analyses the issues and queries raised by the FDA and provides satisfactory response to the queries which easily gives you the FDA 510(k)clearance. As medical device regulatory consultant we are working closely with the regulatory bodies and know exactly how to resolve the queries.  
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

@@ -1,67 +1,110 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import { CTABand } from '@/components/site/Bits'
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ChevronRight,
+  Award,
+  ArrowRight,
+  ShieldCheck,
+  Globe2,
+} from "lucide-react";
+import { CTABand } from "@/components/site/Bits";
 
-export const Route = createFileRoute('/services/eu/ce-registration')({
+export const Route = createFileRoute("/services/eu/ce-registration")({
   head: () => ({
     meta: [
-      { title: 'CE Device Registration Pathway | EU Services | NKB Regovanta' },
-      { name: 'description', content: 'Explore our specialized EU CE Device Registration Pathway services for medical devices and IVDs.' },
+      { name: "robots", content: "noindex, follow" },
+      { title: "EU CE Device Registration | NKB Regovanta" },
+      {
+        name: "description",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { property: "og:title", content: "EU CE Device Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ce-registration" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU CE Device Registration | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-registration" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "EU CE Marking Registration & Compliance",
+          description: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance and EUDAMED registration.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "European Union",
+          },
+        }),
+      },
     ],
   }),
-  component: ServicePage,
-})
+  component: CERegistrationPage,
+});
 
-function ServicePage() {
+function CERegistrationPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/eu_hero_1786396525523.png')] bg-cover bg-center" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link to="/services/eu" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
-            <ArrowLeft className="h-4 w-4" /> Back to EU Services
-          </Link>
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">CE Device Registration Pathway</h1>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Navigate the complexities of the European regulatory landscape with our comprehensive CE Device Registration Pathway support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 bg-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-slate-100 pt-10 pb-12 border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-navy mb-6">Overview & Compliance</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                The European Union maintains strict requirements for CE Device Registration Pathway under the MDR and IVDR frameworks. Our team of regulatory experts ensures that your strategy aligns perfectly with the latest guidelines, minimizing delays and mitigating compliance risks in the European market.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Comprehensive regulatory strategy and pathway determination.",
-                  "Meticulous preparation, review, and submission of all required documentation.",
-                  "Ongoing liaison and communication with Notified Bodies.",
-                  "Post-submission support and proactive compliance monitoring."
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="/assets/brain/eu_compliance_1786396542227.png" alt="EU Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+          <div className="flex items-center gap-1.5 text-[11px] text-navy/55 font-semibold mb-5">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/services/eu" className="hover:text-navy transition-colors">European Union</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-navy">CE Registration</span>
+          </div>
+
+          <Link
+            to="/services/eu"
+            className="inline-flex items-center gap-2 text-navy/60 hover:text-navy transition-colors mb-6 text-sm font-medium"
+          >
+            <ArrowLeft className="h-4 w-4" /> Back to EU Services Hub
+          </Link>
+
+          <div className="max-w-3xl">
+            <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
+              EU CE Marking Registration &amp; Compliance
+            </h1>
+            <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
+              NKB Regovanta oversees the complete EU CE-marking and device registration journey under MDR 2017/745 and IVDR 2017/746.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/services/eu/ce-marking"
+                className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 rounded-sm hover:bg-navy/90 transition-all shadow-sm"
+              >
+                View Full CE Marking &amp; Registration Architecture <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <CTABand title="Ready to secure your CE mark?" description="Consult our EU regulatory experts" />
+      <CTABand
+        title="Achieve Seamless CE Marking Clearance in Europe"
+        description="Connect with our EU regulatory team to plan your conformity assessment."
+      />
     </>
-  )
+  );
 }

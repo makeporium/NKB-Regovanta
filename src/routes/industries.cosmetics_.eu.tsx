@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, FlaskConical, Globe, BookOpen } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/eu_hero_1786396525523.png"; // Assuming standard EU hero exists, or we use a fallback
@@ -6,8 +6,51 @@ import imgHero from "@/assets/eu_hero_1786396525523.png"; // Assuming standard E
 export const Route = createFileRoute("/industries/cosmetics_/eu")({
   head: () => ({
     meta: [
-      { title: "EU Cosmetic Regulation & Registration Services | NKB Regovanta" },
-      { name: "description", content: "End-to-end EU cosmetics compliance, Responsible Person (RP) services, PIF, CPSR, and CPNP notification." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "EU Cosmetic Regulation & Registration | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "EU Cosmetics Regulation (EC) 1223/2009 compliance consulting: CPSR reports, EU Responsible Person, CPNP notification, and European label compliance.",
+      },
+      { property: "og:title", content: "EU Cosmetic Regulation & Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "EU Cosmetics Regulation (EC) 1223/2009 compliance consulting: CPSR reports, EU Responsible Person, CPNP notification, and European label compliance.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/eu" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU Cosmetic Regulation & Registration | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "EU Cosmetics Regulation (EC) 1223/2009 compliance consulting: CPSR reports, EU Responsible Person, CPNP notification, and European label compliance.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/eu" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "EU Cosmetic Regulation & Registration Services",
+          areaServed: { "@type": "AdministrativeArea", name: "European Union" },
+          description:
+            "EU Cosmetics Regulation (EC) 1223/2009 compliance consulting, CPSR reports, EU Responsible Person, and CPNP notification.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
     ],
   }),
   component: EUCosmetics,
@@ -101,7 +144,7 @@ function EUCosmetics() {
                With years of experience guiding cosmetic brands through the complexities of European registration, we ensure your products meet all compliance requirements without sacrificing speed-to-market.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-8 rounded-md bg-surface/50 border border-border hover:bg-surface transition-colors">
@@ -122,7 +165,7 @@ function EUCosmetics() {
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Do I need a separate registration for each EU member state?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                No. Because of the harmonized EU Cosmetic Regulation, once your product is registered and notified via the CPNP, it is legally valid to be marketed across all 27 EU member states, plus Norway, Iceland, and Liechtenstein.
+                CPNP provides a central notification system, so a separate national cosmetic notification is not needed in each EU member state. Notification is not product approval: safety, responsible-person, ingredient, labelling and other applicable requirements must still be met.
               </p>
             </div>
             <div>
@@ -141,7 +184,7 @@ function EUCosmetics() {
         </div>
       </section>
 
-      <CTABand title="Partner with us for seamless EU market access" btnText="Contact Our EU Experts" />
+      <CTABand title="Partner with us for seamless EU market access" action="Contact Our EU Experts" />
     </>
   );
 }

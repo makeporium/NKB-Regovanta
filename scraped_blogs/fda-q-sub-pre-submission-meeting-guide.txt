@@ -1,0 +1,81 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## FDA Pre Submission: All You Need to Know
+
+Getting an FDA approval for your medical device can be a stressful task especially if you are new to the medical device industry. There are several processes and submissions before you send the final application for FDA approval. It is not a straightforward process and may require guidance from technical experts and consultants if it is your first time. 
+
+Keep reading because we will discuss everything you need to know about FDA pre submission in this blog.
+
+## Talk to our experts
+
+					What is an FDA Pre-Submission?
+
+An FDA pre-submission is an enquiry or request you send to the FDA to seek feedback on your medical device. It is a voluntary submission and the feedback may be requested in the form of a meeting, teleconference or a written response. It is a way to fix the gaps in your application before final submission.
+
+Different FDA approvals for medical devices
+
+* 510 (k) – PMN- Premarket Notification
+* PMA – Premarket Approval
+* HDE – Humanitarian Device Exemption
+* De Novo Petitions – Novel Low to Moderate risk devices that do not have 510 (k) requirement
+* IDE – Investigational Device Exemption
+* Certain INDs (Investigational New Drug Applications) and BLAs (Biologic License Applications)
+* CLIA – Clinical Laboratory Improvement Amendments (knowing whether a clinical study requires an IDE)								
+				
+					When Do You Need an FDA Pre-submission?
+
+Depending on your medical device and your technical expertise, you may or may not require to send an FDA pre submission.
+
+You may need an FDA pre submission if:
+
+* You are developing a completely new device whose equivalent is not present in the market.
+* You used a new technology in your medical device.
+* You don’t have a regulatory roadmap in place.
+
+You can skip FDA pre submission if:
+
+* Your device is common and a predicate device already exists in market.
+* You have small queries which can be answered in the review meeting with FDA								
+
+## Pros and Cons of FDA pre submission
+
+Pros: 
+
+* An FDA pre-submission will ensure greater chances that your application will be approved by the FDA.
+* You may gain valuable feedback that will assist you in your development and regulatory efforts.
+* Early feedback from FDA on formal submission ensures the quality of data.
+
+Cons:
+
+* Time-consuming and expensive. Everything comes with a time and money aspect to it. An FDA pre-submission might 75-90 days for a meeting or teleconference to take place. Also, you might have to spend a good amount on taking help from a consultant to help you with pre-submission.
+* Does not guarantee approval as they are not an alternative to FDA pre-marketing review.								
+				
+					Conclusion
+
+An FDA pre-submission may be useful in certain cases but may not be required for others. This will totally depend on the type and complexity of your medical device. It is fairly beneficial as you get known to the FDA but then the final call is yours to take.
+
+Contact us if you still have any more queries. Being a leading medical device regulatory consultancy with a team of experienced professionals we will be able to provide you with the right guidance.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

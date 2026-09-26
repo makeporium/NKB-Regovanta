@@ -4,10 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -15,6 +16,9 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { QueryPopup } from "../components/site/QueryPopup";
 import { Toaster } from "../components/ui/sonner";
+import { toast } from "sonner";
+import { WifiOff } from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 function NotFoundComponent() {
   return (
@@ -45,24 +49,36 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
+  const isNetworkError =
+    error?.message?.includes("Failed to fetch") ||
+    error?.message?.includes("dynamically imported module") ||
+    error?.message?.includes("Loading chunk") ||
+    error?.name === "ChunkLoadError";
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          {isNetworkError ? "Connection Slow or Interrupted" : "This page didn't load"}
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          {isNetworkError
+            ? "Your internet connection experienced a delay or packet drop while loading website resources."
+            : "Something went wrong on our end. You can try refreshing or head back home."}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
-              router.invalidate();
-              reset();
+              if (isNetworkError) {
+                window.location.reload();
+              } else {
+                router.invalidate();
+                reset();
+              }
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            {isNetworkError ? "Reload page" : "Try again"}
           </button>
           <a
             href="/"
@@ -82,17 +98,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
-      { name: "author", content: "NKB Regovanta" },
-      { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { property: "og:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
-      { property: "og:type", content: "website" },
+      {
+        name: "description",
+        content:
+          "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR compliance consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      },
+      { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
+      { name: "publisher", content: "NKB Regovanta" },
+      {
+        name: "robots",
+        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      },
+      { name: "application-name", content: "NKB Regovanta" },
+      { name: "apple-mobile-web-app-title", content: "NKB Regovanta" },
+      { name: "mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+      { name: "theme-color", content: "#0b3a96" },
       { property: "og:site_name", content: "NKB Regovanta" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
-      { name: "twitter:description", content: "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access." },
+      { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+      {
+        property: "og:description",
+        content:
+          "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9), US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.nkbregovanta.com" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image:secure_url", content: "https://www.nkbregovanta.com/og-image.png" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@nkbregovanta" },
+      { name: "twitter:creator", content: "@nkbregovanta" },
+      { name: "twitter:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+      {
+        name: "twitter:description",
+        content:
+          "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
+      },
       { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:image:alt", content: "NKB Regovanta Logo & Brand Banner" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -119,33 +168,80 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const organizationSchema = {
+const structuredDataGraph = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "NKB Regovanta Solutions Pvt. Ltd.",
-  "alternateName": "NKB Regovanta",
-  "url": "https://www.nkbregovanta.com",
-  "logo": "https://www.nkbregovanta.com/favicon.png",
-  "image": "https://www.nkbregovanta.com/og-image.png",
-  "description": "Global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
-  ],
-  "knowsAbout": [
-    "CDSCO Medical Device Classification & Licensing",
-    "CDSCO Pharmaceutical & Drug Import Registration",
-    "US FDA 510(k) Submissions & US Agent",
-    "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking",
-    "ISO 13485:2016 QMS Implementation & Internal Audits",
-    "MDSAP Readiness & Audit Support",
-    "Cosmetics Regulatory Compliance (MoCRA, EU RP, CDSCO COS-1/2)",
-    "PC-PNDT Certificate Registration",
-    "WPC ETA Approval for Medical Equipment",
-    "IEC & AD Code Customs Registration"
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://www.nkbregovanta.com/#organization",
+      "name": "NKB Regovanta",
+      "legalName": "NKB Regovanta Solutions Pvt. Ltd.",
+      "alternateName": [
+        "NKB Regovanta Solutions",
+        "NKB Regovanta Solutions Pvt. Ltd.",
+        "NKBS",
+        "Regovanta",
+        "nkbregovanta",
+        "nkbregovanta.com"
+      ],
+      "url": "https://www.nkbregovanta.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.nkbregovanta.com/#logo",
+        "url": "https://www.nkbregovanta.com/favicon.png",
+        "caption": "NKB Regovanta Logo"
+      },
+      "image": "https://www.nkbregovanta.com/og-image.png",
+      "description": "NKB Regovanta Solutions Pvt. Ltd. is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+      "email": "contact@nkbregovanta.com",
+      "telephone": ["+919513699000", "+919180351425", "+918400039062"],
+      "priceRange": "$$$",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "226015",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "16192 Coastal Highway",
+          "addressLocality": "Lewes",
+          "addressRegion": "Delaware",
+          "postalCode": "19958",
+          "addressCountry": "US"
+        }
+      ],
+      "areaServed": [
+        "Worldwide",
+        "India",
+        "United States",
+        "European Union",
+        "United Kingdom",
+        "Australia",
+        "Canada",
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Brazil",
+        "New Zealand"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nkbregovanta.com/#website",
+      "url": "https://www.nkbregovanta.com",
+      "name": "NKB Regovanta",
+      "alternateName": ["NKB Regovanta Solutions", "nkbregovanta", "Regovanta"],
+      "publisher": {
+        "@id": "https://www.nkbregovanta.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
   ]
 };
 
@@ -153,13 +249,52 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXGJHBKJ');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLQ56M50KG" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BLQ56M50KG');`,
+          }}
+        />
+        {/* End Google tag (gtag.js) */}
+
         <HeadContent />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var l=localStorage.getItem("nkb_selected_lang");if(l==="ar"){document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");}}catch(e){}`,
+          }}
+        />
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
         />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PXGJHBKJ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
@@ -167,11 +302,243 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function ClientSeoManager() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (pathname.startsWith("/admin")) return;
+
+    const cleanPath = pathname.replace(/\/$/, "") || "/";
+    async function loadSeo() {
+      try {
+        const { data } = await supabase
+          .from("seo_meta")
+          .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description")
+          .eq("target_url", cleanPath)
+          .maybeSingle();
+
+        const targetCanonical = data?.canonical_url || `https://www.nkbregovanta.com${cleanPath}`;
+        let canonicalEl = document.querySelector('link[rel="canonical"]');
+        if (!canonicalEl) {
+          canonicalEl = document.createElement("link");
+          canonicalEl.setAttribute("rel", "canonical");
+          document.head.appendChild(canonicalEl);
+        }
+        canonicalEl.setAttribute("href", targetCanonical);
+
+        if (!data) return;
+
+        if (data.seo_title) {
+          document.title = data.seo_title;
+        }
+
+        if (data.meta_description) {
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) {
+            metaDesc.setAttribute("content", data.meta_description);
+          }
+        }
+
+        if (data.og_title || data.seo_title) {
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) {
+            ogTitle.setAttribute("content", data.og_title || data.seo_title);
+          }
+        }
+
+        if (data.og_description || data.meta_description) {
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) {
+            ogDesc.setAttribute("content", data.og_description || data.meta_description);
+          }
+        }
+
+        if (data.twitter_title || data.seo_title) {
+          const twTitle = document.querySelector('meta[name="twitter:title"]');
+          if (twTitle) {
+            twTitle.setAttribute("content", data.twitter_title || data.seo_title);
+          }
+        }
+
+        if (data.twitter_description || data.meta_description) {
+          const twDesc = document.querySelector('meta[name="twitter:description"]');
+          if (twDesc) {
+            twDesc.setAttribute("content", data.twitter_description || data.meta_description);
+          }
+        }
+      } catch {
+        // Silently continue if Supabase is offline
+      }
+    }
+
+    loadSeo();
+  }, [pathname]);
+
+  return null;
+}
+
+function TopProgressBar() {
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+  const [visible, setVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let t1: ReturnType<typeof setTimeout> | undefined;
+    let t2: ReturnType<typeof setTimeout> | undefined;
+
+    if (isLoading) {
+      setVisible(true);
+      setProgress(20);
+      t1 = setTimeout(() => setProgress(50), 100);
+      t2 = setTimeout(() => setProgress(80), 300);
+    } else if (visible) {
+      setProgress(100);
+      timer = setTimeout(() => {
+        setVisible(false);
+        setProgress(0);
+      }, 250);
+    }
+
+    return () => {
+      if (t1) clearTimeout(t1);
+      if (t2) clearTimeout(t2);
+      if (timer) clearTimeout(timer);
+    };
+  }, [isLoading, visible]);
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className="fixed top-0 left-0 right-0 h-[3px] z-[99999] pointer-events-none transition-all duration-300 ease-out"
+      style={{
+        width: `${progress}%`,
+        background: "linear-gradient(90deg, #dca85b, #3b82f6, #0b3a96)",
+        boxShadow: "0 0 10px rgba(11, 58, 150, 0.7)",
+      }}
+    />
+  );
+}
+
+function NetworkStatusMonitor() {
+  const [isOffline, setIsOffline] = useState(false);
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleOffline = () => {
+      setIsOffline(true);
+      toast.error("You are offline. Please check your internet connection.", {
+        id: "offline-status",
+        duration: 8000,
+      });
+    };
+
+    const handleOnline = () => {
+      setIsOffline(false);
+      toast.success("Internet connection restored.", {
+        id: "offline-status",
+        duration: 4000,
+      });
+    };
+
+    if (!navigator.onLine) {
+      setIsOffline(true);
+    }
+
+    // Network Information API check for slow 2G/3G connections
+    const conn = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+    if (conn) {
+      const checkSpeed = () => {
+        if (conn.effectiveType === "slow-2g" || conn.effectiveType === "2g") {
+          toast.warning("Slow internet detected. Pages and media may take longer to load.", {
+            id: "slow-conn-notice",
+            duration: 6000,
+          });
+        }
+      };
+      checkSpeed();
+      conn.addEventListener?.("change", checkSpeed);
+      window.addEventListener("offline", handleOffline);
+      window.addEventListener("online", handleOnline);
+
+      return () => {
+        window.removeEventListener("offline", handleOffline);
+        window.removeEventListener("online", handleOnline);
+        conn.removeEventListener?.("change", checkSpeed);
+      };
+    }
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
+  }, []);
+
+  // Show helpful prompt if route navigation takes longer than 4 seconds
+  useEffect(() => {
+    if (!isLoading) return;
+    const slowTimer = setTimeout(() => {
+      toast.info("Connection seems slow. Loading page resources...", {
+        id: "nav-slow-toast",
+        duration: 4500,
+      });
+    }, 4000);
+
+    return () => clearTimeout(slowTimer);
+  }, [isLoading]);
+
+  if (!isOffline) return null;
+
+  return (
+    <div className="fixed bottom-4 left-4 z-[99999] flex items-center gap-2.5 rounded-lg bg-red-600 px-4 py-2.5 text-xs font-semibold text-white shadow-xl animate-in slide-in-from-bottom-3 duration-300">
+      <WifiOff className="h-4 w-4 animate-pulse shrink-0" />
+      <span>You are offline. Please check your internet connection.</span>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
+
+  useEffect(() => {
+    // Automatically recover from temporary network glitches or stale chunk preloads
+    const handlePreloadError = () => {
+      const key = "nkb_preload_retry";
+      const lastRetry = sessionStorage.getItem(key);
+      const now = Date.now();
+      if (!lastRetry || now - parseInt(lastRetry, 10) > 15000) {
+        sessionStorage.setItem(key, now.toString());
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener("vite:preloadError", handlePreloadError);
+    return () => window.removeEventListener("vite:preloadError", handlePreloadError);
+  }, []);
+
+  if (isAdmin) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <div className="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+          <Outlet />
+        </div>
+        <Toaster position="top-right" richColors />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
+      <TopProgressBar />
+      <NetworkStatusMonitor />
+      <ClientSeoManager />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

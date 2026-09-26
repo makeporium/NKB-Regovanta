@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
     Globe2,
@@ -12,18 +13,79 @@ import {
     Pill,
     Users,
     Layers,
+    ChevronLeft,
+    ChevronRight,
+    Search,
+    SlidersHorizontal,
+    Factory,
+    Truck,
+    Headphones,
+    Building2,
+    Sparkles,
+    Quote,
+    Star,
+    CheckCircle2,
+    MessageSquareQuote,
 } from "lucide-react";
-import heroImage from "@/assets/hero-global.png";
+import heroImage from "@/assets/hero-global.optimized.webp";
+import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
+import imgCleanroomSolutions from "@/assets/mfg-cleanroom-solutions.jpg";
+import imgHealthcareProducts from "@/assets/mfg-healthcare-products.jpg";
+import imgComplianceSupport from "@/assets/mfg-compliance-support.optimized.webp";
+
+// Client Logos
+import logoIpca from "@/assets/clients/ipca.png";
+import logoCipla from "@/assets/clients/cipla.png";
+import logoFelix from "@/assets/clients/felix.png";
+import logoPar from "@/assets/clients/par.png";
+import logoAstrazeneca from "@/assets/clients/astrazeneca.png";
+import logoAcg from "@/assets/clients/acg.png";
+import logoProcon from "@/assets/clients/procon.png";
+import logoDrReddys from "@/assets/clients/dr-reddys.png";
+import logoIsro from "@/assets/clients/isro.png";
+import logoNovartis from "@/assets/clients/novartis.png";
+import logoUnichem from "@/assets/clients/unichem.png";
+import logoEncube from "@/assets/clients/encube.png";
+import logoKnovea from "@/assets/clients/knovea.png";
+import logoSymbiotec from "@/assets/clients/symbiotec.png";
+import logoPfizer from "@/assets/clients/pfizer.png";
+import logoIimIndore from "@/assets/clients/iim-indore.png";
+import logoRoche from "@/assets/clients/roche.png";
+import logoAbbott from "@/assets/clients/abbott.png";
+import logoKusum from "@/assets/clients/kusum.png";
+import logoTcs from "@/assets/clients/tcs.png";
+import logoGenpact from "@/assets/clients/genpact.svg";
+import logoWipro from "@/assets/clients/wipro.svg";
+import logoIso9001 from "@/assets/clients/iso-9001.png";
+import logoUngm from "@/assets/clients/ungm.png";
+import logoFieo from "@/assets/clients/fieo.png";
+import logoAsq from "@/assets/clients/asq.png";
+import logoDuns from "@/assets/clients/duns.png";
 
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
+            { title: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             {
                 name: "description",
                 content:
-                    "Regulatory, quality and market access consulting for Medical Devices, IVDs, Pharmaceuticals and Cosmetics. From first idea to global market access.",
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
+            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            {
+                property: "og:description",
+                content:
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            { name: "twitter:description", content: "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com" },
         ],
     }),
     component: Index,
@@ -33,6 +95,7 @@ const expertise = [
     {
         title: "Medical Devices & IVDs",
         icon: ClipboardCheck,
+        link: "/services" as const,
         items: [
             "Regulatory Strategy",
             "Product Classification",
@@ -46,6 +109,7 @@ const expertise = [
     {
         title: "Pharmaceuticals & Drugs",
         icon: Pill,
+        link: "/services/drug-licenses-importers-india-form-10-form-41" as const,
         items: [
             "CDSCO Drug Import Licensing",
             "Registration Certificate (Form 41)",
@@ -59,6 +123,7 @@ const expertise = [
     {
         title: "Quality Systems",
         icon: ShieldCheck,
+        link: "/services/iso-13485-implementation-certification-consulting" as const,
         items: [
             "ISO 13485 Implementation",
             "MDSAP Support",
@@ -72,6 +137,7 @@ const expertise = [
     {
         title: "Product & Market Access",
         icon: TrendingUp,
+        link: "/services/global-market-access-consulting-medical-devices" as const,
         items: [
             "Design Controls",
             "ISO 14971 Risk Management",
@@ -85,6 +151,7 @@ const expertise = [
     {
         title: "Cosmetics",
         icon: FlaskConical,
+        link: "/industries/cosmetics" as const,
         items: [
             "Regulatory Assessment",
             "Product Compliance",
@@ -96,50 +163,356 @@ const expertise = [
     },
 ];
 
+const manufacturingSolutions = [
+    {
+        title: "Pharmaceutical Equipment",
+        image: imgPharmaEquipment,
+        items: [
+            "De-dusters, Tray Dryers",
+            "Octagonal, V-Type Blenders",
+            "Mass Mixers, Pass Boxes",
+            "Powder Filling Machines",
+            "Material Handling Solutions",
+        ],
+    },
+    {
+        title: "Cleanroom & Facility Solutions",
+        image: imgCleanroomSolutions,
+        items: [
+            "SS Tables, Workstations",
+            "Trolleys, Lockers, Containers",
+            "Wash Basins, Wall Guards",
+            "Cross-over Benches",
+            "Electrical Panels, Ladders",
+        ],
+    },
+    {
+        title: "Healthcare & Surgical Products",
+        image: imgHealthcareProducts,
+        items: [
+            "Sterile Masks, Surgical Aprons",
+            "Bouffant Caps, Shoe Covers",
+            "Sterile Hand Gloves",
+            "Other Healthcare Consumables",
+        ],
+    },
+    {
+        title: "Technical & Compliance Support",
+        image: imgComplianceSupport,
+        items: [
+            "Technical Documentation",
+            "Product Specifications",
+            "Quality & Compliance Support",
+            "Customer-specific Solutions",
+        ],
+    },
+];
+
+const endToEndApproach = [
+    {
+        step: "1",
+        title: "1. UNDERSTAND",
+        description: "We understand your technical, operational and commercial requirements.",
+        icon: Search,
+    },
+    {
+        step: "2",
+        title: "2. DEFINE",
+        description: "We define the right solution, specifications and execution plan.",
+        icon: SlidersHorizontal,
+    },
+    {
+        step: "3",
+        title: "3. ENGINEER & MANUFACTURE",
+        description: "We engineer and manufacture through established capabilities.",
+        icon: Factory,
+    },
+    {
+        step: "4",
+        title: "4. QUALITY & DOCUMENTATION",
+        description: "We ensure quality, testing, documentation and compliance.",
+        icon: ClipboardCheck,
+    },
+    {
+        step: "5",
+        title: "5. DELIVER",
+        description: "We coordinate logistics and ensure on-time delivery.",
+        icon: Truck,
+    },
+    {
+        step: "6",
+        title: "6. SUPPORT",
+        description: "We provide ongoing support for your business needs.",
+        icon: Headphones,
+    },
+];
+
+const clientPartners = [
+    { name: "Roche", subtitle: "F. Hoffmann-La Roche AG", badge: "Diagnostics & Pharma", logo: logoRoche },
+    { name: "Abbott", subtitle: "Abbott Laboratories", badge: "Medical Devices & IVDs", logo: logoAbbott },
+    { name: "Ipca", subtitle: "Ipca Laboratories Ltd.", badge: "Pharmaceuticals", logo: logoIpca },
+    { name: "Cipla", subtitle: "Cipla Global Healthcare", badge: "Pharmaceuticals", logo: logoCipla },
+    { name: "Felix", subtitle: "Felix Generics Pvt Ltd", badge: "Generics", logo: logoFelix },
+    { name: "PAR", subtitle: "PAR Pharmaceutical", badge: "Global Pharma", logo: logoPar },
+    { name: "AstraZeneca", subtitle: "AstraZeneca International", badge: "Biopharma", logo: logoAstrazeneca },
+    { name: "ACG", subtitle: "ACG Worldwide", badge: "Machinery & Capsules", logo: logoAcg },
+    { name: "PV PROCON VENTURES", subtitle: "Procon Ventures", badge: "Engineering", logo: logoProcon },
+    { name: "Dr.Reddy's", subtitle: "Dr. Reddy's Laboratories", badge: "Pharmaceuticals", logo: logoDrReddys },
+    { name: "इसरो isro", subtitle: "Indian Space Research Organisation", badge: "Aerospace & Tech", logo: logoIsro },
+    { name: "NOVARTIS", subtitle: "Novartis Healthcare", badge: "Global Healthcare", logo: logoNovartis },
+    { name: "UNICHEM LABORATORIES LTD.", subtitle: "Unichem Laboratories", badge: "Formulations", logo: logoUnichem },
+    { name: "Encube", subtitle: "Encube Ethicals", badge: "Topicals & Pharma", logo: logoEncube },
+    { name: "Knovea", subtitle: "Knovea Pharmaceuticals", badge: "Healthcare", logo: logoKnovea },
+    { name: "SYMBIOTEC PHARMALAB (P) LIMITED", subtitle: "Symbiotec Pharmalab", badge: "Steroid APIs", logo: logoSymbiotec },
+    { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
+    { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
+    { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
+    { name: "TCS", subtitle: "Tata Consultancy Services", badge: "Life Sciences & Tech", logo: logoTcs },
+    { name: "ISO 9001:2015", subtitle: "Quality Management Certified", badge: "QMS Certified", logo: logoIso9001 },
+    { name: "UNGM", subtitle: "United Nations Global Marketplace", badge: "UN Procurement", logo: logoUngm },
+    { name: "FIEO", subtitle: "Federation of Indian Export Organisations", badge: "Govt. of India / ISO 9001", logo: logoFieo },
+    { name: "ASQ", subtitle: "American Society for Quality™", badge: "Quality & Standards", logo: logoAsq },
+    { name: "Dun & Bradstreet", subtitle: "D-U-N-S® Registered™", badge: "Verified Business", logo: logoDuns },
+];
+
+const supportedCountries = [
+    { name: "India", code: "in", auth: "CDSCO", to: "/services/india" },
+    { name: "USA", code: "us", auth: "FDA", to: "/services/usa" },
+    { name: "EU", code: "eu", auth: "CE MDR/IVDR", to: "/services/eu" },
+    { name: "UK", code: "gb", auth: "MHRA", to: "/services/uk" },
+    { name: "Canada", code: "ca", auth: "Health Canada", to: "/services/canada" },
+    { name: "Australia", code: "au", auth: "TGA", to: "/services/australia" },
+    { name: "Brazil", code: "br", auth: "ANVISA", to: "/services/brazil" },
+    { name: "Saudi Arabia", code: "sa", auth: "SFDA", to: "/services/saudi-arabia" },
+    { name: "UAE", code: "ae", auth: "MOHAP", to: "/services/uae" },
+    { name: "New Zealand", code: "nz", auth: "Medsafe", to: "/services/new-zealand" },
+];
+
+const clientTestimonials = [
+    {
+        id: "kusum",
+        name: "N. CHANDRA SHEKHAR",
+        title: "Executive Vice President",
+        company: "Kusum Healthcare Pvt Ltd",
+        sector: "Global Pharmaceuticals",
+        location: "India & International Markets",
+        initials: "CS",
+        logo: logoKusum,
+        quote:
+            "What stands out about NKB Regovanta is their structured and solution-oriented approach to regulatory challenges. They bring clarity to complex requirements, maintain strong attention to compliance detail, and work with a high level of ownership and responsiveness throughout the engagement.",
+        keyStrengths: ["Structured Approach", "Solution-Oriented", "High Ownership & Detail"],
+        tag: "Pharmaceutical Regulatory Strategy",
+    },
+    {
+        id: "vitacon",
+        name: "Rolandas Ragaisis",
+        title: "Managing Director",
+        company: "UAB Vitacon LT",
+        sector: "Ultrasound & Medical Devices",
+        location: "Lithuania, European Union",
+        countryCode: "lt",
+        initials: "RR",
+        quote:
+            "NKB Regovanta has demonstrated strong regulatory and quality expertise, combined with a highly practical and responsive working style. Their structured approach to gap assessment, documentation, compliance readiness and regulatory strategy has helped us manage complex requirements with greater clarity and confidence.",
+        keyStrengths: ["Regulatory & Quality Expertise", "Gap Assessment & QMS", "Practical & Responsive"],
+        tag: "Medical Devices & EU MDR",
+    },
+    {
+        id: "tcs",
+        name: "Prashant Singh",
+        title: "Lead Consultant",
+        company: "TCS",
+        sector: "Life Sciences & Digital Health",
+        location: "India & Global",
+        initials: "PS",
+        logo: logoTcs,
+        quote:
+            "NKB Regovanta has a good understanding of the regulatory requirements applicable to medical devices and IVD products. I have appreciated their practical approach, attention to detail, and the way they keep the process clear and well coordinated. They are a dependable team for regulatory and compliance support.",
+        keyStrengths: ["Medical Device & IVD", "Process Clarity", "Dependable Support"],
+        tag: "Medical Devices & IVD Compliance",
+    },
+    {
+        id: "genpact",
+        name: "Mohd Farrukh Khan",
+        title: "Senior Manager",
+        company: "Genpact",
+        sector: "Healthcare & Life Sciences Regulatory",
+        location: "Global Operations",
+        initials: "FK",
+        logo: logoGenpact,
+        quote:
+            "My experience with NKB Regovanta has been positive, particularly in the area of EU IVDR requirements. Their team has been responsive and clear in explaining the regulatory expectations and documentation requirements. They bring a practical approach to IVDR projects and are easy to work with.",
+        keyStrengths: ["EU IVDR Requirements", "Clear Documentation", "Practical & Responsive"],
+        tag: "EU IVDR Compliance",
+    },
+    {
+        id: "wipro",
+        name: "Parag Giri",
+        title: "Senior Project Manager",
+        company: "Wipro",
+        sector: "Medical Device Engineering",
+        location: "India & Global",
+        initials: "PG",
+        logo: logoWipro,
+        quote:
+            "I worked with NKB Regovanta in connection with regulatory consultancy support for medical device projects. The team was approachable and willing to work through the details with the project team. Their inputs were useful in understanding the regulatory aspects and planning the next steps.",
+        keyStrengths: ["Approachable Team", "Actionable Guidance", "Strategic Project Planning"],
+        tag: "Medical Device Strategy",
+    },
+];
+
 function Index() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const updateScrollState = () => {
+        if (!scrollRef.current) return;
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        setCanScrollLeft(scrollLeft > 10);
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 15);
+
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
+        const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+        setActiveIndex(Math.min(Math.max(newIndex, 0), clientTestimonials.length - 1));
+    };
+
+    const scrollToIndex = (index: number) => {
+        if (!scrollRef.current) return;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
+        scrollRef.current.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: "smooth",
+        });
+        setActiveIndex(index);
+    };
+
+    const scroll = (direction: "left" | "right") => {
+        if (!scrollRef.current) return;
+        const cardWidth = scrollRef.current.firstElementChild?.clientWidth || 320;
+        const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 24;
+        const offset = cardWidth + gap;
+        scrollRef.current.scrollBy({
+            left: direction === "left" ? -offset : offset,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        if (isHovered) return;
+        const timer = setInterval(() => {
+            if (!scrollRef.current) return;
+            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+            if (scrollLeft >= scrollWidth - clientWidth - 25) {
+                scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                scroll("right");
+            }
+        }, 5500);
+        return () => clearInterval(timer);
+    }, [isHovered]);
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ProfessionalService",
+                        "name": "NKB Regovanta",
+                        "alternateName": "NKB Regovanta Solutions",
+                        "url": "https://www.nkbregovanta.com",
+                        "logo": "https://www.nkbregovanta.com/og-image.png",
+                        "image": "https://www.nkbregovanta.com/og-image.png",
+                        "description": "Global regulatory consulting firm specialising in medical device registration, IVD compliance, pharmaceutical licensing, and ISO 13485 quality management across India (CDSCO), USA (FDA), EU (MDR/IVDR), UK (MHRA), and international markets.",
+                        "serviceType": [
+                            "Medical Device Regulatory Consulting",
+                            "FDA 510(k) Submission",
+                            "CDSCO Medical Device Licensing",
+                            "EU MDR CE Marking",
+                            "ISO 13485 QMS Implementation",
+                            "MDSAP Audit Readiness"
+                        ],
+                        "areaServed": ["India", "United States", "European Union", "United Kingdom", "Canada", "Australia", "Brazil", "Saudi Arabia", "UAE"],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressCountry": "IN"
+                        }
+                    })
+                }}
+            />
             {/* ── HERO ── */}
             <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-2 lg:pb-2 pt-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start pt-0">
 
                         {/* Left column — content, restoring top padding since it was fine */}
-                        <div className="max-w-xl pt-6 lg:pt-10">
+                        <div className="max-w-2xl pt-6 lg:pt-10">
                             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">
-                                Regulatory. Quality. Market Access.
+                                Regulatory. Quality. Manufacturing. Market Access.
                             </p>
 
-                            <h1 className="font-display font-extrabold leading-[1.05] text-navy">
-                                <span className="block whitespace-nowrap" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    FROM FIRST IDEA TO
-                                </span>
-                                <span className="block whitespace-nowrap text-blue-700" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}>
-                                    GLOBAL MARKET ACCESS
-                                </span>
+                            <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
+                                Global Medical Device Regulatory &amp; Market Access Consulting
                             </h1>
-
-                            <p className="mt-4 text-[16px] font-semibold text-navy leading-snug">
-                                Regulatory, Quality &amp; Market Access Solutions for Medical Devices,<br />IVDs, Cosmetics &amp; Pharmaceuticals.
+                            <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal">
+                                Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing
                             </p>
-                            <p className="mt-3 text-[13.5px] leading-relaxed text-navy/70 font-medium">
-                                We help startups and manufacturers navigate regulatory pathways,
-                                build compliant quality systems and bring innovative products to
-                                international markets.
+                            <p className="mt-1.5 text-[13px] sm:text-[14.5px] md:text-[15.5px] lg:text-[14.5px] xl:text-[16px] font-bold text-blue-700 leading-snug">
+                                From First Idea to Global Market Access.
                             </p>
 
-                            <div className="mt-6 flex flex-wrap gap-3">
+                            <p className="mt-4 text-[14px] sm:text-[14.5px] font-medium text-navy/80 leading-relaxed">
+                                NKB Regovanta is a premier global <strong>medical device consultant</strong> and regulatory affairs <strong>consultancy</strong>. We provide end-to-end regulatory strategy, testing coordination, technical documentation, and market access for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics across India (CDSCO), the United States (USFDA 510 k / 510k), and international markets.
+                            </p>
+                            <p className="mt-3 text-[13px] leading-relaxed text-navy/65 font-medium">
+                                As a trusted medical device consultancy, our senior consultants support manufacturers with USFDA 510(k) clearances, eSTAR submissions, CDSCO manufacturing &amp; import licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS certification.
+                            </p>
+
+                            {/* Regulatory Authorities Strip */}
+                            <div className="mt-4 flex flex-wrap gap-x-2 gap-y-1 items-center">
+                                {([
+                                    { label: "CDSCO India", to: "/services/india" },
+                                    { label: "USFDA 510(k)", to: "/services/usa" },
+                                    { label: "US FDA De Novo & PMA", to: "/services/usa" },
+                                    { label: "EU MDR", to: "/services/eu" },
+                                    { label: "EU IVDR", to: "/services/eu" },
+                                    { label: "UK MHRA", to: "/services/uk" },
+                                    { label: "Health Canada", to: "/services/canada" },
+                                    { label: "TGA", to: "/services/australia" },
+                                    { label: "ANVISA", to: "/services/brazil" },
+                                    { label: "SFDA", to: "/services/saudi-arabia" },
+                                    { label: "MOHAP", to: "/services/uae" },
+                                ] as const).map(({ label, to }, i, arr) => (
+                                    <span key={label} className="flex items-center gap-x-2">
+                                        <Link to={to} className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{label}</Link>
+                                        {i < arr.length - 1 && <span className="text-navy/25 text-[10px]">|</span>}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-3 items-center">
                                 <Link
                                     to="/contact"
-                                    className="inline-flex items-center gap-2 bg-navy px-5 py-2.5 text-[12.5px] font-semibold text-white hover:bg-navy-deep transition-colors rounded-[2px]"
+                                    className="inline-flex items-center gap-2 bg-navy px-4.5 py-2.5 text-[12.5px] font-semibold text-white hover:bg-navy-deep transition-all shadow-2xs hover:shadow-xs rounded-[2px]"
                                 >
                                     Discuss Your Regulatory Pathway <ArrowRight className="h-3.5 w-3.5" />
                                 </Link>
                                 <Link
                                     to="/services"
-                                    className="inline-flex items-center gap-2 border border-navy/60 bg-white px-5 py-2.5 text-[12.5px] font-semibold text-navy hover:bg-slate-50 transition-colors rounded-[2px]"
+                                    className="inline-flex items-center gap-2 border border-navy/60 bg-white px-4.5 py-2.5 text-[12.5px] font-semibold text-navy hover:bg-slate-50 transition-all shadow-2xs rounded-[2px]"
                                 >
                                     Explore Our Services <ArrowRight className="h-3.5 w-3.5" />
+                                </Link>
+                                <Link
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
+                                    className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white px-4.5 py-2.5 text-[12.5px] font-semibold transition-all shadow-2xs hover:shadow-xs rounded-[2px]"
+                                >
+                                    Manufacturing Solutions <ArrowRight className="h-3.5 w-3.5" />
                                 </Link>
                             </div>
                         </div>
@@ -148,10 +521,70 @@ function Index() {
                         <div className="flex justify-center lg:justify-end mt-2 lg:mt-8">
                             <img
                                 src={heroImage}
+                                width={612}
+                                height={408}
+                                fetchPriority="high"
                                 alt="Global regulatory compliance for medical devices"
                                 className="w-full max-w-[580px] object-contain"
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── COUNTRIES WE SUPPORT (CLEAN INTEGRATED ROUNDED CARDS) ── */}
+            <section className="bg-gradient-to-b from-[#eef4ff] via-white to-slate-50 border-y border-gray-200/80 py-7 sm:py-8 relative overflow-hidden">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-5 pb-3 border-b border-gray-200/70">
+                        <div className="flex items-center gap-2.5 flex-wrap">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0b3a96]/10 text-[#0b3a96] text-[11px] font-extrabold uppercase tracking-wider border border-[#0b3a96]/20">
+                                <Globe2 className="h-3.5 w-3.5" />
+                                Countries We Support
+                            </span>
+                            <span className="hidden sm:inline text-navy/20">|</span>
+                            <span className="hidden sm:inline text-xs font-semibold text-navy/70">
+                                Medical Device, IVD, Pharma &amp; Cosmetics Regulatory Approvals
+                            </span>
+                        </div>
+
+                        <Link
+                            to="/markets"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3a96] hover:text-[#082b70] transition-colors self-start sm:self-auto group"
+                        >
+                            <span>View All Supported Markets</span>
+                            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+
+                    {/* 10 Countries in clean rounded circle cards */}
+                    <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-2.5 sm:gap-3.5">
+                        {supportedCountries.map((c) => (
+                            <Link
+                                key={c.code}
+                                to={c.to}
+                                className="group flex flex-col items-center justify-center p-3 rounded-2xl bg-white hover:bg-blue-50/40 border border-gray-200 hover:border-[#0b3a96]/40 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center"
+                            >
+                                {/* Clean Circular Flag with shadow */}
+                                <div className="w-12 h-12 rounded-full p-0.5 bg-white shadow-xs border border-gray-200 group-hover:border-[#0b3a96]/50 group-hover:scale-105 transition-all mb-2 flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src={`https://flagcdn.com/w80/${c.code}.png`}
+                                        srcSet={`https://flagcdn.com/w160/${c.code}.png 2x`}
+                                        alt={`${c.name} Flag`}
+                                        className="w-full h-full object-cover rounded-full"
+                                        loading="lazy"
+                                    />
+                                </div>
+
+                                {/* Country Name */}
+                                <span className="text-[12px] font-extrabold text-navy group-hover:text-[#0b3a96] leading-tight transition-colors">
+                                    {c.name}
+                                </span>
+                                {/* Regulatory Authority */}
+                                <span className="mt-0.5 text-[9.5px] font-semibold text-navy/50 group-hover:text-[#0b3a96]/70 transition-colors leading-tight">
+                                    {c.auth}
+                                </span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -170,7 +603,7 @@ function Index() {
                         {/* Projects Completed */}
                         <div className="flex flex-col items-center text-center p-6 xl:p-8">
                             <CheckCircle className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
-                            <p className="text-[26px] font-bold leading-none mb-2">51+</p>
+                            <p className="text-[26px] font-bold leading-none mb-2">350+</p>
                             <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">Completed</p>
                             <p className="text-[12px] opacity-80 leading-snug">Regulatory &amp; Quality<br/>Projects</p>
                         </div>
@@ -212,11 +645,11 @@ function Index() {
 
                     <div className="text-center mb-12">
                         <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-accent mb-3">OUR EXPERTISE</p>
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-                            End-to-End Regulatory, Quality &amp; Market Access Support
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight max-w-4xl mx-auto leading-tight">
+                            End-to-End Regulatory, Quality, Manufacturing &amp; Market Access Support
                         </h2>
-                        <p className="mt-3 text-sm text-muted-foreground max-w-2xl mx-auto">
-                            Integrated compliance, quality management, and commercial market-entry across four global healthcare verticals.
+                        <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                            Integrated compliance, quality management, manufacturing solutions, and commercial market-entry across global healthcare verticals.
                         </p>
                         <div className="mx-auto mt-4 h-1 w-16 bg-accent rounded-full" />
                     </div>
@@ -247,7 +680,7 @@ function Index() {
 
                                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <Link
-                                        to="/services"
+                                        to={e.link}
                                         className="text-xs font-bold text-[#0b3a96] group-hover:text-[#082b70] inline-flex items-center gap-1 transition-colors"
                                     >
                                         Learn More <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
@@ -264,6 +697,388 @@ function Index() {
                         >
                             Explore Complete Services Directory <ArrowRight className="h-4 w-4" />
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── PRODUCT & MANUFACTURING SOLUTIONS ── */}
+            <section className="py-6 sm:py-10 bg-surface/30 border-b border-border/40">
+                <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-8">
+                    <div className="bg-white rounded-3xl border border-gray-200/90 p-5 sm:p-8 lg:p-10 shadow-xs">
+
+                        {/* Header with Title + CTA Button */}
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-gray-100">
+                            <div className="max-w-3xl">
+                                <p className="text-[11.5px] font-bold uppercase tracking-[0.25em] text-[#1b7941] mb-2">
+                                    OUR INTEGRATED CAPABILITY
+                                </p>
+                                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-navy tracking-tight leading-tight">
+                                    Integrated Manufacturing &amp; Facility Solutions
+                                </h2>
+                                <p className="mt-2 text-[14.5px] sm:text-[15.5px] text-gray-800 leading-relaxed font-medium">
+                                    Integrated equipment, manufacturing, cleanroom and compliance solutions for pharmaceutical, medical-device and healthcare organizations.
+                                </p>
+                            </div>
+                            <div>
+                                <Link
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
+                                    className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white font-bold text-xs sm:text-[13.5px] px-6 py-3 rounded-md shadow-sm transition-all hover:shadow-md shrink-0 group whitespace-nowrap"
+                                >
+                                    Explore Manufacturing Solutions
+                                    <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* 4 Cards Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-8 sm:mb-10">
+                            {manufacturingSolutions.map((sol) => (
+                                <div
+                                    key={sol.title}
+                                    className="bg-white rounded-2xl border border-gray-200/80 overflow-hidden shadow-2xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col group"
+                                >
+                                    <div className="h-44 sm:h-48 w-full overflow-hidden bg-slate-100 relative">
+                                        <img
+                                            src={sol.image}
+                                            loading="lazy"
+                                            decoding="async"
+                                            alt={sol.title}
+                                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                    <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="text-[14.5px] sm:text-[15.5px] font-extrabold text-navy leading-snug tracking-tight mb-3.5 uppercase">
+                                                {sol.title}
+                                            </h3>
+                                            <ul className="space-y-2.5">
+                                                {sol.items.map((item) => (
+                                                    <li key={item} className="flex items-start gap-2 text-[13px] sm:text-[13.5px] text-gray-800 font-medium leading-relaxed">
+                                                        <span className="text-[#0b3a96] font-black text-sm leading-none mt-0.5 shrink-0">•</span>
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* OUR END-TO-END APPROACH */}
+                        <div className="pt-6 sm:pt-7 border-t border-gray-100">
+                            <div className="text-center mb-6 sm:mb-8">
+                                <p className="text-[11.5px] sm:text-[12px] font-extrabold uppercase tracking-[0.25em] text-navy">
+                                    OUR END-TO-END APPROACH
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 sm:gap-6 relative items-start">
+                                {endToEndApproach.map((step, idx) => (
+                                    <div key={step.step} className="flex flex-col items-start relative group">
+                                        <div className="flex items-start gap-2.5 w-full mb-2.5">
+                                            <div className="w-10 h-10 rounded-full bg-[#1b7941] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#156334] transition-colors mt-0.5">
+                                                <step.icon className="h-4.5 w-4.5 stroke-[2]" />
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                                <h4 className="text-[12.5px] font-extrabold text-navy uppercase tracking-tight leading-snug">
+                                                    {step.title}
+                                                </h4>
+                                            </div>
+                                            {idx < 5 && (
+                                                <ChevronRight className="hidden lg:block h-4 w-4 text-gray-400 shrink-0 mt-1" />
+                                            )}
+                                        </div>
+                                        <p className="text-[12.5px] text-gray-700 font-medium leading-relaxed">
+                                            {step.description}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* ── OUR CLIENTS & PARTNERS ── */}
+            <section className="py-12 sm:py-16 lg:py-20 bg-white border-t border-b border-gray-200">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-[#0b3a96]/10 text-[#0b3a96] border border-[#0b3a96]/20 mb-3 shadow-2xs">
+                            <Sparkles className="h-3.5 w-3.5 text-[#0b3a96]" />
+                            Our Clients &amp; Partners
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                            Trusted by Leading Organizations
+                        </h2>
+                        <p className="mt-3 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                            Powering global regulatory approvals, CDSCO &amp; US FDA licensing, quality systems (ISO 13485 / MDSAP),
+                            and precision manufacturing solutions for premier institutions worldwide.
+                        </p>
+                    </div>
+
+                    {/* Client Cards Grid */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
+                        {clientPartners.map((client) => (
+                            <div
+                                key={client.name}
+                                className="bg-surface/50 hover:bg-white rounded-2xl border border-gray-200/80 p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-2xs hover:shadow-lg hover:border-[#0b3a96]/40 hover:-translate-y-0.5 transition-all duration-300 group"
+                            >
+                                <div className="h-20 w-full rounded-xl bg-white border border-gray-100/90 shadow-2xs flex items-center justify-center p-3 mb-4 group-hover:shadow-xs group-hover:scale-[1.03] transition-all duration-300">
+                                    <img
+                                        src={client.logo}
+                                            loading="lazy"
+                                            decoding="async"
+                                        alt={client.name}
+                                        className="max-h-14 max-w-[90%] object-contain"
+                                    />
+                                </div>
+                                <h3 className="text-[14.5px] sm:text-[15px] font-extrabold text-navy leading-tight group-hover:text-[#0b3a96] transition-colors">
+                                    {client.name}
+                                </h3>
+                                <p className="text-[11px] sm:text-[11.5px] text-gray-500 font-medium mt-1 leading-snug">
+                                    {client.subtitle}
+                                </p>
+                                <span className="mt-2.5 text-[9.5px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700">
+                                    {client.badge}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Trusted By Tagline */}
+                    <div className="mt-10 sm:mt-12 text-center">
+                        <div className="inline-flex items-center gap-2.5 text-sm sm:text-base font-extrabold text-[#0b3a96] bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 px-8 py-3 rounded-full border border-gray-200 shadow-2xs">
+                            <Sparkles className="h-4 w-4 text-[#dca85b] shrink-0" />
+                            <span>Growing alongside leaders in healthcare, diagnostics and life sciences.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── CLIENT TESTIMONIALS & ENDORSEMENTS ── */}
+            <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-slate-50 via-[#f5f8fd] to-white border-b border-gray-200 relative overflow-hidden">
+                {/* Background Ambient Glow Orbs */}
+                <div className="absolute top-12 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
+                <div className="absolute bottom-12 right-10 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none -z-0" />
+                <Quote className="absolute top-10 right-10 h-72 w-72 text-blue-900/[0.02] pointer-events-none -rotate-12 select-none" />
+
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+                    {/* Section Header with Navigation Controls */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+                        <div className="flex-1 max-w-4xl">
+                            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
+                                <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+                                Client Testimonials &amp; Endorsements
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1 lg:whitespace-nowrap">
+                                What Industry Leaders Say About Us
+                            </h2>
+                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed max-w-2xl">
+                                Direct feedback from pharmaceutical executives, enterprise life-science leaders, and medical device innovators who trust NKB Regovanta for regulatory clearance, QMS readiness, and market access.
+                            </p>
+                        </div>
+
+                        {/* Navigation Arrows & Counter */}
+                        <div className="flex items-center gap-3 self-start md:self-end shrink-0">
+                            <span className="text-[11px] font-bold text-gray-400 sm:hidden">
+                                Swipe →
+                            </span>
+                            <span className="text-xs font-black text-gray-500 bg-white border border-gray-200/90 px-3.5 py-2 rounded-xl shadow-2xs select-none">
+                                <span className="text-[#0b3a96] font-extrabold">{activeIndex + 1}</span> of {clientTestimonials.length}
+                            </span>
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => scroll("left")}
+                                    disabled={!canScrollLeft}
+                                    aria-label="Previous Testimonials"
+                                    className="w-11 h-11 rounded-2xl border border-gray-200 bg-white text-navy flex items-center justify-center shadow-2xs hover:bg-[#0b3a96] hover:text-white hover:border-[#0b3a96] disabled:opacity-35 disabled:pointer-events-none transition-all duration-300 active:scale-95 cursor-pointer"
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </button>
+                                <button
+                                    onClick={() => scroll("right")}
+                                    disabled={!canScrollRight}
+                                    aria-label="Next Testimonials"
+                                    className="w-11 h-11 rounded-2xl border border-gray-200 bg-white text-navy flex items-center justify-center shadow-2xs hover:bg-[#0b3a96] hover:text-white hover:border-[#0b3a96] disabled:opacity-35 disabled:pointer-events-none transition-all duration-300 active:scale-95 cursor-pointer"
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Left/Right Scrollable Track with Edge Masks */}
+                    <div className="relative">
+                        {/* Gradient Edge Fade Overlays */}
+                        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-r from-slate-50 via-slate-50/60 to-transparent hidden xl:block" />
+                        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-l from-slate-50 via-slate-50/60 to-transparent hidden xl:block" />
+
+                        {/* Scrollable Track */}
+                        <div
+                            ref={scrollRef}
+                            onScroll={updateScrollState}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                            className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 scrollbar-none [-webkit-overflow-scrolling:touch] touch-pan-x overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        >
+                            {clientTestimonials.map((t) => (
+                                <div
+                                    key={t.id}
+                                    className="w-[84vw] sm:w-[480px] lg:w-[540px] shrink-0 snap-start relative bg-white rounded-3xl border border-gray-200/90 p-6 sm:p-8 shadow-xs hover:shadow-2xl hover:border-[#0b3a96]/40 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between group overflow-hidden"
+                                >
+                                    {/* Top Gradient Accent Line */}
+                                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b]" />
+
+                                    {/* Background Watermark Quote */}
+                                    <Quote className="absolute -bottom-4 -right-4 h-36 w-36 text-blue-50/80 group-hover:text-blue-100/70 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none -z-0 select-none" />
+
+                                    <div className="relative z-10">
+                                        {/* Rating & Category Tag */}
+                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
+                                            <div className="flex items-center gap-1">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star
+                                                        key={i}
+                                                        className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-2xs transition-transform duration-300 group-hover:scale-110"
+                                                        style={{ transitionDelay: `${i * 50}ms` }}
+                                                    />
+                                                ))}
+                                            </div>
+                                            <span className="text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 text-[#0b3a96] border border-blue-100/90 shadow-2xs">
+                                                {t.tag}
+                                            </span>
+                                        </div>
+
+                                        {/* Quote Icon & Verified Badge */}
+                                        <div className="flex items-center justify-between gap-3 mb-5">
+                                            <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0b3a96] group-hover:scale-110 group-hover:bg-[#0b3a96] group-hover:text-white transition-all duration-300 shadow-2xs">
+                                                <Quote className="h-5 w-5 fill-current" />
+                                            </div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
+                                                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                                                Client Testimonial
+                                            </span>
+                                        </div>
+
+                                        {/* Main Quote Text */}
+                                        <blockquote className="text-[15px] sm:text-[16px] text-navy/90 font-normal leading-relaxed italic mb-6 relative z-10 font-serif">
+                                            &ldquo;{t.quote}&rdquo;
+                                        </blockquote>
+
+                                        {/* Key Highlights Tags */}
+                                        <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-gray-100">
+                                            {t.keyStrengths.map((str) => (
+                                                <span
+                                                    key={str}
+                                                    className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-slate-50 text-navy border border-gray-200/80 group-hover:border-[#0b3a96]/30 group-hover:bg-blue-50/50 transition-colors"
+                                                >
+                                                    ✓ {str}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Author Profile Info — Full Width */}
+                                    <div className="relative z-10 pt-5 border-t border-gray-100/90 flex items-center gap-4 mt-auto">
+                                        {t.logo ? (
+                                            <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
+                                                <img
+                                                    src={t.logo}
+                                            loading="lazy"
+                                            decoding="async"
+                                                    alt={t.company}
+                                                    className="max-h-10 max-w-full object-contain"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#0b3a96] to-navy text-white font-black flex items-center justify-center text-sm shadow-2xs shrink-0 border border-blue-400/30 group-hover:scale-105 transition-all duration-300">
+                                                {t.initials}
+                                            </div>
+                                        )}
+                                        <div className="min-w-0 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <h4 className="text-base sm:text-lg font-black text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
+                                                    {t.name}
+                                                </h4>
+                                                {t.countryCode && (
+                                                    <img
+                                                        src={`https://flagcdn.com/w40/${t.countryCode}.png`}
+                                                        alt="Lithuania / EU"
+                                                        title="Lithuania (EU)"
+                                                        className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
+                                                    />
+                                                )}
+                                            </div>
+                                            <p className="text-xs sm:text-[13.5px] font-bold text-gray-700 mt-1 leading-snug">
+                                                {t.title ? `${t.title}, ` : ""}{t.company}
+                                            </p>
+                                            <span className="text-[11px] font-semibold text-[#0b3a96] block mt-0.5">
+                                                {t.sector} · {t.location}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Animated Gradient Underline Bar */}
+                                    <div className="w-0 group-hover:w-full transition-all duration-700 h-0.5 bg-gradient-to-r from-[#0b3a96] via-blue-500 to-[#dca85b] mt-5" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Interactive Pagination Indicators */}
+                    <div className="flex items-center justify-center gap-2.5 mt-8">
+                        {clientTestimonials.map((t, idx) => (
+                            <button
+                                key={t.id}
+                                onClick={() => scrollToIndex(idx)}
+                                aria-label={`Go to testimonial from ${t.name}`}
+                                className={`transition-all duration-500 rounded-full cursor-pointer ${
+                                    activeIndex === idx
+                                        ? "w-9 h-2.5 bg-gradient-to-r from-[#0b3a96] to-blue-500 shadow-2xs"
+                                        : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
+                                }`}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Bottom Trust Action Strip */}
+                    <div className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-br from-navy via-[#0d2857] to-navy-deep text-white p-7 sm:p-9 shadow-xl relative overflow-hidden border border-blue-900/50">
+                        {/* Decorative glow */}
+                        <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#dca85b]/10 rounded-full blur-2xl pointer-events-none" />
+                        <div className="absolute -left-10 -top-10 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
+
+                        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+                            <div className="text-center lg:text-left">
+                                <div className="inline-flex items-center gap-2 text-[#dca85b] text-xs font-black uppercase tracking-wider mb-2">
+                                    <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                                    <span>Experience Since 2018 · 350+ Projects Completed</span>
+                                </div>
+                                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                                    Ready to Experience the Same High Standard of Regulatory Support?
+                                </h3>
+                                <p className="text-xs sm:text-sm text-white/75 mt-1.5 max-w-2xl leading-relaxed">
+                                    Whether you need CDSCO registration in India, US FDA 510(k) clearances, EU MDR/IVDR compliance, or integrated cleanroom manufacturing solutions, our specialists ensure structured, responsive execution.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center gap-2 bg-[#dca85b] hover:bg-[#c9954a] text-navy px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 group"
+                                >
+                                    <span>Schedule a Consultation</span>
+                                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                                <Link
+                                    to="/case-studies"
+                                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300"
+                                >
+                                    <span>View Case Studies</span>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

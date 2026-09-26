@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-cosmetics.png";
@@ -6,8 +6,38 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/india/")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { title: "India Cosmetics Regulatory Services | NKB Regovanta" },
-      { name: "description", content: "Comprehensive regulatory strategy, CDSCO registration, and compliance services for cosmetics in India." },
+      { name: "description", content: "CDSCO cosmetics regulatory services in India: COS-1 import registration, COS-8 manufacturing licenses, labelling compliance, and GMP inspection readiness." },
+      { property: "og:title", content: "India Cosmetics Regulatory Services | NKB Regovanta" },
+      { property: "og:description", content: "CDSCO cosmetics regulatory services in India: COS-1 import registration, COS-8 manufacturing licenses, labelling compliance, and GMP inspection readiness." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/india" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "India Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "CDSCO cosmetics regulatory services in India: COS-1 import registration, COS-8 manufacturing licenses, labelling compliance, and GMP inspection readiness." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/india" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "India Cosmetics Regulatory Services",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "CDSCO cosmetics regulatory services in India: COS-1 import registration, COS-8 manufacturing licenses, labelling compliance, and GMP inspection readiness.",
+          "serviceType": "Cosmetics Regulatory Affairs"
+        })
+      }
     ],
   }),
   component: IndiaCosmetics,
@@ -73,18 +103,18 @@ function IndiaCosmetics() {
               <p className="text-sm text-navy/70 leading-relaxed mb-8 flex-1">
                 Are you a foreign cosmetic brand looking to expand into India? Navigate the complexities of SUGAM registration, Form COS-1 applications, and Authorized Agent requirements to secure your Form COS-2 Import Registration Certificate.
               </p>
-              <Link to="/industries/cosmetics/india/for-importer" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
+              <Link to="/industries/cosmetics/india/cosmetics-registration-for-importers-in-india" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
                 Read More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            
+
             <div className="card-elevated bg-white p-8 rounded-md border border-border/50 shadow-sm flex flex-col">
               <FileCheck2 className="h-10 w-10 text-accent mb-6" />
               <h2 className="text-2xl font-bold text-navy mb-3">For Manufacturers</h2>
               <p className="text-sm text-navy/70 leading-relaxed mb-8 flex-1">
                 Are you establishing a cosmetic manufacturing facility in India? We provide comprehensive support for obtaining your Form COS-8 manufacturing license, facility compliance audits, and local regulatory strategies.
               </p>
-              <Link to="/industries/cosmetics/india/for-manufacturer" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
+              <Link to="/industries/cosmetics/india/cosmetic-manufacturing-license-in-india" className="inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent transition-colors uppercase tracking-wide">
                 Read More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -101,7 +131,7 @@ function IndiaCosmetics() {
                Whether you are importing or manufacturing locally, our tailored regulatory services ensure your cosmetic products meet all Indian safety and quality standards without unnecessary delays.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-6 rounded-md bg-surface/50 border border-border">
@@ -114,7 +144,7 @@ function IndiaCosmetics() {
         </div>
       </section>
 
-      <CTABand title="Ready to launch your cosmetics in India?" btnText="Consult an Expert" />
+      <CTABand title="Ready to launch your cosmetics in India?" action="Consult an Expert" />
     </>
   );
 }

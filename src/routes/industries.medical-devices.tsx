@@ -5,8 +5,37 @@ import imgHero from "@/assets/industry-medical.png";
 export const Route = createFileRoute("/industries/medical-devices")({
   head: () => ({
     meta: [
-      { title: "Medical Device Regulatory & Quality Support | NKB Regovanta" },
-      { name: "description", content: "Navigate Complex Regulations. Accelerate Market Access. NKB Regovanta supports medical device manufacturers from early regulatory planning through market authorization and ongoing lifecycle compliance." },
+      { title: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { name: "description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
+      { property: "og:title", content: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/medical-devices" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Medical Device Regulatory Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/industries/medical-devices" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Medical Device Regulatory Consulting",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "Global medical device regulatory consulting: CDSCO, US FDA, EU MDR, UK MHRA, TGA Australia. End-to-end strategy, registrations, technical files, and QMS.",
+          "serviceType": "Medical Device Regulatory Affairs"
+        })
+      }
     ],
   }),
   component: MedicalDevices,
@@ -63,7 +92,7 @@ function MedicalDevices() {
             </p>
           </div>
           <div className="hidden lg:block h-full overflow-hidden">
-            <img src={imgHero} alt="Medical Devices" className="w-full h-full object-cover object-center" />
+            <img width={1024} height={1024} src={imgHero} alt="Medical Devices" className="w-full h-full object-cover object-center" />
           </div>
         </div>
       </section>

@@ -4,16 +4,53 @@ import { CTABand } from "@/components/site/Bits";
 import imgMedical from "@/assets/industry-medical.png";
 import imgIVD from "@/assets/industry-ivd.png";
 import imgCosmetics from "@/assets/industry-cosmetics.png";
-import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.png";
+import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.optimized.webp";
 
 export const Route = createFileRoute("/industries/")({
     head: () => ({
         meta: [
-            { title: "Industries We Serve | NKB Regovanta" },
+            { title: "Healthcare & Life Sciences Industries | NKB Regovanta" },
             {
                 name: "description",
                 content:
-                    "Specialized regulatory, quality and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics.",
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
+            },
+            { property: "og:title", content: "Healthcare & Life Sciences Industries | NKB Regovanta" },
+            {
+                property: "og:description",
+                content:
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/industries" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Healthcare & Life Sciences Industries | NKB Regovanta" },
+            {
+                name: "twitter:description",
+                content:
+                    "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics. Strategic global market access and compliance by NKB Regovanta.",
+            },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/industries" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    name: "Healthcare & Life Sciences Industries We Serve",
+                    description:
+                        "Regulatory consulting across medical devices, IVDs, pharmaceuticals, and cosmetics.",
+                    publisher: {
+                        "@type": "Organization",
+                        name: "NKB Regovanta",
+                        url: "https://www.nkbregovanta.com",
+                    },
+                }),
             },
         ],
     }),
@@ -37,7 +74,7 @@ const industries = [
         title: "Pharmaceutical & Drug Regulatory Services",
         description: "CDSCO drug import licensing, Form 41 / Form 10, foreign manufacturer registration, AIR representation and post-approval compliance.",
         img: imgPharma,
-        route: "/services/drug-licenses-for-importers",
+        route: "/services/drug-licenses-importers-india-form-10-form-41",
     },
     {
         title: "Cosmetics",
@@ -54,7 +91,7 @@ function Industries() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Industries We Serve</p>
                     <h1 className="mt-4 text-3xl font-extrabold text-navy sm:text-5xl leading-tight">
-                        Tailored Solutions for Every Industry
+                        Healthcare &amp; Life Sciences Regulatory Consulting
                     </h1>
                     <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
                         Specialized regulatory, quality and market-access support for healthcare, diagnostic and pharmaceutical companies.
@@ -83,7 +120,7 @@ function Industries() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5 items-center text-center">
                         <div className="flex flex-col items-center">
-                            <div className="text-2xl font-extrabold">51+</div>
+                            <div className="text-2xl font-extrabold">350+</div>
                             <div className="mt-1 text-xs uppercase tracking-wide text-navy-foreground/70">Regulatory & Quality Projects</div>
                         </div>
                         <div className="flex flex-col items-center">
@@ -99,7 +136,7 @@ function Industries() {
                             <div className="mt-1 text-xs uppercase tracking-wide text-navy-foreground/70">Experience Since</div>
                         </div>
                         <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right mt-4 lg:mt-0">
-                            <Link to="/services" className="inline-flex items-center justify-center rounfor ded-sm bg-white text-navy font-semibold px-6 py-3 text-sm transition-colors hover:bg-white/90 w-full lg:w-auto">
+                            <Link to="/services" className="inline-flex items-center justify-center rounded-xl bg-white text-navy font-semibold px-6 py-3 text-sm transition-colors hover:bg-white/90 w-full lg:w-auto shadow-sm">
                                 Explore Industry Solutions
                             </Link>
                         </div>

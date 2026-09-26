@@ -15,34 +15,65 @@ import {
     Award,
     Lightbulb,
     X,
+    Factory,
 } from "lucide-react";
+import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgUsha from "@/assets/usha new.jpeg";
-import imgSaurav from "@/assets/saurav.png";
-import imgDaniel from "@/assets/daniel.png";
-import imgSatish from "@/assets/satish.png";
+import imgSaurav from "@/assets/saurav.optimized.webp";
+import imgDaniel from "@/assets/daniel.optimized.webp";
+import imgSatish from "@/assets/satish.optimized.webp";
 import imgSwati from "@/assets/swati.jpeg";
-import imgHero from "@/assets/Global Healthcare Expertise in Action.png";
-import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.png";
-import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.png";
-import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.png";
-import imgIvd from "@/assets/Taking Liquid Out of Test Tubes.png";
-import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.png";
+import imgHero from "@/assets/Global Healthcare Expertise in Action.optimized.webp";
+import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.optimized.webp";
+import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.optimized.webp";
+import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.optimized.webp";
+import imgIvd from "@/assets/industry-ivd.png";
+import imgPharma from "@/assets/industry-pharma.optimized.webp";
+import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.optimized.webp";
 import imgMedical from "@/assets/industry-medical.png";
-import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.png";
-import imgShieldBadge from "@/assets/Blue Security Shield UI Card.png";
-import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.png";
-import imgDocBadge from "@/assets/Document Inspection Icon Banner.png";
-import imgPuzzleBadge from "@/assets/Puzzle Piece in Blue Badge.png";
-import imgGrowthBadge from "@/assets/Riseing Growth Bar Graph Blue.png";
-import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.png";
+import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.optimized.webp";
+import imgShieldBadge from "@/assets/Blue Security Shield UI Card.optimized.webp";
+import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.optimized.webp";
+import imgDocBadge from "@/assets/Document Inspection Icon Banner.optimized.webp";
+import imgPuzzleBadge from "@/assets/Puzzle Piece in Blue Badge.optimized.webp";
+import imgGrowthBadge from "@/assets/Riseing Growth Bar Graph Blue.optimized.webp";
+import imgTechCare from "@/assets/Tech Growth Meets Compassionate Care.optimized.webp";
 
 export const Route = createFileRoute("/about")({
     head: () => ({
         meta: [
-            { title: "About Us | NKB Regovanta" },
+            { title: "About NKB Regovanta | Medical Device Regulatory Consultants" },
             {
                 name: "description",
-                content: "Learn about NKB Regovanta's global expertise, strategic execution, and commitment to advancing healthcare innovation without borders.",
+                content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+            },
+            { property: "og:title", content: "About NKB Regovanta | Medical Device Regulatory Consultants" },
+            {
+                property: "og:description",
+                content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+            },
+            { property: "og:url", content: "https://www.nkbregovanta.com/about" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "About NKB Regovanta | Medical Device Regulatory Consultants" },
+            { name: "twitter:description", content: "Learn about NKB Regovanta: global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+        ],
+        links: [
+            { rel: "canonical", href: "https://www.nkbregovanta.com/about" },
+        ],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    name: "NKB Regovanta",
+                    url: "https://www.nkbregovanta.com",
+                    logo: "https://www.nkbregovanta.com/logo.png",
+                    description: "Global medical device regulatory consultants specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+                    sameAs: [],
+                }),
             },
         ],
     }),
@@ -91,9 +122,26 @@ function About() {
     const [selectedExpert, setSelectedExpert] = useState<typeof experts[0] | null>(null);
     return (
         <div className="bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "NKB Regovanta",
+                        "url": "https://www.nkbregovanta.com",
+                        "logo": "https://www.nkbregovanta.com/og-image.png",
+                        "description": "Global medical device regulatory affairs and quality management consulting firm specializing in US FDA, CDSCO, EU MDR/IVDR, and ISO 13485 compliance.",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Usha S."
+                        }
+                    })
+                }}
+            />
             {/* 1. HERO SECTION */}
             <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
-                <img
+                <img width={1983} height={793}
                     src={imgHero}
                     alt="Global healthcare expertise across regulatory, quality and market access"
                     className="absolute inset-0 h-full w-full object-cover object-right opacity-90 pointer-events-none"
@@ -105,11 +153,12 @@ function About() {
                         <p className="text-[#dca85b] font-bold tracking-widest text-sm mb-4 uppercase">
                             About NKB Regovanta
                         </p>
-                        <h1 className="text-white text-4xl sm:text-5xl lg:text-[44px] font-extrabold leading-[1.15] mb-6">
-                            GLOBAL EXPERTISE.<br />
-                            STRATEGIC EXECUTION.<br />
-                            <span className="sm:whitespace-nowrap">HEALTHCARE <span className="text-cyan-400">WITHOUT BORDERS.</span></span>
+                        <h1 className="text-white text-3xl sm:text-4xl lg:text-[40px] font-extrabold leading-[1.15] mb-4">
+                            About NKB Regovanta - Global Medical Device Regulatory Consultants
                         </h1>
+                        <p className="text-lg sm:text-xl font-bold tracking-tight text-cyan-400 mb-6">
+                            GLOBAL EXPERTISE. STRATEGIC EXECUTION. HEALTHCARE WITHOUT BORDERS.
+                        </p>
                         <p className="text-white/80 text-[16px] leading-relaxed mb-8 max-w-2xl">
                             A global regulatory, quality and market access partner helping organizations navigate complexity and advance healthcare innovation.
                         </p>
@@ -129,9 +178,9 @@ function About() {
                             </div>
                         </div>
 
-                        <button className="bg-[#dca85b] text-navy font-bold py-3.5 px-8 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-sm flex items-center gap-2">
+                        <Link to="/contact" className="bg-[#dca85b] text-navy font-bold py-3.5 px-8 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-sm flex items-center gap-2 inline-flex">
                             Talk To Our Experts <ArrowRight className="h-4 w-4" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -140,7 +189,7 @@ function About() {
             <section className="relative bg-surface border-b border-border overflow-hidden">
                 {/* Mobile banner image — fades into the panel below instead of a hard edge */}
                 <div className="sm:hidden h-56 w-full overflow-hidden">
-                    <img
+                    <img width={1983} height={793}
                         src={imgIndiaGlobe}
                         alt="From India to the world"
                         className="h-full w-full object-cover"
@@ -153,7 +202,7 @@ function About() {
                 </div>
 
                 {/* Desktop full-bleed image — right edge fades into the panel, no hard seam */}
-                <img
+                <img width={1983} height={793}
                     src={imgIndiaGlobe}
                     alt="From India to the world"
                     className="hidden sm:block absolute inset-y-0 left-0 h-full w-[46%] lg:w-[44%] object-cover"
@@ -221,7 +270,7 @@ function About() {
             <section className="py-10 lg:py-14 bg-slate-50 relative overflow-hidden border-b border-border">
                 {/* Golden Network Map */}
                 <div className="absolute right-0 top-0 bottom-0 w-full lg:w-2/3 pointer-events-none">
-                    <img
+                    <img width={1881} height={836}
                         src={imgGoldNetwork}
                         alt="Global market access network from India"
                         className="h-full w-full object-cover object-right opacity-60 lg:opacity-90"
@@ -264,94 +313,141 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </section>            {/* 4. ONE PARTNER. FOUR INDUSTRIES. */}
+            </section>
+            {/* 4. ONE PARTNER. FOUR INDUSTRIES. */}
             <section className="py-10 lg:py-14 bg-white border-b border-border">
-                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
+                <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl font-extrabold text-navy text-center uppercase mb-10">
-                        ONE PARTNER. FOUR INDUSTRIES.
+                        ONE PARTNER. FIVE INDUSTRIES.
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
 
                         {/* MEDICAL DEVICES */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <HeartPulse className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <HeartPulse className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        MEDICAL DEVICES
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">MEDICAL DEVICES</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Regulatory, quality, scientific and market-access support across the product lifecycle.
-                                    </p>
-                                    <Link to="/industries/medical-devices" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Regulatory, quality, scientific and market-access support across the product lifecycle.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/medical-devices" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* IVDs */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgIvd} alt="IVDs" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgIvd} alt="IVDs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <FlaskConical className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <FlaskConical className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        IVDs
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">IVDs</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
-                                    </p>
-                                    <Link to="/industries/ivd" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Regulatory strategy, performance evidence, quality and market readiness for diagnostic technologies.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/ivd" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* PHARMACEUTICALS */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgIvd} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-navy/20 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <Pill className="h-4 w-4 text-navy" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <Pill className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        PHARMACEUTICALS
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">PHARMACEUTICALS</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
-                                    </p>
-                                    <Link to="/services/drug-licenses-for-importers" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    CDSCO import licensing, foreign manufacturer registration, AIR representation and post-approval compliance.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/services/drug-licenses-importers-india-form-10-form-41" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
                         </div>
 
                         {/* COSMETICS */}
-                        <div className="bg-slate-50 rounded-lg border border-border overflow-hidden flex flex-col shadow-sm">
-                            <div className="w-full h-40 border-b border-border overflow-hidden">
-                                <img src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover" />
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
-                            <div className="px-5 py-4 flex items-start gap-3 flex-1">
-                                <div className="h-9 w-9 rounded-full border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-white mt-1">
-                                    <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-[#dca85b]/30 flex items-center justify-center shrink-0 bg-amber-50/70 text-[#dca85b] shadow-2xs">
+                                        <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        COSMETICS
+                                    </h3>
                                 </div>
-                                <div>
-                                    <h3 className="font-extrabold text-navy text-sm mb-1">COSMETICS</h3>
-                                    <p className="text-[12px] text-navy leading-relaxed mb-3">
-                                        Product safety, regulatory compliance, quality and market requirements.
-                                    </p>
-                                    <Link to="/industries/cosmetics" className="inline-flex items-center gap-1 text-[12px] font-bold text-navy hover:text-[#dca85b] transition-colors">
-                                        Explore <ArrowRight className="h-3 w-3" />
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    Product safety, regulatory compliance, quality and market requirements.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/industries/cosmetics" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* MANUFACTURING */}
+                        <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
+                            <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
+                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div className="p-5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2.5 mb-2.5">
+                                    <div className="h-8 w-8 rounded-lg border border-navy/15 flex items-center justify-center shrink-0 bg-blue-50/70 text-navy shadow-2xs">
+                                        <Factory className="h-4 w-4 text-navy" />
+                                    </div>
+                                    <h3 className="font-extrabold text-navy text-[13.5px] sm:text-sm tracking-tight leading-snug">
+                                        MANUFACTURING
+                                    </h3>
+                                </div>
+                                <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4 flex-1">
+                                    cGMP machinery, cleanroom furniture, SS equipment and containment solutions.
+                                </p>
+                                <div className="pt-3 mt-auto border-t border-slate-100">
+                                    <Link to="/services/pharmaceutical-cleanroom-manufacturing-equipment" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-navy hover:text-[#0b3a96] transition-colors group">
+                                        <span>Explore</span>
+                                        <ArrowRight className="h-3.5 w-3.5 text-[#dca85b] group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>
@@ -416,9 +512,9 @@ function About() {
                             <span className="text-border">|</span>
                             <span>GLOBAL MARKET ACCESS</span>
                         </div>
-                        <button className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-md hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <Link to="/services" className="bg-navy text-white text-[11px] font-bold uppercase tracking-wider py-2.5 px-6 rounded-md hover:bg-navy/90 transition-colors flex items-center gap-2 whitespace-nowrap">
                             EXPLORE OUR EXPERTISE <ArrowRight className="h-3 w-3" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -436,7 +532,7 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">MARKET-ENTRY CAPABILITY</h3>
@@ -454,7 +550,7 @@ function About() {
 
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">SENIOR REGULATORY EXPERTISE</h3>
@@ -472,7 +568,7 @@ function About() {
             {/* 7. BUILT FOR INNOVATORS / BEYOND COMPLIANCE */}
             <section className="py-10 lg:py-14 bg-navy relative overflow-hidden">
                 {/* Split background: rocket growth (left) / mother & child care (right) */}
-                <img
+                <img width={2117} height={743}
                     src={imgTechCare}
                     alt=""
                     className="absolute inset-0 h-full w-full object-cover hidden md:block"
@@ -499,9 +595,9 @@ function About() {
                                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3 w-3 text-[#dca85b]" /> Established Manufacturers</span>
                             </div>
 
-                            <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2">
+                            <Link to="/services" className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
                                 LEARN MORE <ArrowRight className="h-3 w-3" />
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Right */}
@@ -731,7 +827,7 @@ function About() {
 
             {/* 10. FOOTER CTA */}
             <section className="bg-navy py-12 relative overflow-hidden">
-                <img
+                <img width={1983} height={793}
                     src={imgEarthCta}
                     alt=""
                     className="absolute right-0 top-0 bottom-0 h-full w-2/3 object-cover object-right opacity-40 pointer-events-none"
@@ -750,9 +846,9 @@ function About() {
                         Regulatory complexity shouldn't slow responsible innovation.<br />
                         <span className="text-cyan-400 font-bold">Let's build the pathway together.</span>
                     </p>
-                    <button className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
+                    <Link to="/contact" className="bg-[#dca85b] text-navy font-bold py-2.5 px-6 rounded-sm hover:bg-[#dca85b]/90 transition-colors uppercase tracking-wide text-xs flex items-center gap-2 inline-flex">
                         TALK TO OUR EXPERTS <ArrowRight className="h-3 w-3" />
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

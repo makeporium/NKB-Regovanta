@@ -14,7 +14,7 @@ if (marketContent.includes('import heroImg from "@/assets/world-map.png";')) {
 } else {
     // maybe it doesn't have it, fallback
     marketContent = marketContent.replace(/import { createFileRoute }/, 'const heroImg = "/assets/brain/services_market_access_hero_1786440859191.png";\nimport { createFileRoute }');
-    marketContent = marketContent.replace(/bg-\[url\('\@\/assets\/world-map\.png'\)\]/, 'bg-[url(\\'/assets/brain/services_market_access_hero_1786440859191.png\\')]');
+    marketContent = marketContent.replace("bg-[url('@/assets/world-map.png')]", "bg-[url('/assets/brain/services_market_access_hero_1786440859191.png')]");
 }
 fs.writeFileSync(marketAccessFile, marketContent);
 
@@ -24,9 +24,9 @@ const csIndexFile = path.join(dir, 'case-studies.index.tsx');
 let csIndexContent = fs.readFileSync(csIndexFile, 'utf8');
 
 // Replace old imports
-csIndexContent = csIndexContent.replace(/import imgPlaceholder from "@/assets\/regulatory-pathway.jpg";/, 'const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";\nconst imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";\nconst imgEU = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";');
-csIndexContent = csIndexContent.replace(/import imgPlaceholder2 from "@/assets\/iso-cleanroom.jpg";/, 'const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";\nconst imgAustralia = "/assets/brain/cs_australia_tga_1786441211612.png";');
-csIndexContent = csIndexContent.replace(/import imgPlaceholder3 from "@/assets\/iso.png";/, 'const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";');
+csIndexContent = csIndexContent.replace(/import imgPlaceholder from "@\/assets\/regulatory-pathway.jpg";/, 'const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";\nconst imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";\nconst imgEU = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";');
+csIndexContent = csIndexContent.replace(/import imgPlaceholder2 from "@\/assets\/iso-cleanroom.jpg";/, 'const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";\nconst imgAustralia = "/assets/brain/cs_australia_tga_1786441211612.png";');
+csIndexContent = csIndexContent.replace(/import imgPlaceholder3 from "@\/assets\/iso.png";/, 'const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";');
 
 // Update references in the array
 csIndexContent = csIndexContent.replace(/img: imgPlaceholder,(?=\s*route: "\/case-studies\/test-smarter")/g, 'img: imgTestSmarter,');
@@ -52,7 +52,7 @@ for (const [file, img] of Object.entries(mapping)) {
   const fp = path.join(dir, file);
   if (fs.existsSync(fp)) {
     let content = fs.readFileSync(fp, 'utf8');
-    content = content.replace(/import caseHero from "@\/assets\/case\.png";/g, \`const caseHero = "\${img}";\`);
+    content = content.replace(/import caseHero from "@\/assets\/case\.png";/g, `const caseHero = "${img}";`);
     fs.writeFileSync(fp, content);
   }
 }
