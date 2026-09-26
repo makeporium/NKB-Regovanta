@@ -1,0 +1,19 @@
+{
+  "name": "nkb-newsletter",
+  "version": "1.0.0",
+  "description": "Automated regulatory newsletter — Supabase + Resend + Groq",
+  "type": "module",
+  "scripts": {
+    "preview": "npx tsx scripts/send-newsletter.ts",
+    "send": "npx tsx scripts/send-newsletter.ts --send"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "fast-xml-parser": "^4.5.3",
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.3"
+  }
+}

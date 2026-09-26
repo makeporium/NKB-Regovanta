@@ -1,0 +1,59 @@
+name: Weekly Regulatory Newsletter
+
+on:
+  # Every Monday at 6:00 AM UTC (11:30 AM IST)
+  schedule:
+    - cron: "0 6 * * 1"
+
+  # Manual trigger from GitHub Actions tab (for testing)
+  workflow_dispatch:
+    inputs:
+      preview_only:
+        description: "Send preview to yourself only (no --send flag)"
+        required: false
+        default: "true"
+        type: boolean
+
+jobs:
+  send-newsletter:
+    name: Generate & Send Newsletter
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: newsletter
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: newsletter/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate & send newsletter
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          # On schedule: always send for real
+          # On manual trigger: respect the preview_only input
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "📅 Scheduled run — sending to all subscribers"
+            npx tsx scripts/send-newsletter.ts --send
+          elif [ "${{ inputs.preview_only }}" = "false" ]; then
+            echo "🔴 Manual run — sending to all subscribers (preview_only=false)"
+            npx tsx scripts/send-newsletter.ts --send
+          else
+            echo "🟡 Manual run — preview mode only"
+            npx tsx scripts/send-newsletter.ts
+          fi
