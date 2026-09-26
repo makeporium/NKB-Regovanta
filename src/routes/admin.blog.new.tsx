@@ -10,6 +10,7 @@ import {
   Image as ImageIcon,
   CheckCircle2,
   AlertTriangle,
+  AlertCircle,
   FileText,
   Share2,
   Code2,
@@ -74,6 +75,7 @@ function BlogPostEditorPage() {
   // Revisions & Autosave
   const [saving, setSaving] = useState(false);
   const [editId, setEditId] = useState<string | null>(null);
+  const [duplicateSlugPost, setDuplicateSlugPost] = useState<{ id: string; title: string } | null>(null);
   const [loadingPost, setLoadingPost] = useState(false);
   const [lastAutosave, setLastAutosave] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"content" | "seo" | "social" | "schema">("content");
@@ -184,6 +186,35 @@ function BlogPostEditorPage() {
     }
   };
 
+  // Live conflict detection for URL slug
+  useEffect(() => {
+    const cleanSlug = slug.toLowerCase().replace(/[^a-z0-9-]/g, "-").replace(/^-+|-+$/g, "");
+    if (!cleanSlug) {
+      setDuplicateSlugPost(null);
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      try {
+        const { data } = await supabase
+          .from("blog_posts")
+          .select("id, title")
+          .eq("slug", cleanSlug)
+          .maybeSingle();
+
+        if (data && data.id !== editId) {
+          setDuplicateSlugPost({ id: data.id, title: data.title });
+        } else {
+          setDuplicateSlugPost(null);
+        }
+      } catch {
+        // ignore network error
+      }
+    }, 350);
+
+    return () => clearTimeout(timer);
+  }, [slug, editId]);
+
   // Pre-publish validation checklist per Section 18.11
   const internalLinksCount = useMemo(() => {
     return (
@@ -203,7 +234,7 @@ function BlogPostEditorPage() {
       { label: "SEO Title Set", passed: Boolean(seoTitle.trim()), critical: false },
       { label: "Meta Description Set", passed: Boolean(metaDescription.trim()), critical: false },
       { label: "Focus Keyword Set", passed: Boolean(focusKeyword.trim()), critical: false },
-      { label: "URL Slug Valid & Unique", passed: Boolean(slug.trim() && !/\s/.test(slug)), critical: true },
+      { label: "URL Slug Valid & Unique", passed: Boolean(slug.trim() && !/\s/.test(slug) && !duplicateSlugPost), critical: true },
       { label: "H1 Heading (Blog Title)", passed: Boolean(title.trim()), critical: true },
       { label: "Featured Image Uploaded", passed: Boolean(featuredImage.trim()), critical: false },
       { label: "Featured Image ALT Text Provided", passed: Boolean(featuredImageAlt.trim()), critical: false },
@@ -212,9 +243,9 @@ function BlogPostEditorPage() {
       { label: "Article Schema Valid", passed: true, critical: false },
       { label: "Index / Follow Enabled", passed: robotsIndex === "index", critical: false },
     ];
-  }, [title, slug, seoTitle, metaDescription, focusKeyword, featuredImage, featuredImageAlt, contentHtml, robotsIndex, internalLinksCount]);
+  }, [title, slug, seoTitle, metaDescription, focusKeyword, featuredImage, featuredImageAlt, contentHtml, robotsIndex, internalLinksCount, duplicateSlugPost]);
 
-  const canPublish = Boolean(title.trim() && slug.trim() && contentHtml.trim());
+  const canPublish = Boolean(title.trim() && slug.trim() && contentHtml.trim() && !duplicateSlugPost);
 
   const handleSavePost = async (finalStatus: "draft" | "published" | "scheduled") => {
     if (!title.trim() || !slug.trim()) {
@@ -234,6 +265,24 @@ function BlogPostEditorPage() {
           : null);
 
       let currentPostId = resolvedEditId;
+
+      if (!resolvedEditId) {
+        // Prevent duplicate slug collision before inserting
+        const { data: existingPost } = await supabase
+          .from("blog_posts")
+          .select("id, title")
+          .eq("slug", cleanSlug)
+          .maybeSingle();
+
+        if (existingPost) {
+          toast.error(
+            `An article with the URL slug "${cleanSlug}" already exists: "${existingPost.title}". Please edit that existing post from "All Posts", or choose a different URL slug.`
+          );
+          setSaving(false);
+          setShowPrepublishModal(false);
+          return;
+        }
+      }
 
       if (resolvedEditId) {
         // Update existing post
@@ -370,7 +419,12 @@ function BlogPostEditorPage() {
       );
       router.navigate({ to: "/admin/blog/posts" });
     } catch (err: any) {
-      toast.error("Save failed: " + err.message);
+      const msg = err?.message || "";
+      if (msg.includes("blog_posts_slug_key") || msg.includes("duplicate key")) {
+        toast.error("This URL slug already exists. Please choose a unique URL slug or edit the existing article from All Posts.");
+      } else {
+        toast.error("Save failed: " + msg);
+      }
     } finally {
       setSaving(false);
       setShowPrepublishModal(false);
@@ -474,7 +528,11 @@ function BlogPostEditorPage() {
               <label className="block text-xs font-semibold text-slate-700 mb-1">
                 URL Slug (Short, lowercase, 3-6 words, no dates)
               </label>
-              <div className="flex items-center rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-600 font-mono focus-within:bg-white focus-within:border-[#0b3a96] transition">
+              <div
+                className={`flex items-center rounded-lg border ${
+                  duplicateSlugPost ? "border-rose-400 bg-rose-50/40" : "border-slate-200 bg-slate-50"
+                } px-3 py-2 text-xs text-slate-600 font-mono focus-within:bg-white focus-within:border-[#0b3a96] transition`}
+              >
                 <span className="text-slate-400 select-none">https://www.nkbregovanta.com/insights/</span>
                 <input
                   type="text"
@@ -484,6 +542,31 @@ function BlogPostEditorPage() {
                   placeholder="cdsco-medical-device-registration-guide"
                 />
               </div>
+
+              {duplicateSlugPost && (
+                <div className="mt-2 rounded-xl border border-rose-200 bg-rose-50/90 p-3 text-xs text-rose-900 flex items-start gap-2.5 shadow-2xs">
+                  <AlertCircle className="h-4 w-4 text-rose-600 shrink-0 mt-0.5" />
+                  <div className="space-y-1">
+                    <p className="font-bold">This URL slug already exists in your database!</p>
+                    <p className="text-rose-800">
+                      It is used by: <strong className="text-slate-900">"{duplicateSlugPost.title}"</strong>
+                    </p>
+                    <div className="pt-1 flex flex-wrap items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          window.location.href = `/admin/blog/new?edit=${duplicateSlugPost.id}`;
+                        }}
+                        className="inline-flex items-center gap-1 font-bold text-[#0b3a96] underline hover:text-blue-900 cursor-pointer"
+                      >
+                        <span>Edit that existing post instead →</span>
+                      </button>
+                      <span className="text-slate-400">or</span>
+                      <span className="text-slate-600 italic">Change this slug (e.g. add a word or year) to create a new post</span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
