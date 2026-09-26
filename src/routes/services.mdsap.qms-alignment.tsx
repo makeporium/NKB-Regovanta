@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,28 +20,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/qms-alignment")({
   head: () => ({
     meta: [
-      {
-        title: "ISO 13485 to MDSAP QMS Alignment | Global System Design | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Align your ISO 13485 Quality Management System to MDSAP requirements without creating 5 disconnected QMS variants. Embedded decision trees and local triggers.",
-      },
-      {
-        property: "og:title",
-        content: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "ISO 13485 is the foundation; MDSAP tests the regulatory system built on top of it. One unified quality management system with country-specific logic.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta" },
+      { name: "description", content: "Align your ISO 13485 QMS to MDSAP requirements with embedded country-specific decision trees and regulatory triggers — one unified system, five jurisdictions." },
+      { property: "og:title", content: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta" },
+      { property: "og:description", content: "Align your ISO 13485 QMS to MDSAP requirements with embedded country-specific decision trees and regulatory triggers — one unified system, five jurisdictions." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/qms-alignment" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ISO 13485 to MDSAP QMS Alignment | NKB Regovanta" },
+      { name: "twitter:description", content: "Align your ISO 13485 QMS to MDSAP requirements with embedded country-specific decision trees and regulatory triggers — one unified system, five jurisdictions." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/qms-alignment" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/qms-alignment",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "ISO 13485 to MDSAP QMS Alignment & Global System Design",
+          description: "Unified QMS design aligning ISO 13485:2016 with MDSAP requirements, country-specific regulatory matrices, and embedded decision trees for 5-jurisdiction compliance.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

@@ -5,15 +5,44 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics")({
   head: () => ({
     meta: [
-      { title: "Cosmetics Regulatory Consultant | CDSCO COS-1/2, MoCRA & EU RP | NKB Regovanta" },
-      { name: "description", content: "Global cosmetics regulatory compliance services: CDSCO cosmetic import registration COS-1 COS-2, Cosmetic manufacturing licence Form 32 India, EU Cosmetic Product Safety Report (CPSR), EU RP & CPNP portal notification, UK SCPN & UK RP, US FDA MoCRA cosmetic facility registration, and INCI ingredient reviews." },
-      { name: "keywords", content: "CDSCO cosmetic import registration COS-1 COS-2, Cosmetic manufacturing licence Form 32 India, Sugam portal cosmetic registration, Indian Authorized Representative cosmetics, EU Cosmetic Product Safety Report (CPSR), EU Cosmetic Responsible Person (EU RP), CPNP portal notification Europe, UK Cosmetic Product Notification Portal (SCPN), UK Cosmetic Responsible Person, US FDA MoCRA cosmetic facility registration, FDA cosmetic product listing SPL format, Cosmetic labeling and ingredient review (INCI compliance), NKB Regovanta" },
-      { property: "og:title", content: "Cosmetics Regulatory Compliance Consulting | NKB Regovanta" },
-      { property: "og:description", content: "End-to-end cosmetics regulatory support for India CDSCO, US MoCRA, EU & UK CPNP/SCPN and Responsible Person representation." },
+      { title: "Cosmetics Regulatory Consulting | NKB Regovanta" },
+      {
+        name: "description",
+        content:
+          "Global cosmetics regulatory consulting: CDSCO COS-1/2 registration, US MoCRA facility listing, EU/UK Responsible Person representation, and CPSR support.",
+      },
+      { property: "og:title", content: "Cosmetics Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global cosmetics regulatory consulting: CDSCO COS-1/2 registration, US MoCRA facility listing, EU/UK Responsible Person representation, and CPSR support." },
       { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics" },
+{ property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cosmetics Regulatory Consulting | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Global cosmetics regulatory consulting: CDSCO COS-1/2 registration, US MoCRA facility listing, EU/UK Responsible Person representation, and CPSR support.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Cosmetics Regulatory Compliance Consulting",
+          description:
+            "Global cosmetics regulatory compliance services for India CDSCO, US FDA MoCRA, EU and UK market authorization.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+        }),
+      },
     ],
   }),
   component: Cosmetics,
@@ -75,7 +104,7 @@ function Cosmetics() {
             </p>
           </div>
           <div className="hidden lg:block h-full overflow-hidden">
-            <img src={imgHero} alt="Cosmetics Regulatory" className="w-full h-full object-cover object-center" />
+            <img width={1024} height={1024} src={imgHero} alt="Cosmetics Regulatory" className="w-full h-full object-cover object-center" />
           </div>
         </div>
       </section>

@@ -29,18 +29,19 @@ import usaHeroImg from "@/assets/usa-fda-hero-statue.jpg";
 export const Route = createFileRoute("/services/usa/")({
     head: () => ({
         meta: [
-            { title: "US FDA 510(k) Consultant, eSTAR Dossier, De Novo, PMA & US Agent | NKB Regovanta" },
+            { title: "US FDA Medical Device Consultant | NKB Regovanta" },
             {
                 name: "description",
-                content: "US FDA 510k submission consultant & medical device regulatory services. End-to-end guidance for FDA 510(k) clearance, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval, US FDA US Agent services for foreign facilities, FDA Establishment Registration & Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, and Q-Submission / Pre-Sub.",
+                content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation.",
             },
-            {
-                name: "keywords",
-                content: "US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, NKB Regovanta",
-            },
-            { property: "og:title", content: "US FDA 510(k) Clearance & US Agent Consulting | NKB Regovanta" },
-            { property: "og:description", content: "Complete FDA regulatory strategy, eSTAR dossier compilation, 510(k) clearance, US Agent representation, and FURLS registration." },
+            { property: "og:title", content: "US FDA Medical Device Consultant | NKB Regovanta" },
+            { property: "og:description", content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation." },
             { property: "og:url", content: "https://www.nkbregovanta.com/services/usa" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "US FDA Medical Device Consultant | NKB Regovanta" },
+            { name: "twitter:description", content: "Expert US FDA medical device consulting: 510(k) clearances, eSTAR dossiers, De Novo requests, PMA approval, and US Agent representation." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/usa" }],
     }),
@@ -50,15 +51,15 @@ export const Route = createFileRoute("/services/usa/")({
 /* ── Static Data ── */
 
 const regulatoryServices = [
-    { icon: LayoutList, label: "Medical Device\nClassification\nUSA", to: "/services/usa/classification" },
-    { icon: FileText, label: "510(k)\nPremarket\nNotification", to: "/services/usa/510k" },
-    { icon: Search, label: "Special 510(k) &\nChange\nAssessment", to: "/services/usa/post-clearance-lifecycle" },
-    { icon: Layers, label: "De Novo\nClassification", to: "/services/usa/de-novo" },
-    { icon: Shield, label: "PMA\nSupport", to: "/services/usa/pma" },
-    { icon: ClipboardList, label: "eSTAR Dossier\nPreparation", to: "/services/usa/e-star" },
-    { icon: MessageSquare, label: "Q-Submission /\nPre-Submission", to: "/services/usa/q-submission" },
-    { icon: Globe2, label: "US Agent\nServices", to: "/services/usa/agent-service" },
-    { icon: BadgeCheck, label: "Registration\n& Listing", to: "/services/usa/establishment-registration" },
+    { icon: LayoutList, label: "Medical Device\nClassification\nUSA", to: "/services/usa/fda-medical-device-classification-and-pathway-assessment" },
+    { icon: FileText, label: "510(k)\nPremarket\nNotification", to: "/services/usa/fda-510k-premarket-notification-and-clearance-consulting" },
+    { icon: Search, label: "Special 510(k) &\nChange\nAssessment", to: "/services/usa/fda-post-clearance-and-device-lifecycle-support" },
+    { icon: Layers, label: "De Novo\nClassification", to: "/services/usa/us-fda-de-novo-classification-pathway" },
+    { icon: Shield, label: "PMA\nSupport", to: "/services/usa/us-fda-premarket-approval-pma-support" },
+    { icon: ClipboardList, label: "eSTAR Dossier\nPreparation", to: "/services/usa/fda-estar-dossier-preparation-and-submission" },
+    { icon: MessageSquare, label: "Q-Submission /\nPre-Submission", to: "/services/usa/fda-q-submission-and-pre-submission-consulting" },
+    { icon: Globe2, label: "US Agent\nServices", to: "/services/usa/us-agent-services-for-foreign-establishments" },
+    { icon: BadgeCheck, label: "Registration\n& Listing", to: "/services/usa/fda-establishment-registration-and-device-listing" },
 ];
 
 const submissionSteps = [
@@ -76,73 +77,73 @@ const serviceCards = [
         icon: LayoutList,
         title: "Product Classification &\nRegulatory Pathway Assessment",
         desc: "Before testing begins or a dossier is drafted, we establish the device's regulatory identity: classification, regulation number, product code, applicable controls, exemption status and likely premarket pathway. This early assessment prevents costly work from being built around the wrong FDA route.",
-        to: "/services/usa/classification",
+        to: "/services/usa/fda-medical-device-classification-and-pathway-assessment",
     },
     {
         icon: FileText,
         title: "510(k) Premarket\nNotification Support",
         desc: "We structure the 510(k) around the substantial equivalence decision FDA must make. Classification, predicate eligibility, technological differences, evidence requirements and labeling are aligned before the eSTAR submission is built.",
-        to: "/services/usa/510k",
+        to: "/services/usa/fda-510k-premarket-notification-and-clearance-consulting",
     },
     {
         icon: Target,
         title: "Predicate & Substantial\nEquivalence Strategy",
         desc: "We evaluate whether a proposed predicate can withstand FDA's substantial equivalence analysis, then trace every meaningful technological difference into the evidence needed to support it.",
-        to: "/services/usa/predicate-strategy",
+        to: "/services/usa/fda-predicate-and-substantial-equivalence-strategy",
     },
     {
         icon: FlaskConical,
         title: "Testing Strategy &\nLaboratory Coordination",
         desc: "We design the testing plan backward from the FDA decision the evidence must support — challenging configuration, worst-case rationale, standards, acceptance criteria and whether the resulting data will actually answer the regulatory question.",
-        to: "/services/usa/testing-strategy",
+        to: "/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance",
     },
     {
         icon: ClipboardList,
         title: "eSTAR Dossier\nPreparation",
         desc: "We treat eSTAR as the container for the regulatory argument — not as the strategy itself. The dossier is built only after pathway, predicate and evidence requirements are clear, then checked for cross-section consistency.",
-        to: "/services/usa/e-star",
+        to: "/services/usa/fda-estar-dossier-preparation-and-submission",
     },
     {
         icon: MessageSquare,
         title: "FDA Q-Submission\n& Pre-Submission",
         desc: "We determine which uncertainties are worth taking to FDA, frame focused questions and provide enough technical context for FDA feedback to be actionable before major testing or submission decisions are locked.",
-        to: "/services/usa/q-submission",
+        to: "/services/usa/fda-q-submission-and-pre-submission-consulting",
     },
     {
         icon: Layers,
         title: "De Novo & PMA\nSupport",
         desc: "For novel or higher-risk devices, we build the regulatory strategy around the evidence FDA will need to reach a classification or approval decision, integrating risk, controls, non-clinical evidence, clinical evidence and FDA interaction.",
-        to: "/services/usa/de-novo",
+        to: "/services/usa/us-fda-de-novo-classification-pathway",
     },
     {
         icon: Send,
         title: "FDA Additional Information\n& Deficiency Response",
         desc: "We deconstruct each FDA question to identify the underlying regulatory concern, trace it back through the submission and determine whether the real issue is evidence, study design, predicate logic, labeling, consistency or presentation.",
-        to: "/services/usa/deficiency-response",
+        to: "/services/usa/fda-additional-information-and-deficiency-response",
     },
     {
         icon: Shield,
         title: "QMSR & FDA Inspection\nPreparation",
         desc: "We test whether the quality system can produce objective evidence when an FDA investigator follows a real transaction through the organization — not merely whether the required SOPs exist.",
-        to: "/services/usa/qmsr-inspection",
+        to: "/services/usa/fda-qmsr-and-inspection-preparation",
     },
     {
         icon: Globe2,
         title: "US Agent Services",
         desc: "We provide US Agent representation as part of a broader regulatory interface — supporting FDA communication, registration coordination and escalation when the foreign manufacturer needs a reliable US regulatory contact.",
-        to: "/services/usa/agent-service",
+        to: "/services/usa/us-agent-services-for-foreign-establishments",
     },
     {
         icon: BadgeCheck,
         title: "FDA Establishment Registration\n& Device Listing",
         desc: "We support initial registration, device listing and annual maintenance while checking that the administrative registration activity remains aligned with the device's actual regulatory status and market authorization pathway.",
-        to: "/services/usa/establishment-registration",
+        to: "/services/usa/fda-establishment-registration-and-device-listing",
     },
     {
         icon: Wrench,
         title: "Post-Clearance & Device\nLifecycle Support",
         desc: "We assess the regulatory impact of device changes before implementation — focusing on whether the modification affects intended use, technological characteristics, safety, effectiveness, performance or the basis of the original clearance.",
-        to: "/services/usa/post-clearance-lifecycle",
+        to: "/services/usa/fda-post-clearance-and-device-lifecycle-support",
     },
     {
         icon: TrendingUp,
@@ -163,7 +164,7 @@ const whyChoose = [
 
 const homeStats = [
     { icon: CalendarDays, value: "2018", label: "Experience Since", sub: "Regulatory & Quality\nExperience" },
-    { icon: CheckCircle, value: "151+", label: "Completed", sub: "Regulatory & Quality\nProjects" },
+    { icon: CheckCircle, value: "350+", label: "Completed", sub: "Regulatory & Quality\nProjects" },
     { icon: Users, value: "21+", label: "Supported", sub: "Global\nClients" },
     { icon: Globe2, value: "15+", label: "Supported", sub: "International\nCountries" },
     { icon: Layers, value: "4", label: "Focus Areas", sub: "Core\nIndustries" },
@@ -175,7 +176,7 @@ const homeStats = [
 function USAMarket() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Service", "name": "US FDA 510(k) Regulatory Consulting", "url": "https://www.nkbregovanta.com/services/usa", "description": "FDA 510(k), De Novo, PMA, Q-Submission, and US Agent services for medical device companies seeking US market access.", "provider": { "@type": "ProfessionalService", "name": "NKB Regovanta Solutions Pvt. Ltd.", "url": "https://www.nkbregovanta.com" } }, { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nkbregovanta.com/services" }, { "@type": "ListItem", "position": 3, "name": "USA FDA", "item": "https://www.nkbregovanta.com/services/usa" }] }]) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Service", "name": "USFDA Medical Device Consultant & 510(k) Regulatory Consulting", "alternateName": ["USFDA Consultant", "510 k Clearance Consultancy", "US FDA 510(k) Consultant"], "url": "https://www.nkbregovanta.com/services/usa", "description": "Expert USFDA medical device consultant services including 510(k) and 510 k clearance, eSTAR dossier compilation, De Novo, PMA, Q-Submission, and US Agent representation.", "provider": { "@type": "ProfessionalService", "name": "NKB Regovanta Solutions Pvt. Ltd.", "url": "https://www.nkbregovanta.com" } }, { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nkbregovanta.com" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nkbregovanta.com/services" }, { "@type": "ListItem", "position": 3, "name": "USA FDA", "item": "https://www.nkbregovanta.com/services/usa" }] }]) }} />
 
             {/* ── HERO ── */}
             <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/50 to-slate-100">
@@ -187,16 +188,16 @@ function USAMarket() {
                         <ChevronRight className="h-3 w-3" />
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e02020]">United States</span>
                         <span className="text-navy/40 mx-1">|</span>
-                        <span className="text-navy/70">US FDA Regulatory &amp; Market Access</span>
+                        <span className="text-navy/70">USFDA &amp; US FDA Regulatory Market Access</span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                         <div className="max-w-xl">
                             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4" style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}>
-                                US FDA 510(k), De Novo,<br />PMA &amp; Regulatory Consulting<br />for Medical Devices and IVDs
+                                US FDA Medical Device Consultant &amp;<br />510(k) Premarket Notification
                             </h1>
                             <p className="text-[14px] leading-relaxed text-navy/70 font-medium mb-7 max-w-lg">
-                                From regulatory strategy and predicate analysis to testing, eSTAR dossier preparation, FDA submission and deficiency response – we provide end-to-end support to help you achieve US market authorization.
+                                As a premier medical device consultancy, we provide end-to-end USFDA (US FDA) market access support — from 510(k) and 510 k substantial equivalence strategy and predicate analysis to testing coordination, eSTAR dossier preparation, FDA submission, and deficiency response.
                             </p>
                             <div className="flex flex-wrap gap-3 mb-8">
                                 <Link to="/contact" className="inline-flex items-center gap-2 bg-navy text-white text-[12.5px] font-semibold px-5 py-2.5 rounded-sm hover:bg-navy/90 transition-all shadow-sm">
@@ -215,7 +216,7 @@ function USAMarket() {
 
                         <div className="flex justify-center lg:justify-end items-center mt-4 lg:mt-0">
                             <div className="w-full max-w-[560px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80 bg-white hover:shadow-xl transition-all duration-300">
-                                <img
+                                <img width={1015} height={781}
                                     src={usaHeroImg}
                                     alt="US FDA Medical Device Clearance, Establishment Registration & QMSR Compliance"
                                     className="w-full h-auto object-contain"
@@ -308,6 +309,14 @@ function USAMarket() {
                 </div>
             </section>
 
+            <section className="py-10 bg-white border-t border-border/40">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-xl sm:text-2xl font-extrabold text-navy mb-3">Current FDA reference</h2>
+                    <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">FDA’s Quality Management System Regulation became effective on 2 February 2026 and incorporates ISO 13485:2016 by reference. The applicable premarket and postmarket requirements still depend on the device, establishment, and pathway.</p>
+                    <p className="mt-3 text-sm"><a className="underline text-[#0b3a96]" href="https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr">FDA: Quality Management System Regulation</a></p>
+                </div>
+            </section>
+
             {/* ── WHY CHOOSE + CTA ── */}
             <section className="py-14 bg-slate-50 border-t border-border/40">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -329,9 +338,16 @@ function USAMarket() {
                             <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-navy text-[13px] font-bold px-6 py-3 rounded-sm hover:bg-blue-50 transition-all shadow-sm">
                                 Talk to a Regulatory Expert <ArrowRight className="h-4 w-4" />
                             </Link>
-                            <div className="mt-5 pt-5 border-t border-white/20 text-[12px] text-white/60 space-y-1">
+                            <div className="mt-5 pt-5 border-t border-white/20 text-[12px] text-white/60 space-y-1.5">
                                 <p>Email: <a href="mailto:info@nkbregovanta.com" className="text-white/80 hover:text-white transition-colors">info@nkbregovanta.com</a></p>
-                                <p>Phone: <a href="tel:+911141005051" className="text-white/80 hover:text-white transition-colors">+91 11 4100 5051</a></p>
+                                <div>
+                                    <p className="text-white/60 mb-1">Phone:</p>
+                                    <div className="flex flex-col gap-1 pl-2 text-white/80">
+                                        <a href="tel:+919513699000" className="hover:text-white transition-colors">+91 95136 99000</a>
+                                        <a href="tel:+919180351425" className="hover:text-white transition-colors">+91 91803 51425</a>
+                                        <a href="tel:+918400039062" className="hover:text-white transition-colors">+91 84000 39062</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

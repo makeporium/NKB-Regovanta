@@ -48,14 +48,22 @@ export const Route = createFileRoute("/services/brazil/")({
   head: () => ({
     meta: [
       {
-        title:
-          "ANVISA Brazil Medical Device Registration & BGMP Consultant | NKB Regovanta",
+        title: "ANVISA Brazil Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "ANVISA regulatory consulting for Medical Devices, IVDs and SaMD in Brazil. Notificação, Registro, BGMP RDC 665/2022, CBPF certification, Brazil Registration Holder (BRH), UDI SIUD, and Tecnovigilância.",
+          "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification.",
       },
+      { property: "og:title", content: "ANVISA Brazil Medical Device Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/brazil" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ANVISA Brazil Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert ANVISA Brazil regulatory consulting: Notificação, Registro, BGMP RDC 665/2022, Brazil Registration Holder (BRH), and CBPF certification." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/brazil" }],
   }),
@@ -109,7 +117,7 @@ const services12 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/brazil/classification",
+    to: "/services/brazil/anvisa-medical-device-and-ivd-classification-brazil",
     icon: Target,
     title: "1. ANVISA Regulatory\nStrategy & Classification",
     bullets: [
@@ -122,7 +130,7 @@ const services12 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/brazil/registration",
+    to: "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
     icon: FileText,
     title: "2. Product Registration\n(Cadastro) & Notificação",
     bullets: [
@@ -135,7 +143,7 @@ const services12 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/brazil/bgmp",
+    to: "/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022",
     icon: ShieldCheck,
     title: "3. BGMP Compliance\n& Certification",
     bullets: [
@@ -148,7 +156,7 @@ const services12 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/brazil/technical-documentation",
+    to: "/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence",
     icon: BookOpen,
     title: "4. Technical Documentation\n& Brazilian Compliance",
     bullets: [
@@ -161,7 +169,7 @@ const services12 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/brazil/testing-strategy",
+    to: "/services/brazil/anvisa-testing-strategy-and-laboratory-coordination",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -174,7 +182,7 @@ const services12 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/brazil/anvisa-queries",
+    to: "/services/brazil/anvisa-exigencia-and-inspection-response-strategy",
     icon: Search,
     title: "6. ANVISA Application\nAudit & Support",
     bullets: [
@@ -187,7 +195,7 @@ const services12 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/brazil/ivd",
+    to: "/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023",
     icon: Syringe,
     title: "7. IVD Registration &\nPerformance Evidence",
     bullets: [
@@ -200,7 +208,7 @@ const services12 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/brazil/software",
+    to: "/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting",
     icon: Monitor,
     title: "8. SaMD / Software /\nAI & Cybersecurity",
     bullets: [
@@ -213,7 +221,7 @@ const services12 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/brazil/labeling",
+    to: "/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance",
     icon: Languages,
     title: "9. Labelling, IFU &\nAdvertising Compliance",
     bullets: [
@@ -226,7 +234,7 @@ const services12 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/brazil/tecnovigilance",
+    to: "/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
     icon: RefreshCw,
     title: "10. Post-Market Surveillance,\nVigilance & Tecnovigilância",
     bullets: [
@@ -239,7 +247,7 @@ const services12 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/brazil/change-management",
+    to: "/services/brazil/anvisa-changes-variations-and-revalidacao-support",
     icon: Layers,
     title: "11. Change Management\n& Variations",
     bullets: [
@@ -252,7 +260,7 @@ const services12 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/brazil/brh",
+    to: "/services/brazil/brazil-registration-holder-brh-and-anvisa-interface",
     icon: Building2,
     title: "12. Importer & Legal\nRepresentative Services",
     bullets: [
@@ -321,6 +329,24 @@ const faqs = [
 function BrazilHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "ANVISA Brazil Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "ANVISA Medical Device Registration & BGMP Consulting",
+            "description": "Comprehensive ANVISA consulting for Medical Devices and IVDs: Notificação, Registro, BGMP, and Brazil Registration Holder services.",
+            "areaServed": "Brazil"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Rio Graphic)
       ══════════════════════════════════════════════════════════════════ */}
@@ -378,7 +404,7 @@ function BrazilHubPage() {
             {/* Right Rio Graphic with Flag and ANVISA Booklet */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
-                <img
+                <img width={368} height={240}
                   src={brazilHeroImg}
                   alt="ANVISA Brazil Medical Device Registration Rio de Janeiro"
                   className="w-full h-auto object-cover rounded-xl"
@@ -671,7 +697,7 @@ function BrazilHubPage() {
 
               {/* Map Graphic */}
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
-                <img
+                <img width={123} height={118}
                   src={brazilMapGraphic}
                   alt="Brazil Map"
                   className="w-full h-auto object-contain"
@@ -767,7 +793,7 @@ function BrazilHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/brazil/classification"
+                to="/services/brazil/anvisa-medical-device-and-ivd-classification-brazil"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your ANVISA Regulatory Pathway →
@@ -821,7 +847,7 @@ function BrazilHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/brazil/registration"
+                to="/services/brazil/anvisa-notification-and-registration-cadastro-and-registro"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare Your ANVISA Submission →
@@ -876,7 +902,7 @@ function BrazilHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/brazil/brh"
+                to="/services/brazil/brazil-registration-holder-brh-and-anvisa-interface"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Discuss Brazil Registration Holder Support →
@@ -931,7 +957,7 @@ function BrazilHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/brazil/bgmp"
+                to="/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare for BGMP / CBPF Review →

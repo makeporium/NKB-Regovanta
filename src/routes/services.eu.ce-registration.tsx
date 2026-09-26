@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -13,14 +13,49 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/ce-registration")({
   head: () => ({
     meta: [
-      { title: "CE Device Registration Pathway Europe | NKB Regovanta" },
+      { name: "robots", content: "noindex, follow" },
+      { title: "EU CE Device Registration | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "CE marking and device registration services for medical devices and IVDs in the European Union.",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { property: "og:title", content: "EU CE Device Registration | NKB Regovanta" },
+      {
+        property: "og:description",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ce-registration" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU CE Device Registration | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance. EUDAMED SRN registration and CE certificate maintenance.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-registration" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "EU CE Marking Registration & Compliance",
+          description: "Expert CE device registration pathway consulting for EU MDR 2017/745 compliance and EUDAMED registration.",
+          provider: {
+            "@type": "Organization",
+            name: "NKB Regovanta",
+            url: "https://www.nkbregovanta.com",
+          },
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "European Union",
+          },
+        }),
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ce-marking" }],
   }),
   component: CERegistrationPage,
 });
@@ -49,7 +84,7 @@ function CERegistrationPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display font-extrabold text-navy leading-[1.08] mb-4 text-3xl sm:text-4xl">
-              CE Device Registration Pathway
+              EU CE Marking Registration &amp; Compliance
             </h1>
             <p className="text-[15px] leading-relaxed text-navy/75 font-medium mb-8">
               NKB Regovanta oversees the complete EU CE-marking and device registration journey under MDR 2017/745 and IVDR 2017/746.

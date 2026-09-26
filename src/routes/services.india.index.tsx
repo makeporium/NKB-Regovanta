@@ -28,11 +28,11 @@ import {
   Landmark,
   Pill,
 } from "lucide-react";
-import heroImg from "@/assets/cdsco-india-hero.png";
-import imgWorldAccess from "@/assets/India on World Map Accesing.png";
-import imgGlobeNetwork from "@/assets/Ethereal Global Network Globe.png";
-import imgManufacturingBg from "@/assets/Medtech Manufacturing Network Illustration.png";
-import imgCertificatesBg from "@/assets/CDSCO Certification Compliance Network.png";
+import heroImg from "@/assets/cdsco-india-hero.optimized.webp";
+import imgWorldAccess from "@/assets/India on World Map Accesing.optimized.webp";
+import imgGlobeNetwork from "@/assets/Ethereal Global Network Globe.optimized.webp";
+import imgManufacturingBg from "@/assets/Medtech Manufacturing Network Illustration.optimized.webp";
+import imgCertificatesBg from "@/assets/CDSCO Certification Compliance Network.optimized.webp";
 
 /* Badge positions are % of the hero artwork, matching the empty circles baked into it. */
 const heroBadges = [
@@ -43,36 +43,36 @@ const heroBadges = [
 ] as const;
 
 const importRegistrations = [
-  { icon: FileText, name: "Class A Import Registration as per GSR 777(E)", desc: "Non-measuring & non-sterile devices.", link: "/services/india/class-a-import" },
-  { icon: ClipboardList, name: "Import License for Predicate Medical Devices", desc: "Forms MD-14, MD-15 for approved devices.", link: "/services/india/predicate-devices" },
-  { icon: ShieldCheck, name: "Import Authorization for Investigational Devices", desc: "Forms MD-18, MD-19 for clinical trials.", link: "/services/india/investigational-devices" },
-  { icon: BadgeCheck, name: "Import Authorization for Novel Medical Devices IVDs", desc: "Forms MD-26, MD-27 for new innovations.", link: "/services/india/novel-ivds" },
-  { icon: LineChart, name: "Import Permission for IVD Clinical Evaluations", desc: "Forms MD-24, MD-25 for performance testing.", link: "/services/india/ivd-clinical-performance" },
-  { icon: Microscope, name: "Import License for IVD Testing & Evaluation", desc: "Forms MD-16, MD-17 for quality checks.", link: "/services/india/ivd-testing" },
-  { icon: User, name: "Personal Use Medical Device Import License", desc: "Forms MD-20, MD-21 for individual patients.", link: "/services/india/personal-use" },
+  { icon: FileText, name: "Class A Import Registration as per GSR 777(E)", desc: "Non-measuring & non-sterile devices.", link: "/services/india/class-a-import-registration-as-per-gsr-777e" },
+  { icon: ClipboardList, name: "Import License for Predicate Medical Devices", desc: "Forms MD-14, MD-15 for approved devices.", link: "/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15" },
+  { icon: ShieldCheck, name: "Import Authorization for Investigational Devices", desc: "Forms MD-18, MD-19 for clinical trials.", link: "/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19" },
+  { icon: BadgeCheck, name: "Import Authorization for Novel Medical Devices IVDs", desc: "Forms MD-26, MD-27 for new innovations.", link: "/services/india/import-authorization-for-novel-ivds-md-26-and-md-27" },
+  { icon: LineChart, name: "Import Permission for IVD Clinical Evaluations", desc: "Forms MD-24, MD-25 for performance testing.", link: "/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25" },
+  { icon: Microscope, name: "Import License for IVD Testing & Evaluation", desc: "Forms MD-16, MD-17 for quality checks.", link: "/services/india/test-license-for-ivd-devices-forms-md-16-md-17" },
+  { icon: User, name: "Personal Use Medical Device Import License", desc: "Forms MD-20, MD-21 for individual patients.", link: "/services/india/patient-personal-use-device-import-forms-md-20-md-21" },
 ] as const;
 
 const manufacturingRegistrations = [
-  { icon: Factory, name: "Manufacturing Licenses for Class C & D Medical Devices", desc: "Forms MD-7, MD-9 for high-risk devices.", link: "/services/india/mfg-class-c-d" },
-  { icon: Settings2, name: "Manufacturing Licenses for Class A & B Medical Devices", desc: "Forms MD-3, MD-5 for low-risk devices.", link: "/services/india/mfg-class-a-b" },
-  { icon: FileCheck2, name: "Manufacturing Registration for Class A Devices", desc: "Simplified registration as per GSR 777(E).", link: "/services/india/mfg-class-a-gsr" },
-  { icon: Handshake, name: "Loan Licenses for Class C & D Devices", desc: "Forms MD-8, MD-10 for third-party manufacturing.", link: "/services/india/loan-class-c-d" },
-  { icon: Building2, name: "Loan Licenses for Class A & B Devices", desc: "Forms MD-4, MD-6 for third-party manufacturing.", link: "/services/india/loan-class-a-b" },
+  { icon: Factory, name: "Manufacturing Licenses for Class C & D Medical Devices", desc: "Forms MD-7, MD-9 for high-risk devices.", link: "/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9" },
+  { icon: Settings2, name: "Manufacturing Licenses for Class A & B Medical Devices", desc: "Forms MD-3, MD-5 for low-risk devices.", link: "/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5" },
+  { icon: FileCheck2, name: "Manufacturing Registration for Class A Devices", desc: "Simplified registration as per GSR 777(E).", link: "/services/india/class-a-manufacturing-registration-gsr-777e" },
+  { icon: Handshake, name: "Loan Licenses for Class C & D Devices", desc: "Forms MD-8, MD-10 for third-party manufacturing.", link: "/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10" },
+  { icon: Building2, name: "Loan Licenses for Class A & B Devices", desc: "Forms MD-4, MD-6 for third-party manufacturing.", link: "/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6" },
 ] as const;
 
 const cdscoCertificates = [
-  { icon: Award, name: "MD-42 Certificate (Medical Device Registration)", desc: "Formal registration certificate from CDSCO.", link: "/services/india/md-42" },
-  { icon: Gavel, name: "Non-Conviction Certificate (NCC)", desc: "Declares no regulatory convictions on record.", link: "/services/india/non-conviction" },
-  { icon: TrendingUp, name: "Market Standing Certificate (MSC)", desc: "Proof of the product's standing in the market.", link: "/services/india/market-standing" },
-  { icon: Hash, name: "Neutral Code Certificate (Special Code)", desc: "Special coding for unbranded exports.", link: "/services/india/neutral-code" },
-  { icon: Globe2, name: "Free Sale Certificate (FSC)", desc: "Confirms devices are freely sold in India.", link: "/services/india/free-sale" },
+  { icon: Award, name: "MD-42 Certificate (Medical Device Registration)", desc: "Formal registration certificate from CDSCO.", link: "/services/india/md-42-medical-device-registration-certificate" },
+  { icon: Gavel, name: "Non-Conviction Certificate (NCC)", desc: "Declares no regulatory convictions on record.", link: "/services/india/non-conviction-certificate-ncc" },
+  { icon: TrendingUp, name: "Market Standing Certificate (MSC)", desc: "Proof of the product's standing in the market.", link: "/services/india/market-standing-certificate-msc" },
+  { icon: Hash, name: "Neutral Code Certificate (Special Code)", desc: "Special coding for unbranded exports.", link: "/services/india/neutral-code-certificate-special-code" },
+  { icon: Globe2, name: "Free Sale Certificate (FSC)", desc: "Confirms devices are freely sold in India.", link: "/services/india/free-sale-certificate-fsc" },
 ] as const;
 
 const crossFunctionalServices = [
-  { icon: Pill, name: "Drug Licenses for Importers (Form 10 & Form 41)", desc: "CDSCO registration certificates, import permits & AIR representation.", link: "/services/drug-licenses-for-importers" },
-  { icon: Radio, name: "WPC Framework & ETA for Wireless Medical Devices", desc: "Equipment Type Approval (ETA), DPL licenses & RF test compliance.", link: "/services/wpc-wireless-medical-devices" },
-  { icon: Activity, name: "PC-PNDT Certificate for Ultrasound & Imaging Devices", desc: "Statutory Form A & Form B registration under the PC-PNDT Act, 1994.", link: "/services/pc-pndt-certificate" },
-  { icon: Landmark, name: "Import Export Code (IEC) & AD Code Registration", desc: "DGFT registration and ICEGATE port-wise bank AD code linking.", link: "/services/iec-ad-code" },
+  { icon: Pill, name: "Drug Licenses for Importers (Form 10 & Form 41)", desc: "CDSCO registration certificates, import permits & AIR representation.", link: "/services/drug-licenses-importers-india-form-10-form-41" },
+  { icon: Radio, name: "WPC Framework & ETA for Wireless Medical Devices", desc: "Equipment Type Approval (ETA), DPL licenses & RF test compliance.", link: "/services/wpc-approval-wireless-medical-devices-india" },
+  { icon: Activity, name: "PC-PNDT Certificate for Ultrasound & Imaging Devices", desc: "Statutory Form A & Form B registration under the PC-PNDT Act, 1994.", link: "/services/pc-pndt-registration-consultant-certificate-india" },
+  { icon: Landmark, name: "Import Export Code (IEC) & AD Code Registration", desc: "DGFT registration and ICEGATE port-wise bank AD code linking.", link: "/services/iec-ad-code-registration-india" },
 ] as const;
 
 type ServiceItem = { icon: LucideIcon; name: string; desc: string; link: string };
@@ -159,8 +159,17 @@ export const Route = createFileRoute("/services/india/")({
   component: IndiaCDSCOPage,
   head: () => ({
     meta: [
-      { title: "CDSCO Medical Device Import & Manufacturing Licence India | NKB Regovanta" },
-      { name: "description", content: "Expert CDSCO consultancy services for medical device import license, manufacturing license, and regulatory approvals in India." },
+      { title: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { name: "description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
+      { property: "og:title", content: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { property: "og:description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/india" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CDSCO Medical Device Consultant India | NKB Regovanta" },
+      { name: "twitter:description", content: "Premier CDSCO medical device regulatory consultancy in India: import licences (MD-14/15), manufacturing (MD-3/9), and Indian Authorized Agent services." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services/india" },
@@ -172,17 +181,22 @@ function IndiaCDSCOPage() {
   return (
     <div className="bg-white">
       {/* HERO SECTION */}
-      <section className="bg-[#f7f9fc]">
-        {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
-        <div className="@container relative hidden md:block">
-          <img src={heroImg} alt="CDSCO medical device registration in India" className="block w-full" />
-
-          <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
-            <h1 className="font-display text-[3.1cqw] font-bold leading-[1.2] text-[#0f2340]">
+      <h1 className="sr-only">
               <span className="text-[#0b3a96]">CDSCO</span> Medical Device
               <br />
               Registration in India
             </h1>
+      <section className="bg-[#f7f9fc]">
+        {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
+        <div className="@container relative hidden md:block">
+          <img width={1942} height={745} src={heroImg} alt="CDSCO medical device registration in India" className="block w-full" />
+
+          <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
+            <p aria-hidden="true" className="font-display text-[3.1cqw] font-bold leading-[1.2] text-[#0f2340]">
+              <span className="text-[#0b3a96]">CDSCO</span> Medical Device
+              <br />
+              Registration in India
+            </p>
             <div className="mt-[2.4cqw] flex items-center gap-[0.4cqw]">
               <span className="h-[0.2cqw] w-[3.5cqw] rounded-full bg-[#ff6b1a]" />
               <span className="h-[0.5cqw] w-[0.5cqw] rounded-full bg-[#c9d3e0]" />
@@ -200,14 +214,14 @@ function IndiaCDSCOPage() {
                 <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
               </Link>
               <Link
-                to="/services/india/medical-devices"
+                to="/services/india/medical-device-licensing-and-regulatory-approvals-in-india"
                 className="inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-white border border-[#0a3d96]/30 px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-[#0a3d96] shadow-md hover:bg-blue-50 transition-colors"
               >
                 Medical Device Regulatory Services
                 <ArrowRight className="h-[1.3cqw] w-[1.3cqw]" />
               </Link>
               <Link
-                to="/services/india/ivd"
+                to="/services/india/in-vitro-diagnostic-regulatory-services"
                 className="inline-flex w-fit items-center gap-[1.2cqw] rounded-[0.45cqw] bg-white border border-[#0a3d96]/30 px-[1.9cqw] py-[0.95cqw] text-[1.05cqw] font-bold text-[#0a3d96] shadow-md hover:bg-blue-50 transition-colors"
               >
                 IVD Regulatory Services
@@ -240,9 +254,9 @@ function IndiaCDSCOPage() {
 
         {/* Mobile: stacked */}
         <div className="md:hidden px-4 pt-12 pb-8 sm:px-6">
-          <h1 className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
+          <p aria-hidden="true" className="font-display text-3xl font-bold leading-tight text-[#0f2340] sm:text-4xl">
             <span className="text-[#0b3a96]">CDSCO</span> Medical Device Registration in India
-          </h1>
+          </p>
           <div className="mt-5 flex items-center gap-1.5">
             <span className="h-[3px] w-12 rounded-full bg-[#ff6b1a]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#c9d3e0]" />
@@ -260,21 +274,21 @@ function IndiaCDSCOPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/services/india/medical-devices"
+              to="/services/india/medical-device-licensing-and-regulatory-approvals-in-india"
               className="inline-flex items-center gap-3 rounded-lg bg-white border border-[#0a3d96]/30 px-6 py-3.5 text-sm font-bold text-[#0a3d96] shadow-sm hover:bg-blue-50"
             >
               Medical Device Services
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/services/india/ivd"
+              to="/services/india/in-vitro-diagnostic-regulatory-services"
               className="inline-flex items-center gap-3 rounded-lg bg-white border border-[#0a3d96]/30 px-6 py-3.5 text-sm font-bold text-[#0a3d96] shadow-sm hover:bg-blue-50"
             >
               IVD Regulatory Services
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img src={heroImg} alt="" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -299,7 +313,7 @@ function IndiaCDSCOPage() {
                 </p>
               </div>
             </div>
-            <img
+            <img width={1672} height={941}
               src={imgWorldAccess}
               alt="India connected to the United States, Canada, United Kingdom, European Union and Australia"
               className="w-full rounded-2xl border border-gray-100 shadow-xl"
@@ -307,7 +321,7 @@ function IndiaCDSCOPage() {
           </div>
         </div>
       </section>
-      
+
       {/* SUGAM PORTAL SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1f4d] via-navy to-[#081430] py-16 text-white">
         <div
@@ -319,7 +333,7 @@ function IndiaCDSCOPage() {
           }}
         ></div>
         <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6">CDSCO MDONLINE SUGAM Registration</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">CDSCO MDONLINE SUGAM Registration</h2>
           <p className="text-lg text-white/80 leading-relaxed">
             In India’s evolving medical device sector, the <strong>CDSCOMDONLINE Portal</strong> stands as the indispensable online platform for all regulatory interactions. This intuitive system is designed to simplify and accelerate your licensing journey, enabling efficient application submissions, real-time status tracking, and secure approval acquisition. Our team expertly navigates this portal on your behalf.
           </p>
@@ -337,7 +351,7 @@ function IndiaCDSCOPage() {
           </div>
 
           <div className="space-y-16">
-            
+
             <ServiceGroup
               icon={Download}
               title="Import Registrations"

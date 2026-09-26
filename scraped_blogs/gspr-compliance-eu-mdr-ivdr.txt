@@ -1,0 +1,57 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## GSPR Requirements for EU MDR and IVDR
+
+GSPR Requirements for EU MDR and IVDR the EU Parliament published on 05 May 2017 sets forth new and important requirements for medical device and in vitro diagnostic manufacturers that distribute products in the EU. New General Safety and Performance Requirements for EU MDR & IVDR is for ensuring that devices placed on the EU market are fit for the new technological challenges. In this respect, the new texts lay down certain new General Safety and Performance Requirements for EU MDR & IVDR for all medical devices that incorporate electronic programmable systems and software that are medical devices in themselves.
+
+The MDCG guidance provides a listing of all GSPR Requirements for EU MDR and IVDR in MDR Annex I & IVDR Annex I pertaining to cybersecurity. The MDR and IVDR request manufacturers of medical devices to consider the state of the art when designing, developing and upgrading medical devices across their life cycles.
+
+					Regulatory Excellence for Global Medical Device Markets
+
+Manufacturers should demonstrate state-of-the-art within their decisions (based on applicable standards, guidance, their own proprietary knowledge and publicly available scientific/technical information) while demonstrating appropriateness to proportionally address security risk.
+
+					GSPR Requirements for EU MDR and IVDR
+
+The medical sector plays a crucial role not only to the health of European Union (EU) citizens but to the European economy as well. The medical devices market in the EU contributes to one-third of the global market, at around €110 billion. Due to the COVID-19 pandemic and increased demand for medical devices, the European Parliament agreed to the EU Commission’s proposal to postpone the application of the MDR by one year. It is essential that the majority of medical producers around the world are compliant with the EU MDR/IVDR. Hundreds of thousands of products will need to be re-certified in order to continue being sold in the European market.
+
+General Safety and Performance Requirements for EU MDR & IVDR apply to all medical device classes, as well as the design phase in the manufacturing process. Additional steps include the development of quality and risk management systems, as well as conducting a benefit-risk analysis and clinical evaluations. Manufacturers are also required to supply label information, including instructions of use. The MDR/IVDR obligates the manufacturer or authorized representative in the EU to generate the technical documentation and sign the declaration of conformity.
+
+All technical documentation must be kept for 10 to 15 years depending on the device type. Manufacturers must draw a post-market surveillance technical file to show how the performance data about their device is collected. Indeed, the new regulations offer better co-ordination mechanisms and post-market surveillance. The essential requirements (ER) are the key elements to compliance with MDD and AIMDD. The new regulation EU MDR replaces the essential requirements (ER) by General Safety And Performance Requirements for EU MDR & IVDR (GSPR).
+
+General Safety And Performance Requirements for EU MDR & IVDR (EU MDR) are almost similar to Essential Requirements (MDD), there are some additional requirements and some expanded requirements, and some new topics are introduced in GSPR.
+
+					Main Requirements of GSPR
+
+The requirements of GSPR is covered in Annex I of MDR with 3 chapters.
+
+Chapter 1 – General requirements
+
+Chapter II – Requirements regarding design and manufacture
+
+Chapter III – Requirements regarding the information supplied with the device
+
+Fulfilling the general safety and performance requirements listed in Annex I is one of the most fundamental preconditions to placing any medical device on the European mark. “Placing on the market and putting into service”. The ”requirements” are a set of product characteristics, which are considered by the European authorities as being essential to ensuring that any new device will be safe and perform as intended throughout its life.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

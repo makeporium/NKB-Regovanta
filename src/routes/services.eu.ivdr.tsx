@@ -41,29 +41,26 @@ export const Route = createFileRoute("/services/eu/ivdr")({
   head: () => ({
     meta: [
       {
-        title:
-          "EU IVDR 2017/746 Regulatory Consulting for In Vitro Diagnostic Devices | PER & CE Marking | NKB Regovanta",
+        title: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta",
       },
       {
         name: "description",
-        content:
-          "Specialized EU IVDR 2017/746 regulatory consultants. Performance Evaluation Plan & Report (PEP / PER), Scientific Validity, Analytical & Clinical Performance studies, Class D EURL strategy, Notified Body review, and CE marking.",
-      },
-      {
-        name: "keywords",
-        content:
-          "EU IVDR 2017/746 consultant, In Vitro Diagnostic Regulation Europe, IVDR Performance Evaluation Report PER, Scientific Validity, Analytical Performance IVD, Clinical Performance Studies, Class D EURL, IVDR Notified Body, NKB Regovanta",
+        content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification.",
       },
       {
         property: "og:title",
-        content: "EU IVDR 2017/746 Regulatory Consulting for IVDs | NKB Regovanta",
+        content: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta",
       },
       {
         property: "og:description",
-        content:
-          "Senior IVDR regulatory consultants connecting scientific validity, analytical performance, clinical performance, and Notified Body defense for Class A, B, C, and D assays.",
+        content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/ivdr" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU IVDR Regulatory Compliance Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Specialized EU IVDR 2017/746 regulatory consulting: Performance Evaluation Reports (PER), analytical studies, Class D EURL, and CE marking certification." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/ivdr" }],
   }),
@@ -233,7 +230,7 @@ const ivdrCards = [
       "EC REP, Importer, Distributor mandates",
       "UDI-DI & Basic UDI-DI management",
     ],
-    to: "/services/eu/eudamed",
+    to: "/services/eu/eudamed-udi-and-economic-operator-compliance",
   },
   {
     icon: RefreshCw,
@@ -364,12 +361,18 @@ function EUIVDRPage() {
                 >
                   Discuss Your IVDR Strategy <ArrowRight className="h-4 w-4" />
                 </Link>
+                <Link
+                  to="/industries/ivd/eu"
+                  className="inline-flex items-center gap-2 border border-emerald-200/40 bg-white/5 hover:bg-white/10 text-white text-[13px] font-bold px-6 py-3.5 rounded-md transition-all"
+                >
+                  Read the EU IVDR Guide <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#133d23] to-[#0a2012] p-4 text-center">
-                <img
+                <img width={113} height={118}
                   src={euIvdrDeviceImg}
                   alt="EU IVDR Laboratory Technology"
                   className="w-48 h-48 mx-auto object-contain mb-3 drop-shadow-xl"
@@ -511,7 +514,7 @@ function EUIVDRPage() {
                   Evidence-Driven PER &amp; Study Protocols
                 </h4>
                 <p className="text-xs sm:text-[13px] text-emerald-100/90 leading-relaxed font-normal mb-6">
-                  Under IVDR, over 85% of IVDs require Notified Body certification. We build the evidence matrix linking each performance claim directly to laboratory data, ensuring effortless Notified Body approval.
+                  Under IVDR, Notified Body involvement depends on the device classification and applicable conformity-assessment route. We build an evidence matrix that links each performance claim to relevant supporting data.
                 </p>
                 <Link
                   to="/contact"
@@ -533,7 +536,7 @@ function EUIVDRPage() {
               IVD Technology Expertise
             </h3>
             <p className="text-xs sm:text-sm text-navy/65 mt-1 font-medium">
-              Proven analytical and clinical track record across advanced assay formats.
+              Analytical and clinical considerations across advanced assay formats.
             </p>
           </div>
 
@@ -548,6 +551,17 @@ function EUIVDRPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-slate-50 border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-extrabold text-navy mb-3">Primary regulatory references</h2>
+          <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">IVDR transition arrangements, EUDAMED obligations, and performance-evaluation requirements depend on the device and its current market status.</p>
+          <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-navy/75">
+            <li><a className="underline" href="https://health.ec.europa.eu/medical-devices-sector/new-regulations_en">European Commission: In Vitro Diagnostic Medical Devices Regulation (EU) 2017/746</a></li>
+            <li><a className="underline" href="https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en">European Commission: EUDAMED mandatory modules from 28 May 2026</a></li>
+          </ul>
         </div>
       </section>
 

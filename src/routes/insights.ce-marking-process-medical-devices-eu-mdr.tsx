@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/ce-marking-process-medical-devices-eu-mdr.json";
+
+export const Route = createFileRoute("/insights/ce-marking-process-medical-devices-eu-mdr")({
+  head: () => ({
+    meta: [
+      { title: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
+      { name: "description", content: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
+      { property: "og:description", content: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/biochemical_laboratory_flask.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR CE Marking Step-by-Step Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "Sequence EU MDR qualification, classification, evidence, conformity assessment, declaration, and ongoing obligations in a practical project plan." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/biochemical_laboratory_flask.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -16,24 +16,23 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/eu/article-117")({
   head: () => ({
     meta: [
-      { title: "EU MDR Article 117 Drug-Device Combination Products & Notified Body Opinion | NKB Regovanta" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "EU MDR Article 117 Consulting | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior regulatory consulting for Drug-Device Combination Products under EU MDR Article 117, Notified Body Opinion (NBOp) dossier compilation, GSPR conformity, and EMA / Competent Authority interface.",
+        content: "EU MDR Article 117 combination products consulting. Notified Body Opinion (NBOp) dossiers, GSPR conformity, and EMA interface with expert consultants.",
       },
-      {
-        name: "keywords",
-        content:
-          "EU MDR Article 117, Drug-Device Combination Products, Notified Body Opinion NBOp, GSPR compliance medicinal products, prefilled syringes auto-injectors, NKB Regovanta",
-      },
-      { property: "og:title", content: "Drug-Device Combination Products & Article 117 | NKB Regovanta" },
+      { property: "og:title", content: "EU MDR Article 117 Consulting | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "We align device-constituent GSPR evidence, usability, functional performance, and Notified Body Opinion preparation for pharmaceutical combination products.",
+        content: "EU MDR Article 117 combination products consulting. Notified Body Opinion (NBOp) dossiers, GSPR conformity, and EMA interface with expert consultants.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/article-117" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR Article 117 Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "EU MDR Article 117 combination products consulting. Notified Body Opinion (NBOp) dossiers, GSPR conformity, and EMA interface with expert consultants." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/article-117" }],
   }),
@@ -114,10 +113,10 @@ function EUArticle117Page() {
               className="font-display font-extrabold text-navy leading-[1.08] mb-4"
               style={{ fontSize: "clamp(26px, 3.5vw, 42px)" }}
             >
-              Drug-Device Combination Products &amp; Article 117
+              EU MDR Article 117 Drug-Device Combination Products
             </h1>
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-navy/75 font-medium mb-8">
-              For medicinal products incorporating an integral device constituent part (such as pre-filled pens, auto-injectors, or inhalers), Article 117 mandates evidence of conformity with applicable MDR Annex I GSPRs and a Notified Body Opinion (NBOp). We prepare and defend the complete device evidence dossier.
+              For medicinal products incorporating an integral device part, Article 117 addresses evidence of conformity with applicable MDR Annex I requirements. Where the required conformity evidence is absent, a Notified Body opinion is needed if the device part, considered separately, would require Notified Body involvement. We assess applicability before preparing the device evidence dossier.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link

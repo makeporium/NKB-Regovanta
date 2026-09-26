@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -47,17 +47,39 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/wand-notification")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
-        title:
-          "New Zealand WAND Notification & Medsafe Database Filing | NKB Regovanta",
+        title: "NZ WAND Notification & Medsafe Database | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Web Assisted Notification of Devices (WAND) database filing with Medsafe in New Zealand. 30-day statutory notifications, GMDN descriptors, product identifier entry, and WAND amendments.",
+          "WAND database filing with Medsafe in NZ — 30-day statutory notifications, GMDN descriptors, and product identifier entry for medical devices.",
       },
+      { property: "og:title", content: "NZ WAND Notification & Medsafe Database | NKB Regovanta" },
+      { property: "og:description", content: "WAND database filing with Medsafe in NZ — 30-day statutory notifications, GMDN descriptors, and product identifier entry for medical devices." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/wand-notification" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NZ WAND Notification & Medsafe Database | NKB Regovanta" },
+      { name: "twitter:description", content: "WAND database filing with Medsafe in NZ — 30-day statutory notifications, GMDN descriptors, and product identifier entry for medical devices." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/wand-notification" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand WAND Notification & Medsafe Database Filing",
+          description: "End-to-end WAND database notification filing, GMDN coding, 30-day statutory compliance, and amendment management for medical device sponsors in New Zealand.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZWandNotificationPage,
 });

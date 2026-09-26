@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,28 +20,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/mock-audits")({
   head: () => ({
     meta: [
-      {
-        title: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Full-system and targeted mock MDSAP audits, opening/closing meetings, record retrieval drills, and process-owner interview coaching.",
-      },
-      {
-        property: "og:title",
-        content: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "A mock audit should create productive pressure before the real auditor does. Realistic cross-process simulations and evidence challenges.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta" },
+      { name: "description", content: "Full-system and targeted mock MDSAP audits, opening/closing meeting simulations, record retrieval drills, and process-owner interview coaching." },
+      { property: "og:title", content: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta" },
+      { property: "og:description", content: "Full-system and targeted mock MDSAP audits, opening/closing meeting simulations, record retrieval drills, and process-owner interview coaching." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/mock-audits" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mock MDSAP Audits & Interview Preparation | NKB Regovanta" },
+      { name: "twitter:description", content: "Full-system and targeted mock MDSAP audits, opening/closing meeting simulations, record retrieval drills, and process-owner interview coaching." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/mock-audits" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/mock-audits",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Mock MDSAP Audits & Interview Preparation",
+          description: "Simulated MDSAP audits, process-owner interview coaching, and record retrieval drills to prepare medical device manufacturers for Auditing Organization audits.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

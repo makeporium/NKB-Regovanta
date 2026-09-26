@@ -41,20 +41,28 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import uaeHeroImg from "@/assets/uae-hero-dubai.png";
+import uaeHeroImg from "@/assets/uae-hero-clean.jpg";
 
 export const Route = createFileRoute("/services/uae/")({
   head: () => ({
     meta: [
       {
-        title:
-          "UAE MOHAP Medical Device Registration & Market Access Consultant | NKB Regovanta",
+        title: "UAE MOHAP Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "UAE Ministry of Health and Prevention (MOHAP) medical device and IVD registration consulting. Product classification, licensed medical warehouse / MAH interface, technical file compilation, MOIAT ECAS screening, and post-market vigilance.",
+          "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates.",
       },
+      { property: "og:title", content: "UAE MOHAP Medical Device Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uae" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "UAE MOHAP Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert UAE MOHAP medical device consulting: classification, MAH interface, technical file compilation, and post-market vigilance in the Emirates." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae" }],
   }),
@@ -105,21 +113,21 @@ const trustBarItems = [
 ];
 
 const quickNavItems = [
-  { title: "Regulatory Strategy", to: "/services/uae/classification", icon: Target },
-  { title: "MOHAP Dossier Submission", to: "/services/uae/mohap-registration", icon: FileText },
-  { title: "Local MAH & AR Services", to: "/services/uae/local-applicant", icon: Users },
-  { title: "Technical Documentation", to: "/services/uae/technical-documentation", icon: BookOpen },
-  { title: "Testing & Laboratory", to: "/services/uae/testing-strategy", icon: FlaskConical },
-  { title: "Post-Market Compliance", to: "/services/uae/post-market", icon: ShieldCheck },
-  { title: "Change & Lifecycle", to: "/services/uae/change-management", icon: RefreshCw },
-  { title: "MOIAT / ECAS Assessment", to: "/services/uae/ecas", icon: Award },
+  { title: "Regulatory Strategy", to: "/services/uae/uae-mohap-regulatory-strategy-and-product-classification", icon: Target },
+  { title: "MOHAP Dossier Submission", to: "/services/uae/mohap-medical-device-registration-and-dossier-strategy", icon: FileText },
+  { title: "Local MAH & AR Services", to: "/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface", icon: Users },
+  { title: "Technical Documentation", to: "/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap", icon: BookOpen },
+  { title: "Testing & Laboratory", to: "/services/uae/testing-strategy-and-laboratory-coordination-uae", icon: FlaskConical },
+  { title: "Post-Market Compliance", to: "/services/uae/post-market-monitoring-vigilance-and-field-actions-uae", icon: ShieldCheck },
+  { title: "Change & Lifecycle", to: "/services/uae/changes-variations-renewal-and-lifecycle-support-uae", icon: RefreshCw },
+  { title: "MOIAT / ECAS Assessment", to: "/services/uae/ecas-moiat-conformity-assessment-where-separately-applicable", icon: Award },
 ];
 
 const services13 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/uae/classification",
+    to: "/services/uae/uae-mohap-regulatory-strategy-and-product-classification",
     icon: Target,
     title: "1. Regulatory Strategy\n& Classification",
     bullets: [
@@ -132,7 +140,7 @@ const services13 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/uae/mohap-registration",
+    to: "/services/uae/mohap-medical-device-registration-and-dossier-strategy",
     icon: FileText,
     title: "2. MOHAP Registration\n& Dossier Strategy",
     bullets: [
@@ -145,7 +153,7 @@ const services13 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/uae/local-applicant",
+    to: "/services/uae/uae-local-applicant-marketing-authorization-holder-and-regulatory-interface",
     icon: Users,
     title: "3. Local Applicant (MAH)\n& Representation",
     bullets: [
@@ -158,7 +166,7 @@ const services13 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/uae/technical-documentation",
+    to: "/services/uae/technical-documentation-and-safety-performance-evidence-uae-mohap",
     icon: BookOpen,
     title: "4. Technical Documentation\n& Review",
     bullets: [
@@ -171,7 +179,7 @@ const services13 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/uae/testing-strategy",
+    to: "/services/uae/testing-strategy-and-laboratory-coordination-uae",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -184,7 +192,7 @@ const services13 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/uae/ivd",
+    to: "/services/uae/ivd-registration-and-performance-evidence-uae",
     icon: Syringe,
     title: "6. IVD Registration &\nPerformance Evidence",
     bullets: [
@@ -197,7 +205,7 @@ const services13 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/uae/software",
+    to: "/services/uae/samd-software-ai-and-cybersecurity-uae-mohap",
     icon: Monitor,
     title: "7. SaMD / Software /\nAI & Cybersecurity",
     bullets: [
@@ -210,7 +218,7 @@ const services13 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/uae/labeling",
+    to: "/services/uae/labeling-ifu-packaging-and-market-claim-compliance-uae",
     icon: Languages,
     title: "8. Labeling, IFU, UDI &\nAdvertising Compliance",
     bullets: [
@@ -223,7 +231,7 @@ const services13 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/uae/post-market",
+    to: "/services/uae/post-market-monitoring-vigilance-and-field-actions-uae",
     icon: ShieldCheck,
     title: "9. Post-Market Surveillance,\nVigilance & FSCA",
     bullets: [
@@ -249,7 +257,7 @@ const services13 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/uae/change-management",
+    to: "/services/uae/changes-variations-renewal-and-lifecycle-support-uae",
     icon: RefreshCw,
     title: "11. Change, Variation &\nRenewal Support",
     bullets: [
@@ -262,7 +270,7 @@ const services13 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/uae/mohap-queries",
+    to: "/services/uae/mohap-queries-deficiency-response-and-technical-review-support",
     icon: AlertTriangle,
     title: "12. Queries, Deficiency\nResponse & Review Support",
     bullets: [
@@ -275,7 +283,7 @@ const services13 = [
   {
     num: "13",
     id: "sec-13",
-    to: "/services/uae/supply-chain",
+    to: "/services/uae/medical-warehouse-local-supply-chain-and-commercial-readiness",
     icon: Building2,
     title: "13. Medical Warehouse &\nLocal Supply Chain",
     bullets: [
@@ -342,6 +350,24 @@ const faqs = [
 function UAEHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "UAE MOHAP Medical Device Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "MOHAP Medical Device Registration & Market Access Consulting",
+            "description": "Comprehensive UAE MOHAP regulatory consulting for Medical Devices and IVDs including classification, technical files, and local representation.",
+            "areaServed": "United Arab Emirates"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Dubai Graphic)
       ══════════════════════════════════════════════════════════════════ */}
@@ -398,11 +424,14 @@ function UAEHubPage() {
 
             {/* Right Dubai Graphic with Flag, MOHAP Emblem, and Laptop */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[440px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
                 <img
+                  width={1792}
+                  height={1195}
                   src={uaeHeroImg}
-                  alt="MOHAP Medical Device Registration UAE Dubai"
+                  alt="MOHAP Medical Device Registration UAE Dubai Burj Khalifa Flag and ECAS"
                   className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -710,7 +739,7 @@ function UAEHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/uae/classification"
+                to="/services/uae/uae-mohap-regulatory-strategy-and-product-classification"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your UAE Regulatory Pathway →
@@ -762,7 +791,7 @@ function UAEHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/uae/mohap-registration"
+                to="/services/uae/mohap-medical-device-registration-and-dossier-strategy"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare Your MOHAP Registration →

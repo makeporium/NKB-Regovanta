@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/optimal-timing-usfda-510k-submission.json";
+
+export const Route = createFileRoute("/insights/optimal-timing-usfda-510k-submission")({
+  head: () => ({
+    meta: [
+      { title: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
+      { name: "description", content: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
+      { property: "og:description", content: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/project_milestone_calendar.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FDA 510(k) Submission Timing Strategy | NKB Regovanta" },
+      { name: "twitter:description", content: "Assess 510(k) readiness through intended use, predicate strategy, completed evidence, configuration control, and capacity to answer review questions." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/project_milestone_calendar.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

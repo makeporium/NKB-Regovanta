@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, BarChart3, ShieldCheck, Globe2, Trophy, Users } from "lucide-react";
-import caseHero from "@/assets/case.png";
-const imgTestSmarter = "/assets/brain/cs_test_smarter_1786441137220.png";
-const imgSimulatedUse = "/assets/brain/cs_fda_simulated_use_1786441155542.png";
-const imgBiocompatibility = "/assets/brain/cs_fda_biocompatibility_1786441176273.png";
-const imgEU = "/assets/brain/cs_eu_mdr_remediation_1786441191745.png";
-const imgAustralia = "/assets/brain/cs_australia_tga_1786441211612.png";
-const imgAlgorithm = "/assets/brain/cs_algorithm_claim_1786441224937.png";
+import caseHero from "@/assets/case.optimized.webp";
+const imgTestSmarter = "/assets/case-studies/cs-test-smarter.jpg";
+const imgSimulatedUse = "/assets/case-studies/cs-fda-simulated-use.jpg";
+const imgBiocompatibility = "/assets/case-studies/cs-fda-biocompatibility.jpg";
+const imgEU = "/assets/case-studies/cs-eu-mdr-remediation.jpg";
+const imgAustralia = "/assets/case-studies/cs-australia-tga.jpg";
+const imgAlgorithm = "/assets/case-studies/cs-algorithm-claim.jpg";
 
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
@@ -15,18 +15,24 @@ export const Route = createFileRoute("/case-studies/")({
       {
         name: "description",
         content:
-          "Explore real-world case studies of medical device, IVD, and pharma companies achieving FDA 510(k) clearances, EU MDR certifications, and TGA approvals with NKB Regovanta.",
-      },
-      {
-        name: "keywords",
-        content: "regulatory case studies, FDA 510k success, EU MDR remediation, TGA approval case study, medical device consulting results, NKB Regovanta",
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
       },
       { property: "og:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
       {
         property: "og:description",
-        content: "Proven track record in global regulatory approvals, ISO 13485 compliance, and market expansion.",
+        content:
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/case-studies" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Client Case Studies & Success Stories | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "Real-world case studies: medical device and IVD manufacturers achieving FDA 510(k) clearance, EU MDR certification, and TGA approval with NKB Regovanta.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/case-studies" },
@@ -42,7 +48,7 @@ const studies = [
     title: "Test Smarter. Cover More.",
     desc: "A hypodermic syringe family included multiple syringe sizes and needle gauges. Testing every possible configuration could have meant unnecessary duplication...",
     img: imgTestSmarter,
-    route: "/case-studies/test-smarter",
+    route: "/case-studies/medical-device-testing-strategy-test-smarter-cover-more",
     metrics: [
       { icon: Clock, value: "Faster", label: "Time to Market" },
       { icon: CheckCircle2, value: "100%", label: "Defensible Strategy" },
@@ -55,7 +61,7 @@ const studies = [
     title: "Avoiding Duplicate Simulated-Use Work",
     desc: "Leveraging an already marketed safety feature to prevent an automatic repeat usability study for a sharps-injury-prevention feature.",
     img: imgSimulatedUse,
-    route: "/case-studies/fda-simulated-use",
+    route: "/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature",
     metrics: [
       { icon: CheckCircle2, value: "Accepted", label: "By FDA" },
       { icon: Clock, value: "Saved", label: "Study Time" },
@@ -68,7 +74,7 @@ const studies = [
     title: "Predicate + Biocompatibility Equivalence",
     desc: "Using predicate and material equivalence to avoid repeating biocompatibility testing without regulatory need for a medical device.",
     img: imgBiocompatibility,
-    route: "/case-studies/fda-biocompatibility",
+    route: "/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need",
     metrics: [
       { icon: ShieldCheck, value: "Proven", label: "Safety Argument" },
       { icon: CheckCircle2, value: "Avoided", label: "Repeat Testing" },
@@ -81,7 +87,7 @@ const studies = [
     title: "Technical Documentation Remediation",
     desc: "Converting a legacy technical file to MDR without rebuilding everything from zero. Treating it as evidence remediation and traceability engineering.",
     img: imgEU,
-    route: "/case-studies/eu-mdr-remediation",
+    route: "/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero",
     metrics: [
       { icon: Trophy, value: "Retained", label: "Valid Evidence" },
       { icon: Clock, value: "Reduced", label: "Document Rework" },
@@ -94,7 +100,7 @@ const studies = [
     title: "Reuse What’s Accepted. Rebuild Only What’s Needed.",
     desc: "Leveraging existing overseas regulatory approvals and evidence to support Australian ARTG inclusion without unnecessary duplication.",
     img: imgAustralia,
-    route: "/case-studies/australia-tga",
+    route: "/case-studies/australia-tga-artg-inclusion-case-study",
     metrics: [
       { icon: Clock, value: "Faster", label: "Preparation" },
       { icon: BarChart3, value: "Less", label: "Duplication" },
@@ -107,7 +113,7 @@ const studies = [
     title: "The Algorithm Can Do More. Should the Label?",
     desc: "An AI/ML-enabled imaging software was developed with capabilities extending beyond its initially proposed intended purpose...",
     img: imgAlgorithm,
-    route: "/case-studies/algorithm-claim",
+    route: "/case-studies/the-algorithm-can-do-more-should-the-label",
     metrics: [
       { icon: CheckCircle2, value: "Clear", label: "Intended Purpose" },
       { icon: ShieldCheck, value: "Targeted", label: "Evidence Plan" },
@@ -125,14 +131,17 @@ function CaseStudies() {
           <div className="flex flex-col justify-center pr-6 pt-8 pb-10 lg:pt-10 lg:pb-12">
             <p className="text-[13px] font-bold text-navy mb-4 tracking-wide">Proven Results</p>
             <h1 className="font-display font-extrabold leading-tight text-navy" style={{ fontSize: "clamp(32px, 4vw, 52px)" }}>
-              Real Challenges.<br />Measurable Success.
+              Client Case Studies &amp; Success Stories
             </h1>
-            <p className="mt-5 text-[15px] text-navy/75 leading-relaxed max-w-md">
+            <p className="mt-2 text-lg font-bold text-accent">
+              Real Challenges. Measurable Success.
+            </p>
+            <p className="mt-4 text-[15px] text-navy/75 leading-relaxed max-w-md">
               Explore how we've helped medical device companies achieve compliance, accelerate approvals, and grow their global presence.
             </p>
           </div>
           <div className="hidden lg:flex justify-end items-center h-full">
-            <img src={caseHero} alt="Case Studies Concept" className="w-full max-w-lg object-contain" />
+            <img width={1384} height={472} src={caseHero} alt="Case Studies Concept" className="w-full max-w-lg object-contain" />
           </div>
         </div>
       </section>
@@ -164,7 +173,7 @@ function CaseStudies() {
                   <p className="mt-4 text-[13.5px] leading-relaxed text-navy/70 flex-1">
                     {s.desc}
                   </p>
-                  
+
                   <div className="mt-8 pt-6 border-t border-border grid grid-cols-3 gap-2">
                     {s.metrics.map((m, i) => (
                       <div key={i} className="flex flex-col gap-1.5">

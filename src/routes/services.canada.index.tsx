@@ -44,7 +44,7 @@ import {
   Search,
   Sparkles,
 } from "lucide-react";
-import canadaHero3dImg from "@/assets/canada-hero-3d.png";
+import canadaHero3dImg from "@/assets/canada-hero-clean.jpg";
 import canadaMapShieldImg from "@/assets/canada-map-shield.png";
 import canadaMapleBottomImg from "@/assets/canada-maple-leaf-bottom.png";
 import canadaMdsapLogoImg from "@/assets/canada-mdsap-logo.png";
@@ -54,29 +54,28 @@ export const Route = createFileRoute("/services/canada/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Health Canada MDL & MDEL Registration Consultant | MDSAP Canada | NKB Regovanta",
+        title: "Health Canada Medical Device Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Senior Health Canada regulatory consulting: Medical Device Licence (MDL Class II-IV), Medical Device Establishment Licence (MDEL), MDSAP ISO 13485 QMS readiness, IMDRF Table of Contents dossiers, and bilingual French/English labelling.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Health Canada Medical Device Licence MDL, Medical Device Establishment Licence MDEL, MDSAP Canada consultant, SOR 98-282, Health Canada IVD registration, bilingual labelling Canada medical devices, NKB Regovanta",
+          "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling.",
       },
       {
         property: "og:title",
-        content: "Health Canada MDL & MDEL Registration Consultant | MDSAP Canada | NKB Regovanta",
+        content: "Health Canada Medical Device Consultant | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Your Partner for Canadian Market Access. End-to-end regulatory, quality and compliance support for Medical Devices, IVDs and Combination Products in Canada.",
+          "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/canada" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Health Canada Medical Device Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert Health Canada medical device consulting: MDL device licences (Class II–IV), MDEL establishment licences, MDSAP, and bilingual labelling." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/canada" }],
   }),
@@ -131,7 +130,7 @@ const services12 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/canada/classification",
+    to: "/services/canada/health-canada-medical-device-and-ivd-classification",
     icon: Target,
     title: "1. Regulatory Strategy &\nProduct Classification",
     bullets: [
@@ -143,7 +142,7 @@ const services12 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/canada/mdl",
+    to: "/services/canada/health-canada-medical-device-licence-mdl-application",
     icon: FileText,
     title: "2. MDL & MDEL\nRegistration",
     bullets: [
@@ -155,7 +154,7 @@ const services12 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/canada/mdsap",
+    to: "/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
     icon: ShieldCheck,
     title: "3. MDSAP Canada\nCertification",
     bullets: [
@@ -167,7 +166,7 @@ const services12 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/canada/technical-documentation",
+    to: "/services/canada/health-canada-technical-documentation-and-evidence-strategy",
     icon: BookOpen,
     title: "4. Technical Documentation\nReview",
     bullets: [
@@ -179,7 +178,7 @@ const services12 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/canada/testing-strategy",
+    to: "/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLab Coordination",
     bullets: [
@@ -191,7 +190,7 @@ const services12 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/canada/labeling",
+    to: "/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
     icon: Languages,
     title: "6. Labelling & Bilingual\nRequirements",
     bullets: [
@@ -203,7 +202,7 @@ const services12 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/canada/pms",
+    to: "/services/canada/health-canada-post-market-surveillance-and-mpr",
     icon: RefreshCw,
     title: "7. Post-Market Surveillance\n& Vigilance",
     bullets: [
@@ -215,7 +214,7 @@ const services12 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/canada/change-management",
+    to: "/services/canada/health-canada-mdl-amendments-and-significant-changes",
     icon: Layers,
     title: "8. Licence Maintenance\n& Changes",
     bullets: [
@@ -227,7 +226,7 @@ const services12 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/canada/supply-chain",
+    to: "/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
     icon: Factory,
     title: "9. Manufacturer & Importer\nObligations",
     bullets: [
@@ -239,7 +238,7 @@ const services12 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/canada/ivd",
+    to: "/services/canada/health-canada-ivd-registration-and-performance-strategy",
     icon: Syringe,
     title: "10. IVD Registration\nSupport",
     bullets: [
@@ -251,7 +250,7 @@ const services12 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/canada/software",
+    to: "/services/canada/health-canada-samd-and-cybersecurity-compliance",
     icon: Monitor,
     title: "11. Software & Cybersecurity\nCompliance",
     bullets: [
@@ -263,7 +262,7 @@ const services12 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/canada/inspection",
+    to: "/services/canada/health-canada-inspection-readiness-and-defense",
     icon: Search,
     title: "12. Compliance Audits &\nInspection Support",
     bullets: [
@@ -369,29 +368,36 @@ function CanadaMarketCompletePage() {
       />
 
       {/* ══════════════════════════════════════════════════════════════════
-          1. HERO SECTION (Identical to Picture Mockup)
+          1. HERO SECTION (Matching Picture Mockup)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#03152d] via-[#071f43] to-[#0c2a57] text-white pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-border/20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[radial-gradient(ellipse_at_top_right,rgba(224,49,49,0.3),transparent_70%)] pointer-events-none" />
+      <section className="relative bg-white pt-8 pb-12 border-b border-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-1.5 text-[11px] text-gray-500 font-semibold mb-4">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <span className="text-navy font-bold">Canada</span>
+          </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Col */}
             <div className="lg:col-span-7">
-              <h1 className="font-display font-extrabold text-white text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] leading-[1.12] mb-2 tracking-tight">
-                Health Canada MDL &amp; MDEL<br />
-                Registration Consultant<br />
-                <span className="text-[#e03131]">MDSAP Canada</span> | Your Partner for<br className="hidden sm:inline" />
-                Canadian Market Access
+              <h1 className="font-display font-extrabold text-[#051833] text-2xl sm:text-3xl lg:text-[36px] leading-[1.12] mb-2 tracking-tight">
+                Health Canada MDL &amp; MDEL Registration Consultant
               </h1>
-              <p className="text-xs sm:text-[13.5px] text-blue-100/90 font-medium mb-6 leading-relaxed max-w-2xl">
+              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#e03131] mb-2">
+                MDSAP Canada | Your Partner for Canadian Market Access
+              </p>
+              <p className="text-[12.5px] sm:text-[13px] text-gray-600 font-medium leading-relaxed mb-6 max-w-2xl">
                 End-to-end regulatory, quality and compliance support for Medical Devices, IVDs and Combination Products in Canada.
               </p>
 
               {/* 6 Checkmark Bullets (2 cols x 3 rows) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-7">
                 {heroChecklist.map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-[12px] sm:text-[12.5px] text-white/90 font-medium">
+                  <div key={item} className="flex items-center gap-2 text-[11.5px] sm:text-[12px] text-gray-700 font-medium">
                     <CheckCircle2 className="h-3.5 w-3.5 text-[#e03131] shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -402,13 +408,13 @@ function CanadaMarketCompletePage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-xs"
                 >
                   Discuss Your Canada Strategy <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <a
                   href="#sec-1"
-                  className="inline-flex items-center gap-2 bg-[#0c2a57]/70 hover:bg-[#0c2a57] border border-white/30 text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all backdrop-blur-xs"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-gray-300 text-navy text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all"
                 >
                   Our Canada Services <ArrowRight className="h-3.5 w-3.5" />
                 </a>
@@ -417,11 +423,14 @@ function CanadaMarketCompletePage() {
 
             {/* Right 3D Visual with Parliament, MDSAP Medal, Health Canada Binder & Maple Leaf */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
                 <img
+                  width={1792}
+                  height={1195}
                   src={canadaHero3dImg}
-                  alt="Health Canada MDL MDEL MDSAP Canada"
-                  className="w-full h-auto object-contain rounded-xl"
+                  alt="Health Canada MDL MDEL MDSAP Canada Registration"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -557,7 +566,7 @@ function CanadaMarketCompletePage() {
               </div>
 
               <div className="absolute right-2 bottom-3 w-28 sm:w-36 opacity-90 pointer-events-none hidden sm:block">
-                <img
+                <img width={93} height={90}
                   src={canadaMapShieldImg}
                   alt="Canada Map with Maple Leaf Shield"
                   className="w-full h-auto object-contain drop-shadow-xl"
@@ -645,7 +654,7 @@ function CanadaMarketCompletePage() {
               <p className="text-[9.5px] text-gray-600 leading-tight font-medium mb-1.5">
                 Canada is a participating country in MDSAP. A single MDSAP audit can satisfy the QMS requirements for Canada along with other MDSAP countries.
               </p>
-              <img src={canadaMdsapLogoImg} alt="MDSAP Logo" className="h-3.5 w-auto object-contain opacity-80" />
+              <img width={49} height={29} src={canadaMdsapLogoImg} alt="MDSAP Logo" className="h-3.5 w-auto object-contain opacity-80" />
             </div>
 
             <div>
@@ -691,7 +700,7 @@ function CanadaMarketCompletePage() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 bg-slate-50 border-t border-b border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           {/* Framework Intro */}
           <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-xs">
             <span className="text-xs font-bold uppercase tracking-wider text-[#0b3a96] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
@@ -1462,7 +1471,7 @@ function CanadaMarketCompletePage() {
           <div className="bg-[#05152e] text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
             {/* Left Maple Leaf + Text */}
             <div className="flex items-center gap-4 lg:gap-6 z-10">
-              <img
+              <img width={55} height={57}
                 src={canadaMapleBottomImg}
                 alt="Canada Maple Leaf"
                 className="w-10 sm:w-12 h-auto object-contain shrink-0 drop-shadow-md hidden sm:block"

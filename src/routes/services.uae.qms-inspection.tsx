@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -48,17 +48,47 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uae/qms-inspection")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, follow" },
       {
-        title:
-          "UAE MOHAP QMS, Establishment & Inspection Readiness | NKB Regovanta",
+        title: "MOHAP QMS & Inspection Readiness (UAE) | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Quality management system and MOHAP establishment inspection readiness in the UAE. ISO 13485 alignment, licensed medical warehouse audits, storage and distribution controls, and CAPA remediation.",
+          "MOHAP establishment inspection and QMS readiness in UAE. ISO 13485 alignment, medical warehouse audits, distribution controls, and CAPA remediation.",
       },
+      { property: "og:title", content: "MOHAP QMS & Inspection Readiness (UAE) | NKB Regovanta" },
+      {
+        property: "og:description",
+        content:
+          "MOHAP establishment inspection and QMS readiness in UAE. ISO 13485 alignment, medical warehouse audits, distribution controls, and CAPA remediation.",
+      },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/uae/qms-inspection" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MOHAP QMS & Inspection Readiness (UAE) | NKB Regovanta" },
+      {
+        name: "twitter:description",
+        content:
+          "MOHAP establishment inspection and QMS readiness in UAE. ISO 13485 alignment, medical warehouse audits, distribution controls, and CAPA remediation.",
+      },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uae/qms-inspection" }],
+        scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MOHAP QMS Inspection Preparation (UAE)",
+          areaServed: { "@type": "Country", name: "United Arab Emirates" },
+          description: "MOHAP QMS inspection readiness consulting for medical device manufacturers in the UAE - pre-inspection gap assessment, ISO 13485, and audit preparation.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
+      },
+    ],
   }),
   component: UAEQMSInspectionPage,
 });

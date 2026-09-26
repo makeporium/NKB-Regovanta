@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,30 +20,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/audit-documentation")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Audit Documentation & Objective Evidence Preparation | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for rapid retrieval.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Audit Documentation & Objective Evidence Preparation | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "The audit is won or lost in the records behind the procedure. Objective evidence packages, document control, and record retrieval drills.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "MDSAP Audit Documentation Preparation | NKB Regovanta" },
+      { name: "description", content: "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for a successful Auditing Organization audit." },
+      { property: "og:title", content: "MDSAP Audit Documentation Preparation | NKB Regovanta" },
+      { property: "og:description", content: "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for a successful Auditing Organization audit." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/audit-documentation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP Audit Documentation Preparation | NKB Regovanta" },
+      { name: "twitter:description", content: "Review and strengthen SOPs, records, forms, and objective evidence packages across all 7 MDSAP process areas for a successful Auditing Organization audit." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/audit-documentation" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/audit-documentation",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Audit Documentation & Objective Evidence Preparation",
+          description: "SOP review, record strengthening, and objective evidence preparation across all 7 MDSAP process areas for medical device manufacturers.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

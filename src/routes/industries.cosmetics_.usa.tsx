@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, ScrollText, AlertTriangle, Scale } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import imgHero from "@/assets/industry-cosmetics.png";
@@ -6,12 +6,39 @@ import imgHero from "@/assets/industry-cosmetics.png";
 export const Route = createFileRoute("/industries/cosmetics_/usa")({
   head: () => ({
     meta: [
-      { title: "USA Cosmetics Regulatory Services & MoCRA Compliance | NKB Regovanta" },
-      { name: "description", content: "Expert guidance on FDA cosmetic product listing, facility registration, MoCRA compliance, and labeling requirements in the USA." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
+      { property: "og:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { property: "og:description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "USA MoCRA Cosmetics Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/cosmetics/usa" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "USA Cosmetics Regulatory Services & MoCRA Compliance",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "USA MoCRA compliance: FDA cosmetic facility registration, Cosmetic Product Listing (SPL), safety substantiation, and US cosmetic labelling compliance.",
+          "serviceType": "Cosmetics Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: USACosmetics,
 });
@@ -101,10 +128,10 @@ function USACosmetics() {
           <div className="text-center max-w-3xl mx-auto mb-12">
              <h2 className="text-3xl font-bold text-navy">Comprehensive FDA Compliance Solutions</h2>
              <p className="mt-4 text-[15px] text-navy/70 leading-relaxed">
-               Our structured, cost-effective approach guarantees that your brand meets every FDA requirement while accelerating your speed-to-market across the United States.
+               We assess which FDA obligations apply to your products and activities, then organise the evidence, registration and ongoing compliance work needed for your US market plan.
              </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, idx) => (
               <div key={idx} className="p-8 rounded-md bg-surface/50 border border-border hover:bg-surface transition-colors">
@@ -125,7 +152,7 @@ function USACosmetics() {
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">Is FDA registration now mandatory for cosmetics?</h3>
               <p className="text-navy/70 text-[15px] leading-relaxed">
-                Yes. Under MoCRA, both FDA Cosmetic Facility Registration and FDA Cosmetic Product Listing are mandatory requirements for any brand legally marketing cosmetic products in the United States.
+                MoCRA requires facility registration and product listing for covered facilities and products, but exemptions apply, including for certain small businesses. Eligibility depends on the business and product category. <a className="underline" href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra">Check FDA's MoCRA exemptions</a>.
               </p>
             </div>
             <div>
@@ -144,7 +171,7 @@ function USACosmetics() {
         </div>
       </section>
 
-      <CTABand title="Ensure your cosmetics are FDA compliant" btnText="Contact Our US Experts" />
+      <CTABand title="Ensure your cosmetics are FDA compliant" action="Contact Our US Experts" />
     </>
   );
 }

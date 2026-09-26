@@ -41,21 +41,29 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import sydneyHeroImg from "@/assets/australia-hero-sydney.png";
+import sydneyHeroImg from "@/assets/australia-hero-clean.jpg";
 import australiaMapGraphic from "@/assets/australia-map-graphic.png";
 
 export const Route = createFileRoute("/services/australia/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Australia TGA ARTG Consultant | Australian Sponsor & Medical Device Registration | NKB Regovanta",
+        title: "Australia TGA ARTG Consultant | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Australia TGA regulatory consulting for Medical Devices, IVDs and SaMD. ARTG inclusion, Australian Sponsor, Manufacturer Evidence, testing, TGA audit, UDI and post-market support.",
+          "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance.",
       },
+      { property: "og:title", content: "Australia TGA ARTG Consultant | NKB Regovanta" },
+      { property: "og:description", content: "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/australia" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Australia TGA ARTG Consultant | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert Australia TGA regulatory consulting: ARTG inclusion, Australian Sponsor representation, Manufacturer Evidence, SaMD, and post-market compliance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/australia" }],
   }),
@@ -114,7 +122,7 @@ const services12 = [
   {
     num: "1",
     id: "sec-1",
-    to: "/services/australia/classification",
+    to: "/services/australia/tga-medical-device-and-ivd-classification",
     icon: Target,
     title: "1. Australia Regulatory\nStrategy & Classification",
     bullets: [
@@ -126,7 +134,7 @@ const services12 = [
   {
     num: "2",
     id: "sec-2",
-    to: "/services/australia/artg-inclusion",
+    to: "/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
     icon: FileText,
     title: "2. ARTG Inclusion\n& Application Support",
     bullets: [
@@ -138,7 +146,7 @@ const services12 = [
   {
     num: "3",
     id: "sec-3",
-    to: "/services/australia/australian-sponsor",
+    to: "/services/australia/tga-australian-sponsor-services-and-governance",
     icon: UserCheck,
     title: "3. Australian\nSponsor Services",
     bullets: [
@@ -150,7 +158,7 @@ const services12 = [
   {
     num: "4",
     id: "sec-4",
-    to: "/services/australia/technical-documentation",
+    to: "/services/australia/tga-technical-documentation-and-essential-principles",
     icon: BookOpen,
     title: "4. Technical Documentation\n& Essential Principles",
     bullets: [
@@ -162,7 +170,7 @@ const services12 = [
   {
     num: "5",
     id: "sec-5",
-    to: "/services/australia/testing-strategy",
+    to: "/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
     icon: FlaskConical,
     title: "5. Testing Strategy &\nLaboratory Coordination",
     bullets: [
@@ -174,7 +182,7 @@ const services12 = [
   {
     num: "6",
     id: "sec-6",
-    to: "/services/australia/tga-audit",
+    to: "/services/australia/tga-application-audit-defense-and-rfi-support",
     icon: Search,
     title: "6. TGA Application Audit\n& Submission Support",
     bullets: [
@@ -186,7 +194,7 @@ const services12 = [
   {
     num: "7",
     id: "sec-7",
-    to: "/services/australia/ivd",
+    to: "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
     icon: Syringe,
     title: "7. IVD Market Access\n& Performance Evidence",
     bullets: [
@@ -198,7 +206,7 @@ const services12 = [
   {
     num: "8",
     id: "sec-8",
-    to: "/services/australia/software",
+    to: "/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
     icon: Monitor,
     title: "8. SaMD / Software\n& Cybersecurity Compliance",
     bullets: [
@@ -210,7 +218,7 @@ const services12 = [
   {
     num: "9",
     id: "sec-9",
-    to: "/services/australia/post-market",
+    to: "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
     icon: RefreshCw,
     title: "9. Post-Market Surveillance\n& Vigilance (IRIS)",
     bullets: [
@@ -222,7 +230,7 @@ const services12 = [
   {
     num: "10",
     id: "sec-10",
-    to: "/services/australia/labeling",
+    to: "/services/australia/australian-labelling-ifu-and-ausudid-compliance",
     icon: Languages,
     title: "10. Labelling, IFU &\nAdvertising Compliance",
     bullets: [
@@ -234,7 +242,7 @@ const services12 = [
   {
     num: "11",
     id: "sec-11",
-    to: "/services/australia/supply-chain",
+    to: "/services/australia/australia-importer-distributor-and-supply-chain-compliance",
     icon: Factory,
     title: "11. Manufacturer, Importer\n& Supply Chain Compliance",
     bullets: [
@@ -246,7 +254,7 @@ const services12 = [
   {
     num: "12",
     id: "sec-12",
-    to: "/services/australia/change-management",
+    to: "/services/australia/tga-artg-variations-and-significant-change-support",
     icon: Layers,
     title: "12. Change Management\n& Variations",
     bullets: [
@@ -320,6 +328,24 @@ const faqs = [
 function AustraliaHubPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Australia TGA ARTG Regulatory Consulting",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "TGA Medical Device Registration & Australian Sponsor Services",
+            "description": "Comprehensive TGA consulting for Medical Devices, IVDs and SaMD including ARTG inclusion and Australian Sponsor representation.",
+            "areaServed": "Australia"
+          })
+        }}
+      />
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Matching Picture Mockup with Sydney Graphic)
       ══════════════════════════════════════════════════════════════════ */}
@@ -376,11 +402,14 @@ function AustraliaHubPage() {
 
             {/* Right Sydney Opera House, Harbour Bridge & Flag Graphic */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-md border border-gray-200/80">
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
                 <img
+                  width={1792}
+                  height={1195}
                   src={sydneyHeroImg}
-                  alt="Australia TGA ARTG Inclusion Sydney Opera House"
+                  alt="Australia TGA ARTG Inclusion Sydney Opera House, Harbour Bridge and Australian Flag"
                   className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -661,7 +690,7 @@ function AustraliaHubPage() {
 
               {/* Map Graphic */}
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
-                <img
+                <img width={137} height={108}
                   src={australiaMapGraphic}
                   alt="Australia Map"
                   className="w-full h-auto object-contain"
@@ -758,7 +787,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/classification"
+                to="/services/australia/tga-medical-device-and-ivd-classification"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Define Your TGA Regulatory Pathway →
@@ -814,7 +843,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/manufacturer-evidence"
+                to="/services/australia/tga-manufacturer-evidence-and-conformity-assessment"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Review Your Manufacturer Evidence →
@@ -869,7 +898,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/artg-inclusion"
+                to="/services/australia/tga-artg-inclusion-strategy-and-application-preparation"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Prepare Your ARTG Inclusion →
@@ -925,7 +954,7 @@ function AustraliaHubPage() {
                 </p>
               </div>
               <Link
-                to="/services/australia/australian-sponsor"
+                to="/services/australia/tga-australian-sponsor-services-and-governance"
                 className="inline-flex items-center gap-1.5 bg-[#0b7261] hover:bg-[#095c4e] text-white text-xs font-bold px-4 py-2 rounded-md transition-all shrink-0 shadow-2xs"
               >
                 Discuss Australian Sponsor Support →

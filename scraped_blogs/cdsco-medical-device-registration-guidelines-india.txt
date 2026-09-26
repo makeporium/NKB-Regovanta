@@ -1,0 +1,198 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## CDSCO – Medical Device Registration in India
+
+					Medical Device Registration Process in India
+
+The Medical Device Registration process in India is crucial for distribution purposes. The concerned authority would penalize any manufacturer who wishes to sell the product in an unregistered condition. so it is advisable for all importers /distributors and manufacturers to register with CDSCO. 
+
+Devices registered during the voluntary registration period benefit from a truncated application that involves administrative documents such as a Free Sales Certificate from the country of origin, ISO 13485 certificate, as well as basic product information. The voluntary registration process carries no government processing fees but may be canceled or suspended by the CDSCO for product safety concerns, or when superseded by the requirement for the mandatory Import License.
+
+					Looking for Medical Device Regulatory Consultants?
+
+					What is CDSCO?
+
+Every nation has different policies and registration processes as per their government regulatory bodies. CDSCO is the National Regulatory Authority of India Located in Delhi provides guidelines for medical device registration in India. 
+
+The CDSCO (Central Drugs Standard Control Organization) is the national regulatory body for pharmaceuticals and Medical Device Registration In India. It’s a licensing authority.  CDSCO serves an analogous role to the Food and Drug Administration of the United States the PMDA of Japan, the European Medicines Agency of the European Union, etc. As a CDSCO registration consultant, we guide manufacturers in their regulatory compliance process.
+
+To maintain good regulatory control, to resolve the issues if any, and to avoid ambiguity, the Central Government of India has established four zonal offices of the CDSCO at Chennai i.e. CDSCO Chennai, Mumbai i.e. CDSCO Mumbai, Ghaziabad i.e. CDSCO Ghaziabad, and Kolkata i.e. CDSCO Kolkata. The Zonal Offices work in close association with the State Drug Control Administration and aid them in guaranteeing unvarying enforcement of the Drug Act and other related legislations throughout in Indian Sub-continent.
+
+## CDSCO Roles & Responsibilities:
+
+Many times new manufacturer or the person who wants to sell their product in India get confused about CDSCO, their roles, and function, so what actually does a CDSCO mean: CDSCO is a national regulatory Authority of India located in Delhi, Directorate General of Health Services governs and controls CDSCO. DGHS reports to the Ministry of Health and Family Welfare, Government of India. It has multiple zonal offices throughout India.
+
+These authorities are formed under the  Drug and Cosmetics Act 1940 and Rules 1945.
+
+					Classification of Medical Device:
+
+The regulatory procedures for medical devices will vary according to their class. The application fees of CDSCO will also vary as per the CDSCO classification of medical devices
+
+Class A
+
+Low risk
+
+Class B
+
+Low to moderate
+
+Class C
+
+Moderate to high
+
+Class D
+
+High risk
+
+In general, higher-risk devices will require more regulations and a more stringent conformity assessment process.  CDSCO issued a new notification for device manufacturers and importers, they need to mandatorily register their devices by 30th September 2022. 
+
+## CDSCO Registration Process: 
+
+The applications for the medical device registration for notified and non-notified devices should be submitted through SUGAM, an online portal through which CDSCO manages these applications. Points to remember while CDSCO registration:
+
+* Determine if a product requires registration i.e notified or non-notified devices: for the registration process it is necessary to identify whether the product is notified or non-notified device, the list for the same is available on the CDSCO website. 
+* Role of IAA (Indian Authorized Agent): IAA is the authorized person who acts on behalf of the point of contact for inspection authorities, and assists in device approval. 
+*  Submission of documents: the set of documents like ISO 13485 certificate, other regulatory approval, and other documents that need to be submitted for the registration process. 
+* The Registration Certificate will be issued after submitting the documents and resolving the queries, if any. 
+*  Registration will be approved by CDSCO only after evaluation of the submitted documents. Check your registered email ID for all communications. 
+
+dipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+
+					How to Apply for CDSCO? 
+
+To view the Submitted Application, click on Menu Form Submission Submitted Applications. If the application is approved by CDSCO, then it will be visible under the Approved Applications tab. To view the Approved Application, click on Menu Form Submission Proved Applications
+
+## CDSCO Application Process :
+
+* An application shall be made to the Licensing Authority in Form 40, either by the manufacturer himself, having a valid wholesale License, for the sale or distribution of drugs or by his authorized agent in India either having a valid License to manufacture for sale of a drug or having a valid wholesale License for sale or distribution of drugs. 
+* DETAILS TO BE CAPTURED IN FORM 40: The authorized signatory name, designation, and department, along with the complete address of the Company. 
+* i) Authorized Signatory: The person authorized preferably a Director approved by the Board of Directors in the case of a company or by the proprietor in the case of a proprietorship firm. The application to accompany the affidavit in respect of the authorized person or the Power of Attorney in the name of the authorized person. 
+
+The Form shall detail the Foreign Manufacturer‘s contact person in the manufacturing site’s complete address, (i.e. address of the manufacturing premises), with corporate office address, along with the Telephone number, Fax number, and E-mail address. 
+
+*  ii) The address of manufacturing premises shall be captured as below: Undertaking of the document contents by the responsible person at the manufacturing site (contact person in the manufacturing site) – In respect of import of more than one drug or class of drugs manufactured by the same manufacturer, provided that drug or the classes of drugs are manufactured at one factory or more than one factory functioning conjointly as a single manufacturing unit. – In respect of the drugs manufactured in two or more factories situated in different places, for the manufacturing of the same or different drugs the name and address of both manufacturing sites should be included e.g. if the tablets are manufactured at one location and packed at another location, Name and Address of both the locations indicating the activity of each location. 
+
+iii) The drug(s) name shall be captured as below: – The brand name shall be captured. – Different packs, pack sizes, and/or different strengths of the same brand shall be captured. Importer‘s undertaking letter declaring the information specified in Schedule D 
+
+*  And Schedule D (II), provided by the original manufacturer. The registration Fees amount (Challan number and date) shall be mentioned on the Original TR 6 challan having the complete name and address of the applicant and details of the application to be enclosed. 
+*  iv) Fee structure for Import Registration under Form 40: – Fees and Form(s) and the undertakings as per Schedule D(I) (for registration of the manufacturing premises) and Schedule D(II) (for registration of the drugs). Fees shall be paid through a Challan 
+
+## CDSCO Registration FAQs :
+
+* I am not able to receive Email or SMS service from CDSCO Portal.  
+
+Check your Junk/Spam folder, if you receive mail in your junk/spam folder then save “ cdscoonline-noida@cdac.in in your contacts and if not, then please contact to Administrator by “Report a problem” section on the home page of the CDSCO Portal. 
+
+If you have selected the option to receive SMS at the time of registration then only you will receive SMS alerts. If done check DND (Do not disturb) settings in your phone. If not, then please contact to Administrator in the “Report a problem” section on the home page of the CDSCO Portal. 
+
+*  What are the steps to submit a form to any division of CDSCO?  
+
+Steps to be followed: 
+
+First login to your credentials then go to the “Submit Application” link on the dashboard, then select the division and the required form and then proceed. Please read the mandatory guidelines displayed on this webpage. 
+
+* I am not able to find the submitted or saved application. 
+
+Go to Saved (Draft) Applications on the dashboard where you can find the application saved in draft mode. Each application will have a different Action and Status depending on the application submission stage then you can make a desired change by action column and then select the desired action. 
+
+For Submitted Application login to your credentials then go to the “Submitted Application Displayed” webpage which contains all submitted applications. Click on Action to view the submitted form and checklist document and take the desired action. 
+
+* How do I get Endorsement/Re-registration on the RC issued to me earlier by the CDSCO office?  
+
+If you have an issue in fresh or Re-registered RC in the year 2012 or later then log in to your credentials >> menu (on the left-hand side of the displayed dashboard)>> Permissions owned >> Add RC detail link and then enter the details.  
+
+* What steps to follow to check the historical data I have submitted online in the CDSCO portal?   
+
+Login to your credentials link on Menu (on the left-hand side of the displayed dashboard)>> Permissions owned. Then the following option will be displayed. Follow the steps below to view your online submitted historical data on the CDSCO portal: 
+
+* Saved as Draft if the file is in draft mode. 
+* Submitted to CDSCO if the file is submitted to CDSCO. 
+* Verified by CDSCO if details are verified and approved by CDSCO officials. 
+* Rejected by CDSCO if details are rejected by CDSCO officials. 
+
+* After submitting my historical data, I am not able to apply for Endorsement/ Re-registration against it.   
+
+If you face a problem with Endorsement/Re-registration after submitting the details then check the status of your submitted application. You would be able to apply only if your submitted details get approved by CDSCO i.e. its status is Verified by CDSCOLogin with your credentials>>Menu >> View Permissions Owned 
+
+* Saved as Draft if the file is in draft mode. 
+* Submitted to CDSCO if the file is submitted to CDSCO. 
+* Verified by CDSCO if details are verified and approved by CDSCO officials. 
+* Rejected by CDSCO if details are rejected by CDSCO officials. 
+
+* What is the status tracking process on my submitted application?  
+
+You can view submitted applications, in the displayed webpage check the Status column to view the status of the submitted applications. 
+
+* What user roles are available in SUGAM PORTAL?  
+
+It possesses multiple roles on the same registration ID and applicants can register for different purposes with the assigned roles and forms given below:   
+
+Purpose Of Registration 
+
+Roles on SUGAM 
+
+Cosmetics Registration 
+
+Applicant for Cosmetics 
+
+Ethics Committee Registration 
+
+Ethics Committee 
+
+Formulation R&D Organization 
+
+Formulation R&D Organization 
+
+Import of drugs/Medical Devices/Test License 
+
+Corporate Importer (Application in Form 8) Foreign Enterprise holding an Indian Subsidiary Indian Agent 
+
+BA/BE Approved Sites 
+
+BA/BE Approved Sites 
+
+Sponsors (BA/BE & CT) 
+
+Sponsors (BA/BE & CT) 
+
+The SUGAM portal is an online service provided by CDSCO. It is a single-window interface for stakeholders to access online services. So, to apply for any form user needs to register on the portal for users of the SUGAM portal, switch role is the functionality provided possessing multiple roles. 
+
+With the rising opportunities in India come increasing regulations that companies must face and overcome. With the assistance of a highly experienced third-party regulatory compliance consultant such as NKB Regovanta, the Medical Device Registration process in India is much less complex. We can help you prepare and submit the required documents and materials to the relevant regulatory agencies in India
+
+## FAQ's
+
+					 How long does it take in India to register my medical device? 
+
+Medical devices are categorized into four risk categories: A, B, C, and D. The CDSCO application processing fees are determined by the device categorization. The application process takes 6 to 9 months regardless of device categorization. Applications for items that are unable to identify a predicate device will be considered &#8216;Innovative,' and will most likely necessitate more time.
+
+					 Does medical devices require registration in India? 
+
+All medical devices must be registered or have an Import License with the CDSCO before being imported into India as of October 1, 2021. Some products, known as Notified medical devices, required a more thorough registration that included a Device Master File and an Import License.
+
+					 What license is required for medical equipment in India? 
+
+To sell or distribute medical equipment, the applicant must apply for a Manufacturing License. Applicants must use the Ministry of Health and Family Welfare's online site to request permission from the State Licensing Authority based on their location.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

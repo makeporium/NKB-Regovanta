@@ -45,7 +45,7 @@ import {
   BookOpen,
   Boxes,
 } from "lucide-react";
-import ukHero3dImg from "@/assets/uk-hero-3d.png";
+import ukHero3dImg from "@/assets/uk-hero-clean.jpg";
 import ukMapShieldImg from "@/assets/uk-map-shield.png";
 import ukBigBenImg from "@/assets/uk-big-ben-bottom.png";
 import { CTABand } from "@/components/site/Bits";
@@ -54,29 +54,28 @@ export const Route = createFileRoute("/services/uk/")({
   head: () => ({
     meta: [
       {
-        title:
-          "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | CE Recognition & UKCA | NKB Regovanta",
+        title: "UK MHRA Registration & UKRP | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Senior UK MHRA regulatory consulting, UK Responsible Person (UKRP) representation, Great Britain & Northern Ireland pathways, CE recognition up to 2030, UKCA marking, DORS registration, and PMS compliance.",
-      },
-      {
-        name: "keywords",
-        content:
-          "UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking medical devices, DORS portal registration MHRA, UK MDR 2002, Northern Ireland medical devices, CE recognition UK, NKB Regovanta",
+          "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance.",
       },
       {
         property: "og:title",
-        content: "UK MHRA Medical Device Registration & UK Responsible Person (UKRP) | NKB Regovanta",
+        content: "UK MHRA Registration & UKRP | NKB Regovanta",
       },
       {
         property: "og:description",
         content:
-          "Your Partner for UK Market Access. UKRP services, MHRA DORS registration, UKCA conformity, CE recognition strategy, and GB post-market compliance.",
+          "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "UK MHRA Registration & UKRP | NKB Regovanta" },
+      { name: "twitter:description", content: "Expert UK MHRA medical device consulting: UK Responsible Person (UKRP), DORS registration, UKCA marking, CE recognition, and Northern Ireland compliance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk" }],
   }),
@@ -146,7 +145,7 @@ const services10 = [
       "UK based point of contact for MHRA & authorities",
       "Obligations under UK MDR 2002 Regulation 40",
     ],
-    to: "/services/uk/ukrp",
+    to: "/services/uk/uk-responsible-person-ukrp-services",
   },
   {
     num: "3",
@@ -157,7 +156,7 @@ const services10 = [
       "GSPR mapping & evidence assessment",
       "Labeling, IFU & UDI alignment",
     ],
-    to: "/services/uk/technical-file",
+    to: "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
   },
   {
     num: "4",
@@ -168,7 +167,7 @@ const services10 = [
       "Trend reporting",
       "Field Safety Corrective Actions (FSCAs)",
     ],
-    to: "/services/uk/vigilance",
+    to: "/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
   },
   {
     num: "5",
@@ -179,7 +178,7 @@ const services10 = [
       "PSUR support (where applicable)",
       "Record retention & data protection",
     ],
-    to: "/services/uk/pms",
+    to: "/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
   },
   {
     num: "6",
@@ -190,7 +189,7 @@ const services10 = [
       "Determine need for new submission to MHRA",
       "Ongoing lifecycle compliance",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "7",
@@ -201,7 +200,7 @@ const services10 = [
       "Actor registration support",
       "Data accuracy & consistency",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "8",
@@ -212,7 +211,7 @@ const services10 = [
       "Importer obligations",
       "Supply chain documentation review",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "9",
@@ -223,7 +222,7 @@ const services10 = [
       "IEC 62304 alignment",
       "Cybersecurity risk management support",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
   {
     num: "10",
@@ -234,7 +233,7 @@ const services10 = [
       "GSPR & technical documentation support",
       "Notified Body Opinion readiness",
     ],
-    to: "/services/uk/conformity-assurance",
+    to: "/services/uk/ce-recognition-and-ukca-market-access-strategy",
   },
 ];
 
@@ -345,28 +344,35 @@ function UKMarketCompletePage() {
       />
 
       {/* ══════════════════════════════════════════════════════════════════
-          1. HERO SECTION (Identical to Picture 1)
+          1. HERO SECTION (Matching Picture Mockup)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#03152d] via-[#071f43] to-[#0c2a57] text-white pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-border/20">
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-[radial-gradient(ellipse_at_top_right,rgba(224,49,49,0.3),transparent_70%)] pointer-events-none" />
+      <section className="relative bg-white pt-8 pb-12 border-b border-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-1.5 text-[11px] text-gray-500 font-semibold mb-4">
+            <Link to="/" className="hover:text-navy transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <Link to="/services" className="hover:text-navy transition-colors">Services</Link>
+            <ChevronRight className="h-3 w-3 text-gray-400" />
+            <span className="text-navy font-bold">United Kingdom</span>
+          </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Col */}
             <div className="lg:col-span-7">
-              <h1 className="font-display font-extrabold text-white text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.12] mb-2 tracking-tight">
+              <h1 className="font-display font-extrabold text-[#051833] text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] leading-[1.12] mb-2 tracking-tight">
                 UK MHRA Medical Device<br />
                 Registration &amp;<br />
                 <span className="text-[#e03131]">UK Responsible Person (UKRP)</span>
               </h1>
-              <p className="text-base sm:text-lg font-bold text-white/95 mb-5 tracking-tight">
+              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#051833] mb-5 tracking-tight">
                 Your Partner for UK Market Access
               </p>
 
               {/* 4 Checkmark Bullets */}
-              <div className="space-y-2 mb-7">
+              <div className="space-y-2.5 mb-7">
                 {heroChecklist.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5 text-[12.5px] sm:text-[13px] text-white/90 font-medium">
+                  <div key={item} className="flex items-center gap-2.5 text-[12px] sm:text-[12.5px] text-gray-700 font-medium">
                     <CheckCircle2 className="h-4 w-4 text-[#e03131] shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -377,13 +383,13 @@ function UKMarketCompletePage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#e03131] hover:bg-[#c92a2a] text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all shadow-xs"
                 >
                   Discuss Your UK Market Access Strategy <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
-                  to="/services/uk/ukrp"
-                  className="inline-flex items-center gap-2 bg-[#0c2a57]/70 hover:bg-[#0c2a57] border border-white/30 text-white text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all backdrop-blur-xs"
+                  to="/services/uk/uk-responsible-person-ukrp-services"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-gray-300 text-navy text-[12.5px] font-bold px-5 py-2.5 rounded-md transition-all"
                 >
                   Our UKRP Services <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -392,11 +398,14 @@ function UKMarketCompletePage() {
 
             {/* Right 3D Visual with Big Ben, UKRP Shield, MHRA Book & UKCA */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[430px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 bg-white">
                 <img
+                  width={1792}
+                  height={1195}
                   src={ukHero3dImg}
                   alt="UK MHRA Medical Device Registration & UK Responsible Person (UKRP)"
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-cover rounded-xl"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -536,7 +545,7 @@ function UKMarketCompletePage() {
               </div>
 
               <div className="absolute right-3 bottom-4 w-36 sm:w-44 opacity-90 pointer-events-none hidden sm:block">
-                <img
+                <img width={82} height={133}
                   src={ukMapShieldImg}
                   alt="UK Regulatory Shield"
                   className="w-full h-auto object-contain drop-shadow-xl"
@@ -583,7 +592,7 @@ function UKMarketCompletePage() {
                 </p>
               </div>
               <Link
-                to="/services/uk/conformity-assurance"
+                to="/services/uk/ce-recognition-and-ukca-market-access-strategy"
                 className="inline-flex items-center gap-1 text-[11px] font-bold text-[#e03131] hover:text-[#c92a2a]"
               >
                 Learn more about UK MDR 2002 →
@@ -834,7 +843,7 @@ function UKMarketCompletePage() {
           <div className="bg-[#05152e] text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
             {/* Left Big Ben tower + Text */}
             <div className="flex items-center gap-4 lg:gap-6 z-10">
-              <img
+              <img width={55} height={102}
                 src={ukBigBenImg}
                 alt="Big Ben London"
                 className="w-10 sm:w-12 h-auto object-contain shrink-0 drop-shadow-md hidden sm:block"

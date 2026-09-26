@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -21,30 +21,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/post-certification")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Audit Response & Post-Certification Support | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Support during audit, management of findings, response packages, surveillance audit readiness, and continuous MDSAP QMS maintenance.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Audit Response & Post-Certification Support | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "MDSAP readiness continues after the closing meeting. Surveillance audits, scope modifications, and ongoing 5-jurisdiction compliance support.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "MDSAP Post-Certification Support | NKB Regovanta" },
+      { name: "description", content: "Audit response packages, finding management, surveillance audit readiness, and continuous MDSAP QMS maintenance across 5 jurisdictions." },
+      { property: "og:title", content: "MDSAP Post-Certification Support | NKB Regovanta" },
+      { property: "og:description", content: "Audit response packages, finding management, surveillance audit readiness, and continuous MDSAP QMS maintenance across 5 jurisdictions." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/post-certification" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP Post-Certification Support | NKB Regovanta" },
+      { name: "twitter:description", content: "Audit response packages, finding management, surveillance audit readiness, and continuous MDSAP QMS maintenance across 5 jurisdictions." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/post-certification" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/post-certification",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Post-Certification & Audit Response Support",
+          description: "Closing-meeting finding response, CAPA packages, surveillance audit preparation, and ongoing MDSAP compliance maintenance for medical device manufacturers.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

@@ -1,0 +1,79 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## EU MDR – Human Factors Engineering Requirements
+
+## Introduction
+
+Medical devices serve a variety of purposes in the healthcare industry, including disease or injury diagnosis, prevention, monitoring, treatment, and alleviation. Medical devices are employed in a variety of contexts, including clinics, advanced medical facilities, and home-based systems.
+
+Medical devices offer a variety of benefits, but they also have risks that might arise from improper or abusive use. The implementation of efficient human factors engineering techniques can reduce, neutralize, or eliminate these risks. 
+
+					Talk to our experts
+
+## What Is Meant By ‘Human Factors Engineering?​
+
+Human factors engineering is a subfield of engineering that focuses on developing medical systems and equipment using information obtained from human physiological and psychological traits.
+
+It necessitates careful consideration of user restrictions, human behavior, user skills, and other pertinent factors about medical device use.
+
+The goal of these human factors engineering features is to maximize the clinical benefits of the technology while guaranteeing the safest possible use. It places a strong emphasis on designing medical devices such that there is as little chance of errors or improper use on the part of users. When creating a device, human factors engineering is an essential component of EUMDR. Documentation must be developed following EUMDR requirements.
+
+## Importance of Human Factors Engineering in Medical Devices
+
+The principal objective of the human factors engineering process is to maximize the safety and clinical benefits. Specific benefits of application of human factors engineering to medical devices are as follows: 
+
+* It improves the effectiveness and efficiency of a medical device 
+* It promotes user satisfaction and sustainability 
+* Expands the market for a new medical device by considering potential users of the device 
+* It reduces the user’s dependency on the user manuals.
+* It reduces the need for user training 
+* It facilitates reduced risk of adverse events 
+* It reduces the overall risk of product recalls following safety issues 
+* It facilitates better user experience and in turn, gives an advantage over competitors in the market 
+* It ensures long-term profitability through a better user experience 
+* It helps to establish safer connections between device components and accessories 
+* It improves the experience with the user interface 
+* It improves the user’s understanding of the device’s status and operation 
+* It improves the user’s understanding of a patient’s medical condition 
+* It facilitates more effective alarm signal management.
+* It helps in the creation of a user interface that encourages error-free use of the medical device 								
+
+## EU MDR 2017/ 745 Requirements on Human Factors Engineering
+
+General Safety and Performance Requirements set out in Annex I of EU MDR cover aspects related to the usability of the device.  
+
+* The first general requirement from Annex I states, “Devices shall achieve the performance intended by their manufacturer and shall be designed and manufactured in such a way that, during normal conditions of use, they are suitable for their intended purpose. They shall be safe and effective and shall not compromise the clinical condition or the safety of patients, or the safety and health of users or, where applicable, other persons, provided that any risks which may be associated with their use constitute acceptable risks when weighed against the benefits to the patient and are compatible with a high level of protection of health and safety, taking into account the generally acknowledged state of the art.” Here, emphasis has been given on the use of the medical device in such a way that safety and health of both patient’s and the user is ensured. Additionally, this requirement also considers the “other persons”, which may include people who interact with the device but do not directly use it, e.g., machine technicians. 
+* General Safety and Performance Requirement 3(c) states that “Estimate and evaluate the risks associated with, and occurring during, the intended use and during reasonably foreseeable misuse.” To establish compliance with this requirement, the adopted usability engineering and risk management process must address the estimated level of risk associated with the use of the device. The human factors engineering process is closely linked with the risk management process, it evaluates, mitigates, and eliminates usability-induced use errors that could impose risks for patients and/or users. Usability studies should be performed by considering reasonably foreseeable hazards associated with use scenarios. 
+* General Safety and Performance Requirements 5(a) and 5(b) highlight risks related to use errors by considering the ergonomic features of the device and technical knowledge, experience, education, training of the user, and use environment. The usability engineering process should be tailored to address these requirements by considering aspects covered in this general safety and performance requirement. 								
+
+## International Standards on Human Factors Engineering
+
+Recognized standards provide support to comply with General Safety and Performance Requirements quoted in the EU MDR 2017/745. In Europe, EN 62366-1 is the harmonized human factors engineering standard. Compliance with this standard provides evidence of conformity with the requirements of MDR. This standard offers standardized processes for analysis, development, and evaluation of the usability of medical devices. As a medical device regulatory consultant, we make sure that the devices produced by the manufacturer will comply with the correct regulations and that manufacturers will not face any issues.
+
+## Experience Hassle-Free MDR Compliance Today!
+
+Navigating the complexities of the EU Medical Device Regulation (MDR) can be challenging for medical device companies focused on production, human resources, and supply chain management. The intricacies of international standards often require a subject area specialist, particularly in human factor and usability engineering. NKB Regovanta is here to help. We offer comprehensive consultancy on the changes brought by the EU MDR, including solutions for risk management, human factor engineering, and CE mark consultation. With our expertise, we ensure your medical devices meet regulatory requirements with precision. Contact us to discuss your specific needs and let us guide you through the compliance process with tailored consulting services.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

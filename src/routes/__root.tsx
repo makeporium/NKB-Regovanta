@@ -4,10 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -15,6 +16,9 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { QueryPopup } from "../components/site/QueryPopup";
 import { Toaster } from "../components/ui/sonner";
+import { toast } from "sonner";
+import { WifiOff } from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 function NotFoundComponent() {
   return (
@@ -45,24 +49,36 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
+  const isNetworkError =
+    error?.message?.includes("Failed to fetch") ||
+    error?.message?.includes("dynamically imported module") ||
+    error?.message?.includes("Loading chunk") ||
+    error?.name === "ChunkLoadError";
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          {isNetworkError ? "Connection Slow or Interrupted" : "This page didn't load"}
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          {isNetworkError
+            ? "Your internet connection experienced a delay or packet drop while loading website resources."
+            : "Something went wrong on our end. You can try refreshing or head back home."}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
-              router.invalidate();
-              reset();
+              if (isNetworkError) {
+                window.location.reload();
+              } else {
+                router.invalidate();
+                reset();
+              }
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            {isNetworkError ? "Reload page" : "Try again"}
           </button>
           <a
             href="/"
@@ -87,27 +103,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), and EU MDR/IVDR compliance consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
       },
-      {
-        name: "keywords",
-        content:
-          "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Clinical evaluation import permission MD-24 MD-25, Novel medical device import MD-26 MD-27, IVD test licence MD-16 MD-17, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6 / MD-8 MD-10, Test licence for manufacturing MD-12 MD-13, Indian Authorized Agent (AIR / IAA), SUGAM portal registration support, CDSCO product classification & predicate strategy, Medical device regulatory consultant India, Drug Import Licence India, Registration Certificate Form 41 CDSCO, Import Licence Form 10 / 10-A, Form 40 application support, Form 8 / 8-A support, Test Licence Form 11, Foreign manufacturer registration India, Overseas manufacturing site registration, Plant Master File (PMF) CDSCO, Drug Master File (DMF) open part, API import registration India, Phytopharmaceutical & biologics regulatory support, PC-PNDT Certificate registration, Form A & Form B PCPNDT ultrasound registration, PCPNDT consultant India, WPC ETA approval medical devices, Saral Sanchar WPC import license (RLO permit), Dealer Possession License (DPL), IEC Code registration DGFT, AD Code registration ICEGATE customs profile, Bank authority letter AD Code, Free Sale Certificate (FSC) CDSCO, Market Standing Certificate (MSC), Non-Conviction Certificate (NCC), MD-42 certificate, Neutral / Special Code certificate, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier compilation, FDA De Novo classification, PMA Premarket Approval FDA, US FDA US Agent services for foreign facilities, FDA Establishment Registration and Device Listing (FURLS), FDA Official Correspondent, 513(g) Information Request, FDA Q-Submission / Pre-Sub, MoCRA compliance support, FDA cosmetic facility registration, FDA cosmetic product listing (SPL), EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, Notified Body coordination EU, Technical Documentation / STED dossier, GSPR compliance, EU IVDR 2017/746 consultant, Performance Evaluation Report (PER), European Authorized Representative (EC REP / EAR), EUDAMED registration support, Clinical Evaluation Report (CER) EU MDR, PMS / PMCF plans, UK MHRA medical device registration, UK Responsible Person (UKRP), UKCA marking medical devices, Australia TGA ARTG inclusion, Australian Sponsor medical devices, Health Canada MDL (Medical Device Licence), Health Canada MDEL (Medical Device Establishment Licence), ANVISA Brazil registration, BRH Brazilian Registration Holder, Saudi Arabia SFDA, UAE MOHAP medical device registration, ISO 13485 implementation consultant, ISO 13485 QMS gap assessment, MDSAP audit readiness support (FDA, HC, TGA, ANVISA, MHLW), ISO 13485 internal audits, FDA QMSR compliance, ISO 14971 Risk Management, CAPA management, CDSCO cosmetic import registration COS-1 COS-2, Cosmetics manufacturing licence COS-5 COS-8, EU Cosmetic Responsible Person (EU RP), Cosmetic Product Safety Report (CPSR), CPNP notification, UK SCPN notification, Canada Cosmetic Notification Form (CNF), Australia AICIS cosmetics, NKB Regovanta, NKB Regovanta Solutions",
-      },
       { name: "author", content: "NKB Regovanta Solutions Pvt. Ltd." },
       { name: "publisher", content: "NKB Regovanta" },
       {
         name: "robots",
         content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       },
-      {
-        name: "googlebot",
-        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-      },
-      {
-        name: "bingbot",
-        content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-      },
       { name: "application-name", content: "NKB Regovanta" },
       { name: "apple-mobile-web-app-title", content: "NKB Regovanta" },
+      { name: "mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
       { name: "theme-color", content: "#0b3a96" },
@@ -140,7 +144,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image:alt", content: "NKB Regovanta Logo & Brand Banner" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.nkbregovanta.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -191,16 +194,26 @@ const structuredDataGraph = {
       "image": "https://www.nkbregovanta.com/og-image.png",
       "description": "NKB Regovanta Solutions Pvt. Ltd. is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), and EU MDR/IVDR market access consulting firm for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
       "email": "contact@nkbregovanta.com",
-      "telephone": "+918400039062",
+      "telephone": ["+919513699000", "+919180351425", "+918400039062"],
       "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
-        "addressLocality": "Lucknow",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "226015",
-        "addressCountry": "IN"
-      },
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Building No 20, Awadh Kunj, Faridi Nagar, CIMAP",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "226015",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "16192 Coastal Highway",
+          "addressLocality": "Lewes",
+          "addressRegion": "Delaware",
+          "postalCode": "19958",
+          "addressCountry": "US"
+        }
+      ],
       "areaServed": [
         "Worldwide",
         "India",
@@ -216,173 +229,7 @@ const structuredDataGraph = {
       ],
       "sameAs": [
         "https://www.linkedin.com/company/nkb-regovanta-solutions-private-limited/"
-      ],
-      "knowsAbout": [
-        "CDSCO Medical Device Import Licence (MD-14 & MD-15)",
-        "CDSCO Medical Device Manufacturing Licence (MD-3/5, MD-7/9, MD-4/6, MD-8/10)",
-        "Class A GSR 777(E) Registration & Test Licences (MD-12/13, MD-16/17)",
-        "Investigational & Novel Medical Device Import (MD-18/19, MD-24/25, MD-26/27)",
-        "Indian Authorized Agent (AIR / IAA) Representation & SUGAM Portal Support",
-        "CDSCO Product Classification & Predicate Device Strategy",
-        "Medical Device Regulatory Consultant India",
-        "Drug Import Licence India (Form 41 Registration Certificate & Form 10/10-A)",
-        "Pharmaceutical Form 40, Form 8/8-A and Form 11 Test Licence Support",
-        "Foreign Manufacturer Registration & Overseas Manufacturing Site Registration",
-        "Plant Master File (PMF) & Drug Master File (DMF Open Part) CDSCO",
-        "API Import Registration India & Phytopharmaceutical / Biologics Support",
-        "PC-PNDT Certificate Registration (Form A & Form B Ultrasound / Diagnostic Imaging)",
-        "WPC ETA Approval for Medical Devices & Saral Sanchar RLO / DPL Licensing",
-        "IEC Code DGFT & AD Code ICEGATE Customs Profile Registration",
-        "Free Sale Certificate (FSC), Market Standing (MSC), Non-Conviction (NCC) & MD-42",
-        "US FDA 510(k) Clearance & eSTAR Dossier Compilation Consultant",
-        "FDA De Novo Classification & Premarket Approval (PMA)",
-        "US FDA US Agent Services for Foreign Facilities & FURLS Registration / Listing",
-        "FDA Official Correspondent, 513(g) Information Request & Q-Submission / Pre-Sub",
-        "MoCRA Compliance, FDA Cosmetic Facility Registration & Cosmetic Product Listing (SPL)",
-        "EU MDR 2017/745 Regulatory Consultant & CE Marking Europe",
-        "Technical Documentation & STED Dossier Compilation with GSPR Compliance",
-        "EU IVDR 2017/746 Consultant & Performance Evaluation Report (PER)",
-        "European Authorized Representative (EC REP / EAR) & EUDAMED Registration",
-        "Clinical Evaluation Reports (CER) EU MDR & PMS / PMCF Plans",
-        "UK MHRA Medical Device Registration, UK Responsible Person (UKRP) & UKCA Marking",
-        "Australia TGA ARTG Inclusion & Australian Sponsor Services",
-        "Health Canada Medical Device Licence (MDL) & Establishment Licence (MDEL)",
-        "ANVISA Brazil Registration & Brazilian Registration Holder (BRH)",
-        "Saudi Arabia SFDA Medical Device & Pharma Registration",
-        "UAE MOHAP Medical Device Registration & Import Clearance",
-        "ISO 13485:2016 QMS Implementation, Gap Assessment & Internal Audits",
-        "MDSAP Audit Readiness Support (FDA, HC, TGA, ANVISA, MHLW)",
-        "FDA QMSR Quality System Harmonization, ISO 14971 Risk Management & CAPA",
-        "Cosmetics CDSCO Import Registration (COS-1 / COS-2) & Manufacturing (COS-5 / COS-8)",
-        "EU Cosmetic Responsible Person (EU RP), CPSR Safety Assessment & CPNP Notification",
-        "UK SCPN Notification, Canada Cosmetic Notification (CNF) & Australia AICIS"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Regulatory & Quality Consulting Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CDSCO Medical Device & IVD Licensing India (MD-14/15, MD-3 to MD-10, AIR)",
-              "url": "https://www.nkbregovanta.com/services/india/medical-devices"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CDSCO Pharmaceutical & Drug Import Licensing (Form 41, Form 10, PMF, DMF)",
-              "url": "https://www.nkbregovanta.com/services/drug-licenses-for-importers"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "US FDA 510(k), eSTAR, De Novo, PMA & US Agent Services",
-              "url": "https://www.nkbregovanta.com/services/usa"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "EU MDR 2017/745 & EU IVDR 2017/746 CE Marking & EC REP",
-              "url": "https://www.nkbregovanta.com/services/eu"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "ISO 13485 QMS, MDSAP Readiness & FDA QMSR Compliance",
-              "url": "https://www.nkbregovanta.com/services/iso-13485"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "UK MHRA Registration, UKRP & UKCA Marking",
-              "url": "https://www.nkbregovanta.com/services/uk"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Australia TGA ARTG Inclusion & Sponsor Services",
-              "url": "https://www.nkbregovanta.com/services/australia"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Health Canada MDL & MDEL Licensing",
-              "url": "https://www.nkbregovanta.com/services/canada"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "ANVISA Brazil Registration & BRH Services",
-              "url": "https://www.nkbregovanta.com/services/brazil"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Saudi Arabia SFDA & UAE MOHAP Market Access",
-              "url": "https://www.nkbregovanta.com/services/saudi-arabia"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "PC-PNDT Certificate Registration (Form A & Form B)",
-              "url": "https://www.nkbregovanta.com/services/pc-pndt-certificate"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "WPC Wireless Equipment Type Approval (ETA & DPL)",
-              "url": "https://www.nkbregovanta.com/services/wpc-wireless-medical-devices"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "IEC Code DGFT & AD Code ICEGATE Customs Registration",
-              "url": "https://www.nkbregovanta.com/services/iec-ad-code"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CDSCO Free Sale (FSC), MSC, NCC & MD-42 Certificates",
-              "url": "https://www.nkbregovanta.com/services/india/free-sale"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Cosmetics Regulatory Services (MoCRA, EU RP, CDSCO COS-1/2, CPSR)",
-              "url": "https://www.nkbregovanta.com/industries/cosmetics"
-            }
-          }
-        ]
-      }
+      ]
     },
     {
       "@type": "WebSite",
@@ -393,12 +240,7 @@ const structuredDataGraph = {
       "publisher": {
         "@id": "https://www.nkbregovanta.com/#organization"
       },
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.nkbregovanta.com/services?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": "en-US"
     }
   ]
 };
@@ -407,13 +249,52 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXGJHBKJ');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLQ56M50KG" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BLQ56M50KG');`,
+          }}
+        />
+        {/* End Google tag (gtag.js) */}
+
         <HeadContent />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var l=localStorage.getItem("nkb_selected_lang");if(l==="ar"){document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");}}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
         />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PXGJHBKJ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
@@ -421,11 +302,243 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function ClientSeoManager() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (pathname.startsWith("/admin")) return;
+
+    const cleanPath = pathname.replace(/\/$/, "") || "/";
+    async function loadSeo() {
+      try {
+        const { data } = await supabase
+          .from("seo_meta")
+          .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description")
+          .eq("target_url", cleanPath)
+          .maybeSingle();
+
+        const targetCanonical = data?.canonical_url || `https://www.nkbregovanta.com${cleanPath}`;
+        let canonicalEl = document.querySelector('link[rel="canonical"]');
+        if (!canonicalEl) {
+          canonicalEl = document.createElement("link");
+          canonicalEl.setAttribute("rel", "canonical");
+          document.head.appendChild(canonicalEl);
+        }
+        canonicalEl.setAttribute("href", targetCanonical);
+
+        if (!data) return;
+
+        if (data.seo_title) {
+          document.title = data.seo_title;
+        }
+
+        if (data.meta_description) {
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) {
+            metaDesc.setAttribute("content", data.meta_description);
+          }
+        }
+
+        if (data.og_title || data.seo_title) {
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) {
+            ogTitle.setAttribute("content", data.og_title || data.seo_title);
+          }
+        }
+
+        if (data.og_description || data.meta_description) {
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc) {
+            ogDesc.setAttribute("content", data.og_description || data.meta_description);
+          }
+        }
+
+        if (data.twitter_title || data.seo_title) {
+          const twTitle = document.querySelector('meta[name="twitter:title"]');
+          if (twTitle) {
+            twTitle.setAttribute("content", data.twitter_title || data.seo_title);
+          }
+        }
+
+        if (data.twitter_description || data.meta_description) {
+          const twDesc = document.querySelector('meta[name="twitter:description"]');
+          if (twDesc) {
+            twDesc.setAttribute("content", data.twitter_description || data.meta_description);
+          }
+        }
+      } catch {
+        // Silently continue if Supabase is offline
+      }
+    }
+
+    loadSeo();
+  }, [pathname]);
+
+  return null;
+}
+
+function TopProgressBar() {
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+  const [visible, setVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let t1: ReturnType<typeof setTimeout> | undefined;
+    let t2: ReturnType<typeof setTimeout> | undefined;
+
+    if (isLoading) {
+      setVisible(true);
+      setProgress(20);
+      t1 = setTimeout(() => setProgress(50), 100);
+      t2 = setTimeout(() => setProgress(80), 300);
+    } else if (visible) {
+      setProgress(100);
+      timer = setTimeout(() => {
+        setVisible(false);
+        setProgress(0);
+      }, 250);
+    }
+
+    return () => {
+      if (t1) clearTimeout(t1);
+      if (t2) clearTimeout(t2);
+      if (timer) clearTimeout(timer);
+    };
+  }, [isLoading, visible]);
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className="fixed top-0 left-0 right-0 h-[3px] z-[99999] pointer-events-none transition-all duration-300 ease-out"
+      style={{
+        width: `${progress}%`,
+        background: "linear-gradient(90deg, #dca85b, #3b82f6, #0b3a96)",
+        boxShadow: "0 0 10px rgba(11, 58, 150, 0.7)",
+      }}
+    />
+  );
+}
+
+function NetworkStatusMonitor() {
+  const [isOffline, setIsOffline] = useState(false);
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" || s.isLoading });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleOffline = () => {
+      setIsOffline(true);
+      toast.error("You are offline. Please check your internet connection.", {
+        id: "offline-status",
+        duration: 8000,
+      });
+    };
+
+    const handleOnline = () => {
+      setIsOffline(false);
+      toast.success("Internet connection restored.", {
+        id: "offline-status",
+        duration: 4000,
+      });
+    };
+
+    if (!navigator.onLine) {
+      setIsOffline(true);
+    }
+
+    // Network Information API check for slow 2G/3G connections
+    const conn = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+    if (conn) {
+      const checkSpeed = () => {
+        if (conn.effectiveType === "slow-2g" || conn.effectiveType === "2g") {
+          toast.warning("Slow internet detected. Pages and media may take longer to load.", {
+            id: "slow-conn-notice",
+            duration: 6000,
+          });
+        }
+      };
+      checkSpeed();
+      conn.addEventListener?.("change", checkSpeed);
+      window.addEventListener("offline", handleOffline);
+      window.addEventListener("online", handleOnline);
+
+      return () => {
+        window.removeEventListener("offline", handleOffline);
+        window.removeEventListener("online", handleOnline);
+        conn.removeEventListener?.("change", checkSpeed);
+      };
+    }
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
+  }, []);
+
+  // Show helpful prompt if route navigation takes longer than 4 seconds
+  useEffect(() => {
+    if (!isLoading) return;
+    const slowTimer = setTimeout(() => {
+      toast.info("Connection seems slow. Loading page resources...", {
+        id: "nav-slow-toast",
+        duration: 4500,
+      });
+    }, 4000);
+
+    return () => clearTimeout(slowTimer);
+  }, [isLoading]);
+
+  if (!isOffline) return null;
+
+  return (
+    <div className="fixed bottom-4 left-4 z-[99999] flex items-center gap-2.5 rounded-lg bg-red-600 px-4 py-2.5 text-xs font-semibold text-white shadow-xl animate-in slide-in-from-bottom-3 duration-300">
+      <WifiOff className="h-4 w-4 animate-pulse shrink-0" />
+      <span>You are offline. Please check your internet connection.</span>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
+
+  useEffect(() => {
+    // Automatically recover from temporary network glitches or stale chunk preloads
+    const handlePreloadError = () => {
+      const key = "nkb_preload_retry";
+      const lastRetry = sessionStorage.getItem(key);
+      const now = Date.now();
+      if (!lastRetry || now - parseInt(lastRetry, 10) > 15000) {
+        sessionStorage.setItem(key, now.toString());
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener("vite:preloadError", handlePreloadError);
+    return () => window.removeEventListener("vite:preloadError", handlePreloadError);
+  }, []);
+
+  if (isAdmin) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <div className="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+          <Outlet />
+        </div>
+        <Toaster position="top-right" richColors />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
+      <TopProgressBar />
+      <NetworkStatusMonitor />
+      <ClientSeoManager />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

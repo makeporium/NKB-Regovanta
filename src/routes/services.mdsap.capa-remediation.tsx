@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,30 +20,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/capa-remediation")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Nonconformity, CAPA & Remediation Support | MDSAP | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Root cause analysis, effective systemic CAPA, trend prevention, and remediation packages for recognized Auditing Organizations under MDSAP.",
-      },
-      {
-        property: "og:title",
-        content:
-          "Nonconformity, CAPA & Remediation Support | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "Closing the finding is not the same as correcting the system. Build defensible CAPA responses and extent-of-condition evaluations under MDSAP.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "MDSAP Nonconformity & CAPA Remediation | NKB Regovanta" },
+      { name: "description", content: "Root cause analysis, systemic CAPA development, trend prevention, and grade 4 nonconformity remediation packages for MDSAP Auditing Organizations." },
+      { property: "og:title", content: "MDSAP Nonconformity & CAPA Remediation | NKB Regovanta" },
+      { property: "og:description", content: "Root cause analysis, systemic CAPA development, trend prevention, and grade 4 nonconformity remediation packages for MDSAP Auditing Organizations." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/capa-remediation" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP Nonconformity & CAPA Remediation | NKB Regovanta" },
+      { name: "twitter:description", content: "Root cause analysis, systemic CAPA development, trend prevention, and grade 4 nonconformity remediation packages for MDSAP Auditing Organizations." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/capa-remediation" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/capa-remediation",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP Nonconformity, CAPA & Remediation Support",
+          description: "Root cause analysis, CAPA closure, and nonconformity remediation support for medical device manufacturers undergoing MDSAP audits.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

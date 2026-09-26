@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,28 +19,32 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/mdsap/gap-assessment")({
   head: () => ({
     meta: [
-      {
-        title: "MDSAP QMS Gap Assessment | Audit Exposure Modeling | NKB Regovanta",
-      },
-      {
-        name: "description",
-        content:
-          "Detailed gap assessment against ISO 13485:2016 and MDSAP specific requirements across the 7 core process areas.",
-      },
-      {
-        property: "og:title",
-        content: "MDSAP QMS Gap Assessment | NKB Regovanta",
-      },
-      {
-        property: "og:description",
-        content:
-          "A gap assessment should predict audit exposure, not produce a 200-line checklist. Full process interaction and systemic weakness evaluation.",
-      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "MDSAP QMS Gap Assessment Consulting | NKB Regovanta" },
+      { name: "description", content: "Gap assessment against ISO 13485:2016 and MDSAP requirements across 7 process areas, with audit exposure modeling and prioritized remediation roadmap." },
+      { property: "og:title", content: "MDSAP QMS Gap Assessment Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Gap assessment against ISO 13485:2016 and MDSAP requirements across 7 process areas, with audit exposure modeling and prioritized remediation roadmap." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/mdsap/gap-assessment" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MDSAP QMS Gap Assessment Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Gap assessment against ISO 13485:2016 and MDSAP requirements across 7 process areas, with audit exposure modeling and prioritized remediation roadmap." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.nkbregovanta.com/services/mdsap/gap-assessment" },
+    ],
+    scripts: [
       {
-        rel: "canonical",
-        href: "https://www.nkbregovanta.com/services/mdsap/gap-assessment",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "MDSAP QMS Gap Assessment & Audit Exposure Modeling",
+          description: "ISO 13485:2016 and MDSAP gap assessment across 7 process areas with audit exposure evaluation and remediation planning for medical device manufacturers.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+        }),
       },
     ],
   }),

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -16,24 +16,23 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/uk/mhra-registration")({
   head: () => ({
     meta: [
-      { title: "MHRA Medical Device Registration & DORS Readiness | NKB Regovanta" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { title: "MHRA Medical Device Registration | NKB Regovanta" },
       {
         name: "description",
-        content:
-          "Senior UK MHRA medical device and IVD registration consulting via the Device Online Registration System (DORS). DORS data quality audits, UKRP linkage, and registration maintenance.",
+        content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance.",
       },
-      {
-        name: "keywords",
-        content:
-          "MHRA device registration, DORS registration MHRA, UK medical device register, UKRP MHRA registration, UKCA registration, IVD registration UK, NKB Regovanta",
-      },
-      { property: "og:title", content: "MHRA Medical Device Registration & DORS Readiness | NKB Regovanta" },
+      { property: "og:title", content: "MHRA Medical Device Registration | NKB Regovanta" },
       {
         property: "og:description",
-        content:
-          "MHRA registration should be the final expression of an already-established regulatory pathway. We quality-check your registration dataset against underlying evidence before filing.",
+        content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/uk/mhra-registration" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MHRA Medical Device Registration | NKB Regovanta" },
+      { name: "twitter:description", content: "UK MHRA medical device and IVD registration consulting via DORS: data quality audits, UKRP linkage, and continuous registration maintenance." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/uk/mhra-registration" }],
   }),
@@ -247,7 +246,7 @@ function UKMHRARegistrationPage() {
                   DORS Statutory Fee
                 </h4>
                 <div className="space-y-3 text-xs font-medium text-navy/75">
-                  <p>MHRA assesses a statutory fee of £240 per registration application (covering up to 20,000 devices per GMDN group). We ensure your application is 100% error-free to prevent rejected filings.</p>
+                  <p>MHRA introduced an updated device-registration fee structure, including an annual fee, from 1 April 2026. We check the applicable charges and registration scope against the current published guidance before filing. <a className="underline" href="https://www.gov.uk/government/publications/mhra-fees/current-mhra-fees">Check current MHRA fees</a>.</p>
                 </div>
               </div>
 

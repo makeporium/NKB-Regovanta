@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "ce-marking-digital-health-technologies",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "33e9522a42aa618224a4c4c122b9669e9cb12d4ba5a8a289d13104e563689935"
+  },
+  {
+    "slug": "fda-qmsr-compliance-guide",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "069cc32e372dbad544f8637fec19a8babad4a84b5bcd282930cfa43a02f12a9c"
+  },
+  {
+    "slug": "dynamic-risk-management-software-medical-devices",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "49eb4db35cc49b93fa1d9bb3506ad475d4b40251b318440f867c3709175c1e7a"
+  },
+  {
+    "slug": "understanding-prrc-eu-mdr-ivdr",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "0191a0644609abf6e1f4f051b94313a7dbd6123661c8bb5ef1c3f62c0858a14d"
+  },
+  {
+    "slug": "qms-documentation-iso-13485-compliance",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "c15e03d8b939f415791d99cef21e78b0889186232a97eadc411ea2ca7d3c600a"
+  },
+  {
+    "slug": "clinical-evaluation-equivalence-medical-devices",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "d5a4bbbdf33ee842f1a33d9be770728f30ca664ccea290262ceb38cc69c78d1c"
+  },
+  {
+    "slug": "gspr-compliance-eu-mdr-ivdr",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "7f4b375f00561bec5c2d68ed0332c1fe06cf9238f5b09e4b7c8c051ab4779244"
+  },
+  {
+    "slug": "cdsco-medical-device-manufacturing-license-india",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "3490172685c50452319bba4eab5d33d236a446f88464b9fd3ae93a4435fdd5f6"
+  },
+  {
+    "slug": "class-iii-medical-device-classification-strategy",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "3fe78208fac66b0bc813fc644d0194a0a0c9e425c345f7de5554e05e3791f7e0"
+  },
+  {
+    "slug": "gspr-foundation-medical-device-development",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "649e95100030c6a27a78f3471fadd272c5132b510cb6d3543338c92ee4289eea"
+  },
+  {
+    "slug": "ce-marking-cardiovascular-medical-devices",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "e8474682627f0b1ce60d588544c3ac08060296a382021965979d585efc4d6147"
+  },
+  {
+    "slug": "iec-62304-medical-device-software-lifecycle",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "6030563af4f8bf15e5613ac0029b6c5bfb97d9a78d764f58e1344cf4d3dbc3ce"
+  },
+  {
+    "slug": "remote-patient-monitoring-devices-regulatory-framework",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "85875cb0ae7cbf927bdde2f3b8462aaee41a31c8a24821d070c9007febf9f4d0"
+  },
+  {
+    "slug": "ivdr-class-d-verification-notified-bodies",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "e82567469acdf5f32077f20c0a1169b9d2fc72ed264dd236c34856b478a65766"
+  },
+  {
+    "slug": "dental-scanners-manufacturing-regulatory-standards",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "40095f1dd0566e2c57e1d87f7f20de3ad8bdc07b2a427de94e75c7c6ac20860c"
+  },
+  {
+    "slug": "borderline-medical-device-classification-strategy",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "da9ed45369e1c05d23b4d7dfc7b727f9a9cc86615ef011579507bde039808244"
+  },
+  {
+    "slug": "notified-body-expectations-eu-mdr-technical-documentation",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "88f479458adbc35dcccd0c682c991a7303e69792f03f83d34d062a2f93a198f4"
+  },
+  {
+    "slug": "overcoming-fda-510k-clearance-barriers",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "6c3052acf7cda0ec5927ea69fe7a883391f7758ae259ce3487fb3dad512d74e8"
+  },
+  {
+    "slug": "effective-capa-system-medical-devices",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "26b9aed2b1e63083055fc355ba16587be88de1c8c46e72fe7e88039a675f6860"
+  },
+  {
+    "slug": "regulatory-compliance-strategy-global-medtech",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "f452952399b4fe7cab3a82edca3df6f9493c3a8ac30012b0256680f51f7db631"
+  },
+  {
+    "slug": "regulation-eu-2024-1860-mdr-ivdr-transition",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "19e1870d80b76404cae59a5cbaf5a56eb8d38aa140c33409ca9d4ae316462fd2"
+  },
+  {
+    "slug": "biological-evaluation-testing-medical-devices-iso-10993",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "26e45bac08aec95b49fe7260125138253ac24489c278868aef02993f2e21b135"
+  },
+  {
+    "slug": "core-regulations-medical-device-global-compliance",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "e45f336f1367c727310db2a1d43c97443ae82c1c46cab53b49684654082f913f"
+  },
+  {
+    "slug": "optimal-timing-usfda-510k-submission",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "00bc6fb4179be4efa5d8c167ca735b75f719b0046b057cd0b652dcc0c967631c"
+  },
+  {
+    "slug": "usability-testing-medical-devices-iec-62366",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "ab556547eb860ab75d7e10e7e167197fb69b229f84d42e10301b9ff79e0f2a58"
+  },
+  {
+    "slug": "fda-510k-program-modernization-safety-standards",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "7829a8a3ec1f5295e1b095ff0f6959ec68a8406c289688336a42fdf124e7e7e5"
+  },
+  {
+    "slug": "human-factors-engineering-medical-device-design",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "df5629eb6f9da2026681a863f0467fe691c36614c1400354f6e4b40a363f145b"
+  },
+  {
+    "slug": "cdsco-medical-device-registration-guidelines-india",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "00dbc0a442f337e815be1ec7c185b0a3eeda7f4c3b62a08513cd503a1485b395"
+  },
+  {
+    "slug": "ce-marking-process-medical-devices-eu-mdr",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "eb3b4c53701987c98c68a23a413e2d22073819d4e97d8797f4e746530fd57bcb"
+  },
+  {
+    "slug": "samd-classification-submission-usfda",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "4e92c31c41d0db6e5716a024c90cf0b07bd92b30f8b60efccd416e0d1d38ae05"
+  },
+  {
+    "slug": "fda-q-sub-pre-submission-meeting-guide",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "a12c562437dfcd7dede27b2e2d347bfb85ad2869f2ccd12ec17c729db1e08fcb"
+  },
+  {
+    "slug": "notified-body-selection-conformity-assessment-guide",
+    "replacementDate": "2026-09-07",
+    "status": "original-source-checked",
+    "indexable": true,
+    "contentSha256": "27578473e23e320d6501fe9df47edcd308010b3569d82546f3be231eab0ac2bc"
+  }
+]

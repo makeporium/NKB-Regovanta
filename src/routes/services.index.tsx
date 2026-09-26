@@ -5,24 +5,24 @@ import { CTABand, PageHero } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
+      { title: "Medical Device Regulatory Services | NKB Regovanta" },
       {
         name: "description",
         content:
-          "Explore NKB Regovanta's global regulatory consulting services: CDSCO India licensing (MD-14/15, Form 41/10), US FDA 510(k), EU MDR/IVDR, ISO 13485 QMS, MDSAP, Drug & Cosmetics compliance.",
+          "Global regulatory and quality consulting services: US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, ISO 13485 QMS, and market access.",
       },
-      {
-        name: "keywords",
-        content:
-          "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, MD-3 MD-5 manufacturing licence, MD-7 MD-9 manufacturing licence, Loan manufacturing MD-4 MD-6, Indian Authorized Agent AIR, SUGAM portal support, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, European Authorized Representative EC REP, UK MHRA medical device registration, UK Responsible Person UKRP, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP",
-      },
-      { property: "og:title", content: "Regulatory Affairs & Quality Consulting Services | NKB Regovanta" },
+      { property: "og:title", content: "Medical Device Regulatory Services | NKB Regovanta" },
       {
         property: "og:description",
         content:
-          "Comprehensive regulatory, quality & market access solutions tailored to Medical Devices, IVDs, Pharmaceuticals, and Cosmetics.",
+          "Global regulatory and quality consulting services: US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, ISO 13485 QMS, and market access.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Medical Device Regulatory Services | NKB Regovanta" },
+      { name: "twitter:description", content: "Global regulatory and quality consulting services: US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, ISO 13485 QMS, and market access." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/services" },
@@ -36,19 +36,19 @@ const services = [
     icon: ShieldCheck,
     title: "Global Medical Device & IVD Registration",
     text: "Regulatory strategy, submission support and licensing across global markets.",
-    to: "/services/regulatory-affairs",
+    to: "/services/global-medical-device-ivd-regulatory-affairs-consulting",
   },
   {
     icon: Syringe,
     title: "Drug-Device Combination Product Consulting",
     text: "Global regulatory pathways, FDA 21 CFR Part 4, EU MDR Article 117 Notified Body Opinions (NBOp), DHF and ISO 14971 compliance.",
-    to: "/services/drug-device-combination-products",
+    to: "/services/drug-device-combination-product-consulting",
   },
   {
     icon: FileSearch,
     title: "Regulatory Due Diligence for Medical Devices & IVDs",
     text: "Decision-grade regulatory audits for M&A, private equity investments, QMS maturity, FDA 483 assessments, and valuation risk modeling.",
-    to: "/services/regulatory-due-diligence",
+    to: "/services/medical-device-ivd-regulatory-due-diligence",
   },
   {
     icon: Sparkles,
@@ -60,31 +60,31 @@ const services = [
     icon: Pill,
     title: "Drug Licenses for Importers",
     text: "Registration Certificate (Form 41), Import License (Form 10/10-A), Form 11 Test Licenses and wholesale distribution support.",
-    to: "/services/drug-licenses-for-importers",
+    to: "/services/drug-licenses-importers-india-form-10-form-41",
   },
   {
     icon: Radio,
     title: "WPC Wireless Device Approval",
     text: "Equipment Type Approval (ETA), Dealer Possession Licenses (DPL) and RF test compliance for connected devices.",
-    to: "/services/wpc-wireless-medical-devices",
+    to: "/services/wpc-approval-wireless-medical-devices-india",
   },
   {
     icon: Activity,
     title: "PC-PNDT Certificate",
     text: "Statutory Form A & Form B registration for ultrasound, imaging machines and diagnostic equipment in India.",
-    to: "/services/pc-pndt-certificate",
+    to: "/services/pc-pndt-registration-consultant-certificate-india",
   },
   {
     icon: Landmark,
     title: "IEC & AD Code Registration",
     text: "Import Export Code (IEC) and Authorised Dealer (AD) Code registration across Indian customs ports.",
-    to: "/services/iec-ad-code",
+    to: "/services/iec-ad-code-registration-india",
   },
   {
     icon: BadgeCheck,
     title: "Quality Systems",
     text: "ISO 13485, QMS development, internal audits, CAPA & compliance readiness.",
-    to: "/services/iso-13485",
+    to: "/services/iso-13485-implementation-certification-consulting",
   },
   {
     icon: Globe2,
@@ -96,35 +96,53 @@ const services = [
     icon: FileCheck,
     title: "Technical Documentation",
     text: "End-to-end technical file writing (STED), risk management & compliance support.",
-    to: "/services/technical-documentation",
+    to: "/services/medical-device-technical-documentation-consulting",
   },
   {
     icon: Zap,
     title: "Market Access",
     text: "Market entry strategy, pricing, reimbursement & post-market compliance.",
-    to: "/services/market-access",
+    to: "/services/global-market-access-consulting-medical-devices",
   },
   {
     icon: Factory,
     title: "Our Products (Manufacturing)",
     text: "cGMP-compliant pharmaceutical machinery, SS 304/316 cleanroom furniture, blenders, conveyors, and material handling solutions.",
-    to: "/services/manufacturing",
+    to: "/services/pharmaceutical-cleanroom-manufacturing-equipment",
   },
   {
     icon: FileSearch,
     title: "Audit & Compliance Support",
     text: "Internal audits, supplier audits, compliance & regulatory intelligence.",
-    to: "/services/audit-compliance",
+    to: "/services/medical-device-audit-compliance-support",
   },
 ];
 
 function ServicesOverview() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Medical Device Regulatory & Quality Consulting Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "NKB Regovanta",
+              "url": "https://www.nkbregovanta.com"
+            },
+            "serviceType": "Medical Device Regulatory Consulting",
+            "description": "Global regulatory affairs, CE marking, FDA 510(k), CDSCO licensing, and ISO 13485 quality systems consulting.",
+            "areaServed": ["India", "United States", "European Union", "United Kingdom", "Australia", "Global"]
+          })
+        }}
+      />
       <section className="bg-surface py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
            <h1 className="text-3xl font-extrabold text-navy sm:text-5xl leading-tight">
-             Our Services
+             Medical Device Regulatory &amp; Quality Consulting Services
            </h1>
            <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-2xl">
              Comprehensive regulatory, quality & market access solutions tailored to your business needs.
@@ -152,7 +170,7 @@ function ServicesOverview() {
       <section className="bg-navy text-navy-foreground py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
            <div>
-             <h2 className="text-2xl font-bold">Have a unique regulatory challenge?</h2>
+             <h2 className="text-2xl font-bold text-white">Have a unique regulatory challenge?</h2>
              <p className="mt-2 text-navy-foreground/80 text-lg">Let's build the right solution for your product.</p>
            </div>
            <Link to="/contact" className="inline-flex items-center justify-center rounded-sm bg-white text-navy font-semibold px-8 py-4 transition-colors hover:bg-white/90 shrink-0">

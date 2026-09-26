@@ -13,21 +13,47 @@ import {
   ArrowRight
 } from "lucide-react";
 import imgHero from "@/assets/industry-ivd.png";
-import imgWorld from "@/assets/world-map.png";
+import imgWorld from "@/assets/world-map.optimized.webp";
 import imgEU from "@/assets/eu.png";
-import imgUS from "@/assets/us.png";
+import imgUS from "@/assets/us.optimized.webp";
 import imgISO from "@/assets/iso2.png";
-import imgIvd2 from "@/assets/ivd2.png";
+import imgIvd2 from "@/assets/ivd2.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd")({
   head: () => ({
     meta: [
-      { title: "IVD Regulatory Consultant | EU IVDR CDSCO FDA | NKB Regovanta" },
-      { name: "description", content: "Build the Right Evidence. Navigate the Right Pathway. NKB Regovanta supports IVD manufacturers in building a comprehensive regulatory strategy from product assessment through approval and post-market compliance." },
+      { title: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { name: "description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
+      { property: "og:title", content: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { property: "og:description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/industries/ivd" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Global IVD Regulatory Consulting | NKB Regovanta" },
+      { name: "twitter:description", content: "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
-  links: [
+    links: [
       { rel: "canonical", href: "https://www.nkbregovanta.com/industries/ivd" },
-  ],
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Global IVD Regulatory Consulting",
+          "provider": {
+            "@type": "Organization",
+            "name": "NKB Regovanta",
+            "url": "https://www.nkbregovanta.com"
+          },
+          "description": "Global IVD regulatory consulting for EU IVDR, CDSCO test licences, FDA 510(k), and Performance Evaluation Reports (PER) for diagnostic kit manufacturers.",
+          "serviceType": "In Vitro Diagnostics Regulatory Affairs"
+        })
+      }
+    ],
   }),
   component: IVD,
 });
@@ -75,12 +101,12 @@ function IVD() {
               </div>
             </div>
           </div>
-          
+
           {/* Right Image */}
           <div className="hidden lg:block h-full relative">
             {/* White gradient fade to blend the left edge of the image */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <img src={imgHero} alt="IVD Support" className="w-full h-full object-cover object-left" />
+            <img width={1024} height={1024} src={imgHero} alt="IVD Support" className="w-full h-full object-cover object-left" />
           </div>
         </div>
       </section>
@@ -191,12 +217,12 @@ function IVD() {
               { code: "eu", name: "European Union", auth: "IVDR 2017/746", route: "/industries/ivd/eu" },
               { code: "us", name: "United States", auth: "US FDA 510(k) & De Novo", route: "/industries/ivd/usa" },
               { code: "gb", name: "United Kingdom", auth: "MHRA & UKCA IVD", route: "/services/uk" },
-              { code: "ca", name: "Canada", auth: "Health Canada Class II–IV", route: "/services/canada/ivd" },
-              { code: "au", name: "Australia", auth: "TGA IVD Inclusions", route: "/services/australia/ivd" },
-              { code: "br", name: "Brazil", auth: "ANVISA & BGMP", route: "/services/brazil/ivd" },
-              { code: "sa", name: "Saudi Arabia", auth: "SFDA MDMA Approvals", route: "/services/saudi-arabia/ivd" },
-              { code: "ae", name: "UAE", auth: "MOHAP IVD Registration", route: "/services/uae/ivd" },
-              { code: "nz", name: "New Zealand", auth: "Medsafe WAND", route: "/services/new-zealand/ivd" },
+              { code: "ca", name: "Canada", auth: "Health Canada Class II–IV", route: "/services/canada/health-canada-ivd-registration-and-performance-strategy" },
+              { code: "au", name: "Australia", auth: "TGA IVD Inclusions", route: "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion" },
+              { code: "br", name: "Brazil", auth: "ANVISA & BGMP", route: "/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023" },
+              { code: "sa", name: "Saudi Arabia", auth: "SFDA MDMA Approvals", route: "/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda" },
+              { code: "ae", name: "UAE", auth: "MOHAP IVD Registration", route: "/services/uae/ivd-registration-and-performance-evidence-uae" },
+              { code: "nz", name: "New Zealand", auth: "Medsafe WAND", route: "/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand" },
             ].map((m) => (
               <Link
                 key={m.code}
@@ -215,7 +241,7 @@ function IVD() {
                     {m.name}
                   </h3>
                 </div>
-                
+
                 <div className="flex items-center justify-between pt-2 border-t border-gray-200/60 mt-auto">
                   <span className="text-[11px] font-semibold text-navy/70 group-hover:text-[#0b3a96] transition-colors line-clamp-1">
                     {m.auth}
@@ -401,7 +427,7 @@ function IVD() {
       {/* 6. DARK SECTION: WHY LEADING IVD COMPANIES... */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f8f9fc]">
         <div className="mx-auto max-w-[1440px]">
-          <div 
+          <div
             className="rounded-xl overflow-hidden relative shadow-xl bg-navy bg-center bg-cover bg-no-repeat min-h-[380px] flex items-center"
             style={{ backgroundImage: `url(${imgIvd2})` }}
           >
@@ -410,7 +436,7 @@ function IVD() {
                 WHY LEADING IVD COMPANIES<br/>
                 PARTNER WITH NKB REGOVANTA
               </h2>
-              
+
               <ul className="space-y-4">
                 {[
                   "Deep expertise in EU IVDR, US FDA and global regulatory pathways",

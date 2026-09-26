@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -47,17 +47,39 @@ import { CTABand } from "@/components/site/Bits";
 export const Route = createFileRoute("/services/new-zealand/sponsor")({
   head: () => ({
     meta: [
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       {
-        title:
-          "New Zealand Sponsor Services & In-Country Representation | NKB Regovanta",
+        title: "NZ Sponsor Services & Representation | NKB Regovanta",
       },
       {
         name: "description",
         content:
-          "Professional New Zealand Sponsor services for foreign medical device, IVD, and software manufacturers. Legal sponsor representation, Medsafe liaison, distribution records, and recall readiness.",
+          "NZ Sponsor services for medical device manufacturers — legal representation, Medsafe liaison, distribution records, and recall readiness in New Zealand.",
       },
+      { property: "og:title", content: "NZ Sponsor Services & Representation | NKB Regovanta" },
+      { property: "og:description", content: "NZ Sponsor services for medical device manufacturers — legal representation, Medsafe liaison, distribution records, and recall readiness in New Zealand." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/services/new-zealand/sponsor" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NZ Sponsor Services & Representation | NKB Regovanta" },
+      { name: "twitter:description", content: "NZ Sponsor services for medical device manufacturers — legal representation, Medsafe liaison, distribution records, and recall readiness in New Zealand." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/new-zealand/sponsor" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Medical Device Sponsor Services & In-Country Representation",
+          description: "Authorized NZ Sponsor representation for foreign medical device manufacturers — WAND management, Medsafe liaison, and post-market compliance obligations.",
+          provider: { "@type": "Organization", name: "NKB Regovanta", url: "https://www.nkbregovanta.com" },
+          areaServed: { "@type": "Country", name: "New Zealand" },
+        }),
+      },
+    ],
   }),
   component: NZSponsorPage,
 });

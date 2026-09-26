@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/notified-body-selection-conformity-assessment-guide.json";
+
+export const Route = createFileRoute("/insights/notified-body-selection-conformity-assessment-guide")({
+  head: () => ({
+    meta: [
+      { title: "Notified Body Selection Guide | NKB Regovanta" },
+      { name: "description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "Notified Body Selection Guide | NKB Regovanta" },
+      { property: "og:description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/accreditation_certificate_audit.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Notified Body Selection Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "Choose a notified body by confirming designation scope, product fit, assessment requirements, and realistic readiness rather than quoted timing alone." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/accreditation_certificate_audit.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

@@ -27,11 +27,11 @@ import {
     CheckCircle2,
     MessageSquareQuote,
 } from "lucide-react";
-import heroImage from "@/assets/hero-global.png";
+import heroImage from "@/assets/hero-global.optimized.webp";
 import imgPharmaEquipment from "@/assets/mfg-pharma-equipment.jpg";
 import imgCleanroomSolutions from "@/assets/mfg-cleanroom-solutions.jpg";
 import imgHealthcareProducts from "@/assets/mfg-healthcare-products.jpg";
-import imgComplianceSupport from "@/assets/mfg-compliance-support.png";
+import imgComplianceSupport from "@/assets/mfg-compliance-support.optimized.webp";
 
 // Client Logos
 import logoIpca from "@/assets/clients/ipca.png";
@@ -56,6 +56,11 @@ import logoKusum from "@/assets/clients/kusum.png";
 import logoTcs from "@/assets/clients/tcs.png";
 import logoGenpact from "@/assets/clients/genpact.svg";
 import logoWipro from "@/assets/clients/wipro.svg";
+import logoIso9001 from "@/assets/clients/iso-9001.png";
+import logoUngm from "@/assets/clients/ungm.png";
+import logoFieo from "@/assets/clients/fieo.png";
+import logoAsq from "@/assets/clients/asq.png";
+import logoDuns from "@/assets/clients/duns.png";
 
 // Trust & Credential Logos
 import logoIso from "@/assets/trust/iso-9001.svg";
@@ -67,24 +72,24 @@ import logoDnb from "@/assets/trust/dnb.png";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Regulatory Consultants" },
+            { title: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             {
                 name: "description",
                 content:
-                    "NKB Regovanta is a premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing (MD-14/15, MD-3 to MD-9, Form 41/10), US FDA 510(k), EU MDR/IVDR, and Cosmetics compliance consulting firm.",
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
-            {
-                name: "keywords",
-                content:
-                    "CDSCO Medical Device Import Licence, MD-14 application, MD-15 import licence, Class A GSR 777(E) registration, Investigational Device Import MD-18 MD-19, Class A & B manufacturing licence MD-3 MD-5, Class C & D manufacturing licence MD-7 MD-9, Loan manufacturing licence MD-4 MD-6, Indian Authorized Agent AIR IAA, Medical device regulatory consultant India, Drug Import Licence India, Form 41 CDSCO, Form 10 import licence, Plant Master File PMF, Drug Master File DMF, PC-PNDT Certificate registration, WPC ETA approval medical devices, IEC Code DGFT, AD Code ICEGATE, Free Sale Certificate FSC CDSCO, US FDA 510k submission consultant, FDA 510(k) clearance medical devices, eSTAR FDA dossier, De Novo classification, PMA Premarket Approval, US FDA US Agent services, MoCRA compliance support, EU MDR 2017/745 regulatory consultant, CE Marking medical devices Europe, EU IVDR 2017/746, EC REP European Authorized Representative, UK MHRA medical device registration, UK Responsible Person UKRP, UKCA marking, Australia TGA ARTG inclusion, Health Canada MDL MDEL, ANVISA Brazil, Saudi Arabia SFDA, UAE MOHAP, ISO 13485 implementation consultant, MDSAP audit readiness, FDA QMSR compliance, ISO 14971 Risk Management, CDSCO cosmetic import registration COS-1 COS-2, EU Cosmetic Responsible Person EU RP, NKB Regovanta, NKB Regovanta Solutions",
-            },
-            { property: "og:title", content: "NKB Regovanta — Medical Device, IVD, CDSCO, US FDA 510(k) & EU MDR Consultants" },
+            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
             {
                 property: "og:description",
                 content:
-                    "Premier global regulatory affairs, quality systems (ISO 13485 / MDSAP), CDSCO licensing, US FDA 510(k), EU MDR/IVDR, Pharma & Cosmetics consulting.",
+                    "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
             { property: "og:url", content: "https://www.nkbregovanta.com" },
+            { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            { name: "twitter:description", content: "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide." },
+            { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
         links: [
             { rel: "canonical", href: "https://www.nkbregovanta.com" },
@@ -97,6 +102,7 @@ const expertise = [
     {
         title: "Medical Devices & IVDs",
         icon: ClipboardCheck,
+        link: "/services" as const,
         items: [
             "Regulatory Strategy",
             "Product Classification",
@@ -110,6 +116,7 @@ const expertise = [
     {
         title: "Pharmaceuticals & Drugs",
         icon: Pill,
+        link: "/services/drug-licenses-importers-india-form-10-form-41" as const,
         items: [
             "CDSCO Drug Import Licensing",
             "Registration Certificate (Form 41)",
@@ -123,6 +130,7 @@ const expertise = [
     {
         title: "Quality Systems",
         icon: ShieldCheck,
+        link: "/services/iso-13485-implementation-certification-consulting" as const,
         items: [
             "ISO 13485 Implementation",
             "MDSAP Support",
@@ -136,6 +144,7 @@ const expertise = [
     {
         title: "Product & Market Access",
         icon: TrendingUp,
+        link: "/services/global-market-access-consulting-medical-devices" as const,
         items: [
             "Design Controls",
             "ISO 14971 Risk Management",
@@ -149,6 +158,7 @@ const expertise = [
     {
         title: "Cosmetics",
         icon: FlaskConical,
+        link: "/industries/cosmetics" as const,
         items: [
             "Regulatory Assessment",
             "Product Compliance",
@@ -264,6 +274,12 @@ const clientPartners = [
     { name: "Pfizer", subtitle: "Pfizer Pharmaceuticals", badge: "Global Pharma", logo: logoPfizer },
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
     { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
+    { name: "TCS", subtitle: "Tata Consultancy Services", badge: "Life Sciences & Tech", logo: logoTcs },
+    { name: "ISO 9001:2015", subtitle: "Quality Management Certified", badge: "QMS Certified", logo: logoIso9001 },
+    { name: "UNGM", subtitle: "United Nations Global Marketplace", badge: "UN Procurement", logo: logoUngm },
+    { name: "FIEO", subtitle: "Federation of Indian Export Organisations", badge: "Govt. of India / ISO 9001", logo: logoFieo },
+    { name: "ASQ", subtitle: "American Society for Quality™", badge: "Quality & Standards", logo: logoAsq },
+    { name: "Dun & Bradstreet", subtitle: "D-U-N-S® Registered™", badge: "Verified Business", logo: logoDuns },
 ];
 
 const trustCredentials = [
@@ -441,36 +457,79 @@ function Index() {
     }, [isHovered]);
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ProfessionalService",
+                        "name": "NKB Regovanta",
+                        "alternateName": "NKB Regovanta Solutions",
+                        "url": "https://www.nkbregovanta.com",
+                        "logo": "https://www.nkbregovanta.com/og-image.png",
+                        "image": "https://www.nkbregovanta.com/og-image.png",
+                        "description": "Global regulatory consulting firm specialising in medical device registration, IVD compliance, pharmaceutical licensing, and ISO 13485 quality management across India (CDSCO), USA (FDA), EU (MDR/IVDR), UK (MHRA), and international markets.",
+                        "serviceType": [
+                            "Medical Device Regulatory Consulting",
+                            "FDA 510(k) Submission",
+                            "CDSCO Medical Device Licensing",
+                            "EU MDR CE Marking",
+                            "ISO 13485 QMS Implementation",
+                            "MDSAP Audit Readiness"
+                        ],
+                        "areaServed": ["India", "United States", "European Union", "United Kingdom", "Canada", "Australia", "Brazil", "Saudi Arabia", "UAE"],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressCountry": "IN"
+                        }
+                    })
+                }}
+            />
             {/* ── HERO ── */}
             <section className="bg-gradient-to-r from-white via-blue-50/60 to-blue-200/80 overflow-hidden pb-2 lg:pb-2 pt-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start pt-0">
 
                         {/* Left column — content, restoring top padding since it was fine */}
-                        <div className="max-w-xl pt-6 lg:pt-10">
+                        <div className="max-w-2xl pt-6 lg:pt-10">
                             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-navy/70 mb-3">
                                 Regulatory. Quality. Manufacturing. Market Access.
                             </p>
 
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
-                                Medical Device &amp; IVD Regulatory Consulting
+                                Global Medical Device Regulatory &amp; Market Access Consulting
                             </h1>
-                            <p className="mt-2 text-[17px] sm:text-[18px] font-semibold text-blue-700 leading-snug">
-                                From First Idea to Global Market Access
+                            <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal">
+                                Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing
+                            </p>
+                            <p className="mt-1.5 text-[13px] sm:text-[14.5px] md:text-[15.5px] lg:text-[14.5px] xl:text-[16px] font-bold text-blue-700 leading-snug">
+                                From First Idea to Global Market Access.
                             </p>
 
                             <p className="mt-4 text-[14px] sm:text-[14.5px] font-medium text-navy/80 leading-relaxed">
-                                Boutique regulatory, quality, testing, manufacturing and market-access support for Medical Devices, IVDs, Pharmaceuticals and Cosmetics across India and global markets.
+                                NKB Regovanta is a premier global <strong>medical device consultant</strong> and regulatory affairs <strong>consultancy</strong>. We provide end-to-end regulatory strategy, testing coordination, technical documentation, and market access for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics across India (CDSCO), the United States (USFDA 510 k / 510k), and international markets.
                             </p>
                             <p className="mt-3 text-[13px] leading-relaxed text-navy/65 font-medium">
-                                We support manufacturers with regulatory strategy, product registration, technical documentation, QMS readiness, testing strategy, manufacturing solutions and market entry across CDSCO, US FDA, EU MDR/IVDR, Brazil ANVISA and other international regulatory pathways.
+                                As a trusted medical device consultancy, our senior consultants support manufacturers with USFDA 510(k) clearances, eSTAR submissions, CDSCO manufacturing &amp; import licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS certification.
                             </p>
 
                             {/* Regulatory Authorities Strip */}
                             <div className="mt-4 flex flex-wrap gap-x-2 gap-y-1 items-center">
-                                {["CDSCO", "US FDA 510(k), De Novo & PMA", "EU MDR", "EU IVDR", "UK MHRA", "Health Canada", "TGA", "ANVISA", "SFDA", "MOHAP"].map((auth, i, arr) => (
-                                    <span key={auth} className="flex items-center gap-x-2">
-                                        <span className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{auth}</span>
+                                {([
+                                    { label: "CDSCO India", to: "/services/india" },
+                                    { label: "USFDA 510(k)", to: "/services/usa" },
+                                    { label: "US FDA De Novo & PMA", to: "/services/usa" },
+                                    { label: "EU MDR", to: "/services/eu" },
+                                    { label: "EU IVDR", to: "/services/eu" },
+                                    { label: "UK MHRA", to: "/services/uk" },
+                                    { label: "Health Canada", to: "/services/canada" },
+                                    { label: "TGA", to: "/services/australia" },
+                                    { label: "ANVISA", to: "/services/brazil" },
+                                    { label: "SFDA", to: "/services/saudi-arabia" },
+                                    { label: "MOHAP", to: "/services/uae" },
+                                ] as const).map(({ label, to }, i, arr) => (
+                                    <span key={label} className="flex items-center gap-x-2">
+                                        <Link to={to} className="text-[10.5px] font-bold text-navy/70 hover:text-[#0b3a96] transition-colors">{label}</Link>
                                         {i < arr.length - 1 && <span className="text-navy/25 text-[10px]">|</span>}
                                     </span>
                                 ))}
@@ -490,7 +549,7 @@ function Index() {
                                     Explore Our Services <ArrowRight className="h-3.5 w-3.5" />
                                 </Link>
                                 <Link
-                                    to="/services/manufacturing"
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
                                     className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white px-4.5 py-2.5 text-[12.5px] font-semibold transition-all shadow-2xs hover:shadow-xs rounded-[2px]"
                                 >
                                     Manufacturing Solutions <ArrowRight className="h-3.5 w-3.5" />
@@ -502,6 +561,9 @@ function Index() {
                         <div className="flex justify-center lg:justify-end mt-2 lg:mt-8">
                             <img
                                 src={heroImage}
+                                width={612}
+                                height={408}
+                                fetchPriority="high"
                                 alt="Global regulatory compliance for medical devices"
                                 className="w-full max-w-[580px] object-contain"
                             />
@@ -618,7 +680,7 @@ function Index() {
                         {/* Projects Completed */}
                         <div className="flex flex-col items-center text-center p-6 xl:p-8">
                             <CheckCircle className="h-8 w-8 stroke-[1.5] text-blue-300 mb-4" />
-                            <p className="text-[26px] font-bold leading-none mb-2">151+</p>
+                            <p className="text-[26px] font-bold leading-none mb-2">350+</p>
                             <p className="text-[10px] uppercase tracking-widest text-white/60 font-semibold mb-1">Completed</p>
                             <p className="text-[12px] opacity-80 leading-snug">Regulatory &amp; Quality<br/>Projects</p>
                         </div>
@@ -695,7 +757,7 @@ function Index() {
 
                                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
                                     <Link
-                                        to="/services"
+                                        to={e.link}
                                         className="text-xs font-bold text-[#0b3a96] group-hover:text-[#082b70] inline-flex items-center gap-1 transition-colors"
                                     >
                                         Learn More <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
@@ -720,7 +782,7 @@ function Index() {
             <section className="py-6 sm:py-10 bg-surface/30 border-b border-border/40">
                 <div className="mx-auto max-w-[1540px] px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-3xl border border-gray-200/90 p-5 sm:p-8 lg:p-10 shadow-xs">
-                        
+
                         {/* Header with Title + CTA Button */}
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-gray-100">
                             <div className="max-w-3xl">
@@ -736,7 +798,7 @@ function Index() {
                             </div>
                             <div>
                                 <Link
-                                    to="/services/manufacturing"
+                                    to="/services/pharmaceutical-cleanroom-manufacturing-equipment"
                                     className="inline-flex items-center gap-2 bg-[#1b7941] hover:bg-[#156334] text-white font-bold text-xs sm:text-[13.5px] px-6 py-3 rounded-md shadow-sm transition-all hover:shadow-md shrink-0 group whitespace-nowrap"
                                 >
                                     Explore Manufacturing Solutions
@@ -755,6 +817,8 @@ function Index() {
                                     <div className="h-44 sm:h-48 w-full overflow-hidden bg-slate-100 relative">
                                         <img
                                             src={sol.image}
+                                            loading="lazy"
+                                            decoding="async"
                                             alt={sol.title}
                                             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                         />
@@ -832,7 +896,7 @@ function Index() {
                     </div>
 
                     {/* Client Cards Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
                         {clientPartners.map((client) => (
                             <div
                                 key={client.name}
@@ -841,6 +905,8 @@ function Index() {
                                 <div className="h-20 w-full rounded-xl bg-white border border-gray-100/90 shadow-2xs flex items-center justify-center p-3 mb-4 group-hover:shadow-xs group-hover:scale-[1.03] transition-all duration-300">
                                     <img
                                         src={client.logo}
+                                            loading="lazy"
+                                            decoding="async"
                                         alt={client.name}
                                         className="max-h-14 max-w-[90%] object-contain"
                                     />
@@ -878,15 +944,15 @@ function Index() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header with Navigation Controls */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-                        <div className="max-w-2xl">
+                        <div className="flex-1 max-w-4xl">
                             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/10 text-amber-900 border border-amber-500/20 mb-3 shadow-2xs">
                                 <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
                                 Client Testimonials &amp; Endorsements
                             </span>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1">
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy tracking-tight mt-1 lg:whitespace-nowrap">
                                 What Industry Leaders Say About Us
                             </h2>
-                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed">
+                            <p className="mt-2.5 text-sm sm:text-base text-gray-600 font-medium leading-relaxed max-w-2xl">
                                 Direct feedback from pharmaceutical executives, enterprise life-science leaders, and medical device innovators who trust NKB Regovanta for regulatory clearance, QMS readiness, and market access.
                             </p>
                         </div>
@@ -969,7 +1035,7 @@ function Index() {
                                             </div>
                                             <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full shadow-2xs">
                                                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                                                Verified Executive Endorsement
+                                                Client Testimonial
                                             </span>
                                         </div>
 
@@ -997,6 +1063,8 @@ function Index() {
                                             <div className="h-14 w-14 rounded-2xl bg-white border border-gray-200 shadow-2xs p-2 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 transition-all duration-300">
                                                 <img
                                                     src={t.logo}
+                                            loading="lazy"
+                                            decoding="async"
                                                     alt={t.company}
                                                     className="max-h-10 max-w-full object-contain"
                                                 />
@@ -1062,7 +1130,7 @@ function Index() {
                             <div className="text-center lg:text-left">
                                 <div className="inline-flex items-center gap-2 text-[#dca85b] text-xs font-black uppercase tracking-wider mb-2">
                                     <ShieldCheck className="h-4 w-4 text-[#dca85b]" />
-                                    <span>Experience Since 2018 · 151+ Projects Completed</span>
+                                    <span>Experience Since 2018 · 350+ Projects Completed</span>
                                 </div>
                                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                                     Ready to Experience the Same High Standard of Regulatory Support?

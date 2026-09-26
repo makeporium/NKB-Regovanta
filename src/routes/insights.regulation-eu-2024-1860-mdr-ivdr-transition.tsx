@@ -1,0 +1,28 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OriginalArticle } from "@/components/site/OriginalArticle";
+import article from "@/content/articles/regulation-eu-2024-1860-mdr-ivdr-transition.json";
+
+export const Route = createFileRoute("/insights/regulation-eu-2024-1860-mdr-ivdr-transition")({
+  head: () => ({
+    meta: [
+      { title: "EU IVDR Transition Eligibility Guide | NKB Regovanta" },
+      { name: "description", content: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates." },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "EU IVDR Transition Eligibility Guide | NKB Regovanta" },
+      { property: "og:description", content: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates." },
+      { property: "og:url", content: "https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/assets/insights/laptop_regulatory_search.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU IVDR Transition Eligibility Guide | NKB Regovanta" },
+      { name: "twitter:description", content: "Assess IVDR legacy-device transition eligibility, application milestones, change restrictions, and evidence before relying on extended dates." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/assets/insights/laptop_regulatory_search.jpg" }
+    ],
+    links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition" }],
+  }),
+  component: ArticlePage,
+});
+
+function ArticlePage() {
+  return <OriginalArticle article={article} />;
+}

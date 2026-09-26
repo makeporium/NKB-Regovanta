@@ -1,0 +1,72 @@
+class="elementor-element elementor-element-232afc4 elementor-widget elementor-widget-theme-post-content" data-id="232afc4" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+
+## Classifying a Class III Medical Device Under US FDA Regulations
+
+For Classifying a Class III Medical Device, the FDA established certain regulatory controls in the form of general controls and special controls. The classification of medical devices (Class I, Class II or Class III) will determine the type of regulatory controls the FDA imposes to ensure the device’s safety and effectiveness before being placed into commercial distribution in the US.
+
+When it comes to medical device classification per FDA requirements, it essentially comes down to the level of benefit and risk posed by the product and the level of control needed to ensure adequate safety. Class I devices present minimal harm to the patient and are generally simple in design, while class II poses a higher degree of risk. Classifying a Class III Medical Device applies to the high-risk types of medical devices that are deemed very important to health or sustaining life.
+
+					FDA 510 k Clearance & Premarket Approval for Medical Device
+
+NKB Regovanta is FDA 510(k) process consultant helps the clients to register SBU (Small Business Unit), if applicable. Take out the testing requirement of the product, creation of the dossier, resolving the queries and after completion of all the activities.
+
+More specifically, Classifying a Class III Medical Device are those for which general and special controls alone are not sufficient to establish safety and efficacy. These devices fall under one of three categories: Used in supporting or sustaining human life. 
+
+					Talk to our medical device experts
+
+Of substantial importance in preventing impairment of human health. Present a potential unreasonable risk of illness or injury.
+
+Classifying a Class III Medical Device follows rigorous controls, most of which require a Premarket Approval (PMA) submission or De Novo. In order to classify a medical device as a class III, the manufacturer needs to undergo a rigorous PMA process that generally involves clinical trials and data collection.
+
+The only exceptions to the PMA process within Class III are devices with a substantial equivalent. You can determine whether a Class III device can be marketed with a 510(k) by searching the FDA Premarket Approval (PMA) database and the 510(k) Premarket Notification database. De Novo comes into play in the case of a low to medium risk novel device for which there is no legally marketed predicate device. These devices are automatically designated a class III, regardless of risk level. Through the De Novo, the FDA offers an alternate pathway to classify a medical device down to a class I or class II. Once the device is down-classified and approved via the De Novo pathway, it can be used as a predicate for subsequent submissions.
+
+* Regardless of the specific Classifying a Class III Medical Device, if clinical data is required for clearance or approval, the clinical investigation must be conducted one of two ways:
+* If it poses a Significant Risk (SR), it must follow the FDA’s Investigational Device Exemption (IDE) protocol
+* If it does not pose a significant risk, it will go before an Investigational Review Board
+
+* Examples of the types of medical devices that fall under class III include:
+* Cochlear implants
+* Implantable pacemaker pulse-generator
+* Renal stents
+* Wearable automated external defibrillators
+* High frequency ventilators
+
+For Classifying a Class III Medical Device, the manufacturer will undergo the highest level of FDA scrutiny and associated costs. The majority of devices are considered a class I or class II, with only 10% receiving the class III designation.
+
+* Knowing how your medical device is classified matters for the following reasons:
+* Product classification will determine what you have to do before you can sell your product.
+* Product classification will help you establish requirements during the product development phase, specifically design controls.
+* Product classification is an important component in determining how much it will cost to bring your device to market and give you some idea of how long it will take.								
+				
+					Class III Medical Devices
+
+* In that class, all medical devices have the highest risk possible, and permanent monitoring is required during their lifetime.
+* There are specialized institutions responsible for conducting the products’ monitoring.
+* Such devices are, for instance, cardiovascular catheters, aneurysm clips, hip-joint implants, prosthetic heart valves, and others.
+* Here, and also in class II, the conformity assessment of the medical devices may include an audit of the technical documentation and a quality system/product inspection, and to be focused on one or more aspects of the device design and production.
+
+Class III medical devices are those devices that have a high risk to the patient and/or user. These devices usually sustain or support life, are implanted, or present potential unreasonable risk of illness or injury. They represent 10% of medical devices regulated by the FDA. Examples of Class III devices include implantable pacemakers and breast implants.
+
+## Categories
+
+					CDSCO Category
+
+	Medical device Manufacturing
+
+	News/Updates
+
+	QMS
+
+	Regulatory
+
+	Turnkey Project Management
+
+	US FDA
+
+					Subscribe Newsletter
+
+## Recent Posts
+
+				Predetermined Change Control Plan (PCCP) for SaMD: FDA Requirements			
+
+			Read More »

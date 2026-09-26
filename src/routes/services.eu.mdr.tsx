@@ -37,29 +37,26 @@ export const Route = createFileRoute("/services/eu/mdr")({
   head: () => ({
     meta: [
       {
-        title:
-          "EU MDR 2017/745 Regulatory Consulting for Medical Devices | CE Marking & CER | NKB Regovanta",
+        title: "EU MDR Compliance & CE Marking | NKB Regovanta",
       },
       {
         name: "description",
-        content:
-          "Specialized EU MDR 2017/745 regulatory consulting for Medical Devices across Class I, IIa, IIb, and III. Technical Documentation (Annex II/III), GSPR, Clinical Evaluation (CER), PMCF, Notified Body review defense, and CE marking.",
-      },
-      {
-        name: "keywords",
-        content:
-          "EU MDR 2017/745 consultant, Medical Device Regulation Europe, MDR Technical Documentation, GSPR checklist, Clinical Evaluation Report CER, PMCF plan, Notified Body review, CE marking medical devices, NKB Regovanta",
+        content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking.",
       },
       {
         property: "og:title",
-        content: "EU MDR 2017/745 Regulatory Consulting for Medical Devices | NKB Regovanta",
+        content: "EU MDR Compliance & CE Marking | NKB Regovanta",
       },
       {
         property: "og:description",
-        content:
-          "End-to-end EU MDR 2017/745 compliance support from classification and testing to Notified Body defense and CE certification.",
+        content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking.",
       },
       { property: "og:url", content: "https://www.nkbregovanta.com/services/eu/mdr" },
+      { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "EU MDR Compliance & CE Marking | NKB Regovanta" },
+      { name: "twitter:description", content: "Specialized EU MDR 2017/745 regulatory consulting: Technical Documentation (Annex II/III), GSPR, CER, PMCF, Notified Body defense, and CE marking." },
+      { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://www.nkbregovanta.com/services/eu/mdr" }],
   }),
@@ -86,7 +83,7 @@ const mdrCards = [
       "Notified Body involvement planning",
       "Borderline & combination product considerations",
     ],
-    to: "/services/eu/classification",
+    to: "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
   },
   {
     icon: FileText,
@@ -121,7 +118,7 @@ const mdrCards = [
       "Usability (IEC 62366), Packaging & Shelf life",
       "Bench & mechanical performance testing",
     ],
-    to: "/services/eu/testing-strategy",
+    to: "/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
   },
   {
     icon: Activity,
@@ -133,7 +130,7 @@ const mdrCards = [
       "Equivalence assessment across tech/bio/clinical",
       "Clinical evidence gap analysis & sufficiency",
     ],
-    to: "/services/eu/clinical-evaluation",
+    to: "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
   },
   {
     icon: Shield,
@@ -144,7 +141,7 @@ const mdrCards = [
       "PMCF user survey & registry strategy",
       "Post-market clinical data collection governance",
     ],
-    to: "/services/eu/pms-pmcf",
+    to: "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
   },
   {
     icon: Building2,
@@ -179,7 +176,7 @@ const mdrCards = [
       "Vigilance & serious incident trend reporting",
       "Field Safety Corrective Action (FSCA) support",
     ],
-    to: "/services/eu/pms-pmcf",
+    to: "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
   },
   {
     icon: Database,
@@ -190,7 +187,7 @@ const mdrCards = [
       "EC REP, Importer, Distributor mandates",
       "UDI-DI & Basic UDI-DI management",
     ],
-    to: "/services/eu/eudamed",
+    to: "/services/eu/eudamed-udi-and-economic-operator-compliance",
   },
   {
     icon: RefreshCw,
@@ -327,7 +324,7 @@ function EUMDRPage() {
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-[#0e2a54] to-[#081832] p-4 text-center">
-                <img
+                <img width={113} height={118}
                   src={euMdrDeviceImg}
                   alt="EU MDR Medical Device Technology"
                   className="w-48 h-48 mx-auto object-contain mb-3 drop-shadow-xl"
@@ -506,6 +503,17 @@ function EUMDRPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-slate-50 border-b border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-extrabold text-navy mb-3">Primary regulatory references</h2>
+          <p className="text-sm leading-relaxed text-navy/75 max-w-4xl">Requirements and transition conditions must be assessed against the current legislation and European Commission guidance for the specific device and economic operator.</p>
+          <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-navy/75">
+            <li><a className="underline" href="https://health.ec.europa.eu/medical-devices-sector/new-regulations_en">European Commission: Medical Devices Regulation (EU) 2017/745</a></li>
+            <li><a className="underline" href="https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en">European Commission: EUDAMED mandatory modules from 28 May 2026</a></li>
+          </ul>
         </div>
       </section>
 
