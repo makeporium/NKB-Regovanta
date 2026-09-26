@@ -393,5 +393,11 @@ article li a:hover,
   color: #334155 !important;
 }
 
-
-
+/* Hide scrollbar for Chrome, Safari, Opera, Edge and Firefox */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

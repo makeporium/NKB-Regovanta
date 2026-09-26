@@ -56,11 +56,6 @@ import logoKusum from "@/assets/clients/kusum.png";
 import logoTcs from "@/assets/clients/tcs.png";
 import logoGenpact from "@/assets/clients/genpact.svg";
 import logoWipro from "@/assets/clients/wipro.svg";
-import logoIso9001 from "@/assets/clients/iso-9001.png";
-import logoUngm from "@/assets/clients/ungm.png";
-import logoFieo from "@/assets/clients/fieo.png";
-import logoAsq from "@/assets/clients/asq.png";
-import logoDuns from "@/assets/clients/duns.png";
 
 // Trust & Credential Logos
 import logoTrustIso from "@/assets/trust/iso-9001.svg";
@@ -275,43 +270,48 @@ const clientPartners = [
     { name: "भा. प्र. सं. इन्दौर IIM INDORE", subtitle: "सिद्धिर्मूलं प्रबन्धनम्", badge: "Institutions", logo: logoIimIndore },
     { name: "Kusum Healthcare", subtitle: "Kusum Healthcare Pvt. Ltd.", badge: "Pharmaceuticals", logo: logoKusum },
     { name: "TCS", subtitle: "Tata Consultancy Services", badge: "Life Sciences & Tech", logo: logoTcs },
-    { name: "ISO 9001:2015", subtitle: "Quality Management Certified", badge: "QMS Certified", logo: logoIso9001 },
-    { name: "UNGM", subtitle: "United Nations Global Marketplace", badge: "UN Procurement", logo: logoUngm },
-    { name: "FIEO", subtitle: "Federation of Indian Export Organisations", badge: "Govt. of India / ISO 9001", logo: logoFieo },
-    { name: "ASQ", subtitle: "American Society for Quality™", badge: "Quality & Standards", logo: logoAsq },
-    { name: "Dun & Bradstreet", subtitle: "D-U-N-S® Registered™", badge: "Verified Business", logo: logoDuns },
 ];
 
 const trustCredentials = [
     {
         name: "ISO 9001:2015",
+        subtitle: "Quality Management Certified",
+        badge: "QMS CERTIFIED",
         logo: logoTrustIso,
         alt: "ISO 9001:2015 quality management certification",
-        imgClass: "h-7 sm:h-11 md:h-13 lg:h-16 w-auto max-w-[90%] max-h-[85%] object-contain select-none transition-transform duration-300 group-hover:scale-105",
+        imgClass: "max-h-12 max-w-[85%] object-contain",
     },
     {
-        name: "United Nations Global Marketplace (UNGM)",
+        name: "UNGM",
+        subtitle: "United Nations Global Marketplace",
+        badge: "UN PROCUREMENT",
         logo: logoTrustUngm,
         alt: "United Nations Global Marketplace (UNGM) logo",
-        imgClass: "h-5 sm:h-8 md:h-9.5 lg:h-12 w-auto max-w-[94%] max-h-[85%] object-contain select-none transition-transform duration-300 group-hover:scale-105",
+        imgClass: "max-h-10 max-w-[90%] object-contain",
     },
     {
-        name: "Federation of Indian Export Organisations (FIEO)",
+        name: "FIEO",
+        subtitle: "Federation of Indian Export Organisations",
+        badge: "GOVT. OF INDIA / ISO 9001",
         logo: logoTrustFieo,
         alt: "Federation of Indian Export Organisations (FIEO) logo",
-        imgClass: "h-5 sm:h-8.5 md:h-10 lg:h-13 w-auto max-w-[94%] max-h-[85%] object-contain select-none transition-transform duration-300 group-hover:scale-105",
+        imgClass: "max-h-10 max-w-[90%] object-contain",
     },
     {
-        name: "American Society for Quality (ASQ)",
+        name: "ASQ",
+        subtitle: "American Society for Quality™",
+        badge: "QUALITY & STANDARDS",
         logo: logoTrustAsq,
         alt: "American Society for Quality (ASQ) logo",
-        imgClass: "h-4.5 sm:h-7.5 md:h-9 lg:h-11 w-auto max-w-[94%] max-h-[85%] object-contain select-none transition-transform duration-300 group-hover:scale-105",
+        imgClass: "max-h-9 max-w-[90%] object-contain",
     },
     {
         name: "Dun & Bradstreet",
+        subtitle: "D-U-N-S® Registered™",
+        badge: "VERIFIED BUSINESS",
         logo: logoTrustDnb,
         alt: "Dun & Bradstreet business verification logo",
-        imgClass: "h-7 sm:h-11 md:h-13 lg:h-16 w-auto max-w-[90%] max-h-[85%] object-contain select-none transition-transform duration-300 group-hover:scale-105",
+        imgClass: "max-h-12 max-w-[85%] object-contain",
     },
 ];
 
@@ -580,8 +580,8 @@ function Index() {
                 {/* Subtle warm golden ambient glow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#dca85b]/5 rounded-full blur-3xl pointer-events-none -z-0" />
 
-                <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center">
+                <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center mb-8 sm:mb-10 lg:mb-12">
                         <h2
                             id="our-trust-heading"
                             className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-center bg-gradient-to-r from-[#8e5d16] via-[#dca85b] to-[#8e5d16] bg-clip-text text-transparent inline-block drop-shadow-xs"
@@ -591,18 +591,32 @@ function Index() {
                         <div className="w-12 h-0.5 bg-gradient-to-r from-[#8e5d16] via-[#dca85b] to-[#8e5d16] mx-auto mt-2.5 rounded-full" />
                     </div>
 
-                    <div className="mt-6 sm:mt-8 lg:mt-12 grid grid-cols-5 gap-1.5 sm:gap-3 md:gap-4 lg:gap-6 max-w-6xl mx-auto items-stretch">
+                    <div className="flex overflow-x-auto no-scrollbar pb-3 pt-1 px-1 sm:px-0 gap-3.5 sm:gap-4 md:grid md:grid-cols-5 md:overflow-visible items-stretch scroll-smooth snap-x snap-mandatory max-w-6xl mx-auto">
                         {trustCredentials.map((item) => (
                             <div
                                 key={item.name}
-                                className="min-w-0 flex items-center justify-center p-1 sm:p-2.5 md:p-3 lg:p-4 h-15 sm:h-22 md:h-26 lg:h-32 rounded-lg sm:rounded-xl md:rounded-2xl bg-white border border-gray-200/90 shadow-2xs hover:shadow-lg hover:border-[#dca85b]/60 hover:-translate-y-1 transition-all duration-300 group"
+                                className="w-[205px] sm:w-[220px] md:w-auto shrink-0 md:shrink snap-center bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 p-4 sm:p-5 flex flex-col items-center justify-between text-center shadow-2xs hover:shadow-lg hover:border-[#dca85b]/60 hover:-translate-y-0.5 transition-all duration-300 group"
                             >
-                                <img
-                                    src={item.logo}
-                                    alt={item.alt}
-                                    className={item.imgClass}
-                                    loading="lazy"
-                                />
+                                <div className="h-18 sm:h-22 w-full rounded-xl bg-white border border-gray-100/90 shadow-2xs flex items-center justify-center p-2.5 sm:p-3 mb-3.5 group-hover:shadow-xs group-hover:scale-[1.03] transition-all duration-300">
+                                    <img
+                                        src={item.logo}
+                                        alt={item.alt}
+                                        className={item.imgClass}
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </div>
+                                <div className="flex-1 flex flex-col items-center justify-center w-full">
+                                    <h3 className="text-[13.5px] sm:text-[14.5px] font-extrabold text-navy leading-tight group-hover:text-[#0b3a96] transition-colors">
+                                        {item.name}
+                                    </h3>
+                                    <p className="text-[11px] sm:text-[11.5px] text-gray-500 font-medium mt-1 leading-snug min-h-[32px] flex items-center justify-center">
+                                        {item.subtitle}
+                                    </p>
+                                </div>
+                                <span className="mt-3 inline-block text-[9px] sm:text-[9.5px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700">
+                                    {item.badge}
+                                </span>
                             </div>
                         ))}
                     </div>
