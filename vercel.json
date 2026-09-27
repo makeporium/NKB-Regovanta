@@ -858,8 +858,22 @@
         },
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
+          "value": "no-store, max-age=0, must-revalidate"
         }
+      ]
+    },
+    {
+      "source": "/sitemap-pages.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=UTF-8" },
+        { "key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/sitemap-posts.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=UTF-8" },
+        { "key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate" }
       ]
     }
   ]

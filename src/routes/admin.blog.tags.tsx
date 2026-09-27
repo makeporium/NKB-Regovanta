@@ -68,7 +68,7 @@ function BlogTagsPage() {
       toast.error(error.message);
     } else {
       setTags((prev) => prev.map((item) => (item.id === t.id ? { ...item, allow_indexing: nextVal } : item)));
-      toast.success(`Tag indexing ${nextVal ? "allowed" : "blocked (noindex)"}.`);
+      toast.success(`Tag indexing preference ${nextVal ? "allowed" : "blocked"}. This applies when a public tag archive is implemented.`);
     }
   };
 

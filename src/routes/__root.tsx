@@ -19,6 +19,7 @@ import { Toaster } from "../components/ui/sonner";
 import { toast } from "sonner";
 import { WifiOff } from "lucide-react";
 import { supabase } from "../lib/supabase";
+import { settingsService } from "../lib/services/settingsService";
 
 function NotFoundComponent() {
   return (
@@ -93,7 +94,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  loader: () => settingsService.getAll(),
+  head: ({ loaderData }) => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -116,6 +118,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
       { name: "theme-color", content: "#0b3a96" },
       { property: "og:site_name", content: "NKB Regovanta" },
+      ...(loaderData?.search_console_tag
+        ? [{ name: "google-site-verification", content: loaderData.search_console_tag }]
+        : []),
       { property: "og:title", content: "NKB Regovanta — Regulatory, Quality & Global Market Access" },
       {
         property: "og:description",
@@ -246,32 +251,31 @@ const structuredDataGraph = {
 };
 
 function RootShell({ children }: { children: ReactNode }) {
+  const settings = Route.useLoaderData();
+  const gtmId = /^GTM-[A-Z0-9]+$/i.test(settings.gtm_container_id) ? settings.gtm_container_id : "";
+  const ga4Id = /^G-[A-Z0-9]+$/i.test(settings.ga4_measurement_id) ? settings.ga4_measurement_id : "";
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
-        <script
+        {gtmId && <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PXGJHBKJ');`,
+ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+ 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',${JSON.stringify(gtmId)});`,
           }}
-        />
-        {/* End Google Tag Manager */}
+        />}
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLQ56M50KG" />
-        <script
+        {ga4Id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4Id)}`} />}
+        {ga4Id && <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-BLQ56M50KG');`,
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+gtag('config', ${JSON.stringify(ga4Id)});`,
           }}
-        />
-        {/* End Google tag (gtag.js) */}
+        />}
 
         <HeadContent />
         <script
@@ -285,16 +289,14 @@ gtag('config', 'G-BLQ56M50KG');`,
         />
       </head>
       <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
+        {gtmId && <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PXGJHBKJ"
+            src={`https://www.googletagmanager.com/ns.html?id=${encodeURIComponent(gtmId)}`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        </noscript>}
         {children}
         <Scripts />
       </body>
@@ -311,11 +313,18 @@ function ClientSeoManager() {
     const cleanPath = pathname.replace(/\/$/, "") || "/";
     async function loadSeo() {
       try {
-        const { data } = await supabase
-          .from("seo_meta")
-          .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description")
-          .eq("target_url", cleanPath)
-          .maybeSingle();
+        const [{ data }, { data: schema }] = await Promise.all([
+          supabase
+            .from("seo_meta")
+            .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description, robots_index, robots_follow")
+            .eq("target_url", cleanPath)
+            .maybeSingle(),
+          supabase
+            .from("schema_data")
+            .select("custom_json, is_enabled")
+            .eq("target_url", cleanPath)
+            .maybeSingle(),
+        ]);
 
         const targetCanonical = data?.canonical_url || `https://www.nkbregovanta.com${cleanPath}`;
         let canonicalEl = document.querySelector('link[rel="canonical"]');
@@ -327,6 +336,11 @@ function ClientSeoManager() {
         canonicalEl.setAttribute("href", targetCanonical);
 
         if (!data) return;
+
+        const robotsMeta = document.querySelector('meta[name="robots"]');
+        if (robotsMeta && data.robots_index && data.robots_follow) {
+          robotsMeta.setAttribute("content", `${data.robots_index}, ${data.robots_follow}`);
+        }
 
         if (data.seo_title) {
           document.title = data.seo_title;
@@ -365,6 +379,17 @@ function ClientSeoManager() {
           if (twDesc) {
             twDesc.setAttribute("content", data.twitter_description || data.meta_description);
           }
+        }
+
+        document.getElementById("admin-managed-schema")?.remove();
+        if (schema?.is_enabled && schema.custom_json) {
+          const raw = String(schema.custom_json).replace(/<script[^>]*>|<\/script>/gi, "").trim();
+          JSON.parse(raw);
+          const script = document.createElement("script");
+          script.id = "admin-managed-schema";
+          script.type = "application/ld+json";
+          script.text = raw;
+          document.head.appendChild(script);
         }
       } catch {
         // Silently continue if Supabase is offline

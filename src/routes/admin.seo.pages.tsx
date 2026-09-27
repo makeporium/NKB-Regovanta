@@ -398,7 +398,7 @@ function PagesSeoManagerPage() {
         toast.success(`301 Redirect created: ${oldUrl} -> ${newUrl}`);
       }
 
-      toast.success("Page SEO metadata saved successfully!");
+      toast.success("SEO metadata saved. Sitemap inclusion updates live; code-backed page URLs and headings require a deployment.");
       setEditingPage(null);
       setShowRedirectPrompt(false);
       loadPages();
@@ -1021,18 +1021,12 @@ function PagesSeoManagerPage() {
                       <label className="block text-xs font-bold text-slate-800">URL Slug</label>
                       <input
                         type="text"
-                        required
+                        disabled
                         value={editingPage.slug}
-                        onChange={(e) =>
-                          setEditingPage({
-                            ...editingPage,
-                            slug: e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, "-"),
-                          })
-                        }
-                        className="mt-1.5 w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-mono text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-slate-200 bg-slate-100 px-3.5 py-2 text-xs font-mono text-slate-500 cursor-not-allowed"
                       />
                       <p className="mt-1 text-[11px] text-slate-500">
-                        Lowercase letters, numbers, and hyphens only.
+                        This is a code-backed route. Change its route file and redirect configuration, then deploy through GitHub.
                       </p>
                     </div>
 
@@ -1058,8 +1052,8 @@ function PagesSeoManagerPage() {
                         }
                         className="mt-1.5 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-800 focus:bg-white focus:border-blue-500 focus:outline-none"
                       >
-                        <option value="published">Published (Live to visitors)</option>
-                        <option value="draft">Draft (Hidden from visitors &amp; sitemap)</option>
+                        <option value="published">Published (eligible for sitemap)</option>
+                        <option value="draft">Draft (excluded from managed sitemap; deployed route remains accessible)</option>
                       </select>
                     </div>
                   </div>

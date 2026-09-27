@@ -1,0 +1,1423 @@
+[
+  {
+    "route": "/",
+    "canonical": "https://www.nkbregovanta.com",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/about",
+    "canonical": "https://www.nkbregovanta.com/about",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/ai-news",
+    "canonical": "https://www.nkbregovanta.com/ai-news",
+    "legacyRoutes": [
+      "/ai_news"
+    ]
+  },
+  {
+    "route": "/case-studies",
+    "canonical": "https://www.nkbregovanta.com/case-studies",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/case-studies/australia-tga-artg-inclusion-case-study",
+    "canonical": "https://www.nkbregovanta.com/case-studies/australia-tga-artg-inclusion-case-study",
+    "legacyRoutes": [
+      "/case-studies/australia-tga"
+    ]
+  },
+  {
+    "route": "/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature",
+    "canonical": "https://www.nkbregovanta.com/case-studies/avoiding-duplicate-simulated-use-work-by-leveraging-an-already-marketed-safety-feature",
+    "legacyRoutes": [
+      "/case-studies/fda-simulated-use"
+    ]
+  },
+  {
+    "route": "/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero",
+    "canonical": "https://www.nkbregovanta.com/case-studies/converting-a-legacy-technical-file-to-mdr-without-rebuilding-everything-from-zero",
+    "legacyRoutes": [
+      "/case-studies/eu-mdr-remediation"
+    ]
+  },
+  {
+    "route": "/case-studies/medical-device-testing-strategy-test-smarter-cover-more",
+    "canonical": "https://www.nkbregovanta.com/case-studies/medical-device-testing-strategy-test-smarter-cover-more",
+    "legacyRoutes": [
+      "/case-studies/test-smarter"
+    ]
+  },
+  {
+    "route": "/case-studies/the-algorithm-can-do-more-should-the-label",
+    "canonical": "https://www.nkbregovanta.com/case-studies/the-algorithm-can-do-more-should-the-label",
+    "legacyRoutes": [
+      "/case-studies/algorithm-claim"
+    ]
+  },
+  {
+    "route": "/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need",
+    "canonical": "https://www.nkbregovanta.com/case-studies/using-predicate-and-material-equivalence-to-avoid-repeating-biocompatibility-testing-without-regulatory-need",
+    "legacyRoutes": [
+      "/case-studies/fda-biocompatibility"
+    ]
+  },
+  {
+    "route": "/contact",
+    "canonical": "https://www.nkbregovanta.com/contact",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries",
+    "canonical": "https://www.nkbregovanta.com/industries",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/cosmetics",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/cosmetics/eu",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/eu",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/cosmetics/india",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/india",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/cosmetics/india/cosmetic-manufacturing-license-in-india",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/india/cosmetic-manufacturing-license-in-india",
+    "legacyRoutes": [
+      "/industries/cosmetics/india/for-manufacturer"
+    ]
+  },
+  {
+    "route": "/industries/cosmetics/india/cosmetics-registration-for-importers-in-india",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/india/cosmetics-registration-for-importers-in-india",
+    "legacyRoutes": [
+      "/industries/cosmetics/india/for-importer"
+    ]
+  },
+  {
+    "route": "/industries/cosmetics/uk",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/uk",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/cosmetics/usa",
+    "canonical": "https://www.nkbregovanta.com/industries/cosmetics/usa",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/ivd",
+    "canonical": "https://www.nkbregovanta.com/industries/ivd",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/ivd/eu",
+    "canonical": "https://www.nkbregovanta.com/industries/ivd/eu",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/ivd/india",
+    "canonical": "https://www.nkbregovanta.com/industries/ivd/india",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/ivd/usa",
+    "canonical": "https://www.nkbregovanta.com/industries/ivd/usa",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/medical-devices",
+    "canonical": "https://www.nkbregovanta.com/industries/medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india",
+    "canonical": "https://www.nkbregovanta.com/industries/medical-devices/india/medical-device-manufacturing-and-loan-licensing-in-india",
+    "legacyRoutes": [
+      "/industries/medical-devices/india/for-manufacturer"
+    ]
+  },
+  {
+    "route": "/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india",
+    "canonical": "https://www.nkbregovanta.com/industries/medical-devices/india/medical-device-regulatory-solutions-for-importers-in-india",
+    "legacyRoutes": [
+      "/industries/medical-devices/india/for-importer"
+    ]
+  },
+  {
+    "route": "/insights",
+    "canonical": "https://www.nkbregovanta.com/insights",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/biological-evaluation-testing-medical-devices-iso-10993",
+    "canonical": "https://www.nkbregovanta.com/insights/biological-evaluation-testing-medical-devices-iso-10993",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/borderline-medical-device-classification-strategy",
+    "canonical": "https://www.nkbregovanta.com/insights/borderline-medical-device-classification-strategy",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/cdsco-medical-device-manufacturing-license-india",
+    "canonical": "https://www.nkbregovanta.com/insights/cdsco-medical-device-manufacturing-license-india",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/cdsco-medical-device-registration-guidelines-india",
+    "canonical": "https://www.nkbregovanta.com/insights/cdsco-medical-device-registration-guidelines-india",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/ce-marking-cardiovascular-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/insights/ce-marking-cardiovascular-medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/ce-marking-digital-health-technologies",
+    "canonical": "https://www.nkbregovanta.com/insights/ce-marking-digital-health-technologies",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/ce-marking-process-medical-devices-eu-mdr",
+    "canonical": "https://www.nkbregovanta.com/insights/ce-marking-process-medical-devices-eu-mdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/class-iii-medical-device-classification-strategy",
+    "canonical": "https://www.nkbregovanta.com/insights/class-iii-medical-device-classification-strategy",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/clinical-evaluation-equivalence-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/insights/clinical-evaluation-equivalence-medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/core-regulations-medical-device-global-compliance",
+    "canonical": "https://www.nkbregovanta.com/insights/core-regulations-medical-device-global-compliance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/dental-scanners-manufacturing-regulatory-standards",
+    "canonical": "https://www.nkbregovanta.com/insights/dental-scanners-manufacturing-regulatory-standards",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/dynamic-risk-management-software-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/insights/dynamic-risk-management-software-medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/effective-capa-system-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/insights/effective-capa-system-medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/eu-ai-act-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/insights/eu-ai-act-medical-devices",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
+    "canonical": "https://www.nkbregovanta.com/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities",
+    "legacyRoutes": [
+      "/insights/eu-mdr-2026"
+    ]
+  },
+  {
+    "route": "/insights/eu-mdr-compliance-challenges",
+    "canonical": "https://www.nkbregovanta.com/insights/eu-mdr-compliance-challenges",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/fda-510k-program-modernization-safety-standards",
+    "canonical": "https://www.nkbregovanta.com/insights/fda-510k-program-modernization-safety-standards",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
+    "canonical": "https://www.nkbregovanta.com/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework",
+    "legacyRoutes": [
+      "/insights/fda-inspections-2026"
+    ]
+  },
+  {
+    "route": "/insights/fda-q-sub-pre-submission-meeting-guide",
+    "canonical": "https://www.nkbregovanta.com/insights/fda-q-sub-pre-submission-meeting-guide",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/fda-qmsr-2026",
+    "canonical": "https://www.nkbregovanta.com/insights/fda-qmsr-2026",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/fda-qmsr-compliance-guide",
+    "canonical": "https://www.nkbregovanta.com/insights/fda-qmsr-compliance-guide",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/gspr-compliance-eu-mdr-ivdr",
+    "canonical": "https://www.nkbregovanta.com/insights/gspr-compliance-eu-mdr-ivdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/gspr-foundation-medical-device-development",
+    "canonical": "https://www.nkbregovanta.com/insights/gspr-foundation-medical-device-development",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/human-factors-engineering-medical-device-design",
+    "canonical": "https://www.nkbregovanta.com/insights/human-factors-engineering-medical-device-design",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/iec-62304-medical-device-software-lifecycle",
+    "canonical": "https://www.nkbregovanta.com/insights/iec-62304-medical-device-software-lifecycle",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/india-mdr-2026-rule-63",
+    "canonical": "https://www.nkbregovanta.com/insights/india-mdr-2026-rule-63",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/ivdr-class-d-verification-notified-bodies",
+    "canonical": "https://www.nkbregovanta.com/insights/ivdr-class-d-verification-notified-bodies",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/medical-device-documentation-compliance-to-evidence",
+    "canonical": "https://www.nkbregovanta.com/insights/medical-device-documentation-compliance-to-evidence",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/notified-body-expectations-eu-mdr-technical-documentation",
+    "canonical": "https://www.nkbregovanta.com/insights/notified-body-expectations-eu-mdr-technical-documentation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/notified-body-selection-conformity-assessment-guide",
+    "canonical": "https://www.nkbregovanta.com/insights/notified-body-selection-conformity-assessment-guide",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/optimal-timing-usfda-510k-submission",
+    "canonical": "https://www.nkbregovanta.com/insights/optimal-timing-usfda-510k-submission",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/overcoming-fda-510k-clearance-barriers",
+    "canonical": "https://www.nkbregovanta.com/insights/overcoming-fda-510k-clearance-barriers",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/qms-documentation-iso-13485-compliance",
+    "canonical": "https://www.nkbregovanta.com/insights/qms-documentation-iso-13485-compliance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/regulation-eu-2024-1860-mdr-ivdr-transition",
+    "canonical": "https://www.nkbregovanta.com/insights/regulation-eu-2024-1860-mdr-ivdr-transition",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/regulatory-compliance-strategy-global-medtech",
+    "canonical": "https://www.nkbregovanta.com/insights/regulatory-compliance-strategy-global-medtech",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/remote-patient-monitoring-devices-regulatory-framework",
+    "canonical": "https://www.nkbregovanta.com/insights/remote-patient-monitoring-devices-regulatory-framework",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/samd-classification-submission-usfda",
+    "canonical": "https://www.nkbregovanta.com/insights/samd-classification-submission-usfda",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/understanding-prrc-eu-mdr-ivdr",
+    "canonical": "https://www.nkbregovanta.com/insights/understanding-prrc-eu-mdr-ivdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/insights/usability-testing-medical-devices-iec-62366",
+    "canonical": "https://www.nkbregovanta.com/insights/usability-testing-medical-devices-iec-62366",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/markets",
+    "canonical": "https://www.nkbregovanta.com/markets",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services",
+    "canonical": "https://www.nkbregovanta.com/services",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/australia",
+    "canonical": "https://www.nkbregovanta.com/services/australia",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/australia/australia-importer-distributor-and-supply-chain-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/australia/australia-importer-distributor-and-supply-chain-compliance",
+    "legacyRoutes": [
+      "/services/australia/supply-chain"
+    ]
+  },
+  {
+    "route": "/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
+    "canonical": "https://www.nkbregovanta.com/services/australia/australia-tga-samd-ai-and-cybersecurity-support",
+    "legacyRoutes": [
+      "/services/australia/software"
+    ]
+  },
+  {
+    "route": "/services/australia/australian-labelling-ifu-and-ausudid-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/australia/australian-labelling-ifu-and-ausudid-compliance",
+    "legacyRoutes": [
+      "/services/australia/labeling"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-application-audit-defense-and-rfi-support",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-application-audit-defense-and-rfi-support",
+    "legacyRoutes": [
+      "/services/australia/tga-audit"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-artg-inclusion-strategy-and-application-preparation",
+    "legacyRoutes": [
+      "/services/australia/artg-inclusion"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-artg-variations-and-significant-change-support",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-artg-variations-and-significant-change-support",
+    "legacyRoutes": [
+      "/services/australia/change-management"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-australian-sponsor-services-and-governance",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-australian-sponsor-services-and-governance",
+    "legacyRoutes": [
+      "/services/australia/australian-sponsor"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-clinical-evidence-and-benefit-risk-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-clinical-evidence-and-benefit-risk-strategy",
+    "legacyRoutes": [
+      "/services/australia/clinical-evidence"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-ivd-regulatory-strategy-and-artg-inclusion",
+    "legacyRoutes": [
+      "/services/australia/ivd"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-manufacturer-evidence-and-conformity-assessment",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-manufacturer-evidence-and-conformity-assessment",
+    "legacyRoutes": [
+      "/services/australia/manufacturer-evidence"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-medical-device-and-ivd-classification",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-medical-device-and-ivd-classification",
+    "legacyRoutes": [
+      "/services/australia/classification"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-post-market-vigilance-mdir-and-recall-management",
+    "legacyRoutes": [
+      "/services/australia/post-market"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-technical-documentation-and-essential-principles",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-technical-documentation-and-essential-principles",
+    "legacyRoutes": [
+      "/services/australia/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
+    "canonical": "https://www.nkbregovanta.com/services/australia/tga-testing-strategy-and-laboratory-coordination-australia",
+    "legacyRoutes": [
+      "/services/australia/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/brazil",
+    "canonical": "https://www.nkbregovanta.com/services/brazil",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-bgmp-and-cbpf-compliance-rdc-665-2022",
+    "legacyRoutes": [
+      "/services/brazil/bgmp"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-changes-variations-and-revalidacao-support",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-changes-variations-and-revalidacao-support",
+    "legacyRoutes": [
+      "/services/brazil/change-management"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-exigencia-and-inspection-response-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-exigencia-and-inspection-response-strategy",
+    "legacyRoutes": [
+      "/services/brazil/anvisa-queries"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-ivd-registration-and-performance-evidence-rdc-830-2023",
+    "legacyRoutes": [
+      "/services/brazil/ivd"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-medical-device-and-ivd-classification-brazil",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-medical-device-and-ivd-classification-brazil",
+    "legacyRoutes": [
+      "/services/brazil/classification"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-notification-and-registration-cadastro-and-registro",
+    "legacyRoutes": [
+      "/services/brazil/registration"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-portuguese-labeling-udi-and-siud-compliance",
+    "legacyRoutes": [
+      "/services/brazil/labeling"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-samd-software-ai-and-cybersecurity-regulatory-consulting",
+    "legacyRoutes": [
+      "/services/brazil/software"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-technical-dossier-and-safety-performance-evidence",
+    "legacyRoutes": [
+      "/services/brazil/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-tecnovigilancia-and-post-market-surveillance",
+    "legacyRoutes": [
+      "/services/brazil/tecnovigilance"
+    ]
+  },
+  {
+    "route": "/services/brazil/anvisa-testing-strategy-and-laboratory-coordination",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/anvisa-testing-strategy-and-laboratory-coordination",
+    "legacyRoutes": [
+      "/services/brazil/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/brazil/brazil-registration-holder-brh-and-anvisa-interface",
+    "canonical": "https://www.nkbregovanta.com/services/brazil/brazil-registration-holder-brh-and-anvisa-interface",
+    "legacyRoutes": [
+      "/services/brazil/brh"
+    ]
+  },
+  {
+    "route": "/services/canada",
+    "canonical": "https://www.nkbregovanta.com/services/canada",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/canada/canada-medical-device-supply-chain-and-importer-compliance",
+    "legacyRoutes": [
+      "/services/canada/supply-chain"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-inspection-readiness-and-defense",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-inspection-readiness-and-defense",
+    "legacyRoutes": [
+      "/services/canada/inspection"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-ivd-registration-and-performance-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-ivd-registration-and-performance-strategy",
+    "legacyRoutes": [
+      "/services/canada/ivd"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-labelling-and-bilingual-ifu-compliance",
+    "legacyRoutes": [
+      "/services/canada/labeling"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-mdl-amendments-and-significant-changes",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-mdl-amendments-and-significant-changes",
+    "legacyRoutes": [
+      "/services/canada/change-management"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-medical-device-and-ivd-classification",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-medical-device-and-ivd-classification",
+    "legacyRoutes": [
+      "/services/canada/classification"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-medical-device-establishment-licence-mdel",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-medical-device-establishment-licence-mdel",
+    "legacyRoutes": [
+      "/services/canada/mdel"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-medical-device-licence-mdl-application",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-medical-device-licence-mdl-application",
+    "legacyRoutes": [
+      "/services/canada/mdl"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-post-market-surveillance-and-mpr",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-post-market-surveillance-and-mpr",
+    "legacyRoutes": [
+      "/services/canada/pms"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-samd-and-cybersecurity-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-samd-and-cybersecurity-compliance",
+    "legacyRoutes": [
+      "/services/canada/software"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-technical-documentation-and-evidence-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-technical-documentation-and-evidence-strategy",
+    "legacyRoutes": [
+      "/services/canada/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
+    "canonical": "https://www.nkbregovanta.com/services/canada/health-canada-testing-strategy-and-laboratory-coordination",
+    "legacyRoutes": [
+      "/services/canada/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
+    "canonical": "https://www.nkbregovanta.com/services/canada/mdsap-canada-and-iso-13485-quality-system-readiness",
+    "legacyRoutes": [
+      "/services/canada/mdsap"
+    ]
+  },
+  {
+    "route": "/services/drug-device-combination-product-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/drug-device-combination-product-consulting",
+    "legacyRoutes": [
+      "/services/drug-device-combination-products"
+    ]
+  },
+  {
+    "route": "/services/drug-licenses-importers-india-form-10-form-41",
+    "canonical": "https://www.nkbregovanta.com/services/drug-licenses-importers-india-form-10-form-41",
+    "legacyRoutes": [
+      "/services/drug-licenses-for-importers"
+    ]
+  },
+  {
+    "route": "/services/eu",
+    "canonical": "https://www.nkbregovanta.com/services/eu",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/article-117",
+    "canonical": "https://www.nkbregovanta.com/services/eu/article-117",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ce-marking",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ce-marking",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/change-assessment",
+    "canonical": "https://www.nkbregovanta.com/services/eu/change-assessment",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/class-d-ivdr",
+    "canonical": "https://www.nkbregovanta.com/services/eu/class-d-ivdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-and-ivdr-labeling-and-ifu-compliance",
+    "legacyRoutes": [
+      "/services/eu/labeling"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-and-ivdr-qms-integration-and-prrc",
+    "legacyRoutes": [
+      "/services/eu/qms"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-and-ivdr-qualification-and-classification",
+    "legacyRoutes": [
+      "/services/eu/classification"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-clinical-evaluation-and-cer-strategy",
+    "legacyRoutes": [
+      "/services/eu/clinical-evaluation"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-mdr-software-and-samd-regulatory-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-software-and-samd-regulatory-consulting",
+    "legacyRoutes": [
+      "/services/eu/software"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-mdr-testing-strategy-and-laboratory-coordination",
+    "legacyRoutes": [
+      "/services/eu/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/eu/eu-notified-body-technical-review-and-deficiency-response",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eu-notified-body-technical-review-and-deficiency-response",
+    "legacyRoutes": [
+      "/services/eu/deficiency-response"
+    ]
+  },
+  {
+    "route": "/services/eu/eudamed-udi-and-economic-operator-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/eu/eudamed-udi-and-economic-operator-compliance",
+    "legacyRoutes": [
+      "/services/eu/eudamed"
+    ]
+  },
+  {
+    "route": "/services/eu/european-authorized-representative-ec-rep-ear-services",
+    "canonical": "https://www.nkbregovanta.com/services/eu/european-authorized-representative-ec-rep-ear-services",
+    "legacyRoutes": [
+      "/services/eu/ear"
+    ]
+  },
+  {
+    "route": "/services/eu/ivdr",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ivdr-analytical-performance",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr-analytical-performance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ivdr-classification",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr-classification",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ivdr-clinical-performance",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr-clinical-performance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ivdr-performance-evaluation",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr-performance-evaluation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/ivdr-pmpf",
+    "canonical": "https://www.nkbregovanta.com/services/eu/ivdr-pmpf",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/mdr",
+    "canonical": "https://www.nkbregovanta.com/services/eu/mdr",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/mdr-ivdr-transition",
+    "canonical": "https://www.nkbregovanta.com/services/eu/mdr-ivdr-transition",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/notified-body",
+    "canonical": "https://www.nkbregovanta.com/services/eu/notified-body",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
+    "canonical": "https://www.nkbregovanta.com/services/eu/post-market-clinical-follow-up-pmcf-strategy-and-execution",
+    "legacyRoutes": [
+      "/services/eu/pms-pmcf"
+    ]
+  },
+  {
+    "route": "/services/eu/technical-documentation",
+    "canonical": "https://www.nkbregovanta.com/services/eu/technical-documentation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/global-market-access-consulting-medical-devices",
+    "canonical": "https://www.nkbregovanta.com/services/global-market-access-consulting-medical-devices",
+    "legacyRoutes": [
+      "/services/market-access"
+    ]
+  },
+  {
+    "route": "/services/global-medical-device-ivd-regulatory-affairs-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/global-medical-device-ivd-regulatory-affairs-consulting",
+    "legacyRoutes": [
+      "/services/regulatory-affairs"
+    ]
+  },
+  {
+    "route": "/services/iec-ad-code-registration-india",
+    "canonical": "https://www.nkbregovanta.com/services/iec-ad-code-registration-india",
+    "legacyRoutes": [
+      "/services/iec-ad-code"
+    ]
+  },
+  {
+    "route": "/services/india",
+    "canonical": "https://www.nkbregovanta.com/services/india",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5",
+    "canonical": "https://www.nkbregovanta.com/services/india/class-a-and-b-manufacturing-forms-md-3-and-md-5",
+    "legacyRoutes": [
+      "/services/india/mfg-class-a-b"
+    ]
+  },
+  {
+    "route": "/services/india/class-a-import-registration-as-per-gsr-777e",
+    "canonical": "https://www.nkbregovanta.com/services/india/class-a-import-registration-as-per-gsr-777e",
+    "legacyRoutes": [
+      "/services/india/class-a-import"
+    ]
+  },
+  {
+    "route": "/services/india/class-a-manufacturing-registration-gsr-777e",
+    "canonical": "https://www.nkbregovanta.com/services/india/class-a-manufacturing-registration-gsr-777e",
+    "legacyRoutes": [
+      "/services/india/mfg-class-a-gsr"
+    ]
+  },
+  {
+    "route": "/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9",
+    "canonical": "https://www.nkbregovanta.com/services/india/class-c-and-d-manufacturing-forms-md-7-and-md-9",
+    "legacyRoutes": [
+      "/services/india/mfg-class-c-d"
+    ]
+  },
+  {
+    "route": "/services/india/free-sale-certificate-fsc",
+    "canonical": "https://www.nkbregovanta.com/services/india/free-sale-certificate-fsc",
+    "legacyRoutes": [
+      "/services/india/free-sale"
+    ]
+  },
+  {
+    "route": "/services/india/import-authorization-for-novel-ivds-md-26-and-md-27",
+    "canonical": "https://www.nkbregovanta.com/services/india/import-authorization-for-novel-ivds-md-26-and-md-27",
+    "legacyRoutes": [
+      "/services/india/novel-ivds"
+    ]
+  },
+  {
+    "route": "/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15",
+    "canonical": "https://www.nkbregovanta.com/services/india/import-license-for-predicate-medical-devices-forms-md-14-md-15",
+    "legacyRoutes": [
+      "/services/india/predicate-devices"
+    ]
+  },
+  {
+    "route": "/services/india/in-vitro-diagnostic-regulatory-services",
+    "canonical": "https://www.nkbregovanta.com/services/india/in-vitro-diagnostic-regulatory-services",
+    "legacyRoutes": [
+      "/services/india/ivd"
+    ]
+  },
+  {
+    "route": "/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19",
+    "canonical": "https://www.nkbregovanta.com/services/india/investigational-devices-in-govt-hospitals-forms-md-18-md-19",
+    "legacyRoutes": [
+      "/services/india/investigational-devices"
+    ]
+  },
+  {
+    "route": "/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25",
+    "canonical": "https://www.nkbregovanta.com/services/india/ivd-clinical-performance-evaluations-forms-md-24-md-25",
+    "legacyRoutes": [
+      "/services/india/ivd-clinical-performance"
+    ]
+  },
+  {
+    "route": "/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6",
+    "canonical": "https://www.nkbregovanta.com/services/india/loan-licenses-for-class-a-and-b-forms-md-4-and-md-6",
+    "legacyRoutes": [
+      "/services/india/loan-class-a-b"
+    ]
+  },
+  {
+    "route": "/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10",
+    "canonical": "https://www.nkbregovanta.com/services/india/loan-licenses-for-class-c-and-d-forms-md-8-and-md-10",
+    "legacyRoutes": [
+      "/services/india/loan-class-c-d"
+    ]
+  },
+  {
+    "route": "/services/india/market-standing-certificate-msc",
+    "canonical": "https://www.nkbregovanta.com/services/india/market-standing-certificate-msc",
+    "legacyRoutes": [
+      "/services/india/market-standing"
+    ]
+  },
+  {
+    "route": "/services/india/md-42-medical-device-registration-certificate",
+    "canonical": "https://www.nkbregovanta.com/services/india/md-42-medical-device-registration-certificate",
+    "legacyRoutes": [
+      "/services/india/md-42"
+    ]
+  },
+  {
+    "route": "/services/india/medical-device-licensing-and-regulatory-approvals-in-india",
+    "canonical": "https://www.nkbregovanta.com/services/india/medical-device-licensing-and-regulatory-approvals-in-india",
+    "legacyRoutes": [
+      "/services/india/medical-devices"
+    ]
+  },
+  {
+    "route": "/services/india/neutral-code-certificate-special-code",
+    "canonical": "https://www.nkbregovanta.com/services/india/neutral-code-certificate-special-code",
+    "legacyRoutes": [
+      "/services/india/neutral-code"
+    ]
+  },
+  {
+    "route": "/services/india/non-conviction-certificate-ncc",
+    "canonical": "https://www.nkbregovanta.com/services/india/non-conviction-certificate-ncc",
+    "legacyRoutes": [
+      "/services/india/non-conviction"
+    ]
+  },
+  {
+    "route": "/services/india/patient-personal-use-device-import-forms-md-20-md-21",
+    "canonical": "https://www.nkbregovanta.com/services/india/patient-personal-use-device-import-forms-md-20-md-21",
+    "legacyRoutes": [
+      "/services/india/personal-use"
+    ]
+  },
+  {
+    "route": "/services/india/test-license-for-ivd-devices-forms-md-16-md-17",
+    "canonical": "https://www.nkbregovanta.com/services/india/test-license-for-ivd-devices-forms-md-16-md-17",
+    "legacyRoutes": [
+      "/services/india/ivd-testing"
+    ]
+  },
+  {
+    "route": "/services/iso-13485-implementation-certification-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/iso-13485-implementation-certification-consulting",
+    "legacyRoutes": [
+      "/services/iso-13485"
+    ]
+  },
+  {
+    "route": "/services/mdsap",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/audit-documentation",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/audit-documentation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/capa-remediation",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/capa-remediation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/complaint-vigilance",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/complaint-vigilance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/design-controls",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/design-controls",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/gap-assessment",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/gap-assessment",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/jurisdiction-readiness",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/jurisdiction-readiness",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/mock-audits",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/mock-audits",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/post-certification",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/post-certification",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/process-readiness",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/process-readiness",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/production-supplier-validation",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/production-supplier-validation",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/qms-alignment",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/qms-alignment",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/mdsap/strategy-scope",
+    "canonical": "https://www.nkbregovanta.com/services/mdsap/strategy-scope",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/medical-device-audit-compliance-support",
+    "canonical": "https://www.nkbregovanta.com/services/medical-device-audit-compliance-support",
+    "legacyRoutes": [
+      "/services/audit-compliance"
+    ]
+  },
+  {
+    "route": "/services/medical-device-ivd-regulatory-due-diligence",
+    "canonical": "https://www.nkbregovanta.com/services/medical-device-ivd-regulatory-due-diligence",
+    "legacyRoutes": [
+      "/services/regulatory-due-diligence"
+    ]
+  },
+  {
+    "route": "/services/medical-device-technical-documentation-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/medical-device-technical-documentation-consulting",
+    "legacyRoutes": [
+      "/services/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/new-zealand/change-notification-and-lifecycle-support-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/change-notification-and-lifecycle-support-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/change-management"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/importer-distributor-and-supply-chain-compliance-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/supply-chain"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/ivd-regulatory-and-performance-evidence-support-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/ivd"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/labelling-ifu-and-advertising-compliance-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/labeling"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/medsafe-queries-safety-review-and-technical-response",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/medsafe-queries-safety-review-and-technical-response",
+    "legacyRoutes": [
+      "/services/new-zealand/medsafe-queries"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/medsafe-technical-documentation-and-evidence-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/post-market-surveillance-adverse-events-and-recall-support-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/post-market"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/qms-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/qms-compliance",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/regulatory-strategy-and-product-classification-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/classification"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/samd-software-ai-and-cybersecurity-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/software"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/sponsor",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/sponsor",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/testing-strategy-and-laboratory-coordination-new-zealand",
+    "legacyRoutes": [
+      "/services/new-zealand/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/new-zealand/wand-notification",
+    "canonical": "https://www.nkbregovanta.com/services/new-zealand/wand-notification",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/pc-pndt-registration-consultant-certificate-india",
+    "canonical": "https://www.nkbregovanta.com/services/pc-pndt-registration-consultant-certificate-india",
+    "legacyRoutes": [
+      "/services/pc-pndt-certificate"
+    ]
+  },
+  {
+    "route": "/services/pharmaceutical-cleanroom-manufacturing-equipment",
+    "canonical": "https://www.nkbregovanta.com/services/pharmaceutical-cleanroom-manufacturing-equipment",
+    "legacyRoutes": [
+      "/services/manufacturing"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/saudi-arabia/authorized-representative",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/authorized-representative",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/changes-renewal-and-lifecycle-support-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/change-management"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/ivd-registration-and-performance-evidence-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/ivd"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/labeling-ifu-udi-and-advertising-compliance-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/labeling"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/mdma-application-and-technical-file-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/mdma-application-and-technical-file-strategy",
+    "legacyRoutes": [
+      "/services/saudi-arabia/mdma"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/medical-device-establishment-licensing-and-local-supply-chain",
+    "legacyRoutes": [
+      "/services/saudi-arabia/establishment-licensing"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/post-market-surveillance-vigilance-and-field-safety-actions-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/post-market"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/samd-software-ai-and-cybersecurity-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/software"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/sfda-inspection-and-quality-system-readiness",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/sfda-inspection-and-quality-system-readiness",
+    "legacyRoutes": [
+      "/services/saudi-arabia/inspection"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/sfda-queries-deficiency-response-and-technical-review-support",
+    "legacyRoutes": [
+      "/services/saudi-arabia/sfda-queries"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/sfda-regulatory-strategy-and-product-classification",
+    "legacyRoutes": [
+      "/services/saudi-arabia/classification"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/technical-documentation-and-essential-principles-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/technical-documentation-and-essential-principles-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/technical-documentation"
+    ]
+  },
+  {
+    "route": "/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda",
+    "canonical": "https://www.nkbregovanta.com/services/saudi-arabia/testing-strategy-and-laboratory-coordination-sfda",
+    "legacyRoutes": [
+      "/services/saudi-arabia/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/uae",
+    "canonical": "https://www.nkbregovanta.com/services/uae",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/uk",
+    "canonical": "https://www.nkbregovanta.com/services/uk",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/uk/ce-recognition-and-ukca-market-access-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/uk/ce-recognition-and-ukca-market-access-strategy",
+    "legacyRoutes": [
+      "/services/uk/conformity-assurance"
+    ]
+  },
+  {
+    "route": "/services/uk/mhra-registration",
+    "canonical": "https://www.nkbregovanta.com/services/uk/mhra-registration",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/uk/uk-approved-body-and-conformity-assessment-readiness",
+    "canonical": "https://www.nkbregovanta.com/services/uk/uk-approved-body-and-conformity-assessment-readiness",
+    "legacyRoutes": [
+      "/services/uk/audit-readiness"
+    ]
+  },
+  {
+    "route": "/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
+    "canonical": "https://www.nkbregovanta.com/services/uk/uk-mdr-technical-documentation-and-gap-assessment",
+    "legacyRoutes": [
+      "/services/uk/technical-file"
+    ]
+  },
+  {
+    "route": "/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
+    "canonical": "https://www.nkbregovanta.com/services/uk/uk-post-market-surveillance-pms-pmsr-and-psur",
+    "legacyRoutes": [
+      "/services/uk/pms"
+    ]
+  },
+  {
+    "route": "/services/uk/uk-responsible-person-ukrp-services",
+    "canonical": "https://www.nkbregovanta.com/services/uk/uk-responsible-person-ukrp-services",
+    "legacyRoutes": [
+      "/services/uk/ukrp"
+    ]
+  },
+  {
+    "route": "/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
+    "canonical": "https://www.nkbregovanta.com/services/uk/uk-vigilance-and-field-safety-corrective-action-fsca",
+    "legacyRoutes": [
+      "/services/uk/vigilance"
+    ]
+  },
+  {
+    "route": "/services/usa",
+    "canonical": "https://www.nkbregovanta.com/services/usa",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/usa/fda-510k-premarket-notification-and-clearance-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-510k-premarket-notification-and-clearance-consulting",
+    "legacyRoutes": [
+      "/services/usa/510k"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-additional-information-and-deficiency-response",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-additional-information-and-deficiency-response",
+    "legacyRoutes": [
+      "/services/usa/deficiency-response"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-establishment-registration-and-device-listing",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-establishment-registration-and-device-listing",
+    "legacyRoutes": [
+      "/services/usa/establishment-registration"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-estar-dossier-preparation-and-submission",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-estar-dossier-preparation-and-submission",
+    "legacyRoutes": [
+      "/services/usa/e-star"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-medical-device-classification-and-pathway-assessment",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-medical-device-classification-and-pathway-assessment",
+    "legacyRoutes": [
+      "/services/usa/classification"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-post-clearance-and-device-lifecycle-support",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-post-clearance-and-device-lifecycle-support",
+    "legacyRoutes": [
+      "/services/usa/post-clearance-lifecycle"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-predicate-and-substantial-equivalence-strategy",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-predicate-and-substantial-equivalence-strategy",
+    "legacyRoutes": [
+      "/services/usa/predicate-strategy"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-q-submission-and-pre-submission-consulting",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-q-submission-and-pre-submission-consulting",
+    "legacyRoutes": [
+      "/services/usa/q-submission"
+    ]
+  },
+  {
+    "route": "/services/usa/fda-qmsr-and-inspection-preparation",
+    "canonical": "https://www.nkbregovanta.com/services/usa/fda-qmsr-and-inspection-preparation",
+    "legacyRoutes": [
+      "/services/usa/qmsr-inspection"
+    ]
+  },
+  {
+    "route": "/services/usa/global-market-access",
+    "canonical": "https://www.nkbregovanta.com/services/usa/global-market-access",
+    "legacyRoutes": []
+  },
+  {
+    "route": "/services/usa/us-agent-services-for-foreign-establishments",
+    "canonical": "https://www.nkbregovanta.com/services/usa/us-agent-services-for-foreign-establishments",
+    "legacyRoutes": [
+      "/services/usa/agent-service"
+    ]
+  },
+  {
+    "route": "/services/usa/us-fda-de-novo-classification-pathway",
+    "canonical": "https://www.nkbregovanta.com/services/usa/us-fda-de-novo-classification-pathway",
+    "legacyRoutes": [
+      "/services/usa/de-novo"
+    ]
+  },
+  {
+    "route": "/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance",
+    "canonical": "https://www.nkbregovanta.com/services/usa/us-fda-medical-device-testing-strategy-and-standards-compliance",
+    "legacyRoutes": [
+      "/services/usa/testing-strategy"
+    ]
+  },
+  {
+    "route": "/services/wpc-approval-wireless-medical-devices-india",
+    "canonical": "https://www.nkbregovanta.com/services/wpc-approval-wireless-medical-devices-india",
+    "legacyRoutes": [
+      "/services/wpc-wireless-medical-devices"
+    ]
+  }
+]

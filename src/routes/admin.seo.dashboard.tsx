@@ -40,7 +40,9 @@ function SeoDashboardPage() {
   const [issues, setIssues] = useState<IssueItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [rechecking, setRechecking] = useState(false);
-  const [lastCheckTime, setLastCheckTime] = useState<string>("06:26:09 pm | 17 Sep 2026");
+  const [lastCheckTime, setLastCheckTime] = useState<string>("Not checked yet");
+  const [auditedPageCount, setAuditedPageCount] = useState(0);
+  const [notIndexedCount, setNotIndexedCount] = useState(0);
   const [selectedIssueFilter, setSelectedIssueFilter] = useState<string>("ALL");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize = 5;
@@ -54,10 +56,21 @@ function SeoDashboardPage() {
 
     try {
       // 1. Fetch pages and metadata from Supabase
-      const { data: pages } = await supabase.from("pages").select("*");
-      const { data: metas } = await supabase.from("seo_meta").select("*");
-      const { data: images } = await supabase.from("images").select("*");
-      const { data: brokenLinks } = await supabase.from("broken_links").select("*").eq("label", "Broken");
+      const [pagesResult, metasResult, imagesResult, linksResult] = await Promise.all([
+        supabase.from("pages").select("*"),
+        supabase.from("seo_meta").select("*"),
+        supabase.from("images").select("*"),
+        supabase.from("broken_links").select("*").eq("label", "Broken"),
+      ]);
+      const firstError = [pagesResult.error, metasResult.error, imagesResult.error, linksResult.error].find(Boolean);
+      if (firstError) throw firstError;
+      const pages = pagesResult.data;
+      const metas = metasResult.data;
+      const images = imagesResult.data;
+      const brokenLinks = linksResult.data;
+      setAuditedPageCount((pages || []).length);
+      setNotIndexedCount((pages || []).filter((page) => page.status !== "published" || !page.is_in_sitemap).length);
+      const detectedOn = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 
       const metaMap = new Map();
       for (const m of metas || []) metaMap.set(m.target_url, m);
@@ -81,7 +94,7 @@ function SeoDashboardPage() {
             title: p.name,
             url: p.url_path,
             reason: "Title tag is completely blank",
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         } else {
           const normTitle = title.toLowerCase().replace(/\s+/g, " ");
@@ -95,7 +108,7 @@ function SeoDashboardPage() {
             title: p.name,
             url: p.url_path,
             reason: "Meta description is completely blank",
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         } else {
           const normDesc = desc.toLowerCase().replace(/\s+/g, " ");
@@ -109,7 +122,7 @@ function SeoDashboardPage() {
             title: p.name,
             url: p.url_path,
             reason: "No H1 heading found on page.",
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         }
 
@@ -118,7 +131,7 @@ function SeoDashboardPage() {
             title: p.name,
             url: p.url_path,
             reason: "No canonical tag found",
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         }
       }
@@ -132,7 +145,7 @@ function SeoDashboardPage() {
               title: `Shared Title: "${titleStr.slice(0, 40)}..."`,
               url: u,
               reason: `Duplicate across ${urls.length} pages`,
-              detectedOn: "16 Sep 2026",
+              detectedOn,
             });
           }
         }
@@ -146,7 +159,7 @@ function SeoDashboardPage() {
               title: `Shared Description`,
               url: u,
               reason: `Duplicate across ${urls.length} pages`,
-              detectedOn: "16 Sep 2026",
+              detectedOn,
             });
           }
         }
@@ -161,7 +174,7 @@ function SeoDashboardPage() {
             title: img.filename,
             url: img.url,
             reason: "Missing ALT text description",
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         }
         if (img.file_size && img.file_size > 200 * 1024) {
@@ -169,7 +182,7 @@ function SeoDashboardPage() {
             title: img.filename,
             url: img.url,
             reason: `Size ${(img.file_size / 1024).toFixed(0)} KB exceeds 200 KB limit`,
-            detectedOn: "17 Sep 2026",
+            detectedOn,
           });
         }
       }
@@ -179,25 +192,17 @@ function SeoDashboardPage() {
         title: `Link to ${b.target_url}`,
         url: b.source_url,
         reason: `Status code ${b.http_status || 404}`,
-        detectedOn: "17 Sep 2026",
+        detectedOn,
       }));
 
       const auditIssues: IssueItem[] = [
         {
           id: "missing-h1",
           label: "Missing H1",
-          count: missingH1s.length || 34,
+          count: missingH1s.length,
           description: "No H1 heading found on page.",
           iconName: "h1",
-          affected: missingH1s.length > 0 ? missingH1s : [
-            { title: "CDSCO Registration", url: "/services/cdsco-registration", reason: "No H1 heading found on page.", detectedOn: "17 Sep 2026" },
-            { title: "US FDA 510(k)", url: "/services/fda-510k", reason: "No H1 heading found on page.", detectedOn: "17 Sep 2026" },
-            { title: "EU MDR Compliance", url: "/services/eu-mdr", reason: "No H1 heading found on page.", detectedOn: "17 Sep 2026" },
-            { title: "Whitepaper Hub", url: "/insights/whitepaper", reason: "No H1 heading found on page.", detectedOn: "16 Sep 2026" },
-            { title: "Medical Device Updates", url: "/blog/medical-device-regulatory-updates", reason: "No H1 heading found on page.", detectedOn: "16 Sep 2026" },
-            { title: "IVDR Compliance Guide", url: "/services/ivdr-guide", reason: "No H1 heading found on page.", detectedOn: "16 Sep 2026" },
-            { title: "ISO 13485 Consulting", url: "/services/iso-13485-consulting", reason: "No H1 heading found on page.", detectedOn: "15 Sep 2026" },
-          ],
+          affected: missingH1s,
         },
         {
           id: "missing-titles",
@@ -270,8 +275,11 @@ function SeoDashboardPage() {
       const timeStr = now.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
       const dateStr = now.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
       setLastCheckTime(`${timeStr} | ${dateStr}`);
+      return true;
     } catch (e) {
       console.error(e);
+      toast.error(e instanceof Error ? e.message : "SEO audit failed.");
+      return false;
     } finally {
       setLoading(false);
     }
@@ -279,12 +287,15 @@ function SeoDashboardPage() {
 
   const handleRecheck = async () => {
     setRechecking(true);
-    await runAudit();
+    const succeeded = await runAudit();
     setRechecking(false);
-    toast.success("SEO Audit completed!");
+    if (succeeded) toast.success("SEO audit completed using current database records.");
   };
 
   const totalOpenIssues = issues.reduce((acc, curr) => acc + curr.count, 0);
+  const issuePageCount = new Set(issues.flatMap((issue) => issue.affected.map((item) => item.url))).size;
+  const healthyPageCount = Math.max(0, auditedPageCount - issuePageCount - notIndexedCount);
+  const healthScore = auditedPageCount ? Math.round((healthyPageCount / auditedPageCount) * 100) : 0;
 
   // Flat list of all affected items for the Recent SEO Issues table
   const allAffectedRows = useMemo(() => {
@@ -613,14 +624,14 @@ function SeoDashboardPage() {
                     className="stroke-emerald-500 transition-all duration-1000 ease-out"
                     strokeWidth="10"
                     strokeDasharray={2 * Math.PI * 40}
-                    strokeDashoffset={2 * Math.PI * 40 * (1 - 0.87)}
+                    strokeDashoffset={2 * Math.PI * 40 * (1 - healthScore / 100)}
                     strokeLinecap="round"
                     fill="transparent"
                   />
                 </svg>
                 <div className="absolute flex flex-col items-center">
-                  <span className="text-2xl font-black text-slate-900">87%</span>
-                  <span className="text-[11px] font-bold text-emerald-600 uppercase tracking-wide">Good</span>
+                  <span className="text-2xl font-black text-slate-900">{healthScore}%</span>
+                  <span className="text-[11px] font-bold text-emerald-600 uppercase tracking-wide">Current</span>
                 </div>
               </div>
 
@@ -631,21 +642,21 @@ function SeoDashboardPage() {
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                     <span>Healthy Pages</span>
                   </div>
-                  <strong className="text-slate-800 font-semibold">233</strong>
+                  <strong className="text-slate-800 font-semibold">{healthyPageCount}</strong>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
                     <span>Pages with Issues</span>
                   </div>
-                  <strong className="text-slate-800 font-semibold">34</strong>
+                  <strong className="text-slate-800 font-semibold">{issuePageCount}</strong>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
                     <span>Not Indexed</span>
                   </div>
-                  <strong className="text-slate-800 font-semibold">0</strong>
+                  <strong className="text-slate-800 font-semibold">{notIndexedCount}</strong>
                 </div>
               </div>
             </div>
@@ -657,14 +668,9 @@ function SeoDashboardPage() {
             </div>
           </div>
 
-          {/* Recent Activity Card */}
+          {/* Current audit status */}
           <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-xs space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold text-slate-900">Recent Activity</h2>
-              <button onClick={() => toast.info("Viewing activity log...")} className="text-xs font-semibold text-[#0b3a96] hover:underline">
-                View all
-              </button>
-            </div>
+            <h2 className="text-sm font-bold text-slate-900">Current Audit Status</h2>
 
             <div className="space-y-3.5 text-xs">
               <div className="flex items-start gap-3">
@@ -672,8 +678,8 @@ function SeoDashboardPage() {
                   <CheckCircle2 className="h-4 w-4" />
                 </div>
                 <div className="flex-1">
-                  <div className="font-semibold text-slate-800">SEO audit completed</div>
-                  <div className="text-[11px] text-slate-400">Today, 06:26 pm</div>
+                  <div className="font-semibold text-slate-800">Latest database audit</div>
+                  <div className="text-[11px] text-slate-400">{lastCheckTime}</div>
                 </div>
               </div>
 
@@ -682,38 +688,8 @@ function SeoDashboardPage() {
                   <FileText className="h-4 w-4" />
                 </div>
                 <div className="flex-1">
-                  <div className="font-semibold text-slate-800">34 new issues found</div>
-                  <div className="text-[11px] text-slate-400">Today, 06:26 pm</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600">
-                  <RotateCw className="h-4 w-4" />
-                </div>
-                <div className="flex-1">
-                  <div className="font-semibold text-slate-800">Pages rechecked</div>
-                  <div className="text-[11px] text-slate-400">16 Sep 2026, 11:14 am</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-                  <CheckCircle2 className="h-4 w-4" />
-                </div>
-                <div className="flex-1">
-                  <div className="font-semibold text-slate-800">Meta data updated</div>
-                  <div className="text-[11px] text-slate-400">15 Sep 2026, 04:22 pm</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
-                  <FileCode className="h-4 w-4" />
-                </div>
-                <div className="flex-1">
-                  <div className="font-semibold text-slate-800">New blog post published</div>
-                  <div className="text-[11px] text-slate-400">14 Sep 2026, 09:10 am</div>
+                  <div className="font-semibold text-slate-800">{totalOpenIssues} open database findings</div>
+                  <div className="text-[11px] text-slate-400">Calculated from the current records above</div>
                 </div>
               </div>
             </div>

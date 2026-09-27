@@ -393,7 +393,7 @@ function Insights() {
         const { data, error } = await supabase
           .from("blog_posts")
           .select("id, title, slug, excerpt, featured_image, category_id, blog_categories(name)")
-          .eq("status", "published")
+          .or(`status.eq.published,and(status.eq.scheduled,publish_date_ist.lte.${new Date().toISOString()})`)
           .order("publish_date_ist", { ascending: false });
 
         if (error) {

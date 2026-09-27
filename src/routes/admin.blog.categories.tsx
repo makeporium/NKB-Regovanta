@@ -109,17 +109,6 @@ function BlogCategoriesPage() {
         loadData();
       }
     } else if (modalMode === "edit" && editId) {
-      // Auto 301 if slug changes
-      if (oldSlug !== cleanSlug) {
-        await supabase.from("redirects").insert({
-          old_path: `/blog/category/${oldSlug}`,
-          new_path: `/blog/category/${cleanSlug}`,
-          status_code: 301,
-          is_active: true,
-        });
-        toast.info(`Created 301 redirect from /blog/category/${oldSlug} to /blog/category/${cleanSlug}`);
-      }
-
       const { error } = await supabase
         .from("blog_categories")
         .update({
@@ -148,10 +137,15 @@ function BlogCategoriesPage() {
 
     // Reassign posts if there are existing posts
     if ((deletingCategory.post_count || 0) > 0 && reassignTargetId) {
-      await supabase
+      const { error: reassignError } = await supabase
         .from("blog_posts")
         .update({ category_id: reassignTargetId })
         .eq("category_id", deletingCategory.id);
+      if (reassignError) {
+        setSubmitting(false);
+        toast.error(`Category was not deleted: post reassignment failed (${reassignError.message}).`);
+        return;
+      }
     }
 
     const { error } = await supabase.from("blog_categories").delete().eq("id", deletingCategory.id);
@@ -160,7 +154,7 @@ function BlogCategoriesPage() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success("Category deleted and associated posts reassigned.");
+      toast.success((deletingCategory.post_count || 0) > 0 ? "Category deleted and associated posts reassigned." : "Category deleted.");
       setDeletingCategory(null);
       loadData();
     }

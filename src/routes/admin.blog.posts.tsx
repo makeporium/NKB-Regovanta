@@ -134,13 +134,17 @@ function AllBlogPostsPage() {
 
     // Create 301 redirect if live post is deleted
     if (deletingPost.status === "published" && createRedirectOnDelete && redirectTarget) {
-      await supabase.from("redirects").insert({
-        old_path: `/blog/${deletingPost.slug}`,
+      const { error: redirectError } = await supabase.from("redirects").insert({
+        old_path: `/insights/${deletingPost.slug}`,
         new_path: redirectTarget,
         status_code: 301,
         is_active: true,
       });
-      toast.info(`Created 301 redirect from /blog/${deletingPost.slug} to ${redirectTarget}`);
+      if (redirectError) {
+        toast.error(`Post was not moved: redirect creation failed (${redirectError.message}).`);
+        return;
+      }
+      toast.info(`Recorded 301 redirect from /insights/${deletingPost.slug} to ${redirectTarget}`);
     }
 
     const { error } = await supabase
