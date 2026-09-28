@@ -26,12 +26,18 @@ function AnalyticsSettingsPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const cleanId = ga4Id.trim().toUpperCase();
+    if (cleanId && !/^G-[A-Z0-9]+$/.test(cleanId)) {
+      toast.error("Enter a valid GA4 measurement ID such as G-ABC1234567.");
+      return;
+    }
     setSaving(true);
-    const res = await settingsService.updateMany({ ga4_measurement_id: ga4Id.trim() });
+    const res = await settingsService.updateMany({ ga4_measurement_id: cleanId });
     setSaving(false);
 
     if (res.success) {
-      toast.success("Google Analytics settings saved!");
+      setGa4Id(cleanId);
+      toast.success("Google Analytics settings saved and will be used on public pages.");
     } else {
       toast.error(res.error || "Failed to save settings.");
     }

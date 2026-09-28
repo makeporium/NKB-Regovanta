@@ -88,14 +88,16 @@ export const settingsService = {
   ): Promise<{ success: boolean; error?: string }> {
     try {
       // 1. Update settings table
-      await this.updateMany({ robots_txt: content });
+      const updateResult = await this.updateMany({ robots_txt: content });
+      if (!updateResult.success) throw new Error(updateResult.error || "Failed to update robots.txt setting");
 
       // 2. Save version history
-      await supabase.from("robots_versions").insert({
+      const { error: historyError } = await supabase.from("robots_versions").insert({
         content,
         created_by_name: adminName,
         created_at: new Date().toISOString(),
       });
+      if (historyError) throw historyError;
 
       return { success: true };
     } catch (e: any) {

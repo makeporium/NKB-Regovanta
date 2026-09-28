@@ -71,12 +71,47 @@ function BrokenLinksAnd404Page() {
 
   const handleRunScan = async () => {
     setScanning(true);
-    // Trigger background link scan
-    toast.info("Scanning published pages and regulatory posts for link errors in batches of 50...");
-    await new Promise((r) => setTimeout(r, 1500));
-    setScanning(false);
-    toast.success("Link scan complete. Zero critical 500 errors detected.");
-    loadData();
+    toast.info("Checking catalogued internal links in batches of 50...");
+    try {
+      const { data: links, error } = await supabase
+        .from("internal_links")
+        .select("source_url, target_url, anchor_text");
+      if (error) throw error;
+
+      const checked: any[] = [];
+      for (let index = 0; index < (links || []).length; index += 50) {
+        const response = await fetch("/api/admin/link-scan", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ links: (links || []).slice(index, index + 50) }),
+        });
+        if (!response.ok) throw new Error(`Link checker returned HTTP ${response.status}.`);
+        const payload = await response.json();
+        checked.push(...(payload.results || []));
+      }
+
+      const findings = checked.filter((item) => item.label !== "Healthy").map((item) => ({
+        source_url: item.source_url,
+        target_url: item.target_url,
+        anchor_text: item.anchor_text || null,
+        http_status: item.http_status,
+        label: item.label,
+        is_external: item.is_external,
+        last_checked_at: new Date().toISOString(),
+      }));
+      const { error: clearError } = await supabase.from("broken_links").delete().not("id", "is", null);
+      if (clearError) throw clearError;
+      if (findings.length) {
+        const { error: insertError } = await supabase.from("broken_links").insert(findings);
+        if (insertError) throw insertError;
+      }
+      toast.success(`Link scan completed: ${checked.length} checked, ${findings.length} require attention.`);
+      await loadData();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Link scan failed.");
+    } finally {
+      setScanning(false);
+    }
   };
 
   const handleCreateRedirect = (badUrl: string) => {

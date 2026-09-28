@@ -71,6 +71,14 @@ interface ArticleDetail {
   }> | undefined;
 }
 
+function isPublicPost(post: Pick<ArticleDetail, "status" | "publish_date_ist">) {
+  return post.status === "published" || (
+    post.status === "scheduled" &&
+    Boolean(post.publish_date_ist) &&
+    new Date(post.publish_date_ist as string).getTime() <= Date.now()
+  );
+}
+
 /**
  * Strips foreign doctype, head, style, and script tags that could leak into the DOM
  */
@@ -343,7 +351,7 @@ export const Route = createFileRoute("/insights/$slug")({
         {
           name: "robots",
           content:
-            post.status === "published"
+            isPublicPost(post)
               ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
               : "noindex, nofollow",
         },
@@ -428,7 +436,7 @@ function DynamicInsightArticlePage() {
     }
   };
 
-  if (!article || (article.status !== "published" && !isPreview)) {
+  if (!article || (!isPublicPost(article) && !isPreview)) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-24 text-center">
         <h1 className="text-3xl font-bold text-slate-900">Insight Not Found</h1>
@@ -827,4 +835,3 @@ function DynamicArticleSkeleton() {
     </article>
   );
 }
-

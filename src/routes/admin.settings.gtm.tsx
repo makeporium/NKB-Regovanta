@@ -26,12 +26,18 @@ function GTMSettingsPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const cleanId = gtmId.trim().toUpperCase();
+    if (cleanId && !/^GTM-[A-Z0-9]+$/.test(cleanId)) {
+      toast.error("Enter a valid GTM container ID such as GTM-ABC1234.");
+      return;
+    }
     setSaving(true);
-    const res = await settingsService.updateMany({ gtm_container_id: gtmId.trim() });
+    const res = await settingsService.updateMany({ gtm_container_id: cleanId });
     setSaving(false);
 
     if (res.success) {
-      toast.success("Google Tag Manager settings saved!");
+      setGtmId(cleanId);
+      toast.success("Google Tag Manager settings saved and will be used on public pages.");
     } else {
       toast.error(res.error || "Failed to save settings.");
     }

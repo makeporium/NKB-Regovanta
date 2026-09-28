@@ -81,23 +81,43 @@ function renderSitemap(pages = inventory(), dynamicUrls = []) {
     + "\n</urlset>\n";
 }
 
+function renderStaticManifest(pages = inventory()) {
+  const vercelConfig = JSON.parse(fs.readFileSync(path.join(project, "vercel.json"), "utf8"));
+  const aliasesByDestination = new Map();
+  for (const redirect of vercelConfig.redirects || []) {
+    const aliases = aliasesByDestination.get(redirect.destination) || [];
+    aliases.push(redirect.source);
+    aliasesByDestination.set(redirect.destination, aliases);
+  }
+  return JSON.stringify(
+    pages
+      .filter((page) => !page.noindex)
+      .map(({ route, canonical }) => ({ route, canonical, legacyRoutes: aliasesByDestination.get(route) || [] }))
+      .sort((a, b) => a.route.localeCompare(b.route)),
+    null,
+    2,
+  ) + "\n";
+}
+
 if (require.main === module) {
   (async () => {
     try {
-      const dynamicUrls = await fetchDynamicBlogUrls();
-      const output = renderSitemap(inventory(), dynamicUrls);
-      const target = path.join(project, "public/sitemap.xml");
+      const pages = inventory();
+      const output = renderStaticManifest(pages);
+      const targetDir = path.join(project, "src/generated");
+      const target = path.join(targetDir, "sitemap-pages.json");
+      fs.mkdirSync(targetDir, { recursive: true });
       if (process.argv.includes("--check")) {
         if (fs.readFileSync(target, "utf8").replaceAll("\r\n", "\n") !== output) {
-          console.error("Sitemap is stale. Run npm run seo:sitemap.");
+          console.error("Sitemap page manifest is stale. Run npm run seo:sitemap.");
           process.exitCode = 1;
         } else {
-          console.log("Sitemap matches all indexable canonical routes & published blogs.");
+          console.log("Sitemap page manifest matches all indexable canonical routes.");
         }
       } else {
         fs.writeFileSync(target, output);
         console.log(
-          `Generated sitemap with ${inventory().filter((page) => !page.noindex).length} static URLs and ${dynamicUrls.length} dynamic blog URLs.`
+          `Generated sitemap page manifest with ${pages.filter((page) => !page.noindex).length} static URLs. Published blogs are loaded live by the sitemap route.`
         );
       }
     } catch (err) {
@@ -107,4 +127,4 @@ if (require.main === module) {
   })();
 }
 
-module.exports = { inventory, renderSitemap, fetchDynamicBlogUrls, project };
+module.exports = { inventory, renderSitemap, renderStaticManifest, fetchDynamicBlogUrls, project };

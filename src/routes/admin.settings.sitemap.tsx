@@ -49,7 +49,7 @@ function SitemapSettingsPage() {
     setRegenerating(false);
 
     if (res.success) {
-      toast.success("XML Sitemap regenerated and synchronized!");
+      toast.success("Live sitemap endpoints verified and refreshed.");
       loadData();
     } else {
       toast.error(res.error || "Failed to regenerate sitemap.");

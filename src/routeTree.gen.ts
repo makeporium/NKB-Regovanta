@@ -16,6 +16,10 @@ import { Route as AiNewsRouteImport } from './routes/ai-news'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as RegulatoryUpdatesRouteImport } from './routes/regulatory-updates'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
+import { Route as SitemapPostsDotxmlRouteImport } from './routes/sitemap-posts[.]xml'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
@@ -119,6 +123,7 @@ import { Route as AdminSettingsRobotsRouteImport } from './routes/admin.settings
 import { Route as AdminSettingsSearchConsoleRouteImport } from './routes/admin.settings.search-console'
 import { Route as AdminSettingsSitemapRouteImport } from './routes/admin.settings.sitemap'
 import { Route as AdminSettingsUsersRouteImport } from './routes/admin.settings.users'
+import { Route as ApiAdminLinkScanRouteImport } from './routes/api.admin.link-scan'
 import { Route as IndustriesCosmeticsEuRouteImport } from './routes/industries.cosmetics_.eu'
 import { Route as IndustriesCosmeticsUkRouteImport } from './routes/industries.cosmetics_.uk'
 import { Route as IndustriesCosmeticsUsaRouteImport } from './routes/industries.cosmetics_.usa'
@@ -348,6 +353,26 @@ const ContactRoute = ContactRouteImport.update({
 const RegulatoryUpdatesRoute = RegulatoryUpdatesRouteImport.update({
   id: '/regulatory-updates',
   path: '/regulatory-updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapPagesDotxmlRoute = SitemapPagesDotxmlRouteImport.update({
+  id: '/sitemap-pages.xml',
+  path: '/sitemap-pages.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapPostsDotxmlRoute = SitemapPostsDotxmlRouteImport.update({
+  id: '/sitemap-posts.xml',
+  path: '/sitemap-posts.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
@@ -936,6 +961,11 @@ const AdminSettingsUsersRoute = AdminSettingsUsersRouteImport.update({
   id: '/settings/users',
   path: '/settings/users',
   getParentRoute: () => AdminRoute,
+} as any)
+const ApiAdminLinkScanRoute = ApiAdminLinkScanRouteImport.update({
+  id: '/api/admin/link-scan',
+  path: '/api/admin/link-scan',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const IndustriesCosmeticsEuRoute = IndustriesCosmeticsEuRouteImport.update({
   id: '/industries/cosmetics_/eu',
@@ -2215,6 +2245,10 @@ export interface FileRoutesByFullPath {
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-posts.xml': typeof SitemapPostsDotxmlRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -2318,6 +2352,7 @@ export interface FileRoutesByFullPath {
   '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
   '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
   '/admin/settings/users': typeof AdminSettingsUsersRoute
+  '/api/admin/link-scan': typeof ApiAdminLinkScanRoute
   '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
@@ -2520,6 +2555,10 @@ export interface FileRoutesByTo {
   '/ai-news': typeof AiNewsRoute
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-posts.xml': typeof SitemapPostsDotxmlRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -2612,6 +2651,7 @@ export interface FileRoutesByTo {
   '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
   '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
   '/admin/settings/users': typeof AdminSettingsUsersRoute
+  '/api/admin/link-scan': typeof ApiAdminLinkScanRoute
   '/industries/cosmetics/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics/usa': typeof IndustriesCosmeticsUsaRoute
@@ -2817,6 +2857,10 @@ export interface FileRoutesById {
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/regulatory-updates': typeof RegulatoryUpdatesRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-posts.xml': typeof SitemapPostsDotxmlRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/login': typeof AdminLoginRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -2920,6 +2964,7 @@ export interface FileRoutesById {
   '/admin/settings/search-console': typeof AdminSettingsSearchConsoleRoute
   '/admin/settings/sitemap': typeof AdminSettingsSitemapRoute
   '/admin/settings/users': typeof AdminSettingsUsersRoute
+  '/api/admin/link-scan': typeof ApiAdminLinkScanRoute
   '/industries/cosmetics_/eu': typeof IndustriesCosmeticsEuRoute
   '/industries/cosmetics_/uk': typeof IndustriesCosmeticsUkRoute
   '/industries/cosmetics_/usa': typeof IndustriesCosmeticsUsaRoute
@@ -3126,6 +3171,10 @@ export interface FileRouteTypes {
     | '/case-studies'
     | '/contact'
     | '/regulatory-updates'
+    | '/robots.txt'
+    | '/sitemap-pages.xml'
+    | '/sitemap-posts.xml'
+    | '/sitemap.xml'
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
@@ -3229,6 +3278,7 @@ export interface FileRouteTypes {
     | '/admin/settings/search-console'
     | '/admin/settings/sitemap'
     | '/admin/settings/users'
+    | '/api/admin/link-scan'
     | '/industries/cosmetics/eu'
     | '/industries/cosmetics/uk'
     | '/industries/cosmetics/usa'
@@ -3431,6 +3481,10 @@ export interface FileRouteTypes {
     | '/ai-news'
     | '/contact'
     | '/regulatory-updates'
+    | '/robots.txt'
+    | '/sitemap-pages.xml'
+    | '/sitemap-posts.xml'
+    | '/sitemap.xml'
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
@@ -3523,6 +3577,7 @@ export interface FileRouteTypes {
     | '/admin/settings/search-console'
     | '/admin/settings/sitemap'
     | '/admin/settings/users'
+    | '/api/admin/link-scan'
     | '/industries/cosmetics/eu'
     | '/industries/cosmetics/uk'
     | '/industries/cosmetics/usa'
@@ -3727,6 +3782,10 @@ export interface FileRouteTypes {
     | '/case-studies'
     | '/contact'
     | '/regulatory-updates'
+    | '/robots.txt'
+    | '/sitemap-pages.xml'
+    | '/sitemap-posts.xml'
+    | '/sitemap.xml'
     | '/admin/dashboard'
     | '/admin/login'
     | '/blog/$slug'
@@ -3830,6 +3889,7 @@ export interface FileRouteTypes {
     | '/admin/settings/search-console'
     | '/admin/settings/sitemap'
     | '/admin/settings/users'
+    | '/api/admin/link-scan'
     | '/industries/cosmetics_/eu'
     | '/industries/cosmetics_/uk'
     | '/industries/cosmetics_/usa'
@@ -4035,6 +4095,10 @@ export interface RootRouteChildren {
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   RegulatoryUpdatesRoute: typeof RegulatoryUpdatesRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
+  SitemapPostsDotxmlRoute: typeof SitemapPostsDotxmlRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   IndustriesCosmeticsRoute: typeof IndustriesCosmeticsRoute
   IndustriesIvdRoute: typeof IndustriesIvdRoute
@@ -4107,6 +4171,7 @@ export interface RootRouteChildren {
   InsightsIndexRoute: typeof InsightsIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
+  ApiAdminLinkScanRoute: typeof ApiAdminLinkScanRoute
   IndustriesCosmeticsEuRoute: typeof IndustriesCosmeticsEuRoute
   IndustriesCosmeticsUkRoute: typeof IndustriesCosmeticsUkRoute
   IndustriesCosmeticsUsaRoute: typeof IndustriesCosmeticsUsaRoute
@@ -4169,6 +4234,34 @@ declare module '@tanstack/react-router' {
       path: '/regulatory-updates'
       fullPath: '/regulatory-updates'
       preLoaderRoute: typeof RegulatoryUpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-pages.xml': {
+      id: '/sitemap-pages.xml'
+      path: '/sitemap-pages.xml'
+      fullPath: '/sitemap-pages.xml'
+      preLoaderRoute: typeof SitemapPagesDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-posts.xml': {
+      id: '/sitemap-posts.xml'
+      path: '/sitemap-posts.xml'
+      fullPath: '/sitemap-posts.xml'
+      preLoaderRoute: typeof SitemapPostsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/': {
@@ -4891,6 +4984,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/admin/settings/users'
       preLoaderRoute: typeof AdminSettingsUsersRouteImport
       parentRoute: typeof AdminRoute
+    }
+    '/api/admin/link-scan': {
+      id: '/api/admin/link-scan'
+      path: '/api/admin/link-scan'
+      fullPath: '/api/admin/link-scan'
+      preLoaderRoute: typeof ApiAdminLinkScanRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/industries/cosmetics_/eu': {
       id: '/industries/cosmetics_/eu'
@@ -6974,6 +7074,10 @@ const rootRouteChildren: RootRouteChildren = {
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
   RegulatoryUpdatesRoute: RegulatoryUpdatesRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
+  SitemapPostsDotxmlRoute: SitemapPostsDotxmlRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   IndustriesCosmeticsRoute: IndustriesCosmeticsRoute,
   IndustriesIvdRoute: IndustriesIvdRoute,
@@ -7092,6 +7196,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsIndexRoute: InsightsIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
+  ApiAdminLinkScanRoute: ApiAdminLinkScanRoute,
   IndustriesCosmeticsEuRoute: IndustriesCosmeticsEuRoute,
   IndustriesCosmeticsUkRoute: IndustriesCosmeticsUkRoute,
   IndustriesCosmeticsUsaRoute: IndustriesCosmeticsUsaRoute,
@@ -7113,10 +7218,11 @@ export const routeTree = rootRouteImport
   ._addFileTypes<FileRouteTypes>()
 
 import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
+import type { startInstance } from './start.ts'
 declare module '@tanstack/react-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }

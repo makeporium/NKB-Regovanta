@@ -299,7 +299,7 @@ function BlogPostEditorPage() {
             featured_image_caption: featuredImageCaption || null,
             status: finalStatus,
             publish_date_ist: new Date(publishDateIst).toISOString(),
-            is_in_sitemap: finalStatus === "published",
+            is_in_sitemap: finalStatus !== "draft",
             updated_at: new Date().toISOString(),
           })
           .eq("id", resolvedEditId);
@@ -307,10 +307,12 @@ function BlogPostEditorPage() {
         if (postErr) throw postErr;
 
         // Sync tags: remove old, insert new
-        await supabase.from("blog_post_tags").delete().eq("post_id", resolvedEditId);
+        const { error: tagDeleteError } = await supabase.from("blog_post_tags").delete().eq("post_id", resolvedEditId);
+        if (tagDeleteError) throw tagDeleteError;
         if (selectedTagIds.length > 0) {
           const tagRows = selectedTagIds.map((tagId) => ({ post_id: resolvedEditId, tag_id: tagId }));
-          await supabase.from("blog_post_tags").insert(tagRows);
+          const { error: tagInsertError } = await supabase.from("blog_post_tags").insert(tagRows);
+          if (tagInsertError) throw tagInsertError;
         }
       } else {
         // Insert new post
@@ -327,7 +329,7 @@ function BlogPostEditorPage() {
             featured_image_caption: featuredImageCaption || null,
             status: finalStatus,
             publish_date_ist: new Date(publishDateIst).toISOString(),
-            is_in_sitemap: finalStatus === "published",
+            is_in_sitemap: finalStatus !== "draft",
           })
           .select("id")
           .single();
@@ -338,13 +340,14 @@ function BlogPostEditorPage() {
         // Attach Tags
         if (selectedTagIds.length > 0 && currentPostId) {
           const tagRows = selectedTagIds.map((tagId) => ({ post_id: currentPostId, tag_id: tagId }));
-          await supabase.from("blog_post_tags").insert(tagRows);
+          const { error: tagInsertError } = await supabase.from("blog_post_tags").insert(tagRows);
+          if (tagInsertError) throw tagInsertError;
         }
       }
 
       // Save / Update Post SEO Meta
       const blogUrl = `/insights/${cleanSlug}`;
-      await supabase.from("seo_meta").upsert(
+      const { error: seoError } = await supabase.from("seo_meta").upsert(
         {
           target_url: blogUrl,
           seo_title: seoTitle ? `${seoTitle}` : `${title} | NKB Regovanta`,
@@ -365,6 +368,7 @@ function BlogPostEditorPage() {
         },
         { onConflict: "target_url" }
       );
+      if (seoError) throw seoError;
 
       // Automatically sync detected internal links to internal_links table
       try {
@@ -398,12 +402,14 @@ function BlogPostEditorPage() {
         }
 
         // Clean up previous records for this article and insert updated ones
-        await supabase.from("internal_links").delete().eq("source_url", blogUrl);
+        const { error: linkDeleteError } = await supabase.from("internal_links").delete().eq("source_url", blogUrl);
+        if (linkDeleteError) throw linkDeleteError;
         if (detectedInternalLinks.length > 0) {
-          await supabase.from("internal_links").insert(detectedInternalLinks);
+          const { error: linkInsertError } = await supabase.from("internal_links").insert(detectedInternalLinks);
+          if (linkInsertError) throw linkInsertError;
         }
-      } catch {
-        // Silently continue if table has restricted RLS
+      } catch (linkError) {
+        throw linkError;
       }
 
       toast.success(

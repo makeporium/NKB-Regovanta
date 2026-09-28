@@ -42,7 +42,7 @@ function SearchConsoleSettingsPage() {
 
     if (res.success) {
       setTagInput(cleanCode);
-      toast.success("Google Search Console verification tag saved!");
+      toast.success("Google Search Console verification tag saved and added to public page HTML.");
     } else {
       toast.error(res.error || "Failed to save settings.");
     }

@@ -71,7 +71,7 @@ function InternalLinksPage() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success("Planned link added! It will automatically switch to Live when detected.");
+      toast.success("Planned link recorded. Mark it Live after the link is implemented in page content.");
       setIsModalOpen(false);
       setSourceUrl("");
       setAnchorText("");

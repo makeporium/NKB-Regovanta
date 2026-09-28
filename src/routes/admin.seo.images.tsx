@@ -132,7 +132,7 @@ function ImagesSeoManagerPage() {
     if (error) {
       toast.error("Failed to save image metadata: " + error.message);
     } else {
-      toast.success("Image metadata updated!");
+      toast.success("Image catalogue metadata updated. Existing code-backed image markup must be redeployed to change its rendered ALT text.");
       setEditingImage(null);
       loadImages();
     }

@@ -82,7 +82,7 @@ export const sitemapService = {
       text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
     const urls = (posts || []).map((p) => {
-      const loc = `https://www.nkbregovanta.com/blog/${p.slug}`;
+      const loc = `https://www.nkbregovanta.com/insights/${p.slug}`;
       const lastmod = p.updated_at ? p.updated_at.split("T")[0] : new Date().toISOString().split("T")[0];
       return `  <url>\n    <loc>${escape(loc)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
     });
@@ -97,11 +97,24 @@ export const sitemapService = {
 
   async regenerate(): Promise<{ success: boolean; error?: string }> {
     try {
+      const cacheBust = Date.now();
+      const responses = await Promise.all([
+        fetch(`/sitemap.xml?verify=${cacheBust}`, { cache: "no-store" }),
+        fetch(`/sitemap-pages.xml?verify=${cacheBust}`, { cache: "no-store" }),
+        fetch(`/sitemap-posts.xml?verify=${cacheBust}`, { cache: "no-store" }),
+      ]);
+      const failed = responses.find((response) => !response.ok);
+      if (failed) throw new Error(`Sitemap endpoint returned HTTP ${failed.status}.`);
+      const documents = await Promise.all(responses.map((response) => response.text()));
+      if (!documents[0]?.includes("<sitemapindex") || documents.slice(1).some((xml) => !xml.includes("<urlset"))) {
+        throw new Error("A sitemap endpoint returned invalid XML.");
+      }
       const now = new Date().toISOString();
-      await supabase.from("settings").upsert(
+      const { error } = await supabase.from("settings").upsert(
         { key: "sitemap_last_generated", value: now, updated_at: now },
         { onConflict: "key" }
       );
+      if (error) throw error;
       return { success: true };
     } catch (e: any) {
       return { success: false, error: e.message };
