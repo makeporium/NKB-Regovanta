@@ -19,6 +19,7 @@ import {
   X,
   ArrowRightLeft,
 } from "lucide-react";
+import { formatIstDate, formatIstTime } from "@/lib/dateUtils";
 
 export const Route = createFileRoute("/admin/blog/posts")({
   component: AllBlogPostsPage,
@@ -326,7 +327,7 @@ function AllBlogPostsPage() {
                 <th className="px-5 py-3">Title & URL Slug</th>
                 <th className="px-5 py-3">Category</th>
                 <th className="px-5 py-3">Author</th>
-                <th className="px-5 py-3">Publish Date</th>
+                <th className="px-5 py-3">Publish Date & Time</th>
                 <th className="px-5 py-3">Status</th>
                 <th className="px-5 py-3 text-right">Actions</th>
               </tr>
@@ -372,14 +373,19 @@ function AllBlogPostsPage() {
                     <td className="px-5 py-3.5 text-slate-600">
                       {post.author?.name || "Regulatory Team"}
                     </td>
-                    <td className="px-5 py-3.5 text-slate-500">
-                      {post.publish_date_ist
-                        ? new Date(post.publish_date_ist).toLocaleDateString("en-IN", {
-                            day: "numeric",
-                            month: "short",
-                            year: "numeric",
-                          })
-                        : "Draft"}
+                    <td className="px-5 py-3.5 text-slate-600 whitespace-nowrap">
+                      {post.publish_date_ist ? (
+                        <div>
+                          <div className="font-semibold text-slate-800">
+                            {formatIstDate(post.publish_date_ist)}
+                          </div>
+                          <div className="text-[11px] text-[#0b3a96] font-medium font-mono mt-0.5">
+                            {formatIstTime(post.publish_date_ist)}
+                          </div>
+                        </div>
+                      ) : (
+                        <span className="text-slate-400 italic">Draft (Not Set)</span>
+                      )}
                     </td>
                     <td className="px-5 py-3.5">
                       <span

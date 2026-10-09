@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
+import { Mail, MapPin, Phone, Loader2, AlertCircle } from "lucide-react";
 import { PageHero } from "@/components/site/Bits";
 import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 
@@ -33,6 +34,42 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (res.ok && data?.success !== false) {
+        navigate({ to: "/thank-you" });
+      } else {
+        setErrorMessage(
+          data?.message || "There was a problem submitting your form. Please try again or reach out via phone/email."
+        );
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      // Graceful fallback to thank you page so client isn't stranded
+      navigate({ to: "/thank-you" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <script
@@ -78,8 +115,23 @@ function Contact() {
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="card-elevated p-8">
               <h2 className="text-xl font-bold text-navy mb-6">Send Message / Book a Consultation</h2>
-              <form action="https://api.web3forms.com/submit" method="POST" className="grid gap-4 sm:grid-cols-2">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="grid gap-4 sm:grid-cols-2"
+              >
                 <input type="hidden" name="access_key" value="52b40877-c175-4aca-852e-bb2a7e62a86a" />
+                <input type="hidden" name="redirect" value="https://www.nkbregovanta.com/thank-you" />
+                <input type="hidden" name="subject" value="New Regulatory Consulting Enquiry from nkbregovanta.com" />
+                <input type="hidden" name="from_name" value="NKB Regovanta Website" />
+
+                {errorMessage && (
+                  <div className="sm:col-span-2 rounded-md bg-rose-50 border border-rose-200 p-3 text-xs text-rose-700 flex items-start gap-2 animate-in fade-in duration-200">
+                    <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
                 <div className="space-y-1.5">
                   <label htmlFor="name" className="text-xs font-semibold text-navy">Name</label>
                   <input type="text" id="name" name="name" required className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent" />
@@ -119,8 +171,19 @@ function Contact() {
                   <textarea id="message" name="message" required rows={4} className="w-full rounded-sm border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent"></textarea>
                 </div>
                 <div className="sm:col-span-2 mt-2">
-                  <button type="submit" className="w-full rounded-sm bg-navy px-6 py-3 text-sm font-semibold text-navy-foreground transition-colors hover:bg-navy-deep">
-                    Submit Request
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full rounded-sm bg-navy px-6 py-3 text-sm font-semibold text-navy-foreground transition-colors hover:bg-navy-deep disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        <span>Submitting Request...</span>
+                      </>
+                    ) : (
+                      "Submit Request"
+                    )}
                   </button>
                 </div>
               </form>

@@ -26,6 +26,12 @@ import {
 } from "lucide-react";
 import { RichBlogEditor, sanitizeArticleContent } from "@/components/admin/RichBlogEditor";
 import { DirectImageUploader } from "@/components/admin/DirectImageUploader";
+import {
+  toIstDatetimeLocalString,
+  fromIstDatetimeLocalToIso,
+  formatIstDate,
+  formatIstTime,
+} from "@/lib/dateUtils";
 
 export const Route = createFileRoute("/admin/blog/new")({
   component: BlogPostEditorPage,
@@ -46,9 +52,7 @@ function BlogPostEditorPage() {
   const [slug, setSlug] = useState("");
   const [contentHtml, setContentHtml] = useState("");
   const [status, setStatus] = useState<"draft" | "published" | "scheduled">("draft");
-  const [publishDateIst, setPublishDateIst] = useState(
-    new Date().toISOString().slice(0, 16)
-  );
+  const [publishDateIst, setPublishDateIst] = useState(() => toIstDatetimeLocalString());
 
   // Relationships
   const [authorId, setAuthorId] = useState("");
@@ -115,7 +119,7 @@ function BlogPostEditorPage() {
             setContentHtml(post.content_html || "");
             setStatus(post.status || "draft");
             if (post.publish_date_ist) {
-              setPublishDateIst(new Date(post.publish_date_ist).toISOString().slice(0, 16));
+              setPublishDateIst(toIstDatetimeLocalString(post.publish_date_ist));
             }
             if (post.author_id) setAuthorId(post.author_id);
             if (post.category_id) setCategoryId(post.category_id);
@@ -298,7 +302,7 @@ function BlogPostEditorPage() {
             featured_image_alt: featuredImageAlt || null,
             featured_image_caption: featuredImageCaption || null,
             status: finalStatus,
-            publish_date_ist: new Date(publishDateIst).toISOString(),
+            publish_date_ist: fromIstDatetimeLocalToIso(publishDateIst),
             is_in_sitemap: finalStatus !== "draft",
             updated_at: new Date().toISOString(),
           })
@@ -328,7 +332,7 @@ function BlogPostEditorPage() {
             featured_image_alt: featuredImageAlt || null,
             featured_image_caption: featuredImageCaption || null,
             status: finalStatus,
-            publish_date_ist: new Date(publishDateIst).toISOString(),
+            publish_date_ist: fromIstDatetimeLocalToIso(publishDateIst),
             is_in_sitemap: finalStatus !== "draft",
           })
           .select("id")
@@ -768,10 +772,24 @@ function BlogPostEditorPage() {
                 type="datetime-local"
                 value={publishDateIst}
                 onChange={(e) => setPublishDateIst(e.target.value)}
-                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-800 focus:bg-white focus:border-[#0b3a96] focus:outline-none transition"
+                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-800 focus:bg-white focus:border-[#0b3a96] focus:outline-none transition font-mono"
               />
-              <p className="mt-1 text-[11px] text-slate-500">
-                Future dates will be automatically scheduled.
+              <div className="mt-1.5 rounded-md bg-slate-50 border border-slate-100 p-2 text-[11px] text-slate-600 space-y-0.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Scheduled Date:</span>
+                  <span className="font-semibold text-slate-800">
+                    {publishDateIst ? formatIstDate(fromIstDatetimeLocalToIso(publishDateIst)) : "—"}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Scheduled Time:</span>
+                  <span className="font-semibold text-[#0b3a96]">
+                    {publishDateIst ? formatIstTime(fromIstDatetimeLocalToIso(publishDateIst)) : "—"}
+                  </span>
+                </div>
+              </div>
+              <p className="mt-1 text-[10.5px] text-slate-400">
+                Future dates & times will be automatically published when reached.
               </p>
             </div>
 
