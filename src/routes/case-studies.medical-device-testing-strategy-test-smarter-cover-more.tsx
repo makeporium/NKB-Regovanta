@@ -68,7 +68,7 @@ function Article() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-8">
             Medical Device Testing Strategy: Test Smarter, Cover More
           </h1>
-          <img src={imgPlaceholder} alt="Test Strategy" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
+          <img src={imgPlaceholder} alt="Medical Device Regulatory Testing Strategy and Bracketing Protocol - NKB Regovanta" loading="lazy" decoding="async" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
             <h2 className="text-2xl font-bold mt-10 mb-4">Challenge</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">

@@ -12,11 +12,11 @@ import {
   FileCheck2,
   ArrowRight
 } from "lucide-react";
-import imgHero from "@/assets/industry-ivd.png";
+import imgHero from "@/assets/industry-ivd.optimized.webp";
 import imgWorld from "@/assets/world-map.optimized.webp";
-import imgEU from "@/assets/eu.png";
+import imgEU from "@/assets/eu.optimized.webp";
 import imgUS from "@/assets/us.optimized.webp";
-import imgISO from "@/assets/iso2.png";
+import imgISO from "@/assets/iso2.optimized.webp";
 import imgIvd2 from "@/assets/ivd2.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd")({
@@ -106,7 +106,7 @@ function IVD() {
           <div className="hidden lg:block h-full relative">
             {/* White gradient fade to blend the left edge of the image */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <img width={1024} height={1024} src={imgHero} alt="IVD Support" className="w-full h-full object-cover object-left" />
+            <img width={1024} height={1024} src={imgHero} alt="In Vitro Diagnostic IVD Regulatory Affairs and Performance Evaluation - NKB Regovanta" loading="eager" fetchPriority="high" decoding="async" className="w-full h-full object-cover object-left" />
           </div>
         </div>
       </section>
@@ -233,9 +233,10 @@ function IVD() {
                   <img
                     src={`https://flagcdn.com/w40/${m.code}.png`}
                     srcSet={`https://flagcdn.com/w80/${m.code}.png 2x`}
-                    alt={`${m.name} Flag`}
+                    alt={`${m.name} Flag - IVD Regulatory Market Access - NKB Regovanta`}
                     className="w-8 h-5.5 object-cover rounded-xs shadow-2xs border border-gray-200 group-hover:scale-105 transition-transform shrink-0"
                     loading="lazy"
+                    decoding="async"
                   />
                   <h3 className="font-extrabold text-[14px] text-navy group-hover:text-[#0b3a96] transition-colors leading-tight">
                     {m.name}

@@ -82,7 +82,7 @@ function Article() {
             FDA QMSR 2026: What Medical Device Manufacturers Need to Know
           </h1>
 
-          <img src={imgFDA} alt="FDA QMSR" className="w-full h-[400px] object-cover rounded-md mb-12 shadow-sm" />
+          <img src={imgFDA} alt="FDA QMSR 2026 Quality Management System Regulation Transition and ISO 13485 Alignment - NKB Regovanta" loading="lazy" decoding="async" className="w-full h-[400px] object-cover rounded-md mb-12 shadow-sm" />
 
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
             <p className="lead text-xl text-navy/80 font-medium mb-8">

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgMedical from "@/assets/industry-medical.png";
-import imgIVD from "@/assets/industry-ivd.png";
-import imgCosmetics from "@/assets/industry-cosmetics.png";
+import imgMedical from "@/assets/industry-medical.optimized.webp";
+import imgIVD from "@/assets/industry-ivd.optimized.webp";
+import imgCosmetics from "@/assets/industry-cosmetics.optimized.webp";
 import imgPharma from "@/assets/Taking Liquid Out of Test Tubes.optimized.webp";
 
 export const Route = createFileRoute("/industries/")({

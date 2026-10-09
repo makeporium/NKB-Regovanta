@@ -1096,7 +1096,7 @@ function Index() {
                                                 {t.countryCode && (
                                                     <img
                                                         src={`https://flagcdn.com/w40/${t.countryCode}.png`}
-                                                        alt="Lithuania / EU"
+                                                        alt="Lithuania European Union Client Partner - NKB Regovanta" loading="lazy" decoding="async"
                                                         title="Lithuania (EU)"
                                                         className="w-4 h-3 object-cover rounded-xs border border-gray-200 inline-block shadow-2xs"
                                                     />

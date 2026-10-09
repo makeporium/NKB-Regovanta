@@ -68,7 +68,7 @@ function Article() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-8">
             Avoiding Duplicate Simulated-Use Work by Leveraging an Already Marketed Safety Feature
           </h1>
-          <img src={imgPlaceholder} alt="US FDA 510(k)" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
+          <img src={imgPlaceholder} alt="US FDA 510(k) Premarket Notification Case Study - Sharps Injury Prevention Safety Feature - NKB Regovanta" loading="lazy" decoding="async" className="w-full max-w-3xl mx-auto block h-[300px] object-cover rounded-md mb-12 shadow-sm" />
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
 
             <p className="lead font-medium text-navy/80">

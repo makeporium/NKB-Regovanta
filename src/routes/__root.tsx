@@ -43,18 +43,21 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
+import type { ErrorComponentProps } from "@tanstack/react-router";
+
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
+  const err = error instanceof Error ? error : new Error(String(error || "Unknown error"));
+  console.error(err);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+    reportLovableError(err, { boundary: "tanstack_root_error_component" });
+  }, [err]);
 
   const isNetworkError =
-    error?.message?.includes("Failed to fetch") ||
-    error?.message?.includes("dynamically imported module") ||
-    error?.message?.includes("Loading chunk") ||
-    error?.name === "ChunkLoadError";
+    err?.message?.includes("Failed to fetch") ||
+    err?.message?.includes("dynamically imported module") ||
+    err?.message?.includes("Loading chunk") ||
+    err?.name === "ChunkLoadError";
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">

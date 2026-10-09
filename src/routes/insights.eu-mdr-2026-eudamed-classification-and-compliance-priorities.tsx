@@ -82,7 +82,7 @@ function Article() {
             EU MDR 2026: EUDAMED, Classification & Compliance Priorities
           </h1>
 
-          <img src={imgEU} alt="EU MDR EUDAMED" className="w-full h-[400px] object-cover rounded-md mb-12 shadow-sm" />
+          <img src={imgEU} alt="EU MDR 2026 EUDAMED Mandatory Modules, Classification and Compliance Priorities - NKB Regovanta" loading="lazy" decoding="async" className="w-full h-[400px] object-cover rounded-md mb-12 shadow-sm" />
 
           <div className="prose prose-lg prose-navy max-w-none prose-headings:text-navy prose-a:text-accent hover:prose-a:text-navy transition-colors prose-strong:text-navy">
             <p className="lead text-xl text-navy/80 font-medium mb-8">

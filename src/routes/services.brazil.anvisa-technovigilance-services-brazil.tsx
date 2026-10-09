@@ -79,7 +79,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/brazil_compliance_1786397573546.png" alt="Brazil Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/brazil_compliance_1786397573546.png" alt="ANVISA Brazil Technovigilance and Post-Market Surveillance - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

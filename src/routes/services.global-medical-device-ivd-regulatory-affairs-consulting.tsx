@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight, User, Globe2, Handshake } from "lucide-react";
-import imgReg from "@/assets/regu.png";
+import imgReg from "@/assets/regu.optimized.webp";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/global-medical-device-ivd-regulatory-affairs-consulting")({

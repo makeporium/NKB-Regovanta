@@ -100,7 +100,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/australia_compliance_1786397463255.png" alt="Australia Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/australia_compliance_1786397463255.png" alt="Australia TGA Post-Market Surveillance and Vigilance Strategy - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

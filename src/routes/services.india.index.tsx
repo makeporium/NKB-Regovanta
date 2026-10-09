@@ -189,7 +189,7 @@ function IndiaCDSCOPage() {
       <section className="bg-[#f7f9fc]">
         {/* Desktop: text overlaid on the artwork, sized in container units so it scales with it */}
         <div className="@container relative hidden md:block">
-          <img width={1942} height={745} src={heroImg} alt="CDSCO medical device registration in India" className="block w-full" />
+          <img width={1942} height={745} src={heroImg} alt="CDSCO medical device registration and licensing in India - NKB Regovanta" loading="eager" fetchPriority="high" decoding="async" className="block w-full" />
 
           <div className="absolute inset-y-0 left-0 flex w-[48cqw] flex-col justify-center pl-[6.6cqw]">
             <p aria-hidden="true" className="font-display text-[3.1cqw] font-bold leading-[1.2] text-[#0f2340]">
@@ -288,7 +288,7 @@ function IndiaCDSCOPage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img width={1942} height={745} src={heroImg} alt="" className="mt-8 w-full" />
+          <img width={1942} height={745} src={heroImg} alt="CDSCO medical device registration and licensing in India - NKB Regovanta" loading="eager" fetchPriority="high" decoding="async" className="mt-8 w-full" />
         </div>
       </section>
 
@@ -315,7 +315,9 @@ function IndiaCDSCOPage() {
             </div>
             <img width={1672} height={941}
               src={imgWorldAccess}
-              alt="India connected to the United States, Canada, United Kingdom, European Union and Australia"
+              alt="India connected to the United States, Canada, United Kingdom, European Union and Australia - NKB Regovanta"
+              loading="lazy"
+              decoding="async"
               className="w-full rounded-2xl border border-gray-100 shadow-xl"
             />
           </div>

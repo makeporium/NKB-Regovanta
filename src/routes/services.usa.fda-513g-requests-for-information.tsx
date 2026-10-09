@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import { CTABand } from '@/components/site/Bits'
 
@@ -88,7 +88,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/us_fda_compliance_1786395357791.png" alt="FDA Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/us_fda_compliance_1786395357791.png" alt="US FDA 513(g) Request for Information and Device Classification - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

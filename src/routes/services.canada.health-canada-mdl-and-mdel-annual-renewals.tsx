@@ -97,7 +97,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/canada_compliance_1786397418101.png" alt="Canada Compliance" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/canada_compliance_1786397418101.png" alt="Health Canada Medical Device Licence MDL and MDEL Annual Renewals - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

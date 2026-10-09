@@ -35,7 +35,7 @@ import {
   Dna,
   Pipette,
 } from "lucide-react";
-import euIvdrDeviceImg from "@/assets/eu-ivdr-device.png";
+import euIvdrDeviceImg from "@/assets/eu-ivdr-device.optimized.webp";
 
 export const Route = createFileRoute("/services/eu/ivdr")({
   head: () => ({

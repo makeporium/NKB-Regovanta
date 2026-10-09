@@ -41,7 +41,7 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import nzHeroImg from "@/assets/nz-hero-auckland.png";
+import nzHeroImg from "@/assets/nz-hero-auckland.optimized.webp";
 
 export const Route = createFileRoute("/services/new-zealand/")({
   head: () => ({

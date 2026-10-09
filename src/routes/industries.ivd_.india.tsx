@@ -1,7 +1,7 @@
 ﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, FileCheck2, ShieldCheck, Microscope, Database, Stethoscope, AlertTriangle, CheckCircle2, ArrowRight } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgHero from "@/assets/industry-ivd.png";
+import imgHero from "@/assets/industry-ivd.optimized.webp";
 import cdscoFlowchart from "@/assets/cdsco_ivd_application_flowchart.optimized.webp";
 
 export const Route = createFileRoute("/industries/ivd_/india")({

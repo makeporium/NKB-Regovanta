@@ -1,7 +1,7 @@
 ﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, CheckCircle2, ShieldCheck, FileCheck2, Globe, FileText, Anchor } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import imgHero from "@/assets/industry-cosmetics.png";
+import imgHero from "@/assets/industry-cosmetics.optimized.webp";
 
 export const Route = createFileRoute("/industries/cosmetics_/uk")({
   head: () => ({

@@ -46,8 +46,8 @@ import {
   Boxes,
 } from "lucide-react";
 import ukHero3dImg from "@/assets/uk-hero-clean.jpg";
-import ukMapShieldImg from "@/assets/uk-map-shield.png";
-import ukBigBenImg from "@/assets/uk-big-ben-bottom.png";
+import ukMapShieldImg from "@/assets/uk-map-shield.optimized.webp";
+import ukBigBenImg from "@/assets/uk-big-ben-bottom.optimized.webp";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/uk/")({
@@ -845,7 +845,7 @@ function UKMarketCompletePage() {
             <div className="flex items-center gap-4 lg:gap-6 z-10">
               <img width={55} height={102}
                 src={ukBigBenImg}
-                alt="Big Ben London"
+                alt="UK MHRA Medical Device Registration and UK Responsible Person Services - NKB Regovanta" loading="lazy" decoding="async"
                 className="w-10 sm:w-12 h-auto object-contain shrink-0 drop-shadow-md hidden sm:block"
               />
               <div>

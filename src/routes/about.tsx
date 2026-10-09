@@ -27,10 +27,10 @@ import imgHero from "@/assets/Global Healthcare Expertise in Action.optimized.we
 import imgIndiaGlobe from "@/assets/Futuristic Globe Cityscape at Dawn.optimized.webp";
 import imgEarthCta from "@/assets/Earth’s Night Lights at Sunrise From Space.optimized.webp";
 import imgGoldNetwork from "@/assets/Global Network Map with Golden Connections.optimized.webp";
-import imgIvd from "@/assets/industry-ivd.png";
+import imgIvd from "@/assets/industry-ivd.optimized.webp";
 import imgPharma from "@/assets/industry-pharma.optimized.webp";
 import imgCosmetics from "@/assets/Elegant Neutral Skincare Still Life.optimized.webp";
-import imgMedical from "@/assets/industry-medical.png";
+import imgMedical from "@/assets/industry-medical.optimized.webp";
 import imgGlobeBadge from "@/assets/Glossy Blue Globe UI Icon.optimized.webp";
 import imgShieldBadge from "@/assets/Blue Security Shield UI Card.optimized.webp";
 import imgMicroscopeBadge from "@/assets/Microscope Icon on Floating Blue Panel.optimized.webp";
@@ -143,7 +143,10 @@ function About() {
             <section className="relative min-h-[600px] bg-navy flex items-center pt-16 pb-12 overflow-hidden">
                 <img width={1983} height={793}
                     src={imgHero}
-                    alt="Global healthcare expertise across regulatory, quality and market access"
+                    alt="Global healthcare expertise across regulatory, quality and market access - NKB Regovanta"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className="absolute inset-0 h-full w-full object-cover object-right opacity-90 pointer-events-none"
                 />
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-navy via-navy/85 to-navy/10"></div>
@@ -204,7 +207,9 @@ function About() {
                 {/* Desktop full-bleed image — right edge fades into the panel, no hard seam */}
                 <img width={1983} height={793}
                     src={imgIndiaGlobe}
-                    alt="From India to the world"
+                    alt="From India to the world - NKB Regovanta global compliance"
+                    loading="lazy"
+                    decoding="async"
                     className="hidden sm:block absolute inset-y-0 left-0 h-full w-[46%] lg:w-[44%] object-cover"
                     style={{
                         objectPosition: "0% center",
@@ -272,7 +277,9 @@ function About() {
                 <div className="absolute right-0 top-0 bottom-0 w-full lg:w-2/3 pointer-events-none">
                     <img width={1881} height={836}
                         src={imgGoldNetwork}
-                        alt="Global market access network from India"
+                        alt="Global market access network from India - NKB Regovanta"
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover object-right opacity-60 lg:opacity-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/40 to-transparent lg:via-slate-50/10"></div>
@@ -293,19 +300,19 @@ function About() {
 
                         <div className="flex flex-wrap gap-3">
                             <Link to="/services/india" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
-                                <img src="https://flagcdn.com/w20/in.png" alt="India" className="w-4 h-auto" /> INDIA
+                                <img src="https://flagcdn.com/w20/in.png" alt="India flag - CDSCO Regulatory Consulting" loading="lazy" decoding="async" className="w-4 h-auto" /> INDIA
                             </Link>
                             <Link to="/services/usa" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
-                                <img src="https://flagcdn.com/w20/us.png" alt="USA" className="w-4 h-auto" /> USA
+                                <img src="https://flagcdn.com/w20/us.png" alt="USA flag - US FDA Regulatory Consulting" loading="lazy" decoding="async" className="w-4 h-auto" /> USA
                             </Link>
                             <Link to="/services/eu" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
-                                <img src="https://flagcdn.com/w20/eu.png" alt="EU" className="w-4 h-auto" /> EU
+                                <img src="https://flagcdn.com/w20/eu.png" alt="European Union flag - EU MDR and IVDR Consulting" loading="lazy" decoding="async" className="w-4 h-auto" /> EU
                             </Link>
                             <Link to="/services/uk" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
-                                <img src="https://flagcdn.com/w20/gb.png" alt="UK" className="w-4 h-auto" /> UK
+                                <img src="https://flagcdn.com/w20/gb.png" alt="UK flag - UK MHRA & UKRP Consulting" loading="lazy" decoding="async" className="w-4 h-auto" /> UK
                             </Link>
                             <Link to="/services/canada" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
-                                <img src="https://flagcdn.com/w20/ca.png" alt="Canada" className="w-4 h-auto" /> CANADA
+                                <img src="https://flagcdn.com/w20/ca.png" alt="Canada flag - Health Canada MDL Consulting" loading="lazy" decoding="async" className="w-4 h-auto" /> CANADA
                             </Link>
                             <Link to="/markets" className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-xs font-bold text-navy border border-border hover:-translate-y-1 hover:shadow-md hover:border-accent/40 transition-all duration-300">
                                 <Globe2 className="w-3 h-3 text-navy/50" /> APAC
@@ -326,7 +333,7 @@ function About() {
                         {/* MEDICAL DEVICES */}
                         <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
                             <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
-                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img width={1024} height={1024} src={imgMedical} alt="Medical Devices Regulatory Affairs and QMS Compliance - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div className="p-5 flex flex-col flex-1">
                                 <div className="flex items-center gap-2.5 mb-2.5">
@@ -352,7 +359,7 @@ function About() {
                         {/* IVDs */}
                         <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
                             <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
-                                <img width={1024} height={1024} src={imgIvd} alt="IVDs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img width={1024} height={1024} src={imgIvd} alt="In Vitro Diagnostic IVDR and CDSCO Performance Evaluation - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div className="p-5 flex flex-col flex-1">
                                 <div className="flex items-center gap-2.5 mb-2.5">
@@ -378,7 +385,7 @@ function About() {
                         {/* PHARMACEUTICALS */}
                         <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
                             <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
-                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals & Drugs" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img width={1024} height={1024} src={imgPharma} alt="Pharmaceuticals and Drug Licensing CDSCO Form 10 - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div className="p-5 flex flex-col flex-1">
                                 <div className="flex items-center gap-2.5 mb-2.5">
@@ -404,7 +411,7 @@ function About() {
                         {/* COSMETICS */}
                         <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
                             <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
-                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img width={1535} height={1024} src={imgCosmetics} alt="Cosmetics Regulatory Compliance and Safety Assessments - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div className="p-5 flex flex-col flex-1">
                                 <div className="flex items-center gap-2.5 mb-2.5">
@@ -430,7 +437,7 @@ function About() {
                         {/* MANUFACTURING */}
                         <div className="bg-white hover:bg-slate-50/50 rounded-2xl border border-gray-200/90 overflow-hidden flex flex-col shadow-2xs hover:shadow-md transition-all duration-300 group">
                             <div className="w-full h-40 border-b border-gray-100 overflow-hidden relative">
-                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Manufacturing" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <img width={1376} height={768} src={imgPharmaEquipment} alt="Pharmaceutical Cleanroom Equipment and cGMP Manufacturing Solutions - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div className="p-5 flex flex-col flex-1">
                                 <div className="flex items-center gap-2.5 mb-2.5">
@@ -532,7 +539,7 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img width={1254} height={1254} src={imgPuzzleBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgPuzzleBadge} alt="Global Regulatory Market-Entry Capability and Strategic Advisory - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">MARKET-ENTRY CAPABILITY</h3>
@@ -550,7 +557,7 @@ function About() {
 
                         <div className="border-2 border-border rounded-lg p-6 flex items-start gap-5 hover:border-navy/20 transition-colors">
                             <div className="h-12 w-12 rounded-full overflow-hidden shrink-0">
-                                <img width={1254} height={1254} src={imgGrowthBadge} alt="" className="h-full w-full object-cover" />
+                                <img width={1254} height={1254} src={imgGrowthBadge} alt="Senior Regulatory Affairs Consulting and Compliance Management - NKB Regovanta" loading="lazy" decoding="async" className="h-full w-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="font-extrabold text-navy text-[13px] uppercase mb-2">SENIOR REGULATORY EXPERTISE</h3>
@@ -570,7 +577,9 @@ function About() {
                 {/* Split background: rocket growth (left) / mother & child care (right) */}
                 <img width={2117} height={743}
                     src={imgTechCare}
-                    alt=""
+                    alt="Innovative Medical Technology and Patient Care Regulatory Pathway - NKB Regovanta"
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 h-full w-full object-cover hidden md:block"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent md:hidden"></div>
@@ -829,7 +838,9 @@ function About() {
             <section className="bg-navy py-12 relative overflow-hidden">
                 <img width={1983} height={793}
                     src={imgEarthCta}
-                    alt=""
+                    alt="Global Healthcare Market Expansion and Regulatory Consulting - NKB Regovanta"
+                    loading="lazy"
+                    decoding="async"
                     className="absolute right-0 top-0 bottom-0 h-full w-2/3 object-cover object-right opacity-40 pointer-events-none"
                     style={{
                         maskImage: "linear-gradient(to left, black 30%, transparent 90%)",

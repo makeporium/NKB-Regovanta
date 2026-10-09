@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight, ChevronRight } from "lucide-react";
-import imgHero from "@/assets/industry-medical.png";
+import imgHero from "@/assets/industry-medical.optimized.webp";
 
 export const Route = createFileRoute("/industries/medical-devices")({
   head: () => ({

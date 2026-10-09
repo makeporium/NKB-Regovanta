@@ -31,7 +31,7 @@ import {
   Scale,
   ArrowLeft,
 } from "lucide-react";
-import euMdrDeviceImg from "@/assets/eu-mdr-device.png";
+import euMdrDeviceImg from "@/assets/eu-mdr-device.optimized.webp";
 
 export const Route = createFileRoute("/services/eu/mdr")({
   head: () => ({

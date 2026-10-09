@@ -392,7 +392,7 @@ function EUMarketHubPage() {
                     <div className="w-20 h-20 shrink-0 hidden sm:block">
                       <img width={113} height={118}
                         src={euIvdrDeviceImg}
-                        alt="IVD Microscope"
+                        alt="EU MDR and IVDR CE Mark Medical Device Laboratory Assessment - NKB Regovanta" loading="lazy" decoding="async"
                         className="w-full h-full object-contain"
                       />
                     </div>

@@ -41,8 +41,8 @@ import {
   FileCode,
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
-import brazilHeroImg from "@/assets/brazil-hero-rio.png";
-import brazilMapGraphic from "@/assets/brazil-map-graphic.png";
+import brazilHeroImg from "@/assets/brazil-hero-rio.optimized.webp";
+import brazilMapGraphic from "@/assets/brazil-map-graphic.optimized.webp";
 
 export const Route = createFileRoute("/services/brazil/")({
   head: () => ({
@@ -699,7 +699,7 @@ function BrazilHubPage() {
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
                 <img width={123} height={118}
                   src={brazilMapGraphic}
-                  alt="Brazil Map"
+                  alt="Brazil ANVISA Medical Device Registration and Brazilian Registration Holder Support - NKB Regovanta" loading="lazy" decoding="async"
                   className="w-full h-auto object-contain"
                 />
               </div>

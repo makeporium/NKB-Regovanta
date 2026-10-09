@@ -42,7 +42,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import sydneyHeroImg from "@/assets/australia-hero-clean.jpg";
-import australiaMapGraphic from "@/assets/australia-map-graphic.png";
+import australiaMapGraphic from "@/assets/australia-map-graphic.optimized.webp";
 
 export const Route = createFileRoute("/services/australia/")({
   head: () => ({
@@ -692,7 +692,7 @@ function AustraliaHubPage() {
               <div className="w-36 sm:w-44 shrink-0 opacity-90">
                 <img width={137} height={108}
                   src={australiaMapGraphic}
-                  alt="Australia Map"
+                  alt="Australia TGA ARTG Medical Device Market Access Map - NKB Regovanta" loading="lazy" decoding="async"
                   className="w-full h-auto object-contain"
                 />
               </div>

@@ -45,9 +45,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import canadaHero3dImg from "@/assets/canada-hero-clean.jpg";
-import canadaMapShieldImg from "@/assets/canada-map-shield.png";
-import canadaMapleBottomImg from "@/assets/canada-maple-leaf-bottom.png";
-import canadaMdsapLogoImg from "@/assets/canada-mdsap-logo.png";
+import canadaMapShieldImg from "@/assets/canada-map-shield.optimized.webp";
+import canadaMapleBottomImg from "@/assets/canada-maple-leaf-bottom.optimized.webp";
+import canadaMdsapLogoImg from "@/assets/canada-mdsap-logo.optimized.webp";
 import { CTABand } from "@/components/site/Bits";
 
 export const Route = createFileRoute("/services/canada/")({
@@ -654,7 +654,7 @@ function CanadaMarketCompletePage() {
               <p className="text-[9.5px] text-gray-600 leading-tight font-medium mb-1.5">
                 Canada is a participating country in MDSAP. A single MDSAP audit can satisfy the QMS requirements for Canada along with other MDSAP countries.
               </p>
-              <img width={49} height={29} src={canadaMdsapLogoImg} alt="MDSAP Logo" className="h-3.5 w-auto object-contain opacity-80" />
+              <img width={49} height={29} src={canadaMdsapLogoImg} alt="Medical Device Single Audit Program MDSAP Certification - Health Canada Compliance - NKB Regovanta" loading="lazy" decoding="async" className="h-3.5 w-auto object-contain opacity-80" />
             </div>
 
             <div>
