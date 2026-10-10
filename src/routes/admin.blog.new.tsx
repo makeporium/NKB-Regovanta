@@ -251,6 +251,27 @@ function BlogPostEditorPage() {
 
   const canPublish = Boolean(title.trim() && slug.trim() && contentHtml.trim() && !duplicateSlugPost);
 
+  const currentAuthor = useMemo(() => {
+    return authors.find((a) => a.id === authorId);
+  }, [authors, authorId]);
+
+  const currentCategory = useMemo(() => {
+    return categories.find((c) => c.id === categoryId);
+  }, [categories, categoryId]);
+
+  const articleMeta = useMemo(() => ({
+    title: title || "Article Title",
+    slug: slug || "article-slug",
+    excerpt: metaDescription || "Insight article overview",
+    category: currentCategory?.name || "Medical Devices",
+    authorName: currentAuthor?.name || "NKB Regulatory Team",
+    authorRole: currentAuthor?.credentials || currentAuthor?.role || "Regulatory Affairs Specialist",
+    authorAvatar: currentAuthor?.avatar_url || "",
+    featuredImage,
+    featuredImageAlt,
+    publishDate: publishDateIst ? formatIstDate(fromIstDatetimeLocalToIso(publishDateIst)) : "Oct 2026",
+  }), [title, slug, metaDescription, currentCategory, currentAuthor, featuredImage, featuredImageAlt, publishDateIst]);
+
   const handleSavePost = async (finalStatus: "draft" | "published" | "scheduled") => {
     if (!title.trim() || !slug.trim()) {
       toast.error("Blog title and URL slug are required.");
@@ -606,6 +627,7 @@ function BlogPostEditorPage() {
                   value={contentHtml}
                   onChange={setContentHtml}
                   placeholder="Write or paste your regulatory guidance, medical device compliance steps, and technical comparisons..."
+                  articleMeta={articleMeta}
                 />
               </div>
             )}

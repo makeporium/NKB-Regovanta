@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
-const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.png";
+const imgInsp = "/assets/brain/insight_fda_inspections_1786440998246.webp";
 
 export const Route = createFileRoute("/insights/fda-medical-device-inspections-in-2026-preparing-for-the-new-qmsr-framework")({
   head: () => ({
@@ -46,7 +46,7 @@ function Article() {
             "@type": "BlogPosting",
             "headline": "FDA Medical Device Inspections in 2026: Preparing for the New QMSR Framework",
             "description": "How to prepare for FDA medical device inspections under the 2026 QMSR-aligned Compliance Program 7382.850, including records, audits, and readiness.",
-            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.png",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_inspections_1786440998246.webp",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",

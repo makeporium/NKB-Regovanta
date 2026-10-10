@@ -20,8 +20,35 @@ import { toast } from "sonner";
 import { WifiOff } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { settingsService } from "../lib/services/settingsService";
+import { pageContentService, type PageVisualContent } from "../lib/services/pageContentService";
+import { DynamicPageRenderer } from "../components/site/DynamicPageRenderer";
 
 function NotFoundComponent() {
+  const [dynamicContent, setDynamicContent] = useState<PageVisualContent | null>(null);
+  const [checking, setChecking] = useState(true);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      setChecking(false);
+      return;
+    }
+    const cleanPath = window.location.pathname.replace(/\/$/, "") || "/";
+    pageContentService.getContent(cleanPath).then((content) => {
+      if (content && (content.hero?.h1 || (content.sections && content.sections.length > 0) || (content.faqs && content.faqs.length > 0))) {
+        setDynamicContent(content);
+      }
+      setChecking(false);
+    });
+  }, []);
+
+  if (checking) {
+    return <div className="min-h-screen bg-white" />;
+  }
+
+  if (dynamicContent) {
+    return <DynamicPageRenderer content={dynamicContent} />;
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -307,6 +334,17 @@ gtag('config', ${JSON.stringify(ga4Id)});`,
   );
 }
 
+function decodeHtmlEntities(str: string): string {
+  if (!str) return "";
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
 function ClientSeoManager() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
@@ -316,7 +354,7 @@ function ClientSeoManager() {
     const cleanPath = pathname.replace(/\/$/, "") || "/";
     async function loadSeo() {
       try {
-        const [{ data }, { data: schema }] = await Promise.all([
+        const [{ data }, { data: schema }, { data: pageRow }] = await Promise.all([
           supabase
             .from("seo_meta")
             .select("seo_title, meta_description, canonical_url, og_title, og_description, twitter_title, twitter_description, robots_index, robots_follow")
@@ -326,6 +364,11 @@ function ClientSeoManager() {
             .from("schema_data")
             .select("custom_json, is_enabled")
             .eq("target_url", cleanPath)
+            .maybeSingle(),
+          supabase
+            .from("pages")
+            .select("h1")
+            .eq("url_path", cleanPath)
             .maybeSingle(),
         ]);
 
@@ -346,41 +389,49 @@ function ClientSeoManager() {
         }
 
         if (data.seo_title) {
-          document.title = data.seo_title;
+          document.title = decodeHtmlEntities(data.seo_title);
+        }
+
+        if (pageRow?.h1) {
+          const h1El = document.querySelector("h1");
+          const cleanH1 = decodeHtmlEntities(pageRow.h1.trim());
+          if (h1El && h1El.textContent?.trim() !== cleanH1) {
+            h1El.textContent = cleanH1;
+          }
         }
 
         if (data.meta_description) {
           const metaDesc = document.querySelector('meta[name="description"]');
           if (metaDesc) {
-            metaDesc.setAttribute("content", data.meta_description);
+            metaDesc.setAttribute("content", decodeHtmlEntities(data.meta_description));
           }
         }
 
         if (data.og_title || data.seo_title) {
           const ogTitle = document.querySelector('meta[property="og:title"]');
           if (ogTitle) {
-            ogTitle.setAttribute("content", data.og_title || data.seo_title);
+            ogTitle.setAttribute("content", decodeHtmlEntities(data.og_title || data.seo_title));
           }
         }
 
         if (data.og_description || data.meta_description) {
           const ogDesc = document.querySelector('meta[property="og:description"]');
           if (ogDesc) {
-            ogDesc.setAttribute("content", data.og_description || data.meta_description);
+            ogDesc.setAttribute("content", decodeHtmlEntities(data.og_description || data.meta_description));
           }
         }
 
         if (data.twitter_title || data.seo_title) {
           const twTitle = document.querySelector('meta[name="twitter:title"]');
           if (twTitle) {
-            twTitle.setAttribute("content", data.twitter_title || data.seo_title);
+            twTitle.setAttribute("content", decodeHtmlEntities(data.twitter_title || data.seo_title));
           }
         }
 
         if (data.twitter_description || data.meta_description) {
           const twDesc = document.querySelector('meta[name="twitter:description"]');
           if (twDesc) {
-            twDesc.setAttribute("content", data.twitter_description || data.meta_description);
+            twDesc.setAttribute("content", decodeHtmlEntities(data.twitter_description || data.meta_description));
           }
         }
 
@@ -400,6 +451,15 @@ function ClientSeoManager() {
     }
 
     loadSeo();
+
+    const handleSeoChanged = () => {
+      loadSeo();
+    };
+
+    window.addEventListener("nkb_seo_changed", handleSeoChanged);
+    return () => {
+      window.removeEventListener("nkb_seo_changed", handleSeoChanged);
+    };
   }, [pathname]);
 
   return null;
@@ -530,10 +590,97 @@ function NetworkStatusMonitor() {
   );
 }
 
+function MainContentWrapper({ cleanPath }: { cleanPath: string }) {
+  const isAdmin = cleanPath.startsWith("/admin");
+
+  if (isAdmin) {
+    return <Outlet />;
+  }
+
+  // 1. Check synchronous cache first (0ms latency)
+  const syncContent = pageContentService.getSyncContent(cleanPath);
+  const isOverriddenSync = pageContentService.isKeyOverriddenSync(cleanPath);
+
+  const [overrideContent, setOverrideContent] = useState<PageVisualContent | null | undefined>(syncContent);
+  const [isChecking, setIsChecking] = useState<boolean>(() => {
+    if (syncContent !== undefined) return false;
+    if (isOverriddenSync === false) return false;
+    return true;
+  });
+
+  useEffect(() => {
+    let active = true;
+
+    // Listen for live cross-tab and in-window override changes (saves or reverts)
+    const handleOverrideChanged = (e: Event) => {
+      const customEvent = e as CustomEvent<{
+        path: string;
+        action: string;
+        content?: PageVisualContent;
+      }>;
+      if (customEvent.detail && customEvent.detail.path === cleanPath) {
+        if (customEvent.detail.action === "revert") {
+          setOverrideContent(null);
+          setIsChecking(false);
+        } else if (customEvent.detail.action === "save" && customEvent.detail.content) {
+          setOverrideContent(customEvent.detail.content);
+          setIsChecking(false);
+        }
+      }
+    };
+
+    window.addEventListener("nkb_content_override_changed", handleOverrideChanged);
+
+    // If synchronously confirmed to have no override, reset override state immediately
+    if (isOverriddenSync === false) {
+      setOverrideContent(null);
+      setIsChecking(false);
+    }
+
+    // Always revalidate with fresh database check
+    pageContentService.getContent(cleanPath, true).then((content) => {
+      if (active) {
+        if (content && ((content.sections && content.sections.length > 0) || content.fullHtmlOverride)) {
+          setOverrideContent(content);
+        } else {
+          setOverrideContent(null);
+        }
+        setIsChecking(false);
+      }
+    });
+
+    return () => {
+      active = false;
+      window.removeEventListener("nkb_content_override_changed", handleOverrideChanged);
+    };
+  }, [cleanPath, isOverriddenSync]);
+
+  if (overrideContent && ((overrideContent.sections && overrideContent.sections.length > 0) || overrideContent.fullHtmlOverride)) {
+    return <DynamicPageRenderer content={overrideContent} />;
+  }
+
+  // If this route is known to be overridden and is loading the override, don't flash the original page first!
+  if (isChecking && isOverriddenSync === true) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#0b3a96] border-t-transparent" />
+      </div>
+    );
+  }
+
+  return <Outlet />;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const cleanPath = pathname.replace(/\/$/, "") || "/";
   const isAdmin = pathname.startsWith("/admin");
+
+  useEffect(() => {
+    // Preload known page overrides on app boot for 0ms transitions
+    pageContentService.initKnownKeys();
+  }, []);
 
   useEffect(() => {
     // Automatically recover from temporary network glitches or stale chunk preloads
@@ -570,8 +717,8 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          {/* Required: nested routes render here. */}
-          <Outlet />
+          {/* Renders dynamic content override if active; otherwise renders original React route */}
+          <MainContentWrapper key={cleanPath} cleanPath={cleanPath} />
         </main>
         <Footer />
         <QueryPopup />

@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle2, AlertTriangle, HelpCircle, FileText, Layers } 
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
-const imgArticle = "/assets/brain/insight_eu_mdr_1786440985783.png";
+const imgArticle = "/assets/brain/insight_eu_mdr_1786440985783.webp";
 
 export const Route = createFileRoute("/insights/eu-mdr-compliance-challenges")({
   head: () => ({

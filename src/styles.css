@@ -270,29 +270,66 @@ article li a:hover,
 .rich-editor-content table {
   width: 100% !important;
   border-collapse: collapse !important;
-  margin: 1.5rem 0 !important;
-  border: 1px solid #e2e8f0 !important;
+  margin: 1.75rem 0 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
 }
 
 .dynamic-article-prose th,
 .rich-editor-content th {
-  background-color: #f1f5f9 !important;
+  background-color: #0b2545 !important;
   font-weight: 700 !important;
-  color: #0f172a !important;
-  padding: 0.75rem 1rem !important;
-  border: 1px solid #cbd5e1 !important;
+  color: #ffffff !important;
+  padding: 0.85rem 1rem !important;
+  border: 1px solid #1e3a8a !important;
   text-align: left !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.025em !important;
+}
+
+.dynamic-article-prose th p,
+.rich-editor-content th p,
+.dynamic-article-prose th span,
+.rich-editor-content th span,
+.dynamic-article-prose th div,
+.rich-editor-content th div,
+.dynamic-article-prose th strong,
+.rich-editor-content th strong,
+.dynamic-article-prose th * {
+  color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 700 !important;
+  background-color: transparent !important;
+  line-height: 1.4 !important;
 }
 
 .dynamic-article-prose td,
 .rich-editor-content td {
   padding: 0.75rem 1rem !important;
   border: 1px solid #e2e8f0 !important;
-  color: #334155 !important;
+  color: #1e293b !important;
+  background-color: #ffffff;
+  font-size: 0.9375rem !important;
+  line-height: 1.6 !important;
 }
 
-.dynamic-article-prose tr:nth-child(even),
-.rich-editor-content tr:nth-child(even) {
+.dynamic-article-prose td p,
+.rich-editor-content td p {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+}
+
+.dynamic-article-prose td *,
+.rich-editor-content td * {
+  color: inherit;
+}
+
+.dynamic-article-prose tr:nth-child(even) td,
+.rich-editor-content tr:nth-child(even) td {
   background-color: #f8fafc !important;
 }
 

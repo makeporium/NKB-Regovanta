@@ -297,11 +297,54 @@ function SeoDashboardPage() {
   const healthyPageCount = Math.max(0, auditedPageCount - issuePageCount - notIndexedCount);
   const healthScore = auditedPageCount ? Math.round((healthyPageCount / auditedPageCount) * 100) : 0;
 
+  const getIssueOverviewLink = (issueId: string): string => {
+    switch (issueId) {
+      case "missing-alts":
+        return "/admin/seo/images?filter=missing_alt";
+      case "oversized-imgs":
+        return "/admin/seo/images?filter=oversized";
+      case "broken-links":
+        return "/admin/seo/broken-links";
+      case "missing-h1":
+        return "/admin/seo/pages?filter=missing_h1";
+      case "missing-canonicals":
+        return "/admin/seo/pages?filter=missing_canonical";
+      case "missing-titles":
+      case "missing-descs":
+        return "/admin/seo/pages?filter=missing";
+      default:
+        return "/admin/seo/pages";
+    }
+  };
+
+  const getIssueActionLink = (issueId: string, url: string, itemTitle?: string): string => {
+    switch (issueId) {
+      case "missing-alts":
+        return `/admin/seo/images?edit=${encodeURIComponent(itemTitle || url)}&filter=missing_alt`;
+      case "oversized-imgs":
+        return `/admin/seo/images?edit=${encodeURIComponent(itemTitle || url)}&filter=oversized`;
+      case "broken-links":
+        return `/admin/seo/broken-links?search=${encodeURIComponent(url)}`;
+      case "missing-h1":
+        return `/admin/seo/pages?edit=${encodeURIComponent(url)}&filter=missing_h1`;
+      case "missing-canonicals":
+        return `/admin/seo/pages?edit=${encodeURIComponent(url)}&filter=missing_canonical`;
+      case "missing-titles":
+      case "missing-descs":
+      case "dup-titles":
+      case "dup-descs":
+      default:
+        return `/admin/seo/pages?edit=${encodeURIComponent(url)}`;
+    }
+  };
+
   // Flat list of all affected items for the Recent SEO Issues table
   const allAffectedRows = useMemo(() => {
     const rows: Array<{
       id: string;
+      issueId: string;
       pageUrl: string;
+      itemTitle: string;
       issueType: string;
       details: string;
       detectedOn: string;
@@ -311,8 +354,10 @@ function SeoDashboardPage() {
       if (selectedIssueFilter !== "ALL" && issue.id !== selectedIssueFilter) continue;
       for (const item of issue.affected) {
         rows.push({
-          id: `${issue.id}-${item.url}`,
+          id: `${issue.id}-${item.url}-${item.title}`,
+          issueId: issue.id,
           pageUrl: item.url,
+          itemTitle: item.title,
           issueType: issue.label,
           details: item.reason,
           detectedOn: item.detectedOn,
@@ -414,8 +459,15 @@ function SeoDashboardPage() {
                 <h2 className="text-sm font-bold text-slate-900">SEO Issue Overview</h2>
                 <p className="text-xs text-slate-400">Summary of on-page optimization issues across your website.</p>
               </div>
-              <Link to="/admin/seo/pages" className="inline-flex items-center gap-1 text-xs font-semibold text-[#0b3a96] hover:underline">
-                <span>View details</span>
+              <Link
+                to={selectedIssueFilter === "ALL" ? "/admin/seo/pages" : getIssueOverviewLink(selectedIssueFilter)}
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#0b3a96] hover:underline"
+              >
+                <span>
+                  {selectedIssueFilter === "ALL"
+                    ? "View pages editor"
+                    : `Open ${issues.find((i) => i.id === selectedIssueFilter)?.label || "tool"}`}
+                </span>
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -424,36 +476,57 @@ function SeoDashboardPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {issues.map((issue) => {
                 const isWarning = issue.count > 0;
+                const isSelected = selectedIssueFilter === issue.id;
                 return (
-                  <button
+                  <div
                     key={issue.id}
-                    onClick={() => {
-                      setSelectedIssueFilter(selectedIssueFilter === issue.id ? "ALL" : issue.id);
-                      setCurrentPage(1);
-                    }}
-                    className={`flex items-center justify-between p-3.5 rounded-xl border text-left transition-all ${
+                    className={`flex flex-col justify-between p-3.5 rounded-xl border text-left transition-all ${
                       isWarning
                         ? "bg-rose-50/70 border-rose-200/80 hover:bg-rose-100/70 hover:border-rose-300"
                         : "bg-slate-50/70 border-slate-200/80 hover:bg-slate-100/70"
-                    } ${selectedIssueFilter === issue.id ? "ring-2 ring-[#0b3a96] border-transparent" : ""}`}
+                    } ${isSelected ? "ring-2 ring-[#0b3a96] border-transparent" : ""}`}
                   >
-                    <div className="flex items-center gap-2.5">
-                      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
-                        isWarning ? "bg-rose-100 text-rose-600" : "bg-white border border-slate-200 text-slate-400"
-                      }`}>
-                        {isWarning ? <AlertTriangle className="h-4 w-4" /> : <FileText className="h-4 w-4" />}
-                      </div>
-                      <div>
-                        <div className={`text-base font-black ${isWarning ? "text-rose-700" : "text-slate-800"}`}>
-                          {issue.count}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedIssueFilter(selectedIssueFilter === issue.id ? "ALL" : issue.id);
+                        setCurrentPage(1);
+                      }}
+                      className="w-full flex items-center justify-between text-left"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <div
+                          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
+                            isWarning ? "bg-rose-100 text-rose-600" : "bg-white border border-slate-200 text-slate-400"
+                          }`}
+                        >
+                          {isWarning ? <AlertTriangle className="h-4 w-4" /> : <FileText className="h-4 w-4" />}
                         </div>
-                        <div className="text-[11px] font-semibold text-slate-600 truncate max-w-[120px]">
-                          {issue.label}
+                        <div>
+                          <div className={`text-base font-black ${isWarning ? "text-rose-700" : "text-slate-800"}`}>
+                            {issue.count}
+                          </div>
+                          <div className="text-[11px] font-semibold text-slate-600 truncate max-w-[120px]">
+                            {issue.label}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <ChevronRight className={`h-4 w-4 shrink-0 ${isWarning ? "text-rose-400" : "text-slate-300"}`} />
-                  </button>
+                      <ChevronRight className={`h-4 w-4 shrink-0 ${isWarning ? "text-rose-400" : "text-slate-300"}`} />
+                    </button>
+
+                    {isWarning && (
+                      <div className="mt-2.5 pt-2 border-t border-rose-100/90 flex items-center justify-between text-[11px]">
+                        <span className="text-rose-600/80 font-medium">Show items</span>
+                        <Link
+                          to={getIssueOverviewLink(issue.id)}
+                          className="font-bold text-[#0b3a96] hover:underline inline-flex items-center gap-0.5"
+                        >
+                          <span>Open tool</span>
+                          <ArrowRight className="h-2.5 w-2.5" />
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -525,10 +598,10 @@ function SeoDashboardPage() {
                         </td>
                         <td className="px-4 py-3 text-right whitespace-nowrap">
                           <Link
-                            to="/admin/seo/pages"
+                            to={getIssueActionLink(row.issueId, row.pageUrl, row.itemTitle)}
                             className="inline-flex items-center gap-1 font-bold text-blue-600 hover:text-blue-800 transition"
                           >
-                            <span>Review</span>
+                            <span>Inspect &amp; Fix</span>
                             <ArrowRight className="h-3 w-3" />
                           </Link>
                         </td>

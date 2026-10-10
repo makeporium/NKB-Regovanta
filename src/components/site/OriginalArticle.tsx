@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Eye } from 'lucide-react';
 import sourceCatalog from '@/content/article-sources.json';
+import { cleanArticleHtml } from '@/routes/insights.$slug';
 
 type Article = {
   slug: string; title: string; description: string; intro: string;
@@ -14,8 +15,11 @@ type Article = {
 
 const sources = sourceCatalog as Record<string, { label: string; url: string }>;
 
+const originalArticleCache = new Map<string, { dbContent: any; checked: boolean }>();
+
 // Tracks articles whose admin-edited version is actively loading
 export function OriginalArticle({ article }: { article: Article }) {
+  const cached = originalArticleCache.get(article.slug);
   const [dbContent, setDbContent] = useState<{
     title: string;
     content_html: string;
@@ -24,8 +28,8 @@ export function OriginalArticle({ article }: { article: Article }) {
     featured_image_alt?: string;
     updated_at?: string;
     status?: string;
-  } | null>(null);
-  const [checked, setChecked] = useState(false);
+  } | null>(cached ? cached.dbContent : null);
+  const [checked, setChecked] = useState(cached ? cached.checked : false);
   const [isPreview, setIsPreview] = useState(false);
 
   useEffect(() => {
@@ -46,10 +50,12 @@ export function OriginalArticle({ article }: { article: Article }) {
     }
 
     query.maybeSingle().then(({ data }) => {
-      // Only use DB version if it has meaningful content_html
+      let finalData = null;
       if (data && data.content_html && data.content_html.trim().length > 50) {
+        finalData = data;
         setDbContent(data);
       }
+      originalArticleCache.set(article.slug, { dbContent: finalData, checked: true });
       setChecked(true);
     });
   }, [article.slug]);
@@ -165,8 +171,8 @@ export function OriginalArticle({ article }: { article: Article }) {
 
           {/* Rich text body from admin editor */}
           <div
-            className="prose prose-slate lg:prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900 prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 prose-img:rounded-xl prose-table:border prose-table:border-slate-200 prose-th:bg-slate-100 prose-th:p-3 prose-td:p-3 prose-td:border-t prose-td:border-slate-200 my-10"
-            dangerouslySetInnerHTML={{ __html: dbContent.content_html }}
+            className="dynamic-article-prose prose prose-slate lg:prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-[#0a192f] prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-2 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-a:text-[#0b3a96] prose-a:font-semibold hover:prose-a:underline prose-img:rounded-xl prose-table:w-full my-10"
+            dangerouslySetInnerHTML={{ __html: cleanArticleHtml(dbContent.content_html) }}
           />
 
           {/* Consulting CTA */}

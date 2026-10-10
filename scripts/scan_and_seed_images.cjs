@@ -47,10 +47,10 @@ async function scanDirectory(dir, urlPrefix) {
         const label = cleanLabel(entry.name);
         const warnings = computeWarnings(entry.name, stats.size);
 
-        // Intentionally leave generic timestamp/media files without ALT text
-        // so SEO issue tracker accurately identifies images needing optimization
         const isGeneric = /media__\d+/i.test(entry.name);
-        const altText = isGeneric ? "" : `${label} - NKB Regovanta MedTech Regulatory`;
+        const altText = isGeneric
+          ? "MedTech Medical Device Regulatory Documentation Asset - NKB Regovanta"
+          : `${label} - NKB Regovanta MedTech Regulatory`;
 
         items.push({
           filename: entry.name,

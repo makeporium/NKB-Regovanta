@@ -50,6 +50,9 @@ function BrokenLinksAnd404Page() {
 
   useEffect(() => {
     loadData();
+    const params = new URLSearchParams(window.location.search);
+    const searchParam = params.get("search");
+    if (searchParam) setSearch(searchParam);
   }, []);
 
   const loadData = async () => {

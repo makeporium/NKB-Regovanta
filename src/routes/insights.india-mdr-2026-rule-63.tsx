@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle2, FileText, Globe2, ShieldCheck } from "lucide-r
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
-const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.png";
+const imgArticle = "/assets/brain/india_cdsco_market_1786307143373.webp";
 
 export const Route = createFileRoute("/insights/india-mdr-2026-rule-63")({
   head: () => ({
@@ -51,7 +51,7 @@ function ArticlePage() {
             "@type": "BlogPosting",
             "headline": "India Medical Device Rules 2026: EU-Approved Devices Gain Recognition Under Rule 63",
             "description": "What the latest MDR amendment means for medical device manufacturers, EU companies and Indian importers under G.S.R. 744(E).",
-            "image": "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.png",
+            "image": "https://www.nkbregovanta.com/assets/brain/india_cdsco_market_1786307143373.webp",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",

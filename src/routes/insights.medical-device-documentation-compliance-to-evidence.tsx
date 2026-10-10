@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle2, ShieldCheck, FileText, FileCheck, ClipboardLis
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
 
-const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.png";
+const imgArticle = "/assets/brain/technical_documentation_hero_1786399660256.webp";
 
 export const Route = createFileRoute("/insights/medical-device-documentation-compliance-to-evidence")({
   head: () => ({
@@ -51,7 +51,7 @@ function ArticlePage() {
             "@type": "BlogPosting",
             "headline": "Medical Device Documentation: From Compliance Records to Regulatory Evidence",
             "description": "Why medical device documentation must evolve from isolated compliance records into connected, lifecycle-wide regulatory evidence.",
-            "image": "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.png",
+            "image": "https://www.nkbregovanta.com/assets/brain/technical_documentation_hero_1786399660256.webp",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",

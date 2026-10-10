@@ -32,14 +32,34 @@ import {
   Globe,
   BookOpen,
   Filter,
+  Monitor,
+  Tablet,
+  Smartphone,
+  Plus,
+  ArrowLeft,
+  Clock,
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
+
+export interface BlogArticleMeta {
+  title?: string;
+  slug?: string;
+  excerpt?: string;
+  category?: string;
+  authorName?: string;
+  authorRole?: string;
+  authorAvatar?: string;
+  featuredImage?: string;
+  featuredImageAlt?: string;
+  publishDate?: string;
+}
 
 interface RichBlogEditorProps {
   value: string;
   onChange: (html: string) => void;
   placeholder?: string;
+  articleMeta?: BlogArticleMeta;
 }
 
 export interface InternalLinkOption {
@@ -284,29 +304,265 @@ function escapeRegex(str: string): string {
 }
 
 /**
- * Sanitizes pasted or raw HTML by stripping global wrappers, doctypes,
- * head tags, and global style blocks that could contaminate site layout.
+ * Automatically cleans and formats blog article HTML to match the authentic
+ * design system of NKB Regovanta hardcoded insights:
+ * 1. Strips Google Docs & Microsoft Word inline formatting (Calibri, font-size: 11pt, rgb(0,0,0), line-height, white-space).
+ * 2. Cleans broken headings like <h2>undefined</h2>.
+ * 3. Converts fake bold spans into semantic <strong> tags.
+ * 4. Strips empty spans and empty paragraphs.
+ * 5. Returns cleaned HTML and a count of fixed issues.
  */
-export function sanitizeArticleContent(rawHtml: string): string {
-  if (!rawHtml) return "";
+export function autoFormatArticleHtml(rawHtml: string): { cleaned: string; changesCount: number } {
+  if (!rawHtml) return { cleaned: "", changesCount: 0 };
+  let changesCount = 0;
 
   let cleaned = rawHtml
-    .replace(/<!doctype[^>]*>/gi, "")
-    .replace(/<head[\s\S]*?<\/head>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<script[\s\S]*?<\/script>/gi, "");
+    .replace(/<!--[\s\S]*?-->/g, () => { changesCount++; return ""; })
+    .replace(/<!doctype[^>]*>/gi, () => { changesCount++; return ""; })
+    .replace(/<head[\s\S]*?<\/head>/gi, () => { changesCount++; return ""; })
+    .replace(/<style[\s\S]*?<\/style>/gi, () => { changesCount++; return ""; })
+    .replace(/<script[\s\S]*?<\/script>/gi, () => { changesCount++; return ""; })
+    .replace(/<h[1-6][^>]*>\s*undefined\s*<\/h[1-6]>/gi, () => { changesCount++; return ""; })
+    .replace(/\s*dir=["']ltr["']/gi, () => { changesCount++; return ""; });
 
   const mainMatch = cleaned.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
   if (mainMatch && mainMatch[1]) {
     cleaned = mainMatch[1];
+    changesCount++;
   } else {
     const bodyMatch = cleaned.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    if (bodyMatch && bodyMatch[1]) cleaned = bodyMatch[1];
+    if (bodyMatch && bodyMatch[1]) {
+      cleaned = bodyMatch[1];
+      changesCount++;
+    }
   }
 
   cleaned = cleaned.replace(/<\/?(?:html|body|main)[^>]*>/gi, "").trim();
-  return cleaned;
+
+  // Strip harmful inline styles that override site fonts, font sizes, line heights, and colors
+  cleaned = cleaned.replace(/style=(["'])(.*?)\1/gi, (match, quote, styleStr) => {
+    let cleanStyles = styleStr
+      .replace(/font-family\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/font-size\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/color\s*:\s*(?:rgb\(0,\s*0,\s*0\)|#000(?:000)?|black|#fff(?:fff)?|white|rgb\(255,\s*255,\s*255\));?/gi, () => { changesCount++; return ""; })
+      .replace(/background-color\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/background\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/line-height\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/white-space\s*:\s*pre-wrap;?/gi, () => { changesCount++; return ""; })
+      .replace(/margin-(?:top|bottom|left|right)\s*:[^;]+;?/gi, () => { changesCount++; return ""; })
+      .replace(/font-variant\s*:[^;]+;?/gi, "")
+      .replace(/vertical-align\s*:[^;]+;?/gi, "")
+      .trim();
+    cleanStyles = cleanStyles.replace(/^;+|;+$/g, "").trim();
+    return cleanStyles ? `style=${quote}${cleanStyles}${quote}` : "";
+  });
+
+  // Strip table and table cell inline style attributes so site styles take over cleanly
+  cleaned = cleaned.replace(/<(table|thead|tbody|tr|th|td)([^>]*)>/gi, (match, tag, attrs) => {
+    const cleanedAttrs = attrs
+      .replace(/\s*style=(["'])[\s\S]*?\1/gi, () => { changesCount++; return ""; })
+      .replace(/\s*bgcolor=(["'])[\s\S]*?\1/gi, () => { changesCount++; return ""; })
+      .replace(/\s*color=(["'])[\s\S]*?\1/gi, () => { changesCount++; return ""; });
+    return `<${tag}${cleanedAttrs}>`;
+  });
+
+  // Strip Google Docs wrapper and redundant empty spans
+  cleaned = cleaned.replace(/<span\s+id=["']docs-internal-guid-[^"']*["']>([\s\S]*?)<\/span>/gi, (m, c) => { changesCount++; return c; });
+  cleaned = cleaned.replace(/<span\s+style=["'][^"']*font-weight:\s*(?:700|bold)[^"']*["']>([\s\S]*?)<\/span>/gi, (m, c) => { changesCount++; return `<strong>${c}</strong>`; });
+  for (let i = 0; i < 4; i++) {
+    cleaned = cleaned.replace(/<span(?:\s+style=["']\s*["'])?\s*>([\s\S]*?)<\/span>/gi, (m, c) => { changesCount++; return c; });
+  }
+
+  // Strip empty paragraphs
+  cleaned = cleaned.replace(/<p[^>]*>\s*(?:&nbsp;|\s)*<\/p>/gi, () => { changesCount++; return ""; });
+
+  // Unwrap paragraphs and spans inside table headers <th> to prevent dark text camouflage on navy headers
+  cleaned = cleaned.replace(/<th([^>]*)>\s*<p[^>]*>([\s\S]*?)<\/p>\s*<\/th>/gi, (m, attrs, content) => {
+    changesCount++;
+    return `<th${attrs}>${content}</th>`;
+  });
+  cleaned = cleaned.replace(/<th([^>]*)>\s*<span[^>]*>([\s\S]*?)<\/span>\s*<\/th>/gi, (m, attrs, content) => {
+    changesCount++;
+    return `<th${attrs}>${content}</th>`;
+  });
+
+  return { cleaned: cleaned.trim(), changesCount };
 }
+
+export function sanitizeArticleContent(rawHtml: string): string {
+  return autoFormatArticleHtml(rawHtml).cleaned;
+}
+
+export interface BlogComponentTemplate {
+  id: string;
+  name: string;
+  badge: string;
+  description: string;
+  category: "callouts" | "tables" | "roadmaps" | "faq" | "cta";
+  html: string;
+}
+
+export const BLOG_COMPONENT_TEMPLATES: BlogComponentTemplate[] = [
+  {
+    id: "takeaway_box",
+    name: "Key Takeaway Callout Box",
+    badge: "Executive Summary",
+    category: "callouts",
+    description: "Deep blue left-bordered highlight card with bold title and authoritative compliance takeaways.",
+    html: `<div class="bg-blue-50/80 border-l-4 border-[#0b3a96] p-6 rounded-r-xl my-8 space-y-2">
+  <h4 class="text-[#0a192f] font-bold text-base sm:text-lg">Key Regulatory Takeaway:</h4>
+  <p class="text-sm text-slate-700 leading-relaxed mb-0">Summarize the central strategic takeaway, deadline expectation, or authority compliance requirement for manufacturers.</p>
+</div>`,
+  },
+  {
+    id: "alert_warning",
+    name: "Regulatory Notice / Audit Warning",
+    badge: "Risk Prevention",
+    category: "callouts",
+    description: "Amber warning box alerting readers to audit triggers, enforcement risks, and deficiency notices.",
+    html: `<div class="bg-amber-50/90 border-l-4 border-amber-500 p-6 rounded-r-xl my-8 space-y-2">
+  <h4 class="text-amber-950 font-bold text-base sm:text-lg">Critical Compliance Warning:</h4>
+  <p class="text-sm text-amber-900/90 leading-relaxed mb-0">Highlight critical compliance risks, non-conformities, or regulatory penalties that manufacturers must proactively prevent.</p>
+</div>`,
+  },
+  {
+    id: "checklist_box",
+    name: "Compliance Checklist (Checkmarks)",
+    badge: "Checklist",
+    category: "callouts",
+    description: "Rounded checklist container with emerald badge checkmarks for technical files and prerequisites.",
+    html: `<div class="my-8 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 space-y-3">
+  <h4 class="text-[#0a192f] font-bold text-base">Essential Submission Checklist:</h4>
+  <div class="space-y-2.5 pt-1">
+    <div class="flex items-start gap-2.5">
+      <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+      <span class="text-xs sm:text-sm font-semibold text-slate-800">ISO 13485:2016 Certified Quality Manual and Internal Audit Records</span>
+    </div>
+    <div class="flex items-start gap-2.5">
+      <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+      <span class="text-xs sm:text-sm font-semibold text-slate-800">Complete Biocompatibility and Electrical Safety Test Reports</span>
+    </div>
+    <div class="flex items-start gap-2.5">
+      <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+      <span class="text-xs sm:text-sm font-semibold text-slate-800">Risk Management File Compiled in Accordance with ISO 14971:2019</span>
+    </div>
+  </div>
+</div>`,
+  },
+  {
+    id: "comparison_table",
+    name: "Regulatory Matrix Comparison Table",
+    badge: "Data Table",
+    category: "tables",
+    description: "Clean mobile-responsive table with navy header, clear cell padding, and alternating row styles.",
+    html: `<div class="my-8 overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+  <table class="w-full text-left text-xs sm:text-sm border-collapse">
+    <thead>
+      <tr class="bg-[#0b2545] text-white">
+        <th class="p-3.5 font-bold">Regulatory Parameter</th>
+        <th class="p-3.5 font-bold">Standard Track</th>
+        <th class="p-3.5 font-bold">Fast-Track / Accelerated</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+      <tr class="hover:bg-slate-50">
+        <td class="p-3 font-semibold text-slate-900">Review Timeline</td>
+        <td class="p-3">6 &ndash; 9 Months</td>
+        <td class="p-3 text-emerald-700 font-semibold">60 &ndash; 90 Days</td>
+      </tr>
+      <tr class="hover:bg-slate-50">
+        <td class="p-3 font-semibold text-slate-900">Clinical Data Requirement</td>
+        <td class="p-3">Full Local Clinical Study</td>
+        <td class="p-3 text-emerald-700 font-semibold">Rule 63 International Waiver</td>
+      </tr>
+      <tr class="hover:bg-slate-50">
+        <td class="p-3 font-semibold text-slate-900">Authority Scrutiny</td>
+        <td class="p-3">Subject Expert Committee</td>
+        <td class="p-3 text-emerald-700 font-semibold">Administrative Licensing Division</td>
+      </tr>
+    </tbody>
+  </table>
+</div>`,
+  },
+  {
+    id: "faq_qa",
+    name: "FAQ Section (Google Schema Ready)",
+    badge: "FAQ & Schema",
+    category: "faq",
+    description: "H2 and H3 Q&A structure designed to be automatically detected for Google FAQ Schema.",
+    html: `<section class="my-10 space-y-4">
+  <h2 class="text-2xl font-bold text-[#0a192f] border-t border-slate-100 pt-6">Frequently Asked Questions</h2>
+  <div class="space-y-3">
+    <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs space-y-1">
+      <h3 class="text-base font-bold text-slate-900">What are the primary prerequisites for submission?</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-0">Manufacturers must provide an active ISO 13485 certificate, Device Master File, Plant Master File, and Free Sale Certificate from the country of origin.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs space-y-1">
+      <h3 class="text-base font-bold text-slate-900">Can an overseas manufacturer submit directly to CDSCO?</h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-0">No. Foreign manufacturers must appoint an Authorized Indian Representative holding a valid wholesale licence on Form MD-14.</p>
+    </div>
+  </div>
+</section>`,
+  },
+  {
+    id: "process_steps",
+    name: "4-Stage Regulatory Approval Roadmap",
+    badge: "Roadmap",
+    category: "roadmaps",
+    description: "Numbered pipeline cards illustrating the step-by-step regulatory clearance journey.",
+    html: `<div class="my-8 space-y-4">
+  <h3 class="text-lg font-bold text-[#0a192f]">4-Stage Regulatory Clearance Roadmap</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+    <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-2xs space-y-1.5">
+      <div class="text-xl font-black text-[#0b3a96]">01</div>
+      <h4 class="text-xs font-bold text-slate-900">Classification</h4>
+      <p class="text-[11px] text-slate-600 leading-relaxed mb-0">Determine exact device risk category and predicate devices.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-2xs space-y-1.5">
+      <div class="text-xl font-black text-indigo-600">02</div>
+      <h4 class="text-xs font-bold text-slate-900">Gap Assessment</h4>
+      <p class="text-[11px] text-slate-600 leading-relaxed mb-0">Audit biocompatibility, risk files, and software validation.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-2xs space-y-1.5">
+      <div class="text-xl font-black text-emerald-600">03</div>
+      <h4 class="text-xs font-bold text-slate-900">Dossier Compilation</h4>
+      <p class="text-[11px] text-slate-600 leading-relaxed mb-0">Author clinical evaluation reports and technical documentation.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-2xs space-y-1.5">
+      <div class="text-xl font-black text-amber-600">04</div>
+      <h4 class="text-xs font-bold text-slate-900">License Grant</h4>
+      <p class="text-[11px] text-slate-600 leading-relaxed mb-0">Coordinate queries with licensing authority and secure certificate.</p>
+    </div>
+  </div>
+</div>`,
+  },
+  {
+    id: "cta_banner",
+    name: "In-Article Consultation CTA Banner",
+    badge: "CTA Banner",
+    category: "cta",
+    description: "Deep navy gradient banner with bold headline, value copy, and consultation button.",
+    html: `<div class="my-10 rounded-2xl bg-gradient-to-r from-[#0b2545] to-[#0b3a96] p-8 text-white text-center space-y-3 shadow-lg">
+  <h3 class="text-xl sm:text-2xl font-extrabold text-white">Need Expert Guidance on Regulatory Approvals?</h3>
+  <p class="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto leading-relaxed">Our senior regulatory specialists formulate end-to-end pathways for CDSCO, US FDA 510(k), and EU MDR compliance.</p>
+  <div class="pt-2">
+    <a href="/contact" class="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-2.5 text-xs font-bold text-[#0b2545] shadow hover:bg-blue-50 transition">
+      <span>Schedule Free Consultation &rarr;</span>
+    </a>
+  </div>
+</div>`,
+  },
+  {
+    id: "lead_paragraph",
+    name: "Editorial Lead Paragraph",
+    badge: "Lead Intro",
+    category: "callouts",
+    description: "Elevated introductory paragraph with larger font and authoritative brand coloring.",
+    html: `<p class="lead text-lg sm:text-xl text-[#1e3a8a]/85 font-medium leading-relaxed my-6 pb-4 border-b border-gray-100">
+  This is the primary editorial overview that hooks the reader, establishes strategic regulatory context, and outlines the practical implications for global MedTech and diagnostic manufacturers.
+</p>`,
+  },
+];
 
 /**
  * Replaces the first unlinked occurrence of keyword in HTML with a proper <a> element,
@@ -434,8 +690,11 @@ function checkKeywordStatus(
   };
 }
 
-export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorProps) {
-  const [mode, setMode] = useState<"visual" | "html">("visual");
+export function RichBlogEditor({ value, onChange, placeholder, articleMeta }: RichBlogEditorProps) {
+  const [mode, setMode] = useState<"visual" | "html" | "preview">("visual");
+  const [previewDevice, setPreviewDevice] = useState<"desktop" | "tablet" | "mobile">("desktop");
+  const [isComponentModalOpen, setIsComponentModalOpen] = useState(false);
+  const [componentCategoryFilter, setComponentCategoryFilter] = useState<string>("all");
   const editorRef = useRef<HTMLDivElement>(null);
   const isUpdatingFromProp = useRef(false);
 
@@ -498,6 +757,34 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
 
     loadPublishedGuides();
   }, []);
+
+  // Auto-Format & Beautify Handler: Cleans Word/Docs junk and ensures consistent NKB styling
+  const handleAutoFormat = () => {
+    const { cleaned, changesCount } = autoFormatArticleHtml(value || "");
+    if (editorRef.current && mode === "visual") {
+      editorRef.current.innerHTML = cleaned;
+    }
+    onChange(cleaned);
+    if (changesCount > 0) {
+      toast.success(
+        `Auto-formatted article! Cleaned ${changesCount} inline Word/Docs styles, fonts, and empty tags to match NKB standards.`
+      );
+    } else {
+      toast.info("Article already conforms perfectly to NKB Regovanta typography guidelines.");
+    }
+  };
+
+  // Insert pre-designed regulatory component
+  const handleInsertComponent = (template: BlogComponentTemplate) => {
+    if (mode === "html") {
+      onChange((value || "") + "\n\n" + template.html + "\n\n");
+    } else {
+      editorRef.current?.focus();
+      exec("insertHTML", template.html + "<p></p>");
+    }
+    setIsComponentModalOpen(false);
+    toast.success(`Inserted "${template.name}" into article!`);
+  };
 
   const handleVisualInput = () => {
     if (isUpdatingFromProp.current || !editorRef.current) return;
@@ -702,7 +989,9 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
   }, [allInternalLinks, linkCategoryFilter, linkSearchQuery]);
 
   // ── Smart Internal Link Opportunities ─────────────────────────────────────
+  // Only execute heavy DOMParser and TreeWalker scanning when assistant modal is open to ensure zero typing lag
   const internalLinkOpportunities = useMemo(() => {
+    if (!isAssistantOpen) return [];
     const content = value || "";
     if (!content.trim()) return [];
 
@@ -733,7 +1022,7 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
 
     // Sort: unlinked opportunities first
     return results.sort((a, b) => b.unlinkedCount - a.unlinkedCount);
-  }, [value]);
+  }, [value, isAssistantOpen]);
 
   const unlinkedOpportunitiesCount = useMemo(() => {
     return internalLinkOpportunities.filter((o) => o.unlinkedCount > 0).length;
@@ -997,6 +1286,28 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
             )}
           </button>
 
+          {/* Auto-Format & Beautify */}
+          <button
+            type="button"
+            onClick={handleAutoFormat}
+            title="Auto-format typography, headings, colors, and strip Microsoft Word / Google Docs styles"
+            className="flex items-center gap-1.5 rounded bg-indigo-50 border border-indigo-200 px-2.5 py-1 text-xs font-bold text-indigo-700 hover:bg-indigo-100 transition shadow-2xs"
+          >
+            <Wand2 className="h-3.5 w-3.5 text-indigo-600" />
+            <span>Auto-Format</span>
+          </button>
+
+          {/* Add Component / Section */}
+          <button
+            type="button"
+            onClick={() => setIsComponentModalOpen(true)}
+            title="Insert pre-designed regulatory components (Callout, Checklist, Table, FAQ, Roadmap, CTA)"
+            className="flex items-center gap-1.5 rounded bg-blue-50 border border-blue-200 px-2.5 py-1 text-xs font-bold text-[#0b3a96] hover:bg-blue-100 transition shadow-2xs"
+          >
+            <Plus className="h-3.5 w-3.5" />
+            <span>Add Component</span>
+          </button>
+
           <span className="mx-1 h-4 w-px bg-slate-300" />
 
           {/* Elements */}
@@ -1080,12 +1391,276 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
               <Code className="h-3.5 w-3.5" />
               <span>HTML Source</span>
             </button>
+            <button
+              type="button"
+              onClick={() => setMode("preview")}
+              className={`flex items-center gap-1 rounded px-2.5 py-1 text-xs font-semibold transition ${
+                mode === "preview"
+                  ? "bg-[#0b3a96] text-white shadow-2xs"
+                  : "text-slate-600 hover:text-slate-900"
+              }`}
+            >
+              <Monitor className="h-3.5 w-3.5" />
+              <span>Live Preview</span>
+            </button>
           </div>
         </div>
       </div>
 
       {/* Editor Body */}
-      {mode === "visual" ? (
+      {mode === "preview" ? (
+        <div className="bg-slate-100/80 p-4 sm:p-6 space-y-4">
+          {/* Device Viewport Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-white rounded-xl border border-slate-200 p-2.5 px-4 shadow-2xs">
+            <div className="flex items-center gap-2 text-xs text-slate-500">
+              <span className="font-semibold text-slate-800">Preview Device:</span>
+              <div className="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5">
+                <button
+                  type="button"
+                  onClick={() => setPreviewDevice("desktop")}
+                  className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-medium transition ${
+                    previewDevice === "desktop"
+                      ? "bg-white text-[#0b3a96] font-bold shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <Monitor className="h-3.5 w-3.5" />
+                  <span>Desktop (100%)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPreviewDevice("tablet")}
+                  className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-medium transition ${
+                    previewDevice === "tablet"
+                      ? "bg-white text-[#0b3a96] font-bold shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <Tablet className="h-3.5 w-3.5" />
+                  <span>Tablet (768px)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPreviewDevice("mobile")}
+                  className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-medium transition ${
+                    previewDevice === "mobile"
+                      ? "bg-white text-[#0b3a96] font-bold shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <Smartphone className="h-3.5 w-3.5" />
+                  <span>Mobile (390px)</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleAutoFormat}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-700 hover:bg-indigo-100 transition shadow-2xs"
+              >
+                <Wand2 className="h-3.5 w-3.5 text-indigo-600" />
+                <span>Auto-Format Content</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("visual")}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-[#0b3a96] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-blue-800 transition shadow-2xs"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                <span>Return to Visual Editor</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Responsive Frame */}
+          <div className="flex justify-center">
+            <div
+              className={`bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden transition-all duration-300 ${
+                previewDevice === "desktop"
+                  ? "w-full max-w-5xl"
+                  : previewDevice === "tablet"
+                  ? "w-[768px]"
+                  : "w-[390px]"
+              }`}
+            >
+              {/* Browser Mockup Chrome Header */}
+              <div className="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800 text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                </div>
+                <div className="flex-1 max-w-md mx-4 bg-slate-800/90 rounded-md px-3 py-1 text-slate-300 font-mono text-[11px] truncate text-center border border-slate-700/60">
+                  https://www.nkbregovanta.com/insights/{articleMeta?.slug || "sample-guide"}
+                </div>
+                <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">
+                  {previewDevice}
+                </span>
+              </div>
+
+              {/* Website Header Bar Mockup */}
+              <div className="border-b border-slate-100 bg-white/95 px-6 py-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-lg bg-[#0b3a96] flex items-center justify-center font-bold text-white text-xs">
+                    NKB
+                  </div>
+                  <span className="font-extrabold text-sm text-[#0a192f] tracking-tight">
+                    NKB REGOVANTA<sup className="text-[9px]">®</sup>
+                  </span>
+                </div>
+                <div className="hidden sm:flex items-center gap-5 text-xs font-semibold text-slate-600">
+                  <span>Services</span>
+                  <span>Markets</span>
+                  <span>Industries</span>
+                  <span className="text-[#0b3a96]">Insights</span>
+                  <span>Contact</span>
+                </div>
+              </div>
+
+              {/* Article Container matching public insight page */}
+              <div className="p-6 sm:p-10 space-y-8">
+                {/* Header Metadata */}
+                <div className="space-y-4 max-w-3xl">
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-semibold">
+                    <span className="rounded-full bg-blue-100 px-3 py-1 text-[#0b3a96]">
+                      {articleMeta?.category || "Medical Devices"}
+                    </span>
+                    <span className="text-slate-400">&bull;</span>
+                    <span className="text-slate-500 flex items-center gap-1">
+                      <Clock className="h-3.5 w-3.5" />
+                      {readTimeMin} min read
+                    </span>
+                    <span className="text-slate-400">&bull;</span>
+                    <span className="text-slate-500">
+                      {articleMeta?.publishDate || "Published Guide"}
+                    </span>
+                  </div>
+
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#0a192f] tracking-tight leading-[1.15]">
+                    {articleMeta?.title || "Article Title Heading"}
+                  </h1>
+
+                  {articleMeta?.excerpt && (
+                    <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                      {articleMeta.excerpt}
+                    </p>
+                  )}
+
+                  {/* Author Profile Bar */}
+                  <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
+                    <div className="w-10 h-10 rounded-full bg-slate-200 border border-slate-300 overflow-hidden flex items-center justify-center font-bold text-[#0b3a96] text-sm">
+                      {articleMeta?.authorAvatar ? (
+                        <img src={articleMeta.authorAvatar} alt="Author" className="w-full h-full object-cover" />
+                      ) : (
+                        articleMeta?.authorName?.charAt(0) || "N"
+                      )}
+                    </div>
+                    <div>
+                      <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
+                        {articleMeta?.authorName || "NKB Regulatory Team"}
+                      </p>
+                      <p className="text-[11px] text-slate-500">
+                        {articleMeta?.authorRole || "Senior Regulatory Affairs Consultant"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Featured Image if present */}
+                {articleMeta?.featuredImage && (
+                  <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm max-h-[420px]">
+                    <img
+                      src={articleMeta.featuredImage}
+                      alt={articleMeta.featuredImageAlt || "Featured Article Visual"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
+                {/* Main Content Body */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-4">
+                  <div className="lg:col-span-8">
+                    <div
+                      className="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-2 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-a:text-[#0b3a96] prose-a:font-semibold hover:prose-a:underline prose-table:w-full prose-table:border prose-table:border-slate-200 prose-th:bg-slate-50 prose-th:p-3 prose-td:p-3 prose-td:border-t prose-td:border-slate-200"
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          value ||
+                          "<p class='text-slate-400 italic'>No content written yet. Switch to Visual Editor to begin drafting.</p>",
+                      }}
+                    />
+                  </div>
+
+                  {/* Mockup Sidebar */}
+                  <div className="lg:col-span-4 space-y-6">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 space-y-3">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+                        Quick Consultation
+                      </h4>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        Navigating medical device registrations or technical dossiers? Connect with our senior consultants.
+                      </p>
+                      <div className="pt-2">
+                        <a
+                          href="/contact"
+                          className="block text-center rounded-xl bg-[#0b3a96] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-blue-800 transition"
+                        >
+                          Book Regulatory Assessment &rarr;
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-slate-200 bg-white p-5 space-y-3">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+                        Key Regulatory Topics
+                      </h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-700">CDSCO MD-14</span>
+                        <span className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-700">US FDA 510(k)</span>
+                        <span className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-700">EU MDR 2017/745</span>
+                        <span className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-700">ISO 13485 QMS</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Author Card & CTA Band Mockup */}
+                <div className="border-t border-slate-200 pt-8 mt-12 space-y-8">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                    <div className="w-16 h-16 rounded-full bg-slate-200 border border-slate-300 overflow-hidden flex items-center justify-center font-bold text-[#0b3a96] text-xl shrink-0">
+                      {articleMeta?.authorAvatar ? (
+                        <img src={articleMeta.authorAvatar} alt="Author" className="w-full h-full object-cover" />
+                      ) : (
+                        articleMeta?.authorName?.charAt(0) || "N"
+                      )}
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#0b3a96]">Written By</p>
+                      <h4 className="text-base font-bold text-slate-900">{articleMeta?.authorName || "NKB Regulatory Team"}</h4>
+                      <p className="text-xs text-slate-600 leading-relaxed max-w-xl">
+                        {articleMeta?.authorRole || "Senior MedTech Regulatory Affairs Specialist"} with expertise across CDSCO, US FDA premarket submissions, and EU MDR compliance pathways.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#0b2545] p-8 text-white text-center space-y-3">
+                    <h3 className="text-xl font-black">Accelerate Your Regulatory Approvals</h3>
+                    <p className="text-xs sm:text-sm text-blue-200 max-w-md mx-auto">
+                      Join global medical device manufacturers who trust NKB Regovanta for compliant, audit-ready market entry.
+                    </p>
+                    <div className="pt-2">
+                      <span className="inline-block rounded-xl bg-white px-5 py-2 text-xs font-bold text-[#0b2545]">
+                        Schedule Discovery Call &rarr;
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : mode === "visual" ? (
         <div
           ref={editorRef}
           contentEditable
@@ -1552,6 +2127,117 @@ export function RichBlogEditor({ value, onChange, placeholder }: RichBlogEditorP
               >
                 <Check className="h-3.5 w-3.5" />
                 <span>Insert Image</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* ─────────────────────────────────────────────────────────────
+          4. Pre-designed Component & Section Library Modal
+      ───────────────────────────────────────────────────────────── */}
+      {isComponentModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-xs">
+          <div
+            className="w-full max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-150 max-h-[90vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3 shrink-0">
+              <div className="flex items-center gap-2.5">
+                <div className="rounded-xl bg-blue-50 p-2 text-[#0b3a96]">
+                  <Layers className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900">
+                    Blog Component & Section Library
+                  </h3>
+                  <p className="text-xs text-slate-500">
+                    Insert pre-styled regulatory elements engineered to match NKB Regovanta hardcoded insight designs.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsComponentModalOpen(false)}
+                className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap gap-1.5 shrink-0">
+              {[
+                { id: "all", label: "All Components" },
+                { id: "callouts", label: "Callouts & Checklists" },
+                { id: "tables", label: "Comparison Tables" },
+                { id: "roadmaps", label: "Roadmaps & Timelines" },
+                { id: "faq", label: "FAQ & Schema" },
+                { id: "cta", label: "Consultation CTAs" },
+              ].map((cat) => (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => setComponentCategoryFilter(cat.id)}
+                  className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                    componentCategoryFilter === cat.id
+                      ? "bg-[#0b3a96] text-white shadow-2xs"
+                      : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Component Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto pr-1 flex-1 py-1">
+              {BLOG_COMPONENT_TEMPLATES.filter(
+                (t) => componentCategoryFilter === "all" || t.category === componentCategoryFilter
+              ).map((template) => (
+                <div
+                  key={template.id}
+                  className="flex flex-col justify-between rounded-xl border border-slate-200 bg-slate-50/50 p-4 hover:border-[#0b3a96]/40 hover:bg-white transition group shadow-2xs"
+                >
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#0b3a96]">
+                        {template.badge}
+                      </span>
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0b3a96] transition">
+                      {template.name}
+                    </h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {template.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 flex items-center justify-end">
+                    <button
+                      type="button"
+                      onClick={() => handleInsertComponent(template)}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#0b3a96] px-3.5 py-1.5 text-xs font-bold text-white shadow-2xs hover:bg-blue-800 transition"
+                    >
+                      <Plus className="h-3.5 w-3.5" />
+                      <span>Insert Component</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="flex items-center justify-between border-t border-slate-100 pt-3 shrink-0">
+              <span className="text-xs text-slate-400">
+                Components insert at current cursor position or end of article.
+              </span>
+              <button
+                type="button"
+                onClick={() => setIsComponentModalOpen(false)}
+                className="rounded-lg border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition"
+              >
+                Close
               </button>
             </div>
           </div>

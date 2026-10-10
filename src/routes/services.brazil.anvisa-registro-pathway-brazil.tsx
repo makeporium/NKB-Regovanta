@@ -41,7 +41,7 @@ function ServicePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/brazil_hero_1786397473392.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/brazil_hero_1786397473392.webp')] bg-cover bg-center" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/services/brazil" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
             <ArrowLeft className="h-4 w-4" /> Back to Brazil Services
@@ -79,7 +79,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/brazil_compliance_1786397573546.png" alt="ANVISA Registro Medical Device Regulatory Approval Pathway in Brazil - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/brazil_compliance_1786397573546.webp" alt="ANVISA Registro Medical Device Regulatory Approval Pathway in Brazil - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

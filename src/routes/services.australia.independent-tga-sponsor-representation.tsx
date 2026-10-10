@@ -62,7 +62,7 @@ function ServicePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/australia_hero_1786397449843.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/australia_hero_1786397449843.webp')] bg-cover bg-center" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/services/australia" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
             <ArrowLeft className="h-4 w-4" /> Back to Australia Services
@@ -100,7 +100,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/australia_compliance_1786397463255.png" alt="Independent Australian TGA Sponsor Representation Services - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/australia_compliance_1786397463255.webp" alt="Independent Australian TGA Sponsor Representation Services - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

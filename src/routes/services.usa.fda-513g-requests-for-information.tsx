@@ -50,7 +50,7 @@ function ServicePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-16 bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/us_fda_hero_1786395342316.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/assets/brain/us_fda_hero_1786395342316.webp')] bg-cover bg-center" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/services/usa" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6 text-sm font-medium">
             <ArrowLeft className="h-4 w-4" /> Back to US FDA Services
@@ -88,7 +88,7 @@ function ServicePage() {
               </ul>
             </div>
             <div>
-              <img src="/assets/brain/us_fda_compliance_1786395357791.png" alt="US FDA 513(g) Request for Information and Device Classification - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
+              <img src="/assets/brain/us_fda_compliance_1786395357791.webp" alt="US FDA 513(g) Request for Information and Device Classification - NKB Regovanta" loading="lazy" decoding="async" className="rounded-2xl shadow-lg border border-gray-100" />
             </div>
           </div>
         </div>

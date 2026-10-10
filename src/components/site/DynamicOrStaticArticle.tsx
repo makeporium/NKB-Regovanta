@@ -21,14 +21,19 @@ interface DBContent {
   category_name?: string;
 }
 
+import { cleanArticleHtml } from '@/routes/insights.$slug';
+
+const dynamicArticleCache = new Map<string, { dbContent: DBContent | null; checked: boolean }>();
+
 export function DynamicOrStaticArticle({
   slug,
   defaultCategory = 'REGULATORY INSIGHT',
   defaultImage = '/assets/insights/digital_health_tablet.jpg',
   children,
 }: DynamicArticleProps) {
-  const [dbContent, setDbContent] = useState<DBContent | null>(null);
-  const [checked, setChecked] = useState(false);
+  const cached = dynamicArticleCache.get(slug);
+  const [dbContent, setDbContent] = useState<DBContent | null>(cached ? cached.dbContent : null);
+  const [checked, setChecked] = useState(cached ? cached.checked : false);
   const [isPreview, setIsPreview] = useState(false);
 
   useEffect(() => {
@@ -49,8 +54,9 @@ export function DynamicOrStaticArticle({
     }
 
     query.maybeSingle().then(({ data }) => {
+      let finalContent: DBContent | null = null;
       if (data && data.content_html && data.content_html.trim().length > 50) {
-        setDbContent({
+        finalContent = {
           title: data.title,
           content_html: data.content_html,
           excerpt: data.excerpt,
@@ -59,8 +65,10 @@ export function DynamicOrStaticArticle({
           updated_at: data.updated_at,
           status: data.status,
           category_name: (data as any).blog_categories?.name,
-        });
+        };
+        setDbContent(finalContent);
       }
+      dynamicArticleCache.set(slug, { dbContent: finalContent, checked: true });
       setChecked(true);
     });
   }, [slug]);
@@ -185,8 +193,8 @@ export function DynamicOrStaticArticle({
 
           {/* Rich text body from admin editor */}
           <div
-            className="prose prose-slate lg:prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-img:rounded-xl prose-table:border prose-table:border-slate-200 prose-th:bg-slate-100 prose-th:p-3 prose-td:p-3 prose-td:border-t prose-td:border-slate-200 my-10 space-y-6 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: dbContent.content_html }}
+            className="dynamic-article-prose prose prose-slate lg:prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-img:rounded-xl prose-table:w-full my-10 space-y-6 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: cleanArticleHtml(dbContent.content_html) }}
           />
 
           {/* Consulting CTA */}

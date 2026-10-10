@@ -108,6 +108,35 @@ function ImagesSeoManagerPage() {
     setEditingImage({ ...img });
   };
 
+  useEffect(() => {
+    if (images.length === 0) return;
+    const params = new URLSearchParams(window.location.search);
+    const searchParam = params.get("search");
+    const filterParam = params.get("filter");
+    const editParam = params.get("edit");
+
+    if (searchParam) {
+      setSearch(searchParam);
+    }
+    if (filterParam) {
+      if (["all", "needs_fix", "good", "missing_alt", "oversized"].includes(filterParam)) {
+        setWarningFilter(filterParam);
+      } else if (filterParam === "missing-alts" || filterParam === "missing_alts") {
+        setWarningFilter("missing_alt");
+      } else if (filterParam === "oversized-imgs" || filterParam === "oversized_imgs") {
+        setWarningFilter("oversized");
+      }
+    }
+    if (editParam) {
+      const match = images.find(
+        (i) => i.filename === editParam || i.url === editParam || i.id === editParam || editParam.includes(i.filename)
+      );
+      if (match) {
+        handleOpenEdit(match);
+      }
+    }
+  }, [images]);
+
   const handleSaveImage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editingImage) return;
@@ -146,9 +175,14 @@ function ImagesSeoManagerPage() {
         (img.alt_text || "").toLowerCase().includes(search.toLowerCase());
 
       const warnings = computeImageWarnings(img);
+      const isMissingAlt = !img.alt_text?.trim() && !img.is_decorative;
+      const isOversized = Boolean(img.file_size && img.file_size > 200 * 1024);
+
       const matchFilter =
         warningFilter === "all" ||
         (warningFilter === "needs_fix" && warnings.length > 0) ||
+        (warningFilter === "missing_alt" && isMissingAlt) ||
+        (warningFilter === "oversized" && isOversized) ||
         (warningFilter === "good" && warnings.length === 0);
 
       return matchSearch && matchFilter;
@@ -201,8 +235,10 @@ function ImagesSeoManagerPage() {
             onChange={(e) => setWarningFilter(e.target.value)}
             className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-800 focus:border-[#0b3a96] focus:outline-none"
           >
-            <option value="all">All Images</option>
+            <option value="all">All Images ({images.length})</option>
             <option value="needs_fix">Needs Fix / Has Warnings</option>
+            <option value="missing_alt">Issue: Missing ALT Text</option>
+            <option value="oversized">Issue: Oversized (&gt; 200 KB)</option>
             <option value="good">Status: Good (Optimized)</option>
           </select>
         </div>

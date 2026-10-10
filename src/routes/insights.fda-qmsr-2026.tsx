@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
-const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.png";
+const imgFDA = "/assets/brain/insight_fda_qmsr_1786440932587.webp";
 
 export const Route = createFileRoute("/insights/fda-qmsr-2026")({
   head: () => ({
@@ -46,7 +46,7 @@ function Article() {
             "@type": "BlogPosting",
             "headline": "FDA QMSR 2026: What Medical Device Manufacturers Need to Know",
             "description": "A practical overview of FDA QMSR 2026, ISO 13485 alignment, record expectations, and actions manufacturers should take to maintain compliance.",
-            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.png",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_fda_qmsr_1786440932587.webp",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",

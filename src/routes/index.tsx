@@ -67,13 +67,13 @@ import logoTrustDnb from "@/assets/trust/dnb.png";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            { title: "Medical Device Regulatory Consultants | NKB Regovanta" },
             {
                 name: "description",
                 content:
                     "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide.",
             },
-            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            { property: "og:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
             {
                 property: "og:description",
                 content:
@@ -82,7 +82,7 @@ export const Route = createFileRoute("/")({
             { property: "og:url", content: "https://www.nkbregovanta.com" },
             { property: "og:image", content: "https://www.nkbregovanta.com/og-image.png" },
             { name: "twitter:card", content: "summary_large_image" },
-            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovantaa" },
+            { name: "twitter:title", content: "Medical Device Regulatory Consultants | NKB Regovanta" },
             { name: "twitter:description", content: "Leading medical device regulatory consultant. Expert US FDA 510(k), CDSCO licensing, EU MDR/IVDR CE marking, and ISO 13485 QMS compliance worldwide." },
             { name: "twitter:image", content: "https://www.nkbregovanta.com/og-image.png" },
         ],
@@ -497,7 +497,7 @@ function Index() {
                             </p>
 
                             <h1 className="font-display font-extrabold leading-[1.05] text-navy" style={{ fontSize: 'clamp(26px, 3.2vw, 42px)' }}>
-                                Global Medical Device Regulatory &amp; Market Access Consulting
+                                Global Medical Device Regulatory & Market Access Consulting
                             </h1>
                             <p className="mt-2.5 text-[11.5px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[15.5px] font-bold text-blue-700 leading-snug tracking-tight sm:tracking-normal">
                                 Medical Devices | IVDs | Pharmaceuticals | Cosmetics | Manufacturing
@@ -510,7 +510,7 @@ function Index() {
                                 NKB Regovanta is a premier global <strong>medical device consultant</strong> and regulatory affairs <strong>consultancy</strong>. We provide end-to-end regulatory strategy, testing coordination, technical documentation, and market access for Medical Devices, IVDs, Pharmaceuticals, and Cosmetics across India (CDSCO), the United States (USFDA 510 k / 510k), and international markets.
                             </p>
                             <p className="mt-3 text-[13px] leading-relaxed text-navy/65 font-medium">
-                                As a trusted medical device consultancy, our senior consultants support manufacturers with USFDA 510(k) clearances, eSTAR submissions, CDSCO manufacturing &amp; import licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS certification.
+                                As a trusted medical device consultancy, our senior consultants support manufacturers with USFDA 510(k) clearances, eSTAR submissions, CDSCO manufacturing & import licensing (MD-14/15, MD-3 to MD-9), EU MDR/IVDR CE marking, and ISO 13485 QMS certification.
                             </p>
 
                             {/* Regulatory Authorities Strip */}

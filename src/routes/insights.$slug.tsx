@@ -80,16 +80,20 @@ function isPublicPost(post: Pick<ArticleDetail, "status" | "publish_date_ist">) 
 }
 
 /**
- * Strips foreign doctype, head, style, and script tags that could leak into the DOM
+ * Strips foreign doctype, head, style, and script tags, Google Docs / Word inline styling overrides,
+ * and broken undefined headings so articles render with authentic NKB Regovanta typography.
  */
 export function cleanArticleHtml(rawHtml: string): string {
   if (!rawHtml) return "";
 
   let cleaned = rawHtml
+    .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/<!doctype[^>]*>/gi, "")
     .replace(/<head[\s\S]*?<\/head>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<script[\s\S]*?<\/script>/gi, "");
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<h[1-6][^>]*>\s*undefined\s*<\/h[1-6]>/gi, "")
+    .replace(/\s*dir=["']ltr["']/gi, "");
 
   const mainMatch = cleaned.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
   if (mainMatch && mainMatch[1]) {
@@ -100,7 +104,49 @@ export function cleanArticleHtml(rawHtml: string): string {
   }
 
   cleaned = cleaned.replace(/<\/?(?:html|body|main)[^>]*>/gi, "").trim();
-  return cleaned;
+
+  // Strip harmful inline styles that override site fonts, font sizes, line heights, and colors
+  cleaned = cleaned.replace(/style=(["'])(.*?)\1/gi, (match, quote, styleStr) => {
+    let cleanStyles = styleStr
+      .replace(/font-family\s*:[^;]+;?/gi, "")
+      .replace(/font-size\s*:[^;]+;?/gi, "")
+      .replace(/color\s*:\s*(?:rgb\(0,\s*0,\s*0\)|#000(?:000)?|black|#fff(?:fff)?|white|rgb\(255,\s*255,\s*255\));?/gi, "")
+      .replace(/background-color\s*:[^;]+;?/gi, "")
+      .replace(/background\s*:[^;]+;?/gi, "")
+      .replace(/line-height\s*:[^;]+;?/gi, "")
+      .replace(/white-space\s*:\s*pre-wrap;?/gi, "")
+      .replace(/margin-(?:top|bottom|left|right)\s*:[^;]+;?/gi, "")
+      .replace(/font-variant\s*:[^;]+;?/gi, "")
+      .replace(/vertical-align\s*:[^;]+;?/gi, "")
+      .trim();
+    cleanStyles = cleanStyles.replace(/^;+|;+$/g, "").trim();
+    return cleanStyles ? `style=${quote}${cleanStyles}${quote}` : "";
+  });
+
+  // Strip table and table cell inline style attributes so site styles take over cleanly
+  cleaned = cleaned.replace(/<(table|thead|tbody|tr|th|td)([^>]*)>/gi, (match, tag, attrs) => {
+    const cleanedAttrs = attrs
+      .replace(/\s*style=(["'])[\s\S]*?\1/gi, "")
+      .replace(/\s*bgcolor=(["'])[\s\S]*?\1/gi, "")
+      .replace(/\s*color=(["'])[\s\S]*?\1/gi, "");
+    return `<${tag}${cleanedAttrs}>`;
+  });
+
+  // Strip Google Docs wrapper and redundant empty spans
+  cleaned = cleaned.replace(/<span\s+id=["']docs-internal-guid-[^"']*["']>([\s\S]*?)<\/span>/gi, "$1");
+  cleaned = cleaned.replace(/<span\s+style=["'][^"']*font-weight:\s*(?:700|bold)[^"']*["']>([\s\S]*?)<\/span>/gi, "<strong>$1</strong>");
+  for (let i = 0; i < 4; i++) {
+    cleaned = cleaned.replace(/<span(?:\s+style=["']\s*["'])?\s*>([\s\S]*?)<\/span>/gi, "$1");
+  }
+
+  // Unwrap paragraphs and spans inside table headers <th> so header text is never dark or oversized
+  cleaned = cleaned.replace(/<th([^>]*)>\s*<p[^>]*>([\s\S]*?)<\/p>\s*<\/th>/gi, "<th$1>$2</th>");
+  cleaned = cleaned.replace(/<th([^>]*)>\s*<span[^>]*>([\s\S]*?)<\/span>\s*<\/th>/gi, "<th$1>$2</th>");
+
+  // Strip empty paragraphs
+  cleaned = cleaned.replace(/<p[^>]*>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
+
+  return cleaned.trim();
 }
 
 /**
@@ -130,11 +176,12 @@ export function extractFaqs(html: string): FaqItem[] {
 }
 
 /**
- * Generates Table of Contents items with slugified IDs
+ * Generates Table of Contents items with slugified, strictly unique IDs
  */
 export function extractTableOfContents(html: string): { toc: TocItem[]; htmlWithIds: string } {
   if (!html) return { toc: [], htmlWithIds: "" };
   const toc: TocItem[] = [];
+  const seenIds = new Set<string>();
   let index = 0;
 
   const htmlWithIds = html.replace(/<h([23])([^>]*)>([\s\S]*?)<\/h\1>/gi, (match, levelStr, attrs, text) => {
@@ -142,26 +189,34 @@ export function extractTableOfContents(html: string): { toc: TocItem[]; htmlWith
     const plainText = text.replace(/<[^>]+>/g, "").trim();
     if (!plainText) return match;
 
-    const id = "section-" + (plainText.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || `heading-${index++}`);
-    toc.push({ id, text: plainText, level });
+    const baseId = "section-" + (plainText.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || `heading-${index++}`);
+    let uniqueId = baseId;
+    let count = 1;
+    while (seenIds.has(uniqueId)) {
+      uniqueId = `${baseId}-${count++}`;
+    }
+    seenIds.add(uniqueId);
+    toc.push({ id: uniqueId, text: plainText, level });
 
     // Ensure id attribute is inserted into the heading
     if (/id=["'][^"']*["']/i.test(attrs)) {
-      return match;
+      return match.replace(/id=["'][^"']*["']/i, `id="${uniqueId}"`);
     }
-    return `<h${level}${attrs} id="${id}">${text}</h${level}>`;
+    return `<h${level}${attrs} id="${uniqueId}">${text}</h${level}>`;
   });
 
   return { toc, htmlWithIds };
 }
 
-const articleCache = new Map<string, { post: ArticleDetail | null; faqs: FaqItem[] }>();
+const CACHE_TTL_MS = 15 * 1000;
+const articleCache = new Map<string, { result: { post: ArticleDetail | null; faqs: FaqItem[] }; timestamp: number }>();
 
 export const Route = createFileRoute("/insights/$slug")({
   loader: async ({ params }) => {
     const slug = params.slug;
-    if (articleCache.has(slug)) {
-      return articleCache.get(slug)!;
+    const cached = articleCache.get(slug);
+    if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+      return cached.result;
     }
     try {
       const [postResult, seoResult] = await Promise.all([
@@ -241,7 +296,7 @@ export const Route = createFileRoute("/insights/$slug")({
       };
 
       const result = { post: item, faqs };
-      articleCache.set(slug, result);
+      articleCache.set(slug, { result, timestamp: Date.now() });
       return result;
     } catch {
       return { post: null, faqs: [] };
@@ -389,6 +444,8 @@ function DynamicInsightArticlePage() {
   const { slug } = Route.useParams();
   const [copied, setCopied] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [isInlineTocOpen, setIsInlineTocOpen] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState<string>("");
 
   const isPreview =
     typeof window !== "undefined" &&
@@ -400,8 +457,30 @@ function DynamicInsightArticlePage() {
 
   const { toc, htmlWithIds } = useMemo(() => {
     if (!article?.content_html) return { toc: [], htmlWithIds: "" };
-    return extractTableOfContents(article.content_html);
+    const cleaned = cleanArticleHtml(article.content_html);
+    return extractTableOfContents(cleaned);
   }, [article?.content_html]);
+
+  // Scroll spy to highlight active section in TOC
+  useEffect(() => {
+    if (typeof window === "undefined" || toc.length === 0) return;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+      let currentId = toc[0]?.id || "";
+      for (const item of toc) {
+        const el = document.getElementById(item.id);
+        if (el && el.offsetTop <= scrollPosition) {
+          currentId = item.id;
+        }
+      }
+      setActiveSectionId(currentId);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [toc]);
 
   const handleShare = () => {
     if (typeof window !== "undefined") {
@@ -622,12 +701,63 @@ function DynamicInsightArticlePage() {
           </div>
         )}
 
-        {/* 2-Column Desktop Grid with Sticky Table of Contents Sidebar */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* Main Article Content Column */}
-          <div className="lg:col-span-8">
+        {/* Collapsible Inline Table of Contents for Mobile & Tablet (< 1024px) */}
+        {toc.length > 0 && (
+          <div className="lg:hidden mb-8 rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-xs">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-50 text-[#0b3a96]">
+                  <BookOpen className="h-4 w-4" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900 m-0">Table of Contents</h3>
+                  <p className="text-[11px] text-slate-500 m-0">{toc.length} sections in this regulatory guidance</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsInlineTocOpen(!isInlineTocOpen)}
+                className="flex items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-100 transition"
+              >
+                <span>{isInlineTocOpen ? "Collapse" : "Expand"}</span>
+                {isInlineTocOpen ? (
+                  <ChevronUp className="h-3.5 w-3.5 text-slate-500" />
+                ) : (
+                  <ChevronDown className="h-3.5 w-3.5 text-slate-500" />
+                )}
+              </button>
+            </div>
+
+            {isInlineTocOpen && (
+              <nav className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-1.5 text-xs">
+                {toc.map((item, index) => {
+                  const isActive = activeSectionId === item.id;
+                  return (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className={`flex items-start gap-2 rounded-lg px-2.5 py-1.5 transition leading-snug ${
+                        isActive
+                          ? "bg-blue-50 text-[#0b3a96] font-bold"
+                          : "text-slate-700 hover:bg-slate-50 hover:text-[#0b3a96]"
+                      }`}
+                    >
+                      <span className="text-[10px] font-bold text-slate-400 mt-0.5 shrink-0">{index + 1}.</span>
+                      <span className={item.level === 3 ? "text-slate-600 pl-1" : "font-semibold"}>{item.text}</span>
+                    </a>
+                  );
+                })}
+              </nav>
+            )}
+          </div>
+        )}
+
+        {/* 2-Column Desktop & Laptop Grid (>= 1024px) with Dedicated Sticky Sidebar */}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-8 lg:gap-10 xl:gap-12 items-start">
+          {/* Main Article Content Column - min-w-0 prevents any grid overflow or blowout */}
+          <div className="min-w-0">
             <div
-              className="dynamic-article-prose prose prose-lg prose-navy max-w-none text-[#1f2937] leading-relaxed space-y-6 prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:pt-8 prose-h2:pb-2 prose-h2:border-t prose-h2:border-gray-100 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-6 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-strong:text-[#0a192f] prose-img:rounded-xl prose-table:border prose-table:border-slate-200 prose-th:bg-slate-100 prose-th:p-3 prose-td:p-3 prose-td:border-t prose-td:border-slate-200"
+              className="dynamic-article-prose prose prose-lg prose-navy max-w-none text-[#1f2937] leading-relaxed space-y-6 prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:pt-8 prose-h2:pb-2 prose-h2:border-t prose-h2:border-gray-100 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-6 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-strong:text-[#0a192f] prose-img:rounded-xl prose-table:border prose-table:border-slate-200"
               dangerouslySetInnerHTML={{ __html: htmlWithIds }}
             />
 
@@ -720,30 +850,39 @@ function DynamicInsightArticlePage() {
             )}
           </div>
 
-          {/* Sticky Sidebar Column */}
-          <div className="lg:col-span-4 space-y-6">
-            <div className="sticky top-24 space-y-6">
-              {/* Table of Contents Box */}
+          {/* Desktop & Laptop Sticky Sidebar Column (lg: and above) */}
+          <aside className="hidden lg:block w-full">
+            <div className="sticky top-28 space-y-6">
+              {/* Table of Contents Box - Solid White Background (No transparency bleed) */}
               {toc.length > 0 && (
-                <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-2xs">
-                  <div className="flex items-center gap-2 font-bold text-slate-900 text-sm mb-3">
-                    <BookOpen className="h-4 w-4 text-[#0b3a96]" />
-                    <span>Table of Contents</span>
+                <div className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+                    <div className="flex items-center gap-2">
+                      <BookOpen className="h-4 w-4 text-[#0b3a96]" />
+                      <span className="font-bold text-slate-900 text-sm">Table of Contents</span>
+                    </div>
+                    <span className="rounded-full bg-blue-50 border border-blue-100 px-2 py-0.5 text-[10px] font-bold text-[#0b3a96]">
+                      {toc.length} sections
+                    </span>
                   </div>
-                  <nav className="space-y-1.5 max-h-[380px] overflow-y-auto pr-1 text-xs">
-                    {toc.map((item) => (
-                      <a
-                        key={item.id}
-                        href={`#${item.id}`}
-                        className={`block py-1 hover:text-[#0b3a96] transition-colors leading-snug ${
-                          item.level === 3
-                            ? "pl-3 text-slate-500 hover:text-slate-800"
-                            : "font-semibold text-slate-700"
-                        }`}
-                      >
-                        {item.text}
-                      </a>
-                    ))}
+                  <nav className="space-y-1 max-h-[460px] lg:max-h-[calc(100vh-280px)] overflow-y-auto pr-1 text-xs">
+                    {toc.map((item, index) => {
+                      const isActive = activeSectionId === item.id;
+                      return (
+                        <a
+                          key={item.id}
+                          href={`#${item.id}`}
+                          className={`flex items-start gap-2 rounded-lg px-2.5 py-1.5 transition leading-snug ${
+                            isActive
+                              ? "bg-blue-50 text-[#0b3a96] font-bold shadow-2xs"
+                              : "text-slate-700 hover:bg-slate-50 hover:text-[#0b3a96]"
+                          } ${item.level === 3 ? "pl-5 text-slate-500 font-normal" : "font-semibold"}`}
+                        >
+                          <span className="text-[10px] font-bold text-slate-400 mt-0.5 shrink-0">{index + 1}.</span>
+                          <span className="line-clamp-2">{item.text}</span>
+                        </a>
+                      );
+                    })}
                   </nav>
                 </div>
               )}
@@ -775,7 +914,7 @@ function DynamicInsightArticlePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
 import { DynamicOrStaticArticle } from "@/components/site/DynamicOrStaticArticle";
-const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.png";
+const imgEU = "/assets/brain/insight_eu_mdr_1786440985783.webp";
 
 export const Route = createFileRoute("/insights/eu-mdr-2026-eudamed-classification-and-compliance-priorities")({
   head: () => ({
@@ -46,7 +46,7 @@ function Article() {
             "@type": "BlogPosting",
             "headline": "EU MDR 2026: EUDAMED, Classification & Compliance Priorities",
             "description": "EU MDR 2026 update covering mandatory EUDAMED modules, UDI/device registration, certificates, market surveillance and practical manufacturer priorities.",
-            "image": "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.png",
+            "image": "https://www.nkbregovanta.com/assets/brain/insight_eu_mdr_1786440985783.webp",
             "author": {
               "@type": "Organization",
               "name": "NKB Regovanta Solutions Pvt. Ltd.",
