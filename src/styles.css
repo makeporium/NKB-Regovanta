@@ -265,12 +265,42 @@ article li a:hover,
   border-radius: 2px !important;
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Article Prose Containment, Word-Wrapping & Layout Integrity
+───────────────────────────────────────────────────────────── */
+.dynamic-article-prose,
+.rich-editor-content {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Strip any destructive foreign white-space: pre / nowrap styles on article children */
+.dynamic-article-prose *:not(pre):not(code):not(pre *):not(code *),
+.rich-editor-content *:not(pre):not(code):not(pre *):not(code *) {
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* Responsive table wrapper container */
+.table-wrapper {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 1.75rem 0 !important;
+}
+
 /* Clear distinction for tables in dynamic articles & editor */
 .dynamic-article-prose table,
 .rich-editor-content table {
   width: 100% !important;
+  max-width: 100% !important;
   border-collapse: collapse !important;
-  margin: 1.75rem 0 !important;
+  margin: 0 !important;
   border: 1px solid #cbd5e1 !important;
   border-radius: 8px !important;
   overflow: hidden !important;

@@ -79,75 +79,8 @@ function isPublicPost(post: Pick<ArticleDetail, "status" | "publish_date_ist">) 
   );
 }
 
-/**
- * Strips foreign doctype, head, style, and script tags, Google Docs / Word inline styling overrides,
- * and broken undefined headings so articles render with authentic NKB Regovanta typography.
- */
-export function cleanArticleHtml(rawHtml: string): string {
-  if (!rawHtml) return "";
-
-  let cleaned = rawHtml
-    .replace(/<!--[\s\S]*?-->/g, "")
-    .replace(/<!doctype[^>]*>/gi, "")
-    .replace(/<head[\s\S]*?<\/head>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<h[1-6][^>]*>\s*undefined\s*<\/h[1-6]>/gi, "")
-    .replace(/\s*dir=["']ltr["']/gi, "");
-
-  const mainMatch = cleaned.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (mainMatch && mainMatch[1]) {
-    cleaned = mainMatch[1];
-  } else {
-    const bodyMatch = cleaned.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    if (bodyMatch && bodyMatch[1]) cleaned = bodyMatch[1];
-  }
-
-  cleaned = cleaned.replace(/<\/?(?:html|body|main)[^>]*>/gi, "").trim();
-
-  // Strip harmful inline styles that override site fonts, font sizes, line heights, and colors
-  cleaned = cleaned.replace(/style=(["'])(.*?)\1/gi, (match, quote, styleStr) => {
-    let cleanStyles = styleStr
-      .replace(/font-family\s*:[^;]+;?/gi, "")
-      .replace(/font-size\s*:[^;]+;?/gi, "")
-      .replace(/color\s*:\s*(?:rgb\(0,\s*0,\s*0\)|#000(?:000)?|black|#fff(?:fff)?|white|rgb\(255,\s*255,\s*255\));?/gi, "")
-      .replace(/background-color\s*:[^;]+;?/gi, "")
-      .replace(/background\s*:[^;]+;?/gi, "")
-      .replace(/line-height\s*:[^;]+;?/gi, "")
-      .replace(/white-space\s*:\s*pre-wrap;?/gi, "")
-      .replace(/margin-(?:top|bottom|left|right)\s*:[^;]+;?/gi, "")
-      .replace(/font-variant\s*:[^;]+;?/gi, "")
-      .replace(/vertical-align\s*:[^;]+;?/gi, "")
-      .trim();
-    cleanStyles = cleanStyles.replace(/^;+|;+$/g, "").trim();
-    return cleanStyles ? `style=${quote}${cleanStyles}${quote}` : "";
-  });
-
-  // Strip table and table cell inline style attributes so site styles take over cleanly
-  cleaned = cleaned.replace(/<(table|thead|tbody|tr|th|td)([^>]*)>/gi, (match, tag, attrs) => {
-    const cleanedAttrs = attrs
-      .replace(/\s*style=(["'])[\s\S]*?\1/gi, "")
-      .replace(/\s*bgcolor=(["'])[\s\S]*?\1/gi, "")
-      .replace(/\s*color=(["'])[\s\S]*?\1/gi, "");
-    return `<${tag}${cleanedAttrs}>`;
-  });
-
-  // Strip Google Docs wrapper and redundant empty spans
-  cleaned = cleaned.replace(/<span\s+id=["']docs-internal-guid-[^"']*["']>([\s\S]*?)<\/span>/gi, "$1");
-  cleaned = cleaned.replace(/<span\s+style=["'][^"']*font-weight:\s*(?:700|bold)[^"']*["']>([\s\S]*?)<\/span>/gi, "<strong>$1</strong>");
-  for (let i = 0; i < 4; i++) {
-    cleaned = cleaned.replace(/<span(?:\s+style=["']\s*["'])?\s*>([\s\S]*?)<\/span>/gi, "$1");
-  }
-
-  // Unwrap paragraphs and spans inside table headers <th> so header text is never dark or oversized
-  cleaned = cleaned.replace(/<th([^>]*)>\s*<p[^>]*>([\s\S]*?)<\/p>\s*<\/th>/gi, "<th$1>$2</th>");
-  cleaned = cleaned.replace(/<th([^>]*)>\s*<span[^>]*>([\s\S]*?)<\/span>\s*<\/th>/gi, "<th$1>$2</th>");
-
-  // Strip empty paragraphs
-  cleaned = cleaned.replace(/<p[^>]*>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
-
-  return cleaned.trim();
-}
+import { cleanArticleHtml } from "@/lib/articleFormatter";
+export { cleanArticleHtml };
 
 /**
  * Extracts Q&A pairs from FAQ sections for Schema.org FAQPage generation
@@ -754,10 +687,10 @@ function DynamicInsightArticlePage() {
 
         {/* 2-Column Desktop & Laptop Grid (>= 1024px) with Dedicated Sticky Sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-8 lg:gap-10 xl:gap-12 items-start">
-          {/* Main Article Content Column - min-w-0 prevents any grid overflow or blowout */}
-          <div className="min-w-0">
+          {/* Main Article Content Column - min-w-0 and break-words prevent grid overflow */}
+          <div className="min-w-0 max-w-full">
             <div
-              className="dynamic-article-prose prose prose-lg prose-navy max-w-none text-[#1f2937] leading-relaxed space-y-6 prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:pt-8 prose-h2:pb-2 prose-h2:border-t prose-h2:border-gray-100 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-6 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-strong:text-[#0a192f] prose-img:rounded-xl prose-table:border prose-table:border-slate-200"
+              className="dynamic-article-prose prose prose-lg prose-navy max-w-none text-[#1f2937] leading-relaxed space-y-6 break-words [overflow-wrap:anywhere] prose-headings:font-bold prose-headings:text-[#0a192f] prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:pt-8 prose-h2:pb-2 prose-h2:border-t prose-h2:border-gray-100 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-6 prose-a:text-[#0b3a96] prose-a:underline hover:prose-a:text-blue-700 prose-strong:text-[#0a192f] prose-img:rounded-xl prose-table:border prose-table:border-slate-200"
               dangerouslySetInnerHTML={{ __html: htmlWithIds }}
             />
 
