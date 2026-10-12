@@ -1,0 +1,711 @@
+From 1fc545b517e9cc04b3801b448bd1f1bf8bf445d0 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 12 Oct 2026 17:52:43 +0000
+Subject: [PATCH] newsletter: fix re-subscribe, send reliability, unsubscribe
+ security
+
+- subscribe: re-subscribing after unsubscribing no longer falls through to
+  an insert that hits the unique email constraint; it reissues a token and
+  sends the confirmation email
+- confirm: links expire after 7 days (as the email says); an expired pending
+  signup gets a fresh token
+- unsubscribe: uses a secret per-subscriber unsubscribe_token instead of the
+  plain email, so links can't be used to unsubscribe someone else
+- send: use Resend batch API (100/call) with per-day idempotency keys,
+  check Resend's returned error instead of treating every resolved call as
+  sent, exit non-zero on failures, add List-Unsubscribe header
+- send: escape AI/RSS text and drop non-http links in the email HTML
+- send: never email mock data on a real send; skip weeks with no usable
+  items; unmatched Google News items are OTHER, not CDSCO
+- preview: PREVIEW_TO env var and [PREVIEW] subject prefix
+- Groq model id updated to groq/compound-mini (as in news_pipeline)
+- supabase-setup.sql: adds unsubscribe_token + token_issued_at columns
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01EEK9AFe8Vc33tAFbe3z2u5
+---
+ .github/workflows/newsletter.yml        |   2 +
+ newsletter/.env.example                 |   1 +
+ newsletter/README.md                    |   9 +-
+ newsletter/scripts/send-newsletter.ts   | 166 +++++++++++++++++-------
+ newsletter/src/server/db.ts             |   2 +
+ newsletter/src/server/newsletter.ts     | 155 +++++++++++++++-------
+ newsletter/src/server/regulatoryFeed.ts |  21 ++-
+ newsletter/supabase-setup.sql           |  14 ++
+ 8 files changed, 264 insertions(+), 106 deletions(-)
+
+diff --git a/.github/workflows/newsletter.yml b/.github/workflows/newsletter.yml
+index 1f30639..b663507 100644
+--- a/.github/workflows/newsletter.yml
++++ b/.github/workflows/newsletter.yml
+@@ -44,6 +44,8 @@ jobs:
+           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+           RESEND_FROM: ${{ secrets.RESEND_FROM }}
+           SITE_URL: ${{ secrets.SITE_URL }}
++          RESEND_REPLY_TO: ${{ secrets.RESEND_REPLY_TO }}
++          PREVIEW_TO: ${{ secrets.PREVIEW_TO }}
+         run: |
+           # On schedule: always send for real
+           # On manual trigger: respect the preview_only input
+diff --git a/newsletter/.env.example b/newsletter/.env.example
+index d52830e..7c5d0f0 100644
+--- a/newsletter/.env.example
++++ b/newsletter/.env.example
+@@ -12,6 +12,7 @@ SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+ RESEND_API_KEY=re_your_key_here
+ RESEND_FROM=newsletter@yourdomain.com   # Must be from your verified domain
+ RESEND_REPLY_TO=hello@yourdomain.com    # Optional
++PREVIEW_TO=you@yourdomain.com           # Where preview emails go (defaults to RESEND_FROM)
+ 
+ # Your site (used in confirmation + unsubscribe links)
+ SITE_URL=https://yourdomain.com
+diff --git a/newsletter/README.md b/newsletter/README.md
+index ceddba5..e85c719 100644
+--- a/newsletter/README.md
++++ b/newsletter/README.md
+@@ -14,6 +14,7 @@ Automated weekly regulatory intelligence newsletter.
+ 
+ ### 2. Set up Supabase table
+ Run `supabase-setup.sql` in the Supabase Dashboard → SQL Editor.
++If you created the table before, run it again — it adds the `unsubscribe_token` and `token_issued_at` columns without touching existing rows.
+ 
+ ### 3. Configure environment
+ ```bash
+@@ -29,7 +30,7 @@ npm install
+ ### 5. Test the pipeline (preview only)
+ ```bash
+ npm run preview
+-# Sends a preview email to RESEND_FROM only
++# Sends a preview email to PREVIEW_TO only (falls back to RESEND_FROM)
+ ```
+ 
+ ### 6. Send to all subscribers
+@@ -49,11 +50,11 @@ POST /api/subscribe → Supabase inserts pending row
+     ↓
+ Resend sends confirmation email with /confirm?token=xxx link
+     ↓
+-User clicks → status flips to confirmed
++User clicks (within 7 days) → status flips to confirmed
+     ↓
+ User receives weekly newsletter every Monday
+     ↓ (if they want out)
+-User clicks Unsubscribe → /unsubscribe?email=xxx → status flips to unsubscribed
++User clicks Unsubscribe → /unsubscribe?token=xxx (secret per-subscriber token) → status flips to unsubscribed
+ ```
+ 
+ ---
+@@ -83,6 +84,8 @@ Add these secrets in **repo Settings → Secrets → Actions**:
+ | `RESEND_API_KEY` | From resend.com dashboard |
+ | `RESEND_FROM` | `newsletter@yourdomain.com` |
+ | `SITE_URL` | `https://yourdomain.com` |
++| `PREVIEW_TO` | Your inbox, for manual preview runs (optional) |
++| `RESEND_REPLY_TO` | Reply-to address (optional) |
+ 
+ ---
+ 
+diff --git a/newsletter/scripts/send-newsletter.ts b/newsletter/scripts/send-newsletter.ts
+index 1579de6..bbe9853 100644
+--- a/newsletter/scripts/send-newsletter.ts
++++ b/newsletter/scripts/send-newsletter.ts
+@@ -43,8 +43,10 @@ const { fetchRegulatoryFeedForNewsletter } = await import("../src/server/regulat
+ 
+ // ── Config ────────────────────────────────────────────────────────────────────
+ const SEND_FOR_REAL = process.argv.includes("--send");
+-const BATCH_SIZE = 50;
+-const BATCH_DELAY_MS = 300;
++// Resend's batch endpoint accepts up to 100 emails per call. One call per batch
++// (instead of 50 parallel single sends) keeps us well under the API rate limit.
++const BATCH_SIZE = 100;
++const BATCH_DELAY_MS = 600;
+ 
+ const supabase = createClient(
+     process.env.SUPABASE_URL ?? "",
+@@ -55,6 +57,30 @@ const supabase = createClient(
+ const resend = new Resend(process.env.RESEND_API_KEY ?? "");
+ const FROM = process.env.RESEND_FROM ?? "newsletter@example.com";
+ const SITE = (process.env.SITE_URL ?? "http://localhost:3001").replace(/\/$/, "");
++// Where preview emails go. Falls back to RESEND_FROM, which is often a
++// no-reply sender address nobody reads — set PREVIEW_TO to your own inbox.
++const PREVIEW_TO = process.env.PREVIEW_TO || FROM;
++
++// ── Escaping ──────────────────────────────────────────────────────────────────
++// Titles come from RSS and summaries from the AI, so neither is trusted HTML.
++function escapeHtml(s: string): string {
++    return s
++        .replace(/&/g, "&amp;")
++        .replace(/</g, "&lt;")
++        .replace(/>/g, "&gt;")
++        .replace(/"/g, "&quot;")
++        .replace(/'/g, "&#39;");
++}
++
++/** Returns the URL only if it is http(s); anything else (javascript:, data:, "#") → "". */
++function safeHttpUrl(url: string): string {
++    try {
++        const u = new URL(url);
++        return u.protocol === "http:" || u.protocol === "https:" ? u.toString() : "";
++    } catch {
++        return "";
++    }
++}
+ 
+ // ── Agency styling ────────────────────────────────────────────────────────────
+ const AGENCY_STYLE: Record<string, { color: string; bg: string; emoji: string; label: string }> = {
+@@ -75,7 +101,8 @@ function buildEmailHtml(
+         .filter((i) => i.source_agency !== "OTHER")
+         .map((item) => {
+             const style = AGENCY_STYLE[item.source_agency] ?? AGENCY_STYLE.OTHER;
+-            const hasLink = item.source_url && item.source_url !== "#";
++            const link = safeHttpUrl(item.source_url);
++            const hasLink = link !== "";
+             return `
+       <tr>
+         <td style="padding:0 0 24px 0;">
+@@ -95,14 +122,14 @@ function buildEmailHtml(
+               <td style="padding:20px 20px 16px;">
+                 <p style="margin:0 0 10px;color:#f4f4f5;font-size:16px;
+                           font-weight:700;line-height:1.4;">
+-                  ${item.title}
++                  ${escapeHtml(item.title)}
+                 </p>
+                 <p style="margin:0 0 16px;color:#a1a1aa;font-size:14px;
+                           line-height:1.7;">
+-                  ${item.summary}
++                  ${escapeHtml(item.summary)}
+                 </p>
+                 ${hasLink ? `
+-                <a href="${item.source_url}"
++                <a href="${escapeHtml(link)}"
+                    style="display:inline-block;padding:8px 18px;background:#27272a;
+                           color:#a1a1aa;font-size:13px;font-weight:500;
+                           text-decoration:none;border-radius:6px;
+@@ -222,8 +249,9 @@ function buildEmailText(
+         const style = AGENCY_STYLE[item.source_agency] ?? AGENCY_STYLE.OTHER;
+         lines.push(`[${style.label}] ${item.title}`);
+         lines.push(item.summary);
+-        if (item.source_url && item.source_url !== "#") {
+-            lines.push(`Read more: ${item.source_url}`);
++        const link = safeHttpUrl(item.source_url);
++        if (link) {
++            lines.push(`Read more: ${link}`);
+         }
+         lines.push("");
+     }
+@@ -239,44 +267,65 @@ async function sleep(ms: number) {
+     return new Promise((resolve) => setTimeout(resolve, ms));
+ }
+ 
++interface Recipient {
++    email: string;
++    /** null in preview mode — the unsubscribe link then points at a dummy token. */
++    unsubscribe_token: string | null;
++}
++
+ async function sendBatch(
+-    emails: string[],
++    recipients: Recipient[],
+     subject: string,
+     htmlTemplate: string,
+-    textTemplate: string
++    textTemplate: string,
++    /** Stable per-run id (e.g. "weekly-2026-10-12"). When set, each batch gets an
++     *  idempotency key so a retried/re-run job can't send the same batch twice. */
++    runId: string | null
+ ) {
+     let successCount = 0;
+     let failCount = 0;
+ 
+-    for (let i = 0; i < emails.length; i += BATCH_SIZE) {
+-        const batch = emails.slice(i, i + BATCH_SIZE);
+-        console.log(`  Sending batch ${Math.floor(i / BATCH_SIZE) + 1} (${batch.length} emails)...`);
+-
+-        const results = await Promise.allSettled(
+-            batch.map((email) => {
+-                const unsubUrl = `${SITE}/unsubscribe?email=${encodeURIComponent(email)}`;
+-                const html = htmlTemplate.replace(/UNSUBSCRIBE_URL_PLACEHOLDER/g, unsubUrl);
+-                const text = textTemplate.replace(/UNSUBSCRIBE_URL_PLACEHOLDER/g, unsubUrl);
+-
+-                return resend.emails.send({
+-                    from: FROM,
+-                    to: email,
+-                    subject,
+-                    html,
+-                    text,
+-                });
+-            })
+-        );
+-
+-        for (const r of results) {
+-            if (r.status === "fulfilled") successCount++;
+-            else {
+-                failCount++;
+-                console.error("  ✗ Send failed:", r.reason);
++    for (let i = 0; i < recipients.length; i += BATCH_SIZE) {
++        const batchNo = Math.floor(i / BATCH_SIZE) + 1;
++        const batch = recipients.slice(i, i + BATCH_SIZE);
++        console.log(`  Sending batch ${batchNo} (${batch.length} emails)...`);
++
++        const payload = batch.map(({ email, unsubscribe_token }) => {
++            const unsubUrl = `${SITE}/unsubscribe?token=${unsubscribe_token ?? "preview"}`;
++            return {
++                from: FROM,
++                to: email,
++                subject,
++                html: htmlTemplate.replace(/UNSUBSCRIBE_URL_PLACEHOLDER/g, unsubUrl),
++                text: textTemplate.replace(/UNSUBSCRIBE_URL_PLACEHOLDER/g, unsubUrl),
++                // Lets Gmail/Outlook show their own "Unsubscribe" button.
++                headers: { "List-Unsubscribe": `<${unsubUrl}>` },
++                ...(process.env.RESEND_REPLY_TO ? { replyTo: process.env.RESEND_REPLY_TO } : {}),
++            };
++        });
++
++        try {
++            // Resend returns { data, error } instead of throwing on API errors,
++            // so `error` has to be checked — a resolved promise is not a success.
++            const { data, error } = await resend.batch.send(
++                payload,
++                runId ? { idempotencyKey: `${runId}-batch-${batchNo}` } : undefined
++            );
++            if (error) {
++                failCount += batch.length;
++                console.error(`  ✗ Batch ${batchNo} failed:`, error);
++            } else {
++                const sent = data?.data?.length ?? 0;
++                successCount += sent;
++                failCount += batch.length - sent;
+             }
++        } catch (err) {
++            // Network errors etc.
++            failCount += batch.length;
++            console.error(`  ✗ Batch ${batchNo} failed:`, err);
+         }
+ 
+-        if (i + BATCH_SIZE < emails.length) {
++        if (i + BATCH_SIZE < recipients.length) {
+             await sleep(BATCH_DELAY_MS);
+         }
+     }
+@@ -302,8 +351,15 @@ async function main() {
+ 
+     // Step 1: Fetch & draft content
+     console.log("📡 Step 1/3 — Fetching regulatory intelligence...");
+-    const items = await fetchRegulatoryFeedForNewsletter();
+-    console.log(`   ✓ Got ${items.length} items (${items.filter(i => i.source_agency !== "OTHER").length} after filtering OTHER)\n`);
++    const items = await fetchRegulatoryFeedForNewsletter({ allowMock: !SEND_FOR_REAL });
++    const usableCount = items.filter((i) => i.source_agency !== "OTHER").length;
++    console.log(`   ✓ Got ${items.length} items (${usableCount} after filtering OTHER)\n`);
++
++    // Don't send an empty newsletter (e.g. feeds down or nothing relevant this week).
++    if (usableCount === 0) {
++        console.log("⚠️  No usable items this week. Nothing sent.");
++        process.exit(0);
++    }
+ 
+     // Step 2: Build email
+     const now = new Date();
+@@ -314,7 +370,9 @@ async function main() {
+         day: "numeric",
+         timeZone: "Asia/Kolkata",
+     });
+-    const subject = `Regulatory Brief — ${now.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}`;
++    const subject =
++        (SEND_FOR_REAL ? "" : "[PREVIEW] ") +
++        `Regulatory Brief — ${now.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}`;
+ 
+     // Build templates with placeholder (replaced per-subscriber at send time)
+     const htmlTemplate = buildEmailHtml(items, "UNSUBSCRIBE_URL_PLACEHOLDER", weekLabel);
+@@ -323,34 +381,41 @@ async function main() {
+     // Step 3: Send
+     console.log("📨 Step 2/3 — Preparing subscriber list...");
+ 
+-    let recipientEmails: string[];
++    let recipients: Recipient[];
+ 
+     if (SEND_FOR_REAL) {
+         const { data: subscribers, error } = await supabase
+             .from("subscribers")
+-            .select("email")
+-            .eq("status", "confirmed");
++            .select("email, unsubscribe_token")
++            .eq("status", "confirmed")
++            .order("created_at", { ascending: true }); // stable order → stable batches for idempotency
+ 
+         if (error) {
+             console.error("❌ Supabase query failed:", error.message);
+             process.exit(1);
+         }
+ 
+-        recipientEmails = (subscribers ?? []).map((s: { email: string }) => s.email);
+-        console.log(`   ✓ Found ${recipientEmails.length} confirmed subscribers\n`);
++        recipients = (subscribers ?? []) as Recipient[];
++        console.log(`   ✓ Found ${recipients.length} confirmed subscribers\n`);
+ 
+-        if (recipientEmails.length === 0) {
++        if (recipients.length === 0) {
+             console.log("⚠️  No confirmed subscribers found. Nothing to send.");
+             process.exit(0);
+         }
+     } else {
+-        // Preview mode: send only to the FROM address
+-        recipientEmails = [FROM];
+-        console.log(`   ✓ Preview mode — sending to: ${FROM}\n`);
++        // Preview mode: send only to PREVIEW_TO (or RESEND_FROM if unset)
++        recipients = [{ email: PREVIEW_TO, unsubscribe_token: null }];
++        console.log(`   ✓ Preview mode — sending to: ${PREVIEW_TO}\n`);
+     }
+ 
++    // One id per real send day (IST), so re-running the job the same day
++    // doesn't email everyone twice. Previews are never deduplicated.
++    const runId = SEND_FOR_REAL
++        ? `weekly-${now.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" })}`
++        : null;
++
+     console.log("🚀 Step 3/3 — Sending emails...");
+-    const { successCount, failCount } = await sendBatch(recipientEmails, subject, htmlTemplate, textTemplate);
++    const { successCount, failCount } = await sendBatch(recipients, subject, htmlTemplate, textTemplate, runId);
+ 
+     console.log("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+     console.log(`  ✓ Sent:   ${successCount}`);
+@@ -364,6 +429,9 @@ async function main() {
+     }
+ 
+     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
++
++    // Make the GitHub Actions run show as failed if any email didn't go out.
++    if (failCount > 0) process.exit(1);
+ }
+ 
+ main().catch((err) => {
+diff --git a/newsletter/src/server/db.ts b/newsletter/src/server/db.ts
+index e9b8e80..611ce63 100644
+--- a/newsletter/src/server/db.ts
++++ b/newsletter/src/server/db.ts
+@@ -24,6 +24,8 @@ export interface Subscriber {
+     email: string;
+     status: "pending" | "confirmed" | "unsubscribed";
+     confirm_token: string;
++    unsubscribe_token: string;
++    token_issued_at: string;
+     created_at: string;
+     confirmed_at: string | null;
+ }
+diff --git a/newsletter/src/server/newsletter.ts b/newsletter/src/server/newsletter.ts
+index db4559b..c0da60e 100644
+--- a/newsletter/src/server/newsletter.ts
++++ b/newsletter/src/server/newsletter.ts
+@@ -7,7 +7,7 @@
+  * Functions exported:
+  *  - subscribeFn    → validate email, insert pending row, send confirmation email
+  *  - confirmFn      → flip status to 'confirmed' via token
+- *  - unsubscribeFn  → flip status to 'unsubscribed' via email
++ *  - unsubscribeFn  → flip status to 'unsubscribed' via unsubscribe token
+  */
+ 
+ "use server";
+@@ -96,6 +96,56 @@ function confirmationEmailHtml(confirmUrl: string): string {
+ </html>`;
+ }
+ 
++// ── Confirmation helpers ───────────────────────────────────────────────────────
++
++/** Confirmation links stop working after this long (matches the email copy). */
++const CONFIRM_TOKEN_TTL_MS = 7 * 24 * 60 * 60 * 1000;
++
++function isTokenExpired(issuedAt: string | null | undefined): boolean {
++    if (!issuedAt) return true;
++    return Date.now() - new Date(issuedAt).getTime() > CONFIRM_TOKEN_TTL_MS;
++}
++
++/** Sends the confirmation email. Returns true on success. Resend reports errors
++ *  in its return value rather than throwing, so we check `error` explicitly. */
++async function sendConfirmationEmail(email: string, confirmToken: string): Promise<boolean> {
++    const confirmUrl = `${siteUrl()}/confirm?token=${confirmToken}`;
++    const { error } = await getResend().emails.send({
++        from: fromAddress(),
++        to: email,
++        subject: "Confirm your NKB Regovanta newsletter subscription",
++        html: confirmationEmailHtml(confirmUrl),
++    });
++    if (error) {
++        console.error("[subscribe] email send error:", error);
++        return false;
++    }
++    return true;
++}
++
++/** Issues a fresh confirm token for an existing row and sets it back to pending. */
++async function reissueConfirmToken(email: string): Promise<string | null> {
++    const { data, error } = await supabase
++        .from("subscribers")
++        .update({
++            status: "pending",
++            confirm_token: crypto.randomUUID(),
++            token_issued_at: new Date().toISOString(),
++            confirmed_at: null,
++        })
++        .eq("email", email)
++        .select("confirm_token")
++        .single();
++    if (error || !data) {
++        console.error("[subscribe] token reissue error:", error);
++        return null;
++    }
++    return data.confirm_token;
++}
++
++const SEND_FAILED = { ok: false, message: "Could not send confirmation email. Please try again." };
++const GENERIC_FAILED = { ok: false, message: "Something went wrong. Please try again." };
++
+ // ── subscribeFn ────────────────────────────────────────────────────────────────
+ 
+ export const subscribeFn = createServerFn({ method: "POST" })
+@@ -112,66 +162,56 @@ export const subscribeFn = createServerFn({ method: "POST" })
+             return { ok: false, message: "Please enter a valid email address." };
+         }
+ 
+-        // Check if already subscribed
+-        const { data: existing } = await supabase
++        // Check if this email is already in the table.
++        // maybeSingle() returns null (not an error) when there is no row.
++        const { data: existing, error: lookupErr } = await supabase
+             .from("subscribers")
+-            .select("status, confirm_token")
++            .select("status, confirm_token, token_issued_at")
+             .eq("email", email)
+-            .single();
++            .maybeSingle();
++
++        if (lookupErr) {
++            console.error("[subscribe] lookup error:", lookupErr);
++            return GENERIC_FAILED;
++        }
+ 
+         if (existing) {
+             if (existing.status === "confirmed") {
+                 return { ok: true, message: "You're already subscribed! 🎉" };
+             }
++
+             if (existing.status === "pending") {
+-                // Re-send the confirmation
+-                const confirmUrl = `${siteUrl()}/confirm?token=${existing.confirm_token}`;
+-                const resend = getResend();
+-                await resend.emails.send({
+-                    from: fromAddress(),
+-                    to: email,
+-                    subject: "Confirm your NKB Regovanta newsletter subscription",
+-                    html: confirmationEmailHtml(confirmUrl),
+-                });
++                // Re-send the confirmation; issue a new token if the old one has expired.
++                const token: string | null = isTokenExpired(existing.token_issued_at)
++                    ? await reissueConfirmToken(email)
++                    : existing.confirm_token;
++                if (!token) return GENERIC_FAILED;
++                if (!(await sendConfirmationEmail(email, token))) return SEND_FAILED;
+                 return { ok: true, message: "Confirmation email re-sent — check your inbox." };
+             }
+-            if (existing.status === "unsubscribed") {
+-                // Allow re-subscribe: reset to pending
+-                const { error } = await supabase
+-                    .from("subscribers")
+-                    .update({ status: "pending", confirm_token: crypto.randomUUID(), confirmed_at: null })
+-                    .eq("email", email);
+-                if (error) throw new Error(error.message);
+-            }
++
++            // status === "unsubscribed": reset to pending with a fresh token and
++            // send the confirmation. (Previously this fell through to the insert
++            // below, which failed on the unique email constraint.)
++            const token = await reissueConfirmToken(email);
++            if (!token) return GENERIC_FAILED;
++            if (!(await sendConfirmationEmail(email, token))) return SEND_FAILED;
++            return { ok: true, message: "Check your inbox — confirmation email sent! 📬" };
+         }
+ 
+-        // Fresh insert
++        // Brand-new subscriber
+         const { data: inserted, error: insertErr } = await supabase
+             .from("subscribers")
+             .insert({ email, status: "pending" })
+             .select("confirm_token")
+             .single();
+ 
+-        if (insertErr) {
++        if (insertErr || !inserted) {
+             console.error("[subscribe] insert error:", insertErr);
+-            return { ok: false, message: "Something went wrong. Please try again." };
+-        }
+-
+-        const confirmUrl = `${siteUrl()}/confirm?token=${inserted.confirm_token}`;
+-        const resend = getResend();
+-
+-        const { error: emailErr } = await resend.emails.send({
+-            from: fromAddress(),
+-            to: email,
+-            subject: "Confirm your NKB Regovanta newsletter subscription",
+-            html: confirmationEmailHtml(confirmUrl),
+-        });
+-
+-        if (emailErr) {
+-            console.error("[subscribe] email send error:", emailErr);
+-            return { ok: false, message: "Could not send confirmation email. Please try again." };
++            return GENERIC_FAILED;
+         }
+ 
++        if (!(await sendConfirmationEmail(email, inserted.confirm_token))) return SEND_FAILED;
+         return { ok: true, message: "Check your inbox — confirmation email sent! 📬" };
+     });
+ 
+@@ -188,46 +228,63 @@ export const confirmFn = createServerFn({ method: "GET" })
+         const token = (data.token ?? "").trim();
+         if (!token) return { ok: false, message: "Missing confirmation token." };
+ 
++        // Only tokens issued within the last 7 days are accepted.
++        const cutoff = new Date(Date.now() - CONFIRM_TOKEN_TTL_MS).toISOString();
++
+         const { data: rows, error } = await supabase
+             .from("subscribers")
+             .update({ status: "confirmed", confirmed_at: new Date().toISOString() })
+             .eq("confirm_token", token)
+             .eq("status", "pending")
++            .gte("token_issued_at", cutoff)
+             .select("email");
+ 
+         if (error) {
+             console.error("[confirm] update error:", error);
+-            return { ok: false, message: "Something went wrong. Please try again." };
++            return GENERIC_FAILED;
+         }
+ 
+         if (!rows || rows.length === 0) {
+-            return { ok: false, message: "This link is invalid or has already been used." };
++            return {
++                ok: false,
++                message:
++                    "This link is invalid, expired, or has already been used. Sign up again to get a new one.",
++            };
+         }
+ 
+         return { ok: true, email: rows[0].email };
+     });
+ 
+ // ── unsubscribeFn ─────────────────────────────────────────────────────────────
++// Uses the secret per-subscriber unsubscribe_token (not the email address),
++// so a link can only unsubscribe the person it was sent to.
++
++const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+ 
+ export const unsubscribeFn = createServerFn({ method: "GET" })
+     .validator((data: unknown) => {
+-        if (typeof data !== "object" || data === null || !("email" in data)) {
++        if (typeof data !== "object" || data === null || !("token" in data)) {
+             throw new Error("Invalid payload");
+         }
+-        return data as { email: string };
++        return data as { token: string };
+     })
+     .handler(async ({ data }) => {
+-        const email = (data.email ?? "").trim().toLowerCase();
+-        if (!isValidEmail(email)) return { ok: false, message: "Invalid email address." };
++        const token = (data.token ?? "").trim();
++        if (!UUID_RE.test(token)) return { ok: false, message: "Invalid unsubscribe link." };
+ 
+-        const { error } = await supabase
++        const { data: rows, error } = await supabase
+             .from("subscribers")
+             .update({ status: "unsubscribed" })
+-            .eq("email", email);
++            .eq("unsubscribe_token", token)
++            .select("id");
+ 
+         if (error) {
+             console.error("[unsubscribe] error:", error);
+-            return { ok: false, message: "Something went wrong. Please try again." };
++            return GENERIC_FAILED;
++        }
++
++        if (!rows || rows.length === 0) {
++            return { ok: false, message: "Invalid unsubscribe link." };
+         }
+ 
+         return { ok: true };
+diff --git a/newsletter/src/server/regulatoryFeed.ts b/newsletter/src/server/regulatoryFeed.ts
+index 821a0df..6e9b601 100644
+--- a/newsletter/src/server/regulatoryFeed.ts
++++ b/newsletter/src/server/regulatoryFeed.ts
+@@ -159,7 +159,7 @@ async function callGroq(prompt: string): Promise<{ headline: string; summary: st
+             Authorization: `Bearer ${apiKey}`,
+         },
+         body: JSON.stringify({
+-            model: "compound-beta-mini",
++            model: "groq/compound-mini",
+             temperature: 0.2,
+             messages: [{ role: "user", content: prompt }],
+         }),
+@@ -209,7 +209,14 @@ const MOCK_ITEMS: RegulatoryItem[] = [
+     },
+ ];
+ 
+-export async function fetchRegulatoryFeedForNewsletter(): Promise<RegulatoryItem[]> {
++/**
++ * @param opts.allowMock  Only for previews. When feeds return nothing, fall back to
++ *   MOCK_ITEMS so you can still see the email layout. Must stay false for real
++ *   sends — otherwise subscribers would get made-up regulatory news.
++ */
++export async function fetchRegulatoryFeedForNewsletter(
++    opts: { allowMock?: boolean } = {}
++): Promise<RegulatoryItem[]> {
+     console.log("[Feed] Fetching RSS feeds...");
+     const rawArrays = await Promise.all(FEEDS.map((f) => fetchFeed(f.url, f.label)));
+     const allItems = rawArrays.flat();
+@@ -222,8 +229,12 @@ export async function fetchRegulatoryFeedForNewsletter(): Promise<RegulatoryItem
+     });
+ 
+     if (sorted.length === 0) {
+-        console.log("[Feed] No live items — using mock data.");
+-        return MOCK_ITEMS;
++        if (opts.allowMock) {
++            console.log("[Feed] No live items — using MOCK data (preview only).");
++            return MOCK_ITEMS;
++        }
++        console.log("[Feed] No live items.");
++        return [];
+     }
+ 
+     const fdaItems = sorted.filter((i) => i.feed_source === "FDA CDRH").slice(0, 2);
+@@ -239,7 +250,7 @@ export async function fetchRegulatoryFeedForNewsletter(): Promise<RegulatoryItem
+             else if (lower.includes("fda") || lower.includes("510k") || lower.includes("recall")) agency = "USFDA";
+             else if (lower.includes("mdr") || lower.includes("ivdr") || lower.includes("ce mark") || lower.includes("eu ")) agency = "EU_MDR";
+             else if (lower.includes("mdsap")) agency = "MDSAP";
+-            else agency = "CDSCO";
++            else agency = "OTHER"; // unmatched → dropped from the email, not mislabelled as CDSCO
+         }
+         return { title: item.title, source_agency: agency, summary: "", source_url: item.link };
+     });
+diff --git a/newsletter/supabase-setup.sql b/newsletter/supabase-setup.sql
+index ec91fa0..f8955b0 100644
+--- a/newsletter/supabase-setup.sql
++++ b/newsletter/supabase-setup.sql
+@@ -27,6 +27,20 @@ create index if not exists idx_subscribers_email
+ --    No public read/write policies = secure by default.
+ alter table subscribers enable row level security;
+ 
++-- 5. Unsubscribe token + confirmation-link expiry
++--    Safe to run on a table that already exists (columns are added only if missing).
++--    unsubscribe_token: secret per-subscriber token used in unsubscribe links,
++--      so nobody can unsubscribe someone else just by knowing their email.
++--    token_issued_at: when the current confirm_token was issued; confirmation
++--      links older than 7 days are rejected and a fresh one is sent on re-signup.
++alter table subscribers
++  add column if not exists unsubscribe_token uuid not null default gen_random_uuid();
++alter table subscribers
++  add column if not exists token_issued_at timestamptz not null default now();
++
++create unique index if not exists idx_subscribers_unsubscribe_token
++  on subscribers (unsubscribe_token);
++
+ -- ── Optional: verify the table was created ────────────────────────────────────
+ -- select * from subscribers limit 5;
+ 
+-- 
+2.43.0
+
