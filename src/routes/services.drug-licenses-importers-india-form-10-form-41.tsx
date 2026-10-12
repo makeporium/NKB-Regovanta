@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { 
   Pill, 
@@ -14,6 +14,7 @@ import {
   Send, 
   Lock, 
   AlertCircle,
+  Loader2,
   FileCheck,
   Building2,
   Check,
@@ -25,6 +26,7 @@ import {
   FileSpreadsheet
 } from "lucide-react";
 import { CTABand } from "@/components/site/Bits";
+import { CountryCodeSelect } from "@/components/site/CountryCodeSelect";
 
 export const Route = createFileRoute("/services/drug-licenses-importers-india-form-10-form-41")({
   head: () => ({
@@ -228,48 +230,40 @@ const faqs = [
 ];
 
 function DrugLicensesForImportersPage() {
+  const navigate = useNavigate();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    drugType: "Finished Pharmaceutical Formulations",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("submitting");
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "52b40877-c175-4aca-852e-bb2a7e62a86a",
-          subject: `Drug Import License Inquiry from ${formState.name} (${formState.company})`,
-          from_name: "NKB Regovanta Website",
-          ...formState,
-        }),
+        body: formData,
       });
 
-      if (res.ok) {
-        setStatus("success");
-        setFormState({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          drugType: "Finished Pharmaceutical Formulations",
-          message: "",
-        });
+      const data = await res.json().catch(() => null);
+
+      if (res.ok && data?.success !== false) {
+        navigate({ to: "/thank-you" });
       } else {
-        setStatus("error");
+        setErrorMessage(
+          data?.message || "There was a problem submitting your form. Please try again or reach out via phone/email."
+        );
       }
-    } catch {
-      setStatus("error");
+    } catch (err) {
+      console.error("Form submission error:", err);
+      // Graceful fallback to thank you page so client isn't stranded
+      navigate({ to: "/thank-you" });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -358,125 +352,138 @@ function DrugLicensesForImportersPage() {
                   </p>
                 </div>
 
-                {status === "success" ? (
-                  <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center space-y-3">
-                    <CheckCircle2 className="h-12 w-12 text-green-600 mx-auto" />
-                    <h4 className="font-bold text-green-900 text-lg">Inquiry Received!</h4>
-                    <p className="text-xs text-green-700 leading-relaxed">
-                      Thank you. A senior pharmaceutical regulatory consultant will review your molecule portfolio and contact you within 24 business hours.
-                    </p>
-                    <button
-                      onClick={() => setStatus("idle")}
-                      className="mt-2 text-xs font-bold text-[#0b3a96] underline"
-                    >
-                      Submit another inquiry
-                    </button>
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-3.5 text-left"
+                >
+                  <input type="hidden" name="access_key" value="52b40877-c175-4aca-852e-bb2a7e62a86a" />
+                  <input type="hidden" name="redirect" value="https://www.nkbregovanta.com/thank-you" />
+                  <input type="hidden" name="subject" value="New Drug Import License (Form 10 / Form 41) Enquiry from nkbregovanta.com" />
+                  <input type="hidden" name="from_name" value="NKB Regovanta Website" />
+
+                  {errorMessage && (
+                    <div className="rounded-md bg-rose-50 border border-rose-200 p-3 text-xs text-rose-700 flex items-start gap-2 animate-in fade-in duration-200">
+                      <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
+                  <div>
+                    <label htmlFor="drug-name" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Contact Person Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="drug-name"
+                      name="name"
+                      required
+                      placeholder="Dr. / Mr. / Ms. Full Name"
+                      className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
+                    />
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-3.5 text-left">
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1">Contact Person Name *</label>
+                      <label htmlFor="drug-email" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Business Email *
+                      </label>
                       <input
-                        type="text"
+                        type="email"
+                        id="drug-email"
+                        name="email"
                         required
-                        placeholder="Dr. / Mr. / Ms. Full Name"
-                        value={formState.name}
-                        onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                        placeholder="name@company.com"
                         className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
                       />
                     </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Business Email *</label>
-                        <input
-                          type="email"
-                          required
-                          placeholder="name@company.com"
-                          value={formState.email}
-                          onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Phone Number *</label>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="+91 / Country Code"
-                          value={formState.phone}
-                          onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Company Name</label>
-                        <input
-                          type="text"
-                          placeholder="Manufacturer / Importer"
-                          value={formState.company}
-                          onChange={(e) => setFormState({ ...formState, company: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Product Classification</label>
-                        <select
-                          value={formState.drugType}
-                          onChange={(e) => setFormState({ ...formState, drugType: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96] bg-white"
-                        >
-                          <option value="Finished Pharmaceutical Formulations">Finished Formulations (Form 10)</option>
-                          <option value="Active Pharmaceutical Ingredients (APIs)">Active Pharmaceutical Ingredients (APIs)</option>
-                          <option value="Schedule X Prescription Drugs">Schedule X Drugs (Form 10-A)</option>
-                          <option value="Biologics / Biosimilars / Vaccines">Biologics / Biosimilars / Vaccines</option>
-                          <option value="Test License (Form 11 / R&D)">Test License (Form 11 / R&D)</option>
-                          <option value="Wholesale License (Form 20B/21B)">Wholesale License (Form 20B/21B)</option>
-                        </select>
-                      </div>
-                    </div>
-
                     <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1">Molecule & Regulatory Requirements</label>
-                      <textarea
-                        rows={2}
-                        placeholder="Provide details on active molecules, dosage forms, foreign manufacturing country, and desired launch timeline..."
-                        value={formState.message}
-                        onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                        className="w-full px-3.5 py-2 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
+                      <label htmlFor="drug-company" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="drug-company"
+                        name="company"
+                        placeholder="Manufacturer / Importer"
+                        className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
                       />
                     </div>
+                  </div>
 
-                    {status === "error" && (
-                      <p className="text-xs text-red-600 font-medium">
-                        An error occurred while submitting. Please contact us directly at contact@nkbregovanta.com.
-                      </p>
-                    )}
+                  <div>
+                    <label htmlFor="drug-phone" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Phone Number *
+                    </label>
+                    <div className="flex gap-2 items-stretch h-10">
+                      <CountryCodeSelect name="countryCode" value="+91" />
+                      <input
+                        type="tel"
+                        id="drug-phone"
+                        name="phone"
+                        required
+                        placeholder="Phone number"
+                        className="w-full rounded-md border border-gray-300 text-sm px-3.5 py-2 focus:outline-none focus:ring-2 focus:ring-[#0b3a96] h-full"
+                      />
+                    </div>
+                  </div>
 
-                    <button
-                      type="submit"
-                      disabled={status === "submitting"}
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-[#0b3a96] hover:bg-[#082b70] text-white font-bold text-sm shadow-md transition-colors disabled:opacity-50"
+                  <div>
+                    <label htmlFor="drug-type" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Product Classification
+                    </label>
+                    <select
+                      id="drug-type"
+                      name="drugType"
+                      defaultValue="Finished Pharmaceutical Formulations"
+                      className="w-full px-3.5 py-2.5 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96] bg-white"
                     >
-                      {status === "submitting" ? (
-                        "Evaluating Strategy..."
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4" />
-                          Request Drug Import Strategy
-                        </>
-                      )}
-                    </button>
+                      <option value="Finished Pharmaceutical Formulations">Finished Formulations (Form 10)</option>
+                      <option value="Active Pharmaceutical Ingredients (APIs)">Active Pharmaceutical Ingredients (APIs)</option>
+                      <option value="Schedule X Prescription Drugs">Schedule X Drugs (Form 10-A)</option>
+                      <option value="Biologics / Biosimilars / Vaccines">Biologics / Biosimilars / Vaccines</option>
+                      <option value="Test License (Form 11 / R&D)">Test License (Form 11 / R&D)</option>
+                      <option value="Wholesale License (Form 20B/21B)">Wholesale License (Form 20B/21B)</option>
+                    </select>
+                  </div>
 
-                    <p className="text-[11px] text-gray-400 text-center flex items-center justify-center gap-1">
-                      <Lock className="h-3 w-3" />
-                      Strict NDA & Confidentiality Protection Assured.
-                    </p>
-                  </form>
-                )}
+                  <div>
+                    <label htmlFor="drug-message" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Molecule &amp; Regulatory Requirements
+                    </label>
+                    <textarea
+                      id="drug-message"
+                      name="message"
+                      rows={2}
+                      placeholder="Provide details on active molecules, dosage forms, foreign manufacturing country, and desired launch timeline..."
+                      className="w-full px-3.5 py-2 rounded-md border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b3a96]"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-[#0b3a96] hover:bg-[#082b70] text-white font-bold text-sm shadow-md transition-colors disabled:opacity-75 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        <span>Submitting Strategy Request...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        <span>Request Drug Import Strategy</span>
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-[11px] text-gray-400 text-center flex items-center justify-center gap-1">
+                    <Lock className="h-3 w-3" />
+                    Strict NDA &amp; Confidentiality Protection Assured.
+                  </p>
+                </form>
               </div>
             </div>
           </div>
